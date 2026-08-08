@@ -1,0 +1,32 @@
+(() => {
+  "use strict";
+  const DATA = window.KHAE_GRADE6_DATA;
+  const KEY = "khaemenes_grade6_middle_school_36_aplusplus_v1";
+  const $ = id => document.getElementById(id);
+  const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  function readState(){try{return JSON.parse(localStorage.getItem(KEY)) || {student:"Sixth Grade Scholar", weekly:{}, midterm:0, final:0, portfolio:false};}catch{return {student:"Sixth Grade Scholar", weekly:{}, midterm:0, final:0, portfolio:false};}}
+  let state = readState();
+  const save = () => localStorage.setItem(KEY, JSON.stringify(state));
+  const weeklyAverage = () => {const v=DATA.weeks.map(w=>Number(state.weekly[w.week]||0)).filter(Boolean);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0;};
+  const completedWeeks = () => DATA.weeks.filter(w=>Number(state.weekly[w.week]||0)>=DATA.course.passingScore).length;
+  const ready = () => weeklyAverage()>=80 && Number(state.midterm||0)>=80 && Number(state.final||0)>=80 && !!state.portfolio;
+  function renderDashboard(){
+    const avg=weeklyAverage(), done=completedWeeks(), ok=ready();
+    $("studentName").value=state.student||"";$("midtermScore").value=state.midterm||"";$("finalScore").value=state.final||"";$("portfolio").checked=!!state.portfolio;
+    $("summary").innerHTML=`<div class="grid cols-4"><article class="card stat"><strong>${done}/36</strong><span>Weeks at 80%+</span></article><article class="card stat"><strong>${avg}%</strong><span>Weekly average</span></article><article class="card stat"><strong>${state.midterm||0}%</strong><span>Midterm</span></article><article class="card stat"><strong>${state.final||0}%</strong><span>Final</span></article></div><div class="profile-box" style="margin-top:16px"><h3>${ok?"Certificate Ready":"Certificate Locked"}</h3><p>${ok?"All completion gates are met. The certificate page may be printed.":"Certificate requires weekly average 80%+, midterm 80%+, final 80%+, and adult portfolio approval."}</p><div class="progress"><span style="width:${Math.min(100,Math.round(done/36*100))}%"></span></div><div class="actions"><a class="button ${ok?"gold":""}" href="records/certificate.html">Open Certificate</a><button type="button" class="button" id="exportBtn">Export Records</button></div></div>`;
+    $("exportBtn").addEventListener("click", exportRecords);
+  }
+  function renderWeeks(){
+    $("weekGrid").innerHTML=DATA.weeks.map(w=>`<article class="card week-card"><div class="emblem">${String(w.week).padStart(2,"0")}</div><h3>${esc(w.title)}</h3><p><strong>Question:</strong> ${esc(w.essentialQuestion)}</p><p>${esc(w.theme)}</p><div class="badges"><span class="badge">9 subjects</span><span class="badge">45 blocks</span><span class="badge">A++</span></div><label>Weekly assessment score</label><input type="number" min="0" max="100" value="${state.weekly[w.week]||""}" data-score="${w.week}" placeholder="0–100"><div class="actions"><a class="button" href="weekly-plans/week-${String(w.week).padStart(2,"0")}.html">Open Week</a><a class="button light" href="printables/week-${String(w.week).padStart(2,"0")}-packet.html">Printable</a></div></article>`).join("");
+    document.querySelectorAll("[data-score]").forEach(input=>input.addEventListener("input",()=>{state.weekly[input.dataset.score]=Math.max(0,Math.min(100,Number(input.value||0)));save();renderDashboard();}));
+  }
+  function renderSubjects(){
+    $("subjectGrid").innerHTML=DATA.subjects.map(s=>`<article class="card" style="border-top:5px solid ${s.color}"><div class="emblem">${esc(s.icon)}</div><h3>${esc(s.title)}</h3><p>${esc(s.description)}</p><a class="button" href="subjects/${s.id}/index.html">Open Subject Hall</a></article>`).join("");
+  }
+  function bind(){
+    $("saveProfile").addEventListener("click",()=>{state.student=$("studentName").value.trim()||"Sixth Grade Scholar";state.midterm=Math.max(0,Math.min(100,Number($("midtermScore").value||0)));state.final=Math.max(0,Math.min(100,Number($("finalScore").value||0)));state.portfolio=$("portfolio").checked;save();renderDashboard();renderWeeks();});
+    $("clearRecords").addEventListener("click",()=>{if(!confirm("Clear local sixth-grade records on this device?"))return;localStorage.removeItem(KEY);state=readState();renderDashboard();renderWeeks();});
+  }
+  function exportRecords(){const payload={course:DATA.course.title,exported:new Date().toISOString(),state};const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="khaemenes-sixth-grade-records.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+  document.addEventListener("DOMContentLoaded",()=>{$("year").textContent=new Date().getFullYear();bind();renderDashboard();renderSubjects();renderWeeks();});
+})();

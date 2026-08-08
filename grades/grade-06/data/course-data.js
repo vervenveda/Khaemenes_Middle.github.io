@@ -1,0 +1,880 @@
+window.KHAE_GRADE6_DATA = {
+  "course": {
+    "title": "Khaemenes Academy Sixth Grade — Middle School Subject-Based 36 Week A++ Curriculum",
+    "subtitle": "Advanced Middle School Foundation · In-House Curriculum · Subject Halls",
+    "code": "KHAE-GRADE6-MIDDLE-SCHOOL-36-APLUSPLUS",
+    "grade": "Sixth Grade",
+    "weeks": 36,
+    "subjects": 9,
+    "lessonBlocksPerSubjectPerWeek": 5,
+    "subjectLessonBlocks": 1620,
+    "weeklyAssessments": 36,
+    "passingScore": 80,
+    "authors": "Jennifer Kay Pearl",
+    "generated": "2026-08-08",
+    "dependencyPolicy": "No outside fonts, scripts, images, libraries, or curriculum calls. All pages use local files only.",
+    "localReviewNote": "Designed to exceed a single-state checklist by spanning broad Grade 6 academic, arts, health, world language, technology, inquiry, research, capstone, portfolio, and Grade 7 readiness requirements. Local compliance review is still recommended."
+  },
+  "subjects": [
+    {
+      "id": "language-arts",
+      "title": "Language Arts & Literacy",
+      "icon": "ELA",
+      "color": "#293f8f",
+      "description": "Middle school reading, citation, literary analysis, informational text, argument, research, grammar, academic vocabulary, discussion, media literacy, and publication."
+    },
+    {
+      "id": "mathematics",
+      "title": "Mathematics",
+      "icon": "M",
+      "color": "#1f6d5b",
+      "description": "Ratios, rates, percent, fraction division, decimals, rational numbers, expressions, equations, inequalities, coordinate planes, area, surface area, volume, statistics, and mathematical modeling."
+    },
+    {
+      "id": "science",
+      "title": "Science & Engineering",
+      "icon": "SCI",
+      "color": "#557c3a",
+      "description": "Middle school physical, life, Earth, and space science foundations: matter, energy, forces, ecosystems, Earth systems, weather/climate, engineering design, models, data, and CER reasoning."
+    },
+    {
+      "id": "social-studies",
+      "title": "Social Studies & Civics",
+      "icon": "SS",
+      "color": "#91602c",
+      "description": "Ancient civilizations, geography, world history foundations, civics, economics, cultures, religions, trade, migration, evidence, primary sources, and informed action."
+    },
+    {
+      "id": "world-languages",
+      "title": "World Languages & Global Culture",
+      "icon": "WL",
+      "color": "#8c4d74",
+      "description": "Language learning foundations, cognates, greetings, scripts, cultural comparison, geography of languages, respectful communication, translation awareness, and global citizenship."
+    },
+    {
+      "id": "arts-music",
+      "title": "Arts, Music & Media",
+      "icon": "ART",
+      "color": "#7050a0",
+      "description": "Visual design, music literacy, rhythm, melody, dramatic interpretation, media arts, critique, performance, cultural arts, artist statements, and portfolio curation."
+    },
+    {
+      "id": "health-pe-sel",
+      "title": "Health, PE & SEL",
+      "icon": "H",
+      "color": "#a64e4a",
+      "description": "Physical literacy, fitness planning, nutrition, safety, adolescence health foundations, emotional regulation, executive function, collaboration, leadership, resilience, and self-advocacy."
+    },
+    {
+      "id": "technology-design",
+      "title": "Technology, Design & Tools",
+      "icon": "T",
+      "color": "#3a637d",
+      "description": "Digital citizenship, keyboarding fluency, file systems, spreadsheets, source notes, charts, accessibility, algorithms, debugging, design thinking, presentations, and ethical media."
+    },
+    {
+      "id": "integrated-projects",
+      "title": "Integrated Research Projects",
+      "icon": "IP",
+      "color": "#b27b2e",
+      "description": "Middle school studios where students research, calculate, model, prototype, write, revise, cite, defend evidence, present publicly, reflect, and build a portfolio."
+    }
+  ],
+  "standardsFamilies": [
+    {
+      "code": "KHAE-ELA-6",
+      "label": "Grade 6 English Language Arts and Literacy",
+      "description": "Cite textual evidence, analyze theme/central idea, text structure, point of view, arguments/claims, vocabulary/morphology, grammar, speaking/listening, research, writing, revision, media, and disciplinary literacy."
+    },
+    {
+      "code": "KHAE-MATH-6",
+      "label": "Grade 6 Mathematics",
+      "description": "Ratios, rates, percent, fraction division, rational numbers, expressions, equations, inequalities, coordinate planes, area, surface area, volume, statistics, and mathematical modeling."
+    },
+    {
+      "code": "KHAE-SCI-MS",
+      "label": "Middle School Science and Engineering",
+      "description": "Matter, energy, forces, waves, cells, ecosystems, Earth systems, weather/climate, engineering design, modeling, data analysis, and claim-evidence-reasoning."
+    },
+    {
+      "code": "KHAE-SS-6",
+      "label": "Grade 6 Social Studies and Civics",
+      "description": "World geography, ancient civilizations, culture, law, economics, trade, migration, historical sources, civic ideas, perspective, and informed action."
+    },
+    {
+      "code": "KHAE-WL-6",
+      "label": "World Languages and Global Culture",
+      "description": "Introductory language learning, greetings, cognates, scripts, cultural comparison, translation awareness, geography of languages, respect, and global communication."
+    },
+    {
+      "code": "KHAE-ART-6",
+      "label": "Arts, Music, and Media",
+      "description": "Creative process, visual design, media arts, music literacy, rhythm, melody, drama, performance, critique, cultural arts, artist statements, and portfolio curation."
+    },
+    {
+      "code": "KHAE-PEH-6",
+      "label": "Health, PE, and SEL",
+      "description": "Physical literacy, fitness planning, nutrition, safety, adolescent wellness, emotional regulation, executive function, collaboration, leadership, resilience, and self-advocacy."
+    },
+    {
+      "code": "KHAE-TECH-6",
+      "label": "Technology, Design, and Tools",
+      "description": "Digital citizenship, keyboarding fluency, file systems, spreadsheets, charts, source notes, ethical media, algorithms, debugging, accessible presentations, and design thinking."
+    },
+    {
+      "code": "KHAE-IP-6",
+      "label": "Integrated A++ Projects",
+      "description": "Cross-disciplinary inquiry, evidence gathering, data analysis, quantitative reasoning, research writing, modeling, design, revision, oral defense, portfolio, and reflection."
+    },
+    {
+      "code": "KHAE-PORT-6",
+      "label": "Portfolio and Assessment",
+      "description": "Weekly mastery, performance tasks, midterm, final, capstone checkpoints, student reflection, teacher evidence, family reports, grade 7 readiness, and 80% certification."
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "unit": 1,
+      "title": "Middle School Scholar Launch",
+      "theme": "Transition systems, binders/files, advisory routines, diagnostic reading/math/science writing, research notebooks, executive function, and portfolio setup",
+      "essentialQuestion": "How do middle school scholars organize independence, evidence, and responsibility?",
+      "lens": "Launch",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 2,
+      "unit": 2,
+      "title": "Evidence, Annotation, and Ratios",
+      "theme": "Text annotation, quoting/citing evidence, ratios as comparisons, unit language, learning contracts, and notebook systems",
+      "essentialQuestion": "How do evidence and comparison help us understand complex ideas?",
+      "lens": "Evidence",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 3,
+      "unit": 3,
+      "title": "Rates, Unit Rates, and Informational Text",
+      "theme": "Unit rates, tables, graphs, informational text structure, technical vocabulary, and source notes",
+      "essentialQuestion": "How can rates and text structures explain change?",
+      "lens": "Rates",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 4,
+      "unit": 4,
+      "title": "Percent, Proportion, and Civic Decisions",
+      "theme": "Percent, benchmark fractions/decimals, claims and evidence, surveys, civic choices, and data displays",
+      "essentialQuestion": "How can percentages help a community make informed decisions?",
+      "lens": "Percent",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 5,
+      "unit": 5,
+      "title": "Fraction Division and Procedural Writing",
+      "theme": "Fraction division, visual models, reciprocal reasoning foundations, procedural writing, critique, and clarity",
+      "essentialQuestion": "How can models explain division when the numbers are fractions?",
+      "lens": "Fraction Division",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 6,
+      "unit": 6,
+      "title": "Rational Numbers and Ancient Number Systems",
+      "theme": "Integers, rational numbers, number lines, absolute value foundations, ancient number systems, and mathematical history",
+      "essentialQuestion": "How have cultures represented numbers and meaning across time?",
+      "lens": "Rational Numbers",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 7,
+      "unit": 7,
+      "title": "Coordinate Planes and Geography",
+      "theme": "Four-quadrant coordinate planes, maps, scale, geography, ordered pairs, and spatial reasoning",
+      "essentialQuestion": "How can coordinates help us describe place, movement, and patterns?",
+      "lens": "Coordinates",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 8,
+      "unit": 8,
+      "title": "Expressions and Algebraic Thinking",
+      "theme": "Variables, expressions, substitution, order of operations, literary symbolism, and precise academic language",
+      "essentialQuestion": "How can symbols represent ideas in math, language, and culture?",
+      "lens": "Expressions",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 9,
+      "unit": 9,
+      "title": "Equations and Balanced Arguments",
+      "theme": "One-step equations, balance models, argument writing, claim/reason/evidence, and academic discussion",
+      "essentialQuestion": "How do balance and evidence make arguments stronger?",
+      "lens": "Equations",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 10,
+      "unit": 10,
+      "title": "Inequalities and Decision Rules",
+      "theme": "Inequalities, constraints, solution sets, policy rules, design limits, and responsible choices",
+      "essentialQuestion": "How do constraints shape solutions and decisions?",
+      "lens": "Inequalities",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 11,
+      "unit": 11,
+      "title": "Statistics: Questions, Data, and Distribution",
+      "theme": "Statistical questions, data collection, dot plots, histograms foundations, center/spread, and data ethics",
+      "essentialQuestion": "How can data answer questions while still requiring judgment?",
+      "lens": "Statistics",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 12,
+      "unit": 12,
+      "title": "Geometry: Area, Surface Area, and Design",
+      "theme": "Area formulas, polygons, nets, surface area, design constraints, and visual communication",
+      "essentialQuestion": "How do measurements help designers plan efficient spaces?",
+      "lens": "Geometry Design",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 13,
+      "unit": 13,
+      "title": "Volume and Three-Dimensional Modeling",
+      "theme": "Volume of rectangular prisms, fractional edge lengths, models, engineering notebooks, and spatial reasoning",
+      "essentialQuestion": "How can 3D models solve real problems?",
+      "lens": "Volume",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 14,
+      "unit": 14,
+      "title": "Matter: Particles, Properties, and Models",
+      "theme": "Properties of matter, particle models, density foundations, evidence tables, and scientific explanation",
+      "essentialQuestion": "How can invisible particle models explain visible properties?",
+      "lens": "Matter",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 15,
+      "unit": 15,
+      "title": "Thermal Energy and Phase Change",
+      "theme": "Thermal energy, temperature, phase changes, graphing, data interpretation, and CER writing",
+      "essentialQuestion": "How does energy explain changes in matter?",
+      "lens": "Thermal Energy",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 16,
+      "unit": 16,
+      "title": "Forces, Motion, and Systems",
+      "theme": "Forces, motion, variables, graphs, system models, fair tests, and technical writing",
+      "essentialQuestion": "How do forces and systems explain motion?",
+      "lens": "Forces",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 17,
+      "unit": 17,
+      "title": "Midyear Portfolio and Assessment",
+      "theme": "Cumulative review, midterm, research checkpoint, math defense, science notebook audit, and advisory reflection",
+      "essentialQuestion": "How can I prove growth across every subject?",
+      "lens": "Midterm",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 18,
+      "unit": 18,
+      "title": "Waves, Sound, and Communication",
+      "theme": "Wave models, sound, communication, media literacy, rhythm, and information transfer",
+      "essentialQuestion": "How do waves carry energy and information?",
+      "lens": "Waves",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 19,
+      "unit": 19,
+      "title": "Light, Vision, and Media Interpretation",
+      "theme": "Light, reflection, vision, visual media, diagrams, perspective, and evidence from models",
+      "essentialQuestion": "How does light shape what we see and how we interpret media?",
+      "lens": "Light",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 20,
+      "unit": 20,
+      "title": "Cells, Systems, and Scientific Models",
+      "theme": "Cells as systems, structure/function, microscopes as tools, analogies, and explanatory models",
+      "essentialQuestion": "How do small structures support living systems?",
+      "lens": "Cells",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 21,
+      "unit": 21,
+      "title": "Ecosystems and Energy Flow",
+      "theme": "Food webs, ecosystems, matter/energy flow, human impact, statistics, and environmental stewardship",
+      "essentialQuestion": "How do energy and matter move through ecosystems?",
+      "lens": "Ecosystems",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 22,
+      "unit": 22,
+      "title": "Earth Systems and Water",
+      "theme": "Geosphere, hydrosphere, atmosphere, biosphere, water cycle, maps, resource use, and stewardship",
+      "essentialQuestion": "How do Earth systems interact and affect human life?",
+      "lens": "Earth Systems",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 23,
+      "unit": 23,
+      "title": "Weather, Climate, and Human Patterns",
+      "theme": "Weather/climate data, graphs, regional patterns, natural hazards, and community resilience",
+      "essentialQuestion": "How can patterns help communities prepare for change?",
+      "lens": "Weather Climate",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 24,
+      "unit": 24,
+      "title": "Ancient River Civilizations",
+      "theme": "Mesopotamia, Egypt, Indus, China foundations, rivers, agriculture, writing, trade, and social structures",
+      "essentialQuestion": "How did rivers support early civilizations and complex societies?",
+      "lens": "River Civilizations",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 25,
+      "unit": 25,
+      "title": "Belief Systems, Law, and Culture",
+      "theme": "Ancient laws, belief systems, cultural practices, art, texts, fairness, and historical empathy",
+      "essentialQuestion": "How do beliefs and laws shape community life?",
+      "lens": "Culture Law",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 26,
+      "unit": 26,
+      "title": "Classical Civilizations and Civic Ideas",
+      "theme": "Greece, Rome, civic participation, republics, philosophy, architecture, argument, and historical comparison",
+      "essentialQuestion": "How did classical societies influence civic ideas and public life?",
+      "lens": "Classical Civics",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 27,
+      "unit": 27,
+      "title": "Trade Routes, Migration, and Exchange",
+      "theme": "Silk Roads foundations, trade, migration, cultural diffusion, economics, maps, and perspective",
+      "essentialQuestion": "How do movement and exchange transform societies?",
+      "lens": "Trade Migration",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 28,
+      "unit": 28,
+      "title": "World Languages and Cultural Communication",
+      "theme": "Language families, scripts, greetings, cognates, translation limits, cultural respect, and global communication",
+      "essentialQuestion": "How does language carry culture and connection?",
+      "lens": "World Language",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 29,
+      "unit": 29,
+      "title": "Research Writing: From Question to Thesis",
+      "theme": "Research questions, source evaluation, note-taking, paraphrase, thesis, evidence paragraphs, and citation routines",
+      "essentialQuestion": "How do researchers build trustworthy explanations?",
+      "lens": "Research Writing",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 30,
+      "unit": 30,
+      "title": "Argument, Debate, and Public Speaking",
+      "theme": "Claims, reasons, evidence, counterclaims, rebuttal, speaking skills, audience, and respectful debate",
+      "essentialQuestion": "How can disagreement become disciplined learning?",
+      "lens": "Debate",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 31,
+      "unit": 31,
+      "title": "Arts, Media, and Message Design",
+      "theme": "Visual rhetoric, music/media messages, dramatic interpretation, design choices, and artist statements",
+      "essentialQuestion": "How do artists and media makers shape meaning?",
+      "lens": "Media Design",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 32,
+      "unit": 32,
+      "title": "Health, Identity, and Responsible Choices",
+      "theme": "Nutrition, fitness planning, sleep, stress, digital wellness, adolescent health foundations, and self-advocacy",
+      "essentialQuestion": "How do healthy routines support learning and identity?",
+      "lens": "Wellness",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 33,
+      "unit": 33,
+      "title": "Technology, Data, and Ethical Creation",
+      "theme": "Spreadsheets, charts, algorithms, debugging, file systems, accessibility, source notes, and ethical media",
+      "essentialQuestion": "How can tools strengthen evidence without replacing judgment?",
+      "lens": "Technology Ethics",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 34,
+      "unit": 34,
+      "title": "A++ Big Question Capstone Research",
+      "theme": "Independent inquiry, research plan, source notes, data/math component, science/social model, prototype, and timeline",
+      "essentialQuestion": "What serious question can I investigate with evidence, calculation, and design?",
+      "lens": "Capstone Research",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 35,
+      "unit": 35,
+      "title": "Capstone Studio and Oral Defense",
+      "theme": "Draft, revise, build, calculate, design, peer critique, presentation media, oral defense, and reflection",
+      "essentialQuestion": "How can I make my evidence clear enough to defend publicly?",
+      "lens": "Capstone Studio",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    },
+    {
+      "week": 36,
+      "unit": 36,
+      "title": "Final Review and Grade 7 Readiness",
+      "theme": "Cumulative final, portfolio defense, certificate, grade 7 readiness, study habits, reflection, and celebration",
+      "essentialQuestion": "How am I ready for seventh grade?",
+      "lens": "Final",
+      "standards": [
+        "KHAE-ELA-6",
+        "KHAE-MATH-6",
+        "KHAE-SCI-MS",
+        "KHAE-SS-6",
+        "KHAE-WL-6",
+        "KHAE-ART-6",
+        "KHAE-PEH-6",
+        "KHAE-TECH-6",
+        "KHAE-IP-6",
+        "KHAE-PORT-6"
+      ]
+    }
+  ],
+  "assessments": {
+    "midterm": {
+      "title": "Sixth Grade Midyear Subject Demonstration",
+      "week": 18,
+      "passingScore": 80,
+      "itemCount": 120
+    },
+    "final": {
+      "title": "Sixth Grade Final Readiness Demonstration",
+      "week": 36,
+      "passingScore": 80,
+      "itemCount": 140
+    },
+    "certification": {
+      "threshold": 80,
+      "requires": [
+        "Weekly assessment average at or above 80%",
+        "Midterm score at or above 80%",
+        "Final score at or above 80%",
+        "Portfolio evidence approved by adult mentor"
+      ]
+    }
+  }
+};
