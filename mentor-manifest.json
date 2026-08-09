@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceId": "khaemenes.middle",
   "name": "Khaemenes Middle School",
   "classification": "educational",
@@ -19,7 +19,7 @@
     {
       "id": "middle-home",
       "title": "Khaemenes Middle School",
-      "description": "",
+      "description": "Grades 6–8 middle-school learning hub with grade pathways, academic subjects, assessments, projects, and family navigation.",
       "url": "https://vervenveda.com/Khaemenes_Middle.github.io/",
       "audiences": [
         "middle",
@@ -41,7 +41,916 @@
       ],
       "mentorEligible": true,
       "featured": true
+    },
+    {
+      "id": "grade-06",
+      "title": "Grade 06 · Sixth Grade",
+      "description": "Khaemenes Middle Grade 6 curriculum portal.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-06/",
+      "audiences": [
+        "middle",
+        "parent"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "education",
+        "grade-navigation"
+      ],
+      "skills": [
+        "course-navigation"
+      ],
+      "tags": [
+        "grade-06",
+        "middle-school",
+        "curriculum"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "grade-06-language-arts",
+      "title": "Grade 06 · Language Arts",
+      "description": "Grade 6 Language Arts subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-06/subjects/language-arts/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "language-arts"
+      ],
+      "skills": [
+        "reading",
+        "writing",
+        "analysis"
+      ],
+      "tags": [
+        "grade-06",
+        "middle-school",
+        "english",
+        "literature",
+        "composition"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-06-mathematics",
+      "title": "Grade 06 · Mathematics",
+      "description": "Grade 6 Mathematics subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-06/subjects/mathematics/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "mathematics"
+      ],
+      "skills": [
+        "mathematical-reasoning",
+        "problem-solving"
+      ],
+      "tags": [
+        "grade-06",
+        "middle-school",
+        "math",
+        "reasoning"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-06-science",
+      "title": "Grade 06 · Science",
+      "description": "Grade 6 Science subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-06/subjects/science/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "science"
+      ],
+      "skills": [
+        "scientific-reasoning",
+        "inquiry",
+        "evidence"
+      ],
+      "tags": [
+        "grade-06",
+        "middle-school",
+        "science",
+        "inquiry"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-06-social-studies",
+      "title": "Grade 06 · Social Studies",
+      "description": "Grade 6 Social Studies subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-06/subjects/social-studies/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "social-studies",
+        "civics",
+        "history"
+      ],
+      "skills": [
+        "historical-analysis",
+        "civic-literacy"
+      ],
+      "tags": [
+        "grade-06",
+        "middle-school",
+        "history",
+        "civics",
+        "social-studies"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-06-technology-design",
+      "title": "Grade 06 · Technology & Design",
+      "description": "Grade 6 Technology & Design subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-06/subjects/technology-design/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "technology",
+        "engineering",
+        "design"
+      ],
+      "skills": [
+        "design-thinking",
+        "digital-literacy",
+        "problem-solving"
+      ],
+      "tags": [
+        "grade-06",
+        "middle-school",
+        "technology",
+        "engineering",
+        "design"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-06-world-languages",
+      "title": "Grade 06 · World Languages",
+      "description": "Grade 6 World Languages subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-06/subjects/world-languages/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "world-languages",
+        "language-literacy"
+      ],
+      "skills": [
+        "language-learning",
+        "communication"
+      ],
+      "tags": [
+        "grade-06",
+        "middle-school",
+        "languages",
+        "communication"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-06-health-pe-sel",
+      "title": "Grade 06 · Health, PE & SEL",
+      "description": "Grade 6 Health, PE & SEL subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-06/subjects/health-pe-sel/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "health",
+        "physical-education",
+        "social-emotional"
+      ],
+      "skills": [
+        "wellness",
+        "movement",
+        "self-management"
+      ],
+      "tags": [
+        "grade-06",
+        "middle-school",
+        "health",
+        "pe",
+        "sel"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-06-arts-music",
+      "title": "Grade 06 · Arts & Music",
+      "description": "Grade 6 Arts & Music subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-06/subjects/arts-music/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "arts",
+        "music"
+      ],
+      "skills": [
+        "creative-expression",
+        "visual-literacy",
+        "music-literacy"
+      ],
+      "tags": [
+        "grade-06",
+        "middle-school",
+        "art",
+        "music",
+        "creative"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-06-integrated-projects",
+      "title": "Grade 06 · Integrated Projects",
+      "description": "Grade 6 Integrated Projects subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-06/subjects/integrated-projects/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "interdisciplinary",
+        "project-based-learning"
+      ],
+      "skills": [
+        "research",
+        "planning",
+        "synthesis",
+        "presentation"
+      ],
+      "tags": [
+        "grade-06",
+        "middle-school",
+        "projects",
+        "interdisciplinary",
+        "capstone"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-07",
+      "title": "Grade 07 · Seventh Grade",
+      "description": "Khaemenes Middle Grade 7 curriculum portal.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-07/",
+      "audiences": [
+        "middle",
+        "parent"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "education",
+        "grade-navigation"
+      ],
+      "skills": [
+        "course-navigation"
+      ],
+      "tags": [
+        "grade-07",
+        "middle-school",
+        "curriculum"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "grade-07-language-arts",
+      "title": "Grade 07 · Language Arts",
+      "description": "Grade 7 Language Arts subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-07/subjects/language-arts/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "language-arts"
+      ],
+      "skills": [
+        "reading",
+        "writing",
+        "analysis"
+      ],
+      "tags": [
+        "grade-07",
+        "middle-school",
+        "english",
+        "literature",
+        "composition"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-07-mathematics",
+      "title": "Grade 07 · Mathematics",
+      "description": "Grade 7 Mathematics subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-07/subjects/mathematics/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "mathematics"
+      ],
+      "skills": [
+        "mathematical-reasoning",
+        "problem-solving"
+      ],
+      "tags": [
+        "grade-07",
+        "middle-school",
+        "math",
+        "reasoning"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-07-science",
+      "title": "Grade 07 · Science",
+      "description": "Grade 7 Science subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-07/subjects/science/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "science"
+      ],
+      "skills": [
+        "scientific-reasoning",
+        "inquiry",
+        "evidence"
+      ],
+      "tags": [
+        "grade-07",
+        "middle-school",
+        "science",
+        "inquiry"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-07-social-studies",
+      "title": "Grade 07 · Social Studies",
+      "description": "Grade 7 Social Studies subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-07/subjects/social-studies/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "social-studies",
+        "civics",
+        "history"
+      ],
+      "skills": [
+        "historical-analysis",
+        "civic-literacy"
+      ],
+      "tags": [
+        "grade-07",
+        "middle-school",
+        "history",
+        "civics",
+        "social-studies"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-07-technology-design",
+      "title": "Grade 07 · Technology & Design",
+      "description": "Grade 7 Technology & Design subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-07/subjects/technology-design/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "technology",
+        "engineering",
+        "design"
+      ],
+      "skills": [
+        "design-thinking",
+        "digital-literacy",
+        "problem-solving"
+      ],
+      "tags": [
+        "grade-07",
+        "middle-school",
+        "technology",
+        "engineering",
+        "design"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-07-world-languages",
+      "title": "Grade 07 · World Languages",
+      "description": "Grade 7 World Languages subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-07/subjects/world-languages/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "world-languages",
+        "language-literacy"
+      ],
+      "skills": [
+        "language-learning",
+        "communication"
+      ],
+      "tags": [
+        "grade-07",
+        "middle-school",
+        "languages",
+        "communication"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-07-health-pe-sel",
+      "title": "Grade 07 · Health, PE & SEL",
+      "description": "Grade 7 Health, PE & SEL subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-07/subjects/health-pe-sel/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "health",
+        "physical-education",
+        "social-emotional"
+      ],
+      "skills": [
+        "wellness",
+        "movement",
+        "self-management"
+      ],
+      "tags": [
+        "grade-07",
+        "middle-school",
+        "health",
+        "pe",
+        "sel"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-07-arts-music",
+      "title": "Grade 07 · Arts & Music",
+      "description": "Grade 7 Arts & Music subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-07/subjects/arts-music/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "arts",
+        "music"
+      ],
+      "skills": [
+        "creative-expression",
+        "visual-literacy",
+        "music-literacy"
+      ],
+      "tags": [
+        "grade-07",
+        "middle-school",
+        "art",
+        "music",
+        "creative"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-07-integrated-projects",
+      "title": "Grade 07 · Integrated Projects",
+      "description": "Grade 7 Integrated Projects subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-07/subjects/integrated-projects/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "interdisciplinary",
+        "project-based-learning"
+      ],
+      "skills": [
+        "research",
+        "planning",
+        "synthesis",
+        "presentation"
+      ],
+      "tags": [
+        "grade-07",
+        "middle-school",
+        "projects",
+        "interdisciplinary",
+        "capstone"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-08",
+      "title": "Grade 08 · Eighth Grade",
+      "description": "Khaemenes Middle Grade 8 curriculum portal.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-08/",
+      "audiences": [
+        "middle",
+        "parent"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "education",
+        "grade-navigation"
+      ],
+      "skills": [
+        "course-navigation"
+      ],
+      "tags": [
+        "grade-08",
+        "middle-school",
+        "curriculum"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "grade-08-language-arts",
+      "title": "Grade 08 · Language Arts",
+      "description": "Grade 8 Language Arts subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-08/subjects/language-arts/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "language-arts"
+      ],
+      "skills": [
+        "reading",
+        "writing",
+        "analysis"
+      ],
+      "tags": [
+        "grade-08",
+        "middle-school",
+        "english",
+        "literature",
+        "composition"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-08-mathematics",
+      "title": "Grade 08 · Mathematics",
+      "description": "Grade 8 Mathematics subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-08/subjects/mathematics/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "mathematics"
+      ],
+      "skills": [
+        "mathematical-reasoning",
+        "problem-solving"
+      ],
+      "tags": [
+        "grade-08",
+        "middle-school",
+        "math",
+        "reasoning"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-08-science",
+      "title": "Grade 08 · Science",
+      "description": "Grade 8 Science subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-08/subjects/science/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "science"
+      ],
+      "skills": [
+        "scientific-reasoning",
+        "inquiry",
+        "evidence"
+      ],
+      "tags": [
+        "grade-08",
+        "middle-school",
+        "science",
+        "inquiry"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-08-social-studies",
+      "title": "Grade 08 · Social Studies",
+      "description": "Grade 8 Social Studies subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-08/subjects/social-studies/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "social-studies",
+        "civics",
+        "history"
+      ],
+      "skills": [
+        "historical-analysis",
+        "civic-literacy"
+      ],
+      "tags": [
+        "grade-08",
+        "middle-school",
+        "history",
+        "civics",
+        "social-studies"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-08-technology-design",
+      "title": "Grade 08 · Technology & Design",
+      "description": "Grade 8 Technology & Design subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-08/subjects/technology-design/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "technology",
+        "engineering",
+        "design"
+      ],
+      "skills": [
+        "design-thinking",
+        "digital-literacy",
+        "problem-solving"
+      ],
+      "tags": [
+        "grade-08",
+        "middle-school",
+        "technology",
+        "engineering",
+        "design"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-08-world-languages",
+      "title": "Grade 08 · World Languages",
+      "description": "Grade 8 World Languages subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-08/subjects/world-languages/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "world-languages",
+        "language-literacy"
+      ],
+      "skills": [
+        "language-learning",
+        "communication"
+      ],
+      "tags": [
+        "grade-08",
+        "middle-school",
+        "languages",
+        "communication"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-08-health-pe-sel",
+      "title": "Grade 08 · Health, PE & SEL",
+      "description": "Grade 8 Health, PE & SEL subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-08/subjects/health-pe-sel/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "health",
+        "physical-education",
+        "social-emotional"
+      ],
+      "skills": [
+        "wellness",
+        "movement",
+        "self-management"
+      ],
+      "tags": [
+        "grade-08",
+        "middle-school",
+        "health",
+        "pe",
+        "sel"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-08-arts-music",
+      "title": "Grade 08 · Arts & Music",
+      "description": "Grade 8 Arts & Music subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-08/subjects/arts-music/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "arts",
+        "music"
+      ],
+      "skills": [
+        "creative-expression",
+        "visual-literacy",
+        "music-literacy"
+      ],
+      "tags": [
+        "grade-08",
+        "middle-school",
+        "art",
+        "music",
+        "creative"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "grade-08-integrated-projects",
+      "title": "Grade 08 · Integrated Projects",
+      "description": "Grade 8 Integrated Projects subject hall.",
+      "url": "https://vervenveda.com/Khaemenes_Middle.github.io/grades/grade-08/subjects/integrated-projects/",
+      "audiences": [
+        "middle"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "interdisciplinary",
+        "project-based-learning"
+      ],
+      "skills": [
+        "research",
+        "planning",
+        "synthesis",
+        "presentation"
+      ],
+      "tags": [
+        "grade-08",
+        "middle-school",
+        "projects",
+        "interdisciplinary",
+        "capstone"
+      ],
+      "mentorEligible": true
     }
   ],
-  "mentorNotes": "First-wave manifest exposes the verified school portal. Individual middle-school resources can be added as the repository expands."
+  "mentorNotes": "Version 2 exposes the verified Grades 6–8 curriculum portals and their nine subject halls. Week-level resources remain behind grade and subject gateways to keep the federation catalog compact. This repair changes discovery metadata only; no curriculum files are moved or rewritten."
 }
