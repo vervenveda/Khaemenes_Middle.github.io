@@ -1,766 +1,736 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Khaemenes Middle School — a calm, modern home-room gateway for 6th, 7th, and 8th grade students, families, and learning resources across the Verve N Veda network.">
-  <meta name="theme-color" content="#203a4b">
-  <meta name="color-scheme" content="light">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Khaemenes Middle School | Grades 6–8</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Khaemenes Academy Middle School — a connected Grades 6–8 campus for complete grade curricula, family support, trusted learning resources, daily routines, creativity, and high-school readiness.">
+<meta name="theme-color" content="#f4f0e7">
+<meta name="color-scheme" content="light">
+<meta name="application-version" content="2026.08.12-khaemenes-middle-v3.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()">
+<meta name="robots" content="index,follow">
+<title>Khaemenes Academy Middle School | Grades 6–8</title>
+<link rel="canonical" href="https://vervenveda.com/Khaemenes_Middle.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Khaemenes Academy Middle School | Grades 6–8">
+<meta property="og:description" content="Grades 6–8 curricula, family support, learning tools, creative resources, and a clear bridge into High School.">
+<meta property="og:url" content="https://vervenveda.com/Khaemenes_Middle.github.io/">
+<style>
+:root{
+  --paper:#f4f0e7;
+  --paper-bright:#fbf9f4;
+  --white:#fff;
+  --ink:#080b0f;
+  --ink-soft:#30413d;
+  --forest:#243d33;
+  --forest-deep:#15251f;
+  --gold:#b48b45;
+  --gold-pale:#e7d7b6;
+  --navy:#10243b;
+  --teal:#4f7f7a;
+  --violet:#776b94;
+  --terracotta:#b8715d;
+  --sky:#6e97ad;
+  --sage:#78917e;
+  --line:rgba(18,23,19,.14);
+  --line-strong:rgba(18,23,19,.25);
+  --muted:#66716c;
+  --shadow:0 22px 55px rgba(27,34,29,.09);
+  --shadow-small:0 11px 33px rgba(27,34,29,.07);
+  --max:1240px;
+  --radius:7px;
+  --radius-lg:11px;
+  --ticker-height:36px;
+  --header-height:72px;
+  --sticky-stack:calc(var(--ticker-height) + var(--header-height));
+  --display:"Iowan Old Style","Palatino Linotype",Palatino,Baskerville,Georgia,serif;
+  --ceremonial:Cinzel,Aboreto,"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Brandon Grotesque","Avenir Next",Avenir,Montserrat,"Segoe UI",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--sticky-stack) + 18px)}
+body{
+  margin:0;min-width:300px;overflow-x:hidden;color:var(--ink);background:var(--paper);
+  font-family:var(--sans);font-size:16px;line-height:1.64;font-weight:400;text-align:center;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility
+}
+body.menu-open{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+button{cursor:pointer}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+::selection{background:var(--gold-pale);color:var(--ink)}
+.shell{width:min(calc(100% - 48px),var(--max));margin-inline:auto}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.skip-link{position:fixed;top:9px;left:9px;z-index:4000;transform:translateY(-170%);padding:9px 14px;border-radius:var(--radius);color:#fff;background:var(--ink)}
+.skip-link:focus{transform:none}
 
-  <style>
-    :root{
-      --ink:#1f2d34;
-      --muted:#617078;
-      --paper:#f7f4ec;
-      --surface:#fffdf8;
-      --navy:#203a4b;
-      --navy-deep:#142834;
-      --teal:#4f7f7a;
-      --teal-deep:#315e5a;
-      --violet:#776b94;
-      --terracotta:#b8715d;
-      --gold:#b18a4f;
-      --sky:#6e97ad;
-      --sage:#78917e;
-      --line:rgba(31,45,52,.16);
-      --line-strong:rgba(31,45,52,.28);
-      --shadow:0 18px 48px rgba(20,40,52,.10);
-      --soft:0 8px 22px rgba(20,40,52,.07);
-      --radius:7px;
-      --max:1220px;
-      --display:"Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
-      --sans:"Avenir Next","Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
-    }
+/* VNV shared ticker */
+.network-ticker{
+  position:sticky;top:0;z-index:1500;height:var(--ticker-height);display:grid;
+  grid-template-columns:minmax(0,1fr) 40px;overflow:hidden;color:#f4ead1;
+  background:linear-gradient(90deg,#07101d,#10243b 48%,#07101d);
+  border-bottom:1px solid rgba(255,255,255,.13);box-shadow:0 4px 14px rgba(6,15,27,.15)
+}
+.network-ticker-viewport{min-width:0;overflow:hidden;mask-image:linear-gradient(90deg,transparent 0,#000 27px,#000 calc(100% - 27px),transparent 100%)}
+.network-ticker-track{width:max-content;height:100%;display:flex;align-items:center;white-space:nowrap;animation:ticker 28s linear infinite}
+.network-ticker:hover .network-ticker-track,.network-ticker:focus-within .network-ticker-track,.network-ticker[data-paused="true"] .network-ticker-track{animation-play-state:paused}
+.network-ticker-set{height:100%;display:flex;align-items:center;gap:22px;padding-inline:11px}
+.network-ticker-label{color:var(--gold-pale);font-family:var(--ceremonial);font-size:10px;letter-spacing:.25em;text-transform:uppercase}
+.network-ticker-app{min-height:28px;display:inline-flex;align-items:center;gap:7px;padding:0;border:0;background:transparent;color:#eef3f7;font-size:11px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.network-ticker-app::before{content:"";width:3px;height:3px;border-radius:50%;background:var(--gold)}
+.network-ticker-app:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.ticker-control{width:40px;height:var(--ticker-height);display:grid;place-items:center;border:0;border-left:1px solid rgba(255,255,255,.13);color:#f4ead1;background:rgba(0,0,0,.14)}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:88px;font-synthesis:none;text-rendering:optimizeLegibility}
-    body{
-      margin:0;
-      min-width:300px;
-      min-height:100vh;
-      overflow-x:hidden;
-      color:var(--ink);
-      background:
-        radial-gradient(circle at 10% 0,rgba(110,151,173,.10),transparent 28rem),
-        radial-gradient(circle at 92% 4%,rgba(119,107,148,.09),transparent 30rem),
-        linear-gradient(180deg,#faf8f3,#f2eee5);
-      font-family:var(--sans);
-      font-size:16px;
-      font-weight:400;
-      line-height:1.68;
-      -webkit-font-smoothing:antialiased;
-    }
-    body.menu-open{overflow:hidden}
-    a{color:inherit}
-    button,input,select{font:inherit}
-    button{cursor:pointer;color:inherit}
-    h1,h2,h3{font-weight:400}
-    [hidden]{display:none!important}
-    :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-    .wrap{width:min(calc(100% - 32px),var(--max));margin-inline:auto}
-    .skip{
-      position:fixed;left:14px;top:14px;z-index:4000;
-      transform:translateY(-180%);padding:11px 14px;
-      border-radius:var(--radius);color:#fff;background:var(--navy-deep);
-      text-decoration:none;
-    }
-    .skip:focus{transform:none}
+/* VNV header standard */
+.site-header{
+  position:sticky;top:var(--ticker-height);z-index:1400;height:var(--header-height);
+  border-bottom:1px solid var(--line);background:rgba(244,240,231,.96);
+  -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)
+}
+.header-inner{height:100%;display:grid;grid-template-columns:minmax(260px,1fr) auto minmax(48px,1fr);align-items:center;column-gap:24px}
+.brand{justify-self:start;min-width:0;max-width:390px;display:inline-flex;align-items:center;gap:12px;color:var(--ink);text-align:left}
+.brand-mark{width:44px;height:36px;flex:0 0 44px;display:grid;place-items:center;border:1px solid var(--ink);border-radius:var(--radius);color:#fff;background:var(--ink);font-family:var(--ceremonial);font-size:17px;letter-spacing:.07em}
+.brand-copy{min-width:0;display:grid;gap:3px;line-height:1.05}
+.brand-name{overflow:hidden;color:var(--ink);font-family:var(--ceremonial);font-size:16px;letter-spacing:.08em;text-overflow:ellipsis;text-transform:uppercase;white-space:nowrap}
+.brand-sub{overflow:hidden;color:var(--ink-soft);font-size:9px;letter-spacing:.12em;text-overflow:ellipsis;text-transform:uppercase;white-space:nowrap}
+.header-links{display:flex;align-items:center;justify-content:center;gap:5px;white-space:nowrap}
+.header-links a,.header-links button{min-height:40px;display:inline-flex;align-items:center;padding:7px 10px;border:0;border-radius:var(--radius);color:var(--ink-soft);background:transparent;font-size:11px;font-weight:500;letter-spacing:.075em;text-transform:uppercase}
+.header-links a:hover,.header-links button:hover{color:var(--ink);background:var(--white)}
+.header-links .high-link{color:#72552b}
+.menu-button{justify-self:end;width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line-strong);border-radius:var(--radius);color:var(--ink);background:transparent}
+.menu-lines,.menu-lines::before,.menu-lines::after{content:"";display:block;width:14px;height:1.5px;border-radius:7px;background:var(--ink);transition:.18s}
+.menu-lines{position:relative}.menu-lines::before,.menu-lines::after{position:absolute;left:0}.menu-lines::before{top:-6px}.menu-lines::after{top:6px}
+.menu-button[aria-expanded="true"] .menu-lines{background:transparent}
+.menu-button[aria-expanded="true"] .menu-lines::before{transform:translateY(6px) rotate(45deg)}
+.menu-button[aria-expanded="true"] .menu-lines::after{transform:translateY(-6px) rotate(-45deg)}
 
-    /* Header */
-    .site-header{
-      position:sticky;top:0;z-index:1200;
-      border-top:3px solid var(--gold);
-      border-bottom:1px solid var(--line);
-      background:rgba(247,244,236,.95);
-      backdrop-filter:blur(18px);
-      box-shadow:0 7px 22px rgba(20,40,52,.07);
-    }
-    .nav{
-      min-height:76px;
-      display:grid;
-      grid-template-columns:minmax(240px,1fr) auto minmax(240px,1fr);
-      align-items:center;
-      gap:16px;
-      padding:10px 0;
-    }
-    .brand{
-      justify-self:start;
-      display:inline-flex;align-items:center;gap:12px;
-      min-width:0;text-decoration:none;
-    }
-    .brand-mark{
-      width:46px;height:46px;flex:0 0 46px;
-      display:grid;place-items:center;
-      border:1px solid var(--gold);
-      border-radius:var(--radius);
-      color:#fff;background:linear-gradient(145deg,var(--navy),var(--teal-deep));
-      font-family:var(--display);font-size:17px;
-      box-shadow:var(--soft);
-    }
-    .brand-copy{display:grid;line-height:1.05}
-    .brand-copy strong{
-      color:var(--navy-deep);font-size:14px;
-      letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;
-    }
-    .brand-copy small{
-      margin-top:7px;color:var(--muted);font-size:11px;
-      letter-spacing:.11em;text-transform:uppercase;white-space:nowrap;
-    }
-    .site-id{justify-self:center;text-align:center;text-decoration:none}
-    .site-id strong{
-      display:block;color:var(--navy);
-      font-family:var(--display);font-size:17px;
-      letter-spacing:.13em;text-transform:uppercase;
-    }
-    .site-id small{
-      display:block;margin-top:4px;color:var(--gold);
-      font-size:11px;letter-spacing:.14em;text-transform:uppercase;
-    }
-    .nav-actions{justify-self:end;display:flex;align-items:center;gap:8px}
-    .header-link,.menu-button{
-      min-height:42px;display:inline-flex;align-items:center;justify-content:center;
-      padding:9px 12px;border:1px solid var(--line-strong);
-      border-radius:var(--radius);color:var(--navy);
-      background:rgba(255,255,255,.58);text-decoration:none;
-      font-size:11px;letter-spacing:.08em;text-transform:uppercase;
-    }
-    .header-link:hover,.menu-button:hover{background:#fff;border-color:var(--navy)}
-    .menu-button{width:44px;padding:0}
-    .menu-lines,.menu-lines:before,.menu-lines:after{
-      content:"";display:block;width:16px;height:1.5px;background:currentColor;
-    }
-    .menu-lines{position:relative}
-    .menu-lines:before,.menu-lines:after{position:absolute;left:0}
-    .menu-lines:before{top:-6px}.menu-lines:after{top:6px}
+.breadcrumb-bar{border-bottom:1px solid var(--line);background:var(--paper-bright)}
+.breadcrumbs{min-height:38px;display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;color:var(--muted);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.breadcrumbs a:hover{color:var(--gold)}
 
-    /* Hero */
-    .hero{
-      position:relative;overflow:hidden;
-      padding:clamp(88px,10vw,132px) 18px clamp(78px,8vw,110px);
-      border-bottom:1px solid var(--line);
-      text-align:center;
-    }
-    .hero::before{
-      content:"";position:absolute;left:50%;top:-340px;
-      width:760px;height:760px;transform:translateX(-50%);
-      border:1px solid rgba(79,127,122,.10);border-radius:50%;
-      box-shadow:0 0 0 70px rgba(110,151,173,.03),0 0 0 140px rgba(119,107,148,.02);
-      pointer-events:none;
-    }
-    .hero-inner{position:relative;z-index:1;width:min(100%,940px);margin:auto}
-    .school-mark{
-      width:77px;height:77px;display:grid;place-items:center;
-      margin:0 auto 24px;border:1px solid var(--gold);
-      border-radius:var(--radius);color:#fff;
-      background:linear-gradient(145deg,var(--navy),var(--violet));
-      font-family:var(--display);font-size:24px;
-      box-shadow:0 0 0 7px rgba(79,127,122,.06),var(--soft);
-    }
-    .eyebrow,.kicker{
-      margin:0;color:var(--gold);
-      font-size:11px;letter-spacing:.22em;text-transform:uppercase;
-    }
-    h1{
-      margin:18px 0 0;color:var(--navy-deep);
-      font-family:var(--display);
-      font-size:clamp(55px,8.5vw,88px);
-      line-height:.93;letter-spacing:-.035em;
-    }
-    .hero-subtitle{
-      margin:18px auto 0;color:var(--teal-deep);
-      font-size:14px;letter-spacing:.18em;text-transform:uppercase;
-    }
-    .hero-lead{
-      max-width:760px;margin:24px auto 0;
-      color:var(--muted);font-size:17px;line-height:1.82;
-    }
-    .hero-actions{
-      display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px;
-    }
-    .btn{
-      min-height:46px;display:inline-flex;align-items:center;justify-content:center;
-      padding:11px 16px;border:1px solid transparent;
-      border-radius:var(--radius);text-decoration:none;
-      font-size:11px;letter-spacing:.07em;text-transform:uppercase;
-      transition:.17s;
-    }
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{color:#fff;background:var(--navy)}
-    .btn-secondary{color:var(--navy);border-color:var(--line-strong);background:rgba(255,255,255,.62)}
-    .btn-parent{color:#fff;background:var(--terracotta)}
-    .hero-notes{
-      width:min(100%,880px);
-      display:grid;grid-template-columns:repeat(3,1fr);
-      margin:33px auto 0;border:1px solid var(--line);
-      border-radius:var(--radius);overflow:hidden;background:#fff;
-    }
-    .hero-note{padding:16px;border-left:1px solid var(--line)}
-    .hero-note:first-child{border-left:0}
-    .hero-note strong{display:block;color:var(--navy);font-family:var(--display);font-size:24px}
-    .hero-note span{display:block;margin-top:3px;color:var(--muted);font-size:11px}
+/* Drawer */
+.drawer-bg{position:fixed;inset:0;z-index:2400;visibility:hidden;opacity:0;background:rgba(7,12,17,.78);backdrop-filter:blur(8px);transition:.18s}
+.drawer-bg.open{visibility:visible;opacity:1}
+.drawer{position:absolute;right:0;top:0;width:min(500px,100%);height:100%;overflow:auto;padding:26px 22px 40px;color:#fff;background:linear-gradient(180deg,#10263b,#06101a);box-shadow:-24px 0 70px rgba(0,0,0,.36);transform:translateX(100%);transition:.2s;text-align:left}
+.drawer-bg.open .drawer{transform:none}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.drawer h2{margin:0;font:500 29px/1.05 var(--display)}
+.drawer-close{width:42px;height:42px;border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);color:#fff;background:rgba(255,255,255,.04);font-size:1.3rem}
+.drawer>p{color:rgba(255,255,255,.68);font-size:13px}
+.drawer-search{width:100%;min-height:47px;padding:0 13px;border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);color:#fff;background:rgba(255,255,255,.06)}
+.drawer-search::placeholder{color:rgba(255,255,255,.48)}
+.menu-group{margin:22px 0 8px;color:var(--gold-pale);font-size:10px;font-weight:600;letter-spacing:.11em;text-transform:uppercase}
+.menu-list{display:grid;gap:7px}
+.menu-link{display:grid;grid-template-columns:40px minmax(0,1fr) 20px;align-items:center;gap:10px;padding:10px;border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);background:rgba(255,255,255,.045)}
+.menu-link i{width:38px;height:36px;display:grid;place-items:center;border-radius:var(--radius);background:rgba(231,215,182,.13);font-style:normal;font-size:11px}
+.menu-link strong{display:block;font-size:14px;font-weight:500}.menu-link small{display:block;margin-top:3px;color:rgba(255,255,255,.58);font-size:11px;line-height:1.4}
 
-    /* Grade gateways */
-    .section{padding:clamp(76px,8vw,108px) 18px}
-    .section.alt{background:rgba(255,253,248,.76);border-block:1px solid var(--line)}
-    .section-inner{width:min(100%,var(--max));margin:auto}
-    .section-heading{max-width:880px;margin:0 auto 38px;text-align:center}
-    .section-heading h2{
-      margin:16px auto 0;color:var(--navy-deep);
-      font-family:var(--display);font-size:clamp(38px,5.8vw,66px);
-      line-height:.97;letter-spacing:-.025em;
-    }
-    .section-intro{
-      max-width:730px;margin:20px auto 0;
-      color:var(--muted);font-size:15px;line-height:1.8;
-    }
-    .grade-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .grade-card{
-      min-height:420px;display:flex;flex-direction:column;
-      padding:26px;border:1px solid var(--line);
-      border-top:5px solid var(--accent);
-      border-radius:var(--radius);background:#fff;
-      box-shadow:var(--soft);text-align:center;
-    }
-    .grade-number{
-      width:77px;height:77px;display:grid;place-items:center;
-      margin:0 auto 18px;border-radius:var(--radius);
-      color:#fff;background:var(--accent);
-      font-family:var(--display);font-size:33px;
-    }
-    .grade-label{
-      margin:0;color:var(--accent);font-size:11px;
-      letter-spacing:.16em;text-transform:uppercase;
-    }
-    .grade-card h3{
-      margin:11px 0 0;color:var(--navy-deep);
-      font-family:var(--display);font-size:33px;
-    }
-    .grade-card p{margin:14px 0 0;color:var(--muted);font-size:14px}
-    .subject-list{
-      display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin-top:20px;
-    }
-    .subject-list span{
-      padding:7px 9px;border:1px solid var(--line);
-      border-radius:var(--radius);color:var(--navy);
-      background:var(--paper);font-size:11px;
-    }
-    .grade-actions{display:grid;gap:8px;margin-top:auto;padding-top:22px}
-    .grade-actions a{
-      min-height:44px;display:flex;align-items:center;justify-content:center;
-      padding:10px 13px;border:1px solid var(--accent);
-      border-radius:var(--radius);text-decoration:none;font-size:12px;
-    }
-    .grade-actions a:first-child{color:#fff;background:var(--accent)}
-    .grade-actions a:last-child{color:var(--accent);background:#fff}
+/* Hero */
+.hero{min-height:calc(100svh - var(--sticky-stack) - 38px);display:grid;align-items:stretch;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(circle at 50% 2%,rgba(79,127,122,.12),transparent 31rem),radial-gradient(circle at 15% 12%,rgba(119,107,148,.07),transparent 24rem),linear-gradient(180deg,var(--paper-bright),#f7f3eb)}
+.hero-inner{min-height:inherit;padding:clamp(54px,8vh,86px) 0 24px;display:grid;grid-template-rows:1fr auto;gap:28px}
+.hero-stage{align-self:center;display:grid;justify-items:center;gap:28px}
+.eyebrow,.kicker{margin:0;color:var(--gold);font-family:var(--ceremonial);font-size:clamp(11px,.85vw,13px);font-weight:500;letter-spacing:.19em;text-transform:uppercase}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:500;letter-spacing:.01em;text-wrap:balance}
+h1{margin-top:20px;max-width:1000px;color:var(--forest-deep);font-size:clamp(54px,7vw,94px);line-height:.92}
+.hero-lead{max-width:760px;margin:0;color:var(--ink-soft);font-family:var(--display);font-size:clamp(18px,1.7vw,23px);line-height:1.58}
+.hero-actions,.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:11px}
+.button{min-height:46px;display:inline-flex;align-items:center;justify-content:center;padding:11px 18px;border:1px solid transparent;border-radius:var(--radius);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:.17s}
+.button:hover{transform:translateY(-2px)}
+.button-primary{color:#fff;background:var(--ink);box-shadow:var(--shadow-small)}
+.button-primary:hover{background:var(--forest)}
+.button-secondary{color:var(--ink);background:transparent;border-color:var(--line-strong)}
+.button-secondary:hover{background:#fff}
+.button-high{color:#fff;background:linear-gradient(145deg,#776b94,#5c5277)}
+.hero-stat-grid{width:min(100%,960px);display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:rgba(255,255,255,.62)}
+.hero-stat{padding:16px;border-left:1px solid var(--line)}
+.hero-stat:first-child{border-left:0}
+.hero-stat strong{display:block;color:var(--forest-deep);font-family:var(--display);font-size:19px;font-weight:500}
+.hero-stat span{display:block;margin-top:5px;color:var(--muted);font-size:12px;line-height:1.5}
+.scroll-cue{display:inline-grid;justify-items:center;gap:7px;margin-inline:auto;color:var(--ink-soft);border:0;background:transparent;font-family:var(--ceremonial);font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.scroll-cue::after{content:"";width:1px;height:27px;background:linear-gradient(var(--gold),transparent)}
 
-    /* Daily basecamp */
-    .basecamp{
-      padding:28px;border:1px solid var(--line);
-      border-radius:var(--radius);background:linear-gradient(145deg,var(--navy),var(--navy-deep));
-      color:#fff;box-shadow:var(--shadow);
-    }
-    .basecamp-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center}
-    .basecamp h3{margin:0;font-family:var(--display);font-size:38px}
-    .basecamp p{margin:13px 0 0;color:rgba(255,255,255,.72);font-size:14px}
-    .routine-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
-    .routine{
-      min-height:92px;padding:14px;border:1px solid rgba(255,255,255,.14);
-      border-radius:var(--radius);background:rgba(255,255,255,.045);
-      text-align:center;
-    }
-    .routine strong{display:block;font-family:var(--display);font-size:18px}
-    .routine span{display:block;margin-top:5px;color:rgba(255,255,255,.66);font-size:11px}
+/* Sections */
+.section{padding:clamp(78px,8vw,112px) 20px}
+.section-alt{background:var(--paper-bright);border-block:1px solid var(--line)}
+.section-dark{color:#fff;background:linear-gradient(145deg,#10263b,#071521)}
+.section-inner{width:min(100%,var(--max));margin:auto}
+.heading{max-width:900px;margin:0 auto 44px}
+.heading h2{margin:11px auto 0;color:var(--forest-deep);font-size:clamp(38px,4.6vw,66px);line-height:1.02}
+.heading p{max-width:760px;margin:18px auto 0;color:var(--ink-soft);font-size:14px;line-height:1.75}
+.section-dark .heading h2{color:#fff}.section-dark .heading p{color:rgba(255,255,255,.72)}.section-dark .kicker{color:var(--gold-pale)}
 
-    /* Tools */
-    .tool-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-    .tool-card{
-      min-height:230px;display:flex;flex-direction:column;
-      padding:20px;border:1px solid var(--line);
-      border-radius:var(--radius);background:#fff;text-decoration:none;
-      transition:.17s;
-    }
-    .tool-card:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:var(--soft)}
-    .tool-mark{
-      width:44px;height:44px;display:grid;place-items:center;
-      border-radius:var(--radius);color:#fff;background:var(--accent);
-      font-family:var(--display);font-size:14px;
-    }
-    .tool-card h3{margin:16px 0 0;color:var(--navy-deep);font-family:var(--display);font-size:24px}
-    .tool-card p{margin:9px 0 0;color:var(--muted);font-size:12px}
-    .tool-card strong{
-      margin-top:auto;padding-top:16px;color:var(--accent);
-      font-size:11px;letter-spacing:.07em;text-transform:uppercase;
-    }
+/* Start cards */
+.start-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.start-card{min-height:300px;display:flex;flex-direction:column;align-items:center;padding:30px;border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:var(--radius-lg);background:#fff;box-shadow:var(--shadow)}
+.start-emblem{width:60px;height:60px;display:grid;place-items:center;border-radius:var(--radius);color:#fff;background:var(--accent);font-family:var(--ceremonial)}
+.start-card h3{margin-top:18px;color:var(--forest-deep);font-size:31px}.start-card p{max-width:560px;color:var(--muted);font-size:13px}
+.start-links{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:auto;padding-top:16px}
+.start-links a{min-height:45px;display:flex;align-items:center;justify-content:center;padding:8px 11px;border:1px solid var(--line);border-radius:var(--radius);color:var(--forest-deep);background:#faf8f2;font-size:11px;font-weight:600}
 
-    /* Family section */
-    .family-panel{
-      display:grid;grid-template-columns:1fr 1fr;gap:18px;
-      padding:28px;border:1px solid var(--line);
-      border-radius:var(--radius);background:#fff;box-shadow:var(--soft);
-    }
-    .family-copy h3{margin:0;color:var(--navy-deep);font-family:var(--display);font-size:38px}
-    .family-copy p{margin:14px 0 0;color:var(--muted);font-size:14px}
-    .family-actions{display:grid;gap:9px;align-content:center}
-    .family-actions a{
-      min-height:48px;display:flex;align-items:center;justify-content:space-between;
-      gap:12px;padding:11px 14px;border:1px solid var(--line-strong);
-      border-radius:var(--radius);color:var(--navy);
-      background:var(--paper);text-decoration:none;font-size:13px;
-    }
-    .family-actions a:first-child{color:#fff;background:var(--terracotta);border-color:var(--terracotta)}
+/* Grades */
+.grade-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.grade-card{min-height:410px;display:flex;flex-direction:column;align-items:center;padding:27px 23px;border:1px solid var(--line);border-top:5px solid var(--accent);border-radius:var(--radius-lg);background:#fff;box-shadow:var(--shadow-small)}
+.grade-number{width:72px;height:72px;display:grid;place-items:center;border-radius:var(--radius);color:#fff;background:var(--accent);font-family:var(--display);font-size:31px}
+.grade-label{margin:17px 0 0;color:var(--accent);font-family:var(--ceremonial);font-size:10px;letter-spacing:.15em;text-transform:uppercase}
+.grade-card h3{margin-top:8px;color:var(--forest-deep);font-size:31px}
+.grade-card p{color:var(--muted);font-size:13px}
+.subject-list{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:13px 0 0}
+.subject-list span{padding:6px 8px;border:1px solid var(--line);border-radius:999px;color:var(--ink-soft);background:#faf8f2;font-size:10px}
+.grade-actions{width:100%;display:grid;gap:7px;margin-top:auto;padding-top:18px}
+.grade-actions a{min-height:43px;display:flex;align-items:center;justify-content:center;padding:8px 11px;border:1px solid var(--accent);border-radius:var(--radius);font-size:10px;font-weight:600;text-transform:uppercase}
+.grade-actions a:first-child{color:#fff;background:var(--accent)}.grade-actions a:last-child{color:var(--accent);background:#fff}
 
-    /* Network */
-    .network-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-    .network-card{
-      min-height:190px;display:flex;flex-direction:column;
-      padding:20px;border:1px solid var(--line);
-      border-radius:var(--radius);background:#fff;text-decoration:none;
-    }
-    .network-card:hover{border-color:var(--accent);box-shadow:var(--soft)}
-    .network-mark{
-      width:42px;height:42px;display:grid;place-items:center;
-      border-radius:var(--radius);color:#fff;background:var(--accent);
-      font-family:var(--display);font-size:14px;
-    }
-    .network-card h3{margin:16px 0 0;color:var(--navy-deep);font-family:var(--display);font-size:23px}
-    .network-card p{margin:8px 0 0;color:var(--muted);font-size:12px}
-    .network-card strong{
-      margin-top:auto;padding-top:16px;color:var(--accent);
-      font-size:11px;letter-spacing:.07em;text-transform:uppercase;
-    }
+/* Basecamp */
+.basecamp{padding:30px;border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);background:linear-gradient(145deg,#153249,#0c1e2e);color:#fff;box-shadow:var(--shadow)}
+.basecamp-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;text-align:left}
+.basecamp h3{font-size:39px}.basecamp p{color:rgba(255,255,255,.7);font-size:13px}
+.routine-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.routine{min-height:96px;padding:14px;border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);background:rgba(255,255,255,.045);text-align:center}
+.routine strong{display:block;font-family:var(--display);font-size:18px}.routine span{display:block;margin-top:5px;color:rgba(255,255,255,.66);font-size:11px}
 
-    /* Footer */
-    .site-footer{padding:36px 18px;color:#fff;background:var(--navy-deep)}
-    .footer-inner{
-      width:min(100%,var(--max));margin:auto;
-      display:grid;grid-template-columns:1fr auto;gap:24px;
-    }
-    .footer-title{margin:0;font-family:var(--display);font-size:25px}
-    .footer-copy{margin:8px 0 0;color:rgba(255,255,255,.68);font-size:12px}
-    .footer-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}
-    .footer-links a{
-      padding:8px 10px;border:1px solid rgba(255,255,255,.16);
-      border-radius:var(--radius);color:rgba(255,255,255,.8);
-      text-decoration:none;font-size:11px;
-    }
+/* Live resource directory */
+.catalog{padding:20px;border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff}
+.toolbar{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(190px,.65fr) auto auto;gap:9px}
+.field{min-width:0;width:100%;min-height:47px;padding:0 13px;border:1px solid var(--line-strong);border-radius:var(--radius);color:var(--ink);background:#fff;text-align:center}
+.tool-button{min-height:47px;padding:0 13px;border:1px solid var(--line-strong);border-radius:var(--radius);color:var(--ink);background:#faf8f2;font-size:11px}
+.status{margin:15px auto;color:var(--muted);font-size:12px}
+.tool-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.tool-card{min-height:255px;display:flex;flex-direction:column;align-items:center;padding:20px;border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff}
+.tool-top{width:100%;display:flex;align-items:center;justify-content:space-between}
+.tool-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:var(--radius);color:#fff;background:var(--accent,var(--navy));font-family:var(--ceremonial);font-size:11px}
+.favorite{width:38px;height:38px;border:1px solid var(--line);border-radius:var(--radius);color:#8b6b39;background:#faf8f2;font-size:17px}
+.badge{margin-top:12px;color:#8a6a36;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+.tool-card h3{margin-top:7px;color:var(--forest-deep);font-size:22px}.tool-card p{color:var(--muted);font-size:12px}
+.destination{margin-top:auto;color:var(--muted);font-size:9px;letter-spacing:.06em;text-transform:uppercase}
+.tool-link{width:100%;min-height:42px;display:flex;align-items:center;justify-content:center;margin-top:11px;border:1px solid var(--line-strong);border-radius:var(--radius);color:var(--forest-deep);background:#faf8f2;font-size:10px;font-weight:600;text-transform:uppercase}
+.empty{display:none;padding:40px 12px;color:var(--muted)}.empty.show{display:block}
 
-    /* Drawer */
-    .drawer-overlay{
-      position:fixed;inset:0;z-index:2000;display:none;
-      background:rgba(20,40,52,.56);backdrop-filter:blur(3px);
-    }
-    .drawer-overlay.open{display:block}
-    .drawer{
-      position:absolute;right:0;top:0;width:min(94vw,430px);height:100%;
-      overflow:auto;padding:20px;background:var(--paper);
-      border-left:1px solid var(--line);box-shadow:-20px 0 52px rgba(20,40,52,.18);
-    }
-    .drawer-header{display:flex;align-items:center;justify-content:space-between;gap:14px}
-    .drawer-title{margin:0;color:var(--navy);font-family:var(--display);font-size:28px}
-    .close-button{
-      width:42px;height:42px;border:1px solid var(--line-strong);
-      border-radius:var(--radius);background:#fff;font-size:22px;
-    }
-    .drawer-intro{margin:13px 0 0;color:var(--muted);font-size:12px}
-    .drawer-search{
-      width:100%;min-height:46px;margin-top:15px;padding:0 13px;
-      border:1px solid var(--line-strong);border-radius:var(--radius);
-      background:#fff;color:var(--ink);
-    }
-    .menu-group{margin:20px 0 8px;color:var(--gold);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-    .drawer-nav{display:grid;gap:7px}
-    .drawer-link{
-      min-height:58px;display:grid;grid-template-columns:32px 1fr 16px;
-      align-items:center;gap:10px;padding:10px;border:1px solid var(--line);
-      border-radius:var(--radius);background:#fff;text-decoration:none;
-    }
-    .drawer-link i{
-      width:32px;height:32px;display:grid;place-items:center;
-      border-radius:var(--radius);color:#fff;background:var(--navy);
-      font-style:normal;font-family:var(--display);font-size:11px;
-    }
-    .drawer-link strong{display:block;color:var(--navy);font-size:13px}
-    .drawer-link small{display:block;margin-top:3px;color:var(--muted);font-size:11px}
-    .drawer-link span:last-child{color:var(--gold)}
+/* Transition & family */
+.transition-grid,.family-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.transition-card,.family-card{min-height:300px;display:flex;flex-direction:column;padding:28px;border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;box-shadow:var(--shadow);text-align:left}
+.transition-card h3,.family-card h3{color:var(--forest-deep);font-size:34px}.transition-card p,.family-card p{color:var(--muted);font-size:13px}
+.transition-actions,.family-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:16px}
 
-    @media(max-width:1000px){
-      .nav{grid-template-columns:1fr auto}
-      .site-id{display:none}
-      .tool-grid,.network-grid{grid-template-columns:repeat(2,1fr)}
-      .basecamp-grid,.family-panel{grid-template-columns:1fr}
-    }
-    @media(max-width:760px){
-      .header-link{display:none}
-      .brand-copy small{display:none}
-      .grade-grid{grid-template-columns:1fr}
-      .hero-notes{grid-template-columns:1fr}
-      .hero-note{border-left:0;border-top:1px solid var(--line)}
-      .hero-note:first-child{border-top:0}
-      .footer-inner{grid-template-columns:1fr}
-      .footer-links{justify-content:flex-start}
-    }
-    @media(max-width:560px){
-      .wrap{width:min(calc(100% - 22px),var(--max))}
-      .nav{min-height:66px}
-      .brand-mark{width:42px;height:42px;flex-basis:42px}
-      .hero{padding:72px 14px 68px}
-      h1{font-size:clamp(46px,14vw,66px)}
-      .hero-subtitle{font-size:11px;letter-spacing:.13em}
-      .hero-actions .btn{width:100%}
-      .tool-grid,.network-grid,.routine-grid{grid-template-columns:1fr}
-      .section{padding:66px 14px}
-    }
-    @media(prefers-reduced-motion:reduce){
-      *,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
-    }
-  </style>
+.network-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.network-card{min-height:210px;display:flex;flex-direction:column;align-items:center;padding:21px;border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff}
+.network-mark{width:46px;height:46px;display:grid;place-items:center;border-radius:var(--radius);color:#fff;background:var(--accent);font-family:var(--ceremonial);font-size:11px}
+.network-card h3{margin-top:14px;color:var(--forest-deep);font-size:22px}.network-card p{color:var(--muted);font-size:12px}.network-card small{margin-top:auto;color:#7b5e32;font-size:9px;text-transform:uppercase}
+.final{color:#fff;background:radial-gradient(circle at 50% 0,rgba(231,215,182,.15),transparent 29rem),linear-gradient(145deg,#365f5b,#1c3a40)}
+.final h2{max-width:860px;margin:12px auto 0;color:#fff;font-size:clamp(40px,5vw,68px)}.final p{max-width:760px;margin:18px auto;color:rgba(255,255,255,.78)}
+footer{padding:36px 20px;color:rgba(255,255,255,.64);background:#030a11;border-top:1px solid rgba(255,255,255,.08)}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;text-align:left}.footer-inner strong{color:#fff;font-family:var(--ceremonial);font-weight:500}.footer-inner small{font-size:11px}.footer-links{display:flex;justify-content:flex-end;gap:13px;flex-wrap:wrap;font-size:11px}
+.toast{position:fixed;left:50%;bottom:20px;z-index:3000;width:min(calc(100% - 32px),520px);transform:translate(-50%,100px);padding:10px 14px;border-radius:var(--radius);color:#fff;background:#07131f;box-shadow:var(--shadow);font-size:12px;opacity:0;visibility:hidden;pointer-events:none;transition:.2s}.toast.show{transform:translate(-50%,0);opacity:1;visibility:visible}
+
+@media(max-width:1040px){
+  .header-inner{grid-template-columns:minmax(0,1fr) auto}.header-links{display:none}
+  .tool-grid,.network-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .basecamp-grid{grid-template-columns:1fr}
+  .toolbar{grid-template-columns:1fr 1fr}.toolbar .field:first-child{grid-column:1/-1}
+}
+@media(max-width:760px){
+  .start-grid,.transition-grid,.family-grid{grid-template-columns:1fr}
+  .grade-grid{grid-template-columns:1fr}
+  .hero-stat-grid{grid-template-columns:1fr}.hero-stat{border-left:0;border-top:1px solid var(--line)}.hero-stat:first-child{border-top:0}
+}
+@media(max-width:600px){
+  .shell{width:min(calc(100% - 24px),var(--max))}
+  .brand-sub{display:none}.brand-name{font-size:13px}
+  .hero-inner{padding:45px 0 22px}.hero-stage{gap:22px}
+  h1{font-size:clamp(47px,16vw,70px)}
+  .hero-actions,.actions{display:grid;width:100%}.hero-actions .button,.actions .button{width:100%}
+  .start-links,.routine-grid,.tool-grid,.network-grid,.toolbar{grid-template-columns:1fr}.toolbar .field:first-child{grid-column:auto}
+  .section{padding:64px 12px}
+  .footer-inner{justify-content:center;text-align:center;flex-direction:column}.footer-links{justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
 </head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to main content</a>
 
-<body>
-  <a class="skip" href="#main">Skip to main content</a>
-
-  <header class="site-header">
-    <div class="wrap nav">
-      <a class="brand" href="https://vervenveda.github.io/Khaemenes_Academy.github.io/" aria-label="Open Khaemenes Academy">
-        <span class="brand-mark" aria-hidden="true">K</span>
-        <span class="brand-copy">
-          <strong>Khaemenes Academy</strong>
-          <small>Middle School · Grades 6–8</small>
-        </span>
-      </a>
-
-      <a class="site-id" href="#top">
-        <strong>Khaemenes Middle</strong>
-        <small>Think · Build · Belong</small>
-      </a>
-
-      <div class="nav-actions">
-        <a class="header-link" href="#grades">Grade Halls</a>
-        <a class="header-link" href="#family">Parent Portal</a>
-        <button class="menu-button" id="menuButton" type="button" aria-label="Open complete directory" aria-expanded="false" aria-controls="drawer">
-          <span class="menu-lines" aria-hidden="true"></span>
-        </button>
+<div class="network-ticker" id="ticker">
+  <div class="network-ticker-viewport">
+    <div class="network-ticker-track">
+      <div class="network-ticker-set">
+        <span class="network-ticker-label">Khaemenes Network</span>
+        <a class="network-ticker-app" href="https://vervenveda.com/">Verve N Veda</a>
+        <a class="network-ticker-app" href="https://vervenveda.com/Khaemenes_Academy.github.io/">Academy</a>
+        <a class="network-ticker-app" href="grades/grade-06/">Grade 6</a>
+        <a class="network-ticker-app" href="grades/grade-07/">Grade 7</a>
+        <a class="network-ticker-app" href="grades/grade-08/">Grade 8</a>
+        <a class="network-ticker-app" href="https://vervenveda.com/Khaemenes_High.github.io/">High School</a>
+      </div>
+      <div class="network-ticker-set" aria-hidden="true">
+        <span class="network-ticker-label">Khaemenes Network</span>
+        <a tabindex="-1" class="network-ticker-app" href="https://vervenveda.com/">Verve N Veda</a>
+        <a tabindex="-1" class="network-ticker-app" href="https://vervenveda.com/Khaemenes_Academy.github.io/">Academy</a>
+        <a tabindex="-1" class="network-ticker-app" href="grades/grade-06/">Grade 6</a>
+        <a tabindex="-1" class="network-ticker-app" href="grades/grade-07/">Grade 7</a>
+        <a tabindex="-1" class="network-ticker-app" href="grades/grade-08/">Grade 8</a>
+        <a tabindex="-1" class="network-ticker-app" href="https://vervenveda.com/Khaemenes_High.github.io/">High School</a>
       </div>
     </div>
-  </header>
-
-  <main id="main">
-    <section class="hero" id="top" aria-labelledby="heroTitle">
-      <div class="hero-inner">
-        <div class="school-mark" aria-hidden="true">KM</div>
-        <p class="eyebrow">Khaemenes Academy · Middle School</p>
-        <h1 id="heroTitle">Your Middle School Home Base</h1>
-        <p class="hero-subtitle">Grades 6 · 7 · 8</p>
-        <p class="hero-lead">A calm, modern place for students to begin the day, enter their grade-level homeroom, find trusted learning tools, explore new interests, and grow into capable independent learners.</p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#grades">Choose Your Grade</a>
-          <a class="btn btn-parent" href="#family">Parent &amp; Family Portal</a>
-          <a class="btn btn-secondary" href="#tools">Explore Learning Tools</a>
-        </div>
-
-        <div class="hero-notes" aria-label="Middle school commitments">
-          <div class="hero-note"><strong>Learn</strong><span>Clear grade-level pathways and serious academic tools.</span></div>
-          <div class="hero-note"><strong>Create</strong><span>Art, writing, music, projects, experiments, and ideas.</span></div>
-          <div class="hero-note"><strong>Grow</strong><span>Confidence, responsibility, curiosity, and independence.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="grades" aria-labelledby="gradesTitle">
-      <div class="section-inner">
-        <div class="section-heading">
-          <p class="kicker">Student entrance halls</p>
-          <h2 id="gradesTitle">Choose your grade-level homeroom.</h2>
-          <p class="section-intro">Each grade has its own rhythm and expectations while sharing the same Khaemenes Academy standards: thoughtful learning, practical skills, creativity, and steady progress.</p>
-        </div>
-
-        <div class="grade-grid">
-          <article class="grade-card" id="grade-6" style="--accent:#4f7f7a">
-            <div class="grade-number" aria-hidden="true">6</div>
-            <p class="grade-label">Foundation &amp; Discovery</p>
-            <h3>Sixth Grade</h3>
-            <p>Build strong middle-school habits, organize assignments, deepen core skills, and explore new subjects with support.</p>
-            <div class="subject-list">
-              <span>Math Foundations</span><span>Language Arts</span><span>Earth &amp; Life Science</span><span>World Studies</span><span>Creative Lab</span>
-            </div>
-            <div class="grade-actions">
-              <a href="#sixth-homeroom">Enter Sixth Grade Homeroom</a>
-              <a href="#tools">Open Shared Learning Tools</a>
-            </div>
-          </article>
-
-          <article class="grade-card" id="grade-7" style="--accent:#776b94">
-            <div class="grade-number" aria-hidden="true">7</div>
-            <p class="grade-label">Connection &amp; Challenge</p>
-            <h3>Seventh Grade</h3>
-            <p>Strengthen reasoning, make connections across subjects, take on longer projects, and practice greater independence.</p>
-            <div class="subject-list">
-              <span>Pre-Algebra Readiness</span><span>Literature &amp; Writing</span><span>Physical Science</span><span>Civics &amp; History</span><span>Design Studio</span>
-            </div>
-            <div class="grade-actions">
-              <a href="#seventh-homeroom">Enter Seventh Grade Homeroom</a>
-              <a href="#tools">Open Shared Learning Tools</a>
-            </div>
-          </article>
-
-          <article class="grade-card" id="grade-8" style="--accent:#b8715d">
-            <div class="grade-number" aria-hidden="true">8</div>
-            <p class="grade-label">Leadership &amp; Transition</p>
-            <h3>Eighth Grade</h3>
-            <p>Prepare for high school through advanced habits, stronger communication, leadership, portfolio work, and future planning.</p>
-            <div class="subject-list">
-              <span>Pre-Algebra</span><span>Advanced Language Arts</span><span>Integrated Science</span><span>U.S. &amp; World Civics</span><span>High School Readiness</span>
-            </div>
-            <div class="grade-actions">
-              <a href="#eighth-homeroom">Enter Eighth Grade Homeroom</a>
-              <a href="#tools">Open Shared Learning Tools</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" aria-labelledby="basecampTitle">
-      <div class="section-inner">
-        <div class="basecamp">
-          <div class="basecamp-grid">
-            <div>
-              <p class="kicker">A steady daily rhythm</p>
-              <h3 id="basecampTitle">Your Daily Basecamp</h3>
-              <p>Begin with a simple sequence that helps students know what to do next without making the page feel crowded or childish.</p>
-            </div>
-            <div class="routine-grid">
-              <div class="routine"><strong>01 · Check In</strong><span>Review announcements, goals, and today’s schedule.</span></div>
-              <div class="routine"><strong>02 · Learn</strong><span>Enter the core lesson or assigned workshop.</span></div>
-              <div class="routine"><strong>03 · Create</strong><span>Complete a project, practice, lab, or reflection.</span></div>
-              <div class="routine"><strong>04 · Close Out</strong><span>Save work, record progress, and prepare for tomorrow.</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="tools" aria-labelledby="toolsTitle">
-      <div class="section-inner">
-        <div class="section-heading">
-          <p class="kicker">Connected learning halls</p>
-          <h2 id="toolsTitle">Useful tools across the Verve N Veda network.</h2>
-          <p class="section-intro">These public destinations support middle-school research, language learning, science, creativity, music, current events, writing, games, and independent study.</p>
-        </div>
-
-        <div class="tool-grid" id="toolGrid"></div>
-      </div>
-    </section>
-
-    <section class="section alt" id="family" aria-labelledby="familyTitle">
-      <div class="section-inner">
-        <div class="family-panel">
-          <div class="family-copy">
-            <p class="kicker">Parents, caregivers, and learning guides</p>
-            <h3 id="familyTitle">Parent &amp; Family Portal</h3>
-            <p>Use the family portal to review learning expectations, help students organize their week, find academy-wide support, and stay connected to the middle-school experience without taking over the student’s growing independence.</p>
-          </div>
-          <div class="family-actions">
-            <a href="https://vervenveda.github.io/Khaemenes_Academy.github.io/" target="_blank" rel="noopener noreferrer"><span>Open Parent &amp; Academy Support</span><span>↗</span></a>
-            <a href="#grades"><span>Review Grade-Level Pathways</span><span>→</span></a>
-            <a href="#tools"><span>Review Student Learning Tools</span><span>→</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="network" aria-labelledby="networkTitle">
-      <div class="section-inner">
-        <div class="section-heading">
-          <p class="kicker">Khaemenes Academy pathway</p>
-          <h2 id="networkTitle">Continue through the school network.</h2>
-          <p class="section-intro">Students and families can move between the academy’s major age-level halls and the wider Verve N Veda public learning network.</p>
-        </div>
-        <div class="network-grid" id="networkGrid"></div>
-      </div>
-    </section>
-
-    <section id="sixth-homeroom" hidden></section>
-    <section id="seventh-homeroom" hidden></section>
-    <section id="eighth-homeroom" hidden></section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div>
-        <p class="footer-title">Khaemenes Middle School</p>
-        <p class="footer-copy">Grades 6–8 · Think · Build · Belong · © <span id="year"></span> Jennifer Kay Pearl. All Rights Reserved.</p>
-      </div>
-      <nav class="footer-links" aria-label="Footer navigation">
-        <a href="#top">Top</a>
-        <a href="#grades">Grade Halls</a>
-        <a href="#tools">Learning Tools</a>
-        <a href="#family">Parent Portal</a>
-        <a href="https://vervenveda.github.io/Khaemenes_Academy.github.io/" target="_blank" rel="noopener noreferrer">Academy Home</a>
-      </nav>
-    </div>
-  </footer>
-
-  <div class="drawer-overlay" id="drawer" aria-hidden="true">
-    <aside class="drawer" aria-label="Khaemenes Middle School complete directory">
-      <div class="drawer-header">
-        <h2 class="drawer-title">Middle School Directory</h2>
-        <button class="close-button" id="closeDrawer" type="button" aria-label="Close directory">×</button>
-      </div>
-      <p class="drawer-intro">Choose a grade hall, parent pathway, learning tool, or connected public destination.</p>
-      <input class="drawer-search" id="drawerSearch" type="search" placeholder="Search the directory…" autocomplete="off">
-      <nav class="drawer-nav" id="drawerNav"></nav>
-    </aside>
   </div>
+  <button class="ticker-control" id="tickerControl" aria-label="Pause network ticker">Ⅱ</button>
+</div>
 
-  <script>
-    "use strict";
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="#top" aria-label="Khaemenes Academy Middle School home">
+      <span class="brand-mark">K</span>
+      <span class="brand-copy">
+        <span class="brand-name">Khaemenes Academy</span>
+        <span class="brand-sub">Middle School · Grades 6–8</span>
+      </span>
+    </a>
+    <nav class="header-links" aria-label="Primary navigation">
+      <a href="#start">Start</a>
+      <a href="#grades">Grades 6–8</a>
+      <a href="#basecamp">Basecamp</a>
+      <a href="#resources">Resources</a>
+      <a href="#family">Family</a>
+      <a class="high-link" href="https://vervenveda.com/Khaemenes_High.github.io/">High School</a>
+    </nav>
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open Middle School directory" aria-expanded="false" aria-controls="drawerBg">
+      <span class="menu-lines" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
 
-    const TOOLS = [
-      {title:"Khaemenes Academy",url:"https://vervenveda.github.io/Khaemenes_Academy.github.io/",mark:"K",accent:"#203a4b",description:"Academy-wide pathways, programs, student support, and family resources.",tags:"academy parent family school"},
-      {title:"Khaemenes Linguistics",url:"https://vervenveda.github.io/Khaemenes_Linguistics.github.io/",mark:"L",accent:"#4f7f7a",description:"Language learning, vocabulary, grammar, communication, and multilingual study.",tags:"language writing vocabulary grammar"},
-      {title:"ARSHIF Archives",url:"https://vervenveda.github.io/Arshif.github.io/",mark:"A",accent:"#776b94",description:"History, culture, literature, research halls, archives, and deeper study.",tags:"history literature research archives"},
-      {title:"Solanar",url:"https://vervenveda.github.io/solanar.github.io/",mark:"S",accent:"#6e97ad",description:"Weather, Earth science, lunar cycles, environment, and observation.",tags:"science weather earth moon environment"},
-      {title:"The Verifier",url:"https://vervenveda.github.io/theverifier.github.io/",mark:"V",accent:"#4f6670",description:"Current events, source comparison, research, and information literacy.",tags:"news research sources media literacy"},
-      {title:"PLERA Search",url:"https://vervenveda.github.io/PLERASearch.github.io/",mark:"⌕",accent:"#315e5a",description:"A broad public gateway for research, discovery, and trusted resources.",tags:"search research information"},
-      {title:"Bazaar Art",url:"https://vervenveda.github.io/bazaarart.github.io/",mark:"✦",accent:"#b8715d",description:"Art studios, creative projects, visual learning, journals, and design.",tags:"art drawing creative design"},
-      {title:"The Refrain",url:"https://vervenveda.github.io/the_refrain.github.io/",mark:"♪",accent:"#776b94",description:"Music learning, composition, listening, instruments, and sound.",tags:"music composition instruments"},
-      {title:"Arcade",url:"https://vervenveda.github.io/arcade.github.io/",mark:"◆",accent:"#203a4b",description:"Strategy, puzzles, trivia, language games, creativity, and playful learning.",tags:"games puzzles trivia strategy"},
-      {title:"Aurora Sanctuary",url:"https://vervenveda.github.io/aurora.github.io/",mark:"AU",accent:"#78917e",description:"Reflection, journaling, breathing, creativity, rest, and daily rhythm.",tags:"wellness journal reflection calm"},
-      {title:"ProReSources",url:"https://vervenveda.github.io/proresource_hub.github.io/",mark:"PR",accent:"#4f7f7a",description:"Writing, productivity, design, coding, media, and project tools.",tags:"tools writing coding productivity"},
-      {title:"Firmament Law",url:"https://vervenveda.github.io/firmament.github.io/",mark:"§",accent:"#8a6346",description:"Rights, civics, government, legal information, and public-resource study.",tags:"civics law rights government"}
-    ];
+<div class="breadcrumb-bar">
+  <nav class="shell breadcrumbs" aria-label="Breadcrumb">
+    <a href="https://vervenveda.com/">Verve N Veda</a><span>›</span>
+    <a href="https://vervenveda.com/Khaemenes_Academy.github.io/">Khaemenes Academy</a><span>›</span>
+    <span aria-current="page">Middle School</span>
+  </nav>
+</div>
 
-    const NETWORK = [
-      {title:"Khaemenes Academy",url:"https://vervenveda.github.io/Khaemenes_Academy.github.io/",mark:"KA",accent:"#203a4b",description:"The main academy gateway."},
-      {title:"Khaemenes Preschool",url:"https://vervenveda.github.io/Khaemenes_Preschool.github.io/",mark:"P",accent:"#78917e",description:"Early learning and preschool discovery."},
-      {title:"Khaemenes KinderGarden",url:"https://vervenveda.github.io/Khaemenes_KinderGarden.github.io/",mark:"K",accent:"#b18a4f",description:"A colorful kindergarten learning garden."},
-      {title:"Khaemenes Elementary",url:"https://vervenveda.github.io/Khaemenes_Elementary.github.io/",mark:"E",accent:"#6e97ad",description:"Elementary learning pathways and grade halls."},
-      {title:"Khaemenes Middle",url:"https://vervenveda.github.io/Khaemenes_Middle.github.io/",mark:"M",accent:"#4f7f7a",description:"Grades 6–8 home rooms and middle-school tools."},
-      {title:"Khaemenes High",url:"https://vervenveda.github.io/Khaemenes_High.github.io/",mark:"H",accent:"#776b94",description:"Grades 9–12 courses, planning, and high-school pathways."},
-      {title:"Khaemenes Higher Learning",url:"https://vervenveda.github.io/Khaemenes_Higher_Learning.github.io/",mark:"HL",accent:"#b8715d",description:"Advanced study, adult learning, and future pathways."},
-      {title:"Verve N Veda",url:"https://vervenveda.github.io/",mark:"V",accent:"#203a4b",description:"The public gateway to the complete network."}
-    ];
+<div class="drawer-bg" id="drawerBg" aria-hidden="true">
+  <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <div class="drawer-head">
+      <h2 id="drawerTitle">Middle School Directory</h2>
+      <button class="drawer-close" id="closeButton" type="button" aria-label="Close directory">×</button>
+    </div>
+    <p>Search Grades 6–8, family support, High School readiness, and the live middle-school learning resource federation.</p>
+    <label class="sr-only" for="drawerSearch">Search Middle School directory</label>
+    <input class="drawer-search" id="drawerSearch" type="search" placeholder="Search Grade 7, science, writing, games…">
+    <div id="drawerContent"></div>
+  </aside>
+</div>
 
-    const $ = id => document.getElementById(id);
-    const esc = value => String(value)
-      .replaceAll("&","&amp;")
-      .replaceAll("<","&lt;")
-      .replaceAll(">","&gt;")
-      .replaceAll('"',"&quot;")
-      .replaceAll("'","&#039;");
+<main id="main">
+  <section class="hero">
+    <div class="shell hero-inner">
+      <div class="hero-stage">
+        <div>
+          <p class="eyebrow">Verve N Veda Educational Network</p>
+          <h1>Khaemenes Middle School</h1>
+        </div>
+        <p class="hero-lead">A calm Grades 6–8 home base for complete curricula, daily routines, trusted learning tools, creativity, family support, growing independence, and a clear path toward High School.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#grades">Choose Your Grade</a>
+          <a class="button button-secondary" href="#start">Student &amp; Family Start</a>
+          <a class="button button-high" href="#transition">High School Readiness</a>
+        </div>
+        <div class="hero-stat-grid">
+          <div class="hero-stat"><strong>36 Weeks</strong><span>Each grade portal contains a full A++ curriculum, subject halls, assessments, and records.</span></div>
+          <div class="hero-stat"><strong>Grades 6–8</strong><span>Three distinct stages: foundation, deeper connection, and high-school readiness.</span></div>
+          <div class="hero-stat"><strong>Live Resources</strong><span>The learning shelf reads the ecosystem federation and only admits middle-appropriate resources.</span></div>
+        </div>
+      </div>
+      <button class="scroll-cue" data-scroll="#start">Enter the campus</button>
+    </div>
+  </section>
 
-    function renderTools(){
-      $("toolGrid").innerHTML = TOOLS.map(tool => `
-        <a class="tool-card" style="--accent:${esc(tool.accent)}" href="${esc(tool.url)}" target="_blank" rel="noopener noreferrer">
-          <span class="tool-mark" aria-hidden="true">${esc(tool.mark)}</span>
-          <h3>${esc(tool.title)}</h3>
-          <p>${esc(tool.description)}</p>
-          <strong>Open public learning hall ↗</strong>
-        </a>
-      `).join("");
-    }
+  <section class="section section-alt" id="start">
+    <div class="section-inner">
+      <div class="heading">
+        <p class="kicker">Middle School Start Center</p>
+        <h2>Students and families have different jobs.</h2>
+        <p>Students get a simple route into learning. Families get the wider view: expectations, grade pathways, support, records, and the transition toward High School.</p>
+      </div>
+      <div class="start-grid">
+        <article class="start-card" style="--accent:#4f7f7a">
+          <span class="start-emblem">S</span>
+          <h3>Student Start</h3>
+          <p>Choose your grade, open today’s curriculum, use the Daily Basecamp rhythm, and reach trusted learning tools without wandering through the whole ecosystem.</p>
+          <div class="start-links">
+            <a href="grades/grade-06/">Grade 6</a>
+            <a href="grades/grade-07/">Grade 7</a>
+            <a href="grades/grade-08/">Grade 8</a>
+            <a href="#resources">Learning Tools</a>
+          </div>
+        </article>
+        <article class="start-card" id="family" style="--accent:#b8715d">
+          <span class="start-emblem">F</span>
+          <h3>Family &amp; Educator</h3>
+          <p>Review the complete grade portals, assessments, family-controlled records, learning resources, and Grade 8 transition into Khaemenes High.</p>
+          <div class="start-links">
+            <a href="https://vervenveda.com/Khaemenes_Academy.github.io/">Academy Support</a>
+            <a href="#grades">Grade Pathways</a>
+            <a href="#resources">Resource Directory</a>
+            <a href="#transition">High School Transition</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    function renderNetwork(){
-      $("networkGrid").innerHTML = NETWORK.map(site => `
-        <a class="network-card" style="--accent:${esc(site.accent)}" href="${esc(site.url)}" target="_blank" rel="noopener noreferrer">
-          <span class="network-mark" aria-hidden="true">${esc(site.mark)}</span>
-          <h3>${esc(site.title)}</h3>
-          <p>${esc(site.description)}</p>
-          <strong>Open landing page ↗</strong>
-        </a>
-      `).join("");
-    }
+  <section class="section" id="grades">
+    <div class="section-inner">
+      <div class="heading">
+        <p class="kicker">Three Connected Grade Years</p>
+        <h2>Choose the real grade curriculum.</h2>
+        <p>The old landing page used hidden homeroom placeholders. These cards now open the actual Grade 6, 7, and 8 curriculum portals already in this repository.</p>
+      </div>
+      <div class="grade-grid">
+        <article class="grade-card" style="--accent:#4f7f7a">
+          <div class="grade-number">6</div><p class="grade-label">Foundation &amp; Discovery</p><h3>Sixth Grade</h3>
+          <p>Build middle-school habits, strengthen core academic foundations, organize work, and practice evidence, revision, research, and portfolio skills.</p>
+          <div class="subject-list"><span>Language Arts</span><span>Mathematics</span><span>Science</span><span>Social Studies</span><span>Technology &amp; Design</span></div>
+          <div class="grade-actions"><a href="grades/grade-06/">Enter Sixth Grade</a><a href="grades/grade-06/assessments/weekly-assessments.html">Open Assessments</a></div>
+        </article>
+        <article class="grade-card" style="--accent:#776b94">
+          <div class="grade-number">7</div><p class="grade-label">Connection &amp; Challenge</p><h3>Seventh Grade</h3>
+          <p>Strengthen reasoning, connect ideas across subjects, take on longer projects, and practice greater independence while preparing for Grade 8.</p>
+          <div class="subject-list"><span>Language Arts</span><span>Mathematics</span><span>Science</span><span>Social Studies</span><span>Design &amp; Research</span></div>
+          <div class="grade-actions"><a href="grades/grade-07/">Enter Seventh Grade</a><a href="grades/grade-07/assessments/weekly-assessments.html">Open Assessments</a></div>
+        </article>
+        <article class="grade-card" style="--accent:#b8715d">
+          <div class="grade-number">8</div><p class="grade-label">Leadership &amp; Transition</p><h3>Eighth Grade</h3>
+          <p>Build high-school readiness through stronger communication, advanced habits, portfolio evidence, capstone work, leadership, and transition planning.</p>
+          <div class="subject-list"><span>Pre-Algebra Readiness</span><span>Advanced Language Arts</span><span>Integrated Science</span><span>Civics</span><span>High School Readiness</span></div>
+          <div class="grade-actions"><a href="grades/grade-08/">Enter Eighth Grade</a><a href="grades/grade-08/assessments/weekly-assessments.html">Open Assessments</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    function drawerEntries(query=""){
-      const q = query.trim().toLowerCase();
+  <section class="section section-dark" id="basecamp">
+    <div class="section-inner">
+      <div class="basecamp">
+        <div class="basecamp-grid">
+          <div>
+            <p class="kicker">A steady daily rhythm</p>
+            <h3>Your Daily Basecamp</h3>
+            <p>The same simple rhythm can support every grade without making Middle School feel crowded or childish.</p>
+          </div>
+          <div class="routine-grid">
+            <div class="routine"><strong>01 · Check In</strong><span>Review goals, schedule, and today’s priorities.</span></div>
+            <div class="routine"><strong>02 · Learn</strong><span>Enter the assigned grade lesson or subject hall.</span></div>
+            <div class="routine"><strong>03 · Create</strong><span>Complete practice, a project, experiment, or reflection.</span></div>
+            <div class="routine"><strong>04 · Close Out</strong><span>Save work, record progress, and prepare for tomorrow.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      const localEntries = [
-        {title:"Sixth Grade",desc:"Foundation and discovery",url:"#grade-6",mark:"6",external:false},
-        {title:"Seventh Grade",desc:"Connection and challenge",url:"#grade-7",mark:"7",external:false},
-        {title:"Eighth Grade",desc:"Leadership and transition",url:"#grade-8",mark:"8",external:false},
-        {title:"Parent & Family Portal",desc:"Family guidance and academy support",url:"#family",mark:"P",external:false},
-        {title:"Shared Learning Tools",desc:"Connected academic and creative resources",url:"#tools",mark:"T",external:false}
-      ];
+  <section class="section section-alt" id="resources">
+    <div class="section-inner">
+      <div class="heading">
+        <p class="kicker">Live Middle School Resource Directory</p>
+        <h2>Trusted tools without a manually maintained app list.</h2>
+        <p>This directory reads the central Verve N Veda federation and only accepts resources explicitly suitable for Middle School, parents, or educators. A small safe core remains available if the registry cannot load.</p>
+      </div>
+      <div class="catalog">
+        <div class="toolbar">
+          <label class="sr-only" for="search">Search Middle School resources</label>
+          <input class="field" id="search" type="search" placeholder="Search research, writing, science, art, games, coding…">
+          <label class="sr-only" for="category">Filter resource category</label>
+          <select class="field" id="category"></select>
+          <button class="tool-button" id="favorites" type="button" aria-pressed="false">♡ My Shelf <span id="favoriteCount">0</span></button>
+          <button class="tool-button" id="random" type="button">Surprise Me ✦</button>
+        </div>
+        <p class="status" id="status" aria-live="polite">Loading resource federation…</p>
+        <div class="tool-grid" id="toolGrid"></div>
+        <div class="empty" id="empty">No middle-school resource matched that search.</div>
+      </div>
+    </div>
+  </section>
 
-      const externalEntries = TOOLS.concat(NETWORK).map(item => ({
-        title:item.title,
-        desc:item.description,
-        url:item.url,
-        mark:item.mark,
-        external:true
+  <section class="section" id="transition">
+    <div class="section-inner">
+      <div class="heading">
+        <p class="kicker">Grade 8 → High School</p>
+        <h2>Middle School should make the next step visible.</h2>
+        <p>Grade 8 already contains a full high-school-readiness curriculum. The campus now makes that transition explicit, while offering optional early career exploration without turning Middle School into a career-placement system.</p>
+      </div>
+      <div class="transition-grid">
+        <article class="transition-card">
+          <p class="kicker">Next Academic Stage</p><h3>Khaemenes High School</h3>
+          <p>Preview Grades 9–12, academic departments, student and family portals, health and PE, research resources, and the high-school transition architecture.</p>
+          <div class="transition-actions"><a class="button button-high" href="https://vervenveda.com/Khaemenes_High.github.io/">Preview High School</a></div>
+        </article>
+        <article class="transition-card">
+          <p class="kicker">Explore Interests</p><h3>Career Discovery</h3>
+          <p>Older Middle School learners may explore interests and professional skills as curiosity-building activities. Formal Career assessment remains a later-stage tool rather than a requirement here.</p>
+          <div class="transition-actions"><a class="button button-secondary" href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/Career/">Explore Career Portal</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="family-support">
+    <div class="section-inner">
+      <div class="heading"><p class="kicker">Family &amp; Educator Support</p><h2>Guide growing independence without taking it over.</h2><p>Middle School is a transition in responsibility. Families can support planning, records, accessibility, healthy routines, and High School preparation while students increasingly own their work.</p></div>
+      <div class="family-grid">
+        <article class="family-card"><p class="kicker">Planning &amp; Records</p><h3>Keep the structure visible.</h3><p>Each grade portal includes curriculum, weekly assessments, midterm/final work, teacher tools, portfolio evidence, and family-controlled local records.</p><div class="family-actions"><a class="button button-primary" href="#grades">Review Grade Portals</a></div></article>
+        <article class="family-card"><p class="kicker">Academy Connection</p><h3>Use the wider support network.</h3><p>The central family registry bridge remains connected on this landing page so Middle School stays part of the same Khaemenes family architecture as the other school stages.</p><div class="family-actions"><a class="button button-secondary" href="https://vervenveda.com/Khaemenes_Academy.github.io/">Open Academy Support</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="network">
+    <div class="section-inner">
+      <div class="heading"><p class="kicker">Connected Learning Network</p><h2>Middle School is one stage of a larger journey.</h2><p>Students can reach the Academy, High School, research, creative learning, professional tools, and the public Verve N Veda gateway without the main page becoming a giant directory.</p></div>
+      <div class="network-grid" id="networkGrid"></div>
+    </div>
+  </section>
+
+  <section class="section final">
+    <div class="section-inner">
+      <p class="kicker">Khaemenes Academy Middle School</p>
+      <h2>Think. Build. Belong. Grow.</h2>
+      <p>Middle School can be serious without becoming cold, independent without becoming isolating, and challenging without losing curiosity.</p>
+      <div class="actions"><a class="button button-primary" href="#grades">Choose a Grade</a><a class="button button-secondary" href="https://vervenveda.com/Khaemenes_High.github.io/">Preview High School</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="shell footer-inner">
+    <span><strong>Khaemenes Academy Middle School</strong><br><small>Grades 6–8 · Think · Build · Belong · © <span id="year"></span> Jennifer Kay Pearl · Verve N Veda</small></span>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="#grades">Grades</a><a href="#basecamp">Basecamp</a><a href="#resources">Resources</a><a href="#family">Family</a><a href="#transition">High School</a><a href="https://vervenveda.com/">Verve N Veda</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="toast" id="toast" aria-live="polite"></div>
+
+<script>
+(() => {
+  "use strict";
+
+  const FAVORITES_KEY = "khaemenes-middle-resource-favorites-v2";
+  const REGISTRY_URL = "https://vervenveda.com/assessment-engine/mentor/registry/ecosystem-resources.json";
+  const $ = id => document.getElementById(id);
+  const $$ = (selector,root=document) => [...root.querySelectorAll(selector)];
+
+  const CATEGORIES = {
+    all:"All Middle School Resources",
+    core:"Academic & Study",
+    research:"Research & Reading",
+    creative:"Art, Music & Creativity",
+    stem:"Science, Health & Environment",
+    tools:"Writing, Technology & Projects",
+    games:"Strategy & Learning Games",
+    life:"Civics, Life Skills & Exploration"
+  };
+
+  const CORE_RESOURCES = [
+    {id:"academy",title:"Khaemenes Academy",category:"core",kind:"Academy",icon:"K",url:"https://vervenveda.com/Khaemenes_Academy.github.io/",description:"Academy-wide pathways, family support, and connected school stages.",repository:"Khaemenes Academy",tags:["academy","family","school"]},
+    {id:"linguistics",title:"Khaemenes Linguistics",category:"research",kind:"Language",icon:"Aa",url:"https://vervenveda.com/Khaemenes_Linguistics.github.io/",description:"Language learning, vocabulary, grammar, communication, translation, and word study.",repository:"Linguistics",tags:["language","writing","vocabulary"]},
+    {id:"arshif",title:"ARSHIF",category:"research",kind:"Research",icon:"AR",url:"https://vervenveda.com/Arshif.github.io/",description:"History, culture, literature, research halls, archives, and deeper reading.",repository:"ARSHIF",tags:["history","literature","research"]},
+    {id:"solanar",title:"Solanar",category:"stem",kind:"Science",icon:"S",url:"https://vervenveda.com/solanar.github.io/",description:"Weather, Earth science, environment, lunar cycles, and observation.",repository:"Solanar",tags:["science","weather","earth"]},
+    {id:"verifier",title:"The Verifier",category:"research",kind:"Media Literacy",icon:"V",url:"https://vervenveda.com/theverifier.github.io/",description:"Current events, source comparison, verification, and information literacy.",repository:"The Verifier",tags:["news","sources","media literacy"]},
+    {id:"plera",title:"PLERA Search",category:"research",kind:"Search",icon:"PS",url:"https://vervenveda.com/PLERASearch.github.io/",description:"A broad research and discovery gateway for public learning resources.",repository:"PLERA",tags:["search","research","information"]},
+    {id:"bazaar-art",title:"Bazaar Art",category:"creative",kind:"Art",icon:"BA",url:"https://vervenveda.com/bazaarart.github.io/",description:"Art studios, creative projects, journals, portfolios, and visual design.",repository:"Bazaar Art",tags:["art","creative","design"]},
+    {id:"refrain",title:"The Refrain",category:"creative",kind:"Music",icon:"M",url:"https://vervenveda.com/the_refrain.github.io/",description:"Music learning, composition, listening, instruments, and sound.",repository:"The Refrain",tags:["music","composition","instruments"]},
+    {id:"arcade",title:"Arcade",category:"games",kind:"Games",icon:"G",url:"https://vervenveda.com/arcade.github.io/",description:"Strategy, puzzles, trivia, language games, creativity, and playful learning.",repository:"Arcade",tags:["games","puzzles","strategy"]},
+    {id:"proresources",title:"ProReSources",category:"tools",kind:"Tools",icon:"PR",url:"https://vervenveda.com/proresource_hub.github.io/",description:"Writing, productivity, design, coding, media, and project tools.",repository:"ProReSources",tags:["writing","coding","projects"]},
+    {id:"firmament",title:"Firmament Law",category:"life",kind:"Civics",icon:"§",url:"https://vervenveda.com/firmament.github.io/",description:"Rights, civics, government, legal information, and evidence study.",repository:"Firmament",tags:["civics","law","government"]},
+    {id:"high-school",title:"Khaemenes High School",category:"life",kind:"Next Stage",icon:"H",url:"https://vervenveda.com/Khaemenes_High.github.io/",description:"Grades 9–12 courses, pathways, family tools, Career, and High School planning.",repository:"Khaemenes High",tags:["high school","transition","grade 9"]}
+  ];
+
+  const NETWORK = [
+    {title:"Khaemenes Academy",url:"https://vervenveda.com/Khaemenes_Academy.github.io/",mark:"KA",accent:"#203a4b",description:"The main lifelong-learning academy gateway.",label:"Academy"},
+    {title:"Khaemenes High School",url:"https://vervenveda.com/Khaemenes_High.github.io/",mark:"H",accent:"#776b94",description:"Grades 9–12 courses, planning, family tools, and transition.",label:"Next school stage"},
+    {title:"ProReSources",url:"https://vervenveda.com/proresource_hub.github.io/",mark:"PR",accent:"#4f7f7a",description:"Writing, productivity, design, coding, and project tools.",label:"Professional & project tools"},
+    {title:"Verve N Veda",url:"https://vervenveda.com/",mark:"V",accent:"#203a4b",description:"The public gateway to the complete learning network.",label:"Public ecosystem"}
+  ];
+
+  const BLOCKED = new Set(["admin-only","restricted","archived","campaign","unclassified"]);
+  let resources=[...CORE_RESOURCES];
+  let federationMeta={generatedAt:null,error:null};
+  const readJSON=(key,fallback)=>{try{const raw=localStorage.getItem(key);return raw?JSON.parse(raw):fallback}catch{return fallback}};
+  const writeJSON=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value));return true}catch{return false}};
+  const escapeHTML=value=>String(value??"").replace(/[&<>'"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[ch]));
+  const normalize=value=>String(value||"").toLowerCase().normalize("NFKD").replace(/[^\p{L}\p{N}]+/gu," ").trim();
+  const toast=message=>{const node=$("toast");node.textContent=message;node.classList.add("show");clearTimeout(toast.timer);toast.timer=setTimeout(()=>node.classList.remove("show"),2100)};
+
+  function resourceText(r){
+    return normalize([r.title,r.description,r.repository,r.classification,r.resourceType,r.learningValue,...(r.domains||[]),...(r.skills||[]),...(r.tags||[]),...(r.subjects||[])].filter(Boolean).join(" "));
+  }
+  function classify(r){
+    const text=resourceText(r),has=(...terms)=>terms.some(t=>text.includes(normalize(t)));
+    if(has("game","chess","sudoku","logic","strategy","puzzle","trivia","arcade")) return "games";
+    if(has("art","artist","music","audio","creative","gallery","composition","drawing","design studio")) return "creative";
+    if(has("health","medicine","wellness","science","biology","environment","weather","earth","fitness")) return "stem";
+    if(has("coding","code","technology","cad","editor","writing","prose","productivity","calculator","project tool","digital")) return "tools";
+    if(has("law","civic","government","finance","financial","service","citizenship","career","life skill")) return "life";
+    if(has("literature","history","archive","research","search","reading","language","linguistic","philosophy")) return "research";
+    return "core";
+  }
+  function eligible(r){
+    if(!r||typeof r!=="object"||!r.url) return false;
+    if(r.recommendable===false||r.mentorEligible===false) return false;
+    if(BLOCKED.has(normalize(r.classification))) return false;
+    const audiences=(r.audiences||[]).map(normalize);
+    // Middle School dynamic resources must be explicitly audience-safe.
+    if(!audiences.some(a=>["middle","middle school","parent","educator"].includes(a))) return false;
+    try{return new URL(r.url,location.href).protocol==="https:"}catch{return false}
+  }
+  function canonicalURL(url){
+    try{
+      const u=new URL(url,location.href);
+      return (u.origin+u.pathname).replace(/^https:\/\/vervenveda\.github\.io\//i,"https://vervenveda.com/").replace(/\/+$/,"").toLowerCase();
+    }catch{return normalize(url)}
+  }
+  function mergeResources(dynamic){
+    const map=new Map();
+    [...CORE_RESOURCES,...dynamic].forEach(r=>{
+      const key=canonicalURL(r.url);
+      if(!key)return;
+      if(!map.has(key)||r.manifestPath)map.set(key,r);
+    });
+    return [...map.values()];
+  }
+  async function loadFederation(){
+    try{
+      const response=await fetch(REGISTRY_URL,{cache:"no-store"});
+      if(!response.ok)throw new Error(`registry ${response.status}`);
+      const payload=await response.json();
+      const dynamic=(Array.isArray(payload.resources)?payload.resources:[]).filter(eligible).map(r=>({
+        id:r.id||`registry-${Math.random().toString(36).slice(2)}`,
+        title:r.title||"Connected Resource",
+        category:classify(r),
+        kind:r.resourceType||r.classification||"Resource",
+        icon:(r.title||"R").replace(/[^A-Za-z0-9]/g,"").slice(0,2).toUpperCase()||"R",
+        url:r.url,
+        description:r.description||"Connected Middle School learning resource.",
+        repository:r.repository||r.sourceId||"Verve N Veda",
+        tags:[...(r.tags||[]),...(r.skills||[]),...(r.domains||[])],
+        manifestPath:r.manifestPath||null
       }));
-
-      const all = localEntries.concat(externalEntries).filter(item => {
-        const haystack = `${item.title} ${item.desc}`.toLowerCase();
-        return !q || haystack.includes(q);
-      });
-
-      $("drawerNav").innerHTML = all.length ? `
-        <p class="menu-group">Middle School Destinations</p>
-        ${all.map(item => `
-          <a class="drawer-link" href="${esc(item.url)}" ${item.external ? 'target="_blank" rel="noopener noreferrer"' : ""}>
-            <i aria-hidden="true">${esc(item.mark)}</i>
-            <span><strong>${esc(item.title)}</strong><small>${esc(item.desc)}</small></span>
-            <span aria-hidden="true">${item.external ? "↗" : "→"}</span>
-          </a>
-        `).join("")}
-      ` : `<p class="drawer-intro">No destination matched that search.</p>`;
+      resources=mergeResources(dynamic);
+      federationMeta={generatedAt:payload.generatedAt||null,error:null};
+    }catch(error){
+      resources=[...CORE_RESOURCES];
+      federationMeta={generatedAt:null,error:String(error?.message||error)};
     }
+    renderResources();
+    renderDirectory($("drawerSearch").value.trim());
+    window.dispatchEvent(new CustomEvent("khaemenes-middle-directory-ready",{detail:summary()}));
+  }
 
-    function setDrawer(open){
-      $("drawer").classList.toggle("open",open);
-      $("drawer").setAttribute("aria-hidden",String(!open));
-      $("menuButton").setAttribute("aria-expanded",String(open));
-      document.body.classList.toggle("menu-open",open);
+  const state={query:"",category:"all",favorites:false};
+  function getFavorites(){const raw=readJSON(FAVORITES_KEY,[]);return Array.isArray(raw)?raw:[]}
+  function setFavorites(value){writeJSON(FAVORITES_KEY,[...new Set(value)]);$("favoriteCount").textContent=getFavorites().length}
+  function filtered(){
+    const q=normalize(state.query),favorites=getFavorites();
+    return resources.filter(r=>{
+      const hay=resourceText(r);
+      return (!q||hay.includes(q))&&(state.category==="all"||r.category===state.category)&&(!state.favorites||favorites.includes(r.id));
+    });
+  }
+  function renderCategoryOptions(){
+    $("category").innerHTML=Object.entries(CATEGORIES).map(([value,label])=>`<option value="${value}">${label}</option>`).join("");
+  }
+  function renderResources(){
+    const list=filtered(),favorites=getFavorites();
+    $("toolGrid").innerHTML=list.slice(0,100).map(r=>`<article class="tool-card"><div class="tool-top"><span class="tool-icon" style="--accent:${r.category==="creative"?"#b8715d":r.category==="stem"?"#6e97ad":r.category==="games"?"#776b94":r.category==="tools"?"#4f7f7a":"#203a4b"}">${escapeHTML(r.icon||"R")}</span><button class="favorite" type="button" data-favorite="${escapeHTML(r.id)}" aria-pressed="${favorites.includes(r.id)}" aria-label="${favorites.includes(r.id)?"Remove":"Add"} ${escapeHTML(r.title)} ${favorites.includes(r.id)?"from":"to"} My Shelf">${favorites.includes(r.id)?"★":"☆"}</button></div><span class="badge">${escapeHTML(r.kind||"Resource")}</span><h3>${escapeHTML(r.title)}</h3><p>${escapeHTML(r.description||"Connected learning resource.")}</p><span class="destination">${escapeHTML(CATEGORIES[r.category]||r.category)}</span><a class="tool-link" href="${r.url}">Open Resource</a></article>`).join("");
+    const source=federationMeta.generatedAt?` · federation ${new Date(federationMeta.generatedAt).toLocaleString()}`:federationMeta.error?" · safe core fallback":"";
+    $("status").textContent=`Showing ${list.length} of ${resources.length} Middle School resources${source}.`;
+    $("empty").classList.toggle("show",list.length===0);
+    $("favoriteCount").textContent=favorites.length;
+    $$("[data-favorite]").forEach(button=>button.addEventListener("click",()=>{
+      const next=getFavorites(),id=button.dataset.favorite,idx=next.indexOf(id);
+      if(idx>=0)next.splice(idx,1);else next.push(id);
+      setFavorites(next);renderResources();
+    }));
+  }
+  $("search").addEventListener("input",e=>{state.query=e.target.value.trim();renderResources()});
+  $("category").addEventListener("change",e=>{state.category=e.target.value;renderResources()});
+  $("favorites").addEventListener("click",()=>{state.favorites=!state.favorites;$("favorites").setAttribute("aria-pressed",String(state.favorites));renderResources()});
+  $("random").addEventListener("click",()=>{const pool=filtered();if(!pool.length)return toast("No resource is available in the current filter.");location.href=pool[Math.floor(Math.random()*pool.length)].url});
 
-      if(open){
-        $("drawerSearch").focus();
-      }else{
-        $("menuButton").focus();
-      }
+  function renderNetwork(){
+    $("networkGrid").innerHTML=NETWORK.map(r=>`<a class="network-card" style="--accent:${r.accent}" href="${r.url}"><span class="network-mark">${escapeHTML(r.mark)}</span><h3>${escapeHTML(r.title)}</h3><p>${escapeHTML(r.description)}</p><small>${escapeHTML(r.label)}</small></a>`).join("");
+  }
+
+  function coreDirectory(){
+    return [
+      {group:"Grades",icon:"6",title:"Sixth Grade",description:"Complete Grade 6 A++ curriculum",url:"grades/grade-06/"},
+      {group:"Grades",icon:"7",title:"Seventh Grade",description:"Complete Grade 7 A++ curriculum",url:"grades/grade-07/"},
+      {group:"Grades",icon:"8",title:"Eighth Grade",description:"Grade 8 High School Readiness curriculum",url:"grades/grade-08/"},
+      {group:"Campus",icon:"B",title:"Daily Basecamp",description:"Simple daily learning rhythm",url:"#basecamp"},
+      {group:"Campus",icon:"R",title:"Resource Directory",description:"Live middle-appropriate federation resources",url:"#resources"},
+      {group:"Family",icon:"F",title:"Family & Educator Support",description:"Planning, records, support, and transition",url:"#family-support"},
+      {group:"Next Stage",icon:"H",title:"Khaemenes High School",description:"Grades 9–12 campus and transition",url:"https://vervenveda.com/Khaemenes_High.github.io/"},
+      {group:"Next Stage",icon:"C",title:"Career Exploration",description:"Optional interest and skills exploration for older learners",url:"https://vervenveda.com/Khaemenes_Higher_Learning.github.io/Career/"}
+    ];
+  }
+  function renderDirectory(query=""){
+    const q=normalize(query);
+    let rows=coreDirectory().filter(r=>!q||normalize(`${r.group} ${r.title} ${r.description}`).includes(q));
+    if(q){
+      rows.push(...resources.filter(r=>resourceText(r).includes(q)).slice(0,25).map(r=>({group:"Connected Resources",icon:r.icon||"R",title:r.title,description:r.description||r.repository,url:r.url})));
     }
+    const groups=[...new Set(rows.map(r=>r.group))];
+    $("drawerContent").innerHTML=groups.map(group=>`<p class="menu-group">${escapeHTML(group)}</p><div class="menu-list">${rows.filter(r=>r.group===group).map(r=>`<a class="menu-link" href="${r.url}"><i>${escapeHTML(r.icon)}</i><span><strong>${escapeHTML(r.title)}</strong><small>${escapeHTML(r.description)}</small></span><span>›</span></a>`).join("")}</div>`).join("")||'<p class="menu-group">No matching destination</p>';
+    $$(".menu-link",$("drawerContent")).forEach(link=>link.addEventListener("click",closeDrawer));
+  }
+  function openDrawer(){
+    $("drawerBg").classList.add("open");$("drawerBg").setAttribute("aria-hidden","false");$("menuButton").setAttribute("aria-expanded","true");document.body.classList.add("menu-open");
+    renderDirectory($("drawerSearch").value.trim());setTimeout(()=>$("drawerSearch").focus(),40);
+  }
+  function closeDrawer(){
+    $("drawerBg").classList.remove("open");$("drawerBg").setAttribute("aria-hidden","true");$("menuButton").setAttribute("aria-expanded","false");document.body.classList.remove("menu-open");
+  }
+  $("menuButton").addEventListener("click",openDrawer);
+  $("closeButton").addEventListener("click",closeDrawer);
+  $("drawerBg").addEventListener("click",e=>{if(e.target===$("drawerBg"))closeDrawer()});
+  $("drawerSearch").addEventListener("input",e=>renderDirectory(e.target.value.trim()));
+  document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawer()});
+  $$("[data-scroll]").forEach(btn=>btn.addEventListener("click",()=>document.querySelector(btn.dataset.scroll)?.scrollIntoView({behavior:"smooth"})));
 
-    $("menuButton").addEventListener("click",()=>setDrawer(true));
-    $("closeDrawer").addEventListener("click",()=>setDrawer(false));
-    $("drawer").addEventListener("click",event=>{
-      if(event.target === $("drawer")) setDrawer(false);
-    });
-    $("drawerNav").addEventListener("click",event=>{
-      if(event.target.closest("a")) setDrawer(false);
-    });
-    $("drawerSearch").addEventListener("input",event=>drawerEntries(event.target.value));
+  function summary(){return {version:"3.0.0",resources:resources.length,categories:Object.keys(CATEGORIES).length,federationGeneratedAt:federationMeta.generatedAt,error:federationMeta.error}}
+  Object.defineProperty(window,"KhaemenesMiddleDirectoryAGI",{value:Object.freeze({
+    version:"3.0.0",
+    all:()=>[...resources],
+    find:term=>resources.filter(r=>resourceText(r).includes(normalize(term))),
+    resolve:name=>{
+      const q=normalize(name);
+      return resources.find(r=>normalize(r.title)===q||normalize(r.id)===q)||resources.find(r=>resourceText(r).includes(q))||null;
+    },
+    categories:()=>({...CATEGORIES}),
+    summary,
+    refresh:loadFederation
+  }),enumerable:false,configurable:false,writable:false});
 
-    document.addEventListener("keydown",event=>{
-      if(event.key === "Escape" && $("drawer").classList.contains("open")){
-        setDrawer(false);
-      }
-    });
+  $("tickerControl").addEventListener("click",()=>{
+    const paused=$("ticker").dataset.paused==="true";
+    $("ticker").dataset.paused=paused?"false":"true";
+    $("tickerControl").textContent=paused?"Ⅱ":"▶";
+    $("tickerControl").setAttribute("aria-label",paused?"Pause network ticker":"Resume network ticker");
+  });
 
-    document.addEventListener("click",event=>{
-      const link = event.target.closest("a[href]");
-      if(!link) return;
+  $("year").textContent=new Date().getFullYear();
+  renderCategoryOptions();
+  renderResources();
+  renderNetwork();
+  renderDirectory();
+  loadFederation();
+})();
+</script>
 
-      try{
-        const destination = new URL(link.href,location.href);
-        if(destination.hostname === "github.com" || destination.hostname === "www.github.com"){
-          event.preventDefault();
-          console.warn("Direct repository links are disabled on this public landing page.");
-        }
-      }catch(_){}
-    });
-
-    $("year").textContent = new Date().getFullYear();
-    renderTools();
-    renderNetwork();
-    drawerEntries();
-  </script>
-  <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script>
-<script
-  src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-school-bridge.js"
-  data-khaemenes-stage="middle"></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-school-bridge.js" data-khaemenes-stage="middle"></script>
 </body>
 </html>
