@@ -1,43 +1,15 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Khaemenes Academy Eighth Grade</title>
-  <link rel="stylesheet" href="assets/styles.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>Khaemenes Academy Eighth Grade</title><link rel="stylesheet" href="assets/styles.css"></head>
 <body>
-  <header class="header no-print">
-    <div class="shell nav">
-      <a class="brand" href="index.html"><span class="seal">8</span><span><strong>Khaemenes Eighth Grade</strong><small>A++ High School Readiness</small></span></a>
-      <nav class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="teacher-tools/index.html">Teacher Tools</a>
-        <a href="assessments/weekly-assessments.html">Assessments</a>
-        <a href="records/certificate.html">Certificate</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="shell">
-      <div class="mark">8</div>
-      <p class="kicker">Middle School A++ · High School Readiness</p>
-      <h1>Khaemenes Academy Eighth Grade</h1>
-      <p class="lead">A comprehensive 36 week A++ high school readiness curriculum with 9 subject halls, 1,620 lesson blocks, clean professional printables, weekly assessments, midterm, final, teacher tools, portfolio evidence, research/capstone defense, and high school transition certification.</p>
-      <div class="actions"><a class="btn light" href="#subjects">Open Subject Halls</a><a class="btn gold" href="#weeks">Open 36 Weeks</a><a class="btn" href="teacher-tools/index.html">Teacher Tools</a></div>
-    </div>
-  </section>
-  <main>
-    <section class="section"><div class="shell"><div class="heading"><p class="kicker">A++ High School Bridge</p><h2>Algebra I readiness, functions, systems, Pythagorean theorem, transformations, strongest evidence, research, science models, civic foundations, technology ethics, wellness, and entrance defense.</h2><p>This course is designed to outperform a minimum checklist by combining subject mastery with evidence, revision, performance, research, public presentation, and high school transition planning.</p></div><div class="grid cols-4"><article class="card stat"><strong>36</strong><span>Weeks</span></article><article class="card stat"><strong>9</strong><span>Subject Halls</span></article><article class="card stat"><strong>1,620</strong><span>Lesson Blocks</span></article><article class="card stat"><strong>80%</strong><span>Certificate Rule</span></article></div></div></section>
-    <section class="section alt" id="records"><div class="shell"><div class="heading"><p class="kicker">Local Records</p><h2>Family-controlled progress and high school readiness certification.</h2><p>Records stay in this browser. Families can export a JSON record for safekeeping.</p></div><div class="portal"><div class="profile-box"><h3>Student Record</h3><label>Student name</label><input id="studentName" placeholder="Eighth Grade Scholar"><label>Midterm score</label><input id="midtermScore" type="number" min="0" max="100" placeholder="0–100"><label>Final score</label><input id="finalScore" type="number" min="0" max="100" placeholder="0–100"><label style="display:flex;gap:10px;justify-content:center;align-items:center;margin-top:14px"><input id="portfolio" type="checkbox" style="width:auto"> Portfolio evidence complete</label><label style="display:flex;gap:10px;justify-content:center;align-items:center;margin-top:14px"><input id="transition" type="checkbox" style="width:auto"> High school transition plan complete</label><div class="actions"><button class="button gold" id="saveProfile">Save Record</button><button class="button" id="clearRecords">Clear</button></div></div><div id="summary"></div></div></div></section>
-    <section class="section" id="subjects"><div class="shell"><div class="heading"><p class="kicker">Subject Halls</p><h2>Nine high-school-readiness pathways.</h2><p>Each subject hall contains 36 weeks and 180 subject lesson blocks.</p></div><div class="grid cols-4" id="subjectGrid"></div></div></section>
-    <section class="section alt" id="weeks"><div class="shell"><div class="heading"><p class="kicker">36 Weekly Studios</p><h2>Integrated weekly plans with clean printable packets.</h2><p>Each week coordinates all subjects around a serious essential question while preserving subject-specific depth.</p></div><div class="grid cols-3" id="weekGrid"></div></div></section>
-  </main>
-  <script src="data/course-data.js"></script>
-  <script src="assets/app.js"></script>
-
-  <footer class="footer no-print"><div class="shell">© <span id="year"></span> Jennifer Kay Pearl · Khaemenes Academy · In-house curriculum · No outside dependencies</div></footer>
-  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
-</body>
-</html>
+<header class="header no-print"><div class="shell nav"><a class="brand" href="index.html"><span class="seal">8</span><span><strong>Khaemenes Eighth Grade</strong><small>A++ High School Readiness</small></span></a><nav class="navlinks"><a href="index.html">Home</a><a href="teacher-tools/index.html">Teacher Tools</a><a href="assessments/weekly-assessments.html">Assessments</a><a href="records/certificate.html">Certificate</a></nav></div></header>
+<section class="hero"><div class="shell"><div class="mark">8</div><p class="kicker">Middle School A++ · High School Readiness</p><h1>Khaemenes Academy Eighth Grade</h1><p class="lead">A comprehensive 36 week A++ high school readiness curriculum with 9 subject halls, 1,620 lesson blocks, professional printables, weekly assessments, midterm, final, portfolio evidence, capstone defense, and high school transition certification.</p><div class="actions"><a class="btn light" href="#subjects">Open Subject Halls</a><a class="btn gold" href="#weeks">Open 36 Weeks</a><a class="btn" href="teacher-tools/index.html">Teacher Tools</a></div></div></section>
+<main>
+<section class="section"><div class="shell"><div class="heading"><p class="kicker">A++ High School Bridge</p><h2>Algebra I readiness, functions, systems, Pythagorean theorem, transformations, strongest evidence, research, science models, civic foundations, technology ethics, wellness, and entrance defense.</h2><p>This course combines subject mastery with evidence, revision, performance, research, public presentation, and high school transition planning.</p></div><div class="grid cols-4"><article class="card stat"><strong>36</strong><span>Weeks</span></article><article class="card stat"><strong>9</strong><span>Subject Halls</span></article><article class="card stat"><strong>1,620</strong><span>Lesson Blocks</span></article><article class="card stat"><strong>80%</strong><span>Mastery Threshold</span></article></div></div></section>
+<section class="section alt" id="records"><div class="shell"><div class="heading"><p class="kicker">Learner Continuity</p><h2>One Academy learner. One Grade 08 record.</h2><p>The Academy Family Registry provides identity and formal placement. NAIB delegates into Khaemenes Academy, Archaemenes mentors as Academy Scholar, and adults verify mastery and transition evidence in Teacher Tools.</p></div><div id="summary"></div></div></section>
+<section class="section" id="subjects"><div class="shell"><div class="heading"><p class="kicker">Subject Halls</p><h2>Nine high-school-readiness pathways.</h2><p>Each subject hall contains 36 weeks and 180 subject lesson blocks.</p></div><div class="grid cols-4" id="subjectGrid"></div></div></section>
+<section class="section alt" id="weeks"><div class="shell"><div class="heading"><p class="kicker">36 Weekly Studios</p><h2>Integrated weekly plans with clean printable packets.</h2><p>Formal mastery is displayed as verified evidence rather than entered by the learner here.</p></div><div class="grid cols-3" id="weekGrid"></div></div></section>
+</main>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js" referrerpolicy="no-referrer"></script><script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-naib-mentor-router.js" referrerpolicy="no-referrer"></script><script src="assets/khaemenes-grade8-continuity.js"></script><script src="data/course-data.js"></script><script src="assets/app.js"></script>
+<footer class="footer no-print"><div class="shell">© <span id="year">2026</span> Jennifer Kay Pearl · Khaemenes Academy · In-house curriculum · No outside dependencies</div></footer>
+</body></html>
