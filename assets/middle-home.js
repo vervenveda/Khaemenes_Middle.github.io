@@ -51,15 +51,9 @@
   function renderEntry(){
     const ctx=resolveContext();
     const mentor=resolveMentor(ctx);
-    const card=$("entryStatus");
-    const title=$("entryTitle");
-    const text=$("entryText");
-    const primary=$("entryPrimary");
-    const secondary=$("entrySecondary");
+    const card=$("entryStatus"),title=$("entryTitle"),text=$("entryText"),primary=$("entryPrimary"),secondary=$("entrySecondary");
     if(!card||!title||!text||!primary||!secondary)return;
-
     card.dataset.mode="neutral";
-    primary.hidden=false;secondary.hidden=false;
 
     if(ctx.preview){
       card.dataset.mode="preview";
@@ -109,13 +103,12 @@
   ];
 
   function renderResources(){
-    const grid=$("resourceGrid"),search=$("resourceSearch"),kind=$("resourceKind");
+    const grid=$("resourceGrid"),search=$("resourceSearch"),kind=$("resourceKind"),clear=$("clearResources");
     if(!grid||!search||!kind)return;
     const kinds=[...new Set(resources.map(r=>r.kind))].sort();
     for(const k of kinds){const option=document.createElement("option");option.value=k;option.textContent=k;kind.append(option)}
     const draw=()=>{
-      const q=clean(search.value,100).toLowerCase();
-      const k=kind.value;
+      const q=clean(search.value,100).toLowerCase(),k=kind.value;
       const list=resources.filter(r=>(!k||r.kind===k)&&(!q||`${r.title} ${r.kind} ${r.description}`.toLowerCase().includes(q)));
       grid.replaceChildren();
       for(const r of list){
@@ -128,11 +121,14 @@
       }
       const count=$("resourceCount");if(count)count.textContent=`${list.length} resource${list.length===1?"":"s"} shown`;
     };
-    search.addEventListener("input",draw);kind.addEventListener("change",draw);draw();
+    search.addEventListener("input",draw);
+    kind.addEventListener("change",draw);
+    clear?.addEventListener("click",()=>{search.value="";kind.value="";draw();search.focus();});
+    draw();
   }
 
   function bind(){
-    $("year")&&( $("year").textContent=String(new Date().getFullYear()) );
+    if($("year"))$("year").textContent=String(new Date().getFullYear());
     renderEntry();renderResources();
     window.addEventListener("khaemenes-family-changed",renderEntry);
     window.addEventListener("khaemenes-naib-ready",renderEntry);
