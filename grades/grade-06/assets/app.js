@@ -1,32 +1,102 @@
 (() => {
   "use strict";
-  const DATA = window.KHAE_GRADE6_DATA;
-  const KEY = "khaemenes_grade6_middle_school_36_aplusplus_v1";
-  const $ = id => document.getElementById(id);
-  const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  function readState(){try{return JSON.parse(localStorage.getItem(KEY)) || {student:"Sixth Grade Scholar", weekly:{}, midterm:0, final:0, portfolio:false};}catch{return {student:"Sixth Grade Scholar", weekly:{}, midterm:0, final:0, portfolio:false};}}
-  let state = readState();
-  const save = () => localStorage.setItem(KEY, JSON.stringify(state));
-  const weeklyAverage = () => {const v=DATA.weeks.map(w=>Number(state.weekly[w.week]||0)).filter(Boolean);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0;};
-  const completedWeeks = () => DATA.weeks.filter(w=>Number(state.weekly[w.week]||0)>=DATA.course.passingScore).length;
-  const ready = () => weeklyAverage()>=80 && Number(state.midterm||0)>=80 && Number(state.final||0)>=80 && !!state.portfolio;
+  const DATA=window.KHAE_GRADE6_DATA;
+  const $=id=>document.getElementById(id);
+  const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  function summary(){return window.KhaemenesGrade6Continuity?.getSummary?.()||null;}
+
   function renderDashboard(){
-    const avg=weeklyAverage(), done=completedWeeks(), ok=ready();
-    $("studentName").value=state.student||"";$("midtermScore").value=state.midterm||"";$("finalScore").value=state.final||"";$("portfolio").checked=!!state.portfolio;
-    $("summary").innerHTML=`<div class="grid cols-4"><article class="card stat"><strong>${done}/36</strong><span>Weeks at 80%+</span></article><article class="card stat"><strong>${avg}%</strong><span>Weekly average</span></article><article class="card stat"><strong>${state.midterm||0}%</strong><span>Midterm</span></article><article class="card stat"><strong>${state.final||0}%</strong><span>Final</span></article></div><div class="profile-box" style="margin-top:16px"><h3>${ok?"Certificate Ready":"Certificate Locked"}</h3><p>${ok?"All completion gates are met. The certificate page may be printed.":"Certificate requires weekly average 80%+, midterm 80%+, final 80%+, and adult portfolio approval."}</p><div class="progress"><span style="width:${Math.min(100,Math.round(done/36*100))}%"></span></div><div class="actions"><a class="button ${ok?"gold":""}" href="records/certificate.html">Open Certificate</a><button type="button" class="button" id="exportBtn">Export Records</button></div></div>`;
-    $("exportBtn").addEventListener("click", exportRecords);
+    const s=summary();
+    const state=s?.state||{};
+    const learner=s?.learner;
+    const mentor=s?.mentor||{name:"Archaemenes"};
+    const status=$("summary");
+    if(!status)return;
+    status.replaceChildren();
+
+    const grid=document.createElement("div");
+    grid.className="grid cols-4";
+    const stats=[
+      [`${s?.mastered||0}/36`,`Verified weeks at 80%+`],
+      [`${s?.average||0}%`,`Weekly average`],
+      [`${state.midterm||0}%`,`Midterm`],
+      [`${state.final||0}%`,`Final`]
+    ];
+    for(const [value,label] of stats){
+      const article=document.createElement("article");
+      article.className="card stat";
+      const strong=document.createElement("strong");strong.textContent=value;
+      const span=document.createElement("span");span.textContent=label;
+      article.append(strong,span);grid.append(article);
+    }
+
+    const box=document.createElement("div");
+    box.className="profile-box";
+    box.style.marginTop="16px";
+    const h=document.createElement("h3");
+    h.textContent=s?.certificateReady?"Certificate Ready":"Certificate Locked";
+    const p=document.createElement("p");
+    if(!s?.eligible){
+      p.textContent="Select the Academy learner formally placed in Grade 06. Formal mastery records stay unavailable until the correct learner is active.";
+    }else if(s.certificateReady){
+      p.textContent="All Grade 06 completion gates are met. The learner-scoped certificate may be opened and printed.";
+    }else{
+      p.textContent="Certification requires 36/36 verified weekly mastery results at 80%+, midterm 80%+, final 80%+, and approved portfolio evidence.";
+    }
+    const identity=document.createElement("p");
+    identity.textContent=s?.eligible
+      ?`${learner.nickname} · Grade 06 · ${mentor.name} · Academy Scholar`
+      :"No eligible Grade 06 learner is currently connected.";
+    const actions=document.createElement("div");actions.className="actions";
+    const certificate=document.createElement("a");certificate.className=`button ${s?.certificateReady?"gold":""}`;certificate.href="records/certificate.html";certificate.textContent="Open Certificate";
+    const teacher=document.createElement("a");teacher.className="button";teacher.href="teacher-tools/index.html";teacher.textContent="Adult Verification";
+    actions.append(certificate,teacher);
+    box.append(h,p,identity,actions);
+    status.append(grid,box);
   }
+
   function renderWeeks(){
-    $("weekGrid").innerHTML=DATA.weeks.map(w=>`<article class="card week-card"><div class="emblem">${String(w.week).padStart(2,"0")}</div><h3>${esc(w.title)}</h3><p><strong>Question:</strong> ${esc(w.essentialQuestion)}</p><p>${esc(w.theme)}</p><div class="badges"><span class="badge">9 subjects</span><span class="badge">45 blocks</span><span class="badge">A++</span></div><label>Weekly assessment score</label><input type="number" min="0" max="100" value="${state.weekly[w.week]||""}" data-score="${w.week}" placeholder="0–100"><div class="actions"><a class="button" href="weekly-plans/week-${String(w.week).padStart(2,"0")}.html">Open Week</a><a class="button light" href="printables/week-${String(w.week).padStart(2,"0")}-packet.html">Printable</a></div></article>`).join("");
-    document.querySelectorAll("[data-score]").forEach(input=>input.addEventListener("input",()=>{state.weekly[input.dataset.score]=Math.max(0,Math.min(100,Number(input.value||0)));save();renderDashboard();}));
+    const grid=$("weekGrid");
+    if(!grid)return;
+    grid.replaceChildren();
+    const s=summary();
+    const weekly=s?.state?.weekly||{};
+    for(const w of DATA.weeks){
+      const article=document.createElement("article");
+      article.className="card week-card";
+      const emblem=document.createElement("div");emblem.className="emblem";emblem.textContent=String(w.week).padStart(2,"0");
+      const h=document.createElement("h3");h.textContent=w.title;
+      const q=document.createElement("p");const qStrong=document.createElement("strong");qStrong.textContent="Question: ";q.append(qStrong,document.createTextNode(w.essentialQuestion));
+      const theme=document.createElement("p");theme.textContent=w.theme;
+      const badges=document.createElement("div");badges.className="badges";
+      ["9 subjects","45 blocks","A++",Number(weekly[w.week]||0)>=80?"Verified mastery":"Evidence pending"].forEach(text=>{const b=document.createElement("span");b.className="badge";b.textContent=text;badges.append(b)});
+      const actions=document.createElement("div");actions.className="actions";
+      const open=document.createElement("a");open.className="button";open.href=`weekly-plans/week-${String(w.week).padStart(2,"0")}.html`;open.textContent="Open Week";
+      const printable=document.createElement("a");printable.className="button light";printable.href=`printables/week-${String(w.week).padStart(2,"0")}-packet.html`;printable.textContent="Printable";
+      actions.append(open,printable);
+      article.append(emblem,h,q,theme,badges,actions);grid.append(article);
+    }
   }
+
   function renderSubjects(){
-    $("subjectGrid").innerHTML=DATA.subjects.map(s=>`<article class="card" style="border-top:5px solid ${s.color}"><div class="emblem">${esc(s.icon)}</div><h3>${esc(s.title)}</h3><p>${esc(s.description)}</p><a class="button" href="subjects/${s.id}/index.html">Open Subject Hall</a></article>`).join("");
+    const grid=$("subjectGrid");
+    if(!grid)return;
+    grid.replaceChildren();
+    for(const s of DATA.subjects){
+      const article=document.createElement("article");article.className="card";article.style.borderTop=`5px solid ${s.color}`;
+      const emblem=document.createElement("div");emblem.className="emblem";emblem.textContent=s.icon;
+      const h=document.createElement("h3");h.textContent=s.title;
+      const p=document.createElement("p");p.textContent=s.description;
+      const a=document.createElement("a");a.className="button";a.href=`subjects/${encodeURIComponent(s.id)}/index.html`;a.textContent="Open Subject Hall";
+      article.append(emblem,h,p,a);grid.append(article);
+    }
   }
-  function bind(){
-    $("saveProfile").addEventListener("click",()=>{state.student=$("studentName").value.trim()||"Sixth Grade Scholar";state.midterm=Math.max(0,Math.min(100,Number($("midtermScore").value||0)));state.final=Math.max(0,Math.min(100,Number($("finalScore").value||0)));state.portfolio=$("portfolio").checked;save();renderDashboard();renderWeeks();});
-    $("clearRecords").addEventListener("click",()=>{if(!confirm("Clear local sixth-grade records on this device?"))return;localStorage.removeItem(KEY);state=readState();renderDashboard();renderWeeks();});
-  }
-  function exportRecords(){const payload={course:DATA.course.title,exported:new Date().toISOString(),state};const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="khaemenes-sixth-grade-records.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-  document.addEventListener("DOMContentLoaded",()=>{$("year").textContent=new Date().getFullYear();bind();renderDashboard();renderSubjects();renderWeeks();});
+
+  function render(){renderDashboard();renderSubjects();renderWeeks();}
+  document.addEventListener("DOMContentLoaded",()=>{
+    if($("year"))$("year").textContent=new Date().getFullYear();
+    render();
+    window.KhaemenesGrade6Continuity?.subscribe?.(render);
+  });
 })();
