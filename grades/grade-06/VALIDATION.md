@@ -77,7 +77,7 @@ The learner page displays verified progress and links to curriculum, printables,
 
 PASS.
 
-`teacher-tools/index.html` now includes a formal adult-facing verification area controlled by `assets/grade6-records.js`.
+`teacher-tools/index.html` includes a formal adult-facing verification area controlled by `assets/grade6-records.js`.
 
 It records:
 
@@ -107,7 +107,7 @@ The hardened runtime never rewrites the old shared record. A one-time claim prev
 
 PASS.
 
-Certificate readiness now requires:
+Certificate readiness requires:
 
 - active eligible Grade 06 learner;
 - 36/36 weekly mastery results at 80% or above;
@@ -115,7 +115,7 @@ Certificate readiness now requires:
 - final at 80% or above;
 - portfolio / capstone evidence approved.
 
-This intentionally replaces the older weekly-average-only rule.
+This replaces the older weekly-average-only rule.
 
 The certificate reads the learner-scoped Grade 06 continuity state rather than the historical shared record.
 
@@ -133,6 +133,30 @@ PASS.
 
 Grade 06 completion and certification do not automatically rewrite the learner's Academy placement to Grade 07. Advancement remains a deliberate Academy / family action.
 
+## Static Validation Pass — 2026-08-16
+
+PASS with one upstream dependency.
+
+The branch was re-inspected after hardening for the following behaviors:
+
+- learner landing page contains no formal score-entry controls;
+- learner landing page reads only the Grade 06 continuity summary for formal progress;
+- Teacher / Family Tools writes through `KhaemenesGrade6Continuity.saveState()` rather than directly to the historical shared key;
+- certificate reads only `KhaemenesGrade6Continuity.getSummary()`;
+- certificate print control is disabled while the certificate is locked;
+- completion logic requires exactly 36 mastered weeks plus midterm, final, and portfolio gates;
+- no Grade 06 code performs automatic Grade 07 promotion;
+- NAIB receives stage/grade/age-band/interests/surface/intent context and no learner or family identifier;
+- one-time legacy migration is claimed by only one learner ID;
+- the historical shared Grade 06 record is not rewritten by the hardened runtime;
+- Grade 06 resource links remain relative to the existing subject, weekly-plan, printable, assessment, teacher-tool, and certificate structure.
+
+### Upstream dependency
+
+The central Academy Family Registry must provide formal grade placement (`grade: grade-06`) in addition to `stage: middle`. Until the Academy registry hardening is deployed, the Grade 06 runtime correctly remains ineligible rather than inventing grade authority locally.
+
+This is an Academy-layer dependency, not a Grade 06 defect.
+
 ## Preserved Systems
 
 - all nine subject halls;
@@ -147,16 +171,16 @@ Grade 06 completion and certification do not automatically rewrite the learner's
 
 ## Remaining Deployment Checks
 
-Before merge to `main`, perform browser/deployment validation for:
+Source/static validation is complete. Before merge to `main`, browser/deployment validation still needs to confirm:
 
-1. active Grade 06 learner / no learner / wrong-stage / wrong-grade behavior;
-2. NAIB v2 delegation and compatibility fallback;
+1. active Grade 06 learner / no learner / wrong-stage / wrong-grade behavior using the hardened Academy Family Registry;
+2. NAIB v2 delegation and router-unavailable fallback in a deployed browser;
 3. adult verification writes and reload persistence;
-4. two-learner record isolation and one-time legacy migration;
+4. two-learner record isolation and one-time legacy migration with real Family Registry profiles;
 5. certificate lock/unlock/print behavior;
-6. subject-hall, weekly-plan, printable, and assessment links;
+6. subject-hall, weekly-plan, printable, and assessment navigation;
 7. mobile and print layout.
 
 ## Status
 
-**Grade 06 is architecturally hardened on `hardening/archaemenes-grade06`. `main` remains unchanged pending validation and merge approval.**
+**Grade 06 is statically validated and architecturally hardened on `hardening/archaemenes-grade06`. `main` remains unchanged pending Academy Family Registry deployment validation and merge approval.**
