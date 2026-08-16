@@ -1,491 +1,317 @@
-# Khaemenes Academy™ — Middle School Portal
+# Khaemenes Academy — Middle School
 
-> **A Verve N Veda Educational Platform**
->
-> *Where Curiosity Becomes Confidence*
+**Grades 06–08 · Verve N Veda Educational Network**
 
----
-
-# Overview
-
-The **Khaemenes Academy™ Middle School Portal** serves learners in **Grades 6 through 8**, providing a structured, engaging, and academically rigorous learning environment during one of the most important developmental stages of education.
-
-The Middle School Portal bridges the transition between elementary learning and high school readiness by emphasizing curiosity, critical thinking, independence, creativity, and responsible citizenship.
-
-Rather than functioning as a collection of individual classes, the portal serves as a **personalized digital campus**, allowing students, families, and educators to organize learning, monitor progress, and explore new interests.
+Khaemenes Middle School is the connected Academy campus between Elementary and High School. It contains complete Grade 06, 07, and 08 curricula, learner-scoped formal records, adult verification, certification, advanced Grade 05 preview access, Archaemenes mentor continuity, and a deliberate High School transition boundary.
 
 ---
 
-# Mission
+## Current Campus
 
-Our mission is to prepare students for high school and lifelong learning by providing:
+### Grade 06 — Foundation & Discovery
 
-- Free, accessible education
-- Beautiful and intuitive learning environments
-- Strong academic foundations
-- Character development
-- Critical thinking
-- Real-world skills
-- Creative exploration
-- Family involvement
-- International accessibility
+- 36 weeks
+- 9 subject halls
+- 1,620 lesson blocks
+- 36 weekly assessments
+- midterm
+- final
+- portfolio / capstone
+- Grade 07 readiness
+- learner-scoped formal record
+- adult verification
 
-Every student deserves an organized and inspiring place to learn.
+Major strands include disciplinary literacy, ratios/rates, rational numbers, expressions/equations, systems science, world geography / ancient civilizations, World Languages & Global Culture, technology, and integrated research.
 
----
+### Grade 07 — Connection & Challenge
 
-# Educational Philosophy
+- 36 weeks
+- 9 subject halls
+- 1,620 lesson blocks
+- 36 weekly assessments
+- midterm
+- final
+- portfolio / capstone
+- Grade 08 readiness
+- learner-scoped formal record
+- adult verification
 
-Middle school is a period of tremendous growth.
+Major strands include proportional reasoning, algebra readiness, source credibility, deeper research, genetics and systems, medieval / early-modern world history, privacy/bias/design thinking, and larger independent projects.
 
-Students begin asking larger questions, forming personal interests, and developing independent study habits.
+### Grade 08 — Leadership & High School Readiness
 
-The Middle School Portal encourages learners to:
+- 36 weeks
+- 9 subject halls
+- 1,620 lesson blocks
+- 36 weekly assessments
+- midterm
+- final
+- portfolio / capstone
+- High School transition-plan gate
+- learner-scoped formal record
+- adult verification
 
-- Think critically
-- Solve problems creatively
-- Work collaboratively
-- Build healthy study habits
-- Explore future careers
-- Develop confidence
-- Practice responsible citizenship
-- Become lifelong learners
-
----
-
-# Grade Levels
-
-## Grade 6
-
-Building Foundations
-
-Focus areas include:
-
-- Organization
-- Academic confidence
-- Reading growth
-- Mathematical reasoning
-- Scientific observation
-- World geography
-- Digital citizenship
+Major strands include Algebra I readiness, functions, systems, strongest textual evidence, research synthesis, culminating Middle School science, civics, technology / AI / data ethics, capstone defense, and High School transition planning.
 
 ---
 
-## Grade 7
-
-Growing Independence
-
-Focus areas include:
-
-- Analytical writing
-- Algebra readiness
-- Laboratory science
-- History and civics
-- Technology
-- Personal responsibility
-- Project learning
-
----
-
-## Grade 8
-
-Preparing for High School
-
-Focus areas include:
-
-- High school readiness
-- Career exploration
-- Research
-- Public speaking
-- Advanced mathematics
-- Constitutional literacy
-- Leadership
-
----
-
-# Core Academic Departments
-
-## Mathematics
-
-Courses may include:
-
-- Mathematics 6
-- Mathematics 7
-- Pre-Algebra
-- Algebra Readiness
-- Mathematical Problem Solving
-
----
-
-## Science
-
-Future offerings include:
-
-- Earth Science
-- Life Science
-- Physical Science
-- Environmental Science
-- STEM Exploration
-
----
-
-## Language Arts
-
-Future curriculum includes:
-
-- Literature
-- Writing Workshop
-- Grammar
-- Vocabulary
-- Research Skills
-- Public Speaking
-
----
-
-## History & Civics
-
-Future offerings include:
-
-- Ancient Civilizations
-- World History
-- United States History
-- Geography
-- Civics
-- Constitution Studies
-
----
-
-## Technology
-
-Future courses include:
-
-- Digital Literacy
-- Coding Fundamentals
-- Artificial Intelligence Basics
-- Robotics
-- Internet Safety
-- Web Design
-
----
-
-## Fine Arts
-
-Future opportunities include:
-
-- Drawing
-- Painting
-- Digital Art
-- Photography
-- Design
-- Art History
-
----
-
-## Music
-
-Planned studies include:
-
-- Music Appreciation
-- Composition
-- Choir
-- Instruments
-- Digital Music
-- Recording
-
----
-
-## Health & Wellness
-
-Future instruction includes:
-
-- Physical Wellness
-- Nutrition
-- Emotional Intelligence
-- Mental Health
-- Personal Safety
-- Healthy Relationships
-
----
-
-## Financial Literacy
-
-Future courses include:
-
-- Budgeting
-- Saving
-- Banking
-- Entrepreneurship
-- Consumer Skills
-- Investing Foundations
-
----
-
-# Student Homeroom
-
-Each learner will have a personalized digital homeroom.
-
-Future features include:
-
-- Student profile
-- Custom color themes
-- Semester schedule
-- Current classes
-- Assignment tracker
-- Upcoming assessments
-- Calendar
-- Notes
-- Goals
-- Progress dashboard
-- Achievement badges
-- Personal portfolio
-
----
-
-# Parent Portal
-
-Parents and guardians will have access to:
-
-- Student progress
-- Assignment summaries
-- Attendance
-- Weekly learning reports
-- Portfolio viewing
-- Family calendar
-- Printable reports
-- Communication tools
-
----
-
-# Teacher Resources
-
-Future educator tools include:
-
-- Lesson planning
-- Classroom management
-- Gradebook
-- Assignment builder
-- Quiz generator
-- Curriculum planner
-- Student analytics
-- Resource library
-
----
-
-# Clubs & Enrichment
-
-Future extracurricular opportunities include:
-
-- Science Club
-- Robotics
-- Chess
-- Debate
-- Art Club
-- Creative Writing
-- Coding Club
-- Gardening
-- Community Service
-- Environmental Stewardship
-- Journalism
-- Astronomy
-
----
-
-# Student Life
-
-The Middle School Portal is designed to encourage exploration beyond academics.
-
-Future features include:
-
-- Reading challenges
-- Daily trivia
-- Educational games
-- Creative competitions
-- Virtual field trips
-- Weather observations
-- Nature journals
-- Art galleries
-- Music showcases
-- Student achievements
-
----
-
-# Accessibility
-
-The portal is being developed with accessibility as a core design principle.
-
-Goals include:
-
-- Responsive design
-- Keyboard navigation
-- High-contrast themes
-- Readable typography
-- Screen reader support
-- Offline-friendly learning
-- Downloadable resources
-- Printable assignments
-
----
-
-# Design Standards
-
-The Middle School Portal follows the **Verve N Veda Design System**.
-
-### Typography
-
-- Cinzel headings
-- Brandon Grotesque (or closest equivalent)
-- 444 font weights
-- Centered layouts
-- Spacious vertical rhythm
-- High readability
-
-### Visual Language
-
-- Deep navy
-- Slate blue
-- Silver accents
-- Soft parchment highlights
-- 7px interactive controls
-- 21px content cards
-- Calm institutional appearance
-
----
-
-# Repository Structure
-
-```
-middle-school/
-
-│
-
-├── index.html
-
-├── README.md
-
-├── LICENSE.md
-
-├── SECURITY.md
-
-├── CODE_OF_CONDUCT.md
-
-│
-
-├── grades/
-
-│   ├── grade-06/
-
-│   ├── grade-07/
-
-│   └── grade-08/
-
-│
-
-├── courses/
-
-│   ├── mathematics/
-
-│   ├── science/
-
-│   ├── language-arts/
-
-│   ├── history/
-
-│   ├── technology/
-
-│   ├── arts/
-
-│   ├── music/
-
-│   ├── health/
-
-│   └── finance/
-
-│
-
-├── students/
-
-├── parents/
-
-├── teachers/
-
-├── clubs/
-
-├── resources/
-
-├── certificates/
-
-├── downloads/
-
-└── shared/
+## Unified Academy Architecture
+
+```text
+Academy Family Registry
+        ↓
+NAIB intake / resource direction / delegation
+        ↓
+Khaemenes Academy
+        ↓
+Archaemenes · Academy Scholar
+        ↓
+Grade 06 / 07 / 08 course context
+        ↓
+Assessment evidence
+        ↓
+Adult verification
+        ↓
+Learner-scoped formal record
+        ↓
+Certificate / readiness evidence
 ```
 
----
+Authority boundaries:
 
-# Future Development
-
-The Middle School campus will continue expanding with:
-
-- Complete course libraries
-- Interactive laboratories
-- Student planners
-- Portfolio systems
-- Achievement tracking
-- Personalized learning paths
-- AI-supported tutoring
-- Translation tools
-- Career exploration pathways
-- International curriculum support
-- Family learning dashboards
+- **Academy Family Registry** owns learner identity and formal school / grade placement.
+- **NAIB** receives, interprets, delegates, and connects. It does not become the learner's academic mentor.
+- **Khaemenes Academy** provides Archaemenes as its institutional mentor.
+- **Archaemenes** mentors but does not grade, certify, or promote.
+- **Grade portals** own their course-specific educational state.
+- **Adult-reviewed evidence** determines formal mastery.
+- **Promotion** is deliberate and never performed silently by a local course page.
 
 ---
 
-# Connected Learning Network
+## Formal Grade Eligibility
 
-The Middle School Portal is part of the **Khaemenes Academy** and the broader **Verve N Veda Educational Network**.
+The hardened grade portals require canonical Academy placement:
 
-Connected educational destinations include:
+```text
+Grade 06 → stage: middle + grade: grade-06
+Grade 07 → stage: middle + grade: grade-07
+Grade 08 → stage: middle + grade: grade-08
+```
 
-- Preschool
-- Pre-K & Early Learning
-- Elementary School
-- High School
-- Higher Learning
-- ARSHIF
-- The Verifier
-- Solanar
-- Firmament Law
-- Medicament Hub
-- Bazaar Art
-- The Refrain
-- ProResource Hub
-- One Nation For All
-- Aurora Sanctuary
-- Educational Arcade
-
-Each destination supports a unique stage of learning while remaining connected through a unified educational ecosystem.
+A missing or mismatched placement keeps formal records unavailable rather than inventing a grade locally.
 
 ---
 
-# Long-Term Vision
+## Middle School Certification Standard
 
-The Middle School Portal is designed to become more than a collection of lessons—it is intended to be a complete digital middle school experience.
+Grades 06 and 07 require:
 
-Students should graduate from Grade 8 not only with stronger academic skills, but with confidence, curiosity, organization, empathy, and a clear pathway into high school and beyond.
+- 36/36 verified weekly mastery results at 80% or above;
+- midterm at 80% or above;
+- final at 80% or above;
+- approved portfolio / capstone evidence.
 
-The long-term vision is to create one of the world's most comprehensive free middle school learning environments, adaptable for homeschool families, independent learners, classrooms, and international education communities.
+Grade 08 requires the same gates plus:
+
+- reviewed and completed High School transition plan.
+
+The older average-only certification rule has been retired.
 
 ---
 
-## Copyright
+## Learner-Scoped Records
 
-**Khaemenes Academy™ — Middle School Portal**
+Grades 06–08 now keep formal course records by Academy learner rather than in one shared browser record.
 
-Part of the **Verve N Veda Educational Network**
+Historical shared localStorage keys remain migration inputs only. Hardened runtimes do not rewrite those legacy records, and one-time migration claims prevent a historical shared snapshot from silently migrating into multiple learners.
 
-Copyright © Jennifer Pearl and Autumn Pearl.
+---
 
-All rights reserved.
+## Adult Verification
 
-Developed through the PLERA educational framework.
+Learner-facing grade portals no longer allow direct editing of formal:
 
-*"The middle years are where curiosity becomes purpose, and purpose becomes the foundation for lifelong learning."*
+- weekly mastery scores;
+- midterm results;
+- final results;
+- portfolio approval;
+- Grade 08 transition-plan approval.
+
+Teacher / Family Tools is the formal browser-side verification surface for reviewed educational evidence.
+
+Browser records are educational state, not secure server authentication or authorization.
+
+---
+
+## Grade 05 → Middle School Bridge
+
+The Middle School landing page now recognizes that advanced learning access and formal grade placement are different concepts.
+
+An Elementary learner may remain formally:
+
+```text
+stage: elementary
+grade: grade-05
+```
+
+while exploring selected Grade 06 curriculum for challenge and readiness.
+
+### Advanced Grade 06 Preview
+
+Preview mode is intended for:
+
+- advanced Grade 05 scholars;
+- transition planning;
+- diagnostic challenge;
+- family-guided enrichment.
+
+Preview mode does **not**:
+
+- rewrite the learner's stage;
+- rewrite Grade 05 to Grade 06;
+- create Grade 06 formal mastery records;
+- unlock Grade 06 certification;
+- bypass Academy / family promotion.
+
+Recommended preview strands include:
+
+- ratios, rates, percent, rational numbers, expressions, and equations;
+- formal citation and argument analysis;
+- Middle School CER and systems science;
+- World Languages & Global Culture;
+- research notebook / source-management systems;
+- executive-function routines for a nine-subject Middle School schedule.
+
+See `ELEMENTARY_TO_MIDDLE_CONTINUITY_AUDIT.md` for the full Grade 05–08 progression audit.
+
+---
+
+## Grade 05 → Grade 08 Progression
+
+The audited progression is coherent:
+
+```text
+Grade 05
+Upper Elementary mastery + research + capstone
+        ↓
+Grade 06
+Middle School foundation + new abstraction + world languages
+        ↓
+Grade 07
+Deeper connections + algebra readiness + larger independent inquiry
+        ↓
+Grade 08
+Algebra I readiness + synthesis + leadership + High School transition
+```
+
+Each transition increases abstraction, independence, evidence quality, and project responsibility without resetting learner identity.
+
+---
+
+## Middle School Landing Page v4
+
+The hardened root landing page now provides:
+
+- formal Grade 06 / 07 / 08 learner recognition when canonical placement is available;
+- advanced Grade 05 preview entry;
+- Grade 05 transition-center entry;
+- Archaemenes Academy Scholar continuity;
+- direct Grade 06–08 curriculum doors;
+- Elementary-to-Middle readiness explanation;
+- connected educational resources;
+- Grade 08 → High School transition explanation;
+- strict CSP / no-referrer / permissions policy;
+- externalized CSS and JavaScript;
+- no root gradebook or competing learner identity.
+
+The root portal is a campus navigator and continuity surface, not a formal gradebook.
+
+---
+
+## Resource Network
+
+The Middle School landing page exposes selected connected resources for:
+
+- Academy support;
+- research;
+- music;
+- educational games / practice;
+- writing / coding / project tools;
+- media literacy;
+- public research discovery;
+- High School transition.
+
+Course mastery remains owned by the formal grade course, not by the resource directory.
+
+---
+
+## Current Hardening Branch
+
+Repository:
+
+`vervenveda/Khaemenes_Middle.github.io`
+
+Working branch:
+
+`hardening/archaemenes-grade06`
+
+The branch contains the unified hardening work for:
+
+- Grade 06;
+- Grade 07;
+- Grade 08;
+- Grade 05 → Middle School continuity audit;
+- Middle School root landing page v4.
+
+`main` remains unchanged until explicit merge approval.
+
+---
+
+## Remaining Upstream Dependency
+
+The central Academy Family Registry still needs its planned canonical `stage + grade` upgrade.
+
+Target examples:
+
+```json
+{
+  "stage": "middle",
+  "grade": "grade-06"
+}
+```
+
+Until that upstream repair is complete, hardened grade portals correctly fail closed for formal records rather than assigning themselves a grade.
+
+---
+
+## Remaining Browser / Deployment Validation
+
+Before merge, test on the deployed origin:
+
+1. no active learner;
+2. formal Grade 05 learner;
+3. Grade 05 advanced-preview entry;
+4. Grade 05 transition-center entry;
+5. formal Grade 06 learner;
+6. formal Grade 07 learner;
+7. formal Grade 08 learner;
+8. wrong-stage / wrong-grade behavior;
+9. two-learner record isolation;
+10. one-time legacy migration;
+11. Teacher / Family verification persistence;
+12. certificate lock / unlock / print;
+13. Grade 08 transition-plan gate;
+14. mobile layout;
+15. print layout;
+16. CSP behavior and external Academy script loading.
+
+---
+
+## Core Continuity Principle
+
+> **One learner identity. One Academy relationship. Multiple courses, resources, and developmental stages.**
+
+Advanced learners may receive greater challenge without sacrificing the integrity of formal placement.
+
+**Jennifer Kay Pearl · Khaemenes Academy · Verve N Veda**
