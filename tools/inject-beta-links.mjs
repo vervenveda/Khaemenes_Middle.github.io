@@ -1,3 +1,4 @@
+// Khaemenes / Verve N Veda Beta Program coverage injector v1.0.1
 import fs from 'node:fs';
 import path from 'node:path';
 
