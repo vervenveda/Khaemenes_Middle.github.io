@@ -3,6 +3,7 @@ name: Beta Program index rollout
 on:
   push:
     paths:
+      - '**/index.html'
       - '.github/workflows/beta-index-rollout.yml'
 
 permissions:
@@ -10,47 +11,45 @@ permissions:
 
 jobs:
   rollout:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-      - name: Add Beta Program widget to public index pages
-        shell: bash
+      - name: Add or repair Beta Program entry on index pages
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          WIDGET = '<script src="https://vervenveda.com/assets/vnv-beta-link.js" defer></script>'
-          marker = 'vnv-beta-link.js'
-          changed = []
-          for path in sorted(Path('.').rglob('index.html')):
-              if '.git' in path.parts or '.github' in path.parts:
-                  continue
-              try:
-                  text = path.read_text(encoding='utf-8')
-              except UnicodeDecodeError:
-                  continue
-              if marker in text:
-                  continue
-              pos = text.lower().rfind('</body>')
-              if pos < 0:
-                  continue
-              text = text[:pos] + '\n  <!-- Verve N Veda Beta Program -->\n  ' + WIDGET + '\n' + text[pos:]
-              path.write_text(text, encoding='utf-8')
-              changed.append(str(path))
-          print(f'Beta widget added to {len(changed)} index page(s).')
-          for item in changed:
-              print(item)
+          import re
+          widget='<script src="https://vervenveda.com/assets/vnv-beta-link.js" defer></script>'
+          direct='<a href="https://vervenveda.com/beta/" aria-label="Open the Verve N Veda Beta Program" style="position:fixed;right:14px;bottom:14px;z-index:2147483647;padding:9px 12px;border:1px solid currentColor;border-radius:7px;background:#fff;color:#111;text-decoration:none;font:600 13px/1.2 system-ui,sans-serif">β Beta Program</a>'
+          script_re=re.compile(r'<script\b[^>]*src=["\'][^"\']*vnv-beta-link\.js[^"\']*["\'][^>]*>\s*</script>',re.I)
+          changed=[]
+          for p in sorted(Path('.').rglob('index.html')):
+              if '.github' in p.parts or '.git' in p.parts: continue
+              try: original=p.read_text(encoding='utf-8')
+              except UnicodeDecodeError: continue
+              t=original
+              has_csp='content-security-policy' in t.lower()
+              has_direct='Open the Verve N Veda Beta Program' in t
+              has_widget='vnv-beta-link.js' in t
+              if has_csp:
+                  if has_widget: t=script_re.sub(direct,t)
+                  elif not has_direct:
+                      pos=t.lower().rfind('</body>')
+                      if pos>=0: t=t[:pos]+'\n<!-- Verve N Veda Beta Program -->\n'+direct+'\n'+t[pos:]
+              elif not has_widget and not has_direct:
+                  pos=t.lower().rfind('</body>')
+                  if pos>=0: t=t[:pos]+'\n<!-- Verve N Veda Beta Program -->\n'+widget+'\n'+t[pos:]
+              if t!=original:
+                  p.write_text(t,encoding='utf-8'); changed.append(str(p))
+          print('Updated',len(changed),'index page(s)')
+          for p in changed: print(p)
           PY
       - name: Commit rollout
-        shell: bash
         run: |
-          if git diff --quiet; then
-            echo 'No index pages required changes.'
-            exit 0
-          fi
+          if git diff --quiet; then exit 0; fi
           git config user.name 'Verve N Veda Automation'
           git config user.email 'actions@users.noreply.github.com'
           git add -- '*.html'
-          git commit -m 'Add Beta Program button to all index pages'
+          git commit -m 'Enforce Beta Program access on index pages'
           git push
