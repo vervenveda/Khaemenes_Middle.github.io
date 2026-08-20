@@ -1,0 +1,38 @@
+name: Inject Beta Program links
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/inject-beta-links.mjs'
+      - '.github/workflows/inject-beta-links.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  inject:
+    if: ${{ !contains(github.event.head_commit.message || '', '[beta-auto]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Inject Beta Program links into index surfaces
+        run: node tools/inject-beta-links.mjs
+      - name: Commit generated coverage
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo 'No Beta Program coverage changes needed.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- '*.html'
+          git commit -m 'Apply Beta Program links to index surfaces [beta-auto]'
+          git push
