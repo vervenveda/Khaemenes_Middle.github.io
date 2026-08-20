@@ -1,0 +1,44 @@
+name: Beta Program Coverage
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - 'scripts/inject-beta-links.mjs'
+      - '.github/workflows/beta-link-coverage.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: beta-program-coverage-main
+  cancel-in-progress: false
+
+jobs:
+  inject:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Inject canonical Beta Program doorway
+        run: node scripts/inject-beta-links.mjs
+      - name: Commit coverage updates
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "All index pages already have Beta Program coverage."
+            exit 0
+          fi
+          git config user.name "khaemenes-automation"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html'
+          git commit -m "Propagate Beta Program doorway across index pages"
+          git push
