@@ -1,0 +1,63 @@
+name: Middle School Breakaway Rollout
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'assets/khaemenes-middle-breakaway.js'
+      - '.github/workflows/breakaway-rollout.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  rollout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Add Breakaway launcher to student-facing HTML
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          marker = 'khaemenes-middle-breakaway.js'
+          tag = '<script src="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-middle-breakaway.js" defer></script>'
+          roots = [Path('grades/grade-06'), Path('grades/grade-07'), Path('grades/grade-08'), Path('grades/electives')]
+          excluded_parts = {'assessments', 'records', 'teacher-tools', 'printables'}
+          changed = []
+
+          for root in roots:
+            if not root.exists():
+              continue
+            for path in root.rglob('*.html'):
+              if any(part in excluded_parts for part in path.parts):
+                continue
+              text = path.read_text(encoding='utf-8')
+              if marker in text or '</body>' not in text.lower():
+                continue
+              pos = text.lower().rfind('</body>')
+              text = text[:pos] + tag + '\n' + text[pos:]
+              path.write_text(text, encoding='utf-8')
+              changed.append(str(path))
+
+          print(f'Breakaway coverage updated on {len(changed)} student-facing HTML files.')
+          for p in changed[:40]:
+            print('  ', p)
+          if len(changed) > 40:
+            print(f'  ... and {len(changed)-40} more')
+          PY
+      - name: Commit rollout
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No Breakaway rollout changes needed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add grades
+          git commit -m "Roll out 15-minute Breakaway launcher across Middle School student pages"
+          git push
