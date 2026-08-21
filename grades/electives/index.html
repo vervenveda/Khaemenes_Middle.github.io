@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Khaemenes Academy Middle School electives — 13-week advanced courses with learner profile pinning.">
+<title>Khaemenes Middle School · Electives</title>
+<link rel="stylesheet" href="../../assets/electives.css">
+</head>
+<body>
+<header class="top">
+  <div class="shell nav">
+    <a class="brand" href="../../index.html"><span class="seal">K</span><span><strong>Khaemenes Middle School</strong><small>Elective Course Hall</small></span></a>
+    <nav class="navlinks" aria-label="Middle school elective navigation">
+      <a href="../../index.html">Middle School</a>
+      <a href="../grade-06/">Grade 6</a>
+      <a href="../grade-07/">Grade 7</a>
+      <a href="../grade-08/">Grade 8</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Student Profile</a>
+    </nav>
+  </div>
+  <div class="shell hero">
+    <p class="kicker">Choice · Depth · Creative Practice</p>
+    <h1>Middle School Electives</h1>
+    <p class="lead">Four 13-week A+++ elective courses that students may explore and pin directly to their Academy Student Profile. Pinning creates a learner-specific shortcut only; it does not change grade placement, mastery, or formal enrollment authority.</p>
+    <div class="actions"><a class="btn gold" href="#courses">Explore Courses</a><a class="btn" href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Open Student Profile</a></div>
+    <div class="notice" id="learnerStatus">Loading active learner…</div>
+  </div>
+</header>
+<main>
+<section class="section" id="courses">
+  <div class="shell">
+    <div class="section-heading"><p class="kicker">Available Classes</p><h2>Choose a course and keep it close.</h2><p>Each course opens into its own visible interactive course page with a 13-week map, a Student Profile pin button, and the Beta Program doorway.</p></div>
+    <div class="cards">
+      <article class="card"><p class="kicker">Visual Arts</p><h3>Advanced Studio Art</h3><p>Drawing, color, composition, design, sculpture, printmaking, mixed media, digital art, critique, revision, and portfolio habits.</p><div class="actions"><a class="btn" href="advanced-studio-art/">Open Class</a><button class="btn secondary" type="button" data-pin="studio-art">☆ Pin to Profile</button></div></article>
+      <article class="card"><p class="kicker">Arts & Culture</p><h3>Art History</h3><p>Thirteen weeks of visual culture, historical context, close looking, interpretation, comparison, evidence, and museum-style study.</p><div class="actions"><a class="btn" href="art-history/">Open Class</a><button class="btn secondary" type="button" data-pin="art-history">☆ Pin to Profile</button></div></article>
+      <article class="card"><p class="kicker">Applied Science</p><h3>Agricultural Home Gardening</h3><p>Soil, seeds, planning, plant health, sustainability, food systems, observation, records, and hands-on home gardening practice.</p><div class="actions"><a class="btn" href="home-gardening/">Open Class</a><button class="btn secondary" type="button" data-pin="home-gardening">☆ Pin to Profile</button></div></article>
+      <article class="card"><p class="kicker">Writing Craft</p><h3>Introduction to Cursive Writing</h3><p>Letter formation, rhythm, joining, legibility, fluency, historical handwriting awareness, and practical written expression.</p><div class="actions"><a class="btn" href="cursive-writing/">Open Class</a><button class="btn secondary" type="button" data-pin="cursive-writing">☆ Pin to Profile</button></div></article>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer"><strong>Khaemenes Academy</strong><span>Middle School Elective Hall · Jennifer Kay Pearl · Verve N Veda</span></footer>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script>
+<script src="../../assets/khaemenes-middle-course-pins.js"></script>
+<script>
+(()=>{
+  const R=window.KhaemenesFamilyRegistry,P=window.KhaemenesMiddleCoursePins,status=document.getElementById('learnerStatus');
+  const courses={
+    'studio-art':{id:'middle-elective-advanced-studio-art',title:'Advanced Studio Art',subtitle:'13-week Middle School elective',href:new URL('advanced-studio-art/',location.href).href},
+    'art-history':{id:'middle-elective-art-history',title:'Art History',subtitle:'13-week Middle School elective',href:new URL('art-history/',location.href).href},
+    'home-gardening':{id:'middle-elective-home-gardening',title:'Agricultural Home Gardening',subtitle:'13-week Middle School elective',href:new URL('home-gardening/',location.href).href},
+    'cursive-writing':{id:'middle-elective-cursive-writing',title:'Introduction to Cursive Writing',subtitle:'13-week Middle School elective',href:new URL('cursive-writing/',location.href).href}
+  };
+  function renderLearner(){const l=R?.getLearner?.();status.textContent=l?`Active learner: ${l.nickname||'Learner'}${l.grade?` · Grade ${String(l.grade).replace(/^0/,'')}`:''}. Pinned electives will appear on this learner's Student Profile.`:'No active learner is selected. Courses remain open for preview; choose a learner profile before pinning.'}
+  document.querySelectorAll('[data-pin]').forEach(btn=>P?.bindButton?.(btn,courses[btn.dataset.pin]));
+  window.addEventListener('khaemenes-family-changed',renderLearner);renderLearner();
+})();
+</script>
+<script src="/assets/vnv-beta-link.js" defer></script>
+</body>
+</html>
