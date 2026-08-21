@@ -1,0 +1,1888 @@
+{
+  "metadata": {
+    "title": "Middle School A+++ Introductory Cursive Writing — 13-Week Course",
+    "level": "Middle School",
+    "duration_weeks": 13,
+    "lessons_per_week": 5,
+    "total_lessons": 65,
+    "weekly_quizzes": 13,
+    "final_assessment": 1,
+    "designation": "A+++ Cursive Writing",
+    "design_principles": [
+      "legibility",
+      "fluency",
+      "letter formation",
+      "joining",
+      "spacing",
+      "alignment",
+      "posture",
+      "paper position",
+      "authentic writing",
+      "reflection"
+    ],
+    "research_basis": [
+      "South Carolina Department of Education Handwriting Support Document (2025)",
+      "California Department of Education Cursive Instruction guidance (reviewed 2026)",
+      "Common Core State Standards ELA/Literacy writing and language expectations",
+      "National Handwriting Association good-practice resources"
+    ]
+  },
+  "course_goals": [
+    "Establish accurate, comfortable cursive mechanics.",
+    "Learn lowercase and uppercase forms through related stroke families.",
+    "Develop joining, spacing, alignment, proportion, and legibility.",
+    "Transition from isolated letters to authentic writing.",
+    "Build confidence reading and producing cursive."
+  ],
+  "weekly_cycle": [
+    "Letterform Foundations",
+    "Technique Lab",
+    "Application",
+    "Fluency & Composition",
+    "Mastery + Transfer"
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "theme": "Handwriting Reset & Cursive Readiness",
+      "weekly_goal": "Build mastery of handwriting reset & cursive readiness with accuracy, fluency, legibility, and purposeful written communication.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Posture and Grip",
+          "lesson_type": "Letterform Foundations",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Paper Position and Writing Angle",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Warm-Up Strokes",
+          "lesson_type": "Application",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Baseline, Height and Spacing",
+          "lesson_type": "Fluency & Composition",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Personal Baseline Sample",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 1 Cursive Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "formation",
+            "prompt": "Write a representative set of target letters or joins accurately.",
+            "answer_key": "Correct stroke sequence, shape, proportion, and join."
+          },
+          {
+            "type": "legibility",
+            "prompt": "Rewrite a deliberately inconsistent sample for improved legibility.",
+            "answer_key": "Improved spacing, alignment, size, and letter clarity."
+          },
+          {
+            "type": "vocabulary",
+            "prompt": "Explain two handwriting terms used in the week's lessons.",
+            "answer_key": "Accurate definitions with practical application."
+          },
+          {
+            "type": "fluency",
+            "prompt": "Complete a short authentic writing passage while maintaining legibility.",
+            "answer_key": "Readable, controlled, consistent cursive."
+          },
+          {
+            "type": "reflection",
+            "prompt": "Identify one strength and one specific improvement goal.",
+            "answer_key": "Concrete, observable goal."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 2,
+      "theme": "Lowercase Letter Families I",
+      "weekly_goal": "Build mastery of lowercase letter families i with accuracy, fluency, legibility, and purposeful written communication.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "a c d g q",
+          "lesson_type": "Letterform Foundations",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "i t u w",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "e l",
+          "lesson_type": "Application",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "o",
+          "lesson_type": "Fluency & Composition",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Mixed Family Practice",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 2 Cursive Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "formation",
+            "prompt": "Write a representative set of target letters or joins accurately.",
+            "answer_key": "Correct stroke sequence, shape, proportion, and join."
+          },
+          {
+            "type": "legibility",
+            "prompt": "Rewrite a deliberately inconsistent sample for improved legibility.",
+            "answer_key": "Improved spacing, alignment, size, and letter clarity."
+          },
+          {
+            "type": "vocabulary",
+            "prompt": "Explain two handwriting terms used in the week's lessons.",
+            "answer_key": "Accurate definitions with practical application."
+          },
+          {
+            "type": "fluency",
+            "prompt": "Complete a short authentic writing passage while maintaining legibility.",
+            "answer_key": "Readable, controlled, consistent cursive."
+          },
+          {
+            "type": "reflection",
+            "prompt": "Identify one strength and one specific improvement goal.",
+            "answer_key": "Concrete, observable goal."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 3,
+      "theme": "Lowercase Letter Families II",
+      "weekly_goal": "Build mastery of lowercase letter families ii with accuracy, fluency, legibility, and purposeful written communication.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "n m h k",
+          "lesson_type": "Letterform Foundations",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "r s",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "b f",
+          "lesson_type": "Application",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "p j",
+          "lesson_type": "Fluency & Composition",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Mixed Family Practice",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 3 Cursive Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "formation",
+            "prompt": "Write a representative set of target letters or joins accurately.",
+            "answer_key": "Correct stroke sequence, shape, proportion, and join."
+          },
+          {
+            "type": "legibility",
+            "prompt": "Rewrite a deliberately inconsistent sample for improved legibility.",
+            "answer_key": "Improved spacing, alignment, size, and letter clarity."
+          },
+          {
+            "type": "vocabulary",
+            "prompt": "Explain two handwriting terms used in the week's lessons.",
+            "answer_key": "Accurate definitions with practical application."
+          },
+          {
+            "type": "fluency",
+            "prompt": "Complete a short authentic writing passage while maintaining legibility.",
+            "answer_key": "Readable, controlled, consistent cursive."
+          },
+          {
+            "type": "reflection",
+            "prompt": "Identify one strength and one specific improvement goal.",
+            "answer_key": "Concrete, observable goal."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 4,
+      "theme": "Lowercase Letter Families III",
+      "weekly_goal": "Build mastery of lowercase letter families iii with accuracy, fluency, legibility, and purposeful written communication.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "v y x z",
+          "lesson_type": "Letterform Foundations",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Letter Connections",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Common Join Problems",
+          "lesson_type": "Application",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Speed Without Sacrificing Form",
+          "lesson_type": "Fluency & Composition",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Lowercase Fluency Check",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 4 Cursive Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "formation",
+            "prompt": "Write a representative set of target letters or joins accurately.",
+            "answer_key": "Correct stroke sequence, shape, proportion, and join."
+          },
+          {
+            "type": "legibility",
+            "prompt": "Rewrite a deliberately inconsistent sample for improved legibility.",
+            "answer_key": "Improved spacing, alignment, size, and letter clarity."
+          },
+          {
+            "type": "vocabulary",
+            "prompt": "Explain two handwriting terms used in the week's lessons.",
+            "answer_key": "Accurate definitions with practical application."
+          },
+          {
+            "type": "fluency",
+            "prompt": "Complete a short authentic writing passage while maintaining legibility.",
+            "answer_key": "Readable, controlled, consistent cursive."
+          },
+          {
+            "type": "reflection",
+            "prompt": "Identify one strength and one specific improvement goal.",
+            "answer_key": "Concrete, observable goal."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 5,
+      "theme": "Uppercase Cursive",
+      "weekly_goal": "Build mastery of uppercase cursive with accuracy, fluency, legibility, and purposeful written communication.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Capital A–F",
+          "lesson_type": "Letterform Foundations",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Capital G–L",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Capital M–R",
+          "lesson_type": "Application",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Capital S–Z",
+          "lesson_type": "Fluency & Composition",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Capital-Lowercase Connections",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 5 Cursive Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "formation",
+            "prompt": "Write a representative set of target letters or joins accurately.",
+            "answer_key": "Correct stroke sequence, shape, proportion, and join."
+          },
+          {
+            "type": "legibility",
+            "prompt": "Rewrite a deliberately inconsistent sample for improved legibility.",
+            "answer_key": "Improved spacing, alignment, size, and letter clarity."
+          },
+          {
+            "type": "vocabulary",
+            "prompt": "Explain two handwriting terms used in the week's lessons.",
+            "answer_key": "Accurate definitions with practical application."
+          },
+          {
+            "type": "fluency",
+            "prompt": "Complete a short authentic writing passage while maintaining legibility.",
+            "answer_key": "Readable, controlled, consistent cursive."
+          },
+          {
+            "type": "reflection",
+            "prompt": "Identify one strength and one specific improvement goal.",
+            "answer_key": "Concrete, observable goal."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 6,
+      "theme": "Word Building & Common Joins",
+      "weekly_goal": "Build mastery of word building & common joins with accuracy, fluency, legibility, and purposeful written communication.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Short Words",
+          "lesson_type": "Letterform Foundations",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Double Letters",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Common Digraphs",
+          "lesson_type": "Application",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Prefixes and Suffixes",
+          "lesson_type": "Fluency & Composition",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Vocabulary Practice",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 6 Cursive Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "formation",
+            "prompt": "Write a representative set of target letters or joins accurately.",
+            "answer_key": "Correct stroke sequence, shape, proportion, and join."
+          },
+          {
+            "type": "legibility",
+            "prompt": "Rewrite a deliberately inconsistent sample for improved legibility.",
+            "answer_key": "Improved spacing, alignment, size, and letter clarity."
+          },
+          {
+            "type": "vocabulary",
+            "prompt": "Explain two handwriting terms used in the week's lessons.",
+            "answer_key": "Accurate definitions with practical application."
+          },
+          {
+            "type": "fluency",
+            "prompt": "Complete a short authentic writing passage while maintaining legibility.",
+            "answer_key": "Readable, controlled, consistent cursive."
+          },
+          {
+            "type": "reflection",
+            "prompt": "Identify one strength and one specific improvement goal.",
+            "answer_key": "Concrete, observable goal."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 7,
+      "theme": "Spacing, Rhythm & Alignment",
+      "weekly_goal": "Build mastery of spacing, rhythm & alignment with accuracy, fluency, legibility, and purposeful written communication.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Letter Spacing",
+          "lesson_type": "Letterform Foundations",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Word Spacing",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Baseline Control",
+          "lesson_type": "Application",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Consistent Height",
+          "lesson_type": "Fluency & Composition",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Legibility Workshop",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 7 Cursive Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "formation",
+            "prompt": "Write a representative set of target letters or joins accurately.",
+            "answer_key": "Correct stroke sequence, shape, proportion, and join."
+          },
+          {
+            "type": "legibility",
+            "prompt": "Rewrite a deliberately inconsistent sample for improved legibility.",
+            "answer_key": "Improved spacing, alignment, size, and letter clarity."
+          },
+          {
+            "type": "vocabulary",
+            "prompt": "Explain two handwriting terms used in the week's lessons.",
+            "answer_key": "Accurate definitions with practical application."
+          },
+          {
+            "type": "fluency",
+            "prompt": "Complete a short authentic writing passage while maintaining legibility.",
+            "answer_key": "Readable, controlled, consistent cursive."
+          },
+          {
+            "type": "reflection",
+            "prompt": "Identify one strength and one specific improvement goal.",
+            "answer_key": "Concrete, observable goal."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 8,
+      "theme": "Cursive Reading & Transcription",
+      "weekly_goal": "Build mastery of cursive reading & transcription with accuracy, fluency, legibility, and purposeful written communication.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Read Cursive Models",
+          "lesson_type": "Letterform Foundations",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Transcribe Print to Cursive",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Cursive to Print",
+          "lesson_type": "Application",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Historical Handwriting Samples",
+          "lesson_type": "Fluency & Composition",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Transcription Challenge",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 8 Cursive Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "formation",
+            "prompt": "Write a representative set of target letters or joins accurately.",
+            "answer_key": "Correct stroke sequence, shape, proportion, and join."
+          },
+          {
+            "type": "legibility",
+            "prompt": "Rewrite a deliberately inconsistent sample for improved legibility.",
+            "answer_key": "Improved spacing, alignment, size, and letter clarity."
+          },
+          {
+            "type": "vocabulary",
+            "prompt": "Explain two handwriting terms used in the week's lessons.",
+            "answer_key": "Accurate definitions with practical application."
+          },
+          {
+            "type": "fluency",
+            "prompt": "Complete a short authentic writing passage while maintaining legibility.",
+            "answer_key": "Readable, controlled, consistent cursive."
+          },
+          {
+            "type": "reflection",
+            "prompt": "Identify one strength and one specific improvement goal.",
+            "answer_key": "Concrete, observable goal."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 9,
+      "theme": "Authentic Writing I",
+      "weekly_goal": "Build mastery of authentic writing i with accuracy, fluency, legibility, and purposeful written communication.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Sentences",
+          "lesson_type": "Letterform Foundations",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Paragraphs",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Notes",
+          "lesson_type": "Application",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Study Responses",
+          "lesson_type": "Fluency & Composition",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Timed Fluency Practice",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 9 Cursive Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "formation",
+            "prompt": "Write a representative set of target letters or joins accurately.",
+            "answer_key": "Correct stroke sequence, shape, proportion, and join."
+          },
+          {
+            "type": "legibility",
+            "prompt": "Rewrite a deliberately inconsistent sample for improved legibility.",
+            "answer_key": "Improved spacing, alignment, size, and letter clarity."
+          },
+          {
+            "type": "vocabulary",
+            "prompt": "Explain two handwriting terms used in the week's lessons.",
+            "answer_key": "Accurate definitions with practical application."
+          },
+          {
+            "type": "fluency",
+            "prompt": "Complete a short authentic writing passage while maintaining legibility.",
+            "answer_key": "Readable, controlled, consistent cursive."
+          },
+          {
+            "type": "reflection",
+            "prompt": "Identify one strength and one specific improvement goal.",
+            "answer_key": "Concrete, observable goal."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 10,
+      "theme": "Authentic Writing II",
+      "weekly_goal": "Build mastery of authentic writing ii with accuracy, fluency, legibility, and purposeful written communication.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Letters",
+          "lesson_type": "Letterform Foundations",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Journal Entry",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Biography Paragraph",
+          "lesson_type": "Application",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Poetry Copying",
+          "lesson_type": "Fluency & Composition",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Personal Correspondence",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 10 Cursive Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "formation",
+            "prompt": "Write a representative set of target letters or joins accurately.",
+            "answer_key": "Correct stroke sequence, shape, proportion, and join."
+          },
+          {
+            "type": "legibility",
+            "prompt": "Rewrite a deliberately inconsistent sample for improved legibility.",
+            "answer_key": "Improved spacing, alignment, size, and letter clarity."
+          },
+          {
+            "type": "vocabulary",
+            "prompt": "Explain two handwriting terms used in the week's lessons.",
+            "answer_key": "Accurate definitions with practical application."
+          },
+          {
+            "type": "fluency",
+            "prompt": "Complete a short authentic writing passage while maintaining legibility.",
+            "answer_key": "Readable, controlled, consistent cursive."
+          },
+          {
+            "type": "reflection",
+            "prompt": "Identify one strength and one specific improvement goal.",
+            "answer_key": "Concrete, observable goal."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 11,
+      "theme": "Editing & Self-Correction",
+      "weekly_goal": "Build mastery of editing & self-correction with accuracy, fluency, legibility, and purposeful written communication.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Spot Formation Errors",
+          "lesson_type": "Letterform Foundations",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Spacing Errors",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Alignment Errors",
+          "lesson_type": "Application",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Join Errors",
+          "lesson_type": "Fluency & Composition",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Revision Routine",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 11 Cursive Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "formation",
+            "prompt": "Write a representative set of target letters or joins accurately.",
+            "answer_key": "Correct stroke sequence, shape, proportion, and join."
+          },
+          {
+            "type": "legibility",
+            "prompt": "Rewrite a deliberately inconsistent sample for improved legibility.",
+            "answer_key": "Improved spacing, alignment, size, and letter clarity."
+          },
+          {
+            "type": "vocabulary",
+            "prompt": "Explain two handwriting terms used in the week's lessons.",
+            "answer_key": "Accurate definitions with practical application."
+          },
+          {
+            "type": "fluency",
+            "prompt": "Complete a short authentic writing passage while maintaining legibility.",
+            "answer_key": "Readable, controlled, consistent cursive."
+          },
+          {
+            "type": "reflection",
+            "prompt": "Identify one strength and one specific improvement goal.",
+            "answer_key": "Concrete, observable goal."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 12,
+      "theme": "Personal Style & Presentation",
+      "weekly_goal": "Build mastery of personal style & presentation with accuracy, fluency, legibility, and purposeful written communication.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Consistency vs Style",
+          "lesson_type": "Letterform Foundations",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Signature Design",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Headings and Titles",
+          "lesson_type": "Application",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Neat Final Copy",
+          "lesson_type": "Fluency & Composition",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Portfolio Selection",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 12 Cursive Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "formation",
+            "prompt": "Write a representative set of target letters or joins accurately.",
+            "answer_key": "Correct stroke sequence, shape, proportion, and join."
+          },
+          {
+            "type": "legibility",
+            "prompt": "Rewrite a deliberately inconsistent sample for improved legibility.",
+            "answer_key": "Improved spacing, alignment, size, and letter clarity."
+          },
+          {
+            "type": "vocabulary",
+            "prompt": "Explain two handwriting terms used in the week's lessons.",
+            "answer_key": "Accurate definitions with practical application."
+          },
+          {
+            "type": "fluency",
+            "prompt": "Complete a short authentic writing passage while maintaining legibility.",
+            "answer_key": "Readable, controlled, consistent cursive."
+          },
+          {
+            "type": "reflection",
+            "prompt": "Identify one strength and one specific improvement goal.",
+            "answer_key": "Concrete, observable goal."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 13,
+      "theme": "Middle School Cursive Capstone",
+      "weekly_goal": "Build mastery of middle school cursive capstone with accuracy, fluency, legibility, and purposeful written communication.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Draft",
+          "lesson_type": "Letterform Foundations",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Revise",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Fluency Passage",
+          "lesson_type": "Application",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Formal Letter",
+          "lesson_type": "Fluency & Composition",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Final Portfolio and Reflection",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop accurate, legible, controlled cursive letterforms and joins.",
+            "Build fluency through short, deliberate practice rather than repetitive copying alone.",
+            "Apply handwriting to authentic reading, note-taking, correspondence, and composition."
+          ],
+          "activities": [
+            "Warm-up strokes and posture/paper-position check.",
+            "Teacher/model analysis followed by guided formation.",
+            "Timed but accuracy-first practice.",
+            "Authentic writing application.",
+            "Self-assessment and one targeted revision."
+          ],
+          "assessment": "Legibility, consistency, spacing, alignment, joins, fluency, and self-correction.",
+          "extension": "Increase writing length, vary text type, or create an individualized handwriting challenge.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 13 Cursive Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "formation",
+            "prompt": "Write a representative set of target letters or joins accurately.",
+            "answer_key": "Correct stroke sequence, shape, proportion, and join."
+          },
+          {
+            "type": "legibility",
+            "prompt": "Rewrite a deliberately inconsistent sample for improved legibility.",
+            "answer_key": "Improved spacing, alignment, size, and letter clarity."
+          },
+          {
+            "type": "vocabulary",
+            "prompt": "Explain two handwriting terms used in the week's lessons.",
+            "answer_key": "Accurate definitions with practical application."
+          },
+          {
+            "type": "fluency",
+            "prompt": "Complete a short authentic writing passage while maintaining legibility.",
+            "answer_key": "Readable, controlled, consistent cursive."
+          },
+          {
+            "type": "reflection",
+            "prompt": "Identify one strength and one specific improvement goal.",
+            "answer_key": "Concrete, observable goal."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    }
+  ],
+  "final_assessment": {
+    "title": "Middle School Introductory Cursive Final — Cursive Communication Portfolio",
+    "points": 100,
+    "sections": [
+      {
+        "name": "Letter Formation",
+        "points": 20
+      },
+      {
+        "name": "Joining & Spacing",
+        "points": 20
+      },
+      {
+        "name": "Legibility & Alignment",
+        "points": 20
+      },
+      {
+        "name": "Fluency",
+        "points": 15
+      },
+      {
+        "name": "Authentic Writing Portfolio",
+        "points": 25
+      }
+    ],
+    "capstone": "Submit a portfolio containing a controlled alphabet sample, word/phrase practice, a transcribed passage, a handwritten paragraph, a formal letter, and a reflection identifying growth and next goals.",
+    "rubric": {
+      "formation": 20,
+      "joining_spacing": 20,
+      "legibility_alignment": 20,
+      "fluency": 15,
+      "authentic_writing": 15,
+      "reflection": 10
+    }
+  }
+}

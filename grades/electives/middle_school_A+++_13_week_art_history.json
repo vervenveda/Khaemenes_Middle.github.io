@@ -1,0 +1,1889 @@
+{
+  "metadata": {
+    "title": "Middle School A+++ Art History — 13-Week Global Visual Culture Course",
+    "level": "Middle School",
+    "duration_weeks": 13,
+    "lessons_per_week": 5,
+    "total_lessons": 65,
+    "weekly_quizzes": 13,
+    "final_assessment": 1,
+    "designation": "A+++",
+    "architecture": [
+      "close looking",
+      "visual analysis",
+      "contextual analysis",
+      "comparison",
+      "artistic traditions",
+      "interpretation",
+      "argumentation",
+      "creative practice",
+      "reflection"
+    ],
+    "research_basis": [
+      "National Core Arts Standards: Visual Arts",
+      "C3 Framework: Inquiry and Evidence",
+      "Smithsonian museum-based visual literacy resources",
+      "College Board AP Art History skills adapted to middle-school level"
+    ]
+  },
+  "course_goals": [
+    "Develop strong visual literacy and evidence-based close looking.",
+    "Study major global artistic traditions without treating Western art as the sole center of art history.",
+    "Connect art to religion, politics, economics, technology, environment, identity, trade, migration, and social change.",
+    "Use art vocabulary precisely.",
+    "Distinguish observation, interpretation, and unsupported opinion.",
+    "Recognize that artists, communities, museums, and historians can offer different perspectives."
+  ],
+  "weekly_cycle": [
+    "Look & Wonder",
+    "Context Lab",
+    "Analysis/Studio",
+    "Discussion & Writing",
+    "Mastery + Transfer"
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "theme": "What Is Art History?",
+      "weekly_goal": "Master what is art history? through visual literacy, contextual reasoning, comparison, interpretation, and transfer.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "What Counts as Art?",
+          "lesson_type": "Look & Wonder",
+          "objectives": [
+            "Develop middle school understanding of what counts as art?.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "The Five-Step Close Look",
+          "lesson_type": "Context Lab",
+          "objectives": [
+            "Develop middle school understanding of the five-step close look.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Elements & Principles",
+          "lesson_type": "Analysis/Studio",
+          "objectives": [
+            "Develop middle school understanding of elements & principles.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Function, Audience & Meaning",
+          "lesson_type": "Discussion & Writing",
+          "objectives": [
+            "Develop middle school understanding of function, audience & meaning.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Visual Analysis Studio",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop middle school understanding of visual analysis studio.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 1 Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "Visual Analysis",
+            "prompt": "Analyze an unfamiliar artwork using three specific visual details.",
+            "answer_key": "Observable evidence connected to a plausible interpretation."
+          },
+          {
+            "type": "Context",
+            "prompt": "Explain one historical, cultural, social, religious, political, or technological factor affecting an artwork.",
+            "answer_key": "Accurate context with a clear connection."
+          },
+          {
+            "type": "Comparison",
+            "prompt": "Compare two works and identify one significant similarity and difference.",
+            "answer_key": "Specific formal and/or contextual comparison."
+          },
+          {
+            "type": "Vocabulary",
+            "prompt": "Use two course vocabulary terms accurately.",
+            "answer_key": "Correct terms used in meaningful context."
+          },
+          {
+            "type": "Transfer",
+            "prompt": "Apply the week's central idea to an unfamiliar artwork.",
+            "answer_key": "Valid transfer supported by evidence."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 2,
+      "theme": "Prehistory & First Images",
+      "weekly_goal": "Master prehistory & first images through visual literacy, contextual reasoning, comparison, interpretation, and transfer.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Cave and Rock Art",
+          "lesson_type": "Look & Wonder",
+          "objectives": [
+            "Develop middle school understanding of cave and rock art.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Sculpture and Symbol",
+          "lesson_type": "Context Lab",
+          "objectives": [
+            "Develop middle school understanding of sculpture and symbol.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Archaeology and Evidence",
+          "lesson_type": "Analysis/Studio",
+          "objectives": [
+            "Develop middle school understanding of archaeology and evidence.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Comparing Early Cultures",
+          "lesson_type": "Discussion & Writing",
+          "objectives": [
+            "Develop middle school understanding of comparing early cultures.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Museum Detective Challenge",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop middle school understanding of museum detective challenge.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 2 Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "Visual Analysis",
+            "prompt": "Analyze an unfamiliar artwork using three specific visual details.",
+            "answer_key": "Observable evidence connected to a plausible interpretation."
+          },
+          {
+            "type": "Context",
+            "prompt": "Explain one historical, cultural, social, religious, political, or technological factor affecting an artwork.",
+            "answer_key": "Accurate context with a clear connection."
+          },
+          {
+            "type": "Comparison",
+            "prompt": "Compare two works and identify one significant similarity and difference.",
+            "answer_key": "Specific formal and/or contextual comparison."
+          },
+          {
+            "type": "Vocabulary",
+            "prompt": "Use two course vocabulary terms accurately.",
+            "answer_key": "Correct terms used in meaningful context."
+          },
+          {
+            "type": "Transfer",
+            "prompt": "Apply the week's central idea to an unfamiliar artwork.",
+            "answer_key": "Valid transfer supported by evidence."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 3,
+      "theme": "Ancient Egypt & Near East",
+      "weekly_goal": "Master ancient egypt & near east through visual literacy, contextual reasoning, comparison, interpretation, and transfer.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Egyptian Visual Language",
+          "lesson_type": "Look & Wonder",
+          "objectives": [
+            "Develop middle school understanding of egyptian visual language.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Tombs and Afterlife",
+          "lesson_type": "Context Lab",
+          "objectives": [
+            "Develop middle school understanding of tombs and afterlife.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Mesopotamian Power",
+          "lesson_type": "Analysis/Studio",
+          "objectives": [
+            "Develop middle school understanding of mesopotamian power.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Materials and Technology",
+          "lesson_type": "Discussion & Writing",
+          "objectives": [
+            "Develop middle school understanding of materials and technology.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Power in Art Comparison",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop middle school understanding of power in art comparison.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 3 Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "Visual Analysis",
+            "prompt": "Analyze an unfamiliar artwork using three specific visual details.",
+            "answer_key": "Observable evidence connected to a plausible interpretation."
+          },
+          {
+            "type": "Context",
+            "prompt": "Explain one historical, cultural, social, religious, political, or technological factor affecting an artwork.",
+            "answer_key": "Accurate context with a clear connection."
+          },
+          {
+            "type": "Comparison",
+            "prompt": "Compare two works and identify one significant similarity and difference.",
+            "answer_key": "Specific formal and/or contextual comparison."
+          },
+          {
+            "type": "Vocabulary",
+            "prompt": "Use two course vocabulary terms accurately.",
+            "answer_key": "Correct terms used in meaningful context."
+          },
+          {
+            "type": "Transfer",
+            "prompt": "Apply the week's central idea to an unfamiliar artwork.",
+            "answer_key": "Valid transfer supported by evidence."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 4,
+      "theme": "Ancient Greece & Rome",
+      "weekly_goal": "Master ancient greece & rome through visual literacy, contextual reasoning, comparison, interpretation, and transfer.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Greek Ideals",
+          "lesson_type": "Look & Wonder",
+          "objectives": [
+            "Develop middle school understanding of greek ideals.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Pottery Storytelling",
+          "lesson_type": "Context Lab",
+          "objectives": [
+            "Develop middle school understanding of pottery storytelling.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Roman Portraiture",
+          "lesson_type": "Analysis/Studio",
+          "objectives": [
+            "Develop middle school understanding of roman portraiture.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Architecture and Empire",
+          "lesson_type": "Discussion & Writing",
+          "objectives": [
+            "Develop middle school understanding of architecture and empire.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Classical Legacy",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop middle school understanding of classical legacy.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 4 Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "Visual Analysis",
+            "prompt": "Analyze an unfamiliar artwork using three specific visual details.",
+            "answer_key": "Observable evidence connected to a plausible interpretation."
+          },
+          {
+            "type": "Context",
+            "prompt": "Explain one historical, cultural, social, religious, political, or technological factor affecting an artwork.",
+            "answer_key": "Accurate context with a clear connection."
+          },
+          {
+            "type": "Comparison",
+            "prompt": "Compare two works and identify one significant similarity and difference.",
+            "answer_key": "Specific formal and/or contextual comparison."
+          },
+          {
+            "type": "Vocabulary",
+            "prompt": "Use two course vocabulary terms accurately.",
+            "answer_key": "Correct terms used in meaningful context."
+          },
+          {
+            "type": "Transfer",
+            "prompt": "Apply the week's central idea to an unfamiliar artwork.",
+            "answer_key": "Valid transfer supported by evidence."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 5,
+      "theme": "Sacred Art of Asia",
+      "weekly_goal": "Master sacred art of asia through visual literacy, contextual reasoning, comparison, interpretation, and transfer.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Hindu Art",
+          "lesson_type": "Look & Wonder",
+          "objectives": [
+            "Develop middle school understanding of hindu art.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Buddhist Art",
+          "lesson_type": "Context Lab",
+          "objectives": [
+            "Develop middle school understanding of buddhist art.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Chinese Court and Landscape",
+          "lesson_type": "Analysis/Studio",
+          "objectives": [
+            "Develop middle school understanding of chinese court and landscape.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Japanese Visual Traditions",
+          "lesson_type": "Discussion & Writing",
+          "objectives": [
+            "Develop middle school understanding of japanese visual traditions.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Sacred and Philosophical Art",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop middle school understanding of sacred and philosophical art.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 5 Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "Visual Analysis",
+            "prompt": "Analyze an unfamiliar artwork using three specific visual details.",
+            "answer_key": "Observable evidence connected to a plausible interpretation."
+          },
+          {
+            "type": "Context",
+            "prompt": "Explain one historical, cultural, social, religious, political, or technological factor affecting an artwork.",
+            "answer_key": "Accurate context with a clear connection."
+          },
+          {
+            "type": "Comparison",
+            "prompt": "Compare two works and identify one significant similarity and difference.",
+            "answer_key": "Specific formal and/or contextual comparison."
+          },
+          {
+            "type": "Vocabulary",
+            "prompt": "Use two course vocabulary terms accurately.",
+            "answer_key": "Correct terms used in meaningful context."
+          },
+          {
+            "type": "Transfer",
+            "prompt": "Apply the week's central idea to an unfamiliar artwork.",
+            "answer_key": "Valid transfer supported by evidence."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 6,
+      "theme": "African Art Traditions",
+      "weekly_goal": "Master african art traditions through visual literacy, contextual reasoning, comparison, interpretation, and transfer.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Community and Identity",
+          "lesson_type": "Look & Wonder",
+          "objectives": [
+            "Develop middle school understanding of community and identity.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Masks and Performance",
+          "lesson_type": "Context Lab",
+          "objectives": [
+            "Develop middle school understanding of masks and performance.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Benin Court Art",
+          "lesson_type": "Analysis/Studio",
+          "objectives": [
+            "Develop middle school understanding of benin court art.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Material and Function",
+          "lesson_type": "Discussion & Writing",
+          "objectives": [
+            "Develop middle school understanding of material and function.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Representation and the 'Primitive Art' Myth",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop middle school understanding of representation and the 'primitive art' myth.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 6 Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "Visual Analysis",
+            "prompt": "Analyze an unfamiliar artwork using three specific visual details.",
+            "answer_key": "Observable evidence connected to a plausible interpretation."
+          },
+          {
+            "type": "Context",
+            "prompt": "Explain one historical, cultural, social, religious, political, or technological factor affecting an artwork.",
+            "answer_key": "Accurate context with a clear connection."
+          },
+          {
+            "type": "Comparison",
+            "prompt": "Compare two works and identify one significant similarity and difference.",
+            "answer_key": "Specific formal and/or contextual comparison."
+          },
+          {
+            "type": "Vocabulary",
+            "prompt": "Use two course vocabulary terms accurately.",
+            "answer_key": "Correct terms used in meaningful context."
+          },
+          {
+            "type": "Transfer",
+            "prompt": "Apply the week's central idea to an unfamiliar artwork.",
+            "answer_key": "Valid transfer supported by evidence."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 7,
+      "theme": "Indigenous Arts of the Americas",
+      "weekly_goal": "Master indigenous arts of the americas through visual literacy, contextual reasoning, comparison, interpretation, and transfer.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Maya/Aztec/Inca Visual Worlds",
+          "lesson_type": "Look & Wonder",
+          "objectives": [
+            "Develop middle school understanding of maya/aztec/inca visual worlds.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "North American Indigenous Arts",
+          "lesson_type": "Context Lab",
+          "objectives": [
+            "Develop middle school understanding of north american indigenous arts.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Architecture and Environment",
+          "lesson_type": "Analysis/Studio",
+          "objectives": [
+            "Develop middle school understanding of architecture and environment.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Colonial Encounters",
+          "lesson_type": "Discussion & Writing",
+          "objectives": [
+            "Develop middle school understanding of colonial encounters.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Culture, Ownership and Representation",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop middle school understanding of culture, ownership and representation.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 7 Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "Visual Analysis",
+            "prompt": "Analyze an unfamiliar artwork using three specific visual details.",
+            "answer_key": "Observable evidence connected to a plausible interpretation."
+          },
+          {
+            "type": "Context",
+            "prompt": "Explain one historical, cultural, social, religious, political, or technological factor affecting an artwork.",
+            "answer_key": "Accurate context with a clear connection."
+          },
+          {
+            "type": "Comparison",
+            "prompt": "Compare two works and identify one significant similarity and difference.",
+            "answer_key": "Specific formal and/or contextual comparison."
+          },
+          {
+            "type": "Vocabulary",
+            "prompt": "Use two course vocabulary terms accurately.",
+            "answer_key": "Correct terms used in meaningful context."
+          },
+          {
+            "type": "Transfer",
+            "prompt": "Apply the week's central idea to an unfamiliar artwork.",
+            "answer_key": "Valid transfer supported by evidence."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 8,
+      "theme": "Medieval Europe & Islamic Art",
+      "weekly_goal": "Master medieval europe & islamic art through visual literacy, contextual reasoning, comparison, interpretation, and transfer.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Medieval Christian Art",
+          "lesson_type": "Look & Wonder",
+          "objectives": [
+            "Develop middle school understanding of medieval christian art.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Manuscripts and Symbols",
+          "lesson_type": "Context Lab",
+          "objectives": [
+            "Develop middle school understanding of manuscripts and symbols.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Gothic Architecture",
+          "lesson_type": "Analysis/Studio",
+          "objectives": [
+            "Develop middle school understanding of gothic architecture.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Islamic Geometry and Calligraphy",
+          "lesson_type": "Discussion & Writing",
+          "objectives": [
+            "Develop middle school understanding of islamic geometry and calligraphy.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Art, Faith and Space",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop middle school understanding of art, faith and space.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 8 Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "Visual Analysis",
+            "prompt": "Analyze an unfamiliar artwork using three specific visual details.",
+            "answer_key": "Observable evidence connected to a plausible interpretation."
+          },
+          {
+            "type": "Context",
+            "prompt": "Explain one historical, cultural, social, religious, political, or technological factor affecting an artwork.",
+            "answer_key": "Accurate context with a clear connection."
+          },
+          {
+            "type": "Comparison",
+            "prompt": "Compare two works and identify one significant similarity and difference.",
+            "answer_key": "Specific formal and/or contextual comparison."
+          },
+          {
+            "type": "Vocabulary",
+            "prompt": "Use two course vocabulary terms accurately.",
+            "answer_key": "Correct terms used in meaningful context."
+          },
+          {
+            "type": "Transfer",
+            "prompt": "Apply the week's central idea to an unfamiliar artwork.",
+            "answer_key": "Valid transfer supported by evidence."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 9,
+      "theme": "Renaissance & Humanism",
+      "weekly_goal": "Master renaissance & humanism through visual literacy, contextual reasoning, comparison, interpretation, and transfer.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Early Renaissance",
+          "lesson_type": "Look & Wonder",
+          "objectives": [
+            "Develop middle school understanding of early renaissance.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Leonardo and Observation",
+          "lesson_type": "Context Lab",
+          "objectives": [
+            "Develop middle school understanding of leonardo and observation.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Michelangelo and Monumentality",
+          "lesson_type": "Analysis/Studio",
+          "objectives": [
+            "Develop middle school understanding of michelangelo and monumentality.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Raphael and Composition",
+          "lesson_type": "Discussion & Writing",
+          "objectives": [
+            "Develop middle school understanding of raphael and composition.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Renaissance Comparison",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop middle school understanding of renaissance comparison.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 9 Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "Visual Analysis",
+            "prompt": "Analyze an unfamiliar artwork using three specific visual details.",
+            "answer_key": "Observable evidence connected to a plausible interpretation."
+          },
+          {
+            "type": "Context",
+            "prompt": "Explain one historical, cultural, social, religious, political, or technological factor affecting an artwork.",
+            "answer_key": "Accurate context with a clear connection."
+          },
+          {
+            "type": "Comparison",
+            "prompt": "Compare two works and identify one significant similarity and difference.",
+            "answer_key": "Specific formal and/or contextual comparison."
+          },
+          {
+            "type": "Vocabulary",
+            "prompt": "Use two course vocabulary terms accurately.",
+            "answer_key": "Correct terms used in meaningful context."
+          },
+          {
+            "type": "Transfer",
+            "prompt": "Apply the week's central idea to an unfamiliar artwork.",
+            "answer_key": "Valid transfer supported by evidence."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 10,
+      "theme": "Baroque to Enlightenment",
+      "weekly_goal": "Master baroque to enlightenment through visual literacy, contextual reasoning, comparison, interpretation, and transfer.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Baroque Drama",
+          "lesson_type": "Look & Wonder",
+          "objectives": [
+            "Develop middle school understanding of baroque drama.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Caravaggio and Light",
+          "lesson_type": "Context Lab",
+          "objectives": [
+            "Develop middle school understanding of caravaggio and light.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Dutch Art and Everyday Life",
+          "lesson_type": "Analysis/Studio",
+          "objectives": [
+            "Develop middle school understanding of dutch art and everyday life.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Neoclassicism and Reason",
+          "lesson_type": "Discussion & Writing",
+          "objectives": [
+            "Develop middle school understanding of neoclassicism and reason.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Art and Changing Power",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop middle school understanding of art and changing power.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 10 Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "Visual Analysis",
+            "prompt": "Analyze an unfamiliar artwork using three specific visual details.",
+            "answer_key": "Observable evidence connected to a plausible interpretation."
+          },
+          {
+            "type": "Context",
+            "prompt": "Explain one historical, cultural, social, religious, political, or technological factor affecting an artwork.",
+            "answer_key": "Accurate context with a clear connection."
+          },
+          {
+            "type": "Comparison",
+            "prompt": "Compare two works and identify one significant similarity and difference.",
+            "answer_key": "Specific formal and/or contextual comparison."
+          },
+          {
+            "type": "Vocabulary",
+            "prompt": "Use two course vocabulary terms accurately.",
+            "answer_key": "Correct terms used in meaningful context."
+          },
+          {
+            "type": "Transfer",
+            "prompt": "Apply the week's central idea to an unfamiliar artwork.",
+            "answer_key": "Valid transfer supported by evidence."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 11,
+      "theme": "Modern Art Revolution",
+      "weekly_goal": "Master modern art revolution through visual literacy, contextual reasoning, comparison, interpretation, and transfer.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Impressionism",
+          "lesson_type": "Look & Wonder",
+          "objectives": [
+            "Develop middle school understanding of impressionism.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Post-Impressionism",
+          "lesson_type": "Context Lab",
+          "objectives": [
+            "Develop middle school understanding of post-impressionism.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Cubism",
+          "lesson_type": "Analysis/Studio",
+          "objectives": [
+            "Develop middle school understanding of cubism.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Surrealism",
+          "lesson_type": "Discussion & Writing",
+          "objectives": [
+            "Develop middle school understanding of surrealism.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Why Modern Art Changed",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop middle school understanding of why modern art changed.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 11 Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "Visual Analysis",
+            "prompt": "Analyze an unfamiliar artwork using three specific visual details.",
+            "answer_key": "Observable evidence connected to a plausible interpretation."
+          },
+          {
+            "type": "Context",
+            "prompt": "Explain one historical, cultural, social, religious, political, or technological factor affecting an artwork.",
+            "answer_key": "Accurate context with a clear connection."
+          },
+          {
+            "type": "Comparison",
+            "prompt": "Compare two works and identify one significant similarity and difference.",
+            "answer_key": "Specific formal and/or contextual comparison."
+          },
+          {
+            "type": "Vocabulary",
+            "prompt": "Use two course vocabulary terms accurately.",
+            "answer_key": "Correct terms used in meaningful context."
+          },
+          {
+            "type": "Transfer",
+            "prompt": "Apply the week's central idea to an unfamiliar artwork.",
+            "answer_key": "Valid transfer supported by evidence."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 12,
+      "theme": "Art, Identity & Social Change",
+      "weekly_goal": "Master art, identity & social change through visual literacy, contextual reasoning, comparison, interpretation, and transfer.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "African American Art",
+          "lesson_type": "Look & Wonder",
+          "objectives": [
+            "Develop middle school understanding of african american art.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Women Artists and Visibility",
+          "lesson_type": "Context Lab",
+          "objectives": [
+            "Develop middle school understanding of women artists and visibility.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Latin American Modernism",
+          "lesson_type": "Analysis/Studio",
+          "objectives": [
+            "Develop middle school understanding of latin american modernism.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Art and Protest",
+          "lesson_type": "Discussion & Writing",
+          "objectives": [
+            "Develop middle school understanding of art and protest.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Art as Historical Evidence",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop middle school understanding of art as historical evidence.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 12 Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "Visual Analysis",
+            "prompt": "Analyze an unfamiliar artwork using three specific visual details.",
+            "answer_key": "Observable evidence connected to a plausible interpretation."
+          },
+          {
+            "type": "Context",
+            "prompt": "Explain one historical, cultural, social, religious, political, or technological factor affecting an artwork.",
+            "answer_key": "Accurate context with a clear connection."
+          },
+          {
+            "type": "Comparison",
+            "prompt": "Compare two works and identify one significant similarity and difference.",
+            "answer_key": "Specific formal and/or contextual comparison."
+          },
+          {
+            "type": "Vocabulary",
+            "prompt": "Use two course vocabulary terms accurately.",
+            "answer_key": "Correct terms used in meaningful context."
+          },
+          {
+            "type": "Transfer",
+            "prompt": "Apply the week's central idea to an unfamiliar artwork.",
+            "answer_key": "Valid transfer supported by evidence."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 13,
+      "theme": "Contemporary Global Art & Museum Project",
+      "weekly_goal": "Master contemporary global art & museum project through visual literacy, contextual reasoning, comparison, interpretation, and transfer.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Installation and New Media",
+          "lesson_type": "Look & Wonder",
+          "objectives": [
+            "Develop middle school understanding of installation and new media.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Global Contemporary Voices",
+          "lesson_type": "Context Lab",
+          "objectives": [
+            "Develop middle school understanding of global contemporary voices.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Museums and Ethics",
+          "lesson_type": "Analysis/Studio",
+          "objectives": [
+            "Develop middle school understanding of museums and ethics.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Curate a Mini Exhibition",
+          "lesson_type": "Discussion & Writing",
+          "objectives": [
+            "Develop middle school understanding of curate a mini exhibition.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Final Exhibition and Reflection",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop middle school understanding of final exhibition and reflection.",
+            "Use visual evidence and precise art vocabulary.",
+            "Connect artistic choices to culture, history, audience, purpose, materials, and ideas."
+          ],
+          "activities": [
+            "Close-looking: observe, describe, infer, question.",
+            "Context investigation with teacher-curated museum or primary/secondary sources.",
+            "Apply the concept through analysis, comparison, research, or making.",
+            "Discuss and write an evidence-based interpretation.",
+            "Reflect, revise, and transfer the concept to an unfamiliar work."
+          ],
+          "assessment": "Exit analysis, discussion, written response, sketch/studio evidence, or research note.",
+          "extension": "Compare an additional work, evaluate another interpretation, or create an informed artistic response.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 13 Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "Visual Analysis",
+            "prompt": "Analyze an unfamiliar artwork using three specific visual details.",
+            "answer_key": "Observable evidence connected to a plausible interpretation."
+          },
+          {
+            "type": "Context",
+            "prompt": "Explain one historical, cultural, social, religious, political, or technological factor affecting an artwork.",
+            "answer_key": "Accurate context with a clear connection."
+          },
+          {
+            "type": "Comparison",
+            "prompt": "Compare two works and identify one significant similarity and difference.",
+            "answer_key": "Specific formal and/or contextual comparison."
+          },
+          {
+            "type": "Vocabulary",
+            "prompt": "Use two course vocabulary terms accurately.",
+            "answer_key": "Correct terms used in meaningful context."
+          },
+          {
+            "type": "Transfer",
+            "prompt": "Apply the week's central idea to an unfamiliar artwork.",
+            "answer_key": "Valid transfer supported by evidence."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    }
+  ],
+  "final_assessment": {
+    "title": "Middle School Art History Final — The Art Historian Challenge",
+    "points": 100,
+    "sections": [
+      {
+        "name": "Visual Analysis",
+        "points": 25
+      },
+      {
+        "name": "Context and Culture",
+        "points": 20
+      },
+      {
+        "name": "Comparison",
+        "points": 20
+      },
+      {
+        "name": "Vocabulary and Concepts",
+        "points": 15
+      },
+      {
+        "name": "Curatorial Project",
+        "points": 20
+      }
+    ],
+    "capstone": "Create a mini-exhibition of 4–6 works around a theme, including object labels, visual/contextual analysis, a curatorial statement, and a presentation.",
+    "rubric": {
+      "visual_evidence": 20,
+      "context": 20,
+      "comparison": 15,
+      "research": 15,
+      "curatorial_thesis": 15,
+      "presentation": 10,
+      "reflection": 5
+    }
+  }
+}

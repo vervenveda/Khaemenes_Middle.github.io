@@ -1,0 +1,1881 @@
+{
+  "metadata": {
+    "title": "Middle School A+++ Advanced Studio Art — 13-Week Course",
+    "level": "Middle School",
+    "duration_weeks": 13,
+    "lessons_per_week": 5,
+    "total_lessons": 65,
+    "weekly_quizzes": 13,
+    "final_assessment": 1,
+    "designation": "A+++ Advanced Studio Art",
+    "frameworks": [
+      "National Core Arts Standards — Visual Arts: Creating, Presenting, Responding, Connecting",
+      "National Core Arts Standards — High School Advanced",
+      "AP Art and Design portfolio framework: Sustained Investigation and Selected Works",
+      "College-level studio habits: inquiry, experimentation, revision, documentation, critique"
+    ],
+    "process_model": [
+      "Creating",
+      "Presenting",
+      "Responding",
+      "Connecting"
+    ]
+  },
+  "course_goals": [
+    "Build strong foundations in drawing, color, composition, design, sculpture, printmaking, mixed media, and digital art.",
+    "Move students from following examples toward making intentional artistic choices.",
+    "Develop critique, revision, reflection, and portfolio habits.",
+    "Connect technique with meaning, identity, culture, audience, and context.",
+    "Prepare students for advanced high-school studio work."
+  ],
+  "weekly_cycle": [
+    "Concept & Demonstration",
+    "Technique Lab",
+    "Studio Practice",
+    "Critique & Reflection",
+    "Mastery + Transfer"
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "theme": "Foundations of Advanced Visual Thinking",
+      "weekly_goal": "Develop mastery of foundations of advanced visual thinking through creating, presenting, responding, and connecting.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Seeing Like an Artist",
+          "lesson_type": "Concept & Demonstration",
+          "objectives": [
+            "Develop advanced middle school skills in seeing like an artist.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Composition and Visual Hierarchy",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop advanced middle school skills in composition and visual hierarchy.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Value and Contrast",
+          "lesson_type": "Studio Practice",
+          "objectives": [
+            "Develop advanced middle school skills in value and contrast.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Color Relationships",
+          "lesson_type": "Critique & Reflection",
+          "objectives": [
+            "Develop advanced middle school skills in color relationships.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Personal Visual Vocabulary",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop advanced middle school skills in personal visual vocabulary.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 1 Studio Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central artistic concept and why it matters.",
+            "answer_key": "Accurate concept plus meaningful application."
+          },
+          {
+            "type": "technique",
+            "prompt": "Describe the technique or process and one variable an artist can control.",
+            "answer_key": "Correct process with a relevant controllable variable."
+          },
+          {
+            "type": "analysis",
+            "prompt": "Analyze an exemplar using specific visual evidence.",
+            "answer_key": "Evidence-based analysis using art vocabulary."
+          },
+          {
+            "type": "critique",
+            "prompt": "Identify one strength and one actionable revision in a hypothetical artwork.",
+            "answer_key": "Specific, constructive critique."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Describe how you would adapt the week's idea to a new artistic problem.",
+            "answer_key": "Feasible and thoughtful transfer."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 2,
+      "theme": "Drawing: Observation & Proportion",
+      "weekly_goal": "Develop mastery of drawing: observation & proportion through creating, presenting, responding, and connecting.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Contour and Gesture",
+          "lesson_type": "Concept & Demonstration",
+          "objectives": [
+            "Develop advanced middle school skills in contour and gesture.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Proportion",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop advanced middle school skills in proportion.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Negative Space",
+          "lesson_type": "Studio Practice",
+          "objectives": [
+            "Develop advanced middle school skills in negative space.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Perspective Foundations",
+          "lesson_type": "Critique & Reflection",
+          "objectives": [
+            "Develop advanced middle school skills in perspective foundations.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Observational Drawing Challenge",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop advanced middle school skills in observational drawing challenge.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 2 Studio Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central artistic concept and why it matters.",
+            "answer_key": "Accurate concept plus meaningful application."
+          },
+          {
+            "type": "technique",
+            "prompt": "Describe the technique or process and one variable an artist can control.",
+            "answer_key": "Correct process with a relevant controllable variable."
+          },
+          {
+            "type": "analysis",
+            "prompt": "Analyze an exemplar using specific visual evidence.",
+            "answer_key": "Evidence-based analysis using art vocabulary."
+          },
+          {
+            "type": "critique",
+            "prompt": "Identify one strength and one actionable revision in a hypothetical artwork.",
+            "answer_key": "Specific, constructive critique."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Describe how you would adapt the week's idea to a new artistic problem.",
+            "answer_key": "Feasible and thoughtful transfer."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 3,
+      "theme": "Drawing: Form, Light & Space",
+      "weekly_goal": "Develop mastery of drawing: form, light & space through creating, presenting, responding, and connecting.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Light Logic",
+          "lesson_type": "Concept & Demonstration",
+          "objectives": [
+            "Develop advanced middle school skills in light logic.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Form Modeling",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop advanced middle school skills in form modeling.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Texture",
+          "lesson_type": "Studio Practice",
+          "objectives": [
+            "Develop advanced middle school skills in texture.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Atmospheric Space",
+          "lesson_type": "Critique & Reflection",
+          "objectives": [
+            "Develop advanced middle school skills in atmospheric space.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Finished Observational Study",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop advanced middle school skills in finished observational study.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 3 Studio Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central artistic concept and why it matters.",
+            "answer_key": "Accurate concept plus meaningful application."
+          },
+          {
+            "type": "technique",
+            "prompt": "Describe the technique or process and one variable an artist can control.",
+            "answer_key": "Correct process with a relevant controllable variable."
+          },
+          {
+            "type": "analysis",
+            "prompt": "Analyze an exemplar using specific visual evidence.",
+            "answer_key": "Evidence-based analysis using art vocabulary."
+          },
+          {
+            "type": "critique",
+            "prompt": "Identify one strength and one actionable revision in a hypothetical artwork.",
+            "answer_key": "Specific, constructive critique."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Describe how you would adapt the week's idea to a new artistic problem.",
+            "answer_key": "Feasible and thoughtful transfer."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 4,
+      "theme": "Color Theory & Painting",
+      "weekly_goal": "Develop mastery of color theory & painting through creating, presenting, responding, and connecting.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Color Mixing",
+          "lesson_type": "Concept & Demonstration",
+          "objectives": [
+            "Develop advanced middle school skills in color mixing.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Temperature",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop advanced middle school skills in temperature.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Complementary Relationships",
+          "lesson_type": "Studio Practice",
+          "objectives": [
+            "Develop advanced middle school skills in complementary relationships.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Color as Emotion",
+          "lesson_type": "Critique & Reflection",
+          "objectives": [
+            "Develop advanced middle school skills in color as emotion.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Small Painting Series",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop advanced middle school skills in small painting series.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 4 Studio Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central artistic concept and why it matters.",
+            "answer_key": "Accurate concept plus meaningful application."
+          },
+          {
+            "type": "technique",
+            "prompt": "Describe the technique or process and one variable an artist can control.",
+            "answer_key": "Correct process with a relevant controllable variable."
+          },
+          {
+            "type": "analysis",
+            "prompt": "Analyze an exemplar using specific visual evidence.",
+            "answer_key": "Evidence-based analysis using art vocabulary."
+          },
+          {
+            "type": "critique",
+            "prompt": "Identify one strength and one actionable revision in a hypothetical artwork.",
+            "answer_key": "Specific, constructive critique."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Describe how you would adapt the week's idea to a new artistic problem.",
+            "answer_key": "Feasible and thoughtful transfer."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 5,
+      "theme": "Design & Composition",
+      "weekly_goal": "Develop mastery of design & composition through creating, presenting, responding, and connecting.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Balance",
+          "lesson_type": "Concept & Demonstration",
+          "objectives": [
+            "Develop advanced middle school skills in balance.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Rhythm and Movement",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop advanced middle school skills in rhythm and movement.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Scale",
+          "lesson_type": "Studio Practice",
+          "objectives": [
+            "Develop advanced middle school skills in scale.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Focal Point",
+          "lesson_type": "Critique & Reflection",
+          "objectives": [
+            "Develop advanced middle school skills in focal point.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Intentional Composition",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop advanced middle school skills in intentional composition.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 5 Studio Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central artistic concept and why it matters.",
+            "answer_key": "Accurate concept plus meaningful application."
+          },
+          {
+            "type": "technique",
+            "prompt": "Describe the technique or process and one variable an artist can control.",
+            "answer_key": "Correct process with a relevant controllable variable."
+          },
+          {
+            "type": "analysis",
+            "prompt": "Analyze an exemplar using specific visual evidence.",
+            "answer_key": "Evidence-based analysis using art vocabulary."
+          },
+          {
+            "type": "critique",
+            "prompt": "Identify one strength and one actionable revision in a hypothetical artwork.",
+            "answer_key": "Specific, constructive critique."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Describe how you would adapt the week's idea to a new artistic problem.",
+            "answer_key": "Feasible and thoughtful transfer."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 6,
+      "theme": "Portrait & Figure Foundations",
+      "weekly_goal": "Develop mastery of portrait & figure foundations through creating, presenting, responding, and connecting.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Facial Structure",
+          "lesson_type": "Concept & Demonstration",
+          "objectives": [
+            "Develop advanced middle school skills in facial structure.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Expression",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop advanced middle school skills in expression.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Gesture",
+          "lesson_type": "Studio Practice",
+          "objectives": [
+            "Develop advanced middle school skills in gesture.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Proportion and Pose",
+          "lesson_type": "Critique & Reflection",
+          "objectives": [
+            "Develop advanced middle school skills in proportion and pose.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Character Study",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop advanced middle school skills in character study.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 6 Studio Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central artistic concept and why it matters.",
+            "answer_key": "Accurate concept plus meaningful application."
+          },
+          {
+            "type": "technique",
+            "prompt": "Describe the technique or process and one variable an artist can control.",
+            "answer_key": "Correct process with a relevant controllable variable."
+          },
+          {
+            "type": "analysis",
+            "prompt": "Analyze an exemplar using specific visual evidence.",
+            "answer_key": "Evidence-based analysis using art vocabulary."
+          },
+          {
+            "type": "critique",
+            "prompt": "Identify one strength and one actionable revision in a hypothetical artwork.",
+            "answer_key": "Specific, constructive critique."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Describe how you would adapt the week's idea to a new artistic problem.",
+            "answer_key": "Feasible and thoughtful transfer."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 7,
+      "theme": "Printmaking & Repetition",
+      "weekly_goal": "Develop mastery of printmaking & repetition through creating, presenting, responding, and connecting.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Relief Concepts",
+          "lesson_type": "Concept & Demonstration",
+          "objectives": [
+            "Develop advanced middle school skills in relief concepts.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Positive/Negative Space",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop advanced middle school skills in positive/negative space.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Pattern",
+          "lesson_type": "Studio Practice",
+          "objectives": [
+            "Develop advanced middle school skills in pattern.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Layering",
+          "lesson_type": "Critique & Reflection",
+          "objectives": [
+            "Develop advanced middle school skills in layering.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Edition and Reflection",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop advanced middle school skills in edition and reflection.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 7 Studio Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central artistic concept and why it matters.",
+            "answer_key": "Accurate concept plus meaningful application."
+          },
+          {
+            "type": "technique",
+            "prompt": "Describe the technique or process and one variable an artist can control.",
+            "answer_key": "Correct process with a relevant controllable variable."
+          },
+          {
+            "type": "analysis",
+            "prompt": "Analyze an exemplar using specific visual evidence.",
+            "answer_key": "Evidence-based analysis using art vocabulary."
+          },
+          {
+            "type": "critique",
+            "prompt": "Identify one strength and one actionable revision in a hypothetical artwork.",
+            "answer_key": "Specific, constructive critique."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Describe how you would adapt the week's idea to a new artistic problem.",
+            "answer_key": "Feasible and thoughtful transfer."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 8,
+      "theme": "Sculpture & 3D Design",
+      "weekly_goal": "Develop mastery of sculpture & 3d design through creating, presenting, responding, and connecting.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Form and Mass",
+          "lesson_type": "Concept & Demonstration",
+          "objectives": [
+            "Develop advanced middle school skills in form and mass.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Structure",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop advanced middle school skills in structure.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Texture",
+          "lesson_type": "Studio Practice",
+          "objectives": [
+            "Develop advanced middle school skills in texture.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Balance",
+          "lesson_type": "Critique & Reflection",
+          "objectives": [
+            "Develop advanced middle school skills in balance.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Small Sculpture",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop advanced middle school skills in small sculpture.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 8 Studio Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central artistic concept and why it matters.",
+            "answer_key": "Accurate concept plus meaningful application."
+          },
+          {
+            "type": "technique",
+            "prompt": "Describe the technique or process and one variable an artist can control.",
+            "answer_key": "Correct process with a relevant controllable variable."
+          },
+          {
+            "type": "analysis",
+            "prompt": "Analyze an exemplar using specific visual evidence.",
+            "answer_key": "Evidence-based analysis using art vocabulary."
+          },
+          {
+            "type": "critique",
+            "prompt": "Identify one strength and one actionable revision in a hypothetical artwork.",
+            "answer_key": "Specific, constructive critique."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Describe how you would adapt the week's idea to a new artistic problem.",
+            "answer_key": "Feasible and thoughtful transfer."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 9,
+      "theme": "Mixed Media & Collage",
+      "weekly_goal": "Develop mastery of mixed media & collage through creating, presenting, responding, and connecting.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Material Selection",
+          "lesson_type": "Concept & Demonstration",
+          "objectives": [
+            "Develop advanced middle school skills in material selection.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Layering",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop advanced middle school skills in layering.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Juxtaposition",
+          "lesson_type": "Studio Practice",
+          "objectives": [
+            "Develop advanced middle school skills in juxtaposition.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Found Imagery",
+          "lesson_type": "Critique & Reflection",
+          "objectives": [
+            "Develop advanced middle school skills in found imagery.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Mixed-Media Composition",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop advanced middle school skills in mixed-media composition.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 9 Studio Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central artistic concept and why it matters.",
+            "answer_key": "Accurate concept plus meaningful application."
+          },
+          {
+            "type": "technique",
+            "prompt": "Describe the technique or process and one variable an artist can control.",
+            "answer_key": "Correct process with a relevant controllable variable."
+          },
+          {
+            "type": "analysis",
+            "prompt": "Analyze an exemplar using specific visual evidence.",
+            "answer_key": "Evidence-based analysis using art vocabulary."
+          },
+          {
+            "type": "critique",
+            "prompt": "Identify one strength and one actionable revision in a hypothetical artwork.",
+            "answer_key": "Specific, constructive critique."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Describe how you would adapt the week's idea to a new artistic problem.",
+            "answer_key": "Feasible and thoughtful transfer."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 10,
+      "theme": "Digital Art & Visual Communication",
+      "weekly_goal": "Develop mastery of digital art & visual communication through creating, presenting, responding, and connecting.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Digital Composition",
+          "lesson_type": "Concept & Demonstration",
+          "objectives": [
+            "Develop advanced middle school skills in digital composition.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Image Ethics and Attribution",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop advanced middle school skills in image ethics and attribution.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Typography",
+          "lesson_type": "Studio Practice",
+          "objectives": [
+            "Develop advanced middle school skills in typography.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Digital Color",
+          "lesson_type": "Critique & Reflection",
+          "objectives": [
+            "Develop advanced middle school skills in digital color.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Visual Communication Project",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop advanced middle school skills in visual communication project.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 10 Studio Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central artistic concept and why it matters.",
+            "answer_key": "Accurate concept plus meaningful application."
+          },
+          {
+            "type": "technique",
+            "prompt": "Describe the technique or process and one variable an artist can control.",
+            "answer_key": "Correct process with a relevant controllable variable."
+          },
+          {
+            "type": "analysis",
+            "prompt": "Analyze an exemplar using specific visual evidence.",
+            "answer_key": "Evidence-based analysis using art vocabulary."
+          },
+          {
+            "type": "critique",
+            "prompt": "Identify one strength and one actionable revision in a hypothetical artwork.",
+            "answer_key": "Specific, constructive critique."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Describe how you would adapt the week's idea to a new artistic problem.",
+            "answer_key": "Feasible and thoughtful transfer."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 11,
+      "theme": "Art, Identity & Meaning",
+      "weekly_goal": "Develop mastery of art, identity & meaning through creating, presenting, responding, and connecting.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Symbolism",
+          "lesson_type": "Concept & Demonstration",
+          "objectives": [
+            "Develop advanced middle school skills in symbolism.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Personal Narrative",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop advanced middle school skills in personal narrative.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Cultural Context",
+          "lesson_type": "Studio Practice",
+          "objectives": [
+            "Develop advanced middle school skills in cultural context.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Ethical Representation",
+          "lesson_type": "Critique & Reflection",
+          "objectives": [
+            "Develop advanced middle school skills in ethical representation.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Concept Development",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop advanced middle school skills in concept development.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 11 Studio Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central artistic concept and why it matters.",
+            "answer_key": "Accurate concept plus meaningful application."
+          },
+          {
+            "type": "technique",
+            "prompt": "Describe the technique or process and one variable an artist can control.",
+            "answer_key": "Correct process with a relevant controllable variable."
+          },
+          {
+            "type": "analysis",
+            "prompt": "Analyze an exemplar using specific visual evidence.",
+            "answer_key": "Evidence-based analysis using art vocabulary."
+          },
+          {
+            "type": "critique",
+            "prompt": "Identify one strength and one actionable revision in a hypothetical artwork.",
+            "answer_key": "Specific, constructive critique."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Describe how you would adapt the week's idea to a new artistic problem.",
+            "answer_key": "Feasible and thoughtful transfer."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 12,
+      "theme": "Critique, Revision & Portfolio",
+      "weekly_goal": "Develop mastery of critique, revision & portfolio through creating, presenting, responding, and connecting.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "How to Critique",
+          "lesson_type": "Concept & Demonstration",
+          "objectives": [
+            "Develop advanced middle school skills in how to critique.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Artist Statement",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop advanced middle school skills in artist statement.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Revision Strategies",
+          "lesson_type": "Studio Practice",
+          "objectives": [
+            "Develop advanced middle school skills in revision strategies.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Portfolio Selection",
+          "lesson_type": "Critique & Reflection",
+          "objectives": [
+            "Develop advanced middle school skills in portfolio selection.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Peer Review",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop advanced middle school skills in peer review.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 12 Studio Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central artistic concept and why it matters.",
+            "answer_key": "Accurate concept plus meaningful application."
+          },
+          {
+            "type": "technique",
+            "prompt": "Describe the technique or process and one variable an artist can control.",
+            "answer_key": "Correct process with a relevant controllable variable."
+          },
+          {
+            "type": "analysis",
+            "prompt": "Analyze an exemplar using specific visual evidence.",
+            "answer_key": "Evidence-based analysis using art vocabulary."
+          },
+          {
+            "type": "critique",
+            "prompt": "Identify one strength and one actionable revision in a hypothetical artwork.",
+            "answer_key": "Specific, constructive critique."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Describe how you would adapt the week's idea to a new artistic problem.",
+            "answer_key": "Feasible and thoughtful transfer."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 13,
+      "theme": "Independent Studio Capstone",
+      "weekly_goal": "Develop mastery of independent studio capstone through creating, presenting, responding, and connecting.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Question and Proposal",
+          "lesson_type": "Concept & Demonstration",
+          "objectives": [
+            "Develop advanced middle school skills in question and proposal.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Experimentation",
+          "lesson_type": "Technique Lab",
+          "objectives": [
+            "Develop advanced middle school skills in experimentation.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Production",
+          "lesson_type": "Studio Practice",
+          "objectives": [
+            "Develop advanced middle school skills in production.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Revision and Presentation",
+          "lesson_type": "Critique & Reflection",
+          "objectives": [
+            "Develop advanced middle school skills in revision and presentation.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Exhibition and Reflection",
+          "lesson_type": "Mastery + Transfer",
+          "objectives": [
+            "Develop advanced middle school skills in exhibition and reflection.",
+            "Apply artistic processes intentionally rather than by imitation.",
+            "Document choices, experimentation, feedback, revision, and reflection."
+          ],
+          "activities": [
+            "Study exemplars and identify artistic decisions.",
+            "Teacher demonstration and technique analysis.",
+            "Focused studio practice with experimentation.",
+            "Peer critique using criteria and evidence.",
+            "Revise, document, and reflect on artistic decisions."
+          ],
+          "assessment": "Process evidence, studio artifact, critique contribution, and reflection.",
+          "extension": "Independent variation, additional medium, or self-directed refinement.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 13 Studio Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central artistic concept and why it matters.",
+            "answer_key": "Accurate concept plus meaningful application."
+          },
+          {
+            "type": "technique",
+            "prompt": "Describe the technique or process and one variable an artist can control.",
+            "answer_key": "Correct process with a relevant controllable variable."
+          },
+          {
+            "type": "analysis",
+            "prompt": "Analyze an exemplar using specific visual evidence.",
+            "answer_key": "Evidence-based analysis using art vocabulary."
+          },
+          {
+            "type": "critique",
+            "prompt": "Identify one strength and one actionable revision in a hypothetical artwork.",
+            "answer_key": "Specific, constructive critique."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Describe how you would adapt the week's idea to a new artistic problem.",
+            "answer_key": "Feasible and thoughtful transfer."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    }
+  ],
+  "final_assessment": {
+    "title": "Middle School Advanced Art Final — Young Artist Portfolio Exhibition",
+    "points": 100,
+    "sections": [
+      {
+        "name": "Technique & Craft",
+        "points": 20
+      },
+      {
+        "name": "Creative Problem Solving",
+        "points": 20
+      },
+      {
+        "name": "Visual Communication",
+        "points": 15
+      },
+      {
+        "name": "Critique & Reflection",
+        "points": 15
+      },
+      {
+        "name": "Portfolio",
+        "points": 30
+      }
+    ],
+    "capstone": "Create a 5–8 work mini-portfolio demonstrating at least three media or approaches. Include process documentation, revisions, a short artist statement, and a curated presentation.",
+    "rubric": {
+      "craft": 20,
+      "originality_and_problem_solving": 20,
+      "composition_and_communication": 20,
+      "process_and_revision": 20,
+      "reflection_and_presentation": 20
+    }
+  }
+}

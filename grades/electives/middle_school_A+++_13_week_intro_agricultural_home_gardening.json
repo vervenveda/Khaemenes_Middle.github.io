@@ -1,0 +1,1892 @@
+{
+  "metadata": {
+    "title": "Middle School A+++ Introductory Agricultural Home Gardening — 13-Week Course",
+    "level": "Middle School",
+    "duration_weeks": 13,
+    "lessons_per_week": 5,
+    "total_lessons": 65,
+    "weekly_quizzes": 13,
+    "final_assessment": 1,
+    "designation": "A+++ Agricultural Home Gardening",
+    "research_basis": [
+      "USDA National Agricultural Library: Vegetable Gardening and home-garden planning resources",
+      "USDA Farm to School: School Gardens and garden-based education",
+      "USDA Team Nutrition: Dig In! standards-based garden and nutrition education",
+      "National Agricultural Literacy Outcomes: middle-school and high-school agricultural literacy benchmarks",
+      "NC State Extension Grow For It: youth gardening curriculum resources",
+      "National Core Arts/Science-style inquiry approach adapted to agricultural investigations"
+    ],
+    "design_principles": [
+      "hands-on inquiry",
+      "plant science",
+      "soil stewardship",
+      "water stewardship",
+      "garden planning",
+      "food systems",
+      "ecology",
+      "data literacy",
+      "nutrition connections",
+      "sustainability",
+      "agricultural literacy",
+      "reflection"
+    ]
+  },
+  "course_goals": [
+    "Understand gardening as a living system connecting plants, soil, water, weather, insects, people, and food.",
+    "Build foundational skills in observation, garden planning, seed starting, soil care, watering, crop selection, harvesting, and stewardship.",
+    "Use garden journals and simple data to make evidence-based decisions.",
+    "Develop respect for food systems, biodiversity, natural resources, and safe garden practices.",
+    "Create a realistic small-scale home or school garden plan."
+  ],
+  "weekly_cycle": [
+    "Garden Foundations",
+    "Science & Field Lab",
+    "Planning & Practice",
+    "Applied Garden Work",
+    "Reflection & Mastery"
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "theme": "Garden Ecology & The Gardener's Journal",
+      "weekly_goal": "Master garden ecology & the gardener's journal through observation, inquiry, planning, hands-on practice, and reflection.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "What Is Agriculture and Horticulture?",
+          "lesson_type": "Garden Foundations",
+          "objectives": [
+            "Develop middle school understanding of what is agriculture and horticulture?.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Garden Observation",
+          "lesson_type": "Science & Field Lab",
+          "objectives": [
+            "Develop middle school understanding of garden observation.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Garden Journal Setup",
+          "lesson_type": "Planning & Practice",
+          "objectives": [
+            "Develop middle school understanding of garden journal setup.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Living and Nonliving Factors",
+          "lesson_type": "Applied Garden Work",
+          "objectives": [
+            "Develop middle school understanding of living and nonliving factors.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Garden Ecosystem Map",
+          "lesson_type": "Reflection & Mastery",
+          "objectives": [
+            "Develop middle school understanding of garden ecosystem map.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 1 Agricultural Home Gardening Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central gardening/agriculture concept from the week.",
+            "answer_key": "Accurate explanation with a practical example."
+          },
+          {
+            "type": "science",
+            "prompt": "Explain one plant, soil, water, weather, or ecosystem relationship involved.",
+            "answer_key": "Correct relationship supported by evidence or a model."
+          },
+          {
+            "type": "planning",
+            "prompt": "Make or evaluate a garden decision using the week's knowledge.",
+            "answer_key": "Decision is feasible and justified."
+          },
+          {
+            "type": "data",
+            "prompt": "Interpret a simple garden record, measurement, or observation.",
+            "answer_key": "Correct interpretation and conclusion."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Apply the week's idea to a different garden or growing situation.",
+            "answer_key": "Valid transfer with reasoning."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 2,
+      "theme": "Seeds, Germination & Plant Life Cycles",
+      "weekly_goal": "Master seeds, germination & plant life cycles through observation, inquiry, planning, hands-on practice, and reflection.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Seed Anatomy",
+          "lesson_type": "Garden Foundations",
+          "objectives": [
+            "Develop middle school understanding of seed anatomy.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Germination Conditions",
+          "lesson_type": "Science & Field Lab",
+          "objectives": [
+            "Develop middle school understanding of germination conditions.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Plant Life Cycles",
+          "lesson_type": "Planning & Practice",
+          "objectives": [
+            "Develop middle school understanding of plant life cycles.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Seed Starting Plan",
+          "lesson_type": "Applied Garden Work",
+          "objectives": [
+            "Develop middle school understanding of seed starting plan.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Germination Investigation",
+          "lesson_type": "Reflection & Mastery",
+          "objectives": [
+            "Develop middle school understanding of germination investigation.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 2 Agricultural Home Gardening Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central gardening/agriculture concept from the week.",
+            "answer_key": "Accurate explanation with a practical example."
+          },
+          {
+            "type": "science",
+            "prompt": "Explain one plant, soil, water, weather, or ecosystem relationship involved.",
+            "answer_key": "Correct relationship supported by evidence or a model."
+          },
+          {
+            "type": "planning",
+            "prompt": "Make or evaluate a garden decision using the week's knowledge.",
+            "answer_key": "Decision is feasible and justified."
+          },
+          {
+            "type": "data",
+            "prompt": "Interpret a simple garden record, measurement, or observation.",
+            "answer_key": "Correct interpretation and conclusion."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Apply the week's idea to a different garden or growing situation.",
+            "answer_key": "Valid transfer with reasoning."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 3,
+      "theme": "Soil as a Living System",
+      "weekly_goal": "Master soil as a living system through observation, inquiry, planning, hands-on practice, and reflection.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Soil Texture",
+          "lesson_type": "Garden Foundations",
+          "objectives": [
+            "Develop middle school understanding of soil texture.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Organic Matter",
+          "lesson_type": "Science & Field Lab",
+          "objectives": [
+            "Develop middle school understanding of organic matter.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Soil Organisms",
+          "lesson_type": "Planning & Practice",
+          "objectives": [
+            "Develop middle school understanding of soil organisms.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Drainage and Structure",
+          "lesson_type": "Applied Garden Work",
+          "objectives": [
+            "Develop middle school understanding of drainage and structure.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Soil Observation Lab",
+          "lesson_type": "Reflection & Mastery",
+          "objectives": [
+            "Develop middle school understanding of soil observation lab.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 3 Agricultural Home Gardening Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central gardening/agriculture concept from the week.",
+            "answer_key": "Accurate explanation with a practical example."
+          },
+          {
+            "type": "science",
+            "prompt": "Explain one plant, soil, water, weather, or ecosystem relationship involved.",
+            "answer_key": "Correct relationship supported by evidence or a model."
+          },
+          {
+            "type": "planning",
+            "prompt": "Make or evaluate a garden decision using the week's knowledge.",
+            "answer_key": "Decision is feasible and justified."
+          },
+          {
+            "type": "data",
+            "prompt": "Interpret a simple garden record, measurement, or observation.",
+            "answer_key": "Correct interpretation and conclusion."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Apply the week's idea to a different garden or growing situation.",
+            "answer_key": "Valid transfer with reasoning."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 4,
+      "theme": "Water, Weather & Plant Needs",
+      "weekly_goal": "Master water, weather & plant needs through observation, inquiry, planning, hands-on practice, and reflection.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Plant Water Needs",
+          "lesson_type": "Garden Foundations",
+          "objectives": [
+            "Develop middle school understanding of plant water needs.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Weather Records",
+          "lesson_type": "Science & Field Lab",
+          "objectives": [
+            "Develop middle school understanding of weather records.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Evaporation and Transpiration",
+          "lesson_type": "Planning & Practice",
+          "objectives": [
+            "Develop middle school understanding of evaporation and transpiration.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Efficient Watering Concepts",
+          "lesson_type": "Applied Garden Work",
+          "objectives": [
+            "Develop middle school understanding of efficient watering concepts.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Water Stewardship Plan",
+          "lesson_type": "Reflection & Mastery",
+          "objectives": [
+            "Develop middle school understanding of water stewardship plan.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 4 Agricultural Home Gardening Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central gardening/agriculture concept from the week.",
+            "answer_key": "Accurate explanation with a practical example."
+          },
+          {
+            "type": "science",
+            "prompt": "Explain one plant, soil, water, weather, or ecosystem relationship involved.",
+            "answer_key": "Correct relationship supported by evidence or a model."
+          },
+          {
+            "type": "planning",
+            "prompt": "Make or evaluate a garden decision using the week's knowledge.",
+            "answer_key": "Decision is feasible and justified."
+          },
+          {
+            "type": "data",
+            "prompt": "Interpret a simple garden record, measurement, or observation.",
+            "answer_key": "Correct interpretation and conclusion."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Apply the week's idea to a different garden or growing situation.",
+            "answer_key": "Valid transfer with reasoning."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 5,
+      "theme": "Sunlight, Photosynthesis & Plant Growth",
+      "weekly_goal": "Master sunlight, photosynthesis & plant growth through observation, inquiry, planning, hands-on practice, and reflection.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Sunlight",
+          "lesson_type": "Garden Foundations",
+          "objectives": [
+            "Develop middle school understanding of sunlight.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Photosynthesis Foundations",
+          "lesson_type": "Science & Field Lab",
+          "objectives": [
+            "Develop middle school understanding of photosynthesis foundations.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Growth Variables",
+          "lesson_type": "Planning & Practice",
+          "objectives": [
+            "Develop middle school understanding of growth variables.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Microclimates",
+          "lesson_type": "Applied Garden Work",
+          "objectives": [
+            "Develop middle school understanding of microclimates.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Light-and-Growth Investigation",
+          "lesson_type": "Reflection & Mastery",
+          "objectives": [
+            "Develop middle school understanding of light-and-growth investigation.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 5 Agricultural Home Gardening Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central gardening/agriculture concept from the week.",
+            "answer_key": "Accurate explanation with a practical example."
+          },
+          {
+            "type": "science",
+            "prompt": "Explain one plant, soil, water, weather, or ecosystem relationship involved.",
+            "answer_key": "Correct relationship supported by evidence or a model."
+          },
+          {
+            "type": "planning",
+            "prompt": "Make or evaluate a garden decision using the week's knowledge.",
+            "answer_key": "Decision is feasible and justified."
+          },
+          {
+            "type": "data",
+            "prompt": "Interpret a simple garden record, measurement, or observation.",
+            "answer_key": "Correct interpretation and conclusion."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Apply the week's idea to a different garden or growing situation.",
+            "answer_key": "Valid transfer with reasoning."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 6,
+      "theme": "Garden Planning & Seasonal Crops",
+      "weekly_goal": "Master garden planning & seasonal crops through observation, inquiry, planning, hands-on practice, and reflection.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Garden Goals",
+          "lesson_type": "Garden Foundations",
+          "objectives": [
+            "Develop middle school understanding of garden goals.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Crop Selection",
+          "lesson_type": "Science & Field Lab",
+          "objectives": [
+            "Develop middle school understanding of crop selection.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Spacing and Layout",
+          "lesson_type": "Planning & Practice",
+          "objectives": [
+            "Develop middle school understanding of spacing and layout.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Succession Concepts",
+          "lesson_type": "Applied Garden Work",
+          "objectives": [
+            "Develop middle school understanding of succession concepts.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Garden Map",
+          "lesson_type": "Reflection & Mastery",
+          "objectives": [
+            "Develop middle school understanding of garden map.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 6 Agricultural Home Gardening Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central gardening/agriculture concept from the week.",
+            "answer_key": "Accurate explanation with a practical example."
+          },
+          {
+            "type": "science",
+            "prompt": "Explain one plant, soil, water, weather, or ecosystem relationship involved.",
+            "answer_key": "Correct relationship supported by evidence or a model."
+          },
+          {
+            "type": "planning",
+            "prompt": "Make or evaluate a garden decision using the week's knowledge.",
+            "answer_key": "Decision is feasible and justified."
+          },
+          {
+            "type": "data",
+            "prompt": "Interpret a simple garden record, measurement, or observation.",
+            "answer_key": "Correct interpretation and conclusion."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Apply the week's idea to a different garden or growing situation.",
+            "answer_key": "Valid transfer with reasoning."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 7,
+      "theme": "Plant Nutrition & Compost",
+      "weekly_goal": "Master plant nutrition & compost through observation, inquiry, planning, hands-on practice, and reflection.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Plant Nutrients",
+          "lesson_type": "Garden Foundations",
+          "objectives": [
+            "Develop middle school understanding of plant nutrients.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Organic Matter",
+          "lesson_type": "Science & Field Lab",
+          "objectives": [
+            "Develop middle school understanding of organic matter.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Compost Systems",
+          "lesson_type": "Planning & Practice",
+          "objectives": [
+            "Develop middle school understanding of compost systems.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Nutrient Cycling",
+          "lesson_type": "Applied Garden Work",
+          "objectives": [
+            "Develop middle school understanding of nutrient cycling.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Compost Investigation",
+          "lesson_type": "Reflection & Mastery",
+          "objectives": [
+            "Develop middle school understanding of compost investigation.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 7 Agricultural Home Gardening Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central gardening/agriculture concept from the week.",
+            "answer_key": "Accurate explanation with a practical example."
+          },
+          {
+            "type": "science",
+            "prompt": "Explain one plant, soil, water, weather, or ecosystem relationship involved.",
+            "answer_key": "Correct relationship supported by evidence or a model."
+          },
+          {
+            "type": "planning",
+            "prompt": "Make or evaluate a garden decision using the week's knowledge.",
+            "answer_key": "Decision is feasible and justified."
+          },
+          {
+            "type": "data",
+            "prompt": "Interpret a simple garden record, measurement, or observation.",
+            "answer_key": "Correct interpretation and conclusion."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Apply the week's idea to a different garden or growing situation.",
+            "answer_key": "Valid transfer with reasoning."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 8,
+      "theme": "Beneficial Insects, Pollinators & Biodiversity",
+      "weekly_goal": "Master beneficial insects, pollinators & biodiversity through observation, inquiry, planning, hands-on practice, and reflection.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Pollinators",
+          "lesson_type": "Garden Foundations",
+          "objectives": [
+            "Develop middle school understanding of pollinators.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Beneficial Insects",
+          "lesson_type": "Science & Field Lab",
+          "objectives": [
+            "Develop middle school understanding of beneficial insects.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Food Webs",
+          "lesson_type": "Planning & Practice",
+          "objectives": [
+            "Develop middle school understanding of food webs.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Habitat Features",
+          "lesson_type": "Applied Garden Work",
+          "objectives": [
+            "Develop middle school understanding of habitat features.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Biodiversity Garden Plan",
+          "lesson_type": "Reflection & Mastery",
+          "objectives": [
+            "Develop middle school understanding of biodiversity garden plan.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 8 Agricultural Home Gardening Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central gardening/agriculture concept from the week.",
+            "answer_key": "Accurate explanation with a practical example."
+          },
+          {
+            "type": "science",
+            "prompt": "Explain one plant, soil, water, weather, or ecosystem relationship involved.",
+            "answer_key": "Correct relationship supported by evidence or a model."
+          },
+          {
+            "type": "planning",
+            "prompt": "Make or evaluate a garden decision using the week's knowledge.",
+            "answer_key": "Decision is feasible and justified."
+          },
+          {
+            "type": "data",
+            "prompt": "Interpret a simple garden record, measurement, or observation.",
+            "answer_key": "Correct interpretation and conclusion."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Apply the week's idea to a different garden or growing situation.",
+            "answer_key": "Valid transfer with reasoning."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 9,
+      "theme": "Plant Health & Integrated Pest Management",
+      "weekly_goal": "Master plant health & integrated pest management through observation, inquiry, planning, hands-on practice, and reflection.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Signs of Plant Stress",
+          "lesson_type": "Garden Foundations",
+          "objectives": [
+            "Develop middle school understanding of signs of plant stress.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Pest Identification",
+          "lesson_type": "Science & Field Lab",
+          "objectives": [
+            "Develop middle school understanding of pest identification.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Cultural Controls",
+          "lesson_type": "Planning & Practice",
+          "objectives": [
+            "Develop middle school understanding of cultural controls.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Biological Controls",
+          "lesson_type": "Applied Garden Work",
+          "objectives": [
+            "Develop middle school understanding of biological controls.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "IPM Decision Case",
+          "lesson_type": "Reflection & Mastery",
+          "objectives": [
+            "Develop middle school understanding of ipm decision case.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 9 Agricultural Home Gardening Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central gardening/agriculture concept from the week.",
+            "answer_key": "Accurate explanation with a practical example."
+          },
+          {
+            "type": "science",
+            "prompt": "Explain one plant, soil, water, weather, or ecosystem relationship involved.",
+            "answer_key": "Correct relationship supported by evidence or a model."
+          },
+          {
+            "type": "planning",
+            "prompt": "Make or evaluate a garden decision using the week's knowledge.",
+            "answer_key": "Decision is feasible and justified."
+          },
+          {
+            "type": "data",
+            "prompt": "Interpret a simple garden record, measurement, or observation.",
+            "answer_key": "Correct interpretation and conclusion."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Apply the week's idea to a different garden or growing situation.",
+            "answer_key": "Valid transfer with reasoning."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 10,
+      "theme": "Propagation & Garden Experimentation",
+      "weekly_goal": "Master propagation & garden experimentation through observation, inquiry, planning, hands-on practice, and reflection.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Cuttings and Propagation Concepts",
+          "lesson_type": "Garden Foundations",
+          "objectives": [
+            "Develop middle school understanding of cuttings and propagation concepts.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Vegetative Reproduction",
+          "lesson_type": "Science & Field Lab",
+          "objectives": [
+            "Develop middle school understanding of vegetative reproduction.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Controlled Variables",
+          "lesson_type": "Planning & Practice",
+          "objectives": [
+            "Develop middle school understanding of controlled variables.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Garden Experiment Design",
+          "lesson_type": "Applied Garden Work",
+          "objectives": [
+            "Develop middle school understanding of garden experiment design.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Results and Revision",
+          "lesson_type": "Reflection & Mastery",
+          "objectives": [
+            "Develop middle school understanding of results and revision.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 10 Agricultural Home Gardening Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central gardening/agriculture concept from the week.",
+            "answer_key": "Accurate explanation with a practical example."
+          },
+          {
+            "type": "science",
+            "prompt": "Explain one plant, soil, water, weather, or ecosystem relationship involved.",
+            "answer_key": "Correct relationship supported by evidence or a model."
+          },
+          {
+            "type": "planning",
+            "prompt": "Make or evaluate a garden decision using the week's knowledge.",
+            "answer_key": "Decision is feasible and justified."
+          },
+          {
+            "type": "data",
+            "prompt": "Interpret a simple garden record, measurement, or observation.",
+            "answer_key": "Correct interpretation and conclusion."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Apply the week's idea to a different garden or growing situation.",
+            "answer_key": "Valid transfer with reasoning."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 11,
+      "theme": "Harvest, Food Safety & Farm-to-Table",
+      "weekly_goal": "Master harvest, food safety & farm-to-table through observation, inquiry, planning, hands-on practice, and reflection.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Harvest Timing",
+          "lesson_type": "Garden Foundations",
+          "objectives": [
+            "Develop middle school understanding of harvest timing.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Clean Handling",
+          "lesson_type": "Science & Field Lab",
+          "objectives": [
+            "Develop middle school understanding of clean handling.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Garden-to-Kitchen Pathway",
+          "lesson_type": "Planning & Practice",
+          "objectives": [
+            "Develop middle school understanding of garden-to-kitchen pathway.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Nutrition Connections",
+          "lesson_type": "Applied Garden Work",
+          "objectives": [
+            "Develop middle school understanding of nutrition connections.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Harvest Plan",
+          "lesson_type": "Reflection & Mastery",
+          "objectives": [
+            "Develop middle school understanding of harvest plan.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 11 Agricultural Home Gardening Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central gardening/agriculture concept from the week.",
+            "answer_key": "Accurate explanation with a practical example."
+          },
+          {
+            "type": "science",
+            "prompt": "Explain one plant, soil, water, weather, or ecosystem relationship involved.",
+            "answer_key": "Correct relationship supported by evidence or a model."
+          },
+          {
+            "type": "planning",
+            "prompt": "Make or evaluate a garden decision using the week's knowledge.",
+            "answer_key": "Decision is feasible and justified."
+          },
+          {
+            "type": "data",
+            "prompt": "Interpret a simple garden record, measurement, or observation.",
+            "answer_key": "Correct interpretation and conclusion."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Apply the week's idea to a different garden or growing situation.",
+            "answer_key": "Valid transfer with reasoning."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 12,
+      "theme": "Sustainable Home Gardening",
+      "weekly_goal": "Master sustainable home gardening through observation, inquiry, planning, hands-on practice, and reflection.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Resource Conservation",
+          "lesson_type": "Garden Foundations",
+          "objectives": [
+            "Develop middle school understanding of resource conservation.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Soil Stewardship",
+          "lesson_type": "Science & Field Lab",
+          "objectives": [
+            "Develop middle school understanding of soil stewardship.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Water Stewardship",
+          "lesson_type": "Planning & Practice",
+          "objectives": [
+            "Develop middle school understanding of water stewardship.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Waste Reduction",
+          "lesson_type": "Applied Garden Work",
+          "objectives": [
+            "Develop middle school understanding of waste reduction.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Sustainable Garden Audit",
+          "lesson_type": "Reflection & Mastery",
+          "objectives": [
+            "Develop middle school understanding of sustainable garden audit.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 12 Agricultural Home Gardening Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central gardening/agriculture concept from the week.",
+            "answer_key": "Accurate explanation with a practical example."
+          },
+          {
+            "type": "science",
+            "prompt": "Explain one plant, soil, water, weather, or ecosystem relationship involved.",
+            "answer_key": "Correct relationship supported by evidence or a model."
+          },
+          {
+            "type": "planning",
+            "prompt": "Make or evaluate a garden decision using the week's knowledge.",
+            "answer_key": "Decision is feasible and justified."
+          },
+          {
+            "type": "data",
+            "prompt": "Interpret a simple garden record, measurement, or observation.",
+            "answer_key": "Correct interpretation and conclusion."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Apply the week's idea to a different garden or growing situation.",
+            "answer_key": "Valid transfer with reasoning."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    },
+    {
+      "week": 13,
+      "theme": "Middle School Garden Capstone",
+      "weekly_goal": "Master middle school garden capstone through observation, inquiry, planning, hands-on practice, and reflection.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Garden Question",
+          "lesson_type": "Garden Foundations",
+          "objectives": [
+            "Develop middle school understanding of garden question.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 2,
+          "title": "Site/Crop Plan",
+          "lesson_type": "Science & Field Lab",
+          "objectives": [
+            "Develop middle school understanding of site/crop plan.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 3,
+          "title": "Data Collection",
+          "lesson_type": "Planning & Practice",
+          "objectives": [
+            "Develop middle school understanding of data collection.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 4,
+          "title": "Evaluate and Improve",
+          "lesson_type": "Applied Garden Work",
+          "objectives": [
+            "Develop middle school understanding of evaluate and improve.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        },
+        {
+          "day": 5,
+          "title": "Final Garden Portfolio",
+          "lesson_type": "Reflection & Mastery",
+          "objectives": [
+            "Develop middle school understanding of final garden portfolio.",
+            "Use observation, measurement, records, and evidence to make gardening decisions.",
+            "Connect plant production with soil, water, ecology, nutrition, stewardship, and community."
+          ],
+          "activities": [
+            "Observe and record a garden phenomenon.",
+            "Learn the relevant science/agriculture concept.",
+            "Conduct a safe, age-appropriate garden investigation or planning exercise.",
+            "Analyze results and make a supported decision.",
+            "Update the garden journal and identify the next action."
+          ],
+          "assessment": "Garden journal, observation record, diagram, calculation, plan, or short explanation.",
+          "safety_note": "Use age-appropriate tools and materials with adult supervision; follow local food-safety guidance and product labels. Do not handle pesticides, powered equipment, or other hazardous materials independently.",
+          "rigor": "A+++"
+        }
+      ],
+      "weekly_quiz": {
+        "title": "Week 13 Agricultural Home Gardening Mastery Quiz",
+        "points": 20,
+        "questions": [
+          {
+            "type": "concept",
+            "prompt": "Explain the central gardening/agriculture concept from the week.",
+            "answer_key": "Accurate explanation with a practical example."
+          },
+          {
+            "type": "science",
+            "prompt": "Explain one plant, soil, water, weather, or ecosystem relationship involved.",
+            "answer_key": "Correct relationship supported by evidence or a model."
+          },
+          {
+            "type": "planning",
+            "prompt": "Make or evaluate a garden decision using the week's knowledge.",
+            "answer_key": "Decision is feasible and justified."
+          },
+          {
+            "type": "data",
+            "prompt": "Interpret a simple garden record, measurement, or observation.",
+            "answer_key": "Correct interpretation and conclusion."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Apply the week's idea to a different garden or growing situation.",
+            "answer_key": "Valid transfer with reasoning."
+          }
+        ],
+        "mastery_target": "80%+"
+      }
+    }
+  ],
+  "final_assessment": {
+    "title": "Middle School Agricultural Home Gardening Final — Garden Stewardship Portfolio",
+    "points": 100,
+    "sections": [
+      {
+        "name": "Plant & Soil Science",
+        "points": 20
+      },
+      {
+        "name": "Garden Planning",
+        "points": 20
+      },
+      {
+        "name": "Hands-On Investigation",
+        "points": 20
+      },
+      {
+        "name": "Stewardship & Ecology",
+        "points": 15
+      },
+      {
+        "name": "Garden Portfolio",
+        "points": 25
+      }
+    ],
+    "capstone": "Design and document a small home or school garden plan. Include a site sketch, crop choices, seasonal calendar, soil/water considerations, biodiversity strategy, observation data, budget estimate, and reflection.",
+    "rubric": {
+      "science": 20,
+      "planning": 20,
+      "investigation": 20,
+      "stewardship": 15,
+      "portfolio": 15,
+      "reflection": 10
+    }
+  }
+}
