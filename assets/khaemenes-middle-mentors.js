@@ -4,8 +4,9 @@
   const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const context=()=>{
     const p=location.pathname.toLowerCase();
+    if(p.includes("arts-music")) return "arts-music";
     if(p.includes("language-arts")) return "language-arts";
-    if(p.includes("art")) return "visual-art";
+    if(p.includes("visual-art")||p.includes("/art/")) return "visual-art";
     if(p.includes("music")) return "music";
     if(p.includes("history")||p.includes("social")) return "history";
     if(p.includes("research")) return "research";
@@ -28,12 +29,15 @@
     @media(max-width:720px){.khae-mentor-grid{grid-template-columns:1fr}}
     `;document.head.appendChild(s);
   }
-  function specialist(contract,ctx){return contract.specialists.find(x=>(x.contexts||[]).includes(ctx))||null}
+  function specialists(contract,ctx){
+    if(ctx==="arts-music") return contract.specialists.filter(x=>(x.contexts||[]).includes("visual-art")||(x.contexts||[]).includes("music"));
+    return contract.specialists.filter(x=>(x.contexts||[]).includes(ctx));
+  }
   function render(contract){
     if(document.getElementById("khaeMentors"))return;
     style();
     const host=document.createElement("section");host.id="khaeMentors";host.className="khae-mentor-section no-print";
-    const s=specialist(contract,context());
+    const ss=specialists(contract,context());
     host.innerHTML=`<div class="khae-mentor-shell">
       <p style="margin:0;color:#b48b45;letter-spacing:.14em;text-transform:uppercase;font-size:11px;font-weight:700">Middle School Mentor Team</p>
       <h2 style="margin:8px 0 0;color:#15251f;font-family:Georgia,serif;font-size:clamp(32px,4vw,48px)">Support without taking over.</h2>
@@ -42,14 +46,14 @@
         <article class="khae-mentor-card"><h3>Archaemenes</h3><p><strong>Educational Mentor</strong></p><p>Study strategy, lesson support, mastery reflection, planning, and high-school readiness.</p><div class="khae-mentor-actions"><button class="khae-mentor-button" data-mentor="archaemenes">Ask for academic guidance</button></div></article>
         <article class="khae-mentor-card"><h3>Hope</h3><p><strong>School Counselor & Student Support</strong></p><p>School stress, belonging, friendship concerns, family circumstances affecting school, transitions, encouragement, and support navigation.</p><div class="khae-mentor-actions"><button class="khae-mentor-button" data-mentor="hope">Open student support</button></div></article>
       </div>
-      ${s?`<div class="khae-mentor-panel"><strong>Contextual specialist:</strong> ${esc(s.name)} · ${esc(s.role)}. This specialist is suggested because of the current subject context.</div>`:""}
+      ${ss.length?`<div class="khae-mentor-panel"><strong>Contextual specialist${ss.length>1?"s":""}:</strong> ${ss.map(s=>`${esc(s.name)} · ${esc(s.role)}`).join(" &nbsp;|&nbsp; ")}. ${ss.length>1?"These specialists are":"This specialist is"} suggested because of the current subject context.</div>`:""}
       <div id="khaeMentorResponse" class="khae-mentor-panel" hidden></div>
       <p class="khae-mentor-note">Mentors do not change grades, placement, discipline, certificates, or protected records. Mastery comes from recorded course evidence.</p>
     </div>`;
     const main=document.querySelector("main");
     if(main) main.insertBefore(host,main.firstChild); else document.body.appendChild(host);
     host.querySelectorAll("[data-mentor]").forEach(btn=>btn.addEventListener("click",()=>{
-      const box=host.querySelector("#khaeMentorResponse"),id=btn.dataset.mentor,m=contract.primary.find(x=>x.id===id);
+      const box=host.querySelector("#khaeMentorResponse"),id=btn.dataset.mentor;
       box.hidden=false;
       box.innerHTML=id==="archaemenes"?`<strong>Archaemenes:</strong> Start with the course evidence. What lesson, skill, or assignment are you working on, and what part is unclear? I can help organize the next academic step without changing your grade or record.`:`<strong>Hope:</strong> You can start with one sentence about what is making school harder today. I can help you organize the concern, find a manageable next step, or point toward another appropriate support doorway. This page does not create a counseling record.`;
       box.scrollIntoView({behavior:"smooth",block:"nearest"});
