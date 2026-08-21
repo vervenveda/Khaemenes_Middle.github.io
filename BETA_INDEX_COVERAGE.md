@@ -3,7 +3,7 @@
 Generated automatically by `.github/workflows/beta-index-coverage.yml`.
 
 - Added in this run: **0**
-- Already covered: **37**
+- Already covered: **38**
 - Skipped for an explicit reason: **0**
 
 ## Coverage rule
