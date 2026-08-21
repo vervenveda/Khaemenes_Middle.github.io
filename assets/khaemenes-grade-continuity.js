@@ -1,7 +1,7 @@
 (function attachKhaemenesGradeContinuity(global){
   "use strict";
 
-  const VERSION="1.2.0";
+  const VERSION="1.3.0";
   const cfg=global.KHAEMENES_GRADE_CONTEXT||{};
   const EXPECTED_GRADE=String(cfg.grade||"").padStart(2,"0");
   const EXPECTED_STAGE=cfg.stage||"middle";
@@ -22,6 +22,16 @@
     script.src="https://vervenveda.com/assets/vnv-beta-link.js";
     script.defer=true;
     script.dataset.vnvBetaLink="middle";
+    global.document.head.appendChild(script);
+  }
+
+  function ensureBreakaway(){
+    if(!global.document)return;
+    if(global.document.querySelector('script[data-khaemenes-breakaway],script[src="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-middle-breakaway.js"]'))return;
+    const script=global.document.createElement("script");
+    script.src="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-middle-breakaway.js";
+    script.defer=true;
+    script.dataset.khaemenesBreakaway="middle";
     global.document.head.appendChild(script);
   }
 
@@ -91,6 +101,7 @@
 
   function activate(){
     ensureBetaProgramLink();
+    ensureBreakaway();
     const s=status();
     if(s.status==="ready"){
       const legacy=readJSON(LEGACY_KEY,null),k=scopedKey();
@@ -102,6 +113,7 @@
     return s;
   }
 
-  global.KhaemenesGradeContinuity=Object.freeze({version:VERSION,expectedGrade:EXPECTED_GRADE,expectedStage:EXPECTED_STAGE,courseId:COURSE_ID,status,scopedKey,readState,writeState,clearState,activate,ensureBetaProgramLink});
-  if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",ensureBetaProgramLink,{once:true});else ensureBetaProgramLink();
+  global.KhaemenesGradeContinuity=Object.freeze({version:VERSION,expectedGrade:EXPECTED_GRADE,expectedStage:EXPECTED_STAGE,courseId:COURSE_ID,status,scopedKey,readState,writeState,clearState,activate,ensureBetaProgramLink,ensureBreakaway});
+  const boot=()=>{ensureBetaProgramLink();ensureBreakaway();};
+  if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",boot,{once:true});else boot();
 })(window);
