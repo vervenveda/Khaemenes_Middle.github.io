@@ -3,7 +3,7 @@
   const KEY="khaemenes_grade7_middle_school_36_aplusplus_v1";
   let state={};try{state=JSON.parse(localStorage.getItem(KEY))||{};}catch{}
   const vals=Object.values(state.weekly||{}).map(Number).filter(Boolean);
-  const avg=vals.length?Math.round(vals.reduce((a,b)=>a+b,0)/v.length):0;
+  const avg=vals.length?Math.round(vals.reduce((a,b)=>a+b,0)/vals.length):0;
   const done=Object.values(state.weekly||{}).filter(v=>Number(v)>=80).length;
   const ok=done===36 && vals.length===36 && avg>=80 && Number(state.midterm||0)>=80 && Number(state.final||0)>=80 && !!state.portfolio;
   const name=String(state.student||"Seventh Grade Scholar").replace(/[<>&]/g,"");
