@@ -1,0 +1,636 @@
+{
+  "metadata": {
+    "title": "Grade 6 National High-Rigor Core Curriculum — 3-Week Integrated Unit",
+    "version": "1.0",
+    "created": "2026-08-21",
+    "grade": 6,
+    "duration_weeks": 3,
+    "lessons_per_week": 5,
+    "total_lessons": 15,
+    "assessment_structure": {
+      "weekly_quizzes": 3,
+      "final_test": 1
+    },
+    "design_note": "The United States does not have one federally mandated national sixth-grade curriculum. This plan is a high-rigor synthesis of influential nationwide frameworks and standards, emphasizing conceptual understanding, evidence, inquiry, problem solving, communication, creativity, and transfer.",
+    "national_frameworks": [
+      {
+        "name": "Common Core State Standards — Mathematics",
+        "focus": "Ratios and proportional relationships; rational numbers; expressions and equations; geometry; statistics and mathematical practices.",
+        "source": "https://corestandards.org/mathematics-standards/"
+      },
+      {
+        "name": "Common Core State Standards — ELA/Literacy",
+        "focus": "Evidence-based reading, writing, speaking/listening, vocabulary, argumentation, and literacy across disciplines.",
+        "source": "https://corestandards.org/english-language-arts-standards/"
+      },
+      {
+        "name": "Next Generation Science Standards",
+        "focus": "Three-dimensional science learning through practices, disciplinary core ideas, and crosscutting concepts.",
+        "source": "https://www.nextgenscience.org/"
+      },
+      {
+        "name": "C3 Framework for Social Studies",
+        "focus": "Inquiry, disciplinary concepts, evaluating sources/evidence, communicating conclusions, and informed action.",
+        "source": "https://www.socialstudies.org/c3"
+      },
+      {
+        "name": "National Core Arts Standards",
+        "focus": "Creating, presenting/performing/producing, responding, and connecting.",
+        "source": "https://www.nationalartsstandards.org/"
+      },
+      {
+        "name": "SHAPE America National Physical Education Standards",
+        "focus": "Motor competence, physical literacy, fitness, responsible behavior, and valuing physical activity.",
+        "source": "https://www.shapeamerica.org/standards/pe/"
+      }
+    ],
+    "unit_theme": "Systems, Evidence, and Human Impact",
+    "essential_question": "How can we use evidence, mathematics, science, history, and creative communication to understand systems and make responsible decisions?"
+  },
+  "learning_goals": [
+    "Use ratios, rates, percentages, rational numbers, expressions, equations, geometry, and data to solve authentic problems.",
+    "Read complex informational and literary texts closely and support interpretations and claims with relevant evidence.",
+    "Explain scientific systems using models, data, cause-and-effect reasoning, and evidence.",
+    "Ask historical and civic questions, evaluate sources, distinguish evidence from claims, and communicate defensible conclusions.",
+    "Create, revise, present, and critique original artistic work.",
+    "Integrate knowledge across disciplines in a final evidence-based project."
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "title": "Systems, Ratios, and Evidence",
+      "weekly_objective": "Build a rigorous foundation in quantitative reasoning, close reading, scientific modeling, and source evaluation.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Thinking in Systems",
+          "subjects": [
+            "ELA",
+            "Science",
+            "Social Studies"
+          ],
+          "objectives": [
+            "Define a system and identify interacting parts.",
+            "Read an informational text and identify central ideas and supporting evidence.",
+            "Develop a question that can guide an investigation."
+          ],
+          "activities": [
+            "Analyze a school, ecosystem, or community system.",
+            "Read a short informational passage and annotate claims, evidence, and key vocabulary.",
+            "Create a systems map showing components and relationships.",
+            "Write one investigable essential question."
+          ],
+          "assessment": "Exit response: explain one system relationship and cite two pieces of evidence.",
+          "extension": "Compare two systems and identify a shared pattern."
+        },
+        {
+          "day": 2,
+          "title": "Ratios and Rates in the Real World",
+          "subjects": [
+            "Mathematics",
+            "ELA"
+          ],
+          "objectives": [
+            "Represent equivalent ratios.",
+            "Calculate and interpret unit rates.",
+            "Explain quantitative reasoning in complete written sentences."
+          ],
+          "activities": [
+            "Solve real-world scale, recipe, speed, and population-rate problems.",
+            "Represent ratios with tables, diagrams, and equations.",
+            "Write a short explanation defending one solution method."
+          ],
+          "assessment": "Four-problem application set with one written justification.",
+          "extension": "Create an original ratio problem with a verified solution."
+        },
+        {
+          "day": 3,
+          "title": "Matter, Atoms, and Evidence of Change",
+          "subjects": [
+            "Science",
+            "Mathematics",
+            "ELA"
+          ],
+          "objectives": [
+            "Model matter at the atomic level.",
+            "Distinguish physical observations from interpretations.",
+            "Use evidence to determine whether a change may indicate a chemical reaction."
+          ],
+          "activities": [
+            "Build particle models of simple substances.",
+            "Analyze before-and-after observations from a hypothetical reaction.",
+            "Organize observations in a data table.",
+            "Write a CER (claim-evidence-reasoning) response."
+          ],
+          "assessment": "CER paragraph supported by at least two observations.",
+          "standards_alignment": [
+            "NGSS MS-PS1-1",
+            "NGSS MS-PS1-2"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Sources, Claims, and Perspective",
+          "subjects": [
+            "Social Studies",
+            "ELA"
+          ],
+          "objectives": [
+            "Distinguish primary and secondary sources.",
+            "Identify author, purpose, audience, and evidence.",
+            "Compare perspectives without confusing opinion with evidence."
+          ],
+          "activities": [
+            "Evaluate two short sources describing the same historical event.",
+            "Complete a source-analysis matrix.",
+            "Identify corroborating and conflicting evidence.",
+            "Write a neutral synthesis."
+          ],
+          "assessment": "Source-analysis paragraph with evidence from both sources.",
+          "standards_alignment": [
+            "C3 Dimensions 1, 3, 4",
+            "CCSS RH.6-8.1"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Visualizing a System",
+          "subjects": [
+            "Visual Arts",
+            "Science",
+            "ELA"
+          ],
+          "objectives": [
+            "Generate an original visual representation of a system.",
+            "Use composition and symbolism intentionally.",
+            "Explain artistic choices using discipline-specific vocabulary."
+          ],
+          "activities": [
+            "Sketch a system diagram or infographic.",
+            "Use hierarchy, labels, scale, and visual emphasis.",
+            "Write an artist statement explaining three design choices."
+          ],
+          "assessment": "Completed visual model plus artist statement.",
+          "standards_alignment": [
+            "NCAS Creating 1-3",
+            "NCAS Connecting 10-11"
+          ]
+        }
+      ],
+      "quiz": {
+        "title": "Week 1 Mastery Quiz",
+        "questions": [
+          {
+            "question": "A ratio compares 12 red tiles to 18 blue tiles. What is the simplified ratio of red to blue?",
+            "answer": "2:3"
+          },
+          {
+            "question": "What is the strongest evidence when evaluating a scientific claim?",
+            "answer": "Relevant observations or data that directly support the claim"
+          },
+          {
+            "question": "Which source is generally considered a primary source?",
+            "answer": "A diary written by a person who experienced the event"
+          },
+          {
+            "question": "What does a system model primarily show?",
+            "answer": "Parts of a system and relationships among them"
+          },
+          {
+            "question": "In a CER response, what connects evidence to the claim?",
+            "answer": "Reasoning"
+          }
+        ]
+      }
+    },
+    {
+      "week": 2,
+      "title": "Change, Data, and Decision-Making",
+      "weekly_objective": "Use rational numbers, equations, statistics, scientific evidence, and civic reasoning to analyze change and make defensible decisions.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Rational Numbers and Change",
+          "subjects": [
+            "Mathematics",
+            "Science"
+          ],
+          "objectives": [
+            "Compare and order positive and negative rational numbers.",
+            "Interpret quantities in context.",
+            "Use number lines and coordinate representations."
+          ],
+          "activities": [
+            "Model temperature, elevation, financial balance, and ocean-depth changes.",
+            "Compare rational values using number lines.",
+            "Solve multi-step contextual problems."
+          ],
+          "assessment": "Application set requiring interpretation of signed quantities."
+        },
+        {
+          "day": 2,
+          "title": "Expressions and One-Variable Equations",
+          "subjects": [
+            "Mathematics",
+            "ELA"
+          ],
+          "objectives": [
+            "Translate verbal relationships into expressions.",
+            "Solve one-variable equations.",
+            "Explain each algebraic step and verify solutions."
+          ],
+          "activities": [
+            "Translate real-world relationships into equations.",
+            "Solve and check equations.",
+            "Write a brief explanation of why the solution is reasonable."
+          ],
+          "assessment": "Six-equation mastery set with two contextual problems."
+        },
+        {
+          "day": 3,
+          "title": "Statistics: Seeing Patterns in Data",
+          "subjects": [
+            "Mathematics",
+            "Science"
+          ],
+          "objectives": [
+            "Describe distributions using center and variability.",
+            "Identify patterns and possible outliers.",
+            "Use data to support or challenge a claim."
+          ],
+          "activities": [
+            "Analyze a small environmental dataset.",
+            "Calculate mean and median.",
+            "Compare distributions visually.",
+            "Write a data-based conclusion."
+          ],
+          "assessment": "Data analysis memo.",
+          "standards_alignment": [
+            "CCSS 6.SP.A",
+            "CCSS 6.SP.B",
+            "CCSS 6.SP.C"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Civic Decisions and Evidence",
+          "subjects": [
+            "Social Studies",
+            "ELA"
+          ],
+          "objectives": [
+            "Identify a civic problem.",
+            "Evaluate evidence from multiple perspectives.",
+            "Develop a claim supported by evidence."
+          ],
+          "activities": [
+            "Examine a fictional community resource-allocation problem.",
+            "Rank evidence by relevance and reliability.",
+            "Write and defend a recommendation."
+          ],
+          "assessment": "Evidence-based civic recommendation.",
+          "standards_alignment": [
+            "C3 Dimensions 1-4"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Creative Communication: Data as Story",
+          "subjects": [
+            "Visual Arts",
+            "ELA",
+            "Mathematics"
+          ],
+          "objectives": [
+            "Transform quantitative information into an effective visual communication.",
+            "Select an appropriate chart or visual form.",
+            "Explain how design choices affect interpretation."
+          ],
+          "activities": [
+            "Create an infographic using a provided dataset.",
+            "Add a concise explanatory paragraph.",
+            "Peer critique for accuracy, clarity, and visual hierarchy."
+          ],
+          "assessment": "Infographic and revision reflection.",
+          "standards_alignment": [
+            "NCAS Creating 1-3",
+            "NCAS Responding 7-9"
+          ]
+        }
+      ],
+      "quiz": {
+        "title": "Week 2 Mastery Quiz",
+        "questions": [
+          {
+            "question": "Which number is greatest: -4, -1, 0, or -7?",
+            "answer": "0"
+          },
+          {
+            "question": "Solve 3x + 5 = 20.",
+            "answer": "x = 5"
+          },
+          {
+            "question": "Which measure is commonly used to describe the center of a dataset?",
+            "answer": "Median"
+          },
+          {
+            "question": "What makes evidence especially useful for a civic claim?",
+            "answer": "It is relevant, credible, and directly connected to the claim"
+          },
+          {
+            "question": "What is a primary purpose of an infographic?",
+            "answer": "To communicate information clearly through coordinated text and visuals"
+          }
+        ]
+      }
+    },
+    {
+      "week": 3,
+      "title": "Integration, Argument, and Innovation",
+      "weekly_objective": "Synthesize quantitative, scientific, historical, literary, and artistic evidence into an original solution and defend it.",
+      "lessons": [
+        {
+          "day": 1,
+          "title": "Earth, Sun, Moon, and Cycles",
+          "subjects": [
+            "Science",
+            "Mathematics",
+            "ELA"
+          ],
+          "objectives": [
+            "Model relationships among Earth, Sun, and Moon.",
+            "Explain cyclic patterns such as lunar phases and seasons.",
+            "Use evidence and precise scientific language."
+          ],
+          "activities": [
+            "Build or sketch an Earth-Sun-Moon model.",
+            "Sequence lunar phases.",
+            "Explain one cycle using a labeled model and paragraph."
+          ],
+          "assessment": "Annotated model and scientific explanation.",
+          "standards_alignment": [
+            "NGSS MS-ESS1-1"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Geometry of the Real World",
+          "subjects": [
+            "Mathematics",
+            "Art"
+          ],
+          "objectives": [
+            "Calculate area, surface area, and volume.",
+            "Apply geometry to a design problem.",
+            "Justify dimensions and material choices."
+          ],
+          "activities": [
+            "Design a small community structure or exhibit.",
+            "Calculate required area and volume.",
+            "Produce a scaled sketch."
+          ],
+          "assessment": "Design brief with calculations.",
+          "standards_alignment": [
+            "CCSS 6.G.A.1",
+            "CCSS 6.G.A.2",
+            "CCSS 6.G.A.4"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Argument: Claim, Evidence, and Counterclaim",
+          "subjects": [
+            "ELA",
+            "Social Studies",
+            "Science"
+          ],
+          "objectives": [
+            "Develop a clear claim.",
+            "Integrate evidence from multiple disciplines.",
+            "Address a reasonable counterclaim."
+          ],
+          "activities": [
+            "Study a contested school/community design issue.",
+            "Build an evidence matrix.",
+            "Draft a structured argument with claim, evidence, reasoning, and counterclaim."
+          ],
+          "assessment": "Five-paragraph evidence-based argument.",
+          "standards_alignment": [
+            "CCSS WHST.6-8.1",
+            "C3 Dimension 4"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Innovation Studio",
+          "subjects": [
+            "All Core Subjects",
+            "Arts"
+          ],
+          "objectives": [
+            "Synthesize information across disciplines.",
+            "Develop and revise a solution to a real-world problem.",
+            "Use feedback to improve the work."
+          ],
+          "activities": [
+            "Select a problem involving resources, environment, learning, community, or design.",
+            "Research and document evidence.",
+            "Develop a quantitative component.",
+            "Create a visual or physical model.",
+            "Peer critique and revision."
+          ],
+          "assessment": "Prototype, evidence portfolio, and revision log."
+        },
+        {
+          "day": 5,
+          "title": "Presentation and Defense",
+          "subjects": [
+            "ELA",
+            "Social Studies",
+            "Science",
+            "Mathematics",
+            "Arts"
+          ],
+          "objectives": [
+            "Communicate a multidisciplinary conclusion clearly.",
+            "Defend choices using evidence.",
+            "Reflect on strengths, limitations, and next steps."
+          ],
+          "activities": [
+            "Deliver a 5-7 minute presentation.",
+            "Present model, data, evidence, and argument.",
+            "Answer audience questions.",
+            "Complete a metacognitive reflection."
+          ],
+          "assessment": "Final integrated project presentation.",
+          "standards_alignment": [
+            "CCSS SL.6.1",
+            "CCSS SL.6.4",
+            "CCSS SL.6.5",
+            "NCAS 6, 9, 11",
+            "C3 Dimension 4"
+          ]
+        }
+      ],
+      "quiz": {
+        "title": "Week 3 Mastery Quiz",
+        "questions": [
+          {
+            "question": "Which model can be used to explain repeating patterns of lunar phases?",
+            "answer": "An Earth-Sun-Moon model"
+          },
+          {
+            "question": "What information is needed to calculate the volume of a rectangular prism?",
+            "answer": "Length, width, and height"
+          },
+          {
+            "question": "What is a counterclaim?",
+            "answer": "A reasonable opposing position that an argument addresses"
+          },
+          {
+            "question": "Why is revision important in an engineering or creative design process?",
+            "answer": "It uses feedback and evidence to improve the solution"
+          },
+          {
+            "question": "What makes a multidisciplinary conclusion strong?",
+            "answer": "It integrates relevant evidence and reasoning from more than one discipline"
+          }
+        ]
+      }
+    }
+  ],
+  "final_test": {
+    "title": "Grade 6 Integrated Mastery Examination",
+    "recommended_points": 50,
+    "sections": [
+      {
+        "section": "Mathematics",
+        "points": 15,
+        "questions": [
+          "Simplify and interpret a ratio in a real-world context.",
+          "Solve a multi-step problem involving rational numbers.",
+          "Solve and verify a one-variable equation.",
+          "Calculate area, surface area, or volume in a real-world design.",
+          "Interpret a statistical distribution and defend a conclusion."
+        ]
+      },
+      {
+        "section": "ELA and Literacy",
+        "points": 10,
+        "questions": [
+          "Identify a central idea and cite supporting evidence.",
+          "Compare two perspectives using textual evidence.",
+          "Write a concise evidence-based argument.",
+          "Use precise domain vocabulary.",
+          "Deliver a structured oral explanation."
+        ]
+      },
+      {
+        "section": "Science",
+        "points": 10,
+        "questions": [
+          "Use a model to explain a scientific system.",
+          "Analyze evidence of a physical or chemical change.",
+          "Explain conservation of matter in a chemical reaction.",
+          "Interpret data related to an Earth-Sun-Moon cycle.",
+          "Construct a claim supported by scientific evidence."
+        ]
+      },
+      {
+        "section": "Social Studies and Civics",
+        "points": 10,
+        "questions": [
+          "Evaluate a source for authorship, purpose, and evidence.",
+          "Distinguish primary and secondary sources.",
+          "Compare historical or civic perspectives.",
+          "Construct an evidence-based civic claim.",
+          "Explain how informed action can respond to a community problem."
+        ]
+      },
+      {
+        "section": "Arts and Integration",
+        "points": 5,
+        "questions": [
+          "Create or analyze a visual representation of a system.",
+          "Explain how artistic choices communicate meaning.",
+          "Connect an artistic work to personal, cultural, or historical context.",
+          "Revise work using criteria and feedback.",
+          "Reflect on how creative thinking contributed to problem solving."
+        ]
+      }
+    ],
+    "performance_task": {
+      "title": "The Evidence-to-Action Challenge",
+      "prompt": "Choose a real or teacher-approved community, environmental, educational, or design problem. Define the problem, research credible evidence, analyze at least one dataset, apply at least two mathematical ideas, explain relevant scientific or social-system relationships, propose a solution, create a visual model or infographic, and defend the proposal in a 5-7 minute presentation.",
+      "required_products": [
+        "Research question",
+        "Evidence log",
+        "Data table or graph",
+        "Mathematical analysis",
+        "Scientific or social-systems explanation",
+        "Prototype, model, or infographic",
+        "Written argument with counterclaim",
+        "Oral presentation",
+        "Reflection"
+      ],
+      "rubric": {
+        "research_and_evidence": 20,
+        "mathematical_reasoning": 15,
+        "science_or_social_studies_reasoning": 15,
+        "written_argument": 15,
+        "creative_design": 15,
+        "oral_communication": 10,
+        "revision_and_reflection": 10
+      }
+    }
+  },
+  "assessment_philosophy": {
+    "formative": [
+      "Exit tickets",
+      "annotation",
+      "data analysis",
+      "source analysis",
+      "CER responses",
+      "peer critique"
+    ],
+    "summative": [
+      "Weekly quizzes",
+      "final written examination",
+      "integrated performance task"
+    ],
+    "mastery_target": "Recommended mastery threshold: 80% overall, with targeted reteaching when a student demonstrates a significant misconception.",
+    "advanced_target": "Students seeking honors-level challenge should justify methods, compare alternative strategies, evaluate limitations of evidence, and transfer concepts to unfamiliar contexts."
+  },
+  "sources_consulted": [
+    {
+      "organization": "Common Core State Standards Initiative",
+      "topic": "Grade 6 Mathematics",
+      "url": "https://corestandards.org/mathematics-standards/"
+    },
+    {
+      "organization": "Common Core State Standards Initiative",
+      "topic": "ELA/Literacy",
+      "url": "https://corestandards.org/english-language-arts-standards/"
+    },
+    {
+      "organization": "Next Generation Science Standards",
+      "topic": "Middle School Science",
+      "url": "https://www.nextgenscience.org/"
+    },
+    {
+      "organization": "National Council for the Social Studies",
+      "topic": "C3 Framework",
+      "url": "https://www.socialstudies.org/c3"
+    },
+    {
+      "organization": "National Coalition for Core Arts Standards",
+      "topic": "National Core Arts Standards",
+      "url": "https://www.nationalartsstandards.org/"
+    },
+    {
+      "organization": "SHAPE America",
+      "topic": "National Physical Education Standards",
+      "url": "https://www.shapeamerica.org/standards/pe/"
+    }
+  ]
+}
