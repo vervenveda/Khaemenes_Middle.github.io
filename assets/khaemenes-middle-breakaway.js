@@ -1,9 +1,10 @@
 (function attachKhaemenesMiddleBreakaway(global){
   "use strict";
 
-  const VERSION="1.0.0";
+  const VERSION="1.1.0";
   const HUB="https://vervenveda.com/Khaemenes_Middle.github.io/breakaway/";
   const ARCADE="https://vervenveda.com/arcade.github.io/";
+  const NAIB_BRIDGE="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-middle-naib-bridge.js";
 
   const activities=Object.freeze({
     mathematics:Object.freeze({label:"Math Reset",title:"Sudoku · logic and number reasoning",href:ARCADE+"Jenny's_Sudoku_index.html"}),
@@ -30,7 +31,18 @@
     return activities.general;
   }
 
+  function ensureNAIBBridge(){
+    if(!global.document||global.KhaemenesMiddleNAIBBridge)return;
+    if(global.document.querySelector(`script[data-khaemenes-middle-naib],script[src="${NAIB_BRIDGE}"]`))return;
+    const script=global.document.createElement("script");
+    script.src=NAIB_BRIDGE;
+    script.async=false;
+    script.dataset.khaemenesMiddleNaib="1";
+    (global.document.head||global.document.documentElement).appendChild(script);
+  }
+
   function createButton(){
+    ensureNAIBBridge();
     if(!global.document||global.document.getElementById("khaemenesBreakawayButton"))return;
     const a=inferActivity();
     const link=global.document.createElement("a");
@@ -50,6 +62,7 @@
 
   function recommend(){return inferActivity();}
 
-  global.KhaemenesMiddleBreakaway=Object.freeze({version:VERSION,hub:HUB,activities,recommend,createButton});
-  if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",createButton,{once:true});else createButton();
+  global.KhaemenesMiddleBreakaway=Object.freeze({version:VERSION,hub:HUB,activities,recommend,createButton,ensureNAIBBridge});
+  const boot=()=>{ensureNAIBBridge();createButton();};
+  if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",boot,{once:true});else boot();
 })(window);
