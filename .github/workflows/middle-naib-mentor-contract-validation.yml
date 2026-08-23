@@ -1,0 +1,39 @@
+name: Middle NAIB Mentor Contract Validation
+
+on:
+  pull_request:
+    paths:
+      - 'mentor-contract.json'
+      - 'assets/khaemenes-middle-naib-bridge.js'
+      - 'assets/khaemenes-grade-continuity.js'
+      - 'assets/khaemenes-middle-breakaway.js'
+      - 'tools/validate-middle-naib-mentor-contract.mjs'
+      - '.github/workflows/middle-naib-mentor-contract-validation.yml'
+  push:
+    branches: [ main ]
+    paths:
+      - 'mentor-contract.json'
+      - 'assets/khaemenes-middle-naib-bridge.js'
+      - 'assets/khaemenes-grade-continuity.js'
+      - 'assets/khaemenes-middle-breakaway.js'
+      - 'tools/validate-middle-naib-mentor-contract.mjs'
+      - '.github/workflows/middle-naib-mentor-contract-validation.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check bridge syntax
+        run: |
+          node --check assets/khaemenes-middle-naib-bridge.js
+          node --check assets/khaemenes-grade-continuity.js
+          node --check assets/khaemenes-middle-breakaway.js
+      - name: Validate Middle mentor contract
+        run: node tools/validate-middle-naib-mentor-contract.mjs
