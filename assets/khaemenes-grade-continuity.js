@@ -1,12 +1,13 @@
 (function attachKhaemenesGradeContinuity(global){
   "use strict";
 
-  const VERSION="1.3.0";
+  const VERSION="1.4.0";
   const cfg=global.KHAEMENES_GRADE_CONTEXT||{};
   const EXPECTED_GRADE=String(cfg.grade||"").padStart(2,"0");
   const EXPECTED_STAGE=cfg.stage||"middle";
   const COURSE_ID=cfg.courseId||`middle-grade-${EXPECTED_GRADE}`;
   const LEGACY_KEY=cfg.legacyKey||"";
+  const MASTERY_THRESHOLD=80;
 
   const readJSON=(k,f=null)=>{try{const r=k&&global.localStorage.getItem(k);return r?JSON.parse(r):f}catch{return f}};
   const writeJSON=(k,v)=>{try{if(!k)return false;global.localStorage.setItem(k,JSON.stringify(v));return true}catch{return false}};
@@ -35,17 +36,39 @@
     global.document.head.appendChild(script);
   }
 
+  function ensureNAIBBridge(){
+    if(!global.document||global.KhaemenesMiddleNAIBBridge)return;
+    if(global.document.querySelector('script[data-khaemenes-middle-naib],script[src="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-middle-naib-bridge.js"]'))return;
+    const script=global.document.createElement("script");
+    script.src="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-middle-naib-bridge.js";
+    script.defer=true;
+    script.dataset.khaemenesMiddleNaib="1";
+    global.document.head.appendChild(script);
+  }
+
+  function authority(){
+    return Object.freeze({
+      changesPlacement:false,
+      changesIdentity:false,
+      awardsMastery:false,
+      silentlyChangesGrade:false,
+      bypassesPrerequisites:false,
+      revealsLockedAssessments:false,
+      manufacturesUnlocks:false
+    });
+  }
+
   function status(){
     const l=learner();
     if(!l)return Object.freeze({
       version:VERSION,status:"no-active-learner",grade:EXPECTED_GRADE,stage:EXPECTED_STAGE,learner:null,placementMatch:false,
-      authority:Object.freeze({changesPlacement:false,changesIdentity:false,awardsMastery:false,silentlyChangesGrade:false})
+      masteryThresholdMinimum:MASTERY_THRESHOLD,authority:authority()
     });
     const match=ng(l.grade)===EXPECTED_GRADE&&ns(l.stage)===EXPECTED_STAGE;
     return Object.freeze({
       version:VERSION,status:match?"ready":"placement-mismatch",grade:EXPECTED_GRADE,stage:EXPECTED_STAGE,placementMatch:match,
       learner:Object.freeze({learnerId:l.learnerId,nickname:l.nickname,grade:l.grade||null,stage:l.stage||null,studentId:l.studentId||l.institutionalId||null}),
-      authority:Object.freeze({changesPlacement:false,changesIdentity:false,awardsMastery:false,silentlyChangesGrade:false})
+      masteryThresholdMinimum:MASTERY_THRESHOLD,authority:authority()
     });
   }
 
@@ -99,9 +122,23 @@
     return false;
   }
 
+  function mentorContext(){
+    return global.KhaemenesMiddleNAIBBridge?.courseContext?.(COURSE_ID,{surface:global.location?.pathname||"middle-grade"})||Object.freeze({
+      contract:"khaemenes.middle.naib-context",
+      contractVersion:1,
+      stage:EXPECTED_STAGE,
+      grade:EXPECTED_GRADE,
+      courseId:COURSE_ID,
+      masteryThresholdMinimum:MASTERY_THRESHOLD,
+      mentorAssignment:null,
+      authority:authority()
+    });
+  }
+
   function activate(){
     ensureBetaProgramLink();
     ensureBreakaway();
+    ensureNAIBBridge();
     const s=status();
     if(s.status==="ready"){
       const legacy=readJSON(LEGACY_KEY,null),k=scopedKey();
@@ -109,11 +146,27 @@
         writeJSON(k,{format:"khaemenes-course-state-v1",learnerId:s.learner.learnerId,courseId:COURSE_ID,source:"legacy-middle-grade-migration",updatedAt:new Date().toISOString(),state:legacy});
       }
     }
-    global.dispatchEvent(new CustomEvent("khaemenes-middle-grade-continuity-ready",{detail:s}));
+    global.dispatchEvent(new CustomEvent("khaemenes-middle-grade-continuity-ready",{detail:{...s,mentorContext:mentorContext()}}));
     return s;
   }
 
-  global.KhaemenesGradeContinuity=Object.freeze({version:VERSION,expectedGrade:EXPECTED_GRADE,expectedStage:EXPECTED_STAGE,courseId:COURSE_ID,status,scopedKey,readState,writeState,clearState,activate,ensureBetaProgramLink,ensureBreakaway});
-  const boot=()=>{ensureBetaProgramLink();ensureBreakaway();};
+  global.KhaemenesGradeContinuity=Object.freeze({
+    version:VERSION,
+    expectedGrade:EXPECTED_GRADE,
+    expectedStage:EXPECTED_STAGE,
+    courseId:COURSE_ID,
+    masteryThresholdMinimum:MASTERY_THRESHOLD,
+    status,
+    scopedKey,
+    readState,
+    writeState,
+    clearState,
+    mentorContext,
+    activate,
+    ensureBetaProgramLink,
+    ensureBreakaway,
+    ensureNAIBBridge
+  });
+  const boot=()=>{ensureBetaProgramLink();ensureBreakaway();ensureNAIBBridge();};
   if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",boot,{once:true});else boot();
 })(window);
