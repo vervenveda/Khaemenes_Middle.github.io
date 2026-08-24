@@ -90,11 +90,31 @@ Legacy browser-local records are preserved for compatibility, but canonical lear
 
 ## Mastery Boundary
 
-The standard completion threshold is **80% mastery**. Course pages may record learner-facing evidence, but formal academic authority remains with the course/teacher/Academy process. Mentors may support learning and interpretation; they do not independently alter grades, placement, certificates, or protected records.
+The standard completion threshold is **80% mastery**. Course pages may record learner-facing evidence, but formal academic authority remains with the course/teacher/Academy process. Archaemenes may support learning and interpretation; he does not independently alter grades, placement, certificates, or protected records.
 
-## Mentor Architecture
+## Mentor & Support Architecture
 
-Archaemenes is the institutional educational mentor. Specialist mentors may support domain-specific work. NAIB routes and connects resources but does not mutate learner identity, placement, or mastery.
+**Archaemenes is the one continuous educational Mentor of Khaemenes Academy.** Middle School uses his **Academy Mentor** expression.
+
+The Family Registry carries the canonical `mentorId: "archaemenes"`. NAIB routes, matches, and delegates resources without becoming a second Mentor.
+
+Other named supports retain distinct roles rather than competing Mentor identities:
+
+- **Hope** — School Counselor & Student Support
+- **Eiren** — Literary & Poetry Specialist
+- **Zelle** — Visual Arts Specialist
+- **Moirai** — Music Specialist
+- **ARSHIF** — Archives & Provenance Specialist
+- **Aurora** — Grounding & Wellness Reflection Resource
+- **NAIB** — Navigation & Delegation
+
+Archaemenes may recommend a handoff to one of these supports when appropriate. Specialists and support resources do not change learner identity, placement, grades, mastery, or locked assessment content.
+
+The active Academy Mentor doorway is:
+
+`https://vervenveda.com/Khaemenes_Academy.github.io/mentor/`
+
+The formal contract for these role boundaries is `mentor-contract.json`.
 
 ## Beta Program
 
