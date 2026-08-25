@@ -12,6 +12,7 @@ on:
       - "tools/validate-grade6-weekly-evidence.mjs"
       - "tools/validate-grade6-crosswalk-renderer.mjs"
       - "tools/validate-grade6-subject-week-crosswalk.mjs"
+      - "scripts/validate-middle-school.mjs"
       - ".github/workflows/grade6-cumulative-assessment-validation.yml"
   push:
     branches: [main]
@@ -25,6 +26,7 @@ on:
       - "tools/validate-grade6-weekly-evidence.mjs"
       - "tools/validate-grade6-crosswalk-renderer.mjs"
       - "tools/validate-grade6-subject-week-crosswalk.mjs"
+      - "scripts/validate-middle-school.mjs"
       - ".github/workflows/grade6-cumulative-assessment-validation.yml"
 
 permissions:
