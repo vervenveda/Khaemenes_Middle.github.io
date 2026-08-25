@@ -1,0 +1,46 @@
+name: Grade 6 Crosswalk Renderer Validation
+
+on:
+  pull_request:
+    paths:
+      - "assets/khaemenes-grade6-curriculum-alignment.js"
+      - "assets/khaemenes-middle-breakaway.js"
+      - "grades/grade-06/data/subject-week-crosswalk.js"
+      - "grades/grade-06/subjects/**"
+      - "tools/validate-grade6-subject-week-crosswalk.mjs"
+      - "tools/validate-grade6-crosswalk-renderer.mjs"
+      - ".github/workflows/grade6-crosswalk-renderer-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "assets/khaemenes-grade6-curriculum-alignment.js"
+      - "assets/khaemenes-middle-breakaway.js"
+      - "grades/grade-06/data/subject-week-crosswalk.js"
+      - "grades/grade-06/subjects/**"
+      - "tools/validate-grade6-subject-week-crosswalk.mjs"
+      - "tools/validate-grade6-crosswalk-renderer.mjs"
+      - ".github/workflows/grade6-crosswalk-renderer-validation.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: Validate canonical Grade 6 crosswalk
+        run: node tools/validate-grade6-subject-week-crosswalk.mjs
+      - name: Validate Grade 6 crosswalk renderer and all subject surfaces
+        run: node tools/validate-grade6-crosswalk-renderer.mjs
+      - name: Re-run Middle School Learning Navigator contract
+        run: node tools/validate-middle-learning-navigator.mjs
+      - name: Re-run Middle School Study Scorebook contract
+        run: node tools/validate-middle-study-scorebook.mjs
+      - name: Validate shared runtime JavaScript syntax
+        run: |
+          node --check assets/khaemenes-grade6-curriculum-alignment.js
+          node --check assets/khaemenes-middle-breakaway.js
