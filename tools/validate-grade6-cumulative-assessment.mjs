@@ -123,9 +123,10 @@ expect(!read("grades/grade-06/assessments/final-exam.html").includes("Demonstrat
 
 for(const token of [
   'buildReviewCard("Midyear Review Center"',
-  'grade==="06"?"assessments/midterm-review.html":null',
+  'const hasCanonicalReviews=grade==="06"||grade==="07"',
+  'hasCanonicalReviews?"assessments/midterm-review.html":null',
   'buildReviewCard("Final Course Review"',
-  'grade==="06"?"assessments/final-review.html":null',
+  'hasCanonicalReviews?"assessments/final-review.html":null',
   'if(reviewHref)actions.append(link("Open Review Center",reviewHref,"button"))'
 ]) expect(navigator.includes(token),`Learning Navigator cumulative Grade 6 route contract missing: ${token}`);
 expect(navigator.includes('"assessments/midterm.html","Open Official Midterm"'),"Learning Navigator must retain the official Midterm doorway.");
@@ -135,17 +136,21 @@ for(const token of ["midterm-review.html","Official Midterm","final-review.html"
   expect(assessmentIndex.includes(token),`Grade 6 assessment directory cumulative route missing: ${token}`);
 }
 
-for(const grade of ["07","08"]){
-  const app=read(`grades/grade-${grade}/assets/app.js`);
-  expect(!app.includes("canonical-cumulative-assessment"),`Grade ${grade} must not inherit Grade 6 cumulative engine in this repair.`);
-  const mid=read(`grades/grade-${grade}/assessments/midterm.html`);
-  const final=read(`grades/grade-${grade}/assessments/final-exam.html`);
-  expect(!mid.includes("canonicalCumulativeMount")&&!final.includes("canonicalCumulativeMount"),`Grade ${grade} cumulative pages must remain unchanged in the Grade 6 repair.`);
-}
+const grade7Engine=read("grades/grade-07/assets/canonical-cumulative-assessment.js");
+expect(grade7Engine.includes("KHAE_GRADE7_DATA"),"Grade 7 may use its own independent canonical cumulative engine after migration.");
+const grade7Mid=read("grades/grade-07/assessments/midterm.html");
+const grade7Final=read("grades/grade-07/assessments/final-exam.html");
+expect(grade7Mid.includes("canonicalCumulativeMount")&&grade7Final.includes("canonicalCumulativeMount"),"Grade 7 may expose its own canonical cumulative surfaces after independent migration.");
+
+const grade8App=read("grades/grade-08/assets/app.js");
+expect(!grade8App.includes("canonical-cumulative-assessment"),"Grade 8 must not inherit Grade 6 or Grade 7 cumulative engines before its own migration.");
+const grade8Mid=read("grades/grade-08/assessments/midterm.html");
+const grade8Final=read("grades/grade-08/assessments/final-exam.html");
+expect(!grade8Mid.includes("canonicalCumulativeMount")&&!grade8Final.includes("canonicalCumulativeMount"),"Grade 8 cumulative pages must remain unchanged until its own migration.");
 
 for(const file of [enginePath,"assets/khaemenes-middle-learning-navigator.js"]){
   const result=spawnSync(process.execPath,["--check",path.join(root,file)],{encoding:"utf8"});
   expect(result.status===0,`${file} failed JavaScript syntax validation:\n${result.stderr||result.stdout}`);
 }
 
-console.log("Grade 6 cumulative assessment validation passed: Week 17 canonical midyear boundary, 17-week/120-item Midterm coverage with 96 required, 36-week/140-item Final coverage with 112 required, all nine subjects represented, read-only score-aware reviews, canonical evidence prompts, official adult-review authority, and Grade 7–8 isolation are intact.");
+console.log("Grade 6 cumulative assessment validation passed: Week 17 canonical midyear boundary, 17-week/120-item Midterm coverage with 96 required, 36-week/140-item Final coverage with 112 required, all nine subjects represented, Grade 6 canonical reviews, independent Grade 7 cumulative migration, official adult-review authority, and Grade 8 isolation are intact.");
