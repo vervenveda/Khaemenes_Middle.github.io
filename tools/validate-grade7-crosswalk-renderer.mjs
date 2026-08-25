@@ -27,7 +27,7 @@ expect(crosswalk?.weeks?.length===36,"Grade 7 renderer requires the 36-week cano
 expect(crosswalk?.masteryThreshold===80,"Grade 7 renderer must preserve the 80% mastery standard.");
 
 for(const token of [
-  'const VERSION="1.0.0"',
+  'const VERSION="1.1.0"',
   'subject-week-crosswalk.js',
   'Weekly Subject Assignment',
   'What you are learning',
@@ -43,6 +43,10 @@ for(const token of [
   'grade7CurriculumAligned',
   'grade7WeeklyPlanAligned',
   'WEEK_PLAN_PATH',
+  'rewriteEvidenceLinks(global.document,week,"../../")',
+  'rewriteEvidenceLinks(global.document,week,"../")',
+  'weekly-evidence-packet.html?week=',
+  'weekly-mastery-check.html?week=',
   'grade7-assignment-card'
 ]) expect(renderer.includes(token),`Grade 7 alignment renderer contract missing: ${token}`);
 
@@ -109,4 +113,4 @@ for(const file of [rendererPath,bootstrapPath]){
   expect(check.status===0,`${file} failed JavaScript syntax validation:\n${check.stderr||check.stdout}`);
 }
 
-console.log(`Grade 7 crosswalk renderer validation passed: canonical assignment and weekly-plan rendering are read-only; all ${checked} subject surfaces plus ${plans} weekly plans receive Grade-7-only alignment while Grade 8 remains isolated.`);
+console.log(`Grade 7 crosswalk renderer validation passed: canonical assignment, weekly-plan rendering and canonical evidence routes are read-only; all ${checked} subject surfaces plus ${plans} weekly plans receive Grade-7-only alignment while Grade 8 remains isolated.`);
