@@ -1,0 +1,69 @@
+name: Grade 6 Weekly Evidence Validation
+
+on:
+  pull_request:
+    paths:
+      - "grades/grade-06/evidence/**"
+      - "grades/grade-06/assets/canonical-week-evidence.js"
+      - "grades/grade-06/assets/app.js"
+      - "grades/grade-06/assessments/weekly-assessments.html"
+      - "grades/grade-06/weekly-plans/**"
+      - "grades/grade-06/subjects/**"
+      - "grades/grade-06/data/course-data.js"
+      - "grades/grade-06/data/subject-week-crosswalk.js"
+      - "assets/khaemenes-grade6-curriculum-alignment.js"
+      - "assets/khaemenes-middle-breakaway.js"
+      - "assets/khaemenes-middle-learning-navigator.js"
+      - "tools/validate-grade6-weekly-evidence.mjs"
+      - "tools/validate-grade6-crosswalk-renderer.mjs"
+      - "tools/validate-grade6-subject-week-crosswalk.mjs"
+      - ".github/workflows/grade6-weekly-evidence-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "grades/grade-06/evidence/**"
+      - "grades/grade-06/assets/canonical-week-evidence.js"
+      - "grades/grade-06/assets/app.js"
+      - "grades/grade-06/assessments/weekly-assessments.html"
+      - "grades/grade-06/weekly-plans/**"
+      - "grades/grade-06/subjects/**"
+      - "grades/grade-06/data/course-data.js"
+      - "grades/grade-06/data/subject-week-crosswalk.js"
+      - "assets/khaemenes-grade6-curriculum-alignment.js"
+      - "assets/khaemenes-middle-breakaway.js"
+      - "assets/khaemenes-middle-learning-navigator.js"
+      - "tools/validate-grade6-weekly-evidence.mjs"
+      - "tools/validate-grade6-crosswalk-renderer.mjs"
+      - "tools/validate-grade6-subject-week-crosswalk.mjs"
+      - ".github/workflows/grade6-weekly-evidence-validation.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: Validate canonical Grade 6 crosswalk
+        run: node tools/validate-grade6-subject-week-crosswalk.mjs
+      - name: Validate Grade 6 curriculum renderer
+        run: node tools/validate-grade6-crosswalk-renderer.mjs
+      - name: Validate Grade 6 weekly evidence and mastery routes
+        run: node tools/validate-grade6-weekly-evidence.mjs
+      - name: Re-run Middle School Learning Navigator contract
+        run: node tools/validate-middle-learning-navigator.mjs
+      - name: Re-run Middle School Study Scorebook contract
+        run: node tools/validate-middle-study-scorebook.mjs
+      - name: Re-run Middle School one-Mentor contract
+        run: node tools/validate-middle-naib-mentor-contract.mjs
+      - name: Validate JavaScript syntax
+        run: |
+          node --check grades/grade-06/assets/canonical-week-evidence.js
+          node --check grades/grade-06/assets/app.js
+          node --check assets/khaemenes-grade6-curriculum-alignment.js
+          node --check assets/khaemenes-middle-breakaway.js
+          node --check assets/khaemenes-middle-learning-navigator.js
