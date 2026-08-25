@@ -1,11 +1,12 @@
 (function attachKhaemenesMiddleBreakaway(global){
   "use strict";
 
-  const VERSION="1.3.0";
+  const VERSION="1.4.0";
   const HUB="https://vervenveda.com/Khaemenes_Middle.github.io/breakaway/";
   const ARCADE="https://vervenveda.com/arcade.github.io/";
   const NAIB_BRIDGE="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-middle-naib-bridge.js";
   const GRADE6_ALIGNMENT="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-grade6-curriculum-alignment.js";
+  const GRADE7_ALIGNMENT="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-grade7-curriculum-alignment.js";
 
   const activities=Object.freeze({
     mathematics:Object.freeze({label:"Math Reset",title:"Sudoku · logic and number reasoning",href:ARCADE+"Jenny's_Sudoku_index.html"}),
@@ -54,6 +55,18 @@
     (global.document.head||global.document.documentElement).appendChild(script);
   }
 
+  function ensureGrade7Alignment(){
+    if(!global.document||global.KhaemenesGrade7CurriculumAlignment)return;
+    const pathname=String(global.location?.pathname||"");
+    if(!/\/grades\/grade-07\/(?:subjects|weekly-plans)\//i.test(pathname))return;
+    if(global.document.querySelector(`script[data-khaemenes-grade7-alignment],script[src="${GRADE7_ALIGNMENT}"]`))return;
+    const script=global.document.createElement("script");
+    script.src=GRADE7_ALIGNMENT;
+    script.async=false;
+    script.dataset.khaemenesGrade7Alignment="1";
+    (global.document.head||global.document.documentElement).appendChild(script);
+  }
+
   function createButton(){
     ensureNAIBBridge();
     if(!global.document||global.document.getElementById("khaemenesBreakawayButton"))return;
@@ -75,7 +88,7 @@
 
   function recommend(){return inferActivity();}
 
-  global.KhaemenesMiddleBreakaway=Object.freeze({version:VERSION,hub:HUB,activities,recommend,createButton,ensureNAIBBridge,ensureGrade6Alignment});
-  const boot=()=>{ensureNAIBBridge();ensureGrade6Alignment();createButton();};
+  global.KhaemenesMiddleBreakaway=Object.freeze({version:VERSION,hub:HUB,activities,recommend,createButton,ensureNAIBBridge,ensureGrade6Alignment,ensureGrade7Alignment});
+  const boot=()=>{ensureNAIBBridge();ensureGrade6Alignment();ensureGrade7Alignment();createButton();};
   if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",boot,{once:true});else boot();
 })(window);
