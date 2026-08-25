@@ -28,10 +28,11 @@
     const style=node("style");
     style.textContent=`
       .canonical-evidence-shell{max-width:1040px;margin:0 auto}
-      .canonical-evidence-head{text-align:center;margin-bottom:22px}
+      .canonical-evidence-head{text-align:center;margin-bottom:14px}
       .canonical-evidence-head h1{margin:.25rem 0;color:var(--navy,#172033)}
       .canonical-evidence-head .week-label{font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#6a5525;font-size:.78rem}
       .canonical-evidence-head .essential{max-width:78ch;margin:.65rem auto 0;color:var(--muted,#5d6572)}
+      .canonical-identity{max-width:760px;margin:0 auto 18px}
       .canonical-evidence-actions{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:0 0 20px}
       .canonical-evidence-note{max-width:82ch;margin:0 auto 20px;padding:12px 14px;border:1px solid var(--line,#d8dbe3);border-radius:7px;background:#faf8f3;line-height:1.55}
       .canonical-subject-list{display:grid;gap:18px}
@@ -50,19 +51,22 @@
       .canonical-score-box{margin-top:18px;padding:16px;border:2px solid var(--navy,#172033);border-radius:7px;background:#fff}
       .canonical-score-line{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
       .canonical-score-line div{min-height:46px;border:1px solid var(--line,#d8dbe3);border-radius:7px;padding:10px}
+      .canonical-reviewer{margin:14px 0 4px;font-weight:700}
       @media(max-width:720px){.canonical-subject-grid,.canonical-score-line{grid-template-columns:1fr}.canonical-rubric{font-size:.88rem}.canonical-rubric th,.canonical-rubric td{padding:7px}}
       @media print{.no-print,.canonical-evidence-actions{display:none!important}.canonical-subject-card{break-inside:avoid;box-shadow:none}.canonical-evidence-space{min-height:115px}.canonical-rubric{font-size:10pt}.canonical-evidence-note{border-color:#999}}
     `;
     document.head.appendChild(style);
   }
   function subjectCell(id){return map?.subjects?.[id]||null}
-  function subjectTitle(id){return subjects.find(s=>s.id===id)?.title||id}
   function titleBlock(root,label){
     const header=node("div","canonical-evidence-head");
     header.append(node("p","week-label",`Grade 6 · Week ${pad(weekNumber)} · ${label}`));
     header.append(node("h1","",row?.title||`Week ${pad(weekNumber)}`));
     const essential=node("p","essential",row?.essentialQuestion?`Essential question: ${row.essentialQuestion}`:"");
     header.appendChild(essential);root.appendChild(header);
+    const identity=node("div","name-date canonical-identity");
+    identity.append(node("div","fill-box","Name:"),node("div","fill-box","Date:"));
+    root.appendChild(identity);
   }
   function downloadText(filename,content){
     const blob=new Blob([content],{type:"text/plain;charset=utf-8"});
@@ -138,7 +142,7 @@
     const score=node("section","canonical-score-box");
     score.append(node("h2","","Adult Review Record"),node("p","",`Use the course record after review. The student-facing page itself cannot submit or change a grade.`));
     const line=node("div","canonical-score-line");line.append(node("div","","Total: ____ / 22"),node("div","","Percent: ____ %"),node("div","","Mastery: ☐ Met  ☐ Not yet"));score.appendChild(line);
-    score.append(node("div","canonical-evidence-space"));root.appendChild(score);
+    score.append(node("p","canonical-reviewer","Adult reviewer: ____________________________________"),node("div","canonical-evidence-space"));root.appendChild(score);
   }
 
   addStyles();
