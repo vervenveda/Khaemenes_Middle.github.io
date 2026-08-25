@@ -2,6 +2,7 @@
   "use strict";
   const DATA = window.KHAE_GRADE7_DATA, KEY = "khaemenes_grade7_middle_school_36_aplusplus_v1", CONT = window.KhaemenesGradeContinuity;
   const $ = id => document.getElementById(id), esc = v => String(v ?? "").replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const pad=n=>String(Number(n)).padStart(2,"0");
   const blank=()=>({student:"Seventh Grade Scholar",weekly:{},midterm:0,final:0,portfolio:false});
   function readState(){try{return CONT?.readState?.(blank())||JSON.parse(localStorage.getItem(KEY))||blank()}catch{return blank()}}
   let state=readState();
@@ -25,7 +26,7 @@
   }
   function renderWeeks(){
     const c=CONT?.status?.(),mismatch=c?.status==="placement-mismatch";
-    $("weekGrid").innerHTML=DATA.weeks.map(w=>`<article class="card week-card"><div class="emblem">${String(w.week).padStart(2,"0")}</div><h3>${esc(w.title)}</h3><p><strong>Question:</strong> ${esc(w.essentialQuestion)}</p><p>${esc(w.theme)}</p><div class="badges"><span class="badge">9 subjects</span><span class="badge">45 blocks</span><span class="badge">A++</span></div><label>Adult-reviewed weekly assessment score</label><input type="number" min="0" max="100" value="${hasWeekScore(w.week)?esc(state.weekly[w.week]):""}" data-score="${w.week}" placeholder="0–100" ${mismatch?"disabled aria-disabled=\"true\"":""}><div class="actions"><a class="button" href="weekly-plans/week-${String(w.week).padStart(2,"0")}.html">Open Week</a><a class="button light" href="printables/week-${String(w.week).padStart(2,"0")}-packet.html">Printable</a><a class="button light" href="assessments/week-${String(w.week).padStart(2,"0")}-assessment.html">Assessment</a></div></article>`).join("");
+    $("weekGrid").innerHTML=DATA.weeks.map(w=>`<article class="card week-card"><div class="emblem">${pad(w.week)}</div><h3>${esc(w.title)}</h3><p><strong>Question:</strong> ${esc(w.essentialQuestion)}</p><p>${esc(w.theme)}</p><div class="badges"><span class="badge">9 subjects</span><span class="badge">45 blocks</span><span class="badge">A++</span></div><label>Adult-reviewed weekly assessment score</label><input type="number" min="0" max="100" value="${hasWeekScore(w.week)?esc(state.weekly[w.week]):""}" data-score="${w.week}" placeholder="0–100" ${mismatch?"disabled aria-disabled=\"true\"":""}><div class="actions"><a class="button" href="weekly-plans/week-${pad(w.week)}.html">Open Week</a><a class="button light" href="evidence/weekly-evidence-packet.html?week=${pad(w.week)}">Evidence Packet</a><a class="button light" href="evidence/weekly-mastery-check.html?week=${pad(w.week)}">Mastery Check</a></div></article>`).join("");
     document.querySelectorAll("[data-score]").forEach(i=>i.onchange=()=>{if(mismatch)return;const raw=i.value.trim();if(raw==="")delete state.weekly[i.dataset.score];else state.weekly[i.dataset.score]=Math.max(0,Math.min(100,Number(raw)));save();renderDashboard()});
   }
   function renderSubjects(){$("subjectGrid").innerHTML=DATA.subjects.map(s=>`<article class="card" style="border-top:5px solid ${s.color}"><div class="emblem">${esc(s.icon)}</div><h3>${esc(s.title)}</h3><p>${esc(s.description)}</p><a class="button" href="subjects/${s.id}/index.html">Open Subject Hall</a></article>`).join("")}
