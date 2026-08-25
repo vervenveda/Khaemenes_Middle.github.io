@@ -1,13 +1,15 @@
 (function attachGrade6CurriculumAlignment(global){
   "use strict";
 
-  const VERSION="1.0.1";
+  const VERSION="1.1.0";
   const SCRIPT=global.document?.currentScript||null;
   const CROSSWALK_URL=SCRIPT?.src?new URL("../grades/grade-06/data/subject-week-crosswalk.js",SCRIPT.src).href:"../../data/subject-week-crosswalk.js";
   const SUBJECT_PATH=/\/grades\/grade-06\/subjects\/([^/]+)(?:\/(?:index\.html)?)?\/?$/i;
   const WEEK_PATH=/\/grades\/grade-06\/subjects\/([^/]+)\/week-(\d{2})\.html$/i;
+  const WEEK_PLAN_PATH=/\/grades\/grade-06\/weekly-plans\/week-(\d{2})\.html$/i;
 
   function text(value){return String(value??"").trim()}
+  function pad(value){return String(Number(value)).padStart(2,"0")}
   function strongLabel(label,value){
     const frag=global.document.createDocumentFragment();
     const strong=global.document.createElement("strong");
@@ -43,6 +45,7 @@
       details.grade6-teacher-guidance summary{cursor:pointer;font-weight:700;color:#4e596b}
       details.grade6-teacher-guidance p{margin:8px 0 0}
       .grade6-crosswalk-note{margin:.5rem 0 0;font-size:.82rem;color:#667085}
+      .grade6-plan-aligned{border-color:rgba(106,85,37,.3)!important}
       @media(max-width:700px){.grade6-assignment-grid{grid-template-columns:1fr}.grade6-assignment-card{padding:18px 14px}}
       @media print{details.grade6-teacher-guidance{display:none!important}.grade6-assignment-card{box-shadow:none}}
     `;
@@ -85,7 +88,7 @@
     kicker.className="grade6-kicker";
     kicker.textContent="Weekly Subject Assignment";
     const h2=global.document.createElement("h2");
-    h2.textContent=`Week ${String(row.week).padStart(2,"0")} · ${subjectTitle}`;
+    h2.textContent=`Week ${pad(row.week)} · ${subjectTitle}`;
     const focus=global.document.createElement("p");
     focus.className="grade6-assignment-focus";
     focus.appendChild(strongLabel("Focus:",cell.focus));
@@ -134,13 +137,44 @@
     }
     global.document.documentElement.dataset.grade6CurriculumAligned="true";
   }
+  function renderWeeklyPlan(crosswalk,week){
+    const row=crosswalk?.weeks?.find(w=>Number(w.week)===Number(week));
+    if(!row)return;
+    ensureStyles();
+    const table=global.document.querySelector("main table");
+    if(table){
+      for(const tr of table.querySelectorAll("tr")){
+        const a=tr.querySelector('a[href*="../subjects/"]');
+        const match=text(a?.getAttribute("href")).match(/\.\.\/subjects\/([^/]+)\/week-\d{2}\.html/i);
+        if(!match)continue;
+        const cell=row.subjects?.[match[1]];
+        const tds=tr.querySelectorAll("td");
+        if(!cell||tds.length<3)continue;
+        tds[1].textContent=cell.focus;
+        tds[2].textContent=cell.objective;
+        tr.dataset.grade6Aligned="true";
+      }
+      table.closest(".week-card")?.classList.add("grade6-plan-aligned");
+    }
+    const packet=`../evidence/weekly-evidence-packet.html?week=${pad(week)}`;
+    const assessment=`../evidence/weekly-mastery-check.html?week=${pad(week)}`;
+    for(const a of global.document.querySelectorAll('a[href*="../printables/week-"]')){a.href=packet;a.textContent="Weekly Evidence Packet";}
+    for(const a of global.document.querySelectorAll('a[href*="../assessments/week-"][href$="-assessment.html"]')){a.href=assessment;a.textContent="Weekly Mastery Check";}
+    const heading=global.document.querySelector("main .heading");
+    if(heading&&!heading.querySelector(".grade6-crosswalk-note")){
+      const note=global.document.createElement("p");note.className="grade6-crosswalk-note";note.textContent="The subject breakdown and weekly evidence routes below are aligned to the canonical Grade 6 curriculum map.";heading.appendChild(note);
+    }
+    global.document.documentElement.dataset.grade6WeeklyPlanAligned="true";
+  }
   function apply(){
     const pathname=String(global.location?.pathname||"");
+    const weekPlanMatch=pathname.match(WEEK_PLAN_PATH);
     const weekMatch=pathname.match(WEEK_PATH);
     const subjectMatch=pathname.match(SUBJECT_PATH);
     const crosswalk=getCrosswalk();
     if(!crosswalk)return;
     ensureStyles();
+    if(weekPlanMatch)return renderWeeklyPlan(crosswalk,Number(weekPlanMatch[1]));
     if(weekMatch)return renderWeekPage(crosswalk,weekMatch[1],Number(weekMatch[2]));
     if(subjectMatch)return renderSubjectIndex(crosswalk,subjectMatch[1]);
   }
