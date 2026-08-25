@@ -41,7 +41,7 @@ for(const token of [
   'replaceLabeledParagraph(article,"Evidence:",data.cell.evidenceTask)',
   'Teacher Guidance',
   'Model the canonical weekly focus:',
-  'grade6-curriculum-aligned',
+  'grade6CurriculumAligned',
   'grade6-assignment-card'
 ]) expect(renderer.includes(token),`Grade 6 alignment renderer contract missing: ${token}`);
 
