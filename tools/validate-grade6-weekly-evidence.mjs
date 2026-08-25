@@ -142,16 +142,18 @@ for(const subject of course.subjects){
 }
 expect(subjectWeeks===324,"Expected all 324 Grade 6 subject-week pages.");
 
-for(const grade of ["07","08"]){
-  const gradeApp=read(`grades/grade-${grade}/assets/app.js`);
-  expect(gradeApp.includes("printables/week-"),`Grade ${grade} legacy printable routing must remain unchanged in this Grade 6 repair.`);
-  expect(gradeApp.includes("assessments/week-"),`Grade ${grade} legacy weekly assessment routing must remain unchanged in this Grade 6 repair.`);
-  expect(!gradeApp.includes("evidence/weekly-evidence-packet.html"),`Grade ${grade} must not inherit Grade 6 evidence routing.`);
-}
+const grade7App=read("grades/grade-07/assets/app.js");
+expect(grade7App.includes("evidence/weekly-evidence-packet.html"),"Grade 7 may use its own canonical evidence routing after its independent migration.");
+expect(grade7App.includes("evidence/weekly-mastery-check.html"),"Grade 7 may use its own canonical mastery routing after its independent migration.");
+
+const grade8App=read("grades/grade-08/assets/app.js");
+expect(grade8App.includes("printables/week-"),"Grade 8 legacy printable routing must remain unchanged until its own migration.");
+expect(grade8App.includes("assessments/week-"),"Grade 8 legacy weekly assessment routing must remain unchanged until its own migration.");
+expect(!grade8App.includes("evidence/weekly-evidence-packet.html"),"Grade 8 must not inherit Grade 6 or Grade 7 evidence routing.");
 
 for(const file of [evidencePath,navigatorPath,alignmentPath,appPath]){
   const result=spawnSync(process.execPath,["--check",path.join(root,file)],{encoding:"utf8"});
   expect(result.status===0,`${file} failed JavaScript syntax validation:\n${result.stderr||result.stdout}`);
 }
 
-console.log(`Grade 6 weekly evidence validation passed: 36 canonical weeks, 324 subject-week sources, nine aligned subjects per week, read-only printable evidence, 11-domain/22-point adult review, 18-point passing threshold, canonical dashboard/navigator/weekly-plan routes, and Grade 7–8 route isolation.`);
+console.log(`Grade 6 weekly evidence validation passed: 36 canonical weeks, 324 subject-week sources, nine aligned subjects per week, read-only printable evidence, 11-domain/22-point adult review, 18-point passing threshold, Grade 6 canonical routes, independent Grade 7 canonical migration, and Grade 8 route isolation.`);
