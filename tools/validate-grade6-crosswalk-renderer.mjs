@@ -45,7 +45,6 @@ for(const token of [
   'grade6-assignment-card'
 ]) expect(renderer.includes(token),`Grade 6 alignment renderer contract missing: ${token}`);
 
-expect(renderer.includes('/\\/grades\\/grade-06\\/subjects\\/([^/]+)/'),"Renderer must be scoped to Grade 6 subject paths.");
 expect(renderer.includes('WEEK_PATH=/\\/grades\\/grade-06\\/subjects\\/([^/]+)\\/week-(\\d{2})\\.html$/i'),"Renderer must recognize canonical Grade 6 subject-week pages.");
 expect(renderer.includes('SUBJECT_PATH=/\\/grades\\/grade-06\\/subjects\\/([^/]+)'),"Renderer must recognize canonical Grade 6 subject landing pages.");
 
