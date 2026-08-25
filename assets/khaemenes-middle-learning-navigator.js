@@ -163,10 +163,11 @@
     shell.appendChild(list);
 
     const mid=midyearBoundary();
+    const hasCanonicalReviews=grade==="06"||grade==="07";
     const reviews=node("div","middle-nav-review-centers");
     reviews.append(
-      buildReviewCard("Midyear Review Center",`Review Weeks 01–${pad(mid)} from the actual grade curriculum before opening the official Midterm.`,mid,"assessments/midterm.html","Open Official Midterm",state,grade==="06"?"assessments/midterm-review.html":null),
-      buildReviewCard("Final Course Review",`Review all ${DATA.weeks.length} weeks, especially any recorded score below ${MIN}%, before opening the official Final.`,DATA.weeks.length,"assessments/final-exam.html","Open Official Final",state,grade==="06"?"assessments/final-review.html":null)
+      buildReviewCard("Midyear Review Center",`Review Weeks 01–${pad(mid)} from the actual grade curriculum before opening the official Midterm.`,mid,"assessments/midterm.html","Open Official Midterm",state,hasCanonicalReviews?"assessments/midterm-review.html":null),
+      buildReviewCard("Final Course Review",`Review all ${DATA.weeks.length} weeks, especially any recorded score below ${MIN}%, before opening the official Final.`,DATA.weeks.length,"assessments/final-exam.html","Open Official Final",state,hasCanonicalReviews?"assessments/final-review.html":null)
     );
     shell.appendChild(reviews);
     section.appendChild(shell);
