@@ -1,0 +1,32 @@
+name: Grade 6 Subject-Week Crosswalk Validation
+
+on:
+  pull_request:
+    paths:
+      - "grades/grade-06/data/course-data.js"
+      - "grades/grade-06/data/subject-week-crosswalk.js"
+      - "tools/validate-grade6-subject-week-crosswalk.mjs"
+      - ".github/workflows/grade6-subject-week-crosswalk-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "grades/grade-06/data/course-data.js"
+      - "grades/grade-06/data/subject-week-crosswalk.js"
+      - "tools/validate-grade6-subject-week-crosswalk.mjs"
+      - ".github/workflows/grade6-subject-week-crosswalk-validation.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: Validate Grade 6 subject-by-week crosswalk
+        run: node tools/validate-grade6-subject-week-crosswalk.mjs
+      - name: Validate crosswalk JavaScript syntax
+        run: node --check grades/grade-06/data/subject-week-crosswalk.js
