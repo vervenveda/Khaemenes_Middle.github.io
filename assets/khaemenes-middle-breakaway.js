@@ -1,7 +1,7 @@
 (function attachKhaemenesMiddleBreakaway(global){
   "use strict";
 
-  const VERSION="1.2.0";
+  const VERSION="1.3.0";
   const HUB="https://vervenveda.com/Khaemenes_Middle.github.io/breakaway/";
   const ARCADE="https://vervenveda.com/arcade.github.io/";
   const NAIB_BRIDGE="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-middle-naib-bridge.js";
@@ -45,7 +45,7 @@
   function ensureGrade6Alignment(){
     if(!global.document||global.KhaemenesGrade6CurriculumAlignment)return;
     const pathname=String(global.location?.pathname||"");
-    if(!/\/grades\/grade-06\/subjects\//i.test(pathname))return;
+    if(!/\/grades\/grade-06\/(?:subjects|weekly-plans)\//i.test(pathname))return;
     if(global.document.querySelector(`script[data-khaemenes-grade6-alignment],script[src="${GRADE6_ALIGNMENT}"]`))return;
     const script=global.document.createElement("script");
     script.src=GRADE6_ALIGNMENT;
