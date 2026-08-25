@@ -1,0 +1,64 @@
+name: Grade 7 Weekly Evidence Validation
+
+on:
+  pull_request:
+    paths:
+      - "grades/grade-07/evidence/**"
+      - "grades/grade-07/assets/app.js"
+      - "grades/grade-07/assets/canonical-week-evidence.js"
+      - "grades/grade-07/assessments/weekly-assessments.html"
+      - "assets/khaemenes-grade7-curriculum-alignment.js"
+      - "assets/khaemenes-middle-learning-navigator.js"
+      - "tools/validate-grade7-weekly-evidence.mjs"
+      - "tools/validate-grade7-crosswalk-renderer.mjs"
+      - "tools/validate-grade7-subject-week-crosswalk.mjs"
+      - ".github/workflows/grade7-weekly-evidence-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "grades/grade-07/evidence/**"
+      - "grades/grade-07/assets/app.js"
+      - "grades/grade-07/assets/canonical-week-evidence.js"
+      - "grades/grade-07/assessments/weekly-assessments.html"
+      - "assets/khaemenes-grade7-curriculum-alignment.js"
+      - "assets/khaemenes-middle-learning-navigator.js"
+      - "tools/validate-grade7-weekly-evidence.mjs"
+      - "tools/validate-grade7-crosswalk-renderer.mjs"
+      - "tools/validate-grade7-subject-week-crosswalk.mjs"
+      - ".github/workflows/grade7-weekly-evidence-validation.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: Validate canonical Grade 7 crosswalk
+        run: node tools/validate-grade7-subject-week-crosswalk.mjs
+      - name: Validate Grade 7 curriculum renderer
+        run: node tools/validate-grade7-crosswalk-renderer.mjs
+      - name: Validate Grade 7 weekly evidence and mastery routes
+        run: node tools/validate-grade7-weekly-evidence.mjs
+      - name: Re-run Grade 6 renderer contract
+        run: node tools/validate-grade6-crosswalk-renderer.mjs
+      - name: Re-run Grade 6 weekly evidence contract
+        run: node tools/validate-grade6-weekly-evidence.mjs
+      - name: Re-run Middle School Learning Navigator contract
+        run: node tools/validate-middle-learning-navigator.mjs
+      - name: Re-run Middle School Study Scorebook contract
+        run: node tools/validate-middle-study-scorebook.mjs
+      - name: Re-run Middle School one-Mentor contract
+        run: node tools/validate-middle-naib-mentor-contract.mjs
+      - name: Re-run Middle School repository structure
+        run: node scripts/validate-middle-school.mjs
+      - name: Validate JavaScript syntax
+        run: |
+          node --check grades/grade-07/assets/canonical-week-evidence.js
+          node --check grades/grade-07/assets/app.js
+          node --check assets/khaemenes-grade7-curriculum-alignment.js
+          node --check assets/khaemenes-middle-learning-navigator.js
