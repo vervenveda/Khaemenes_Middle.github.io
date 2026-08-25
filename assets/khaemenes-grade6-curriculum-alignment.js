@@ -1,7 +1,7 @@
 (function attachGrade6CurriculumAlignment(global){
   "use strict";
 
-  const VERSION="1.0.0";
+  const VERSION="1.0.1";
   const SCRIPT=global.document?.currentScript||null;
   const CROSSWALK_URL=SCRIPT?.src?new URL("../grades/grade-06/data/subject-week-crosswalk.js",SCRIPT.src).href:"../../data/subject-week-crosswalk.js";
   const SUBJECT_PATH=/\/grades\/grade-06\/subjects\/([^/]+)(?:\/(?:index\.html)?)?\/?$/i;
@@ -107,9 +107,13 @@
     card.append(kicker,h2,focus,grid);
     return card;
   }
-  function collapseTeacherGuidance(article){
+  function collapseTeacherGuidance(article,cell,subjectTitle){
     const p=[...article.querySelectorAll("p")].find(el=>text(el.querySelector(":scope > strong:first-child")?.textContent).toLowerCase()==="teacher script:");
-    if(!p||p.closest("details.grade6-teacher-guidance"))return;
+    if(!p)return;
+    const guidance=`Name the subject: ${subjectTitle}. Model the canonical weekly focus: ${cell.focus}. Use the stated objective to guide instruction. Require evidence aligned to this task: ${cell.evidenceTask} Close by asking the learner to explain how the work meets this mastery target: ${cell.assessmentTarget}`;
+    p.replaceChildren(strongLabel("Teacher script:",guidance));
+    p.dataset.grade6Aligned="true";
+    if(p.closest("details.grade6-teacher-guidance"))return;
     const details=global.document.createElement("details");
     details.className="grade6-teacher-guidance";
     const summary=global.document.createElement("summary");summary.textContent="Teacher Guidance";
@@ -126,7 +130,7 @@
       replaceLabeledParagraph(article,"Focus:",data.cell.focus);
       replaceLabeledParagraph(article,"Objective:",data.cell.objective);
       replaceLabeledParagraph(article,"Evidence:",data.cell.evidenceTask);
-      collapseTeacherGuidance(article);
+      collapseTeacherGuidance(article,data.cell,subject.title);
     }
     global.document.documentElement.dataset.grade6CurriculumAligned="true";
   }
