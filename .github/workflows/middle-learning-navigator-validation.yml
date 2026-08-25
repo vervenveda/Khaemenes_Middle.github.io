@@ -1,0 +1,32 @@
+name: Middle School Learning Navigator Validation
+
+on:
+  pull_request:
+    paths:
+      - "grades/grade-06/**"
+      - "grades/grade-07/**"
+      - "grades/grade-08/**"
+      - "assets/khaemenes-middle-learning-navigator.js"
+      - "tools/validate-middle-learning-navigator.mjs"
+      - ".github/workflows/middle-learning-navigator-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "grades/grade-06/**"
+      - "grades/grade-07/**"
+      - "grades/grade-08/**"
+      - "assets/khaemenes-middle-learning-navigator.js"
+      - "tools/validate-middle-learning-navigator.mjs"
+      - ".github/workflows/middle-learning-navigator-validation.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+      - name: Validate Grades 6–8 learning navigator and review routes
+        run: node tools/validate-middle-learning-navigator.mjs
