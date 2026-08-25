@@ -1,7 +1,7 @@
 (function attachGrade6CurriculumAlignment(global){
   "use strict";
 
-  const VERSION="1.1.0";
+  const VERSION="1.1.1";
   const SCRIPT=global.document?.currentScript||null;
   const CROSSWALK_URL=SCRIPT?.src?new URL("../grades/grade-06/data/subject-week-crosswalk.js",SCRIPT.src).href:"../../data/subject-week-crosswalk.js";
   const SUBJECT_PATH=/\/grades\/grade-06\/subjects\/([^/]+)(?:\/(?:index\.html)?)?\/?$/i;
@@ -56,6 +56,17 @@
   function findCell(crosswalk,week,id){
     const row=crosswalk?.weeks?.find(w=>Number(w.week)===Number(week));
     return row?{row,cell:row.subjects?.[id]||null}:null;
+  }
+  function evidenceRoutes(week,prefix="../"){
+    return {
+      packet:`${prefix}evidence/weekly-evidence-packet.html?week=${pad(week)}`,
+      assessment:`${prefix}evidence/weekly-mastery-check.html?week=${pad(week)}`
+    };
+  }
+  function rewriteEvidenceLinks(root,week,prefix="../"){
+    const routes=evidenceRoutes(week,prefix);
+    for(const a of root.querySelectorAll('a[href*="printables/week-"]')){a.href=routes.packet;a.textContent="Weekly Evidence Packet";}
+    for(const a of root.querySelectorAll('a[href*="assessments/week-"][href$="-assessment.html"]')){a.href=routes.assessment;a.textContent="Weekly Mastery Check";}
   }
   function renderSubjectIndex(crosswalk,subjectId){
     if(!findSubject(crosswalk,subjectId))return;
@@ -135,6 +146,7 @@
       replaceLabeledParagraph(article,"Evidence:",data.cell.evidenceTask);
       collapseTeacherGuidance(article,data.cell,subject.title);
     }
+    rewriteEvidenceLinks(global.document,week,"../../");
     global.document.documentElement.dataset.grade6CurriculumAligned="true";
   }
   function renderWeeklyPlan(crosswalk,week){
@@ -156,10 +168,7 @@
       }
       table.closest(".week-card")?.classList.add("grade6-plan-aligned");
     }
-    const packet=`../evidence/weekly-evidence-packet.html?week=${pad(week)}`;
-    const assessment=`../evidence/weekly-mastery-check.html?week=${pad(week)}`;
-    for(const a of global.document.querySelectorAll('a[href*="../printables/week-"]')){a.href=packet;a.textContent="Weekly Evidence Packet";}
-    for(const a of global.document.querySelectorAll('a[href*="../assessments/week-"][href$="-assessment.html"]')){a.href=assessment;a.textContent="Weekly Mastery Check";}
+    rewriteEvidenceLinks(global.document,week,"../");
     const heading=global.document.querySelector("main .heading");
     if(heading&&!heading.querySelector(".grade6-crosswalk-note")){
       const note=global.document.createElement("p");note.className="grade6-crosswalk-note";note.textContent="The subject breakdown and weekly evidence routes below are aligned to the canonical Grade 6 curriculum map.";heading.appendChild(note);
