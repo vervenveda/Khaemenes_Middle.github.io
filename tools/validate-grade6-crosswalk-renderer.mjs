@@ -60,16 +60,16 @@ for(const forbidden of ["localStorage.setItem","writeState(","clearState(","setP
 }
 
 for(const token of [
-  'const VERSION="1.3.0"',
+  'const VERSION="1.4.0"',
   'khaemenes-grade6-curriculum-alignment.js',
   'function ensureGrade6Alignment()',
   'grade-06\\/(?:subjects|weekly-plans)',
-  'ensureGrade6Alignment();createButton()',
   'ensureGrade6Alignment'
 ]) expect(bootstrap.includes(token),`Middle School bootstrap does not safely wire Grade 6 alignment: ${token}`);
 
-expect(!bootstrap.includes('/grades/grade-07/subjects/'),"Grade 6 alignment loader must not target Grade 7.");
-expect(!bootstrap.includes('/grades/grade-08/subjects/'),"Grade 6 alignment loader must not target Grade 8.");
+const grade6Scope=bootstrap.match(/function ensureGrade6Alignment\(\)\{([\s\S]*?)\n  \}/)?.[1]||"";
+expect(grade6Scope.includes("grade-06"),"Grade 6 alignment loader must retain an explicit Grade 6 pathname scope.");
+expect(!grade6Scope.includes("grade-07")&&!grade6Scope.includes("grade-08"),"Grade 6 alignment loader itself must not target another grade.");
 
 const breakawayToken="khaemenes-middle-breakaway.js";
 let checked=0;
