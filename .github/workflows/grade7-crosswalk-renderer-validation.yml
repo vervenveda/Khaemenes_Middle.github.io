@@ -1,0 +1,56 @@
+name: Grade 7 Crosswalk Renderer Validation
+
+on:
+  pull_request:
+    paths:
+      - "assets/khaemenes-grade7-curriculum-alignment.js"
+      - "assets/khaemenes-middle-breakaway.js"
+      - "grades/grade-07/data/subject-week-crosswalk.js"
+      - "grades/grade-07/subjects/**"
+      - "grades/grade-07/weekly-plans/**"
+      - "tools/validate-grade7-subject-week-crosswalk.mjs"
+      - "tools/validate-grade7-crosswalk-renderer.mjs"
+      - "tools/validate-grade6-crosswalk-renderer.mjs"
+      - ".github/workflows/grade7-crosswalk-renderer-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "assets/khaemenes-grade7-curriculum-alignment.js"
+      - "assets/khaemenes-middle-breakaway.js"
+      - "grades/grade-07/data/subject-week-crosswalk.js"
+      - "grades/grade-07/subjects/**"
+      - "grades/grade-07/weekly-plans/**"
+      - "tools/validate-grade7-subject-week-crosswalk.mjs"
+      - "tools/validate-grade7-crosswalk-renderer.mjs"
+      - "tools/validate-grade6-crosswalk-renderer.mjs"
+      - ".github/workflows/grade7-crosswalk-renderer-validation.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: Validate canonical Grade 7 crosswalk
+        run: node tools/validate-grade7-subject-week-crosswalk.mjs
+      - name: Validate Grade 7 curriculum renderer and all subject surfaces
+        run: node tools/validate-grade7-crosswalk-renderer.mjs
+      - name: Re-run Grade 6 renderer contract after shared bootstrap expansion
+        run: node tools/validate-grade6-crosswalk-renderer.mjs
+      - name: Re-run Middle School Learning Navigator contract
+        run: node tools/validate-middle-learning-navigator.mjs
+      - name: Re-run Middle School Study Scorebook contract
+        run: node tools/validate-middle-study-scorebook.mjs
+      - name: Re-run Middle School one-Mentor contract
+        run: node tools/validate-middle-naib-mentor-contract.mjs
+      - name: Re-run Middle School repository structure
+        run: node scripts/validate-middle-school.mjs
+      - name: Validate shared runtime JavaScript syntax
+        run: |
+          node --check assets/khaemenes-grade7-curriculum-alignment.js
+          node --check assets/khaemenes-middle-breakaway.js
