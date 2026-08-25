@@ -11,6 +11,8 @@
 
   const MIN=Number(DATA.course?.passingScore)||80;
   const pad=n=>String(Number(n)).padStart(2,"0");
+  const packetHref=week=>grade==="06"?`evidence/weekly-evidence-packet.html?week=${pad(week)}`:`printables/week-${pad(week)}-packet.html`;
+  const weeklyAssessmentHref=week=>grade==="06"?`evidence/weekly-mastery-check.html?week=${pad(week)}`:`assessments/week-${pad(week)}-assessment.html`;
   const node=(tag,className,text)=>{
     const el=document.createElement(tag);
     if(className)el.className=className;
@@ -145,8 +147,8 @@
       const actions=node("div","actions");
       actions.append(
         link("Open Integrated Week",`weekly-plans/week-${pad(w.week)}.html`,"button gold"),
-        link("Printable Packet",`printables/week-${pad(w.week)}-packet.html`,"button"),
-        link("Weekly Assessment",`assessments/week-${pad(w.week)}-assessment.html`,"button")
+        link(grade==="06"?"Weekly Evidence Packet":"Printable Packet",packetHref(w.week),"button"),
+        link(grade==="06"?"Weekly Mastery Check":"Weekly Assessment",weeklyAssessmentHref(w.week),"button")
       );
       body.appendChild(actions);
 
