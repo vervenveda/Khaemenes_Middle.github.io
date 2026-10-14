@@ -87,11 +87,9 @@
     if(s.status==="ready"&&k){
       const scoped=unwrap(readJSON(k,null));
       if(scoped)return scoped;
-      const legacy=readJSON(LEGACY_KEY,null);
-      if(legacy){
-        writeJSON(k,{format:"khaemenes-course-state-v1",learnerId:s.learner.learnerId,courseId:COURSE_ID,source:"legacy-middle-grade-migration",updatedAt:new Date().toISOString(),state:legacy});
-        return legacy;
-      }
+      // Preserve older browser-wide records, but never silently claim they
+      // belong to whichever student happens to sign in on a shared device.
+      // Legacy data stays under LEGACY_KEY until a reviewed, explicit transfer.
       return f;
     }
     if(s.status==="placement-mismatch")return f;
