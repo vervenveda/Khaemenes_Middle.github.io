@@ -128,8 +128,8 @@ for(const token of [
   'grade==="06"?"assessments/final-review.html":null',
   'if(reviewHref)actions.append(link("Open Review Center",reviewHref,"button"))'
 ]) expect(navigator.includes(token),`Learning Navigator cumulative Grade 6 route contract missing: ${token}`);
-expect(navigator.includes('"assessments/midterm.html","Open Official Midterm"'),"Learning Navigator must retain the official Midterm doorway.");
-expect(navigator.includes('"assessments/final-exam.html","Open Official Final"'),"Learning Navigator must retain the official Final doorway.");
+expect(navigator.includes('grade==="06"?"assessments/midterm.html":"evidence/midterm.html","Open Official Midterm"'),"Learning Navigator must retain the official Midterm doorway.");
+expect(navigator.includes('grade==="06"?"assessments/final-exam.html":"evidence/final-exam.html","Open Official Final"'),"Learning Navigator must retain the official Final doorway.");
 
 for(const token of ["midterm-review.html","Official Midterm","final-review.html","Official Final"]){
   expect(assessmentIndex.includes(token),`Grade 6 assessment directory cumulative route missing: ${token}`);
