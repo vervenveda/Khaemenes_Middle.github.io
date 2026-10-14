@@ -1,0 +1,13 @@
+/* Verve N Veda balanced campus skin · public presentation only · 2026-10-14 */
+:root{--vnv-radius:7px}
+html body :is(button,.btn,.button,[role="button"],input[type="submit"],input[type="button"],.card,.course-card,.grade-card,.portal-card,.resource-card,.tool-card,.feature-card,.tile,.panel,.door){border-radius:7px!important}
+html body :is(h1,h2,h3,h4,.eyebrow,.kicker,.subtitle,.hero-subtitle){text-align:center;line-height:1.4;hyphens:manual;word-break:normal;overflow-wrap:normal;text-wrap:balance}
+html body :is(p,li,button,a,label,small){hyphens:manual;word-break:normal}
+html body :is(.card-grid,.course-grid,.grade-grid,.portal-grid,.resource-grid,.tool-grid,.cards){align-items:stretch}
+html body :is(.card-grid,.course-grid,.grade-grid,.portal-grid,.resource-grid,.tool-grid,.cards)>:is(.card,.course-card,.grade-card,.portal-card,.resource-card,.tool-card,.feature-card,.tile){height:100%;min-width:0;display:flex;flex-direction:column}
+html body :is(.card,.course-card,.grade-card,.portal-card,.resource-card,.tool-card) :is(.actions,.card-actions,.buttons){margin-top:auto}
+html body :is(.hero,.hero-inner,.hero-copy){text-align:center}
+html body :is(.hero,.hero-inner) .eyebrow{font-size:14px!important;letter-spacing:.16em;line-height:1.5!important}
+html body :is(.hero,.hero-inner) h1{font-size:clamp(33px,5vw,55px)!important;line-height:1.22!important}
+html body :is(input,textarea,select){max-width:100%;border-radius:7px}
+html body :is(pre,code,.url){overflow-wrap:anywhere}
