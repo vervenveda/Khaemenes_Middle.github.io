@@ -86,7 +86,7 @@ khaemenes.course:<learnerId>:middle-grade-08
 
 Previewing another grade does not change placement, identity, mastery, or academic records.
 
-Legacy browser-local records are preserved for compatibility, but canonical learner-scoped records take precedence for enrolled Academy learners.
+Legacy browser-local records remain intact for compatibility, but are **not automatically imported** into a newly active Academy learner's record. This prevents an anonymous record left on a shared device from being assigned to the wrong student. Any transfer needs a deliberate adult-reviewed process. Enrolled learner-scoped records take precedence.
 
 ## Mastery Boundary
 
@@ -143,3 +143,18 @@ Preschool / Kinder Garden → Elementary Grades 1–5 → **Middle Grades 6–8*
 Khaemenes Academy™ · Verve N Veda Educational Network
 
 All rights reserved.
+
+
+## October 2026 — Middle School Forensic Hardening
+
+- Grades 6–8 reject invalid weekly score inputs, preserve the 80% standard, and guard against stale active-learner state.
+- Certificates check exactly Weeks 1–36 with finite numerical scores before their existing midterm, final, portfolio, and Grade 8 transition gates.
+- Academic records stored in the browser are **not independently authenticated**. A local certificate printout is a progress artifact; official Academy awarding still requires an authorized educator's independent review.
+- Grade 8 independent mathematics lessons now include worked examples, exercises, checks, and a 36-week subject-specific practice bank.
+- Grade 8's canonical evidence renderer offers a study packet and an adult-reviewed 22-point mastery worksheet per week. Grade 8 lesson links, weekly assessment index, learning navigator, and dashboard use these canonical routes. Legacy printable files remain present.
+- Root resource links are restricted to the public Academy ecosystem and safely escaped. The resource directory exposes further results with Load More instead of silently hiding matches after 100.
+- `node tools/validate-middle-forensic-integrity.mjs` checks all local static HTML links, all JavaScript syntax, course structure, and certificate gates. The corresponding GitHub Actions workflow runs on `main`.
+
+### Local and Online Operation
+
+The curriculum and printable pages are static first-party resources. Some convenience features (the shared Academy learner registry, mentorship bridges, and the federation of resources) load from `vervenveda.com`, so those connected features may be unavailable without a network connection. Local browser records do not automatically synchronize between devices. No external authentication authority is implied by the public pages.
