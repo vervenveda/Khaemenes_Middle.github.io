@@ -1,0 +1,26 @@
+name: Grade 8 Canonical Evidence Validation
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/khaemenes-grade8*'
+      - 'assets/khaemenes-middle-breakaway.js'
+      - 'assets/khaemenes-middle-learning-navigator.js'
+      - 'grades/grade-08/**'
+      - 'tools/validate-grade8-canonical-evidence.mjs'
+      - '.github/workflows/grade8-canonical-evidence-validation.yml'
+  pull_request:
+    paths:
+      - 'assets/khaemenes-grade8*'
+      - 'grades/grade-08/**'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tools/validate-grade8-canonical-evidence.mjs
