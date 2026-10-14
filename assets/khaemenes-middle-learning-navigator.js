@@ -11,8 +11,8 @@
 
   const MIN=Number(DATA.course?.passingScore)||80;
   const pad=n=>String(Number(n)).padStart(2,"0");
-  const packetHref=week=>grade==="06"?`evidence/weekly-evidence-packet.html?week=${pad(week)}`:grade==="07"?`evidence/weekly-evidence-packet.html?week=${pad(week)}`:`printables/week-${pad(week)}-packet.html`;
-  const weeklyAssessmentHref=week=>grade==="06"?`evidence/weekly-mastery-check.html?week=${pad(week)}`:grade==="07"?`evidence/weekly-mastery-check.html?week=${pad(week)}`:`assessments/week-${pad(week)}-assessment.html`;
+  const packetHref=week=>grade==="06"?`evidence/weekly-evidence-packet.html?week=${pad(week)}`:grade==="07"?`evidence/weekly-evidence-packet.html?week=${pad(week)}`:`evidence/weekly-evidence-packet.html?week=${pad(week)}`;
+  const weeklyAssessmentHref=week=>grade==="06"?`evidence/weekly-mastery-check.html?week=${pad(week)}`:grade==="07"?`evidence/weekly-mastery-check.html?week=${pad(week)}`:`evidence/weekly-mastery-check.html?week=${pad(week)}`;
   const node=(tag,className,text)=>{
     const el=document.createElement(tag);
     if(className)el.className=className;
