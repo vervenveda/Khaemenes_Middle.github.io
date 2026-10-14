@@ -67,6 +67,16 @@
     (global.document.head||global.document.documentElement).appendChild(script);
   }
 
+  function ensureGrade8MathDepth(){
+    if(!global.document||global.KhaemenesGrade8MathDepth)return;
+    if(!/\/grades\/grade-08\/subjects\/mathematics\/week-\d{2}\.html$/i.test(String(global.location?.pathname||"")))return;
+    const src="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-grade8-math-depth.js";
+    if(global.document.querySelector('script[data-khaemenes-grade8-math-depth]'))return;
+    const script=global.document.createElement("script");
+    script.src=src;script.async=false;script.dataset.khaemenesGrade8MathDepth="1";
+    (global.document.head||global.document.documentElement).appendChild(script);
+  }
+
   function createButton(){
     ensureNAIBBridge();
     if(!global.document||global.document.getElementById("khaemenesBreakawayButton"))return;
@@ -88,7 +98,7 @@
 
   function recommend(){return inferActivity();}
 
-  global.KhaemenesMiddleBreakaway=Object.freeze({version:VERSION,hub:HUB,activities,recommend,createButton,ensureNAIBBridge,ensureGrade6Alignment,ensureGrade7Alignment});
-  const boot=()=>{ensureNAIBBridge();ensureGrade6Alignment();ensureGrade7Alignment();createButton();};
+  global.KhaemenesMiddleBreakaway=Object.freeze({version:VERSION,hub:HUB,activities,recommend,createButton,ensureNAIBBridge,ensureGrade6Alignment,ensureGrade7Alignment,ensureGrade8MathDepth});
+  const boot=()=>{ensureNAIBBridge();ensureGrade6Alignment();ensureGrade7Alignment();ensureGrade8MathDepth();createButton();};
   if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",boot,{once:true});else boot();
 })(window);
