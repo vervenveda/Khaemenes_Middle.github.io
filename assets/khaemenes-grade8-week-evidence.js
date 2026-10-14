@@ -14,6 +14,7 @@ const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefine
 const link=(label,href)=>{const a=el("a",label,"button");a.href=href;return a};
 if(!week){mount.append(el("p","Unable to read this week's curriculum. Return to the Grade 8 portal."));return}
 const theme=String(week.theme||week.title);
+mount.replaceChildren();
 const model=MATH[number]||null;
 function task(subject){
  const title=week.title;
