@@ -77,6 +77,21 @@
     (global.document.head||global.document.documentElement).appendChild(script);
   }
 
+  function rewriteGrade8EvidenceLinks(){
+    const pathname=String(global.location?.pathname||"");
+    const match=pathname.match(/\/grades\/grade-08\/(?:subjects\/[^/]+\/|weekly-plans\/)week-(\d{2})\.html$/i);
+    if(!match||!global.document)return;
+    const week=match[1],prefix=pathname.includes("/subjects/")?"../../":"../";
+    for(const a of global.document.querySelectorAll('a[href*="printables/week-"]')){
+      a.href=prefix+"evidence/weekly-evidence-packet.html?week="+week;
+      a.textContent="Open Weekly Evidence Packet";
+    }
+    for(const a of global.document.querySelectorAll('a[href*="assessments/week-"][href$="-assessment.html"]')){
+      a.href=prefix+"evidence/weekly-mastery-check.html?week="+week;
+      a.textContent="Open Weekly Mastery Check";
+    }
+  }
+
   function createButton(){
     ensureNAIBBridge();
     if(!global.document||global.document.getElementById("khaemenesBreakawayButton"))return;
@@ -99,6 +114,6 @@
   function recommend(){return inferActivity();}
 
   global.KhaemenesMiddleBreakaway=Object.freeze({version:VERSION,hub:HUB,activities,recommend,createButton,ensureNAIBBridge,ensureGrade6Alignment,ensureGrade7Alignment,ensureGrade8MathDepth});
-  const boot=()=>{ensureNAIBBridge();ensureGrade6Alignment();ensureGrade7Alignment();ensureGrade8MathDepth();createButton();};
+  const boot=()=>{ensureNAIBBridge();ensureGrade6Alignment();ensureGrade7Alignment();ensureGrade8MathDepth();rewriteGrade8EvidenceLinks();createButton();};
   if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",boot,{once:true});else boot();
 })(window);
