@@ -2,8 +2,7 @@
 (function(){
 "use strict";
 const matched=String(location.pathname).match(/\/grades\/grade-08\/subjects\/mathematics\/week-(\d{2})\.html$/i);
-if(!matched)return;
-const week=Number(matched[1]);
+const week=matched?Number(matched[1]):0;
 const lessons={
 1:["Mathematical baseline and reasoning","Estimate 19×6 as 20×6=120, then subtract 6 to get 114.","Compute 18×7 using a mental strategy, and show why it works.","18×(5+2)=90+36=126.","An estimate checks reasonableness but does not replace exact calculation."],
 2:["Linear patterns and rate of change","Points (1,4) and (3,10): slope=(10−4)/(3−1)=3; y=3x+1 fits both.","Find the slope and equation through (2,7) and (5,16).","Slope=9/3=3. With (2,7), b=7−3×2=1; y=3x+1.","Subtract y-values and x-values in matching point order; never divide by zero."],
@@ -42,6 +41,8 @@ const lessons={
 35:["Graph evidence and presentation","A chart labeled 0,10,20 on the y-axis makes a rise from 10 to 20 visible without hiding the baseline.","A quantity rises from 30 to 45. Give the numerical and percent change.","15; 15/30=50%.","A truncated axis can exaggerate a visual difference."],
 36:["Final review and transition","The line y=2x−1 gives y=7 at x=4. Checking by substitution confirms the result.","Solve 2(x+3)=16 and evaluate y=3x−2 using that x.","x=5; y=13.","A final answer without substitution or units can hide errors."]
 };
+window.KhaemenesGrade8MathBank=Object.freeze(lessons);
+if(!matched)return;
 const lesson=lessons[week];if(!lesson)return;
 const articles=[...document.querySelectorAll("main article.lesson")];
 if(articles.length<5)return;
