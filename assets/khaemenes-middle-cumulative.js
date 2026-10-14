@@ -2,7 +2,7 @@
 (function(){
 "use strict";
 const path=String(location.pathname||"");
-const match=path.match(/\/grades\/grade-(0[78])\/assessments\/(midterm|final-exam)\.html$/i);
+const match=path.match(/\/grades\/grade-(0[78])\/(?:assessments|evidence)\/(midterm|final-exam)\.html$/i);
 if(!match)return;
 const grade=match[1],isMidterm=match[2]==="midterm";
 const DATA=window["KHAE_GRADE"+Number(grade)+"_DATA"];
