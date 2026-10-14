@@ -577,6 +577,7 @@ footer{padding:36px 20px;color:rgba(255,255,255,.64);background:#030a11;border-t
     if(has("literature","history","archive","research","search","reading","language","linguistic","philosophy")) return "research";
     return "core";
   }
+  function safeResourceURL(value){try{const u=new URL(String(value||""),location.href);if(u.protocol!=="https:"||u.username||u.password)return null;if(!["vervenveda.com","www.vervenveda.com","vervenveda.github.io","khaemenesacademy.github.io"].includes(u.hostname.toLowerCase()))return null;return u.href}catch{return null}}
   function eligible(r){
     if(!r||typeof r!=="object"||!r.url) return false;
     if(r.recommendable===false||r.mentorEligible===false) return false;
@@ -584,7 +585,7 @@ footer{padding:36px 20px;color:rgba(255,255,255,.64);background:#030a11;border-t
     const audiences=(r.audiences||[]).map(normalize);
     // Middle School dynamic resources must be explicitly audience-safe.
     if(!audiences.some(a=>["middle","middle school","parent","educator"].includes(a))) return false;
-    try{return new URL(r.url,location.href).protocol==="https:"}catch{return false}
+    return !!safeResourceURL(r.url)
   }
   function canonicalURL(url){
     try{
@@ -612,7 +613,7 @@ footer{padding:36px 20px;color:rgba(255,255,255,.64);background:#030a11;border-t
         category:classify(r),
         kind:r.resourceType||r.classification||"Resource",
         icon:(r.title||"R").replace(/[^A-Za-z0-9]/g,"").slice(0,2).toUpperCase()||"R",
-        url:r.url,
+        url:safeResourceURL(r.url),
         description:r.description||"Connected Middle School learning resource.",
         repository:r.repository||r.sourceId||"Verve N Veda",
         tags:[...(r.tags||[]),...(r.skills||[]),...(r.domains||[])],
@@ -629,7 +630,8 @@ footer{padding:36px 20px;color:rgba(255,255,255,.64);background:#030a11;border-t
     window.dispatchEvent(new CustomEvent("khaemenes-middle-directory-ready",{detail:summary()}));
   }
 
-  const state={query:"",category:"all",favorites:false};
+  const state={query:"",category:"all",favorites:false,shown:100};
+  const more=document.createElement("button");more.type="button";more.className="tool-button";more.textContent="Load More Resources";more.id="middleMoreResources";$("toolGrid").insertAdjacentElement("afterend",more);more.onclick=()=>{state.shown+=100;renderResources()};
   function getFavorites(){const raw=readJSON(FAVORITES_KEY,[]);return Array.isArray(raw)?raw:[]}
   function setFavorites(value){writeJSON(FAVORITES_KEY,[...new Set(value)]);$("favoriteCount").textContent=getFavorites().length}
   function filtered(){
@@ -643,10 +645,11 @@ footer{padding:36px 20px;color:rgba(255,255,255,.64);background:#030a11;border-t
     $("category").innerHTML=Object.entries(CATEGORIES).map(([value,label])=>`<option value="${value}">${label}</option>`).join("");
   }
   function renderResources(){
-    const list=filtered(),favorites=getFavorites();
-    $("toolGrid").innerHTML=list.slice(0,100).map(r=>`<article class="tool-card"><div class="tool-top"><span class="tool-icon" style="--accent:${r.category==="creative"?"#b8715d":r.category==="stem"?"#6e97ad":r.category==="games"?"#776b94":r.category==="tools"?"#4f7f7a":"#203a4b"}">${escapeHTML(r.icon||"R")}</span><button class="favorite" type="button" data-favorite="${escapeHTML(r.id)}" aria-pressed="${favorites.includes(r.id)}" aria-label="${favorites.includes(r.id)?"Remove":"Add"} ${escapeHTML(r.title)} ${favorites.includes(r.id)?"from":"to"} My Shelf">${favorites.includes(r.id)?"★":"☆"}</button></div><span class="badge">${escapeHTML(r.kind||"Resource")}</span><h3>${escapeHTML(r.title)}</h3><p>${escapeHTML(r.description||"Connected learning resource.")}</p><span class="destination">${escapeHTML(CATEGORIES[r.category]||r.category)}</span><a class="tool-link" href="${r.url}">Open Resource</a></article>`).join("");
+    const list=filtered(),favorites=getFavorites(),displayed=list.slice(0,state.shown);
+    more.hidden=displayed.length>=list.length;
+    $("toolGrid").innerHTML=displayed.map(r=>`<article class="tool-card"><div class="tool-top"><span class="tool-icon" style="--accent:${r.category==="creative"?"#b8715d":r.category==="stem"?"#6e97ad":r.category==="games"?"#776b94":r.category==="tools"?"#4f7f7a":"#203a4b"}">${escapeHTML(r.icon||"R")}</span><button class="favorite" type="button" data-favorite="${escapeHTML(r.id)}" aria-pressed="${favorites.includes(r.id)}" aria-label="${favorites.includes(r.id)?"Remove":"Add"} ${escapeHTML(r.title)} ${favorites.includes(r.id)?"from":"to"} My Shelf">${favorites.includes(r.id)?"★":"☆"}</button></div><span class="badge">${escapeHTML(r.kind||"Resource")}</span><h3>${escapeHTML(r.title)}</h3><p>${escapeHTML(r.description||"Connected learning resource.")}</p><span class="destination">${escapeHTML(CATEGORIES[r.category]||r.category)}</span><a class="tool-link" href="${escapeHTML(r.url)}">Open Resource</a></article>`).join("");
     const source=federationMeta.generatedAt?` · federation ${new Date(federationMeta.generatedAt).toLocaleString()}`:federationMeta.error?" · safe core fallback":"";
-    $("status").textContent=`Showing ${list.length} of ${resources.length} Middle School resources${source}.`;
+    $("status").textContent=`Showing ${displayed.length} of ${list.length} matching Middle School resources (${resources.length} available)${source}.`;
     $("empty").classList.toggle("show",list.length===0);
     $("favoriteCount").textContent=favorites.length;
     $$("[data-favorite]").forEach(button=>button.addEventListener("click",()=>{
@@ -655,9 +658,9 @@ footer{padding:36px 20px;color:rgba(255,255,255,.64);background:#030a11;border-t
       setFavorites(next);renderResources();
     }));
   }
-  $("search").addEventListener("input",e=>{state.query=e.target.value.trim();renderResources()});
-  $("category").addEventListener("change",e=>{state.category=e.target.value;renderResources()});
-  $("favorites").addEventListener("click",()=>{state.favorites=!state.favorites;$("favorites").setAttribute("aria-pressed",String(state.favorites));renderResources()});
+  $("search").addEventListener("input",e=>{state.query=e.target.value.trim();state.shown=100;renderResources()});
+  $("category").addEventListener("change",e=>{state.category=e.target.value;state.shown=100;renderResources()});
+  $("favorites").addEventListener("click",()=>{state.favorites=!state.favorites;state.shown=100;$("favorites").setAttribute("aria-pressed",String(state.favorites));renderResources()});
   $("random").addEventListener("click",()=>{const pool=filtered();if(!pool.length)return toast("No resource is available in the current filter.");location.href=pool[Math.floor(Math.random()*pool.length)].url});
 
   function renderNetwork(){
@@ -683,7 +686,7 @@ footer{padding:36px 20px;color:rgba(255,255,255,.64);background:#030a11;border-t
       rows.push(...resources.filter(r=>resourceText(r).includes(q)).slice(0,25).map(r=>({group:"Connected Resources",icon:r.icon||"R",title:r.title,description:r.description||r.repository,url:r.url})));
     }
     const groups=[...new Set(rows.map(r=>r.group))];
-    $("drawerContent").innerHTML=groups.map(group=>`<p class="menu-group">${escapeHTML(group)}</p><div class="menu-list">${rows.filter(r=>r.group===group).map(r=>`<a class="menu-link" href="${r.url}"><i>${escapeHTML(r.icon)}</i><span><strong>${escapeHTML(r.title)}</strong><small>${escapeHTML(r.description)}</small></span><span>›</span></a>`).join("")}</div>`).join("")||'<p class="menu-group">No matching destination</p>';
+    $("drawerContent").innerHTML=groups.map(group=>`<p class="menu-group">${escapeHTML(group)}</p><div class="menu-list">${rows.filter(r=>r.group===group).map(r=>`<a class="menu-link" href="${escapeHTML(r.url)}"><i>${escapeHTML(r.icon)}</i><span><strong>${escapeHTML(r.title)}</strong><small>${escapeHTML(r.description)}</small></span><span>›</span></a>`).join("")}</div>`).join("")||'<p class="menu-group">No matching destination</p>';
     $$(".menu-link",$("drawerContent")).forEach(link=>link.addEventListener("click",closeDrawer));
   }
   function openDrawer(){
