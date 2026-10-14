@@ -1,0 +1,14 @@
+/* Khaemenes Academy · shared sacred-number presentation standard.
+   Opt-in only: preserve animations, theme backgrounds, lessons, gates, local data and STOS. */
+:root{--khae-radius:7px}
+:where(button,.btn,.button,[role="button"],input[type="button"],input[type="submit"],input[type="reset"],.card,.course-card,.grade-card,.portal-card,.lesson-card,.resource-card,.tool-card,.tile,.panel,.door){border-radius:7px!important}
+:where(h1,h2,h3,h4,h5,h6){text-align:center;text-wrap:balance;line-height:1.35;hyphens:none;word-break:normal;overflow-wrap:normal}
+:where(.eyebrow,.kicker,.overline){font-size:14px;line-height:1.5;word-break:normal;hyphens:none;text-align:center}
+:where(.card,.course-card,.grade-card,.portal-card,.lesson-card,.resource-card,.tool-card,.tile,.panel,.door) :where(h2,h3,h4){text-align:center}
+:where(.card-grid,.course-grid,.grade-grid,.portal-grid,.lesson-grid,.resource-grid,.tool-grid,.tile-grid){align-items:stretch}
+:where(.card-grid,.course-grid,.grade-grid,.portal-grid,.lesson-grid,.resource-grid,.tool-grid,.tile-grid) > :where(.card,.course-card,.grade-card,.portal-card,.lesson-card,.resource-card,.tool-card,.tile,.door){height:100%;min-width:0;display:flex;flex-direction:column}
+:where(.card-grid,.course-grid,.grade-grid,.portal-grid,.lesson-grid,.resource-grid,.tool-grid,.tile-grid) > :where(.card,.course-card,.grade-card,.portal-card,.lesson-card,.resource-card,.tool-card,.tile,.door) :where(.actions,.card-actions,.buttons){margin-top:auto}
+:where(.card,.course-card,.grade-card,.portal-card,.lesson-card,.resource-card,.tool-card,.tile,.panel,.door){overflow-wrap:normal;word-break:normal;hyphens:manual}
+:where(a,p,li,button,label){word-break:normal;hyphens:manual}
+:where(pre,code,.url){overflow-wrap:anywhere}
+@media(max-width:640px){:where(h1,h2,h3){max-width:100%}}
