@@ -5,11 +5,14 @@
   let state={};
   try{state=CONT?.readState?.({})||{};}catch{}
 
-  const vals=Object.values(state.weekly||{}).map(Number).filter(v=>Number.isFinite(v)&&v>0);
-  const avg=vals.length?Math.round(vals.reduce((a,b)=>a+b,0)/vals.length):0;
-  const done=Object.values(state.weekly||{}).filter(v=>Number(v)>=80).length;
+  const weekly=state.weekly&&typeof state.weekly==="object"&&!Array.isArray(state.weekly)?state.weekly:{};
+  const keys=Array.from({length:36},(_,i)=>String(i+1));
+  const validWeeks=Object.keys(weekly).length===36&&keys.every(k=>Object.prototype.hasOwnProperty.call(weekly,k)&&typeof weekly[k]==="number"&&Number.isFinite(weekly[k])&&weekly[k]>=0&&weekly[k]<=100);
+  const vals=keys.map(k=>Number(weekly[k]));
+  const avg=validWeeks?Math.round(vals.reduce((x,y)=>x+y,0)/36):0;
+  const done=validWeeks?vals.filter(v=>v>=80).length:0;
   const placementOK=context.status!=="placement-mismatch";
-  const gatesOK=done===36&&vals.length===36&&avg>=80&&Number(state.midterm||0)>=80&&Number(state.final||0)>=80&&!!state.portfolio;
+  const gatesOK=validWeeks&&done===36&&avg>=80&&Number(state.midterm||0)>=80&&Number(state.final||0)>=80&&!!state.portfolio;
   const ok=placementOK&&gatesOK;
   const rawName=context.status==="ready"?context.learner.nickname:(state.student||"Seventh Grade Scholar");
   const name=String(rawName).replace(/[<>&]/g,"");
