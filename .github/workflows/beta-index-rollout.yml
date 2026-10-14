@@ -1,7 +1,10 @@
 name: Beta Program index rollout
 
 on:
-  workflow_dispatch:
+  push:
+    paths:
+      - '**/index.html'
+      - '.github/workflows/beta-index-rollout.yml'
 
 permissions:
   contents: write
