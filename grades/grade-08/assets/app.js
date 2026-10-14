@@ -5,7 +5,10 @@
   const blank=()=>({student:"Eighth Grade Scholar",weekly:{},midterm:0,final:0,portfolio:false,transition:false});
   function readState(){try{if(CONT?.readState)return CONT.readState(blank())||blank();if(window.KhaemenesFamilyRegistry?.getLearner?.())return blank();return JSON.parse(localStorage.getItem(KEY))||blank()}catch{return blank()}}
   let state=readState();
-  const save=()=>CONT?.writeState?CONT.writeState(state):localStorage.setItem(KEY,JSON.stringify(state));
+  const recordScope=()=>{const c=CONT?.status?.();return c?.status==="ready"?"learner:"+c.learner.learnerId:c?.status||"legacy-local"};
+  let loadedScope=recordScope();
+  function save(){if(recordScope()!==loadedScope)return false;try{if(CONT?.writeState)return CONT.writeState(state);if(window.KhaemenesFamilyRegistry?.getLearner?.())return false;localStorage.setItem(KEY,JSON.stringify(state));return true}catch{return false}}
+  function persist(){if(save())return true;alert("Changes were not saved. Check browser storage and active learner selection, then reload.");return false}
   const hasWeekScore=w=>Object.prototype.hasOwnProperty.call(state.weekly||{},String(w))||Object.prototype.hasOwnProperty.call(state.weekly||{},w);
   const recordedWeekScores=()=>DATA.weeks.filter(w=>hasWeekScore(w.week)).map(w=>Math.max(0,Math.min(100,Number(state.weekly[w.week]??0))));
   const weeklyAverage=()=>{const v=recordedWeekScores();return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0};
