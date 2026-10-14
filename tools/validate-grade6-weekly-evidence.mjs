@@ -103,8 +103,8 @@ for(const token of [
   'const weeklyAssessmentHref=week=>grade==="06"?',
   'evidence/weekly-evidence-packet.html?week=',
   'evidence/weekly-mastery-check.html?week=',
-  '`printables/week-${pad(week)}-packet.html`',
-  '`assessments/week-${pad(week)}-assessment.html`'
+  '`evidence/weekly-evidence-packet.html?week=${pad(week)}`',
+  '`evidence/weekly-mastery-check.html?week=${pad(week)}`'
 ]) expect(navigator.includes(token),`Middle School navigator Grade 6/7/8 route contract missing: ${token}`);
 
 for(const token of [
@@ -147,9 +147,9 @@ expect(grade7App.includes("evidence/weekly-evidence-packet.html"),"Grade 7 may u
 expect(grade7App.includes("evidence/weekly-mastery-check.html"),"Grade 7 may use its own canonical mastery routing after its independent migration.");
 
 const grade8App=read("grades/grade-08/assets/app.js");
-expect(grade8App.includes("printables/week-"),"Grade 8 legacy printable routing must remain unchanged until its own migration.");
-expect(grade8App.includes("assessments/week-"),"Grade 8 legacy weekly assessment routing must remain unchanged until its own migration.");
-expect(!grade8App.includes("evidence/weekly-evidence-packet.html"),"Grade 8 must not inherit Grade 6 or Grade 7 evidence routing.");
+expect(grade8App.includes("evidence/weekly-evidence-packet.html"),"Grade 8 uses its independently implemented canonical printable.");
+expect(grade8App.includes("evidence/weekly-mastery-check.html"),"Grade 8 uses its independently implemented canonical mastery check.");
+expect(read("grades/grade-08/evidence/weekly-mastery-check.html").includes("khaemenes-grade8-week-evidence.js"),"Grade 8 independent evidence renderer must exist.");
 
 for(const file of [evidencePath,navigatorPath,alignmentPath,appPath]){
   const result=spawnSync(process.execPath,["--check",path.join(root,file)],{encoding:"utf8"});
