@@ -152,7 +152,7 @@
     const midActions=node("div","actions");midActions.append(link("Open Midyear Review","#learning-navigator","button"),link("Open Official Midterm",grade==="06"?"assessments/midterm.html":"evidence/midterm.html","button gold"));midCard.appendChild(midActions);
     const finalCard=node("article","middle-score-card");
     finalCard.append(node("h3","","Official Final & Completion Evidence"),node("p","",`Recorded final: ${displayCumulative(fin)} · Portfolio: ${portfolio?"complete":"pending"}${gradeNumber===8?` · High School transition plan: ${transition?"complete":"pending"}`:""}. Record completion snapshot: ${recordComplete?"all current grade gates met":"one or more grade gates remain"}.`),node("p","",`The certificate page and authorized Academy/adult review remain the completion authority. This scorebook is a study view of the same learner record.`));
-    const finalActions=node("div","actions");finalActions.append(link("Open Final Review","#learning-navigator","button"),link("Open Official Final","assessments/final-exam.html","button gold"),link("Certificate Record","records/certificate.html","button"));finalCard.appendChild(finalActions);
+    const finalActions=node("div","actions");finalActions.append(link("Open Final Review","#learning-navigator","button"),link("Open Official Final",grade==="06"?"assessments/final-exam.html":"evidence/final-exam.html","button gold"),link("Certificate Record","records/certificate.html","button"));finalCard.appendChild(finalActions);
     cumulative.append(midCard,finalCard);shell.appendChild(cumulative);
     section.appendChild(shell);
 
