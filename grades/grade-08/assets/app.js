@@ -3,7 +3,7 @@
   const DATA = window.KHAE_GRADE8_DATA, KEY = "khaemenes_grade8_high_school_readiness_36_aplusplus_v1", CONT = window.KhaemenesGradeContinuity;
   const $ = id => document.getElementById(id), esc = v => String(v ?? "").replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const blank=()=>({student:"Eighth Grade Scholar",weekly:{},midterm:0,final:0,portfolio:false,transition:false});
-  function readState(){try{return CONT?.readState?.(blank())||JSON.parse(localStorage.getItem(KEY))||blank()}catch{return blank()}}
+  function readState(){try{if(CONT?.readState)return CONT.readState(blank())||blank();if(window.KhaemenesFamilyRegistry?.getLearner?.())return blank();return JSON.parse(localStorage.getItem(KEY))||blank()}catch{return blank()}}
   let state=readState();
   const save=()=>CONT?.writeState?CONT.writeState(state):localStorage.setItem(KEY,JSON.stringify(state));
   const hasWeekScore=w=>Object.prototype.hasOwnProperty.call(state.weekly||{},String(w))||Object.prototype.hasOwnProperty.call(state.weekly||{},w);
