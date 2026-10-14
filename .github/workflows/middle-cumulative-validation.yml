@@ -1,0 +1,24 @@
+name: Grade 7-8 Cumulative Assessment Validation
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/khaemenes-middle-cumulative.js'
+      - 'assets/khaemenes-middle-learning-navigator.js'
+      - 'assets/khaemenes-middle-study-scorebook.js'
+      - 'grades/grade-07/evidence/**'
+      - 'grades/grade-08/evidence/**'
+      - 'tools/validate-middle-cumulative.mjs'
+      - '.github/workflows/middle-cumulative-validation.yml'
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tools/validate-middle-cumulative.mjs
