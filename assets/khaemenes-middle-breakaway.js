@@ -1,12 +1,13 @@
 (function attachKhaemenesMiddleBreakaway(global){
   "use strict";
 
-  const VERSION="1.4.0";
+  const VERSION="1.5.0";
   const HUB="https://vervenveda.com/Khaemenes_Middle.github.io/breakaway/";
   const ARCADE="https://vervenveda.com/arcade.github.io/";
   const NAIB_BRIDGE="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-middle-naib-bridge.js";
   const GRADE6_ALIGNMENT="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-grade6-curriculum-alignment.js";
   const GRADE7_ALIGNMENT="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-grade7-curriculum-alignment.js";
+  const UTILITY_WIDGET="https://vervenveda.com/assets/vnv-beta-link.js";
 
   const activities=Object.freeze({
     mathematics:Object.freeze({label:"Math Reset",title:"Sudoku · logic and number reasoning",href:ARCADE+"Jenny's_Sudoku_index.html"}),
@@ -31,6 +32,14 @@
     if(/social|history|civics|geograph|government/.test(p))return activities.social;
     if(/health|wellness|pe-|physical|sel/.test(p))return activities.wellness;
     return activities.general;
+  }
+
+  function ensureLearnerToolbar(){
+    if(!global.document||global.document.getElementById("vnvBetaProgramLink"))return;
+    if(global.document.querySelector('script[data-khaemenes-middle-utility],script[src*="vnv-beta-link.js"]'))return;
+    const script=global.document.createElement("script");
+    script.src=UTILITY_WIDGET;script.async=false;script.dataset.khaemenesMiddleUtility="1";
+    (global.document.head||global.document.documentElement).appendChild(script);
   }
 
   function ensureNAIBBridge(){
@@ -112,18 +121,18 @@
     link.textContent="⏱ 15-Min Break";
     link.title=a.title;
     link.setAttribute("aria-label","Open a timed fifteen minute Breakaway session");
-    link.style.cssText="position:fixed;right:18px;bottom:68px;z-index:2140;display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:8px 12px;border:1px solid rgba(8,11,15,.28);border-radius:7px;background:#f7f3eb;color:#080b0f;box-shadow:0 10px 30px rgba(8,11,15,.14);font:600 11px/1.2 'Avenir Next',Avenir,'Segoe UI',Arial,sans-serif;letter-spacing:.05em;text-decoration:none;white-space:nowrap";
+    link.style.cssText="position:fixed;left:18px;bottom:18px;z-index:2140;display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:8px 12px;border:1px solid rgba(8,11,15,.28);border-radius:7px;background:#f7f3eb;color:#080b0f;box-shadow:0 10px 30px rgba(8,11,15,.14);font:600 11px/1.2 'Avenir Next',Avenir,'Segoe UI',Arial,sans-serif;letter-spacing:.05em;text-decoration:none;white-space:nowrap";
     link.dataset.khaemenesBreakaway="true";
     global.document.body.appendChild(link);
 
     const style=global.document.createElement("style");
-    style.textContent="@media print{#khaemenesBreakawayButton{display:none!important}}@media(max-width:620px){#khaemenesBreakawayButton{right:10px;bottom:62px;padding:7px 10px;font-size:10px}}";
+    style.textContent="@media print{#khaemenesBreakawayButton{display:none!important}}@media(max-width:620px){#khaemenesBreakawayButton{left:10px;bottom:10px;padding:7px 10px;font-size:10px}}";
     global.document.head.appendChild(style);
   }
 
   function recommend(){return inferActivity();}
 
   global.KhaemenesMiddleBreakaway=Object.freeze({version:VERSION,hub:HUB,activities,recommend,createButton,ensureNAIBBridge,ensureGrade6Alignment,ensureGrade7Alignment,ensureGrade8MathDepth});
-  const boot=()=>{ensureNAIBBridge();ensureGrade6Alignment();ensureGrade7Alignment();ensureGrade67MathDepth();ensureGrade8MathDepth();rewriteGrade8EvidenceLinks();createButton();};
+  const boot=()=>{ensureLearnerToolbar();ensureNAIBBridge();ensureGrade6Alignment();ensureGrade7Alignment();ensureGrade67MathDepth();ensureGrade8MathDepth();rewriteGrade8EvidenceLinks();createButton();};
   if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",boot,{once:true});else boot();
 })(window);
