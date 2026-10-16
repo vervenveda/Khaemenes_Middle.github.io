@@ -1,4 +1,4 @@
-/* Verve N Veda · Beta Program + Khaemenes learner rail widget · v1.7.0 */
+/* Verve N Veda · Beta Program + Khaemenes learner rail widget · v1.7.1 */
 (() => {
   "use strict";
 
@@ -15,7 +15,7 @@
   const EDUCATION_TOOLBAR_STYLE_ID="khaemenesLearnerUtilityToolbarStyles";
   const ACADEMY_STUDENT_URL="https://vervenveda.com/Khaemenes_Academy.github.io/student/";
   const ACADEMY_FAMILY_URL="https://vervenveda.com/Khaemenes_Academy.github.io/family/";
-  const HIGHER_SCHOLAR_URL="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/start/";
+  const HIGHER_SCHOLAR_URL="https://vervenveda.com/Khaemenes_Academy.github.io/adult/";
 
   const clean=(value,max)=>String(value??"").replace(/[\u0000-\u001f\u007f]/g,"").slice(0,max);
 
@@ -125,8 +125,8 @@
           label:"Scholar Profile",
           mark:"H",
           url:HIGHER_SCHOLAR_URL,
-          aria:"Open Khaemenes Higher Learning Scholar Entry and profile",
-          title:"Scholar Profile · canonical learner identity, study preferences and pinned courses"
+          aria:"Open the Khaemenes Academy Adult Learner Portal",
+          title:"Scholar Profile · adult learner identity, study preferences and next steps"
         };
       }
       return null;
@@ -469,5 +469,5 @@
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start,{once:true});
   else start();
 
-  window.VNVBetaProgram=Object.freeze({version:"1.7.0",mount,source:safeSource,surface:safeSurface,href:betaHref,studentProfile:mountHighStudentProfile,educationProfile:educationProfileConfig});
+  window.VNVBetaProgram=Object.freeze({version:"1.7.1",mount,source:safeSource,surface:safeSurface,href:betaHref,studentProfile:mountHighStudentProfile,educationProfile:educationProfileConfig});
 })();
