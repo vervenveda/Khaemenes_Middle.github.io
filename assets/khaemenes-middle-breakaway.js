@@ -1,7 +1,7 @@
 (function attachKhaemenesMiddleBreakaway(global){
   "use strict";
 
-  const VERSION="1.5.0";
+  const VERSION="1.4.0";
   const HUB="https://vervenveda.com/Khaemenes_Middle.github.io/breakaway/";
   const ARCADE="https://vervenveda.com/arcade.github.io/";
   const NAIB_BRIDGE="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-middle-naib-bridge.js";
