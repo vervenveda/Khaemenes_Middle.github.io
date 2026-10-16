@@ -1,4 +1,4 @@
-/* Verve N Veda · Beta Program + Khaemenes learner rail widget · v1.7.1 */
+/* Verve N Veda · Beta Program + Khaemenes learner rail widget · v1.7.2 */
 (() => {
   "use strict";
 
@@ -16,6 +16,7 @@
   const ACADEMY_STUDENT_URL="https://vervenveda.com/Khaemenes_Academy.github.io/student/";
   const ACADEMY_FAMILY_URL="https://vervenveda.com/Khaemenes_Academy.github.io/family/";
   const HIGHER_SCHOLAR_URL="https://vervenveda.com/Khaemenes_Academy.github.io/adult/";
+  const LINGUISTICS_CONTINUATION_URL="https://vervenveda.com/Khaemenes_Linguistics.github.io/assets/khaemenes-linguistics-continuation.js";
 
   const clean=(value,max)=>String(value??"").replace(/[\u0000-\u001f\u007f]/g,"").slice(0,max);
 
@@ -379,6 +380,20 @@
     }
   }
 
+  function ensureLinguisticsContinuation(){
+    try{
+      const path=String(location.pathname||"").toLowerCase();
+      if(!path.includes("/khaemenes_linguistics.github.io/"))return;
+      if(!/\/halls\/courses\/(arabic-1|russian-1)(\/|$)/.test(path))return;
+      if(document.querySelector('script[data-khaemenes-linguistics-continuation]'))return;
+      const script=document.createElement("script");
+      script.src=LINGUISTICS_CONTINUATION_URL;
+      script.async=false;
+      script.dataset.khaemenesLinguisticsContinuation="1";
+      (document.head||document.documentElement).append(script);
+    }catch{}
+  }
+
   function mount(){
     if(document.getElementById(ID)||!document.body)return;
 
@@ -465,9 +480,9 @@
     observer.observe(document.documentElement,{childList:true,subtree:true});
   }
 
-  function start(){mount();mountHighStudentProfile();bindVisibleFrames();enhanceBazaarLanding()}
+  function start(){mount();mountHighStudentProfile();ensureLinguisticsContinuation();bindVisibleFrames();enhanceBazaarLanding()}
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start,{once:true});
   else start();
 
-  window.VNVBetaProgram=Object.freeze({version:"1.7.1",mount,source:safeSource,surface:safeSurface,href:betaHref,studentProfile:mountHighStudentProfile,educationProfile:educationProfileConfig});
+  window.VNVBetaProgram=Object.freeze({version:"1.7.2",mount,source:safeSource,surface:safeSurface,href:betaHref,studentProfile:mountHighStudentProfile,educationProfile:educationProfileConfig});
 })();
