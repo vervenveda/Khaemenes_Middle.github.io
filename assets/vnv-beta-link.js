@@ -1,4 +1,4 @@
-/* Verve N Veda · Beta Program + Khaemenes learner rail widget · v1.7.2 */
+/* Verve N Veda · Beta Program + Khaemenes learner rail widget · v1.7.3 */
 (() => {
   "use strict";
 
@@ -17,6 +17,8 @@
   const ACADEMY_FAMILY_URL="https://vervenveda.com/Khaemenes_Academy.github.io/family/";
   const HIGHER_SCHOLAR_URL="https://vervenveda.com/Khaemenes_Academy.github.io/adult/";
   const LINGUISTICS_CONTINUATION_URL="https://vervenveda.com/Khaemenes_Linguistics.github.io/assets/khaemenes-linguistics-continuation.js";
+  const ELEMENTARY_CONTINUATION_URL="https://vervenveda.com/Khaemenes_Elementary.github.io/assets/khaemenes-elementary-continuation-publisher.js";
+  const MIDDLE_CONTINUATION_URL="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-middle-continuation-publisher.js";
 
   const clean=(value,max)=>String(value??"").replace(/[\u0000-\u001f\u007f]/g,"").slice(0,max);
 
@@ -380,6 +382,27 @@
     }
   }
 
+  function loadOnce(src,marker){
+    try{
+      if(document.querySelector(`script[data-${marker}],script[src="${src}"]`))return;
+      const script=document.createElement("script");
+      script.src=src;script.async=false;script.setAttribute(`data-${marker}`,"1");
+      (document.head||document.documentElement).append(script);
+    }catch{}
+  }
+
+  function ensureEducationContinuationPublisher(){
+    try{
+      const path=String(location.pathname||"").toLowerCase();
+      if(path.includes("/khaemenes_elementary.github.io/")&&/\/grades\/grade-0[2-5](\/|$)/.test(path)){
+        loadOnce(ELEMENTARY_CONTINUATION_URL,"khaemenes-elementary-continuation");
+      }
+      if(path.includes("/khaemenes_middle.github.io/")&&/\/grades\/grade-0[6-8](\/|$)/.test(path)){
+        loadOnce(MIDDLE_CONTINUATION_URL,"khaemenes-middle-continuation");
+      }
+    }catch{}
+  }
+
   function ensureLinguisticsContinuation(){
     try{
       const path=String(location.pathname||"").toLowerCase();
@@ -480,9 +503,9 @@
     observer.observe(document.documentElement,{childList:true,subtree:true});
   }
 
-  function start(){mount();mountHighStudentProfile();ensureLinguisticsContinuation();bindVisibleFrames();enhanceBazaarLanding()}
+  function start(){mount();mountHighStudentProfile();ensureEducationContinuationPublisher();ensureLinguisticsContinuation();bindVisibleFrames();enhanceBazaarLanding()}
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start,{once:true});
   else start();
 
-  window.VNVBetaProgram=Object.freeze({version:"1.7.2",mount,source:safeSource,surface:safeSurface,href:betaHref,studentProfile:mountHighStudentProfile,educationProfile:educationProfileConfig});
+  window.VNVBetaProgram=Object.freeze({version:"1.7.3",mount,source:safeSource,surface:safeSurface,href:betaHref,studentProfile:mountHighStudentProfile,educationProfile:educationProfileConfig});
 })();
