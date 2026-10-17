@@ -13,9 +13,22 @@ async function walk(dir, out = []) {
     if (EXCLUDE_DIRS.has(entry.name)) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) await walk(full, out);
-    else if (entry.isFile() && entry.name.toLowerCase() === 'index.html') out.push(full);
+    else if (entry.isFile() && shouldCoverFile(full)) out.push(full);
   }
   return out;
+}
+
+function isVisibleIndexName(name){
+  const lower=name.toLowerCase();
+  return lower==="index.html"||lower==="inndex.html"||lower.endsWith("_index.html")||lower.endsWith("-index.html");
+}
+function shouldCoverFile(file){
+  const name=path.basename(file);
+  if(isVisibleIndexName(name))return true;
+  if(!name.toLowerCase().endsWith(".html"))return false;
+  const rel=path.relative(ROOT,file).split(path.sep).join("/");
+  if(!/^grades\/grade-0[6-8]\//i.test(rel))return false;
+  return /\/(?:subjects|weekly-plans|lessons|assessments|evidence|records)\//i.test(rel);
 }
 
 function blockFor(file) {
@@ -36,4 +49,4 @@ for (const file of files) {
   changed += 1;
 }
 
-console.log(`Beta Program injector scanned ${files.length} index pages and updated ${changed}.`);
+console.log(`Beta Program injector scanned ${files.length} public learning pages and updated ${changed}.`);
