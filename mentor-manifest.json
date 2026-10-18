@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "sourceId": "khaemenes.middle",
   "name": "Khaemenes Middle School",
   "classification": "educational",
@@ -952,5 +952,53 @@
       "mentorEligible": true
     }
   ],
-  "mentorNotes": "Version 2 exposes the verified Grades 6–8 curriculum portals and their nine subject halls. Week-level resources remain behind grade and subject gateways to keep the federation catalog compact. This repair changes discovery metadata only; no curriculum files are moved or rewritten."
+  "mentorNotes": "Version 2 exposes the verified Grades 6–8 curriculum portals and their nine subject halls. Week-level resources remain behind grade and subject gateways to keep the federation catalog compact. This repair changes discovery metadata only; no curriculum files are moved or rewritten.",
+  "learningEngine": {
+    "rolloutMarker": "KHAEMENES_MIDDLE_LEARNING_ENGINE_V1",
+    "focusMap": "assets/khaemenes-middle-focus-map.js",
+    "questionFactory": "assets/khaemenes-middle-question-factory.js",
+    "lessonLedger": "assets/khaemenes-middle-learning-ledger.js",
+    "formalAssessmentEngine": "assets/khaemenes-middle-assessment-engine.js",
+    "sanitizedMentorContext": "assets/khaemenes-middle-learning-context.js",
+    "lessonLedgerKey": "khaemenes_middle_learning_ledger_v1",
+    "assessmentAttemptPrefix": "khaemenes.middle.assessment.attempts",
+    "mentorContextKey": "khaemenes_middle_mentor_context_v1",
+    "masteryThreshold": 80,
+    "weeklyAssessmentPolicy": "open-book-randomized-verified",
+    "midtermPolicy": "closed-book-randomized-verified",
+    "finalPolicy": "closed-book-randomized-verified",
+    "performanceEvidencePolicy": "preserved-alongside-objective-knowledge-mastery",
+    "attemptPolicy": "immutable-snapshot-best-verified-score",
+    "progressionPolicy": "prior-week-mastery-required",
+    "certificationPolicy": {
+      "grades06to07": "36-of-36-weekly-mastery-plus-midterm-final-and-adult-reviewed-portfolio",
+      "grade08": "36-of-36-weekly-mastery-plus-midterm-final-adult-reviewed-portfolio-and-transition-plan"
+    },
+    "formativePolicy": {
+      "awardsMastery": false,
+      "changesScore": false,
+      "unlocksCurriculum": false,
+      "changesPlacement": false
+    },
+    "mentorEvidencePolicy": {
+      "summaryOnly": true,
+      "lessonCountAndFocus": true,
+      "verifiedScore": true,
+      "reviewSkills": true,
+      "exposesQuestions": false,
+      "exposesOptions": false,
+      "exposesSelections": false,
+      "exposesAnswerKeys": false
+    }
+  },
+  "mentorExperience": {
+    "learningContextKey": "khaemenes_middle_mentor_context_v1",
+    "lessonLedgerKey": "khaemenes_middle_learning_ledger_v1",
+    "assessmentAttemptPrefix": "khaemenes.middle.assessment.attempts",
+    "developmentalModes": {
+      "06": "Independent middle-school learning coach",
+      "07": "Strategic study & evidence coach",
+      "08": "High-school readiness coach"
+    }
+  }
 }
