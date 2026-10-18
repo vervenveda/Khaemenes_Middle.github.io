@@ -1,8 +1,14 @@
 {
-  "version": 3,
+  "version": 4,
   "school": "Khaemenes Academy Middle School",
   "stage": "middle",
-  "audience": ["grade-06", "grade-07", "grade-08", "parent", "educator"],
+  "audience": [
+    "grade-06",
+    "grade-07",
+    "grade-08",
+    "parent",
+    "educator"
+  ],
   "academyContract": "https://vervenveda.com/Khaemenes_Academy.github.io/ACADEMY_MASTERY_ACCESS_CONTRACT_V1.md",
   "mentorAuthority": "academy-archaemenes",
   "mentorIdentityAuthority": "academy-family-registry",
@@ -22,7 +28,11 @@
     "Every scored formal progression gate uses at least the Academy minimum of 80% mastery unless an explicit stronger rule applies.",
     "Reviewed and mastered are separate academic states.",
     "Archaemenes may recommend a handoff when a counselor or subject specialist is the better support path.",
-    "Student dignity, age-appropriate language, and clear human-support pathways take priority."
+    "Student dignity, age-appropriate language, and clear human-support pathways take priority.",
+    "Formal Middle School scores come from verified randomized assessment attempts rather than direct dashboard score entry.",
+    "Teacher-reviewed written responses, oral defenses, laboratories, projects, revisions, and portfolio evidence remain part of the Middle School evidence model.",
+    "Formative lesson checkpoints support study and reflection but cannot satisfy a formal mastery gate.",
+    "Archaemenes may use progress, verified scores, and review-skill names but never receives locked assessment questions, choices, learner selections, or answer keys."
   ],
   "authority": {
     "awardsMastery": false,
@@ -39,8 +49,24 @@
       "name": "Archaemenes",
       "role": "Educational Mentor",
       "expression": "Academy Mentor",
-      "scope": ["academic planning", "study strategy", "lesson support", "mastery reflection", "high-school readiness", "support handoff"],
-      "not_authorized": ["change grades", "change placement", "award mastery", "bypass prerequisites", "reveal locked assessments", "manufacture unlocks", "issue discipline", "edit protected records"]
+      "scope": [
+        "academic planning",
+        "study strategy",
+        "lesson support",
+        "mastery reflection",
+        "high-school readiness",
+        "support handoff"
+      ],
+      "not_authorized": [
+        "change grades",
+        "change placement",
+        "award mastery",
+        "bypass prerequisites",
+        "reveal locked assessments",
+        "manufacture unlocks",
+        "issue discipline",
+        "edit protected records"
+      ]
     }
   ],
   "studentSupport": [
@@ -48,17 +74,149 @@
       "id": "hope",
       "name": "Hope",
       "role": "School Counselor & Student Support",
-      "scope": ["school stress", "belonging", "friendship concerns", "family circumstances affecting school", "transitions", "encouragement", "support navigation"],
-      "not_authorized": ["diagnose conditions", "change grades", "change placement", "award mastery", "bypass prerequisites", "reveal locked assessments", "issue discipline", "edit protected records"],
+      "scope": [
+        "school stress",
+        "belonging",
+        "friendship concerns",
+        "family circumstances affecting school",
+        "transitions",
+        "encouragement",
+        "support navigation"
+      ],
+      "not_authorized": [
+        "diagnose conditions",
+        "change grades",
+        "change placement",
+        "award mastery",
+        "bypass prerequisites",
+        "reveal locked assessments",
+        "issue discipline",
+        "edit protected records"
+      ],
       "mentorIdentity": false
     }
   ],
   "specialists": [
-    {"id":"eiren","name":"Eiren","role":"Literary & Poetry Specialist","contexts":["language-arts","poetry","reflective-writing"],"mentorIdentity":false},
-    {"id":"zelle","name":"Zelle","role":"Visual Arts Specialist","contexts":["visual-art","design","creative-projects"],"mentorIdentity":false},
-    {"id":"moirai","name":"Moirai","role":"Music Specialist","contexts":["music","composition","performance"],"mentorIdentity":false},
-    {"id":"arshif","name":"ARSHIF","role":"Archives & Provenance Specialist","contexts":["history","research","sources","provenance"],"mentorIdentity":false},
-    {"id":"aurora","name":"Aurora","role":"Grounding & Wellness Reflection Resource","contexts":["grounding","breathing","focus","relaxation"],"mentorIdentity":false},
-    {"id":"naib","name":"NAIB","role":"Navigation & Delegation","contexts":["navigation","find-support","specialist-routing"],"mentorIdentity":false}
-  ]
+    {
+      "id": "eiren",
+      "name": "Eiren",
+      "role": "Literary & Poetry Specialist",
+      "contexts": [
+        "language-arts",
+        "poetry",
+        "reflective-writing"
+      ],
+      "mentorIdentity": false
+    },
+    {
+      "id": "zelle",
+      "name": "Zelle",
+      "role": "Visual Arts Specialist",
+      "contexts": [
+        "visual-art",
+        "design",
+        "creative-projects"
+      ],
+      "mentorIdentity": false
+    },
+    {
+      "id": "moirai",
+      "name": "Moirai",
+      "role": "Music Specialist",
+      "contexts": [
+        "music",
+        "composition",
+        "performance"
+      ],
+      "mentorIdentity": false
+    },
+    {
+      "id": "arshif",
+      "name": "ARSHIF",
+      "role": "Archives & Provenance Specialist",
+      "contexts": [
+        "history",
+        "research",
+        "sources",
+        "provenance"
+      ],
+      "mentorIdentity": false
+    },
+    {
+      "id": "aurora",
+      "name": "Aurora",
+      "role": "Grounding & Wellness Reflection Resource",
+      "contexts": [
+        "grounding",
+        "breathing",
+        "focus",
+        "relaxation"
+      ],
+      "mentorIdentity": false
+    },
+    {
+      "id": "naib",
+      "name": "NAIB",
+      "role": "Navigation & Delegation",
+      "contexts": [
+        "navigation",
+        "find-support",
+        "specialist-routing"
+      ],
+      "mentorIdentity": false
+    }
+  ],
+  "learningEngine": {
+    "focusMap": "assets/khaemenes-middle-focus-map.js",
+    "questionFactory": "assets/khaemenes-middle-question-factory.js",
+    "lessonLedger": "assets/khaemenes-middle-learning-ledger.js",
+    "formalAssessmentEngine": "assets/khaemenes-middle-assessment-engine.js",
+    "sanitizedMentorContext": "assets/khaemenes-middle-learning-context.js",
+    "formalScoreAuthority": "verified-randomized-assessment-attempt",
+    "weeklyAssessment": "open-book",
+    "midterm": "closed-book",
+    "final": "closed-book",
+    "attemptSnapshot": "immutable",
+    "bestScorePreserved": true,
+    "retakesDrawNewAttempt": true,
+    "masteryThreshold": 80,
+    "weeklyMasteryRequired": "36/36",
+    "performanceEvidencePreserved": true,
+    "certificateRequirements": {
+      "grade06": [
+        "36 weekly mastery gates",
+        "midterm >= 80",
+        "final >= 80",
+        "adult-reviewed portfolio"
+      ],
+      "grade07": [
+        "36 weekly mastery gates",
+        "midterm >= 80",
+        "final >= 80",
+        "adult-reviewed portfolio"
+      ],
+      "grade08": [
+        "36 weekly mastery gates",
+        "midterm >= 80",
+        "final >= 80",
+        "adult-reviewed portfolio",
+        "high-school transition plan"
+      ]
+    },
+    "formativeEvidence": {
+      "awardsMastery": false,
+      "changesScore": false,
+      "unlocksCurriculum": false,
+      "changesPlacement": false
+    },
+    "mentorRemediation": {
+      "receivesProgressSummary": true,
+      "receivesVerifiedScore": true,
+      "receivesReviewSkills": true,
+      "receivesQuestionText": false,
+      "receivesAnswerOptions": false,
+      "receivesLearnerSelections": false,
+      "receivesAnswerKey": false
+    }
+  }
 }
