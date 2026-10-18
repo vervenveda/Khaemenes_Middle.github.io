@@ -13,12 +13,41 @@
    */
 
   const CONTRACT_URL = new URL("../mentor-contract.json", document.currentScript?.src || location.href).href;
+  const LEARNING_CONTEXT_KEY = "khaemenes_middle_mentor_context_v1";
+  const ACTIVE_LEARNER_KEY = "khaemenes_active_learner_v1";
   const MAX_INPUT = 1200;
   const MAX_TURNS = 12;
   const conversations = { archaemenes: [], hope: [] };
 
   const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const clean=v=>String(v??"").replace(/\s+/g," ").trim();
+
+  const readJSON=(key,fallback=null)=>{try{const raw=localStorage.getItem(key);return raw?JSON.parse(raw):fallback}catch{return fallback}};
+  function currentLearnerId(){
+    const direct=window.KhaemenesFamilyRegistry?.getLearner?.()?.learnerId;
+    return direct||readJSON(ACTIVE_LEARNER_KEY,null)||null;
+  }
+  function middleLearningContext(){
+    const activeId=currentLearnerId(),ctx=readJSON(LEARNING_CONTEXT_KEY,null);
+    if(!activeId||!ctx||ctx.learnerId!==activeId||ctx.stage!=="middle")return null;
+    const route=gradeContext().replace("grade-",""),contextGrade=String(ctx.grade||"").padStart(2,"0");
+    if(route!=="middle-school"&&route!==contextGrade)return null;
+    return ctx;
+  }
+  function safeLearningEvidence(){
+    const ctx=middleLearningContext();if(!ctx)return null;
+    const lessons=Array.isArray(ctx.recentLessonEvidence)?ctx.recentLessonEvidence:[],assessments=Array.isArray(ctx.recentAssessmentAttempts)?ctx.recentAssessmentAttempts:[];
+    const latestLesson=lessons[lessons.length-1]||null,latestAssessment=assessments[assessments.length-1]||null;
+    return {
+      grade:ctx.grade,
+      developmentalMode:ctx.developmentalMode||null,
+      curriculum:ctx.curriculum||null,
+      currentFocus:ctx.currentFocus||null,
+      recentLessonCount:lessons.length,
+      latestLesson:latestLesson?{week:latestLesson.week,subject:latestLesson.subject,day:latestLesson.day,focus:latestLesson.focus,score:latestLesson.score,completedAt:latestLesson.completedAt}:null,
+      latestAssessment:latestAssessment?{kind:latestAssessment.kind,week:latestAssessment.week,score:latestAssessment.score,mastered:latestAssessment.mastered,questionCount:latestAssessment.questionCount,reviewSkills:Array.isArray(latestAssessment.reviewSkills)?latestAssessment.reviewSkills.slice(0,6):[],completedAt:latestAssessment.completedAt}:null
+    };
+  }
 
   function context(){
     const p=location.pathname.toLowerCase();
@@ -49,7 +78,8 @@
       subject:context(),
       pageTitle:heading,
       pageSummary:sub,
-      path:location.pathname
+      path:location.pathname,
+      learningEvidence:safeLearningEvidence()
     };
   }
 
@@ -108,6 +138,8 @@
   function detectIntent(text){
     const q=text.toLowerCase();
     if(/\b(answer|answers|just give|tell me the answer|do my homework|do this for me)\b/.test(q)) return "answer-seeking";
+    if(/what should i review|where did i struggle|what did i miss|weak skill|review my assessment|skills? to review/.test(q)) return "review";
+    if(/what did i (do|work on)|this week|my progress|how am i doing/.test(q)) return "progress";
     if(/\b(test|quiz|exam|assessment|grade|score|failed|failing)\b/.test(q)) return "assessment";
     if(/\b(study|remember|memorize|focus|plan|schedule|behind|catch up|procrastinat)\b/.test(q)) return "study";
     if(/\b(don't understand|dont understand|confused|stuck|help me understand|explain|how do|why does|what does)\b/.test(q)) return "concept";
@@ -130,6 +162,9 @@
     const topic=extractTopic(question);
     const subject=subjectLabel(ctx.subject);
     const grade=ctx.grade.replace("grade-0","Grade ").replace("middle-school","Middle School");
+    const evidence=ctx.learningEvidence||null;
+    const latestAssessment=evidence?.latestAssessment||null;
+    const reviewSkills=Array.isArray(latestAssessment?.reviewSkills)?latestAssessment.reviewSkills.filter(Boolean):[];
 
     if(intent==="urgent-support"){
       return `This sounds more important than an ordinary school question. Please bring a trusted adult into the situation now — a parent or guardian, teacher, counselor, or another safe adult near you. I can stay focused on school support, but I should not treat an urgent safety concern like homework. If you are in immediate danger, move toward a safe adult or emergency help right away.`;
@@ -140,11 +175,27 @@
     if(intent==="answer-seeking"){
       return `I can help you get to the answer, but I should not replace your work. For “${topic},” show me what you already know or the first step you tried. Then we can check one step at a time. A good middle-school rule is: understand the move before you copy the result.`;
     }
+    if(intent==="progress"){
+      if(evidence){
+        const cur=evidence.curriculum||{},lessonNote=evidence.recentLessonCount?` You have ${evidence.recentLessonCount} saved formative checkpoint${evidence.recentLessonCount===1?"":"s"} from the recent learning window.`:"";
+        const assessmentNote=latestAssessment?` Your latest verified ${latestAssessment.kind||"assessment"} score is ${latestAssessment.score||0}%.`:"";
+        return `Your formal Middle School record currently shows ${cur.completedWeeks||0}/36 weekly mastery gates complete, with a ${cur.weeklyAverage||0}% average across attempted weeks.${lessonNote}${assessmentNote} Practice checkpoints help us see patterns, but only verified assessments create mastery.`;
+      }
+      return `I do not have a learner-scoped Middle School evidence summary in this browser yet. Open your registered Middle School course and complete or review the current formal work, then I can use that summary here.`;
+    }
+    if(intent==="review"){
+      if(reviewSkills.length){
+        return `Your latest verified assessment suggests reviewing ${reviewSkills.slice(0,5).join(", ")}. We can work through a fresh example or strategy for those skills without revealing or repeating the locked assessment questions or answers.`;
+      }
+      return `I do not have a missed-skill summary from a recent verified assessment yet. Start with ${evidence?.currentFocus?.subject||subject} and tell me the exact idea or strategy that feels uncertain.`;
+    }
     if(intent==="assessment"){
-      return `For a ${grade} assessment, start with evidence instead of the score. Ask: (1) Which skill was the question testing? (2) What did I do correctly? (3) Where did my reasoning change direction? (4) Can I solve one similar example without notes? If you tell me the skill or paste the question you are reviewing, I can help you diagnose the misunderstanding. I cannot change the recorded grade.`;
+      const verified=latestAssessment?` Your latest verified ${latestAssessment.kind||"assessment"} score is ${latestAssessment.score||0}%.${reviewSkills.length?` The recorded review areas are ${reviewSkills.slice(0,4).join(", ")}.`:""}`:"";
+      return `For a ${grade} assessment, start with evidence instead of the score.${verified} Ask: (1) Which skill was being tested? (2) What reasoning rule applies? (3) Can you solve a new example without notes? I can help you diagnose the skill, but I cannot expose locked questions, answer choices, answer keys, or change the recorded grade.`;
     }
     if(intent==="study"){
-      return `For ${subject}, use a short three-part study block: 10 minutes reviewing one idea, 15 minutes practicing without looking at the example, then 5 minutes checking mistakes and writing what to remember next time. For “${topic},” choose one concrete target for the first block. Middle school gets easier when “study” becomes a specific action instead of a big vague job.`;
+      const target=reviewSkills[0]?` Start with the verified review skill “${reviewSkills[0]}.”`:"";
+      return `For ${subject}, use a short three-part study block: 10 minutes reviewing one idea, 15 minutes practicing without looking at the example, then 5 minutes checking mistakes and writing what to remember next time.${target} For “${topic},” choose one concrete target for the first block. Middle school gets easier when “study” becomes a specific action instead of a big vague job.`;
     }
     if(intent==="project"){
       return `For “${topic},” build the work in layers: question → evidence → explanation → revision. First write one sentence saying what your project is trying to show. Then collect only the evidence that supports or challenges that sentence. If this is research, keep source and citation information with each note as you go. Tell me which layer you are on and I can help with the next move.`;
@@ -305,7 +356,7 @@
       <p style="margin:0;color:#b48b45;letter-spacing:.14em;text-transform:uppercase;font-size:11px;font-weight:700">Middle School Mentor Team</p>
       <h2 style="margin:8px 0 0;color:#15251f;font-family:Georgia,serif;font-size:clamp(32px,4vw,48px)">Ask a real question. Work the next step.</h2>
       <p style="max-width:760px;margin:12px auto;color:#4e5c57">Archaemenes responds to the academic question you type and uses the current grade and subject as context. Hope supports the student side of school. Neither mentor changes grades, placement, discipline, certificates, or protected records.</p>
-      <div><span class="khae-context-pill">${esc(ctx.grade.replace("grade-0","Grade "))}</span><span class="khae-context-pill">${esc(subjectLabel(ctx.subject))}</span>${ctx.pageTitle?`<span class="khae-context-pill">${esc(ctx.pageTitle)}</span>`:""}</div>
+      <div><span class="khae-context-pill">${esc(ctx.grade.replace("grade-0","Grade "))}</span><span class="khae-context-pill">${esc(subjectLabel(ctx.subject))}</span>${ctx.pageTitle?`<span class="khae-context-pill">${esc(ctx.pageTitle)}</span>`:""}${ctx.learningEvidence?.latestAssessment?`<span class="khae-context-pill">Latest verified: ${esc(String(ctx.learningEvidence.latestAssessment.score||0))}%</span>`:""}</div>
       <div class="khae-mentor-grid">
         <article class="khae-mentor-card"><h3>Archaemenes</h3><p><strong>Educational Mentor</strong></p><p>Ask about a lesson, difficult concept, study strategy, assignment, assessment review, or high-school readiness.</p><div class="khae-mentor-actions"><button class="khae-mentor-button" data-mentor="archaemenes">Ask Archaemenes</button></div></article>
         <article class="khae-mentor-card"><h3>Hope</h3><p><strong>School Counselor & Student Support</strong></p><p>School stress, belonging, friendship concerns, family circumstances affecting school, transitions, encouragement, and support navigation.</p><div class="khae-mentor-actions"><button class="khae-mentor-button" data-mentor="hope">Talk with Hope</button></div></article>
