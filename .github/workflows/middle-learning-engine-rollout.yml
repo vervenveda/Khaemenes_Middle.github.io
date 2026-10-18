@@ -1,0 +1,51 @@
+name: Middle School Learning Engine Rollout
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'assets/khaemenes-middle-focus-map.js'
+      - 'assets/khaemenes-middle-question-factory.js'
+      - 'assets/khaemenes-middle-learning-ledger.js'
+      - 'assets/khaemenes-middle-assessment-engine.js'
+      - 'scripts/inject-middle-learning-engine.mjs'
+      - '.github/workflows/middle-learning-engine-rollout.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: middle-learning-engine-rollout
+  cancel-in-progress: false
+
+jobs:
+  rollout:
+    if: "!contains(github.event.head_commit.message, '[skip middle-learning-rollout]')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Inject Middle School learning engine
+        run: node scripts/inject-middle-learning-engine.mjs
+      - name: Commit rollout
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "Every targeted Middle School lesson and assessment already has the shared learning engine."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add '*.html' '**/*.html'
+          git commit -m "chore(middle): roll out learning engine [skip middle-learning-rollout]"
+          git pull --rebase origin main
+          git push origin HEAD:main
