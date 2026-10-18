@@ -14,7 +14,8 @@ const assets=[
   "assets/khaemenes-middle-focus-map.js",
   "assets/khaemenes-middle-question-factory.js",
   "assets/khaemenes-middle-learning-ledger.js",
-  "assets/khaemenes-middle-assessment-engine.js"
+  "assets/khaemenes-middle-assessment-engine.js",
+  "assets/khaemenes-middle-learning-context.js"
 ];
 for(const p of assets)expect(exists(p),"Missing shared Middle School asset: "+p);
 for(const p of assets.slice(1)){try{new Function(read(p))}catch(e){fail(p+" syntax: "+e.message)}}
@@ -49,6 +50,7 @@ for(const full of walk(ROOT)){
   if(!scripts.some(s=>s.endsWith("khaemenes-middle-question-factory.js")))coverage.missing.push(rel+" question factory");
   const runtime=type==="lesson"?"khaemenes-middle-learning-ledger.js":"khaemenes-middle-assessment-engine.js";
   if(!scripts.some(s=>s.endsWith(runtime)))coverage.missing.push(rel+" "+runtime);
+  if(!scripts.some(s=>s.endsWith("khaemenes-middle-learning-context.js")))coverage.missing.push(rel+" learning context");
   if(type==="assessment"&&!/class=["'][^"']*worksheet|id=["']canonicalCumulativeMount/i.test(html))coverage.performanceMissing.push(rel);
 }
 expect(coverage.lesson===1080,"Expected 1080 Middle School lesson/review surfaces; found "+coverage.lesson);
@@ -115,6 +117,18 @@ expect(assessment.includes("completed(s,18)"),"Midterm gate no longer checks Wee
 expect(assessment.includes("completed(s,36)"),"Final gate no longer checks all 36 weeks.");
 expect(assessment.includes("performanceEvidencePreserved:true"),"Performance-evidence preservation contract missing.");
 expect(assessment.includes("manualScoreEntry:false"),"Manual score authority unexpectedly enabled.");
+
+// Sanitized Mentor context must publish summaries only.
+const learningContext=read("assets/khaemenes-middle-learning-context.js");
+expect(learningContext.includes('CONTEXT_KEY="khaemenes_middle_mentor_context_v1"'),"Middle sanitized Mentor context key missing.");
+expect(learningContext.includes("reviewSkills:"),"Middle Mentor context no longer publishes review-skill summaries.");
+expect(learningContext.includes("assessmentQuestionTextPublished:false"),"Middle Mentor context privacy contract lost question-text protection.");
+expect(learningContext.includes("assessmentOptionsPublished:false"),"Middle Mentor context privacy contract lost option protection.");
+expect(learningContext.includes("assessmentSelectionsPublished:false"),"Middle Mentor context privacy contract lost selection protection.");
+expect(learningContext.includes("assessmentAnswerKeysPublished:false"),"Middle Mentor context privacy contract lost answer-key protection.");
+const assessmentSummaryBlock=learningContext.match(/function recentAssessments[\s\S]*?function developmentalMode/);
+expect(assessmentSummaryBlock,"Could not isolate sanitized Middle assessment summary.");
+expect(!/prompt\s*:|options\s*:|selected\s*:|answer\s*:/.test(assessmentSummaryBlock[0]),"Sanitized Middle assessment summary leaks answer-level assessment content.");
 
 // Dashboards and certificates.
 for(const g of ["06","07","08"]){
