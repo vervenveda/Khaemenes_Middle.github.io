@@ -1,0 +1,56 @@
+name: Middle School Learning Engine Regression
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'assets/khaemenes-middle-focus-map.js'
+      - 'assets/khaemenes-middle-question-factory.js'
+      - 'assets/khaemenes-middle-learning-ledger.js'
+      - 'assets/khaemenes-middle-assessment-engine.js'
+      - 'assets/khaemenes-grade-continuity.js'
+      - 'grades/grade-*/assets/app.js'
+      - 'grades/grade-*/assets/certificate.js'
+      - 'grades/grade-*/subjects/**'
+      - 'grades/grade-*/weekly-plans/**'
+      - 'grades/grade-*/assessments/**'
+      - 'scripts/inject-middle-learning-engine.mjs'
+      - 'tools/validate-middle-learning-engine.mjs'
+      - '.github/workflows/middle-learning-engine-regression.yml'
+  pull_request:
+    paths:
+      - 'assets/khaemenes-middle-focus-map.js'
+      - 'assets/khaemenes-middle-question-factory.js'
+      - 'assets/khaemenes-middle-learning-ledger.js'
+      - 'assets/khaemenes-middle-assessment-engine.js'
+      - 'assets/khaemenes-grade-continuity.js'
+      - 'grades/grade-*/assets/app.js'
+      - 'grades/grade-*/assets/certificate.js'
+      - 'grades/grade-*/subjects/**'
+      - 'grades/grade-*/weekly-plans/**'
+      - 'grades/grade-*/assessments/**'
+      - 'scripts/inject-middle-learning-engine.mjs'
+      - 'tools/validate-middle-learning-engine.mjs'
+      - '.github/workflows/middle-learning-engine-regression.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: middle-learning-regression-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Validate every Middle School lesson, quiz, and test
+        run: node tools/validate-middle-learning-engine.mjs
