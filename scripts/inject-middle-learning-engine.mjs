@@ -7,7 +7,8 @@ const ASSETS={
   focus:"assets/khaemenes-middle-focus-map.js",
   factory:"assets/khaemenes-middle-question-factory.js",
   ledger:"assets/khaemenes-middle-learning-ledger.js",
-  assessment:"assets/khaemenes-middle-assessment-engine.js"
+  assessment:"assets/khaemenes-middle-assessment-engine.js",
+  context:"assets/khaemenes-middle-learning-context.js"
 };
 const SKIP=new Set([".git","node_modules","archive","archives","backup","backups","vendor","private"]);
 const posix=p=>p.split(path.sep).join("/");
@@ -39,12 +40,22 @@ function block(file,type){
   return MARKER+"\n"+
     '<script src="'+ref(file,ASSETS.focus)+'"></script>\n'+
     '<script src="'+ref(file,ASSETS.factory)+'"></script>\n'+
-    '<script src="'+ref(file,type==="lesson"?ASSETS.ledger:ASSETS.assessment)+'"></script>';
+    '<script src="'+ref(file,type==="lesson"?ASSETS.ledger:ASSETS.assessment)+'"></script>\n'+
+    '<script src="'+ref(file,ASSETS.context)+'"></script>';
 }
 function inject(file,type){
   let html=fs.readFileSync(file,"utf8");
-  if(html.includes(MARKER))return{changed:false,reason:"already"};
-  const snippet=block(file,type),beta="<!-- VNV_BETA_PROGRAM_V1 -->";
+  const beta="<!-- VNV_BETA_PROGRAM_V1 -->";
+  if(html.includes(MARKER)){
+    if(html.includes("khaemenes-middle-learning-context.js"))return{changed:false,reason:"already"};
+    const contextTag='<script src="'+ref(file,ASSETS.context)+'"></script>';
+    if(html.includes(beta))html=html.replace(beta,contextTag+"\n"+beta);
+    else if(/<\/body>/i.test(html))html=html.replace(/<\/body>/i,contextTag+"\n</body>");
+    else return{changed:false,reason:"no-body"};
+    fs.writeFileSync(file,html,"utf8");
+    return{changed:true,reason:"context-added"};
+  }
+  const snippet=block(file,type);
   if(html.includes(beta))html=html.replace(beta,snippet+"\n"+beta);
   else if(/<\/body>/i.test(html))html=html.replace(/<\/body>/i,snippet+"\n</body>");
   else return{changed:false,reason:"no-body"};
