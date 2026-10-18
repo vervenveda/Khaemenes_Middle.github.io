@@ -116,6 +116,146 @@ The active Academy Mentor doorway is:
 
 The formal contract for these role boundaries is `mentor-contract.json`.
 
+## Course-Wide Lesson and Assessment Engine
+
+Middle School now uses one shared learning engine across the active Grade 06–08 lesson, weekly-review, quiz, midterm, and final surfaces while preserving the existing A++ curriculum and authentic performance evidence.
+
+The current rollout covers:
+
+- **1,080 lesson / subject-week / weekly-review surfaces**
+- **114 formal assessment surfaces**
+- **1,194 upgraded pages total**
+- **0 skipped rollout targets**
+
+The shared implementation is centralized in:
+
+```text
+assets/khaemenes-middle-focus-map.js
+assets/khaemenes-middle-question-factory.js
+assets/khaemenes-middle-learning-ledger.js
+assets/khaemenes-middle-assessment-engine.js
+assets/khaemenes-middle-learning-context.js
+```
+
+### Formative Lesson Evidence
+
+Each subject-week lesson can use a four-question randomized checkpoint plus optional scholar reflection. Each integrated weekly plan can use a six-question cross-domain review.
+
+Saved formative evidence is learner-scoped under:
+
+```text
+khaemenes_middle_learning_ledger_v1
+```
+
+Formative checkpoints never award mastery, change a grade, unlock curriculum, or alter placement.
+
+### Verified Monte Carlo Assessments
+
+Formal weekly assessments, midterms, and finals draw fresh randomized attempts from the first-party Middle School question factory.
+
+The factory covers all nine Middle School domains:
+
+1. Language Arts & Literacy
+2. Mathematics
+3. Science & Engineering
+4. Social Studies, Civics & History
+5. World Languages & Global Culture
+6. Arts, Music & Media
+7. Health, PE & SEL
+8. Technology, Design & Tools
+9. Integrated Projects / High School Readiness
+
+Grade difficulty progresses from Grade 06 foundations through Grade 08 Algebra I / high-school-readiness reasoning.
+
+Formal policy:
+
+- weekly knowledge assessments are **open book**;
+- midterms are **closed book**;
+- finals are **closed book**;
+- question selection and answer placement are randomized;
+- every retake draws a fresh attempt;
+- completed attempts are preserved as immutable learner-scoped snapshots;
+- the best verified score is preserved for mastery;
+- the mastery threshold remains **80%**.
+
+Attempt history is stored under:
+
+```text
+khaemenes.middle.assessment.attempts:<learnerId>:grade-XX
+```
+
+### Dual Evidence Model
+
+Middle School intentionally keeps two complementary forms of academic evidence:
+
+```text
+Verified randomized knowledge mastery
+        +
+Teacher-reviewed performance evidence
+        ↓
+Complete Middle School evidence record
+```
+
+The existing written-response rubrics, oral defense, laboratory, project, revision, evidence-packet, and portfolio pathways remain in place. The randomized engine does not erase or replace authentic performance evidence.
+
+### Score and Progression Integrity
+
+Grade dashboards no longer serve as direct weekly, midterm, or final score-entry authorities. Those fields are read-only verified results.
+
+Formal sequence:
+
+```text
+Verified randomized attempt
+        ↓
+Best verified score
+        ↓
+80% weekly mastery
+        ↓
+Next formal week
+
+36 / 36 weekly mastery gates
++ Midterm ≥ 80
++ Final ≥ 80
++ Adult-reviewed portfolio
+        ↓
+Grade completion
+
+Grade 08 additionally requires
+High School transition plan
+```
+
+A high average cannot compensate for an unmastered required week.
+
+### Archaemenes Evidence Boundary
+
+Middle School publishes a sanitized learner-scoped context:
+
+```text
+khaemenes_middle_mentor_context_v1
+```
+
+Archaemenes may receive:
+
+- grade and current instructional focus;
+- number and broad focus of recent formative checkpoints;
+- verified assessment score summaries;
+- broad skill names that merit review;
+- completion-gate summary.
+
+Archaemenes does **not** receive locked assessment questions, displayed answer choices, learner selections, or answer keys. He can teach a skill using fresh examples without reproducing protected assessment content.
+
+### Regression Protection
+
+The permanent workflow:
+
+```text
+.github/workflows/middle-learning-engine-regression.yml
+```
+
+checks exact page coverage, JavaScript validity, Monte Carlo pool depth, unique questions, answer-position randomization, learner scoping, non-mastery formative evidence, verified score authority, the 80% gate, 36/36 completion, Grade 08 transition requirements, preservation of performance rubrics, and the sanitized Mentor evidence boundary.
+
+---
+
 ## Beta Program
 
 Visible interactive/index surfaces participate in the Verve N Veda Beta Program through the shared Beta doorway. Beta feedback is for usability, navigation, curriculum flow, accessibility, printing/mobile behavior, and defect reporting; sensitive student information should not be submitted through public beta feedback.
