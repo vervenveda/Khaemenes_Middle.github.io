@@ -72,9 +72,9 @@ function displayCount(){
 function candidateCount(){return Math.max(displayCount()*2,kind()==="weekly"?45:90)}
 function questions(seed){
   const f=global.KhaemenesMiddleQuestionFactory;if(!f)return[];
-  // Grade 6 Weeks 1–13 require a substantial aligned mathematics strand.
-  if(grade()==="06"&&kind()==="weekly"&&week()>=1&&week()<=13){
-    const math=week()===13?(f.makeGrade6VolumeWeek?.({seed:seed+"|math"})||[]):week()===12?(f.makeGrade6GeometryWeek?.({seed:seed+"|math"})||[]):week()===11?(f.makeGrade6StatisticsWeek?.({seed:seed+"|math"})||[]):week()===10?(f.makeGrade6InequalitiesWeek?.({seed:seed+"|math"})||[]):week()===9?(f.makeGrade6EquationsWeek?.({seed:seed+"|math"})||[]):week()===8?(f.makeGrade6ExpressionsWeek?.({seed:seed+"|math"})||[]):week()===7?(f.makeGrade6CoordinateWeek?.({seed:seed+"|math"})||[]):(f.makeGrade6MathWeek?.({week:week(),seed:seed+"|math",count:6})||[]);
+  // Grade 6 Weeks 1–14 require a substantial aligned mathematics strand.
+  if(grade()==="06"&&kind()==="weekly"&&week()>=1&&week()<=14){
+    const math=week()===14?(f.makeGrade6MatterMathWeek?.({seed:seed+"|math"})||[]):week()===13?(f.makeGrade6VolumeWeek?.({seed:seed+"|math"})||[]):week()===12?(f.makeGrade6GeometryWeek?.({seed:seed+"|math"})||[]):week()===11?(f.makeGrade6StatisticsWeek?.({seed:seed+"|math"})||[]):week()===10?(f.makeGrade6InequalitiesWeek?.({seed:seed+"|math"})||[]):week()===9?(f.makeGrade6EquationsWeek?.({seed:seed+"|math"})||[]):week()===8?(f.makeGrade6ExpressionsWeek?.({seed:seed+"|math"})||[]):week()===7?(f.makeGrade6CoordinateWeek?.({seed:seed+"|math"})||[]):(f.makeGrade6MathWeek?.({week:week(),seed:seed+"|math",count:6})||[]);
     const others=f.makeBalanced({grade:6,focus:focus(),seed:seed+"|general",count:candidateCount()}).filter(q=>q.subject!=="mathematics").slice(0,12);
     return math.length===6&&others.length===12?math.concat(others):[];
   }
@@ -158,7 +158,7 @@ function begin(body){
       fb.hidden=false;fb.textContent=q.rationale||"Review this concept before the next attempt.";
     });
     const rawScore=Math.round(correct/qs.length*100),completedAt=new Date().toISOString(),l=learner();
-    const aligned=grade()==="06"&&kind()==="weekly"&&week()>=1&&week()<=13;
+    const aligned=grade()==="06"&&kind()==="weekly"&&week()>=1&&week()<=14;
     const mathResponses=responses.filter(r=>r.subject==="mathematics");
     const mathCorrect=mathResponses.filter(r=>r.correct).length;
     const mathScore=mathResponses.length?Math.round(mathCorrect/mathResponses.length*100):0;
