@@ -316,6 +316,25 @@ function makeGrade6CoordinateWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6ExpressionsWeek(opts){
+ const r=rng(hash("g6expressions|"+String(opts.seed||1))),out=[],v=int(r,2,8),a=int(r,2,6),b=int(r,2,9);
+ function add(prompt,correct,wrong,skill,reason){
+ const good=String(correct),alt=[...new Set(wrong.map(String).filter(x=>x!==good))];
+ for(let i=1;alt.length<3;i++){const extra=Number.isFinite(Number(correct))?String(Number(correct)+7*i):"Incorrect expression "+i;if(extra!==good&&!alt.includes(extra))alt.push(extra)}
+ const q=makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 8 expressions",skill,rationale:reason});
+ out.push(finalize(q,r));
+ }
+ add("Evaluate "+a+"x + "+b+" when x = "+v+".",a*v+b,[a+v+b,a*v+b+1,a*(v+b)],"substitution","Replace x with its value and multiply before adding.");
+ add("Which expression represents "+b+" more than "+a+" times n?",a+"n + "+b,[a+"(n + "+b+")",b+"n + "+a,a+"n - "+b],"translation","Multiply n by a, then add b.");
+ add("Evaluate "+a+"p² + "+b+" when p = "+v+".",a*v*v+b,[a*v+b,(a*v)*(a*v)+b,a*(v+b)],"order of operations","Apply the exponent before multiplication.");
+ add("Expand "+a+"(x + "+b+").",a+"x + "+a*b,[a+"x + "+b,"x + "+a*b,(a+b)+"x"],"distributive property","Multiply both terms inside parentheses by a.");
+ add("Simplify "+a+"y + "+b+"y - 3.",(a+b)+"y - 3",[(a*b)+"y - 3",(a+b)+"y + 3",a+"y + "+b+"y + 3"],"like terms","Add coefficients of matching y terms.");
+ const visits=int(r,2,8),fee=int(r,8,15),unit=int(r,2,6),ans=fee+unit*visits;
+ add("A club has a $"+fee+" enrollment fee and charges $"+unit+" per visit. What is the total for "+visits+" visits?","$"+ans,["$"+(fee+unit+visits),"$"+((fee+unit)*visits),"$"+(ans+unit)],"applied expressions","Charge the enrollment fee once, then multiply the visit rate by visits.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -324,6 +343,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeBalanced,
   makeGrade6MathWeek,
   makeGrade6CoordinateWeek,
+  makeGrade6ExpressionsWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
