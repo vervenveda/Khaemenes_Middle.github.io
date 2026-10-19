@@ -372,6 +372,24 @@ function makeGrade6InequalitiesWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6StatisticsWeek(opts){
+ const r=rng(hash("g6statistics|"+String(opts.seed||1))),out=[],a=int(r,2,7),d=int(r,1,6),k=int(r,1,4);
+ function add(prompt,correct,wrongs,skill,reason){
+  const good=String(correct),wrong=[...new Set(wrongs.map(String).filter(x=>x!==good))];
+  if(wrong.length!==3)throw Error("Ambiguous statistics choices: "+prompt);
+  out.push(finalize(makeQuestion(prompt,good,wrong,{subject:"mathematics",grade:6,focus:"week 11 statistics",skill,rationale:reason}),r));
+ }
+ add("Which question is statistical?","How many minutes do students in a class read each day?",["How old is the school principal today?","How many minutes did one named student read yesterday?","What is the name of the school library?"],"statistical question","Statistical questions anticipate variability in collected responses.");
+ add("For the ordered data "+[a,a+d,a+d,a+2*d,a+4*d].join(", ")+", what is the median?",a+d,[a,a+2*d,a+4*d],"median","In five ordered values, the third is the median.");
+ add("For the values "+[a,a,a+d,a+2*d,a+2*d,a+2*d].join(", ")+", what is the mode?",a+2*d,[a,a+d,a+3*d],"mode","The mode occurs most frequently.");
+ add("For the data "+[a,a+d,a+2*d,a+4*d].join(", ")+", what is the range?",4*d,[3*d,2*d,4*d+a],"range","Subtract the minimum from the maximum.");
+ add("What is the mean of "+[a,a+2*d,a+4*d].join(", ")+"?",a+2*d,[a+d,a+4*d,a+3*d],"mean","Add the three values and divide by three.");
+ const low=10*k,hi=low+10;
+ add("A histogram has bins ["+low+", "+hi+") and ["+hi+", "+(hi+10)+"). Where does a value of "+hi+" belong?","Second bin",["First bin","Both bins","Neither bin"],"histogram bins","The first bin excludes its upper endpoint; the second includes its lower endpoint.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -383,6 +401,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6ExpressionsWeek,
   makeGrade6EquationsWeek,
   makeGrade6InequalitiesWeek,
+  makeGrade6StatisticsWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
