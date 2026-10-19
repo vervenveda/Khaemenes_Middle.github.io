@@ -410,6 +410,25 @@ function makeGrade6GeometryWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6VolumeWeek(opts){
+ const r=rng(hash("g6volume|"+String(opts.seed||1))),out=[],a=int(r,3,9),b=int(r,2,7),h=int(r,2,6);
+ function add(prompt,correct,wrong,skill,reason){
+  const good=String(correct),alt=[...new Set(wrong.map(String).filter(x=>x!==good))];
+  for(let i=1;alt.length<3;i++){const extra=String(Number(correct)+11*i);if(extra!==good&&!alt.includes(extra))alt.push(extra);}
+  out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 13 volume",skill,rationale:reason}),r));
+ }
+ const vol=a*b*h;
+ add("A rectangular prism measures "+a+" cm by "+b+" cm by "+h+" cm. What is its volume in cm³?",vol,[a*b+a*h+b*h,2*(a*b+a*h+b*h),vol+h],"whole-number volume","Multiply length, width and height.");
+ add("A rectangular prism measures 1/2 m by "+(2*a)+" m by "+b+" m. Find its volume in m³.",a*b,[2*a*b,a+b,2*a+b],"fractional length","One-half of an even whole-number length gives an integer product.");
+ add("A rectangular prism has volume "+vol+" cm³, length "+a+" cm, and width "+b+" cm. What is its height in cm?",h,[a+b,a*h,b*h],"unknown dimension","Divide volume by base area.");
+ const other=int(r,2,5),sum=vol+other*2*3;
+ add("Two NONOVERLAPPING prisms have dimensions "+a+"×"+b+"×"+h+" cm and "+other+"×2×3 cm. What is their combined volume in cm³?",sum,[vol,vol*other*2*3,sum+6],"composite volume","Add the volumes because the prisms do not overlap.");
+ add("A prism's base area is "+(a*b)+" cm² and its height is "+h+" cm. What is its volume in cm³?",vol,[a*b,2*a*b,vol+b],"base area times height","Volume equals base area times perpendicular height.");
+ add("What units measure the VOLUME of a prism with edges given in centimeters?","cm³",["cm","cm²","meters per second"],"cubic units","Volume is measured in cubic units, not surface-area units.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -423,6 +442,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6InequalitiesWeek,
   makeGrade6StatisticsWeek,
   makeGrade6GeometryWeek,
+  makeGrade6VolumeWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
