@@ -135,11 +135,13 @@ function renderStart(root){
 function begin(body){
   const seed=Date.now()+"|"+Math.random()+"|"+location.pathname,qs=questions(seed);
   if(qs.length!==displayCount()){body.innerHTML="<p>The question pool did not produce a complete attempt. Refresh and try again.</p>";return}
-  const attemptId=uid(),startedAt=new Date().toISOString();
+  const attemptId=uid(),startedAt=new Date().toISOString(),startedLearnerId=learner()?.learnerId||null;
   body.innerHTML='<form data-middle-formal>'+qs.map((q,i)=>'<fieldset class="middle-assessment-q"><legend>'+(i+1)+'. '+esc(q.prompt)+'</legend>'+q.options.map((o,j)=>'<label class="middle-assessment-option"><input type="radio" name="msaq'+i+'" value="'+j+'"> '+esc(o)+'</label>').join("")+'<div class="middle-assessment-feedback" data-feedback="'+i+'" hidden></div></fieldset>').join("")+'<div class="middle-assessment-actions"><button type="submit" class="primary">Submit Verified Attempt</button><button type="button" data-restart>Discard & Draw New Attempt</button></div><div aria-live="polite" data-status></div></form>';
   body.querySelector("[data-restart]").onclick=()=>begin(body);
   body.querySelector("[data-middle-formal]").onsubmit=event=>{
     event.preventDefault();const form=event.currentTarget,status=form.querySelector("[data-status]"),responses=[];let correct=0,answered=0;
+    if(form.dataset.submitted==="true"){status.textContent="This attempt has already been graded. Draw a fresh attempt to retry.";return}
+    if((learner()?.learnerId||null)!==startedLearnerId){status.textContent="The active learner changed during this attempt. Discard it and begin a fresh attempt for the selected learner.";return}
     qs.forEach((q,i)=>{
       const chosen=form.querySelector('input[name="msaq'+i+'"]:checked'),selected=chosen?Number(chosen.value):null,ok=selected===q.answer;
       if(selected!==null)answered++;if(ok)correct++;
@@ -149,6 +151,8 @@ function begin(body){
     if(answered<qs.length){status.textContent="Answer all "+qs.length+" questions before submitting.";return}
     // Revalidate progression immediately before writing a completed attempt.
     if(!gate().open){status.textContent="The progression gate is no longer open. Reload the assessment.";return}
+    // Freeze this form before persistence, so repeated submit events cannot record the same draw twice.
+    form.dataset.submitted="true";
     qs.forEach((q,i)=>{
       const fb=form.querySelector('[data-feedback="'+i+'"]');
       fb.hidden=false;fb.textContent=q.rationale||"Review this concept before the next attempt.";
@@ -163,7 +167,7 @@ function begin(body){
     const score=aligned&&mathScore<PASS?Math.min(rawScore,79):rawScore;
     const snapshot={schema:"khaemenes-middle-assessment-attempt-v1",id:attemptId,engineVersion:VERSION,factoryVersion:global.KhaemenesMiddleQuestionFactory?.version||null,learnerId:l?.learnerId||null,preview:!l,grade:grade(),kind:kind(),week:week(),page:location.pathname,seed,startedAt,completedAt,questionCount:qs.length,correct,rawScore,mathCorrect,mathQuestionCount:mathResponses.length,mathScore,score,masteryThreshold:PASS,mastered:score>=PASS&&!!l,responses};
     const stored=append(snapshot),formal=stored&&l?writeScore(snapshot):false;
-    form.querySelectorAll("input,button[type=submit]").forEach(el=>el.disabled=true);
+    form.querySelectorAll("input,button").forEach(el=>el.disabled=true);
     const result=document.createElement("section");result.className="middle-assessment-result"+(score>=PASS&&(!l||formal)?"":" review");
     result.innerHTML="<strong>"+(score>=PASS&&l&&formal?"Verified mastery reached":!l?"Preview attempt completed":!formal?"Score not saved — retry required":"Review and retry")+"</strong><p>Overall: "+rawScore+"% · "+correct+"/"+qs.length+" correct. "+(aligned?"Mathematics: "+mathCorrect+"/"+mathResponses.length+" ("+mathScore+"%). Both strands require 80%. ":"")+(score!==rawScore?"Mastery not yet reached. ":"")+(!stored?"The attempt could not be saved. Do not treat this result as verified.":l?(formal?"This verified attempt was written to the learner’s formal course record.":"The attempt was preserved, but the formal score write failed."):"Preview mode: no formal learner record was changed.")+"</p><div class=\"middle-assessment-actions\"><button type=\"button\" data-new>Draw New Attempt</button><a href=\""+MENTOR_URL+"\">Review with Archaemenes</a>"+(score>=PASS&&l&&formal?'<a href="'+esc(nextHref())+'">Continue →</a>':"")+"</div>";
     form.appendChild(result);result.querySelector("[data-new]").onclick=()=>begin(body);result.scrollIntoView({behavior:"smooth",block:"center"});
