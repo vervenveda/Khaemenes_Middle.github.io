@@ -483,6 +483,25 @@ function makeGrade6MotionMathWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6PortfolioWeek(opts){
+ const r=rng(hash("g6portfolio|"+String(opts.seed||1))),out=[],a=int(r,2,8),b=int(r,2,8),h=int(r,2,7),factor=int(r,2,6);
+ function add(prompt,correct,wrong,skill,rationale){
+  const good=String(correct),alts=[...new Set(wrong.map(String).filter(x=>x!==good))];
+  for(let k=1;alts.length<3;k++){const extra=Number.isFinite(Number(correct))?String(Number(correct)+11*k):"Not equivalent "+k;if(extra!==good&&!alts.includes(extra))alts.push(extra)}
+  out.push(finalize(makeQuestion(prompt,good,alts.slice(0,3),{subject:"mathematics",grade:6,focus:"week 17 cumulative portfolio",skill,rationale}),r));
+ }
+ add("Complete the equivalent ratio "+a+":"+b+" = "+(a*factor)+": ?",b*factor,[b+factor,a*factor,b*factor+1],"ratio evidence","Scale both terms of a ratio by the same factor.");
+ add("Solve x - "+a+" = "+b+".",a+b,[b-a,b,a],"equation defense","Add the same value to both sides and check.");
+ add("Find the area of a triangle with base "+(2*a)+" cm and perpendicular height "+b+" cm in cm².",a*b,[2*a*b,a+b,a*b+2],"area units","Multiply base and perpendicular height and divide by two.");
+ const v=a*b*h,sa=2*(a*b+a*h+b*h);
+ add("Find the volume in cm³ of a rectangular prism "+a+" by "+b+" by "+h+" cm.",v,[a*b+h,sa,v+h],"volume evidence","Multiply the three edge lengths; report cubic units.");
+ add("Find the total surface area in cm² of a CLOSED prism "+a+" by "+b+" by "+h+" cm.",sa,[v,a*b+a*h+b*h,sa+a*b],"surface area evidence","Double the sum of the three different face areas.");
+ const m=int(r,2,8),d=int(r,1,6);
+ add("What is the median of the ordered values "+[m,m+d,m+d,m+2*d,m+3*d].join(", ")+"?",m+d,[m,m+2*d,m+3*d],"statistics defense","The middle of five ordered observations is the third.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -500,6 +519,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6MatterMathWeek,
   makeGrade6ThermalMathWeek,
   makeGrade6MotionMathWeek,
+  makeGrade6PortfolioWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
