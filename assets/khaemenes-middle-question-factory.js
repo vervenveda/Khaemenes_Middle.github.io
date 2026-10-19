@@ -271,7 +271,7 @@ function makeGrade6MathWeek(opts){
   out.push(finalize(q,r));
  }
  for(let k=0;k<6;k++){
-  const n=int(r,2,9),m=int(r,2,8),factor=int(r,2,5);
+  const n=int(r,2,9),m0=int(r,2,8),m=m0===n?m0+1:m0,factor=int(r,2,5);
   if(week===1){
    if(k%2===0)add("Complete the equivalent ratio "+n+":"+m+" = "+(n*factor)+": ?",m*factor,[m+factor,m*factor+1,n*factor],"ratios","Multiply both ratio terms by the same factor.");
    else add("A group travels "+(n*m)+" kilometers in "+m+" hours. What is the rate in km/hour?",n,[n+1,n*m,m],"unit rates","Divide distance by time.");
