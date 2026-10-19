@@ -335,6 +335,24 @@ function makeGrade6ExpressionsWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6EquationsWeek(opts){
+ const r=rng(hash("g6equations|"+String(opts.seed||1))),out=[],n=int(r,2,12),a=int(r,2,8),b=int(r,3,13);
+ function add(prompt,correct,wrong,skill,reason){
+  const answer=String(correct),alternatives=[...new Set(wrong.map(String).filter(x=>x!==answer))];
+  for(let k=1;alternatives.length<3;k++){const extra=String(Number(correct)+17*k);if(extra!==answer&&!alternatives.includes(extra))alternatives.push(extra)}
+  out.push(finalize(makeQuestion(prompt,answer,alternatives.slice(0,3),{subject:"mathematics",grade:6,focus:"week 9 equations",skill,rationale:reason}),r));
+ }
+ add("Solve x + "+a+" = "+(n+a)+".",n,[n+a,n-a,a],"addition equation","Subtract a from both sides and check.");
+ add("Solve x - "+a+" = "+n+".",n+a,[n-a,n,a],"subtraction equation","Add a to both sides and check.");
+ add("Solve "+a+"x = "+(a*n)+".",n,[a*n,n+a,a],"multiplication equation","Divide both sides by a.");
+ add("Solve x / "+a+" = "+n+".",a*n,[n,n+a,a],"division equation","Multiply both sides by a.");
+ add("A club charges $"+a+" once plus $"+b+" per visit, totaling $"+(a+b*n)+". How many visits were made?",n,[n+a,n+b,a+b],"word equations","Subtract the one-time fee, then divide by the per-visit price.");
+ const negative=-int(r,2,9),positive=int(r,2,12),right=negative+positive;
+ add("Solve x - ("+negative+") = "+positive+".",right,[positive-negative,positive,negative],"signed equations","Subtracting a negative adds its opposite; isolate x and substitute to verify.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -344,6 +362,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6MathWeek,
   makeGrade6CoordinateWeek,
   makeGrade6ExpressionsWeek,
+  makeGrade6EquationsWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
