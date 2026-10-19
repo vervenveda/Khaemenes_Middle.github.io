@@ -502,6 +502,24 @@ function makeGrade6PortfolioWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6WaveMathWeek(opts){
+ const r=rng(hash("g6waves|"+String(opts.seed||1))),out=[],amp=int(r,2,9),pulses=int(r,3,8),seconds=int(r,3,9),rate=int(r,2,8);
+ function add(prompt,correct,wrong,skill,rationale){
+   const good=String(correct),alt=[...new Set(wrong.map(String).filter(x=>x!==good))];
+   for(let k=1;alt.length<3;k++){const candidate=Number.isFinite(Number(correct))?String(Number(correct)+11*k):"Other unsupported inference "+k;if(candidate!==good&&!alt.includes(candidate))alt.push(candidate)}
+   out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 18 waves data",skill,rationale}),r));
+ }
+ add("A simulated graph has minimum −"+amp+" and maximum +"+amp+". What is its numerical range?",2*amp,[amp,amp*amp,2*amp+1],"range","Maximum minus minimum includes the negative distance.");
+ add("A model shows "+(rate*seconds)+" pulses in "+seconds+" seconds. What is the average count rate in pulses per second?",rate,[rate*seconds,seconds,rate+seconds],"pulse unit rate","Divide the pulse count by elapsed seconds.");
+ add("At a steady modeled "+rate+" pulses per second, how many pulses occur in "+seconds+" seconds?",rate*seconds,[rate+seconds,rate*seconds+rate,seconds],"rate prediction","Multiply rate by elapsed time.");
+ add("Which point represents sample index "+seconds+" and displacement −"+amp+"?", "("+seconds+", −"+amp+")",["(−"+amp+", "+seconds+")","("+seconds+", "+amp+")","("+amp+", "+seconds+")"],"signed plotting","Put sample time on x and signed displacement on y.");
+ const low=int(r,2,9),step=int(r,1,5);
+ add("Find the median of the ordered signal readings "+[low,low+step,low+step,low+2*step,low+4*step].join(", ")+".",low+step,[low,low+2*step,low+4*step],"statistics","The third of five ordered readings is the median.");
+ add("What does a repeating numeric pattern alone establish?","The recorded numbers repeat in the observed sample",["The exact sound source is identified","The measured signal is necessarily a musical note","The waveform must come from a particular material"],"model limitation","A numerical pattern is not enough to identify its physical cause.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -520,6 +538,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6ThermalMathWeek,
   makeGrade6MotionMathWeek,
   makeGrade6PortfolioWeek,
+  makeGrade6WaveMathWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
