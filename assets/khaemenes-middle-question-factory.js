@@ -297,6 +297,25 @@ function makeGrade6MathWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6CoordinateWeek(opts){
+ const r=rng(hash("g6coordinates|"+String(opts.seed||1))),out=[];
+ const p=(x,y)=>"("+x+", "+y+")";
+ const a=int(r,2,6),b=int(r,1,5),t=int(r,1,5),scale=pick(r,[100,200,250,500]);
+ function add(prompt,correct,wrong,skill,rationale){
+   const options=[String(correct),...wrong.map(String)];
+   if(new Set(options).size!==4)throw new Error("Ambiguous coordinate choices: "+prompt);
+   out.push(finalize(makeQuestion(prompt,correct,wrong,{subject:"mathematics",grade:6,skill,focus:"week 7 coordinates",rationale}),r));
+ }
+ add("Starting at the origin, move "+a+" left and "+b+" up. Which point do you reach?",p(-a,b),[p(a,b),p(-a,-b),p(a,-b)],"plotting","Horizontal x first, vertical y second.");
+ add("Which quadrant contains "+p(-a,-b)+"?","III",["I","II","IV"],"quadrants","Both coordinates negative means Quadrant III.");
+ add("The point "+p(0,-b)+" lies where?","On the y-axis",["On the x-axis","Quadrant III","Quadrant IV"],"axes","x=0 means the y-axis; axis points are not inside quadrants.");
+ add("Reflect "+p(-a,b)+" across the x-axis. Which point results?",p(-a,-b),[p(a,b),p(-a,b),p(a,-b)],"reflection x","Keep x, reverse y.");
+ add("Reflect "+p(-a,b)+" across the y-axis. Which point results?",p(a,b),[p(-a,-b),p(-a,b),p(a,-b)],"reflection y","Reverse x, keep y.");
+ add("Points "+p(-a,t)+" and "+p(b,t)+" share a straight horizontal map street, with "+scale+" meters per grid interval. How far apart are they?",String((a+b)*scale)+" meters",[String(Math.abs(a-b)*scale)+" meters",String(a+b)+" meters",String((a+b+1)*scale)+" meters"],"map scale","Subtract x-coordinates and multiply the separation by meters per interval.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -304,6 +323,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makePool,
   makeBalanced,
   makeGrade6MathWeek,
+  makeGrade6CoordinateWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
