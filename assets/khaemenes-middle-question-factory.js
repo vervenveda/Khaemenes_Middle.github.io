@@ -266,7 +266,7 @@ function makeGrade6MathWeek(opts){
  const r=rng(hash("g6w|"+week+"|"+String(opts.seed||1))),out=[];let taskNumber=0;
  function add(prompt,correct,wrong,skill,explanation){
   const correctText=String(correct),alternatives=[...new Set(wrong.map(String).filter(v=>v!==correctText))];
-  for(let i=1;alternatives.length<3;i++){const candidate=String(Number(correct)+i*7);if(candidate!==correctText&&!alternatives.includes(candidate))alternatives.push(candidate)}
+  for(let i=1;alternatives.length<3;i++){const candidate=Number.isFinite(Number(correct))?String(Number(correct)+i*7):"Not equivalent (option "+i+")";if(candidate!==correctText&&!alternatives.includes(candidate))alternatives.push(candidate)}
   const q=makeQuestion("Task "+(++taskNumber)+": "+prompt,correctText,alternatives.slice(0,3),{subject:"mathematics",skill,grade:6,focus:"week "+week,rationale:explanation});
   out.push(finalize(q,r));
  }
