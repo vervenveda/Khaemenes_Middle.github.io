@@ -446,6 +446,25 @@ function makeGrade6MatterMathWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6ThermalMathWeek(opts){
+ const r=rng(hash("g6thermal|"+String(opts.seed||1))),out=[],start=-int(r,2,9),rise=int(r,4,12),duration=int(r,2,8),plateau=int(r,-2,8);
+ function add(prompt,correct,wrong,skill,rationale){
+  const good=String(correct),alts=[...new Set(wrong.map(String).filter(x=>x!==good))];
+  for(let i=1;alts.length<3;i++){const candidate=Number.isFinite(Number(correct))?String(Number(correct)+i*11):"Other interpretation "+i;if(candidate!==good&&!alts.includes(candidate))alts.push(candidate)}
+  out.push(finalize(makeQuestion(prompt,good,alts.slice(0,3),{subject:"mathematics",grade:6,focus:"week 15 temperature graphs",skill,rationale}),r));
+ }
+ const end=start+rise;
+ add("A temperature changes from "+start+"°C to "+end+"°C. What is its signed change in °C?",rise,[-rise,end,start],"temperature difference","Final temperature minus initial temperature.");
+ add("A temperature moves from "+end+"°C back to "+start+"°C. What is the signed change in °C?",-rise,[rise,start,end],"negative change","Final temperature minus initial temperature can be negative.");
+ const rate=int(r,2,6),change=rate*duration;
+ add("The temperature rises "+change+"°C in "+duration+" minutes. What is its average rise in °C per minute?",rate,[change,rate+duration,duration],"average rate","Divide temperature difference by elapsed minutes.");
+ add("On a graph with time on x and temperature on y, which ordered pair shows "+end+"°C at minute "+duration+"?","("+duration+", "+end+")",["("+end+", "+duration+")","("+duration+", "+start+")","("+start+", "+duration+")"],"coordinate graph","Time is horizontal and temperature is vertical.");
+ add("A temperature graph records "+plateau+"°C at minutes 4 and 6. What is its average rate over that interval?","0°C/min",["2°C/min",plateau+"°C/min","Cannot calculate"],"plateau rate","Unchanged temperature divided by two elapsed minutes is zero.");
+ add("A graph has a flat temperature interval. What does the graph alone establish?","The recorded temperature did not change in that interval",["A phase change definitely occurred","The sample was definitely freezing","The material's identity is known"],"data interpretation","The temperature observations alone do not prove a physical mechanism.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -461,6 +480,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6GeometryWeek,
   makeGrade6VolumeWeek,
   makeGrade6MatterMathWeek,
+  makeGrade6ThermalMathWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
