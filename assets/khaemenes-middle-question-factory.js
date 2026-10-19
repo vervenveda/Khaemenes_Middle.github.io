@@ -321,7 +321,7 @@ function makeGrade6ExpressionsWeek(opts){
  const r=rng(hash("g6expressions|"+String(opts.seed||1))),out=[],v=int(r,2,8),a=int(r,2,6),b=int(r,2,9);
  function add(prompt,correct,wrong,skill,reason){
  const good=String(correct),alt=[...new Set(wrong.map(String).filter(x=>x!==good))];
- for(let i=1;alt.length<3;i++){const extra=Number.isFinite(Number(correct))?String(Number(correct)+7*i):"Incorrect expression "+i;if(extra!==good&&!alt.includes(extra))alt.push(extra)}
+ for(let i=1;alt.length<3;i++){const extra=Number.isFinite(Number(correct))?String(Number(correct)+7*i):skill==="translation"?(a+i)+"n + "+b:skill==="distributive property"?a+"x + "+(a*b+i):(a+b+i)+"y - 3";if(extra!==good&&!alt.includes(extra))alt.push(extra)}
  const q=makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 8 expressions",skill,rationale:reason});
  out.push(finalize(q,r));
  }
