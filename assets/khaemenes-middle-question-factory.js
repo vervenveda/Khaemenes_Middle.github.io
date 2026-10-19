@@ -465,6 +465,24 @@ function makeGrade6ThermalMathWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6MotionMathWeek(opts){
+ const r=rng(hash("g6motion|"+String(opts.seed||1))),out=[],rate=int(r,2,9),time=int(r,3,10),other=int(r,2,8),distance=rate*time;
+ function add(prompt,correct,wrong,skill,rationale){
+  const good=String(correct),alts=[...new Set(wrong.map(String).filter(x=>x!==good))];
+  for(let k=1;alts.length<3;k++){const extra=Number.isFinite(Number(correct))?String(Number(correct)+11*k):skill==="ordered pairs"?"("+(time+k)+", "+distance+")":"Unclear from the measurement "+k;if(extra!==good&&!alts.includes(extra))alts.push(extra)}
+  out.push(finalize(makeQuestion(prompt,good,alts.slice(0,3),{subject:"mathematics",grade:6,focus:"week 16 motion",skill,rationale}),r));
+ }
+ add("A cart travels "+distance+" m in "+time+" s. What is its average speed in m/s?",rate,[distance,time,rate+1],"average speed","Divide distance by time.");
+ add("A cart moves at a modeled steady "+rate+" m/s for "+time+" s. How many meters does it travel?",distance,[rate+time,distance+rate,distance-time],"distance model","Multiply speed by time.");
+ add("Solve "+rate+"t = "+distance+" for time t in seconds.",time,[rate,distance,time+rate],"unknown time","Divide both sides by the steady speed.");
+ add("Which (time, distance) point represents "+time+" s and "+distance+" m?","("+time+", "+distance+")",["("+distance+", "+time+")","("+time+", "+rate+")","("+rate+", "+time+")"],"ordered pairs","Time is the x-coordinate; distance is the y-coordinate.");
+ const secondTime=time+1,secondDistance=other*secondTime;
+ add("Cart A travels "+distance+" m in "+time+" s. Cart B travels "+secondDistance+" m in "+secondTime+" s. Which has the greater average speed?",rate===other?"Equal":rate>other?"A":"B",rate===other?["A","B","Cannot compare"]:["Equal",rate>other?"B":"A","Cannot compare"],"compare average speeds","Divide each distance by its own time.");
+ add("What units describe distance divided by time, with meters and seconds?","m/s",["m","m²","s/m"],"rate units","A speed rate is distance per unit time.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -481,6 +499,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6VolumeWeek,
   makeGrade6MatterMathWeek,
   makeGrade6ThermalMathWeek,
+  makeGrade6MotionMathWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
