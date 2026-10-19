@@ -257,12 +257,51 @@ function validateQuestion(q){
   return !!(q&&typeof q.prompt==="string"&&q.prompt.trim()&&Array.isArray(q.options)&&q.options.length===4&&new Set(q.options).size===4&&Number.isInteger(q.answer)&&q.answer>=0&&q.answer<4&&q.options[q.answer]===q.correct);
 }
 
+
+/* Six concept-specific questions per Grade 6 weekly mathematics assessment, Weeks 1–6.
+ * Questions are freshly parameterized per seed; answer positions are randomized by finalize(). */
+function makeGrade6MathWeek(opts){
+ const week=Number(opts.week),count=Number(opts.count)||6;
+ if(!(week>=1&&week<=6)||count!==6)return[];
+ const r=rng(hash("g6w|"+week+"|"+String(opts.seed||1))),out=[];
+ function add(prompt,correct,wrong,skill,explanation){
+  const q=makeQuestion(prompt,String(correct),wrong.map(String),{subject:"mathematics",skill,grade:6,focus:"week "+week,rationale:explanation});
+  out.push(finalize(q,r));
+ }
+ for(let k=0;k<6;k++){
+  const n=int(r,2,9),m=int(r,2,8),factor=int(r,2,5);
+  if(week===1){
+   if(k%2===0)add("Complete the equivalent ratio "+n+":"+m+" = "+(n*factor)+": ?",m*factor,[m+factor,m*factor+1,n*factor],"ratios","Multiply both ratio terms by the same factor.");
+   else add("A group travels "+(n*m)+" kilometers in "+m+" hours. What is the rate in km/hour?",n,[n+1,n*m,m],"unit rates","Divide distance by time.");
+  }else if(week===2){
+   if(k%2===0)add("There are "+n+" red and "+m+" blue counters. What is red to TOTAL?",n+":"+(n+m),[n+":"+m,m+":"+(n+m),(n+m)+":"+n],"part-to-whole","Total means red plus blue.");
+   else add("Which ratio is equivalent to "+n+":"+m+"?",(n*factor)+":"+(m*factor),[(n*factor)+":"+m,n+":"+(m*factor),(n+factor)+":"+(m+factor)],"equivalent ratios","Scale both quantities equally.");
+  }else if(week===3){
+   if(k%2===0)add("A pump fills "+(n*m)+" liters in "+m+" minutes. How many liters in ONE minute?",n,[m,n+1,n*m],"unit rates","Divide liters by minutes.");
+   else add("At "+n+" liters per minute, how many liters after "+m+" minutes?",n*m,[n+m,n*m+1,m],"rate tables","Multiply rate by elapsed minutes.");
+  }else if(week===4){
+   const pct=[10,20,25,50][k%4],base=20*n;
+   if(k%2===0)add("Find "+pct+"% of "+base+".",pct*base/100,[pct*base/100+5,pct*base/100+10,base-pct*base/100],"percent","Multiply the whole by percent divided by 100.");
+   else add("In a survey, "+n+" of "+(n*factor)+" people chose A. What percent is that?",100/factor+"%",[factor+"%",n+"%",(100/factor+10)+"%"],"survey proportions","Part divided by whole times 100.");
+  }else if(week===5){
+   if(k%2===0)add("How many 1/"+m+"-size pieces fit into "+n+" whole units?",n*m,[n+m,n,m],"fraction division","Dividing by 1/m counts m pieces per whole.");
+   else add("Compute "+n+"/"+m+" ÷ 1/"+m+".",n,[n*m,m,n+1],"fraction division","There are n copies of 1/m in n/m.");
+  }else{
+   if(k%3===0)add("Which value is greater: -"+n+" or -"+m+"?","-"+Math.min(n,m),["-"+Math.max(n,m),"0",String(Math.max(n,m))],"integer ordering","The negative number closer to zero is greater.");
+   else if(k%3===1)add("What is the absolute value of -"+n+"?",n,[-n,0,n+1],"absolute value","Absolute value is distance from zero.");
+   else add("In base 60, positional digits (1, "+n+") represent what decimal quantity?",60+n,[10+n,100+n,60*n],"historical place value","One group of sixty plus n units.");
+  }
+ }
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
   normalizeSubject,
   makePool,
   makeBalanced,
+  makeGrade6MathWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
