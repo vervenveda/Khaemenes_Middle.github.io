@@ -141,12 +141,18 @@ function begin(body){
   body.querySelector("[data-middle-formal]").onsubmit=event=>{
     event.preventDefault();const form=event.currentTarget,status=form.querySelector("[data-status]"),responses=[];let correct=0,answered=0;
     qs.forEach((q,i)=>{
-      const chosen=form.querySelector('input[name="msaq'+i+'"]:checked'),selected=chosen?Number(chosen.value):null,ok=selected===q.answer,fb=form.querySelector('[data-feedback="'+i+'"]');
+      const chosen=form.querySelector('input[name="msaq'+i+'"]:checked'),selected=chosen?Number(chosen.value):null,ok=selected===q.answer;
       if(selected!==null)answered++;if(ok)correct++;
       responses.push({id:q.id,prompt:q.prompt,options:q.options,selected,answer:q.answer,correct:ok,subject:q.subject,skill:q.skill});
-      fb.hidden=false;fb.textContent=selected===null?"Not answered.":(ok?(q.rationale||"Correct."):(q.rationale||"Review this concept before the next attempt."));
     });
+    // Never reveal explanations or correct answers until the entire attempt is answered.
     if(answered<qs.length){status.textContent="Answer all "+qs.length+" questions before submitting.";return}
+    // Revalidate progression immediately before writing a completed attempt.
+    if(!gate().open){status.textContent="The progression gate is no longer open. Reload the assessment.";return}
+    qs.forEach((q,i)=>{
+      const fb=form.querySelector('[data-feedback="'+i+'"]');
+      fb.hidden=false;fb.textContent=q.rationale||"Review this concept before the next attempt.";
+    });
     const rawScore=Math.round(correct/qs.length*100),completedAt=new Date().toISOString(),l=learner();
     const aligned=grade()==="06"&&kind()==="weekly"&&week()>=1&&week()<=6;
     const mathResponses=responses.filter(r=>r.subject==="mathematics");
@@ -156,10 +162,10 @@ function begin(body){
     // Preserve raw score for transparent reporting; cap the gate score only when math mastery is absent.
     const score=aligned&&mathScore<PASS?Math.min(rawScore,79):rawScore;
     const snapshot={schema:"khaemenes-middle-assessment-attempt-v1",id:attemptId,engineVersion:VERSION,factoryVersion:global.KhaemenesMiddleQuestionFactory?.version||null,learnerId:l?.learnerId||null,preview:!l,grade:grade(),kind:kind(),week:week(),page:location.pathname,seed,startedAt,completedAt,questionCount:qs.length,correct,rawScore,mathCorrect,mathQuestionCount:mathResponses.length,mathScore,score,masteryThreshold:PASS,mastered:score>=PASS&&!!l,responses};
-    append(snapshot);const formal=l?writeScore(snapshot):false;
+    const stored=append(snapshot),formal=stored&&l?writeScore(snapshot):false;
     form.querySelectorAll("input,button[type=submit]").forEach(el=>el.disabled=true);
     const result=document.createElement("section");result.className="middle-assessment-result"+(score>=PASS&&(!l||formal)?"":" review");
-    result.innerHTML="<strong>"+(score>=PASS&&l&&formal?"Verified mastery reached":!l?"Preview attempt completed":!formal?"Score not saved — retry required":"Review and retry")+"</strong><p>Overall: "+rawScore+"% · "+correct+"/"+qs.length+" correct. "+(aligned?"Mathematics: "+mathCorrect+"/"+mathResponses.length+" ("+mathScore+"%). Both strands require 80%. ":"")+(score!==rawScore?"Mastery not yet reached. ":"")+(l?(formal?"This verified attempt was written to the learner’s formal course record.":"The attempt was preserved, but the formal score write failed."):"Preview mode: no formal learner record was changed.")+"</p><div class=\"middle-assessment-actions\"><button type=\"button\" data-new>Draw New Attempt</button><a href=\""+MENTOR_URL+"\">Review with Archaemenes</a>"+(score>=PASS&&l&&formal?'<a href="'+esc(nextHref())+'">Continue →</a>':"")+"</div>";
+    result.innerHTML="<strong>"+(score>=PASS&&l&&formal?"Verified mastery reached":!l?"Preview attempt completed":!formal?"Score not saved — retry required":"Review and retry")+"</strong><p>Overall: "+rawScore+"% · "+correct+"/"+qs.length+" correct. "+(aligned?"Mathematics: "+mathCorrect+"/"+mathResponses.length+" ("+mathScore+"%). Both strands require 80%. ":"")+(score!==rawScore?"Mastery not yet reached. ":"")+(!stored?"The attempt could not be saved. Do not treat this result as verified.":l?(formal?"This verified attempt was written to the learner’s formal course record.":"The attempt was preserved, but the formal score write failed."):"Preview mode: no formal learner record was changed.")+"</p><div class=\"middle-assessment-actions\"><button type=\"button\" data-new>Draw New Attempt</button><a href=\""+MENTOR_URL+"\">Review with Archaemenes</a>"+(score>=PASS&&l&&formal?'<a href="'+esc(nextHref())+'">Continue →</a>':"")+"</div>";
     form.appendChild(result);result.querySelector("[data-new]").onclick=()=>begin(body);result.scrollIntoView({behavior:"smooth",block:"center"});
   };
 }
