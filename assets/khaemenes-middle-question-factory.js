@@ -520,6 +520,22 @@ function makeGrade6WaveMathWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6MidtermMath(opts){
+ const seed=String((opts||{}).seed||1),r=rng(hash("g6midterm|"+seed));
+ const makers={7:makeGrade6CoordinateWeek,8:makeGrade6ExpressionsWeek,9:makeGrade6EquationsWeek,10:makeGrade6InequalitiesWeek,11:makeGrade6StatisticsWeek,12:makeGrade6GeometryWeek,13:makeGrade6VolumeWeek,14:makeGrade6MatterMathWeek,15:makeGrade6ThermalMathWeek,16:makeGrade6MotionMathWeek,17:makeGrade6PortfolioWeek,18:makeGrade6WaveMathWeek};
+ const result=[];
+ for(let week=1;week<=18;week++){
+  const drawSeed=seed+"|week-"+week;
+  const pool=week<=6?makeGrade6MathWeek({week,seed:drawSeed,count:6}):makers[week]({seed:drawSeed});
+  if(pool.length!==6||pool.some(q=>!validateQuestion(q)))return[];
+  const selected=pool[Math.floor(r()*pool.length)];
+  result.push(Object.assign({},selected,{focus:"midterm review · week "+week,sourceWeek:week}));
+ }
+ if(new Set(result.map(q=>q.prompt)).size!==18)return[];
+ return shuffle(r,result);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -539,6 +555,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6MotionMathWeek,
   makeGrade6PortfolioWeek,
   makeGrade6WaveMathWeek,
+  makeGrade6MidtermMath,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
