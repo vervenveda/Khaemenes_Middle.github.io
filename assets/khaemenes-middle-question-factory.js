@@ -353,6 +353,25 @@ function makeGrade6EquationsWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6InequalitiesWeek(opts){
+ const r=rng(hash("g6inequalities|"+String(opts.seed||1))),out=[];
+ const n=int(r,3,12),a=int(r,2,7),b=int(r,2,8);
+ function add(prompt,correct,wrong,skill,reason){
+  const good=String(correct),alt=[...new Set(wrong.map(String).filter(x=>x!==good))];
+  if(alt.length!==3)throw Error("Ambiguous inequality alternatives");
+  out.push(finalize(makeQuestion(prompt,good,alt,{subject:"mathematics",grade:6,focus:"week 10 inequalities",skill,rationale:reason}),r));
+ }
+ add("Which graph represents x > "+n+"?","Open circle at "+n+", shade right",["Closed circle at "+n+", shade right","Open circle at "+n+", shade left","Closed circle at "+n+", shade left"],"strict inequality","A strict greater-than uses an open endpoint and rightward shading.");
+ add("What is the solution set of x - "+a+" ≤ "+n+"?","x ≤ "+(n+a),["x ≥ "+(n+a),"x < "+(n+a),"x ≤ "+(n-a)],"addition-subtraction","Add the same number to both sides.");
+ add("What is the solution set of "+a+"x > "+(a*n)+"?","x > "+n,["x ≥ "+n,"x < "+n,"x > "+(a*n)],"positive multiplication","Divide by positive a; do not reverse the symbol.");
+ add("Solve -"+a+"x ≥ "+(a*b)+".","x ≤ -"+b,["x ≥ -"+b,"x ≤ "+b,"x < -"+b],"negative coefficient","Divide by a negative and reverse the inequality.");
+ const budget=int(r,50,90),fixed=int(r,5,15),rate=int(r,2,6),capacity=Math.floor((budget-fixed)/rate);
+ add("A trip has at most $"+budget+". It costs $"+fixed+" plus $"+rate+" per person. What is the greatest whole-number group size?",capacity,[capacity+1,capacity-1,capacity+2],"budget constraint","Subtract the fixed cost then divide by the per-person rate, rounding down.");
+ add("Which statement is represented by age ≥ "+b+"?","Age "+b+" or older",["Older than "+b+" only","Younger than "+b,"Exactly age "+b+" only"],"inclusive boundary","The greater-than-or-equal symbol includes the boundary.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -363,6 +382,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6CoordinateWeek,
   makeGrade6ExpressionsWeek,
   makeGrade6EquationsWeek,
+  makeGrade6InequalitiesWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
