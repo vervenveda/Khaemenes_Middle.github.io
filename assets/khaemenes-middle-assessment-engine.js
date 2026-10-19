@@ -72,6 +72,12 @@ function displayCount(){
 function candidateCount(){return Math.max(displayCount()*2,kind()==="weekly"?45:90)}
 function questions(seed){
   const f=global.KhaemenesMiddleQuestionFactory;if(!f)return[];
+  // Grade 6 Weeks 1–6 require a substantial aligned mathematics strand.
+  if(grade()==="06"&&kind()==="weekly"&&week()>=1&&week()<=6){
+    const math=f.makeGrade6MathWeek?.({week:week(),seed:seed+"|math",count:6})||[];
+    const others=f.makeBalanced({grade:6,focus:focus(),seed:seed+"|general",count:candidateCount()}).filter(q=>q.subject!=="mathematics").slice(0,12);
+    return math.length===6&&others.length===12?math.concat(others):[];
+  }
   return f.makeBalanced({grade:Number(grade()),focus:focus(),seed,count:candidateCount()}).slice(0,displayCount());
 }
 function attemptsKey(){return ATTEMPT_PREFIX+":"+(learner()?.learnerId||"preview")+":grade-"+grade()}
@@ -141,12 +147,19 @@ function begin(body){
       fb.hidden=false;fb.textContent=selected===null?"Not answered.":(ok?(q.rationale||"Correct."):(q.rationale||"Review this concept before the next attempt."));
     });
     if(answered<qs.length){status.textContent="Answer all "+qs.length+" questions before submitting.";return}
-    const score=Math.round(correct/qs.length*100),completedAt=new Date().toISOString(),l=learner();
-    const snapshot={schema:"khaemenes-middle-assessment-attempt-v1",id:attemptId,engineVersion:VERSION,factoryVersion:global.KhaemenesMiddleQuestionFactory?.version||null,learnerId:l?.learnerId||null,preview:!l,grade:grade(),kind:kind(),week:week(),page:location.pathname,seed,startedAt,completedAt,questionCount:qs.length,correct,score,masteryThreshold:PASS,mastered:score>=PASS,responses};
+    const rawScore=Math.round(correct/qs.length*100),completedAt=new Date().toISOString(),l=learner();
+    const aligned=grade()==="06"&&kind()==="weekly"&&week()>=1&&week()<=6;
+    const mathResponses=responses.filter(r=>r.subject==="mathematics");
+    const mathCorrect=mathResponses.filter(r=>r.correct).length;
+    const mathScore=mathResponses.length?Math.round(mathCorrect/mathResponses.length*100):0;
+    // Formal mastery requires BOTH 80% overall and at least 80% in the six aligned mathematics questions.
+    // Preserve raw score for transparent reporting; cap the gate score only when math mastery is absent.
+    const score=aligned&&mathScore<PASS?Math.min(rawScore,79):rawScore;
+    const snapshot={schema:"khaemenes-middle-assessment-attempt-v1",id:attemptId,engineVersion:VERSION,factoryVersion:global.KhaemenesMiddleQuestionFactory?.version||null,learnerId:l?.learnerId||null,preview:!l,grade:grade(),kind:kind(),week:week(),page:location.pathname,seed,startedAt,completedAt,questionCount:qs.length,correct,rawScore,mathCorrect,mathQuestionCount:mathResponses.length,mathScore,score,masteryThreshold:PASS,mastered:score>=PASS,responses};
     append(snapshot);const formal=l?writeScore(snapshot):false;
     form.querySelectorAll("input,button[type=submit]").forEach(el=>el.disabled=true);
     const result=document.createElement("section");result.className="middle-assessment-result"+(score>=PASS?"":" review");
-    result.innerHTML="<strong>"+(score>=PASS?"Mastery reached":"Review and retry")+"</strong><p>Score: "+score+"% · "+correct+"/"+qs.length+" correct. "+(l?(formal?"This verified attempt was written to the learner’s formal course record.":"The attempt was preserved, but the formal score write failed."):"Preview mode: no formal learner record was changed.")+"</p><div class=\"middle-assessment-actions\"><button type=\"button\" data-new>Draw New Attempt</button><a href=\""+MENTOR_URL+"\">Review with Archaemenes</a>"+(score>=PASS&&l?'<a href="'+esc(nextHref())+'">Continue →</a>':"")+"</div>";
+    result.innerHTML="<strong>"+(score>=PASS&&(!l||formal)?"Mastery reached":"Review and retry")+"</strong><p>Score: "+score+"% · "+correct+"/"+qs.length+" correct. "+(l?(formal?"This verified attempt was written to the learner’s formal course record.":"The attempt was preserved, but the formal score write failed."):"Preview mode: no formal learner record was changed.")+"</p><div class=\"middle-assessment-actions\"><button type=\"button\" data-new>Draw New Attempt</button><a href=\""+MENTOR_URL+"\">Review with Archaemenes</a>"+(score>=PASS&&l&&formal?'<a href="'+esc(nextHref())+'">Continue →</a>':"")+"</div>";
     form.appendChild(result);result.querySelector("[data-new]").onclick=()=>begin(body);result.scrollIntoView({behavior:"smooth",block:"center"});
   };
 }
