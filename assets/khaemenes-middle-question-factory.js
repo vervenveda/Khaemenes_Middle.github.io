@@ -429,6 +429,23 @@ function makeGrade6VolumeWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6MatterMathWeek(opts){
+ const r=rng(hash("g6matter|"+String(opts.seed||1))),out=[],rate=int(r,2,8),volume=int(r,2,9),other=int(r,2,8);
+ function add(prompt,correct,wrong,skill,reason){
+  const good=String(correct),alts=[...new Set(wrong.map(String).filter(x=>x!==good))];
+  for(let i=1;alts.length<3;i++){const candidate=Number.isFinite(Number(correct))?String(Number(correct)+i*13):"Different answer "+i;if(candidate!==good&&!alts.includes(candidate))alts.push(candidate)}
+  out.push(finalize(makeQuestion(prompt,good,alts.slice(0,3),{subject:"mathematics",grade:6,focus:"week 14 matter measurement",skill,rationale:reason}),r));
+ }
+ add("A fictional sample has mass "+(rate*volume)+" g and volume "+volume+" cm³. What is its mass-per-volume unit rate in g/cm³?",rate,[rate*volume,rate+volume,volume],"unit rates","Divide mass by volume, not the reverse.");
+ add("At constant "+rate+" g/cm³, what is the modeled mass of "+volume+" cm³ in grams?",rate*volume,[rate+volume,rate*volume+rate,volume],"ratio tables","Multiply the unit rate by the volume.");
+ add("For the model mass = "+rate+" × volume, what ordered pair is plotted for volume "+volume+" cm³?","("+volume+", "+(rate*volume)+")",["("+(rate*volume)+", "+volume+")","("+volume+", "+rate+")","("+rate+", "+volume+")"],"graphing","Volume is the horizontal coordinate, mass vertical.");
+ add("Sample A is "+(rate*volume)+" g in "+volume+" cm³; sample B is "+(other*(volume+1))+" g in "+(volume+1)+" cm³. Which unit rate is larger?",rate===other?"Equal":rate>other?"A":"B",rate===other?["A","B","Cannot compare"]:["Equal",rate>other?"B":"A","Cannot compare"],"comparing rates","Compute each mass divided by its corresponding volume.");
+ add("Which measurement unit is mass divided by volume when mass is in grams and volume in cm³?","g/cm³",["g","cm³","cm²"],"measurement units","Preserve both units as a quotient.");
+ add("For constant rate "+rate+" g/cm³, mass = "+(rate*volume)+" g. What volume in cm³ does this represent?",volume,[rate*volume,rate+volume,volume+1],"inverse unit rates","Divide mass by the unit rate.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -443,6 +460,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6StatisticsWeek,
   makeGrade6GeometryWeek,
   makeGrade6VolumeWeek,
+  makeGrade6MatterMathWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
