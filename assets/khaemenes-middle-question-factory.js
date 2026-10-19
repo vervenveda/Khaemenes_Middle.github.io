@@ -263,11 +263,11 @@ function validateQuestion(q){
 function makeGrade6MathWeek(opts){
  const week=Number(opts.week),count=Number(opts.count)||6;
  if(!(week>=1&&week<=6)||count!==6)return[];
- const r=rng(hash("g6w|"+week+"|"+String(opts.seed||1))),out=[];
+ const r=rng(hash("g6w|"+week+"|"+String(opts.seed||1))),out=[];let taskNumber=0;
  function add(prompt,correct,wrong,skill,explanation){
   const correctText=String(correct),alternatives=[...new Set(wrong.map(String).filter(v=>v!==correctText))];
   for(let i=1;alternatives.length<3;i++){const candidate=String(Number(correct)+i*7);if(candidate!==correctText&&!alternatives.includes(candidate))alternatives.push(candidate)}
-  const q=makeQuestion(prompt,correctText,alternatives.slice(0,3),{subject:"mathematics",skill,grade:6,focus:"week "+week,rationale:explanation});
+  const q=makeQuestion("Task "+(++taskNumber)+": "+prompt,correctText,alternatives.slice(0,3),{subject:"mathematics",skill,grade:6,focus:"week "+week,rationale:explanation});
   out.push(finalize(q,r));
  }
  for(let k=0;k<6;k++){
@@ -284,7 +284,7 @@ function makeGrade6MathWeek(opts){
   }else if(week===4){
    const pct=[10,20,25,50][k%4],base=20*n;
    if(k%2===0)add("Find "+pct+"% of "+base+".",pct*base/100,[pct*base/100+5,pct*base/100+10,base-pct*base/100],"percent","Multiply the whole by percent divided by 100.");
-   else add("In a survey, "+n+" of "+(n*factor)+" people chose A. What percent is that?",100/factor+"%",[factor+"%",n+"%",(100/factor+10)+"%"],"survey proportions","Part divided by whole times 100.");
+   else {const divisor=[2,4,5][k%3];add("In a survey, "+n+" of "+(n*divisor)+" people chose A. What percent is that?",100/divisor+"%",[divisor+"%",n+"%",(100/divisor+10)+"%"],"survey proportions","Part divided by whole times 100.");}
   }else if(week===5){
    if(k%2===0)add("How many 1/"+m+"-size pieces fit into "+n+" whole units?",n*m,[n+m,n,m],"fraction division","Dividing by 1/m counts m pieces per whole.");
    else add("Compute "+n+"/"+m+" ÷ 1/"+m+".",n,[n*m,m,n+1],"fraction division","There are n copies of 1/m in n/m.");
