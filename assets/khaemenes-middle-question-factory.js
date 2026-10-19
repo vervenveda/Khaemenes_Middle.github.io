@@ -400,8 +400,8 @@ function makeGrade6GeometryWeek(opts){
  }
  add("What is the area of a "+a+" cm by "+b+" cm rectangle in cm²?",a*b,[a+b,2*(a+b),a*b+h],"rectangle area","Multiply length by width; use square centimeters.");
  add("What is the area of a triangle with base "+(2*a)+" cm and perpendicular height "+b+" cm in cm²?",a*b,[2*a*b,2*a+b,a+b],"triangle area","Area is base times perpendicular height divided by two.");
- const outerL=a+4,outerW=b+3,removed=2*h,composite=outerL*outerW-removed;
- add("A "+outerL+" m by "+outerW+" m rectangle has a 2 m by "+h+" m corner removed. What area remains in m²?",composite,[outerL*outerW,composite+removed,composite-removed],"composite area","Subtract the missing area from the full rectangle.");
+ const outerL=a+4,outerW=b+3,cutHeight=Math.min(h,outerW-1),removed=2*cutHeight,composite=outerL*outerW-removed;
+ add("A "+outerL+" m by "+outerW+" m rectangle has a 2 m by "+cutHeight+" m corner removed. What area remains in m²?",composite,[outerL*outerW,composite+removed,composite-removed],"composite area","Subtract the missing area from the full rectangle.");
  const closed=2*(a*b+a*h+b*h);
  add("Find the total surface area in cm² of a CLOSED box measuring "+a+" by "+b+" by "+h+" cm.",closed,[a*b*h,a*b+a*h+b*h,closed+a*b],"closed prism","A closed rectangular prism has two of each of three face areas.");
  const lidless=a*b+2*a*h+2*b*h;
