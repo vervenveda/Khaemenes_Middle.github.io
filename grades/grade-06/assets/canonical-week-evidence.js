@@ -37,7 +37,7 @@
       .canonical-evidence-note{max-width:82ch;margin:0 auto 20px;padding:12px 14px;border:1px solid var(--line,#d8dbe3);border-radius:7px;background:#faf8f3;line-height:1.55}
       .canonical-subject-list{display:grid;gap:18px}
       .canonical-subject-card{padding:20px;border:1px solid var(--line,#d8dbe3);border-radius:7px;background:#fff}
-      .canonical-subject-card h2{margin:0 0 7px;color:var(--navy,#172033)}
+      .canonical-print-identity{text-align:center;font-size:12px;line-height:1.4;border-bottom:1px solid #ccc;padding:6px;margin:0 0 10px}\n      .canonical-subject-card h2{margin:0 0 7px;color:var(--navy,#172033)}
       .canonical-subject-card .focus{margin:.15rem 0 12px;font-weight:750;color:#6a5525}
       .canonical-subject-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
       .canonical-subject-box{padding:12px;border:1px solid var(--line,#d8dbe3);border-radius:7px;background:#faf8f3}
@@ -53,7 +53,7 @@
       .canonical-score-line div{min-height:46px;border:1px solid var(--line,#d8dbe3);border-radius:7px;padding:10px}
       .canonical-reviewer{margin:14px 0 4px;font-weight:700}
       @media(max-width:720px){.canonical-subject-grid,.canonical-score-line{grid-template-columns:1fr}.canonical-rubric{font-size:.88rem}.canonical-rubric th,.canonical-rubric td{padding:7px}}
-      @media print{.no-print,.canonical-evidence-actions{display:none!important}.canonical-subject-card{break-inside:avoid;box-shadow:none}.canonical-evidence-space{min-height:115px}.canonical-rubric{font-size:10pt}.canonical-evidence-note{border-color:#999}}
+      @media print{@page{size:letter;margin:.45in}.canonical-subject-card{break-before:page;page-break-before:always}.canonical-subject-card:first-child{break-before:auto;page-break-before:auto}.canonical-rubric thead{display:table-header-group}.canonical-rubric tr{break-inside:avoid}.no-print,.canonical-evidence-actions{display:none!important}.canonical-subject-card{break-inside:avoid;box-shadow:none}.canonical-evidence-space{min-height:115px}.canonical-rubric{font-size:10pt}.canonical-evidence-note{border-color:#999}}
     `;
     document.head.appendChild(style);
   }
@@ -61,7 +61,7 @@
   function titleBlock(root,label){
     const header=node("div","canonical-evidence-head");
     header.append(node("p","week-label",`Grade 6 · Week ${pad(weekNumber)} · ${label}`));
-    header.append(node("h1","",row?.title||`Week ${pad(weekNumber)}`));
+    header.append(node("h1","","Khaemenes Academy"),node("h2","",row?.title||`Week ${pad(weekNumber)}`));
     const essential=node("p","essential",row?.essentialQuestion?`Essential question: ${row.essentialQuestion}`:"");
     header.appendChild(essential);root.appendChild(header);
     const identity=node("div","name-date canonical-identity");
@@ -78,7 +78,7 @@
       const cell=subjectCell(subject.id);if(!cell)continue;
       lines.push(subject.title,`Focus: ${cell.focus}`,`Objective: ${cell.objective}`,`Evidence to keep: ${cell.evidenceTask}`,`Mastery target: ${cell.assessmentTarget}`,"");
     }
-    lines.push(`Mastery authority: adult-reviewed weekly record; course threshold ${MIN}%.`);
+    lines.push(`Formative evidence only; verified mastery requires the separate randomized examination.`);
     return lines.join("\n");
   }
   function assessmentRows(){
@@ -118,7 +118,7 @@
     for(const subject of subjects){
       const cell=subjectCell(subject.id);if(!cell)continue;
       const card=node("section","canonical-subject-card");
-      card.append(node("h2","",subject.title),node("p","focus",`Focus: ${cell.focus}`));
+      card.append(node("p","canonical-print-identity",`Khaemenes Academy · Grade 6 · Week ${pad(weekNumber)} · ${subject.title} · Lesson: ${cell.focus} · Student: ______________ · Date: __________`),node("h2","",subject.title),node("p","focus",`Focus: ${cell.focus}`));
       const grid=node("div","canonical-subject-grid");
       for(const [label,value] of [["What you are learning",cell.objective],["Evidence to keep",cell.evidenceTask],["Mastery target",cell.assessmentTarget]]){
         const box=node("div","canonical-subject-box");box.append(node("h3","",label),node("p","",value));grid.appendChild(box);
@@ -129,9 +129,9 @@
     root.appendChild(list);
   }
   function renderAssessment(root){
-    titleBlock(root,"Weekly Mastery Check");
+    titleBlock(root,"Supplemental Evidence Rubric");
     controls(root,"Download Review Copy",()=>downloadText(`grade-06-week-${pad(weekNumber)}-mastery-check.txt`,assessmentText()));
-    root.append(node("p","canonical-evidence-note",`Adult-reviewed evidence check. Score each domain 0, 1, or 2 points. Total possible: ${TOTAL_POINTS}. Passing: ${PASSING_POINTS}/${TOTAL_POINTS} = 81.8%, which meets the Academy minimum of ${MIN}%. This page does not write the student's grade; the authorized adult/Academy record remains authoritative.`));
+    root.append(node("p","canonical-evidence-note",`Adult-reviewed evidence check. Score each domain 0, 1, or 2 points. Total possible: ${TOTAL_POINTS}. Passing: ${PASSING_POINTS}/${TOTAL_POINTS} = 81.8%, which meets the Academy minimum of ${MIN}%. This page does not write the student's grade; this rubric never awards verified mastery or unlocks progression.`));
     const table=node("table","canonical-rubric");
     const head=node("thead");const hr=node("tr");["#","Domain","Week-specific evidence target","Score 0–2"].forEach(t=>hr.appendChild(node("th","",t)));head.appendChild(hr);table.appendChild(head);
     const body=node("tbody");
@@ -140,7 +140,7 @@
     });
     table.appendChild(body);root.appendChild(table);
     const score=node("section","canonical-score-box");
-    score.append(node("h2","","Adult Review Record"),node("p","",`Use the course record after review. The student-facing page itself cannot submit or change a grade.`));
+    score.append(node("h2","","Adult Review Record"),node("p","",`Keep this signed formative evidence with the student portfolio; only the randomized exam writes verified grades.`));
     const line=node("div","canonical-score-line");line.append(node("div","","Total: ____ / 22"),node("div","","Percent: ____ %"),node("div","","Mastery: ☐ Met  ☐ Not yet"));score.appendChild(line);
     score.append(node("p","canonical-reviewer","Adult reviewer: ____________________________________"),node("div","canonical-evidence-space"));root.appendChild(score);
   }
