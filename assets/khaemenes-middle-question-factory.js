@@ -603,6 +603,23 @@ function makeGrade6EarthRationalWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6WeatherCoordinatesWeek(opts){
+ const r=rng(hash("g6weather23|"+String((opts||{}).seed||1))),out=[],a=int(r,2,8),b=int(r,2,8),d=int(r,2,7);
+ function add(prompt,correct,wrongs,skill,rationale){
+  const good=String(correct),alt=[...new Set(wrongs.map(String).filter(x=>x!==good))];
+  for(let k=1;alt.length<3;k++){const candidate=Number.isFinite(Number(correct))?String(Number(correct)+11*k):"Another location "+k;if(candidate!==good&&!alt.includes(candidate))alt.push(candidate)}
+  out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 23 weather coordinates",skill,rationale}),r));
+ }
+ add("Which quadrant contains (−"+a+", +"+b+")?","II",["I","III","IV"],"quadrant signs","Negative x and positive y are in Quadrant II.");
+ add("What is the horizontal grid distance from (−"+a+", "+d+") to (+"+b+", "+d+")?",a+b,[Math.abs(a-b),a,b],"horizontal distance","Subtract the left x-coordinate from the right x-coordinate.");
+ add("What is the vertical grid distance from ("+d+", −"+a+") to ("+d+", +"+b+")?",a+b,[Math.abs(a-b),a,b],"vertical distance","The x-values agree; subtract vertical endpoints.");
+ add("Reflect ("+a+", −"+b+") across the y-axis.","(−"+a+", −"+b+")",["("+a+", "+b+")","(−"+a+", "+b+")","("+b+", −"+a+")"],"y-axis reflection","Change x sign and keep y.");
+ add("Reflect (−"+a+", "+b+") across the x-axis.","(−"+a+", −"+b+")",["("+a+", +"+b+")","("+a+", −"+b+")","(−"+b+", +"+a+")"],"x-axis reflection","Change y sign and keep x.");
+ add("Three fictional weather stations share the same y-coordinate. What does that establish?","They share a horizontal position line on this map",["They have identical temperatures","They have identical rainfall","They experience the same climate"],"spatial evidence","A coordinate location does not provide weather measurements.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -627,6 +644,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6CellPercentWeek,
   makeGrade6EcosystemFractionsWeek,
   makeGrade6EarthRationalWeek,
+  makeGrade6WeatherCoordinatesWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
