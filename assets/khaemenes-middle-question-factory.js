@@ -637,6 +637,19 @@ function makeGrade6RiverExpressionsWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6CultureEquationsWeek(opts){
+ const r=rng(hash("g6culture25|"+String((opts||{}).seed||1))),out=[],a=int(r,2,8),b=int(r,2,9),x=int(r,2,9);
+ function add(prompt,correct,wrongs,skill,rationale){const good=String(correct),alt=[...new Set(wrongs.map(String).filter(z=>z!==good))];for(let i=1;alt.length<3;i++){const v=Number.isFinite(Number(correct))?String(Number(correct)+11*i):"Other rule "+i;if(v!==good&&!alt.includes(v))alt.push(v)}out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 25 fictional community rules",skill,rationale}),r));}
+ add("Solve "+a+"x + "+b+" = "+(a*x+b)+".",x,[x+a,x+b,a*x+b],"one-variable equations","Subtract the constant and divide by the coefficient.");
+ add("Solve "+a+"y − "+b+" = "+(a*x-b)+".",x,[x+b,x+a,a*x],"inverse operations","Add the constant then divide by the coefficient.");
+ add("Solve "+a+"n + "+b+" ≤ "+(a*x+b)+".","n ≤ "+x,["n ≥ "+x,"n < "+x,"n = "+x],"positive inequality","Divide by a positive coefficient; retain the inequality direction.");
+ add("Solve −"+a+"z ≥ "+(a*x)+".","z ≤ −"+x,["z ≥ −"+x,"z ≤ "+x,"z = −"+x],"negative multiplier","Dividing by a negative reverses the inequality.");
+ add("A fictional hall has at most "+(a*x+b)+" seats; "+b+" are reserved. Which guest limit follows?","g ≤ "+(a*x),["g ≥ "+(a*x),"g < "+(a*x),"g ≤ "+(a*x+b)],"constraints","Subtract reserved seats from total capacity.");
+ add("Which statement describes the solution to g ≤ "+x+" for nonnegative whole-number guest counts?","0 through "+x+" guests inclusive",["Only "+x+" guests","More than "+x+" guests","All negative numbers only"],"solution set","At most includes the boundary and all smaller feasible values.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -663,6 +676,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6EarthRationalWeek,
   makeGrade6WeatherCoordinatesWeek,
   makeGrade6RiverExpressionsWeek,
+  makeGrade6CultureEquationsWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
