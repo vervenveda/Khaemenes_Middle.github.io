@@ -771,6 +771,19 @@ function makeGrade6CapstoneEquationWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6CapstoneGeometryWeek(opts){
+ const r=rng(hash("g6capstone35|"+String((opts||{}).seed||1))),out=[],a=int(r,2,8),b=int(r,2,7),h=int(r,2,6);
+ function add(prompt,correct,wrongs,skill,reason){const good=String(correct),alt=[...new Set(wrongs.map(String).filter(v=>v!==good))];for(let i=1;alt.length<3;i++){const v=Number.isFinite(Number(correct))?String(Number(correct)+11*i):"Other value "+i;if(v!==good&&!alt.includes(v))alt.push(v)}out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 35 geometry capstone",skill,rationale:reason}),r));}
+ add("A fictional display has length "+a+" cm and width "+b+" cm. Find floor area in cm².",a*b,[a+b,2*(a+b),a*b*h],"rectangle area","Multiply length and width for square centimeters.");
+ add("A rectangular model is "+a+" cm by "+b+" cm by "+h+" cm. What is its capacity in cm³?",a*b*h,[a*b,2*(a*b+a*h+b*h),a+b+h],"prism volume","Multiply all three dimensions.");
+ add("A CLOSED prism is "+a+" cm by "+b+" cm by "+h+" cm. Find surface area in cm².",2*(a*b+a*h+b*h),[a*b*h,a*b+a*h+b*h,2*(a+b+h)],"six-face surface area","Count all three opposite pairs of rectangular faces.");
+ add("A triangular base measures "+(2*a)+" cm by "+b+" cm perpendicular height. Its area in cm² is:",a*b,[2*a*b,2*a+b,a+b],"triangle area","Triangle area is base times height divided by two.");
+ add("A triangular prism has triangular base area "+(a*b)+" cm² and length "+h+" cm. Find volume in cm³.",a*b*h,[a*b,2*a*b*h,a*b+h],"triangular prism","Volume is area of base multiplied by length.");
+ add("For a rectangular prototype with the top removed, which model statement is true?","Exclude the top face from surface area, but use the same volume formula",["Volume equals area numerically","The top still counts as a physical face","Its geometric capacity becomes zero"],"open-top models","An absent cover changes surface material but not geometric capacity.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -807,6 +820,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6WellnessCoordinatesWeek,
   makeGrade6TechnologyExpressionsWeek,
   makeGrade6CapstoneEquationWeek,
+  makeGrade6CapstoneGeometryWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
