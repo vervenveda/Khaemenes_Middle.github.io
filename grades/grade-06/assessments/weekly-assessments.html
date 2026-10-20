@@ -9,7 +9,7 @@
 <body>
   <header class="header no-print"><div class="shell nav"><a class="brand" href="../index.html"><span class="seal">6</span><span><strong>Khaemenes Sixth Grade</strong><small>Canonical Weekly Mastery</small></span></a><nav class="navlinks"><a href="../index.html">Grade 6</a><a href="midterm-review.html">Midyear Review</a><a href="midterm.html">Midterm</a><a href="final-review.html">Final Review</a><a href="final-exam.html">Final</a><a href="../records/certificate.html">Certificate</a></nav></div></header>
   <main class="section"><div class="shell">
-    <div class="heading"><p class="kicker">Assessments</p><h1 style="color:var(--navy)">36 Weekly Mastery Checks</h1><p>Each weekly check is aligned to that week's canonical Grade 6 subject targets. Adult review remains authoritative; 18/22 points = 81.8%, meeting the Academy minimum of 80%.</p></div>
+    <div class="heading"><p class="kicker">Assessments</p><h1 style="color:var(--navy)">36 Weekly Mastery Checks</h1><p>Weekly verified knowledge assessments record randomized attempts under the active Grade 6 learner. Weeks 1–18 require at least 80% overall and 80% in their aligned mathematics questions. Adult-reviewed 22-point evidence rubrics are supplemental and cannot unlock the next week.</p></div>
     <div class="actions" style="justify-content:center;margin-bottom:20px"><a class="button" href="midterm-review.html">Midyear Review Center</a><a class="button gold" href="midterm.html">Official Midterm</a><a class="button" href="final-review.html">Final Course Review</a><a class="button gold" href="final-exam.html">Official Final</a></div>
     <div class="grid cols-3" id="canonicalAssessmentGrid"></div>
   </div></main>
@@ -25,9 +25,10 @@
       card.className="card";
       const emblem=document.createElement("div");emblem.className="emblem";emblem.textContent=w;
       const h=document.createElement("h3");h.textContent=week.title;
-      const p=document.createElement("p");p.textContent="22-point, week-specific adult-reviewed mastery check · 80% minimum";
-      const a=document.createElement("a");a.className="button";a.href=`../evidence/weekly-mastery-check.html?week=${w}`;a.textContent="Open Mastery Check";
-      card.append(emblem,h,p,a);grid.appendChild(card);
+      const p=document.createElement("p");p.textContent="Separate randomized knowledge assessment and printable adult-reviewed portfolio evidence";
+      const a=document.createElement("a");a.className="button";a.href=`week-${w}-assessment.html`;a.textContent="Verified Weekly Examination";
+      const evidence=document.createElement("a");evidence.className="button";evidence.href=`../evidence/weekly-mastery-check.html?week=${w}`;evidence.textContent="Supplemental Evidence Rubric";
+      card.append(emblem,h,p,a,evidence);grid.appendChild(card);
     }
   })();
   </script>
