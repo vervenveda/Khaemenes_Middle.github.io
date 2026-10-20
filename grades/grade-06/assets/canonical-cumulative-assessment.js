@@ -130,7 +130,7 @@
     title(root,isMidterm?"Sixth Grade Midyear Subject Demonstration":"Sixth Grade Final Readiness Demonstration",`Canonical cumulative assessment · Weeks 01–${pad(coverageEnd)} · ${itemCount} items · ${MIN}% minimum`);
     identity(root);
     actions(root,"Download Assessment Copy",()=>downloadText(`grade-06-${examType}-canonical-assessment.txt`,examText(items)),"");
-    root.append(node("p","cum-note",`Official adult-reviewed cumulative assessment. Each item is worth one point. Passing requires at least ${passingItems}/${itemCount} items (${MIN}%). This page does not write a score to the learner record. After authorized review, record the official percentage in the Grade 6 learner record.`));
+    root.append(node("p","cum-note",`Supplemental adult-reviewed portfolio demonstration. Each item is worth one point. A suggested proficiency benchmark is ${passingItems}/${itemCount} items (${MIN}%). This paper activity does not create verified mastery, write a score, or unlock progression. The separate randomized Verified Knowledge Assessment above is the authoritative midterm gate.`));
     const nav=node("nav","cum-subject-nav no-print");
     const grouped=new Map();for(const subject of DATA?.subjects||[])grouped.set(subject.id,[]);for(const item of items)grouped.get(item.subjectId)?.push(item);
     for(const subject of DATA?.subjects||[]){const group=grouped.get(subject.id)||[];if(group.length)nav.appendChild(link(`${subject.title} · ${group.length}`,`#cum-${subject.id}`,""))}root.appendChild(nav);
@@ -142,7 +142,7 @@
       const body=node("div","cum-subject-body");for(const item of group){const card=node("article","cum-item");card.append(node("h3","",`Item ${item.number}`),node("p","meta",`Week ${pad(item.week)} · ${item.focus}`),node("p","prompt",item.prompt),node("p","",`Evidence direction: ${item.evidence}`),node("div","cum-response"));body.appendChild(card)}details.appendChild(body);sections.appendChild(details);
     }
     root.appendChild(sections);
-    const score=node("section","cum-score");score.append(node("h2","","Authorized Adult Review"),node("p","",`Record the official percentage only after reviewing all ${itemCount} items. The Grade 6 learner record remains the score authority.`));
+    const score=node("section","cum-score");score.append(node("h2","","Supplemental Adult Portfolio Review"),node("p","",`Document reviewed evidence after checking all ${itemCount} items. This worksheet is not a verified midterm score and must not be entered as an automated mastery result.`));
     const grid=node("div","cum-score-grid");for(const label of [`Met: ____ / ${itemCount}`,`Required: ${passingItems} / ${itemCount}`,"Percent: ____ %","Adult reviewer: ____________________"]){grid.appendChild(node("div","",label))}score.appendChild(grid);root.appendChild(score);
   }
 
