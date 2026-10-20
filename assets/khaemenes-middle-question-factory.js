@@ -706,6 +706,19 @@ function makeGrade6ResearchPercentWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6DebateFractionWeek(opts){
+ const r=rng(hash("g6debate30|"+String((opts||{}).seed||1))),out=[],a=int(r,2,9),d=int(r,2,8),n=int(r,2,8);
+ function add(prompt,correct,wrongs,skill,reason){const good=String(correct),alt=[...new Set(wrongs.map(String).filter(x=>x!==good))];for(let i=1;alt.length<3;i++){let v=Number.isFinite(Number(correct))?String(Number(correct)+11*i):"Other interpretation "+i;if(v!==good&&!alt.includes(v))alt.push(v)}out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 30 debate fraction division",skill,rationale:reason}),r));}
+ add("A fictional discussion has "+a+" minutes; each speaking turn is 1/"+d+" minute. How many whole turns fit?",a*d,[a/d,a+d,a],"whole by unit fraction","Divide by a unit fraction by multiplying by its denominator.");
+ add("How many 1/"+d+"-minute turns fit into "+n+"/"+d+" minute?",n,[n*d,d,n+d],"unit fractions","The numerator counts how many equal unit portions are present.");
+ add("Evaluate ("+a+"/"+d+") ÷ (1/"+d+").",a,[a*d,d,a/d],"fraction quotient","Multiplying by the divisor's reciprocal cancels the denominator.");
+ add("A debate has "+a+"/"+d+" minute available; each speaking segment lasts 1/"+(2*d)+" minute. How many segments fit?",2*a,[a,2*d,a*d],"fraction by fraction","The segment is half of one over d, so twice as many fit.");
+ add("A hypothetical allocation has "+(a*d)+" seconds total and each turn lasts "+d+" seconds. How many complete turns fit?",a,[a*d,a+d,d],"units and quotient","Divide the available time by duration per turn.");
+ add("The exact quotient is 3⅓ speaking turns. How many COMPLETE turns does this represent?","3",["4","1","10"],"contextual remainder","One third of a turn does not count as a fourth complete turn.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -737,6 +750,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6TradeStatisticsWeek,
   makeGrade6LanguageRatioWeek,
   makeGrade6ResearchPercentWeek,
+  makeGrade6DebateFractionWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
