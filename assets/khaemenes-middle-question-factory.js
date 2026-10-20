@@ -663,6 +663,19 @@ function makeGrade6ClassicalGeometryWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6TradeStatisticsWeek(opts){
+ const r=rng(hash("g6trade27|"+String((opts||{}).seed||1))),out=[],a=int(r,2,8),b=int(r,2,8),d=int(r,1,5);
+ function add(prompt,correct,wrongs,skill,reason){const good=String(correct),alt=[...new Set(wrongs.map(String).filter(x=>x!==good))];for(let k=1;alt.length<3;k++){let v=Number.isFinite(Number(correct))?String(Number(correct)+11*k):"Different interpretation "+k;if(v!==good&&!alt.includes(v))alt.push(v)}out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 27 simulated trade data",skill,rationale:reason}),r));}
+ add("Fictional travel times are "+(a-1)+", "+a+", "+(a+1)+" days. What is their mean?",a,[a+1,a-1,3*a],"mean","The symmetric values have mean their middle value.");
+ add("Sorted fictional quantities are "+a+", "+a+", "+(a+b)+", "+(a+b+2)+", "+(a+b+4)+". What is their median?",a+b,[a,a+b+2,a+b+4],"median","For five ordered values, the third is the median.");
+ add("Data are "+a+", "+a+", "+b+", "+(a+b+3)+" units. What is the mode?",a,[b,a+b+3,a+b],"mode","The repeated value is the mode.");
+ add("The lowest travel time is "+a+" days and highest is "+(a+b)+" days. What is the range?",b,[a,a+b,2*b],"range","Range is maximum minus minimum.");
+ add("Two sets are A: "+a+", "+(a+1)+", "+(a+2)+" and B: "+(a-2)+", "+(a+1)+", "+(a+4)+". Which range is larger?","B",["A","Both are equal","Neither has a range"],"compare spread","Set B has a wider spread despite the same center.");
+ add("Two hypothetical route samples have equal means but different ranges. Which conclusion is justified?","Their averages agree but their variability differs",["Every travel time is equal","Both have identical distributions","The samples prove historical travel patterns"],"interpret data","Means alone do not capture spread or prove population behavior.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -691,6 +704,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6RiverExpressionsWeek,
   makeGrade6CultureEquationsWeek,
   makeGrade6ClassicalGeometryWeek,
+  makeGrade6TradeStatisticsWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
