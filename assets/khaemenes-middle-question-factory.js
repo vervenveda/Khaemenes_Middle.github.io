@@ -719,6 +719,19 @@ function makeGrade6DebateFractionWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6ArtsRationalWeek(opts){
+ const r=rng(hash("g6arts31|"+String((opts||{}).seed||1))),out=[],a=int(r,2,9),b=int(r,2,8),d=int(r,2,7);
+ function add(prompt,correct,wrongs,skill,reason){const good=String(correct),alt=[...new Set(wrongs.map(String).filter(x=>x!==good))];for(let k=1;alt.length<3;k++){const v=Number.isFinite(Number(correct))?String(Number(correct)+11*k):"Other interpretation "+k;if(v!==good&&!alt.includes(v))alt.push(v)}out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 31 signed design data",skill,rationale:reason}),r));}
+ add("A fictional editing slider starts at −"+a+" and increases by "+(a+b)+". What is its new setting?",b,[a+b,-b,a],"signed addition","Moving to the right by a+b from −a gives b.");
+ add("A setting moves from −"+a+" to +"+b+". What is its signed change?",a+b,[a-b,-(a+b),b],"signed change","Final minus initial equals b−(−a).");
+ add("What is the number-line distance between −"+a+" and +"+b+"?",a+b,[Math.abs(a-b),a,b],"distance","Distance between a negative and a positive position is their absolute sum.");
+ add("Evaluate −"+d+"/4 + "+d+"/2.",d+"/4",["−"+d+"/4",d+"/2","−"+d+"/2"],"signed fractions","Write halves as fourths and combine.");
+ add("Four hypothetical adjustments are −"+a+", +"+b+", +"+a+", −"+b+". What is the mean?","0",["1",a+b,4],"mean of signed data","The signed adjustments sum to zero.");
+ add("A fictional sound adjustment is −"+a+" relative to zero. What does the negative sign establish?","It is "+a+" units below the defined reference",["Physical sound has negative energy","All sound becomes silent","Every listener hears the same change"],"reference values","A signed setting describes a value relative to a reference.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -751,6 +764,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6LanguageRatioWeek,
   makeGrade6ResearchPercentWeek,
   makeGrade6DebateFractionWeek,
+  makeGrade6ArtsRationalWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
