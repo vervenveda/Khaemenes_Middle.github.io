@@ -745,6 +745,19 @@ function makeGrade6WellnessCoordinatesWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6TechnologyExpressionsWeek(opts){
+ const r=rng(hash("g6technology33|"+String((opts||{}).seed||1))),out=[],a=int(r,2,9),b=int(r,2,9),k=int(r,2,8);
+ function add(prompt,correct,wrongs,skill,reason){const good=String(correct),alt=[...new Set(wrongs.map(String).filter(x=>x!==good))];for(let i=1;alt.length<3;i++){const v=Number.isFinite(Number(correct))?String(Number(correct)+11*i):"Another expression "+i;if(v!==good&&!alt.includes(v))alt.push(v)}out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 33 fictional software expressions",skill,rationale:reason}),r));}
+ add("A fictional tool takes "+a+" seconds per file plus "+b+" seconds setup. Which expression models n files?",a+"n + "+b,[b+"n + "+a,a+" + "+b+"n",a+"n × "+b],"verbal models","Multiply the number of files by time per file and add the fixed setup cost.");
+ add("Evaluate "+a+"x + "+b+" for x = "+k+".",a*k+b,[a+k+b,a*k,b*k+a],"substitution","Substitute the input count, multiply, then add setup.");
+ add("Expand "+a+"(x + "+b+").",a+"x + "+a*b,[a+"x + "+b,(a+b)+"x",a+"x × "+b],"distribution","Multiply the factor by both parenthesized terms.");
+ add("Simplify "+a+"m + "+b+"m + "+k+".",(a+b)+"m + "+k,[a+"m + "+(b+k),(a+b+k)+"m",a*b+"m + "+k],"like terms","Combine identical variable terms, not the constant.");
+ add("Simplify "+(a+b)+"p − "+b+"p + "+k+".",a+"p + "+k,[b+"p + "+k,a+"p − "+k,(a+b)+"p + "+k],"subtract like terms","Subtract coefficients and retain the constant.");
+ add("Two hypothetical timing expressions match at one input. What does this prove?","They agree for that input only",["They are equivalent for all inputs","Both tools are accessible and secure","They have the same coefficients"],"model limitations","One observed matching output does not prove algebraic equivalence or usability.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -779,6 +792,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6DebateFractionWeek,
   makeGrade6ArtsRationalWeek,
   makeGrade6WellnessCoordinatesWeek,
+  makeGrade6TechnologyExpressionsWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
