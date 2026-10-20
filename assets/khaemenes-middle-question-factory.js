@@ -693,6 +693,19 @@ function makeGrade6LanguageRatioWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6ResearchPercentWeek(opts){
+ const r=rng(hash("g6research29|"+String((opts||{}).seed||1))),out=[],a=int(r,2,9),b=int(r,2,9),k=int(r,2,7);
+ function add(prompt,correct,wrongs,skill,reason){const good=String(correct),alt=[...new Set(wrongs.map(String).filter(x=>x!==good))];for(let i=1;alt.length<3;i++){const v=Number.isFinite(Number(correct))?String(Number(correct)+11*i):"Different claim "+i;if(v!==good&&!alt.includes(v))alt.push(v)}out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 29 research sample percentages",skill,rationale:reason}),r));}
+ add("A fictional team reviewed "+(3*a)+" of "+(4*a)+" records. What percentage was reviewed?","75%",["25%","60%","80%"],"fraction to percentage","Three quarters equals 75 percent.");
+ add("What is "+(b*10)+"% of "+(a*10)+" fictional notes?",a*b,[a*10+b,a*b*10,b*10],"percent of whole","Multiply the whole by the percent in decimal form.");
+ add("Sample A checks 16 of 20 records; B checks 24 of 40. Which has the higher checked proportion?","A: 80%",["B: 60%","Both 60%","B because 24 is larger"],"compare denominators","Compare proportions rather than raw counts.");
+ add("A fictional record count rises from "+(4*k)+" to "+(5*k)+". What is the percent increase?","25%",["20%","50%","125%"],"percent increase","The increase is one quarter of the original.");
+ add("A fictional report increases from "+(2*a)+" reviewed notes to "+(3*a)+". What is its percentage increase?","50%",["33%","150%","25%"],"relative change","Increase divided by original is one half.");
+ add("A sample has 90% of its notes checked. Which claim is justified?","90% of that sample was checked",["Every checked note is accurate","The source must be trustworthy","All research everywhere is 90% correct"],"limits of sample evidence","Checking rates do not verify source validity.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -723,6 +736,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6ClassicalGeometryWeek,
   makeGrade6TradeStatisticsWeek,
   makeGrade6LanguageRatioWeek,
+  makeGrade6ResearchPercentWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
