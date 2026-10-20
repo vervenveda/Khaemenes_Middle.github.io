@@ -650,6 +650,19 @@ function makeGrade6CultureEquationsWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6ClassicalGeometryWeek(opts){
+ const r=rng(hash("g6classical26|"+String((opts||{}).seed||1))),out=[],a=int(r,2,8),b=int(r,2,7),h=int(r,2,6);
+ function add(prompt,correct,wrongs,skill,reason){const good=String(correct),alts=[...new Set(wrongs.map(String).filter(x=>x!==good))];for(let i=1;alts.length<3;i++){const v=Number.isFinite(Number(correct))?String(Number(correct)+11*i):"Different measure "+i;if(v!==good&&!alts.includes(v))alts.push(v)}out.push(finalize(makeQuestion(prompt,good,alts.slice(0,3),{subject:"mathematics",grade:6,focus:"week 26 surface area and volume",skill,rationale:reason}),r));}
+ add("A model hall has floor length "+a+" m and width "+b+" m. What is its floor area in m²?",a*b,[a+b,2*(a+b),a*b*h],"rectangle area","Multiply length and width; report square meters.");
+ add("A rectangular-prism model is "+a+" m by "+b+" m by "+h+" m. What is its volume in m³?",a*b*h,[a*b,2*(a*b+a*h+b*h),a+b+h],"prism volume","Multiply all three dimensions.");
+ add("A CLOSED box has dimensions "+a+" cm × "+b+" cm × "+h+" cm. Its surface area in cm² is:",2*(a*b+a*h+b*h),[a*b*h,a*b+a*h+b*h,2*(a+b+h)],"surface area","Add areas of all six faces, counting each opposite pair twice.");
+ add("A RIGHT TRIANGLE has perpendicular base "+(2*a)+" cm and height "+b+" cm. What is its area in cm²?",a*b,[2*a*b,2*a+b,a+b],"triangle area","Triangle area = base × height ÷ 2.");
+ add("A triangular-prism model has triangle base area "+(a*b)+" cm² and length "+h+" cm. What is its volume in cm³?",a*b*h,[a*b,a*b+h,2*a*b*h],"triangular prism","Multiply triangle base area by prism length.");
+ add("Which statement is accurate for a rectangular container with its top REMOVED?","Its surface area excludes the top face, but volume formula is unchanged",["Its volume must equal its surface area","Its surface area includes both top faces","Its volume is always zero"],"open-top model","Surface area counts exposed faces; volume describes capacity.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -677,6 +690,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6WeatherCoordinatesWeek,
   makeGrade6RiverExpressionsWeek,
   makeGrade6CultureEquationsWeek,
+  makeGrade6ClassicalGeometryWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
