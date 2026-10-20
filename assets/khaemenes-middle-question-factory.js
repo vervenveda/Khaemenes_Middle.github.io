@@ -758,6 +758,19 @@ function makeGrade6TechnologyExpressionsWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6CapstoneEquationWeek(opts){
+ const r=rng(hash("g6capstone34|"+String((opts||{}).seed||1))),out=[],a=int(r,2,8),b=int(r,2,9),x=int(r,2,8);
+ function add(prompt,correct,wrongs,skill,reason){const good=String(correct),alt=[...new Set(wrongs.map(String).filter(z=>z!==good))];for(let i=1;alt.length<3;i++){const v=Number.isFinite(Number(correct))?String(Number(correct)+11*i):"Other model "+i;if(v!==good&&!alt.includes(v))alt.push(v)}out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 34 capstone equations inequalities",skill,rationale:reason}),r));}
+ add("Solve "+a+"n + "+b+" = "+(a*x+b)+" for n.",x,[x+b,x+a,a*x+b],"solve equation","Subtract setup cost, then divide by the per-item cost.");
+ add("A capstone has "+b+" fixed resource units plus "+a+" per project, budget "+(a*x+b)+". Which condition applies?","n ≤ "+x,["n ≥ "+x,"n < "+x,"n = "+x],"resource inequality","Apply at most and solve the positive-coefficient inequality.");
+ add("Solve "+a+"t − "+b+" > "+(a*x-b)+".","t > "+x,["t ≥ "+x,"t < "+x,"t = "+x],"strict inequality","Add b and divide by a positive coefficient.");
+ add("Solve −"+a+"y ≥ "+(a*x)+".","y ≤ −"+x,["y ≥ −"+x,"y ≤ "+x,"y = −"+x],"reverse inequality","Divide by a negative coefficient and reverse direction.");
+ add("With "+(a*x+b)+" available units, "+b+" for setup and "+a+" per whole model, the maximum number is:",x,[x+1,a*x+b,x-1],"feasible integer domain","Subtract setup and divide by cost per model.");
+ add("A formula predicts a feasible capstone budget. Which claim is supported?","The fictional plan satisfies the stated mathematical assumptions",["Actual resource costs have been independently verified","All projects are equally effective","The prototype is guaranteed to succeed"],"model limitations","Mathematical feasibility does not verify empirical assumptions.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -793,6 +806,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6ArtsRationalWeek,
   makeGrade6WellnessCoordinatesWeek,
   makeGrade6TechnologyExpressionsWeek,
+  makeGrade6CapstoneEquationWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
