@@ -73,6 +73,67 @@ function displayCount(){
 function candidateCount(){return Math.max(displayCount()*2,kind()==="weekly"?45:90)}
 function questions(seed){
   const f=global.KhaemenesMiddleQuestionFactory;if(!f)return[];
+  // Grade 6 final: 18 aligned math questions sampled evenly from Weeks 02–36
+  // plus 27 nonmathematics questions. Independent 80% mastery applies to both.
+  if(grade()==="06"&&kind()==="final"){
+    const math=[];
+      {const pool=f.makeGrade6MathWeek?.({week:2,seed:seed+"|final|2",count:6})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[0]);}
+      {const pool=f.makeGrade6MathWeek?.({week:4,seed:seed+"|final|4",count:6})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[1]);}
+      {const pool=f.makeGrade6MathWeek?.({week:6,seed:seed+"|final|6",count:6})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[2]);}
+      {const pool=f.makeGrade6ExpressionsWeek?.({seed:seed+"|final|8"})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[3]);}
+      {const pool=f.makeGrade6InequalitiesWeek?.({seed:seed+"|final|10"})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[4]);}
+      {const pool=f.makeGrade6GeometryWeek?.({seed:seed+"|final|12"})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[5]);}
+      {const pool=f.makeGrade6MatterMathWeek?.({seed:seed+"|final|14"})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[0]);}
+      {const pool=f.makeGrade6MotionMathWeek?.({seed:seed+"|final|16"})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[1]);}
+      {const pool=f.makeGrade6WaveMathWeek?.({seed:seed+"|final|18"})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[2]);}
+      {const pool=f.makeGrade6CellPercentWeek?.({seed:seed+"|final|20"})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[3]);}
+      {const pool=f.makeGrade6EarthRationalWeek?.({seed:seed+"|final|22"})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[4]);}
+      {const pool=f.makeGrade6RiverExpressionsWeek?.({seed:seed+"|final|24"})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[5]);}
+      {const pool=f.makeGrade6ClassicalGeometryWeek?.({seed:seed+"|final|26"})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[0]);}
+      {const pool=f.makeGrade6LanguageRatioWeek?.({seed:seed+"|final|28"})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[1]);}
+      {const pool=f.makeGrade6DebateFractionWeek?.({seed:seed+"|final|30"})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[2]);}
+      {const pool=f.makeGrade6WellnessCoordinatesWeek?.({seed:seed+"|final|32"})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[3]);}
+      {const pool=f.makeGrade6CapstoneEquationWeek?.({seed:seed+"|final|34"})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[4]);}
+      {const pool=f.makeGrade6ReadinessStatisticsWeek?.({seed:seed+"|final|36"})||[];
+      if(pool.length!==6)return[];
+      math.push(pool[5]);}
+    const others=f.makeBalanced({grade:6,focus:focus(),seed:seed+"|final|general",count:candidateCount()}).filter(q=>q.subject!=="mathematics").slice(0,27);
+    return math.length===18&&others.length===27?math.concat(others):[];
+  }
   // Grade 6 midterm: exactly one mathematics question from each of Weeks 1–18,
   // plus 18 questions from the non-mathematics strands.
   if(grade()==="06"&&kind()==="midterm"){
@@ -166,7 +227,7 @@ function begin(body){
       fb.hidden=false;fb.textContent=q.rationale||"Review this concept before the next attempt.";
     });
     const rawScore=Math.round(correct/qs.length*100),completedAt=new Date().toISOString(),l=learner();
-    const aligned=grade()==="06"&&((kind()==="weekly"&&week()>=1&&week()<=36)||kind()==="midterm");
+    const aligned=grade()==="06"&&((kind()==="weekly"&&week()>=1&&week()<=36)||kind()==="midterm"||kind()==="final");
     const mathResponses=responses.filter(r=>r.subject==="mathematics");
     const mathCorrect=mathResponses.filter(r=>r.correct).length;
     const mathScore=mathResponses.length?Math.round(mathCorrect/mathResponses.length*100):0;
