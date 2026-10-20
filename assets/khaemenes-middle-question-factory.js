@@ -784,6 +784,19 @@ function makeGrade6CapstoneGeometryWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6ReadinessStatisticsWeek(opts){
+ const r=rng(hash("g6readiness36|"+String((opts||{}).seed||1))),out=[],a=int(r,3,10),b=int(r,2,7);
+ function add(prompt,correct,wrongs,skill,reason){const good=String(correct),alt=[...new Set(wrongs.map(String).filter(v=>v!==good))];for(let i=1;alt.length<3;i++){const v=Number.isFinite(Number(correct))?String(Number(correct)+11*i):"Different interpretation "+i;if(v!==good&&!alt.includes(v))alt.push(v)}out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 36 statistics and Grade 7 readiness",skill,rationale:reason}),r));}
+ add("A fictional practice set is "+(a-2)+", "+a+", "+(a+2)+". What is its mean?",a,[a+2,a-2,3*a],"mean","The three equally spaced scores average to their center.");
+ add("A sorted data set is "+a+", "+(a+1)+", "+(a+2)+", "+(a+3)+", "+(a+4)+". What is its median?",a+2,[a,a+1,a+4],"median","The middle (third) value of five observations is the median.");
+ add("Data are "+a+", "+a+", "+(a+b)+", "+(a+b+1)+" and "+(a+b+2)+". What is the mode?",a,[a+b,a+b+1,a+b+2],"mode","The value appearing twice is most frequent.");
+ add("A fictional data set runs from "+a+" to "+(a+b)+" minutes. What is its range?",b,[a,a+b,b+1],"range","Maximum minus minimum equals range.");
+ add("Data set A is "+(a-1)+", "+a+", "+(a+1)+"; B is "+(a-3)+", "+a+", "+(a+3)+". Which has greater range?","B",["A","They have the same range","Neither has a median"],"comparing spread","B has range 6; A has range 2, although both share a center.");
+ add("Two fictional samples have equal means and different ranges. Which claim is justified?","The samples have the same average but different spread",["Their individual values are identical","Everyone is equally ready for the next grade","The samples prove future scores"],"interpret sample limits","A common mean does not prove identical distributions or individual readiness.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -821,6 +834,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6TechnologyExpressionsWeek,
   makeGrade6CapstoneEquationWeek,
   makeGrade6CapstoneGeometryWeek,
+  makeGrade6ReadinessStatisticsWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
