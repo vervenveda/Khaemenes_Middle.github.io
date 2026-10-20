@@ -572,6 +572,24 @@ function makeGrade6CellPercentWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6EcosystemFractionsWeek(opts){
+ const r=rng(hash("g6eco21|"+String(opts.seed||1))),out=[],n=int(r,2,9),d=int(r,2,9),part=int(r,2,8);
+ function add(prompt,correct,wrong,skill,reason){
+  const good=String(correct),alts=[...new Set(wrong.map(String).filter(x=>x!==good))];
+  for(let i=1;alts.length<3;i++){const v=Number.isFinite(Number(correct))?String(Number(correct)+11*i):"Other fraction "+i;if(v!==good&&!alts.includes(v))alts.push(v)}
+  out.push(finalize(makeQuestion(prompt,good,alts.slice(0,3),{subject:"mathematics",grade:6,focus:"week 21 divide fractions",skill,rationale:reason}),r));
+ }
+ add("A model has "+n+" liters and each portion holds 1/"+d+" liter. How many portions fit?",n*d,[n/d,n+d,n*d+d],"whole by unit fraction","Multiply the whole by the denominator of the unit fraction.");
+ add("How many 1/"+d+"-liter portions fit in "+part+"/"+d+" liter?",part,[part*d,d,part+d],"fraction by unit fraction","The numerator counts the unit fractions.");
+ add("Compute ("+n+"/"+d+") ÷ (1/"+d+").",n,[n*d,n/d,d],"fraction division","Multiply by the reciprocal of the divisor.");
+ add("A quantity is "+n+"/"+d+" kilograms and each portion is 1/"+(2*d)+" kilogram. How many portions fit?",2*n,[n,n*d,2*d],"fraction by fraction","Multiply by the reciprocal; the denominators cancel.");
+ const total=n*d,portion=d;
+ add("There are "+total+" units split into groups of "+portion+". How many complete groups?",n,[total,total+portion,portion],"quotient meaning","Divide the total by the size of one group.");
+ add("A division calculation gives 3⅓ container capacities. How many FULL containers can be filled?","3",["4","1","10"],"interpret quotient","A fractional container capacity is not a fourth full container.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -594,6 +612,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6MidtermMath,
   makeGrade6VisualRatioWeek,
   makeGrade6CellPercentWeek,
+  makeGrade6EcosystemFractionsWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
