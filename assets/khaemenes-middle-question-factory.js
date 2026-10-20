@@ -536,6 +536,24 @@ function makeGrade6MidtermMath(opts){
  return shuffle(r,result);
 }
 
+
+function makeGrade6VisualRatioWeek(opts){
+ const r=rng(hash("g6visual|"+String(opts.seed||1))),out=[],a=int(r,3,9),b=int(r,2,8),scale=int(r,2,6),seconds=int(r,3,9),fps=int(r,4,12);
+ function add(prompt,correct,wrong,skill,reason){
+  const good=String(correct),alts=[...new Set(wrong.map(String).filter(x=>x!==good))];
+  for(let i=1;alts.length<3;i++){const x=Number.isFinite(Number(correct))?String(Number(correct)+11*i):"Different comparison "+i;if(x!==good&&!alts.includes(x))alts.push(x)}
+  out.push(finalize(makeQuestion(prompt,good,alts.slice(0,3),{subject:"mathematics",grade:6,focus:"week 19 media ratios",skill,rationale:reason}),r));
+ }
+ add("An image has "+(a*scale)+" light and "+(b*scale)+" dark pixels. Which ratio gives light to dark in simplest terms?",a+":"+b,[a+":"+(a+b),b+":"+a,(a*scale)+":"+b],"part-to-part ratios","Compare light to dark and divide both terms by the same scale factor.");
+ add("A model is "+a+" cm wide and enlarged by scale factor "+scale+". How wide is the image in cm?",a*scale,[a+scale,a*scale+scale,a],"scale factor","Multiply the original width by the scale factor.");
+ add("A display presents "+(fps*seconds)+" frames in "+seconds+" seconds. How many frames per second on average?",fps,[fps*seconds,seconds,fps+seconds],"unit rate","Divide total frames by time.");
+ add("At "+fps+" frames per second for "+(seconds+2)+" seconds, how many frames are expected?",fps*(seconds+2),[fps+seconds+2,fps*seconds,seconds+2],"rate model","Multiply unit rate and elapsed time.");
+ const x=int(r,2,8);
+ add("An illustration reports "+(3*x)+" successes among "+(4*x)+" responses. What percent is successful?","75%",["25%","60%","80%"],"part-to-whole percent","Three fourths equals 75 percent.");
+ add("Two posters show 15 of 20 and 18 of 30. Which has the larger proportion?","15 of 20",["18 of 30","Both equal","Cannot calculate proportions"],"visual claims","Compare 75 percent against 60 percent, not raw counts.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -556,6 +574,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6PortfolioWeek,
   makeGrade6WaveMathWeek,
   makeGrade6MidtermMath,
+  makeGrade6VisualRatioWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
