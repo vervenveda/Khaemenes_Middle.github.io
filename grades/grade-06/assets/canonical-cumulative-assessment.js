@@ -110,7 +110,7 @@
     title(root,isMidterm?"Midyear Review Center":"Final Course Review",isMidterm?`Refresh Weeks 01–${pad(coverageEnd)} before the official Midterm.`:`Refresh the full 36-week course before the official Final.`);
     identity(root);
     actions(root,"Download Review Guide",()=>downloadText(`grade-06-${isMidterm?"midyear":"final"}-review-guide.txt`,reviewText(state)),isMidterm?"midterm.html":"final-exam.html");
-    root.append(node("p","cum-note",`This is a recommended, non-graded review space. It reads the existing learner record only to help prioritize study. It cannot award mastery, change grades, alter placement, or unlock the official assessment. The official cumulative score remains adult/Academy-reviewed and must meet ${MIN}%.`));
+    root.append(node("p","cum-note",`This is a recommended, non-graded review space. It reads the existing learner record only to help prioritize study. It cannot award mastery, change grades, alter placement, or unlock the official assessment. The official cumulative examination is separately verified by the assessment engine and must meet ${MIN}%.`));
     const covered=(DATA?.weeks||[]).filter(w=>Number(w.week)<=coverageEnd),scores=covered.map(w=>scoreFor(state,w.week));
     const mastered=scores.filter(s=>s!==null&&s>=MIN).length,focus=scores.filter(s=>s!==null&&s<MIN).length,pending=scores.filter(s=>s===null).length;
     const stats=node("div","cum-stats");for(const [value,label] of [[coverageEnd,"Weeks covered"],[mastered,"Weeks at 80%+"],[focus,"Study-focus weeks"],[pending,"Scores not recorded"]]){const card=node("div","cum-stat");card.append(node("strong","",value),node("span","",label));stats.appendChild(card)}root.appendChild(stats);
@@ -130,7 +130,7 @@
     title(root,isMidterm?"Sixth Grade Midyear Subject Demonstration":"Sixth Grade Final Readiness Demonstration",`Canonical cumulative assessment · Weeks 01–${pad(coverageEnd)} · ${itemCount} items · ${MIN}% minimum`);
     identity(root);
     actions(root,"Download Assessment Copy",()=>downloadText(`grade-06-${examType}-canonical-assessment.txt`,examText(items)),"");
-    root.append(node("p","cum-note",`Supplemental adult-reviewed portfolio demonstration. Each item is worth one point. A suggested proficiency benchmark is ${passingItems}/${itemCount} items (${MIN}%). This paper activity does not create verified mastery, write a score, or unlock progression. The separate randomized Verified Knowledge Assessment above is the authoritative midterm gate.`));
+    root.append(node("p","cum-note",`Supplemental adult-reviewed portfolio demonstration. Each item is worth one point. A suggested proficiency benchmark is ${passingItems}/${itemCount} items (${MIN}%). This paper activity does not create verified mastery, write a score, or unlock progression. The separate randomized Verified Knowledge Assessment above is the authoritative ${isMidterm?"midterm":"final"} mastery gate.`));
     const nav=node("nav","cum-subject-nav no-print");
     const grouped=new Map();for(const subject of DATA?.subjects||[])grouped.set(subject.id,[]);for(const item of items)grouped.get(item.subjectId)?.push(item);
     for(const subject of DATA?.subjects||[]){const group=grouped.get(subject.id)||[];if(group.length)nav.appendChild(link(`${subject.title} · ${group.length}`,`#cum-${subject.id}`,""))}root.appendChild(nav);
@@ -142,7 +142,7 @@
       const body=node("div","cum-subject-body");for(const item of group){const card=node("article","cum-item");card.append(node("h3","",`Item ${item.number}`),node("p","meta",`Week ${pad(item.week)} · ${item.focus}`),node("p","prompt",item.prompt),node("p","",`Evidence direction: ${item.evidence}`),node("div","cum-response"));body.appendChild(card)}details.appendChild(body);sections.appendChild(details);
     }
     root.appendChild(sections);
-    const score=node("section","cum-score");score.append(node("h2","","Supplemental Adult Portfolio Review"),node("p","",`Document reviewed evidence after checking all ${itemCount} items. This worksheet is not a verified midterm score and must not be entered as an automated mastery result.`));
+    const score=node("section","cum-score");score.append(node("h2","","Supplemental Adult Portfolio Review"),node("p","",`Document reviewed evidence after checking all ${itemCount} items. This worksheet is not a verified ${isMidterm?"midterm":"final"} score and must not be entered as an automated mastery result.`));
     const grid=node("div","cum-score-grid");for(const label of [`Met: ____ / ${itemCount}`,`Required: ${passingItems} / ${itemCount}`,"Percent: ____ %","Adult reviewer: ____________________"]){grid.appendChild(node("div","",label))}score.appendChild(grid);root.appendChild(score);
   }
 
