@@ -676,6 +676,23 @@ function makeGrade6TradeStatisticsWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6LanguageRatioWeek(opts){
+ const r=rng(hash("g6language28|"+String((opts||{}).seed||1))),out=[],a=int(r,2,8),b=int(r,2,9),k=int(r,2,6),minutes=int(r,3,9),speed=int(r,4,12);
+ function add(prompt,correct,wrongs,skill,rationale){
+  const good=String(correct),alt=[...new Set(wrongs.map(String).filter(x=>x!==good))];
+  for(let i=1;alt.length<3;i++){const v=Number.isFinite(Number(correct))?String(Number(correct)+11*i):"Different comparison "+i;if(v!==good&&!alt.includes(v))alt.push(v)}
+  out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 28 fictional communication ratios",skill,rationale}),r));
+ }
+ add("A fictional project includes "+a*k+" illustrated and "+b*k+" text-only cards. What is illustrated to text-only in simplest terms?",(function(){const gcd=(x,y)=>y?gcd(y,x%y):x;const z=gcd(a,b);return(a/z)+":"+(b/z)})(),[a+":"+(a+b),b+":"+a,(a*k)+":"+b],"simplify ratio","Divide both counts by their greatest common factor.");
+ add("A model has "+a+" illustrated and "+b+" text-only cards. Which is illustrated to TOTAL?",a+":"+(a+b),[a+":"+b,b+":"+(a+b),(a+b)+":"+a],"part to whole","The whole includes both categories.");
+ add("Complete the equivalent ratio "+a+":"+b+" = "+a*k+":?",b*k,[b+k,a*k,b],"equivalent ratios","Multiply both parts by the same factor.");
+ add("A fictional team labels "+speed*minutes+" cards in "+minutes+" minutes. What is its average cards per minute?",speed,[speed*minutes,minutes,speed+minutes],"unit rate","Divide total cards by minutes.");
+ add("A fictional team maintains "+speed+" cards per minute for "+(minutes+2)+" minutes. How many cards is that?",speed*(minutes+2),[speed+minutes+2,speed*minutes,minutes+2],"proportional rate","Multiply the unit rate by elapsed time.");
+ add("Practice A has 15/20 accurate labels; Practice B has 18/30. Which has a higher accuracy proportion?","Practice A: 75%",["Practice B: 60%","Both equal","Counts alone prove Practice B"],"fair percentage comparisons","Compare 75 percent with 60 percent instead of only raw successes.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -705,6 +722,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6CultureEquationsWeek,
   makeGrade6ClassicalGeometryWeek,
   makeGrade6TradeStatisticsWeek,
+  makeGrade6LanguageRatioWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
