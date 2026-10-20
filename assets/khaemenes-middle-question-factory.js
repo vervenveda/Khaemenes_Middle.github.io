@@ -554,6 +554,24 @@ function makeGrade6VisualRatioWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6CellPercentWeek(opts){
+ const r=rng(hash("g6cells|"+String(opts.seed||1))),out=[],n=int(r,2,9),whole=20*n,rate=int(r,2,8)*10;
+ function add(prompt,correct,wrong,skill,rationale){
+  const good=String(correct),alts=[...new Set(wrong.map(String).filter(x=>x!==good))];
+  for(let k=1;alts.length<3;k++){const x=Number.isFinite(Number(correct))?String(Number(correct)+11*k):"Another percentage "+k;if(x!==good&&!alts.includes(x))alts.push(x)}
+  out.push(finalize(makeQuestion(prompt,good,alts.slice(0,3),{subject:"mathematics",grade:6,focus:"week 20 cell model percentages",skill,rationale}),r));
+ }
+ add("In a model, "+(n*5)+" of "+whole+" objects are highlighted. What percent is this?","25%",["20%","40%","75%"],"fraction to percent","Five of every twenty equals one quarter, or 25%.");
+ add("What is "+rate+"% of "+whole+" model cells?",rate*whole/100,[whole/rate,rate+whole,rate*whole/100+n],"percent of whole","Multiply the whole by the percent divided by 100.");
+ add("A simulated sample has "+(n*3)+" objects of interest among "+(n*10)+" total. What is the percentage?","30%",["3%","70%","10%"],"proportional fraction","Three tenths equals thirty percent.");
+ add("Two samples have "+(n*2)+" of "+(n*8)+" and "+(n*3)+" of "+(n*12)+" highlighted. How do the percentages compare?","They are equal at 25%",["The first is larger","The second is larger","Neither percentage can be calculated"],"compare samples","Both simplify to one fourth.");
+ const prediction=rate*2;
+ add("A 10×10 model grid represents 100 cells. If "+rate+"% are marked, how many are marked?",rate,[100-rate,rate+10,rate/10],"percent grid","A 100-cell grid maps percent directly to cells.");
+ add("A fictional image sample has 25% highlighted objects. What can it support?","25% of that observed sample was highlighted",["Exactly 25% of every future sample must be highlighted","The model proves every living cell is identical","No other sample could differ"],"sampling limits","A sample percentage is an observation, not a guarantee for a population.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -575,6 +593,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6WaveMathWeek,
   makeGrade6MidtermMath,
   makeGrade6VisualRatioWeek,
+  makeGrade6CellPercentWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
