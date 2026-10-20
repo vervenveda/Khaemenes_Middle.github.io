@@ -590,6 +590,19 @@ function makeGrade6EcosystemFractionsWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6EarthRationalWeek(opts){
+ const r=rng(hash("g6earth22|"+String(opts.seed||1))),out=[],a=int(r,2,9),b=int(r,2,9),d=int(r,2,8);
+ function add(prompt,correct,wrong,skill,rationale){const good=String(correct),alt=[...new Set(wrong.map(String).filter(x=>x!==good))];for(let k=1;alt.length<3;k++){const x=Number.isFinite(Number(correct))?String(Number(correct)+11*k):"Other signed quantity "+k;if(x!==good&&!alt.includes(x))alt.push(x)}out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 22 signed Earth data",skill,rationale}),r));}
+ add("What is the distance on a number line from −"+a+" to +"+b+" meters?",a+b,[a-b,a*b,b],"distance between signs","Subtract the negative endpoint: positive minus negative.");
+ add("A temperature changes from +"+a+"°C to −"+b+"°C. What is the signed change in °C?",-(a+b),[a+b,a-b,-b],"signed change","Final temperature minus initial temperature.");
+ add("Evaluate −"+a+" + "+(a+b)+".",b,[a,a+b,-b],"integer sum","Move right on a number line.");
+ add("Compute −"+d+"/4 + "+d+"/2. What is the result?",d+"/4",["−"+d+"/4",d+"/2","−"+d+"/2"],"fractional rational numbers","Convert halves to fourths before adding.");
+ add("Four simulated rainfall deviations are −"+a+", +"+b+", +"+a+", −"+b+" millimeters. What is their mean deviation?","0",["1",a+b,4],"mean deviations","The four signed deviations sum to zero.");
+ add("Which statement is justified by a rainfall departure of −"+a+" mm?","Rainfall is "+a+" mm below the stated baseline",["Actual rainfall was negative","Rainfall was zero everywhere","All stations had the same departure"],"interpreting signed units","A negative departure is relative to a baseline.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -613,6 +626,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6VisualRatioWeek,
   makeGrade6CellPercentWeek,
   makeGrade6EcosystemFractionsWeek,
+  makeGrade6EarthRationalWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
