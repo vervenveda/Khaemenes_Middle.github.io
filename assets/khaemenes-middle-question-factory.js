@@ -620,6 +620,23 @@ function makeGrade6WeatherCoordinatesWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6RiverExpressionsWeek(opts){
+ const r=rng(hash("g6river24|"+String((opts||{}).seed||1))),out=[],a=int(r,2,9),b=int(r,2,9),n=int(r,2,8);
+ function add(prompt,correct,wrongs,skill,rationale){
+  const good=String(correct),alt=[...new Set(wrongs.map(String).filter(x=>x!==good))];
+  for(let k=1;alt.length<3;k++){const x=Number.isFinite(Number(correct))?String(Number(correct)+11*k):"Another expression "+k;if(x!==good&&!alt.includes(x))alt.push(x)}
+  out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 24 river settlement expressions",skill,rationale}),r));
+ }
+ add("A fictional settlement stores "+a+" baskets per family and "+b+" shared baskets. Which expression represents f families?",a+"f + "+b,[a+" + "+b+"f",a+"f × "+b,b+"f + "+a],"verbal to expression","Multiply the variable family count by baskets per family and add the constant.");
+ add("Evaluate "+a+"x + "+b+" when x = "+n+".",a*n+b,[a+n+b,a*n,b*n+a],"substitution","Substitute n for x and perform multiplication first.");
+ add("Expand "+a+"(y + "+b+").",a+"y + "+(a*b),[a+"y + "+b,(a+b)+"y",a+"y × "+b],"distributive property","Multiply both terms in the parentheses by the outer factor.");
+ add("Simplify "+a+"m + "+b+"m + "+n+".",(a+b)+"m + "+n,[a+"m + "+(b+n),(a+b+n)+"m",(a*b)+"m + "+n],"combine like terms","Combine variable terms with identical letters, keeping the constant separate.");
+ add("Simplify "+(a+b)+"p − "+b+"p + "+n+".",a+"p + "+n,[b+"p + "+n,a+"p − "+n,(a+b)+"p + "+n],"subtract like terms","Subtract coefficients of like terms.");
+ add("Two fictional resource models agree at one trip count. What can we conclude?","They have equal values at that input only",["They are equivalent for all input values","They describe historically verified resource records","Their coefficients must be identical"],"interpret models","One matching value does not prove two expressions are equivalent.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -645,6 +662,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6EcosystemFractionsWeek,
   makeGrade6EarthRationalWeek,
   makeGrade6WeatherCoordinatesWeek,
+  makeGrade6RiverExpressionsWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
