@@ -10,7 +10,7 @@ const ATTEMPT_PREFIX="khaemenes.middle.assessment.attempts";
 const MENTOR_URL="https://vervenveda.com/Khaemenes_Academy.github.io/mentor/";
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const read=(k,f=null)=>{try{const raw=localStorage.getItem(k);return raw?JSON.parse(raw):f}catch{return f}};
-const write=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch{return false}};
+const write=(k,v)=>{try{const encoded=JSON.stringify(v);localStorage.setItem(k,encoded);return localStorage.getItem(k)===encoded}catch{return false}};
 const uid=()=>("msa-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,10));
 
 function grade(){const m=location.pathname.match(/\/grades\/grade-(0[6-8])\//i);return m?m[1]:null}
@@ -136,7 +136,7 @@ function mount(){
 }
 function renderStart(root){
   const access=gate(),prior=bestScore(),closed=kind()!=="weekly";
-  root.innerHTML='<h2>'+esc(label())+'</h2><div class="middle-assessment-badges"><span class="middle-assessment-badge">Grade '+esc(grade())+'</span><span class="middle-assessment-badge">'+(closed?"Closed-book":"Open-book")+'</span><span class="middle-assessment-badge">80% mastery</span><span class="middle-assessment-badge">'+displayCount()+' questions drawn from '+candidateCount()+'+ candidates</span><span class="middle-assessment-badge">New draw on retake</span></div><p>'+esc(access.reason)+'</p>'+(prior?'<p><strong>Best verified score:</strong> '+prior+'%</p>':'')+(access.open?'<div class="middle-assessment-actions"><button type="button" class="primary" data-start>Begin New Randomized Attempt</button></div><div data-body></div>':'<div class="middle-assessment-gate"><strong>Assessment locked.</strong><p>'+esc(access.reason)+'</p><a href="../index.html">Return to Grade Home</a></div>');
+  root.innerHTML='<h2>'+esc(label())+'</h2><p><strong>Assessment record:</strong> '+(learner()?'Active learner ID: '+esc(learner().learnerId):'Preview only — no matching active learner')+'</p><div class="middle-assessment-badges"><span class="middle-assessment-badge">Grade '+esc(grade())+'</span><span class="middle-assessment-badge">'+(closed?"Closed-book":"Open-book")+'</span><span class="middle-assessment-badge">80% mastery</span><span class="middle-assessment-badge">'+displayCount()+' questions drawn from '+candidateCount()+'+ candidates</span><span class="middle-assessment-badge">New draw on retake</span></div><p>'+esc(access.reason)+'</p>'+(prior?'<p><strong>Best verified score:</strong> '+prior+'%</p>':'')+(access.open?'<div class="middle-assessment-actions"><button type="button" class="primary" data-start>Begin New Randomized Attempt</button></div><div data-body></div>':'<div class="middle-assessment-gate"><strong>Assessment locked.</strong><p>'+esc(access.reason)+'</p><a href="../index.html">Return to Grade Home</a></div>');
   root.querySelector("[data-start]")?.addEventListener("click",()=>begin(root.querySelector("[data-body]")));
 }
 function begin(body){
