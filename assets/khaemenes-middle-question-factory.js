@@ -732,6 +732,19 @@ function makeGrade6ArtsRationalWeek(opts){
  return shuffle(r,out);
 }
 
+
+function makeGrade6WellnessCoordinatesWeek(opts){
+ const r=rng(hash("g6wellness32|"+String((opts||{}).seed||1))),out=[],a=int(r,2,8),b=int(r,2,8),d=int(r,2,7);
+ function add(prompt,correct,wrongs,skill,reason){const good=String(correct),alt=[...new Set(wrongs.map(String).filter(x=>x!==good))];for(let k=1;alt.length<3;k++){const v=Number.isFinite(Number(correct))?String(Number(correct)+11*k):"Other interpretation "+k;if(v!==good&&!alt.includes(v))alt.push(v)}out.push(finalize(makeQuestion(prompt,good,alt.slice(0,3),{subject:"mathematics",grade:6,focus:"week 32 fictional wellness planning coordinates",skill,rationale:reason}),r));}
+ add("Which quadrant contains (−"+a+", +"+b+")?","II",["I","III","IV"],"quadrants","Negative x and positive y means quadrant II.");
+ add("A fictional planning grid has points (−"+a+", "+d+") and (+"+b+", "+d+"). Their horizontal distance is:",a+b,[Math.abs(a-b),a,b],"horizontal distance","The equal y-values show horizontal separation; subtract the x coordinates.");
+ add("Two points are ("+d+", −"+a+") and ("+d+", +"+b+"). Their vertical distance is:",a+b,[Math.abs(a-b),a,b],"vertical distance","Subtract signed y positions.");
+ add("Reflect ("+a+", −"+b+") across the y-axis.","(−"+a+", −"+b+")",["("+a+", +"+b+")","(−"+a+", +"+b+")","("+b+", −"+a+")"],"y-axis reflection","Change x sign only.");
+ add("Reflect (−"+a+", +"+b+") across the x-axis.","(−"+a+", −"+b+")",["("+a+", +"+b+")","("+a+", −"+b+")","(−"+b+", +"+a+")"],"x-axis reflection","Change y sign only.");
+ add("Two fictional activity-plan locations share a y-coordinate. What is justified?","They lie on the same horizontal grid line",["The people involved have identical health needs","Every activity is equally safe for everyone","All participants have the same identity"],"limits of coordinate models","Positions alone do not establish personal information.");
+ return shuffle(r,out);
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -765,6 +778,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6ResearchPercentWeek,
   makeGrade6DebateFractionWeek,
   makeGrade6ArtsRationalWeek,
+  makeGrade6WellnessCoordinatesWeek,
   validateQuestion
 });
 })(typeof globalThis!=="undefined"?globalThis:window);
