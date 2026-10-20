@@ -109,7 +109,7 @@ function writeScore(snapshot){
 function nextHref(){
   const w=week();
   if(kind()==="weekly"&&w<36)return"../weekly-plans/week-"+String(w+1).padStart(2,"0")+".html";
-  if(kind()==="weekly"&&w===36)return"midterm.html";
+  if(kind()==="weekly"&&w===36)return"final-exam.html";
   if(kind()==="midterm")return"../index.html";
   if(kind()==="final")return"../records/certificate.html";
   return"../index.html";
