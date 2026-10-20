@@ -42,6 +42,7 @@ function gate(){
   if(!l)return{open:true,preview:true,reason:"Preview attempt. Select the matching Middle School learner to save verified mastery."};
   if(k==="weekly"){
     if(w===1)return{open:true,preview:false,reason:"Week 01 is open."};
+    if(grade()==="06"&&w>=19&&Number(s.midterm||0)<PASS)return{open:false,preview:false,reason:"The verified Grade 6 midterm must reach 80% before Week 19 and later examinations open."};
     const prior=weekScore(s,w-1);
     return prior>=PASS?{open:true,preview:false,reason:"Week "+String(w-1).padStart(2,"0")+" is mastered at "+prior+"%."}:{open:false,preview:false,reason:"Week "+String(w-1).padStart(2,"0")+" must reach 80% before this assessment opens."};
   }
@@ -79,9 +80,9 @@ function questions(seed){
     const others=f.makeBalanced({grade:6,focus:focus(),seed:seed+"|general",count:candidateCount()}).filter(q=>q.subject!=="mathematics").slice(0,18);
     return math.length===18&&others.length===18?math.concat(others):[];
   }
-  // Grade 6 Weeks 1–18 require a substantial aligned mathematics strand.
-  if(grade()==="06"&&kind()==="weekly"&&week()>=1&&week()<=18){
-    const math=week()===18?(f.makeGrade6WaveMathWeek?.({seed:seed+"|math"})||[]):week()===17?(f.makeGrade6PortfolioWeek?.({seed:seed+"|math"})||[]):week()===16?(f.makeGrade6MotionMathWeek?.({seed:seed+"|math"})||[]):week()===15?(f.makeGrade6ThermalMathWeek?.({seed:seed+"|math"})||[]):week()===14?(f.makeGrade6MatterMathWeek?.({seed:seed+"|math"})||[]):week()===13?(f.makeGrade6VolumeWeek?.({seed:seed+"|math"})||[]):week()===12?(f.makeGrade6GeometryWeek?.({seed:seed+"|math"})||[]):week()===11?(f.makeGrade6StatisticsWeek?.({seed:seed+"|math"})||[]):week()===10?(f.makeGrade6InequalitiesWeek?.({seed:seed+"|math"})||[]):week()===9?(f.makeGrade6EquationsWeek?.({seed:seed+"|math"})||[]):week()===8?(f.makeGrade6ExpressionsWeek?.({seed:seed+"|math"})||[]):week()===7?(f.makeGrade6CoordinateWeek?.({seed:seed+"|math"})||[]):(f.makeGrade6MathWeek?.({week:week(),seed:seed+"|math",count:6})||[]);
+  // Grade 6 Weeks 1–19 require a substantial aligned mathematics strand.
+  if(grade()==="06"&&kind()==="weekly"&&week()>=1&&week()<=19){
+    const math=week()===19?(f.makeGrade6VisualRatioWeek?.({seed:seed+"|math"})||[]):week()===18?(f.makeGrade6WaveMathWeek?.({seed:seed+"|math"})||[]):week()===17?(f.makeGrade6PortfolioWeek?.({seed:seed+"|math"})||[]):week()===16?(f.makeGrade6MotionMathWeek?.({seed:seed+"|math"})||[]):week()===15?(f.makeGrade6ThermalMathWeek?.({seed:seed+"|math"})||[]):week()===14?(f.makeGrade6MatterMathWeek?.({seed:seed+"|math"})||[]):week()===13?(f.makeGrade6VolumeWeek?.({seed:seed+"|math"})||[]):week()===12?(f.makeGrade6GeometryWeek?.({seed:seed+"|math"})||[]):week()===11?(f.makeGrade6StatisticsWeek?.({seed:seed+"|math"})||[]):week()===10?(f.makeGrade6InequalitiesWeek?.({seed:seed+"|math"})||[]):week()===9?(f.makeGrade6EquationsWeek?.({seed:seed+"|math"})||[]):week()===8?(f.makeGrade6ExpressionsWeek?.({seed:seed+"|math"})||[]):week()===7?(f.makeGrade6CoordinateWeek?.({seed:seed+"|math"})||[]):(f.makeGrade6MathWeek?.({week:week(),seed:seed+"|math",count:6})||[]);
     const others=f.makeBalanced({grade:6,focus:focus(),seed:seed+"|general",count:candidateCount()}).filter(q=>q.subject!=="mathematics").slice(0,12);
     return math.length===6&&others.length===12?math.concat(others):[];
   }
@@ -165,7 +166,7 @@ function begin(body){
       fb.hidden=false;fb.textContent=q.rationale||"Review this concept before the next attempt.";
     });
     const rawScore=Math.round(correct/qs.length*100),completedAt=new Date().toISOString(),l=learner();
-    const aligned=grade()==="06"&&((kind()==="weekly"&&week()>=1&&week()<=18)||kind()==="midterm");
+    const aligned=grade()==="06"&&((kind()==="weekly"&&week()>=1&&week()<=19)||kind()==="midterm");
     const mathResponses=responses.filter(r=>r.subject==="mathematics");
     const mathCorrect=mathResponses.filter(r=>r.correct).length;
     const mathScore=mathResponses.length?Math.round(mathCorrect/mathResponses.length*100):0;
