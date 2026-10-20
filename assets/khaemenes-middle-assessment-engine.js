@@ -73,64 +73,52 @@ function displayCount(){
 function candidateCount(){return Math.max(displayCount()*2,kind()==="weekly"?45:90)}
 function questions(seed){
   const f=global.KhaemenesMiddleQuestionFactory;if(!f)return[];
-  // Grade 6 final: 18 aligned math questions sampled evenly from Weeks 02–36
-  // plus 27 nonmathematics questions. Independent 80% mastery applies to both.
+  // Grade 6 final: choose one mathematics question from each two-week block.
+  // Alternate which week supplies the item across attempts for full 36-week bank coverage.
   if(grade()==="06"&&kind()==="final"){
     const math=[];
-      {const pool=f.makeGrade6MathWeek?.({week:2,seed:seed+"|final|2",count:6})||[];
+    const parity=Array.from(String(seed)).reduce((total,ch)=>total+ch.charCodeAt(0),0)%2;
+    function poolFor(w){
+      if(w<=6)return f.makeGrade6MathWeek?.({week:w,seed:seed+"|final|"+w,count:6})||[];
+      switch(w){
+        case 7:return f.makeGrade6CoordinateWeek?.({seed:seed+"|final|"+w})||[];
+        case 8:return f.makeGrade6ExpressionsWeek?.({seed:seed+"|final|"+w})||[];
+        case 9:return f.makeGrade6EquationsWeek?.({seed:seed+"|final|"+w})||[];
+        case 10:return f.makeGrade6InequalitiesWeek?.({seed:seed+"|final|"+w})||[];
+        case 11:return f.makeGrade6StatisticsWeek?.({seed:seed+"|final|"+w})||[];
+        case 12:return f.makeGrade6GeometryWeek?.({seed:seed+"|final|"+w})||[];
+        case 13:return f.makeGrade6VolumeWeek?.({seed:seed+"|final|"+w})||[];
+        case 14:return f.makeGrade6MatterMathWeek?.({seed:seed+"|final|"+w})||[];
+        case 15:return f.makeGrade6ThermalMathWeek?.({seed:seed+"|final|"+w})||[];
+        case 16:return f.makeGrade6MotionMathWeek?.({seed:seed+"|final|"+w})||[];
+        case 17:return f.makeGrade6PortfolioWeek?.({seed:seed+"|final|"+w})||[];
+        case 18:return f.makeGrade6WaveMathWeek?.({seed:seed+"|final|"+w})||[];
+        case 19:return f.makeGrade6VisualRatioWeek?.({seed:seed+"|final|"+w})||[];
+        case 20:return f.makeGrade6CellPercentWeek?.({seed:seed+"|final|"+w})||[];
+        case 21:return f.makeGrade6EcosystemFractionsWeek?.({seed:seed+"|final|"+w})||[];
+        case 22:return f.makeGrade6EarthRationalWeek?.({seed:seed+"|final|"+w})||[];
+        case 23:return f.makeGrade6WeatherCoordinatesWeek?.({seed:seed+"|final|"+w})||[];
+        case 24:return f.makeGrade6RiverExpressionsWeek?.({seed:seed+"|final|"+w})||[];
+        case 25:return f.makeGrade6CultureEquationsWeek?.({seed:seed+"|final|"+w})||[];
+        case 26:return f.makeGrade6ClassicalGeometryWeek?.({seed:seed+"|final|"+w})||[];
+        case 27:return f.makeGrade6TradeStatisticsWeek?.({seed:seed+"|final|"+w})||[];
+        case 28:return f.makeGrade6LanguageRatioWeek?.({seed:seed+"|final|"+w})||[];
+        case 29:return f.makeGrade6ResearchPercentWeek?.({seed:seed+"|final|"+w})||[];
+        case 30:return f.makeGrade6DebateFractionWeek?.({seed:seed+"|final|"+w})||[];
+        case 31:return f.makeGrade6ArtsRationalWeek?.({seed:seed+"|final|"+w})||[];
+        case 32:return f.makeGrade6WellnessCoordinatesWeek?.({seed:seed+"|final|"+w})||[];
+        case 33:return f.makeGrade6TechnologyExpressionsWeek?.({seed:seed+"|final|"+w})||[];
+        case 34:return f.makeGrade6CapstoneEquationWeek?.({seed:seed+"|final|"+w})||[];
+        case 35:return f.makeGrade6CapstoneGeometryWeek?.({seed:seed+"|final|"+w})||[];
+        case 36:return f.makeGrade6ReadinessStatisticsWeek?.({seed:seed+"|final|"+w})||[];
+        default:return[];
+      }
+    }
+    for(let pair=0;pair<18;pair++){
+      const w=pair*2+1+((pair+parity)%2),pool=poolFor(w);
       if(pool.length!==6)return[];
-      math.push(pool[0]);}
-      {const pool=f.makeGrade6MathWeek?.({week:4,seed:seed+"|final|4",count:6})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[1]);}
-      {const pool=f.makeGrade6MathWeek?.({week:6,seed:seed+"|final|6",count:6})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[2]);}
-      {const pool=f.makeGrade6ExpressionsWeek?.({seed:seed+"|final|8"})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[3]);}
-      {const pool=f.makeGrade6InequalitiesWeek?.({seed:seed+"|final|10"})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[4]);}
-      {const pool=f.makeGrade6GeometryWeek?.({seed:seed+"|final|12"})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[5]);}
-      {const pool=f.makeGrade6MatterMathWeek?.({seed:seed+"|final|14"})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[0]);}
-      {const pool=f.makeGrade6MotionMathWeek?.({seed:seed+"|final|16"})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[1]);}
-      {const pool=f.makeGrade6WaveMathWeek?.({seed:seed+"|final|18"})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[2]);}
-      {const pool=f.makeGrade6CellPercentWeek?.({seed:seed+"|final|20"})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[3]);}
-      {const pool=f.makeGrade6EarthRationalWeek?.({seed:seed+"|final|22"})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[4]);}
-      {const pool=f.makeGrade6RiverExpressionsWeek?.({seed:seed+"|final|24"})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[5]);}
-      {const pool=f.makeGrade6ClassicalGeometryWeek?.({seed:seed+"|final|26"})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[0]);}
-      {const pool=f.makeGrade6LanguageRatioWeek?.({seed:seed+"|final|28"})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[1]);}
-      {const pool=f.makeGrade6DebateFractionWeek?.({seed:seed+"|final|30"})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[2]);}
-      {const pool=f.makeGrade6WellnessCoordinatesWeek?.({seed:seed+"|final|32"})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[3]);}
-      {const pool=f.makeGrade6CapstoneEquationWeek?.({seed:seed+"|final|34"})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[4]);}
-      {const pool=f.makeGrade6ReadinessStatisticsWeek?.({seed:seed+"|final|36"})||[];
-      if(pool.length!==6)return[];
-      math.push(pool[5]);}
+      math.push(pool[(pair+parity)%6]);
+    }
     const others=f.makeBalanced({grade:6,focus:focus(),seed:seed+"|final|general",count:candidateCount()}).filter(q=>q.subject!=="mathematics").slice(0,27);
     return math.length===18&&others.length===27?math.concat(others):[];
   }
