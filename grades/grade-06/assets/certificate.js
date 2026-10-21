@@ -11,7 +11,7 @@
   const vals=keys.map(k=>Number(weekly[k]));
   const avg=validWeeks?Math.round(vals.reduce((x,y)=>x+y,0)/36):0;
   const done=validWeeks?vals.filter(v=>v>=80).length:0;
-  const placementOK=context.status==="ready"&&!!context.learner;
+  const placementOK=context.status==="ready"&&!!context.learner&&String(context.learner.grade||"").replace(/[^0-9]/g,"").padStart(2,"0")==="06";
   const gatesOK=validWeeks&&done===36&&avg>=80&&Number(state.midterm||0)>=80&&Number(state.final||0)>=80&&!!state.portfolio;
   const ok=placementOK&&gatesOK;
   const rawName=context.status==="ready"?context.learner.nickname:(state.student||"Sixth Grade Scholar");
@@ -20,7 +20,7 @@
   const identityLine=studentId?`<p><strong>Student ID:</strong> ${studentId}</p>`:context.status==="no-active-learner"?`<p class="no-print"><strong>Local legacy record:</strong> enroll/select the learner in the Academy Student Portal to bind this certificate to a permanent learner identity.</p>`:"";
 
   const out=document.getElementById("out");
-  if(context.status!=="ready"||!context.learner){
+  if(!placementOK){
     out.innerHTML=`<section class="worksheet" style="text-align:center"><h1 style="font-family:Georgia,serif;color:#0e2744;text-transform:none">Certificate Locked</h1><p>The active Academy learner is not registered in Grade 06. This page never changes placement and will not issue another learner's certificate.</p><a class="button" href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Open Student Portal</a></section>`;
     return;
   }
