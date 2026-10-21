@@ -889,6 +889,17 @@ function makeGrade6Week5Subjects(opts){
  return shuffle(r,selected.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 5 Fraction Division and Procedural Writing",rationale}),r)));
 }
 
+
+/* Grade 6 Week 6: rational numbers and historical notation. */
+function makeGrade6Week6Subjects(opts){
+ const r=rng(hash("g6w6-subjects|"+String((opts||{}).seed||1)));
+ const bank=[["language-arts","comparison","Which statement accurately compares XII and 12?","They represent the same quantity using different notation.",["They always have different values.","XII is a modern decimal positional numeral.","Roman notation has identical place values to decimal."],"The symbols differ but both denote twelve."],["language-arts","historical language","What improves a comparison of historical number systems?","Precise examples and source-aware explanations.",["Claims that earlier cultures lacked mathematics.","Invented dates presented as facts.","Confusing symbols with quantities."],"Accurate comparison separates evidence from interpretation."],["science","temperatures","A temperature changes from 2 °C to −3 °C. What is the change?","−5 °C",["+5 °C","−1 °C","+1 °C"],"Final minus initial is −3−2=−5 °C."],["science","absolute value","What is the absolute value of −8?","8",["−8","0","−16"],"Absolute value is distance from zero."],["social-studies","roman numerals","What number does Roman numeral XII represent?","12",["7","15","22"],"X=10 and II=2; together XII=12."],["social-studies","source distinction","Which label is appropriate for a newly invented Roman-style merchant ledger?","Fictional classroom simulation.",["Verified ancient primary source.","Authentic excavation finding.","Proof of how all Romans traded."],"An invented learning scenario is not historical evidence."],["world-languages","number words","What does Spanish tres mean?","Three",["Two","Four","Ten"],"Tres is Spanish for three."],["world-languages","symbols","What value does the Arabic-Indic digit ٣ represent?","3",["1","5","8"],"٣ is a digit used to represent three."],["arts-music","positive space","In visual art, what is positive space?","The subject or occupied region of a composition.",["Every space with a positive integer.","Only the background.","A musical tempo unit."],"Positive space refers to occupied or subject areas."],["arts-music","symbol legend","Why should an invented musical-graphic notation have a legend?","So others can interpret its signs consistently.",["To disguise the meaning.","To prove it is ancient.","To avoid clear instructions."],"A legend defines how symbols map to intended meanings."],["health-pe-sel","baseline","A fictional activity time is 15 minutes compared with a 20-minute baseline. What deviation is this?","−5 minutes",["+5 minutes","−35 minutes","0 minutes"],"Actual minus baseline: 15−20=−5."],["health-pe-sel","interpretation","Which statement correctly interprets a negative activity-time deviation?","It indicates a value below the chosen baseline, not personal failure.",["It proves poor health.","It requires punishment.","It means the measurement is invalid."],"A signed deviation is mathematical, not a health judgment."],["technology-design","validation","Which input should a signed-temperature field accept?","−10 °C",["A password","An unrelated address","An unlabelled string"],"The input uses a signed number and a temperature unit."],["technology-design","roman conversion","What number does XIV represent?","14",["16","11","9"],"X=10 and IV=4, totaling fourteen."],["integrated-projects","opposites","Which numbers are opposites on a number line?","−4 and +4",["−4 and −4","0 and 4","3 and 4"],"Opposites have the same distance from zero in opposite directions."],["integrated-projects","museum evidence","What makes a number-systems exhibit responsible?","Accurate examples and clear distinctions between simulation and historical source.",["Made-up history presented as verified.","Unlabelled diagrams.","No visitor explanations."],"An educational exhibit must distinguish mathematics and verified history."]];
+ const subjects=["language-arts","science","social-studies","world-languages","arts-music","health-pe-sel","technology-design","integrated-projects"];
+ const groups=subjects.map(subject=>shuffle(r,bank.filter(q=>q[0]===subject)));
+ const selected=groups.map(g=>g[0]).concat(shuffle(r,groups.map(g=>g[1])).slice(0,4));
+ return shuffle(r,selected.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 6 Rational Numbers and Ancient Number Systems",rationale}),r)));
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -900,6 +911,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6Week3Subjects,
   makeGrade6Week4Subjects,
   makeGrade6Week5Subjects,
+  makeGrade6Week6Subjects,
   makeGrade6MathWeek,
   makeGrade6CoordinateWeek,
   makeGrade6ExpressionsWeek,
