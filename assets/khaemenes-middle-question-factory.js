@@ -966,6 +966,17 @@ function makeGrade6Week12Subjects(opts){
  return shuffle(r,selected.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 12 Geometry Area Surface Area and Design",rationale}),r)));
 }
 
+
+/* Grade 6 Week 13: volume, prisms and dimensional models. */
+function makeGrade6Week13Subjects(opts){
+ const r=rng(hash("g6w13-subjects|"+String((opts||{}).seed||1)));
+ const bank=[["language-arts","volume units","Which unit is appropriate for rectangular-prism volume?","cubic centimeters",["square centimeters","centimeters","degrees"],"Three-dimensional volume uses cubic units."],["language-arts","technical caption","Which caption accurately describes a 3×2×4 cm prism?","Volume is 24 cm³ from length×width×height.",["Volume is 9 cm² from adding edges.","Volume is 24 cm from multiplying edges.","Surface area must equal 24 cm³."],"Multiply dimensions and use cubic units."],["science","fractional volume","What is the volume of a prism measuring 2×1.5×3 cm?","9 cm³",["6.5 cm³","12 cm³","18 cm³"],"Two times one-and-a-half times three equals nine."],["science","scale","If every edge of a cube doubles, its volume changes by what factor?","8",["2","4","6"],"Three independent dimensions double, so 2³=8."],["social-studies","storeroom volume","What is the modeled volume of a fictional 4×3×2 m storeroom?","24 m³",["9 m³","14 m³","48 m³"],"Four times three times two equals 24 cubic meters."],["social-studies","historical model","Which description responsibly uses an invented historic-style building model?","Clearly labeled fictional reconstruction with dimensions.",["Authenticated measurements without evidence.","Proof of original construction methods.","A verified historic source."],"An invented model cannot establish historical fact."],["world-languages","spanish terminology","What does Spanish cubo mean?","Cube",["Rectangle","Circle","Triangle"],"Cubo means cube."],["world-languages","capacity vocabulary","What does Spanish capacidad mean?","Capacity",["Length","Triangle","Pattern"],"Capacidad is capacity."],["arts-music","sculpture volume","What is the volume of a 2×2×3 cm modeled sculpture prism?","12 cm³",["7 cm³","10 cm³","24 cm³"],"Two times two times three is twelve."],["arts-music","scale sculpture","Doubling all edges of a 12 cm³ sculpture model produces what volume?","96 cm³",["24 cm³","48 cm³","144 cm³"],"Twelve times eight is ninety-six."],["health-pe-sel","storage capacity","What is the external volume of a fictional 2×1×1 m cabinet?","2 m³",["1 m³","3 m³","4 m³"],"Multiply the three edges."],["health-pe-sel","safe access","Which is a responsible storage-room design choice?","Provide clear paths and alternative access methods.",["Require learners to carry heavy items.","Assume exterior volume ensures accessibility.","Ignore obstructions."],"Access depends on more than geometric volume."],["technology-design","volume formula","Which pseudocode expression returns rectangular-prism volume?","length*width*height",["length+width+height","length*width","length/width/height"],"Volume is the product of all three dimensions."],["technology-design","validation","What should an offline volume calculator do with a negative width?","Show an understandable validation error.",["Silently accept an impossible dimension.","Remove units.","Report a positive volume regardless."],"Invalid physical dimensions need explicit feedback."],["integrated-projects","equal volume","Do prisms 3×2×4 and 6×2×2 cm have the same volume?","Yes, both are 24 cm³.",["No, the first is 9 cm³.","No, the second is 12 cm³.","Neither has a definable volume."],"Both products equal twenty-four."],["integrated-projects","scaled volume","What is the volume after doubling every edge of a 3×2×4 cm prism?","192 cm³",["48 cm³","96 cm³","384 cm³"],"24 cm³ times eight equals 192 cm³."]];
+ const subjects=["language-arts","science","social-studies","world-languages","arts-music","health-pe-sel","technology-design","integrated-projects"];
+ const groups=subjects.map(subject=>shuffle(r,bank.filter(q=>q[0]===subject)));
+ const selected=groups.map(g=>g[0]).concat(shuffle(r,groups.map(g=>g[1])).slice(0,4));
+ return shuffle(r,selected.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 13 Volume and Three-Dimensional Modeling",rationale}),r)));
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -984,6 +995,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6Week10Subjects,
   makeGrade6Week11Subjects,
   makeGrade6Week12Subjects,
+  makeGrade6Week13Subjects,
   makeGrade6MathWeek,
   makeGrade6CoordinateWeek,
   makeGrade6ExpressionsWeek,
