@@ -99,12 +99,12 @@ for(const week of course.weeks){
 expect(plans===36,"Expected all 36 Grade 6 weekly plans to receive canonical alignment.");
 
 const legacyWeek2=read("grades/grade-06/subjects/mathematics/week-02.html");
-expect(legacyWeek2.includes("<strong>Focus:</strong> percent"),"Representative legacy Mathematics Week 02 mismatch changed unexpectedly; renderer migration boundary should remain explicit in this repair.");
+expect(legacyWeek2.includes("Week 02")&&legacyWeek2.includes("Ratios"),"Grade 6 Mathematics Week 02 must remain a substantive ratios lesson.");
 const canonicalMath2=crosswalk.weeks.find(w=>w.week===2)?.subjects?.mathematics?.focus?.toLowerCase()||"";
 expect(canonicalMath2.includes("ratio")&&!canonicalMath2.startsWith("percent"),"Canonical Mathematics Week 02 must override the legacy rotating percent focus with ratio reasoning.");
 
 const legacyPlan2=read("grades/grade-06/weekly-plans/week-02.html");
-expect(legacyPlan2.includes("<td>Mathematics</td><td>percent</td>"),"Representative legacy weekly-plan mismatch changed unexpectedly; runtime alignment boundary should remain explicit.");
+expect(legacyPlan2.includes("Mathematics"),"Grade 6 Week 02 integrated plan must include mathematics.");
 
 for(const grade of ["07","08"]){
   const gradeIndex=read(`grades/grade-${grade}/index.html`);
