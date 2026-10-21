@@ -828,6 +828,34 @@ function makeGrade6Week1Subjects(opts){
  return shuffle(r,chosen.concat(extras).map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 1 Scholar Launch",rationale}),r)));
 }
 
+
+/* Grade 6 Week 2: original lesson-aligned, eight-subject question selection. */
+function makeGrade6Week2Subjects(opts){
+ const r=rng(hash("g6w2-subjects|"+String((opts||{}).seed||1)));
+ const bank=[
+ ["language-arts","quotation","Which practice uses a source's exact words responsibly?","Use quotation marks and identify the source.",["Change a few words without citing.","Invent a matching quotation.","Treat an inference as a quotation."],"Quotations preserve the source's words and identify their origin."],
+ ["language-arts","paraphrase","What makes a paraphrase different from a quotation?","It restates the source's meaning in new words with attribution.",["It removes the need for attribution.","It reproduces every word exactly.","It adds facts not found in the source."],"A paraphrase restates meaning while retaining attribution."],
+ ["science","data","Which heading correctly identifies temperature measurements?","Temperature (°C)",["Temperature","Numbers measured","Degrees of time"],"A measurement table should specify the quantity and its unit."],
+ ["science","inference","Two simulated cups warmed by 4 °C and 2 °C. What is supported?","The first cup's recorded increase was greater.",["Sunlight definitely caused both increases.","The first cup has more mass.","All cups warm at the same rate."],"Observed changes support a comparison, not an untested causal explanation."],
+ ["social-studies","primary source","Which item is a primary source for a study of a fictional 1910 bridge?","A diary written by a bridge user in 1910.",["A 2026 history summary.","A modern classroom quiz.","A present-day encyclopedia overview."],"A contemporary firsthand diary can serve as a primary source for the event."],
+ ["social-studies","perspective","Why compare two accounts of the same historical event?","They can reveal different experiences and omissions.",["The longest account is always correct.","Different accounts must both be false.","Only one person's experience matters."],"Comparison helps identify perspective and limitations."],
+ ["world-languages","cognates","Which English and Spanish pair is a close cognate?","animal / animal",["library / librería","embarrassed / embarazada","exit / éxito"],"These two words share form and meaning; the alternatives are false-friend examples."],
+ ["world-languages","translation","Why should a learner verify a similar-looking word?","Similar spelling does not guarantee the same meaning.",["Identical spelling always means identical usage.","Every cognate is a false friend.","Context never matters."],"Cognates and false friends require meaning and context checks."],
+ ["arts-music","rhythm","What distinguishes rhythm from a steady beat?","Rhythm arranges sounds and rests against a pulse.",["Rhythm is always one unchanging note.","A beat is the pitch of a melody.","Rhythm only exists in drawings."],"Rhythm is an organized pattern over time."],
+ ["arts-music","contour","A melody moves low, high, then lower. What describes its contour?","Rising and then falling.",["Always repeating.","Only rising.","No pitch change."],"Contour describes changes in pitch direction."],
+ ["health-pe-sel","inclusion","Which activity plan is most inclusive?","A coordinated sequence with seated alternatives.",["One difficult move required of everyone.","Public comparisons of classmates' health.","Ignoring requests to stop."],"Safe movement plans include accessible alternatives."],
+ ["health-pe-sel","safety","If a movement causes dizziness, what is the appropriate response?","Stop and seek suitable help from a trusted adult.",["Push through the discomfort.","Increase intensity.","Hide the symptom from everyone."],"Safety takes priority over completing a planned activity."],
+ ["technology-design","versions","Why keep a revision history for school work?","To compare changes and recover earlier versions.",["To publish passwords.","To make filenames meaningless.","To erase all original evidence."],"Versions document the development of work."],
+ ["technology-design","metadata","Which example is suitable public document metadata?","Subject and creation date without private details.",["A learner's password.","A classmate's home address.","A private login token."],"Useful metadata must not reveal sensitive credentials or personal information."],
+ ["integrated-projects","data interpretation","A fictional data series changes from 8 to 3. What is the difference?","A decrease of 5.",["An increase of 5.","A decrease of 11.","No change."],"Subtract 3 from 8 to find a drop of 5."],
+ ["integrated-projects","research","Which research question is most testable?","Does a labeled folder system reduce misplaced worksheets?",["Are all folders perfect?","Is organization always good?","Can any plan solve every problem?"],"A focused question defines an observable outcome."]
+ ];
+ const subjects=["language-arts","science","social-studies","world-languages","arts-music","health-pe-sel","technology-design","integrated-projects"];
+ const grouped=subjects.map(subject=>shuffle(r,bank.filter(item=>item[0]===subject)));
+ const questions=grouped.map(group=>group[0]).concat(shuffle(r,grouped.map(group=>group[1])).slice(0,4));
+ return shuffle(r,questions.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 2 Evidence and Ratios",rationale}),r)));
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -835,6 +863,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makePool,
   makeBalanced,
   makeGrade6Week1Subjects,
+  makeGrade6Week2Subjects,
   makeGrade6MathWeek,
   makeGrade6CoordinateWeek,
   makeGrade6ExpressionsWeek,
