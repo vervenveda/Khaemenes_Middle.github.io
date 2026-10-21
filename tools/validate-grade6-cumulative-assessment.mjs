@@ -57,7 +57,7 @@ for(const token of [
   'Evidence Packet',
   'Supplemental adult-reviewed portfolio demonstration',
   'Each item is worth one point',
-  'Authorized Adult Review',
+  'Supplemental Adult Portfolio Review',
   'Print / Save PDF',
   'Download Review Guide',
   'Download Assessment Copy',
