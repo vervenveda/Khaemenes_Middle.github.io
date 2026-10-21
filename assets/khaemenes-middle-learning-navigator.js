@@ -151,6 +151,12 @@
         link(grade==="06"?"Weekly Evidence Packet":grade==="07"?"Weekly Evidence Packet":"Printable Packet",packetHref(w.week),"button"),
         link(grade==="06"?"Weekly Mastery Check":grade==="07"?"Weekly Mastery Check":"Weekly Assessment",weeklyAssessmentHref(w.week),"button")
       );
+      if(grade==="06"){
+        actions.append(link("Verified 80% Exam",`assessments/week-${pad(w.week)}-assessment.html`,"button gold"));
+        if(Number(w.week)<=23)actions.append(link("Nine-Subject Printable Portfolio",`printables/week-${pad(w.week)}-subject-evidence.html`,"button"));
+        const journey=node("p","middle-nav-note","Study the nine subjects and complete Scholar Checkpoints → save formative practice → complete portfolio evidence → take the verified examination. Both overall and Mathematics strands must reach 80%. Failed attempts are opportunities to revise and retry; practice never changes formal grades.");
+        body.appendChild(journey);
+      }
       body.appendChild(actions);
 
       const subjectHeading=node("h3","","Subject lessons for this week");
