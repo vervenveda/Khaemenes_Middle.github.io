@@ -12,7 +12,8 @@ for(let week=1;week<=36;week++){
  assert(plan.includes("week-"+n+"-packet.html"),"Plan packet missing at "+n);
  assert(plan.includes("week-"+n+"-assessment.html"),"Plan assessment missing at "+n);
  assert(packet.includes('href="week-'+n+'-subject-evidence.html"'),"Packet missing companion "+n);
- assert(companion.includes("weekly-evidence-packet.html?week="+week),"Canonical evidence route mismatch "+n);
+ const canonical=companion.match(/weekly-evidence-packet\.html\?week=(\d+)/);
+ assert(canonical&&Number(canonical[1])===week,"Canonical evidence route mismatch "+n);
  assert.equal((companion.match(/<h2>Original lesson evidence<\/h2>/g)||[]).length,9,"Subject companion sheets "+n);
  for(const subject of subjects){
   const h=read(root+"/subjects/"+subject+"/week-"+n+".html");
