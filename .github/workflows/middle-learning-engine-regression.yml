@@ -26,6 +26,7 @@ on:
       - 'tools/validate-grade6-week26-assessment.mjs'
       - 'tools/validate-grade6-week27-assessment.mjs'
       - 'tools/validate-grade6-week28-assessment.mjs'
+      - 'tools/validate-grade6-week29-assessment.mjs'
       - 'tools/validate-grade6-learner-persistence.mjs'
       - '.github/workflows/middle-learning-engine-regression.yml'
   pull_request:
@@ -81,5 +82,7 @@ jobs:
         run: node tools/validate-grade6-week27-assessment.mjs
       - name: Certify Week 28 assessment with 3000 seeded draws
         run: node tools/validate-grade6-week28-assessment.mjs
+      - name: Certify Week 29 assessment with 3000 seeded draws
+        run: node tools/validate-grade6-week29-assessment.mjs
       - name: Test Grade 6 learner persistence and identity isolation
         run: node tools/validate-grade6-learner-persistence.mjs
