@@ -21,6 +21,7 @@ on:
       - 'grades/grade-*/assessments/**'
       - 'scripts/inject-middle-learning-engine.mjs'
       - 'tools/validate-middle-learning-engine.mjs'
+      - 'tools/validate-grade6-week1-assessment.mjs'
       - '.github/workflows/middle-learning-engine-regression.yml'
   pull_request:
     paths:
@@ -40,6 +41,7 @@ on:
       - 'grades/grade-*/assessments/**'
       - 'scripts/inject-middle-learning-engine.mjs'
       - 'tools/validate-middle-learning-engine.mjs'
+      - 'tools/validate-grade6-week1-assessment.mjs'
       - '.github/workflows/middle-learning-engine-regression.yml'
   workflow_dispatch:
 
@@ -62,3 +64,5 @@ jobs:
           node-version: '24'
       - name: Validate every Middle School lesson, quiz, and test
         run: node tools/validate-middle-learning-engine.mjs
+      - name: Certify Grade 6 Week 1 randomized subject questions
+        run: node tools/validate-grade6-week1-assessment.mjs
