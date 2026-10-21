@@ -15,6 +15,9 @@ on:
       - "assets/khaemenes-middle-breakaway.js"
       - "assets/khaemenes-middle-learning-navigator.js"
       - "tools/validate-grade6-weekly-evidence.mjs"
+      - "tools/validate-grade6-36-week-journey.mjs"
+      - "grades/grade-06/printables/**"
+      - "grades/grade-06/assessments/**"
       - "tools/validate-grade6-crosswalk-renderer.mjs"
       - "tools/validate-grade6-subject-week-crosswalk.mjs"
       - ".github/workflows/grade6-weekly-evidence-validation.yml"
@@ -33,6 +36,9 @@ on:
       - "assets/khaemenes-middle-breakaway.js"
       - "assets/khaemenes-middle-learning-navigator.js"
       - "tools/validate-grade6-weekly-evidence.mjs"
+      - "tools/validate-grade6-36-week-journey.mjs"
+      - "grades/grade-06/printables/**"
+      - "grades/grade-06/assessments/**"
       - "tools/validate-grade6-crosswalk-renderer.mjs"
       - "tools/validate-grade6-subject-week-crosswalk.mjs"
       - ".github/workflows/grade6-weekly-evidence-validation.yml"
@@ -54,6 +60,8 @@ jobs:
         run: node tools/validate-grade6-crosswalk-renderer.mjs
       - name: Validate Grade 6 weekly evidence and mastery routes
         run: node tools/validate-grade6-weekly-evidence.mjs
+      - name: Validate all 36 Grade 6 journeys and printable connections
+        run: node tools/validate-grade6-36-week-journey.mjs
       - name: Re-run Middle School Learning Navigator contract
         run: node tools/validate-middle-learning-navigator.mjs
       - name: Re-run Middle School Study Scorebook contract
