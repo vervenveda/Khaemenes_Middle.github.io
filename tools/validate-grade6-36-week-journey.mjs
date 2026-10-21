@@ -40,6 +40,9 @@ for(let w=1;w<=36;w++){
    const h=read(companion);
    assert((h.match(/<h2>Original lesson evidence<\/h2>/g)||[]).length===9,`Week ${n} companion requires nine subject evidence prompts`);
    assert(packetHtml.includes(`week-${n}-subject-evidence.html`),`Week ${n} companion is orphaned from packet`);
+   const canonical=h.match(/weekly-evidence-packet\.html\?week=(\d+)/);
+   if(canonical)assert.equal(Number(canonical[1]),w,`Week ${n} companion links to canonical evidence for Week ${canonical[1]}`);
+   for(const link of h.matchAll(/\bhref=["\x27]([^"\x27]+)["\x27]/g))checkLink(companion,link[1]);
  }
  for(const [file,html] of [[plan,planHtml],[packet,packetHtml]]){
   for(const link of html.matchAll(/\bhref=["']([^"']+)["']/g))checkLink(file,link[1]);
