@@ -58,7 +58,7 @@ for(const grade of ["06","07","08"]){
   for(const [name,weekly] of [["valid",valid],["invalid",invalid]]){
     const out={innerHTML:""};
     const state={weekly,midterm:90,final:90,portfolio:true,transition:true,student:"Test"};
-    const context={window:{KhaemenesGradeContinuity:{status:()=>({status:"ready",learner:{nickname:"Test",studentId:""}}),readState:()=>state}},document:{getElementById:()=>out}};
+    const context={window:{KhaemenesGradeContinuity:{status:()=>({status:"ready",learner:{grade,nickname:"Test",studentId:""}}),readState:()=>state}},document:{getElementById:()=>out}};
     vm.runInNewContext(cert,context,{filename:base+"/assets/certificate.js",timeout:1000});
     check(name==="valid"?out.innerHTML.includes("Certificate of"):out.innerHTML.includes("Certificate Locked"),grade+" "+name+" certificate outcome incorrect");
   }
