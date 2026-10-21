@@ -856,6 +856,17 @@ function makeGrade6Week2Subjects(opts){
  return shuffle(r,questions.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 2 Evidence and Ratios",rationale}),r)));
 }
 
+
+/* Grade 6 Week 3: curriculum-aligned randomized non-mathematics questions. */
+function makeGrade6Week3Subjects(opts){
+ const r=rng(hash("g6w3-subjects|"+String((opts||{}).seed||1)));
+ const bank=[["language-arts","main idea","What is a main idea in an informational text?","The central point supported by the details.",["A single unrelated fact.","An unsupported prediction.","Only the longest sentence."],"A main idea connects relevant details."],["language-arts","text evidence","A club traveled 12 km in 3 hours. Which note accurately preserves the evidence?","12 km / 3 h",["3 km / 12 h","12 km / 3 km","The trip was fastest ever."],"Notes should retain figures and units without inventing claims."],["science","rates","A seedling grows from 2 cm to 6 cm over four days. What is its average growth rate?","1 cm/day",["4 cm/day","6 cm/day","2 cm/day"],"Subtract heights then divide by elapsed days."],["science","graphs","Which axis label is appropriate for measuring height over time?","Height (cm)",["Plant happiness","Unlabeled values","Time (cm)"],"Axes must identify quantity and unit."],["social-studies","density","A fictional district has 1,200 residents in 40 km². What is the density?","30 people/km²",["1,160 people/km²","40 people/km²","48,000 people/km²"],"Divide the population by area."],["social-studies","comparison","Why compare rates rather than raw counts when populations differ?","Rates account for different group sizes.",["Raw counts are always incorrect.","Rates establish causes.","Rates need no units."],"A denominator permits fairer comparisons."],["world-languages","frequency","In Spanish, what does por semana mean?","Per week",["At midnight","Yesterday","Before lunch"],"Por semana expresses frequency over a week."],["world-languages","units","Which phrase means kilometers per hour in Spanish?","kilómetros por hora",["kilómetros sin hora","horas por libros","veces por mesa"],"The phrase expresses distance per time."],["arts-music","tempo","At 60 beats per minute, approximately how many beats occur each second?","1",["60","4","120"],"60 beats per 60 seconds equals one beat per second."],["arts-music","beat duration","At 120 BPM, how long do four beats last?","2 seconds",["4 seconds","30 seconds","120 seconds"],"Four beats at two beats per second last two seconds."],["health-pe-sel","pacing","120 fictional steps in 3 minutes equals what rate?","40 steps/min",["360 steps/min","123 steps/min","3 steps/min"],"Steps per minute is total steps divided by minutes."],["health-pe-sel","privacy","Which wellness activity respects student privacy?","Work with fictional pulse data.",["Post classmates' heart rates.","Require disclosure of diagnoses.","Rank students by body characteristics."],"Simulated data avoids unnecessary disclosure of private records."],["technology-design","spreadsheet","If A2 contains distance and B2 time, which formula computes a rate?","=A2/B2",["=A2+B2","=B2-A2","=A2*B2"],"Rate divides distance by time."],["technology-design","data metadata","What should a fictional classroom data chart disclose?","That its observations are simulated.",["Private passwords.","A fabricated claim of real observation.","Nothing about its source."],"Source labels help readers evaluate evidence."],["integrated-projects","unit rate","A route is 18 km in 6 hours. What is its rate?","3 km/h",["12 km/h","24 km/h","108 km/h"],"18 divided by 6 equals 3 kilometers per hour."],["integrated-projects","limits","What can simulated travel data demonstrate reliably?","How to calculate and compare model rates.",["Exactly why real routes differ.","Future actual traffic patterns.","A guaranteed safest route."],"Model data support calculation practice, not untested real-world conclusions."]];
+ const subjects=["language-arts","science","social-studies","world-languages","arts-music","health-pe-sel","technology-design","integrated-projects"];
+ const grouped=subjects.map(subject=>shuffle(r,bank.filter(q=>q[0]===subject)));
+ const draw=grouped.map(g=>g[0]).concat(shuffle(r,grouped.map(g=>g[1])).slice(0,4));
+ return shuffle(r,draw.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 3 Unit Rates and Informational Text",rationale}),r)));
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -864,6 +875,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeBalanced,
   makeGrade6Week1Subjects,
   makeGrade6Week2Subjects,
+  makeGrade6Week3Subjects,
   makeGrade6MathWeek,
   makeGrade6CoordinateWeek,
   makeGrade6ExpressionsWeek,
