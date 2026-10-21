@@ -797,12 +797,43 @@ function makeGrade6ReadinessStatisticsWeek(opts){
  return shuffle(r,out);
 }
 
+
+/* Grade 6 Week 1: lesson-aligned first-party subject knowledge checks.
+   Twelve non-mathematics questions per draw; eight subject halls represented. */
+function makeGrade6Week1Subjects(opts){
+ const r=rng(hash("g6w1-subjects|"+String((opts||{}).seed||1)));
+ const bank=[
+ ["language-arts","text evidence","Which evidence best supports the claim that Mina is prepared?","She checks her assignment list.",["She has a red notebook.","The classroom has a window.","Her friend likes maps."],"A specific action from the passage directly supports the claim."],
+ ["language-arts","inference","Which statement is an inference rather than a directly reported observation?","Mina probably planned ahead.",["Mina arrived early.","Mina labeled the map symbols.","Mina wrote a question."],"An inference interprets details; the other choices restate events."],
+ ["science","matter","Which statement describes a scientific particle model of a gas?","Particles move widely through available space.",["Particles are fixed in a rigid pattern.","Gas has no mass.","All gas particles are visible."],"Gas is matter and particles are mobile and widely spaced."],
+ ["science","measurement","Why should a science data table write 100 mL instead of only 100?","The unit tells what was measured.",["Units change the physical quantity.","Units guarantee no errors.","A unit proves a hypothesis."],"A number without its measurement unit is ambiguous."],
+ ["social-studies","map orientation","Which map feature explains the meanings of its symbols?","Legend",["Compass direction","Scale bar","Date line"],"A legend or key defines map symbols."],
+ ["social-studies","source analysis","Which question best checks whether a historical map is reliable for a purpose?","Who made it, when, and for what purpose?",["Is its paper colorful?","Does it have the most symbols?","Is it the oldest available map?"],"Authorship, date, purpose, and omissions guide source evaluation."],
+ ["world-languages","greetings","Which Spanish phrase means My name is Ana?","Me llamo Ana.",["Buenos días.","Mucho gusto.","¿Cómo te llamas?"],"Me llamo introduces one's name; the other phrases greet or ask a name."],
+ ["world-languages","culture","Why should a student check the setting before choosing a greeting?","Greetings can vary by context and community.",["Every country uses one greeting.","Words translate exactly every time.","Politeness never changes."],"Language use depends on situation, region, and people."],
+ ["arts-music","composition","What is the best description of visual balance?","Distribution of visual weight in a design.",["Using only one color.","Making every line the same length.","Avoiding a focal point."],"Symmetry and asymmetry can both produce balance."],
+ ["arts-music","rhythm","What creates rhythm in music and visual art?","Organized repetition and variation.",["Only loudness.","Only straight lines.","Removing repeated patterns."],"Rhythm is built through recurring and varied events."],
+ ["health-pe-sel","accessible planning","Which movement plan best supports inclusive participation?","An activity with a safe seated alternative.",["The same intense activity for everyone.","Grading students by body type.","Ignoring discomfort to finish."],"Planning should include safe and accessible options."],
+ ["health-pe-sel","self regulation","When assignments feel overwhelming, what is a constructive first step?","Choose a manageable task and ask for support if needed.",["Hide all unfinished work.","Compare scores publicly.","Avoid every trusted adult."],"Manageable actions and support can help organize stress."],
+ ["technology-design","keyboard navigation","Which key commonly moves keyboard focus to the next control?","Tab",["Caps Lock","Escape","Print Screen"],"Tab commonly navigates between focusable controls."],
+ ["technology-design","file privacy","Which file-naming practice is safest for student work?","Use clear subject names without private passwords.",["Put passwords in public filenames.","Include classmates' addresses.","Post login tokens in a folder name."],"Descriptive filenames must not expose personal credentials."],
+ ["integrated-projects","inquiry","Which is the strongest focused project question?","How could a 4 m by 3 m room support quiet study?",["Is all design good?","What is everything about school?","Can any plan solve every problem?"],"A bounded question can be answered with evidence."],
+ ["integrated-projects","scale drawing","At 1 cm per 1 m, how long is a 4 m wall on the drawing?","4 cm",["1 cm","8 cm","16 cm"],"The stated scale represents every meter as one centimeter."]
+ ];
+ const subjectOrder=["language-arts","science","social-studies","world-languages","arts-music","health-pe-sel","technology-design","integrated-projects"];
+ const bySubject=subjectOrder.map(subject=>shuffle(r,bank.filter(x=>x[0]===subject)));
+ const chosen=bySubject.map(a=>a[0]);
+ const extras=shuffle(r,bySubject.map(a=>a[1])).slice(0,4);
+ return shuffle(r,chosen.concat(extras).map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 1 Scholar Launch",rationale}),r)));
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
   normalizeSubject,
   makePool,
   makeBalanced,
+  makeGrade6Week1Subjects,
   makeGrade6MathWeek,
   makeGrade6CoordinateWeek,
   makeGrade6ExpressionsWeek,
