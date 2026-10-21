@@ -142,6 +142,24 @@ for(const subject of course.subjects){
 }
 expect(subjectWeeks===324,"Expected all 324 Grade 6 subject-week pages.");
 
+// Forensic guard: the nine-subject companion must never point to another week's canonical evidence.
+for(let n=10;n<=21;n++){
+  const w=pad(n);
+  const companion=`grades/grade-06/printables/week-${w}-subject-evidence.html`;
+  expect(exists(companion),`Missing nine-subject evidence companion for Week ${w}`);
+  const page=read(companion);
+  expect(page.includes(`weekly-evidence-packet.html?week=${w}`),`Week ${w} printable routes to wrong canonical evidence week`);
+  expect((page.match(/<section class="sheet">/g)||[]).length===9,`Week ${w} must include nine subject evidence sheets`);
+  const weeklyPacket=read(`grades/grade-06/printables/week-${w}-packet.html`);
+  expect(weeklyPacket.includes(`week-${w}-subject-evidence.html`),`Week ${w} printable packet missing companion link`);
+}
+const ecosystemPlan=read("grades/grade-06/weekly-plans/week-21.html");
+const ecosystemCrosswalk=crosswalk.weeks.find(w=>Number(w.week)===21);
+for(const subject of course.subjects){
+ const focus=ecosystemCrosswalk.subjects[subject.id].focus;
+ expect(ecosystemPlan.includes(focus.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/'/g,"&#39;")),`Week 21 weekly plan has stale subject focus: ${subject.id}`);
+}
+
 const grade7App=read("grades/grade-07/assets/app.js");
 expect(grade7App.includes("evidence/weekly-evidence-packet.html"),"Grade 7 may use its own canonical evidence routing after its independent migration.");
 expect(grade7App.includes("evidence/weekly-mastery-check.html"),"Grade 7 may use its own canonical mastery routing after its independent migration.");
