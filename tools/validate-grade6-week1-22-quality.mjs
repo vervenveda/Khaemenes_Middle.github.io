@@ -33,7 +33,7 @@ for(let week=1;week<=22;week++){
      assert.equal(units.length,5,"Expected five daily lessons "+w+" "+s.id);
      for(const [i,unit] of units.entries()){
        assert(unit.includes(["Monday:","Tuesday:","Wednesday:","Thursday:","Friday:"][i]),"Misordered day "+w+" "+s.id);
-       assert(unit.includes("Learn:"),"Missing instruction "+w+" "+s.id);
+       assert(unit.includes("Learn:")||unit.includes("Read and learn:"),"Missing instruction "+w+" "+s.id);
        assert(unit.includes("Practice and evidence:"),"Missing evidence task "+w+" "+s.id);
      }
    }
