@@ -878,6 +878,17 @@ function makeGrade6Week4Subjects(opts){
  return shuffle(r,selected.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 4 Percent and Civic Decisions",rationale}),r)));
 }
 
+
+/* Grade 6 Week 5: fraction-and-procedure aligned nonmath assessment. */
+function makeGrade6Week5Subjects(opts){
+ const r=rng(hash("g6w5-subjects|"+String((opts||{}).seed||1)));
+ const bank=[["language-arts","sequence","Which instruction is most precise for a fraction-strip model?","Divide the strip into six equal sections.",["Cut some pieces.","Make it look right.","Use several marks."],"Exact counts and equal parts make a procedure reproducible."],["language-arts","revision","What should a student do after a reader cannot repeat written steps?","Revise ambiguous steps and test them again.",["Hide the issue.","Remove all measurements.","Assume the reader is wrong."],"Testing and revision improve procedural clarity."],["science","measurement","How many 1/4 cm segments fit in a 3/4 cm paper strip?","3",["1","4","12"],"Three quarters divided by one quarter equals three."],["science","replication","What belongs in a reproducible measurement procedure?","Materials, units, steps, and recording method.",["Only a conclusion.","Unexplained guesses.","Missing measurement units."],"Repeatable procedures identify materials, method and units."],["social-studies","resource division","A fictional village reserves 1/4 of 12 baskets. How many baskets is that?","3",["2","4","8"],"One quarter of twelve is three."],["social-studies","historical sources","How should a fictional village distribution account be labeled?","As a classroom simulation, not an authentic historical record.",["As newly discovered primary evidence.","As proof all villages acted alike.","As a verified government source."],"Invented scenarios must not be represented as historical sources."],["world-languages","sequence","What is the English meaning of Spanish primero?","First",["Finally","Half","Never"],"Primero indicates an initial step."],["world-languages","quantities","What does Spanish un cuarto describe in a basic fraction lesson?","One quarter",["One whole","Three quarters","One half"],"Un cuarto is one fourth in this context."],["arts-music","rhythms","In common four-beat notation, how many quarter-note beats do two half notes fill?","4",["1","2","8"],"Each half note lasts two quarter-note beats."],["arts-music","pattern","Which is a valid way to show 3/4 of a four-panel poster?","Mark three of four equal panels.",["Mark three of ten panels.","Mark one of four panels.","Mark four of three panels."],"Three of four equal sections represents three quarters."],["health-pe-sel","time","One quarter of a 12-minute optional activity plan is how long?","3 minutes",["2 minutes","4 minutes","6 minutes"],"Twelve divided by four is three."],["health-pe-sel","safety","What belongs in inclusive activity instructions?","Safe modifications and optional rest.",["Mandatory participation despite pain.","Public medical disclosures.","One difficulty for every learner."],"Access and safety are essential to activity planning."],["technology-design","algorithm","Which quality makes an algorithm easier to test?","Clearly defined inputs, steps, and expected outputs.",["Unspecified input.","Random steps without labels.","Removing error checks."],"Clear input-output descriptions support debugging."],["technology-design","fraction debugging","How many 1/6 units fit in 2/3 of a whole?","4",["2","3","6"],"Two thirds equals four sixths."],["integrated-projects","fraction modeling","What is 2/3 ÷ 1/6?","4",["2","3","9"],"Four sixth-sized units fit into two thirds."],["integrated-projects","evidence","What best shows an original fraction model is repeatable?","A labeled diagram, ordered procedure, and test log.",["An unsupported claim.","A final number with no work.","Only a decorative cover."],"Evidence connects model, procedure and reproducibility."]];
+ const subjects=["language-arts","science","social-studies","world-languages","arts-music","health-pe-sel","technology-design","integrated-projects"];
+ const groups=subjects.map(subject=>shuffle(r,bank.filter(q=>q[0]===subject)));
+ const selected=groups.map(g=>g[0]).concat(shuffle(r,groups.map(g=>g[1])).slice(0,4));
+ return shuffle(r,selected.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 5 Fraction Division and Procedural Writing",rationale}),r)));
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -888,6 +899,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6Week2Subjects,
   makeGrade6Week3Subjects,
   makeGrade6Week4Subjects,
+  makeGrade6Week5Subjects,
   makeGrade6MathWeek,
   makeGrade6CoordinateWeek,
   makeGrade6ExpressionsWeek,
