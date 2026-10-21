@@ -55,7 +55,7 @@ for(const token of [
   'Study-focus weeks',
   'Open Integrated Week',
   'Evidence Packet',
-  'Official adult-reviewed cumulative assessment',
+  'Supplemental adult-reviewed portfolio demonstration',
   'Each item is worth one point',
   'Authorized Adult Review',
   'Print / Save PDF',
@@ -64,7 +64,7 @@ for(const token of [
   '"Name:"',
   '"Date:"',
   'Adult reviewer:',
-  'The Grade 6 learner record remains the score authority',
+  'The separate randomized Verified Knowledge Assessment above is the authoritative',
   'KhaemenesGrade6CumulativeAssessment'
 ]) expect(engine.includes(token),`Canonical Grade 6 cumulative engine contract missing: ${token}`);
 
