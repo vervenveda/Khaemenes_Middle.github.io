@@ -955,6 +955,17 @@ function makeGrade6Week11Subjects(opts){
  return shuffle(r,selected.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 11 Statistics Questions Data and Distribution",rationale}),r)));
 }
 
+
+/* Grade 6 Week 12: geometry, surface area and accessible design. */
+function makeGrade6Week12Subjects(opts){
+ const r=rng(hash("g6w12-subjects|"+String((opts||{}).seed||1)));
+ const bank=[["language-arts","area terminology","Which unit correctly describes a rectangle's area?","square centimeters",["centimeters","kilograms","seconds"],"Area measures a two-dimensional region in square units."],["language-arts","procedure","Which explanation accurately computes a 6 cm base and 4 cm height triangle?","One-half times 6 times 4 equals 12 cm².",["6 plus 4 equals 10 cm².","6 times 4 equals 24 cm².","4 divided by 6 equals 1.5 cm²."],"Triangle area equals one half the base times perpendicular height."],["science","cube surface area","What is the surface area of a closed cube with 2 cm sides?","24 cm²",["8 cm²","12 cm²","16 cm²"],"Six faces each have area four square centimeters."],["science","model evidence","What does a drawn solid net establish by itself?","The modeled arrangement and areas of its faces.",["Measured heat transfer from a real experiment.","An object's exact volume without measurements.","A universal material property."],"A geometry diagram supports shape calculations but not experimental causal claims."],["social-studies","land area","A fictional lot is 10 m by 6 m. What is its area?","60 m²",["16 m²","32 m²","120 m²"],"Ten times six equals sixty square meters."],["social-studies","land-use","A 60 m² fictional lot reserves a nonoverlapping 12 m² path. What area remains?","48 m²",["12 m²","60 m²","72 m²"],"Subtract the path area from the total."],["world-languages","shape vocabulary","What does Spanish rectángulo mean?","Rectangle",["Triangle","Circle","Cube"],"Rectángulo translates to rectangle."],["world-languages","measurement vocabulary","What does Spanish centímetro mean?","Centimeter",["Kilogram","Second","Square kilometer"],"Centímetro names a length unit."],["arts-music","design area","What is the area of a 4 cm by 3 cm rectangular collage element?","12 cm²",["7 cm²","14 cm²","24 cm²"],"Multiply four by three for the rectangle's area."],["arts-music","net count","How many equal square faces belong to a closed cube?","6",["4","5","8"],"A cube has six square faces."],["health-pe-sel","room plan","A fictional 6 m by 4 m room covers how much area?","24 m²",["10 m²","20 m²","48 m²"],"Six times four equals twenty-four."],["health-pe-sel","inclusive space","Which planning approach is appropriate for a fictional recreation room?","Include clear paths and seated alternatives.",["Require every learner to perform identical movement.","Assume a diagram guarantees code compliance.","Ignore obstacles and personal boundaries."],"A sketch is a planning aid, not proof of real-world accessibility."],["technology-design","area formula","Which algorithm computes the area of a rectangle?","width × height",["width + height","width − height","width ÷ height"],"Rectangle area multiplies two perpendicular lengths."],["technology-design","input handling","What should an area calculator do with a negative width?","Show a clear input-validation error.",["Calculate an ordinary positive area without warning.","Hide the value and report success.","Treat it as an official measured length."],"Dimensions for this simple geometry model must be valid positive values."],["integrated-projects","garden area","What is the area of an 8 m by 5 m fictional reading garden?","40 m²",["13 m²","26 m²","80 m²"],"Eight times five gives forty."],["integrated-projects","remaining space","A fictional 40 m² garden reserves a nonoverlapping 2 m by 5 m path. What remains?","30 m²",["10 m²","35 m²","50 m²"],"The path covers ten square meters, leaving thirty."]];
+ const subjects=["language-arts","science","social-studies","world-languages","arts-music","health-pe-sel","technology-design","integrated-projects"];
+ const groups=subjects.map(subject=>shuffle(r,bank.filter(q=>q[0]===subject)));
+ const selected=groups.map(g=>g[0]).concat(shuffle(r,groups.map(g=>g[1])).slice(0,4));
+ return shuffle(r,selected.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 12 Geometry Area Surface Area and Design",rationale}),r)));
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -972,6 +983,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6Week9Subjects,
   makeGrade6Week10Subjects,
   makeGrade6Week11Subjects,
+  makeGrade6Week12Subjects,
   makeGrade6MathWeek,
   makeGrade6CoordinateWeek,
   makeGrade6ExpressionsWeek,
