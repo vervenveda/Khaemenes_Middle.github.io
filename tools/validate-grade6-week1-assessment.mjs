@@ -296,6 +296,22 @@ for(let seed=1;seed<=120;seed++){
 assert(week23Fingerprints.size>=3,"Week 23 retake variation missing");
 assert(engine.includes('f.makeGrade6Week23Subjects?.({seed:seed+"|general"})'),"Week 23 assessment route missing");
 console.log("Grade 6 Week 23 assessment certified: 120 balanced draws.");
+// Week 22-23 expansion must expose more than the original two-item-per-subject banks.
+for(const w of [22,23]){
+ const observed=new Set();const bySubject=new Map();
+ for(let seed=1;seed<=200;seed++){
+  const draw=factory["makeGrade6Week"+w+"Subjects"]({seed:"depth-"+seed});
+  assert.equal(draw.length,12,"Expanded Week "+w+" draw length");
+  for(const q of draw){
+   observed.add(q.prompt);
+   if(!bySubject.has(q.subject))bySubject.set(q.subject,new Set());
+   bySubject.get(q.subject).add(q.prompt);
+  }
+ }
+ assert(observed.size>=24,"Week "+w+" bank needs 24 unique obtainable prompts");
+ for(const subject of expected)assert((bySubject.get(subject)?.size||0)>=3,"Week "+w+" needs three obtainable items for "+subject);
+}
+console.log("Grade 6 Week 22-23 expanded banks certified: at least 24 reachable original questions per week, three or more per subject.");
 // Learner-journey regression contracts: formative practice must not disclose unfinished answers,
 // duplicate-save must be blocked, and genuine grade records have explicit review routes.
 const learnerLedger=fs.readFileSync("assets/khaemenes-middle-learning-ledger.js","utf8");
