@@ -336,4 +336,16 @@ for(let seed=1;seed<=120;seed++){
 assert(week24Fingerprints.size>=3,"Week 24 retake variation missing");
 assert(engine.includes('f.makeGrade6Week24Subjects?.({seed:seed+"|general"})'),"Week 24 assessment route missing");
 console.log("Grade 6 Week 24 assessment certified: 120 balanced draws.");
+const week25Fingerprints=new Set();
+for(let seed=1;seed<=120;seed++){
+ const draw=factory.makeGrade6Week25Subjects({seed:"audit-"+seed});
+ assert.equal(draw.length,12,"Week 25 draw count");
+ assert.equal(new Set(draw.map(q=>q.prompt)).size,12,"Week 25 duplicate prompts");
+ for(const subject of expected)assert(draw.some(q=>q.subject===subject),"Week 25 missing "+subject);
+ for(const q of draw){assert(factory.validateQuestion(q),"Week 25 invalid: "+q.prompt);assert(q.rationale&&q.rationale.length>15,"Week 25 missing rationale");}
+ week25Fingerprints.add(draw.map(q=>q.id).sort().join("|"));
+}
+assert(week25Fingerprints.size>=3,"Week 25 retake variation missing");
+assert(engine.includes('f.makeGrade6Week25Subjects?.({seed:seed+"|general"})'),"Week 25 assessment route missing");
+console.log("Grade 6 Week 25 assessment certified: 120 balanced draws.");
 console.log("Grade 6 Week 1 assessment certified: 120 valid draws, all eight subjects represented, 12 unique nonmath prompts per attempt, four answer positions, varied retakes.");
