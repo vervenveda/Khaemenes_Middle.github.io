@@ -131,7 +131,7 @@
   function renderAssessment(root){
     titleBlock(root,"Supplemental Evidence Rubric");
     controls(root,"Download Review Copy",()=>downloadText(`grade-06-week-${pad(weekNumber)}-mastery-check.txt`,assessmentText()));
-    root.append(node("p","canonical-evidence-note",`Adult-reviewed evidence check. Score each domain 0, 1, or 2 points. Total possible: ${TOTAL_POINTS}. Passing: ${PASSING_POINTS}/${TOTAL_POINTS} = 81.8%, which meets the Academy minimum of ${MIN}%. This page does not write the student's grade; this rubric never awards verified mastery or unlocks progression.`));
+    root.append(node("p","canonical-evidence-note",`Adult-reviewed evidence check. Score each domain 0, 1, or 2 points. Total possible: ${TOTAL_POINTS}. Passing: ${PASSING_POINTS}/${TOTAL_POINTS} = 81.8%, which meets the Academy minimum of ${MIN}%. This page does not write the student's grade; this rubric never awards verified mastery or unlocks progression; the authorized adult/Academy record remains authoritative.`));
     const table=node("table","canonical-rubric");
     const head=node("thead");const hr=node("tr");["#","Domain","Week-specific evidence target","Score 0–2"].forEach(t=>hr.appendChild(node("th","",t)));head.appendChild(hr);table.appendChild(head);
     const body=node("tbody");
