@@ -18,6 +18,9 @@ on:
       - "tools/validate-grade6-36-week-journey.mjs"
       - "tools/validate-grade6-end-of-year-certification.mjs"
       - "tools/validate-grade6-certificate-behavior.mjs"
+      - "tools/validate-grade6-recovery-review.mjs"
+      - "grades/grade-06/assets/recovery-review.js"
+      - "grades/grade-06/index.html"
       - "grades/grade-06/printables/**"
       - "grades/grade-06/assessments/**"
       - "tools/validate-grade6-crosswalk-renderer.mjs"
@@ -41,6 +44,9 @@ on:
       - "tools/validate-grade6-36-week-journey.mjs"
       - "tools/validate-grade6-end-of-year-certification.mjs"
       - "tools/validate-grade6-certificate-behavior.mjs"
+      - "tools/validate-grade6-recovery-review.mjs"
+      - "grades/grade-06/assets/recovery-review.js"
+      - "grades/grade-06/index.html"
       - "grades/grade-06/printables/**"
       - "grades/grade-06/assessments/**"
       - "tools/validate-grade6-crosswalk-renderer.mjs"
@@ -70,6 +76,8 @@ jobs:
         run: node tools/validate-grade6-end-of-year-certification.mjs
       - name: Test Grade 6 certificate and graduation boundaries
         run: node tools/validate-grade6-certificate-behavior.mjs
+      - name: Validate Grade 6 protected recovery preview
+        run: node tools/validate-grade6-recovery-review.mjs
       - name: Re-run Middle School Learning Navigator contract
         run: node tools/validate-middle-learning-navigator.mjs
       - name: Re-run Middle School Study Scorebook contract
