@@ -56,6 +56,9 @@ function render(container,questions,ctx){
   container.querySelector("[data-new-check]").onclick=()=>start(container,ctx,questions.length);
   container.querySelector("[data-save-check]").onclick=()=>{
     let correct=0,answered=0;const responses=[];
+    const selectedAll=questions.every((q,i)=>!!container.querySelector('input[name="middle-check-'+ctx.key+'-'+i+'"]:checked'));
+    if(!selectedAll){status.textContent="Answer all checkpoint questions before checking explanations.";return;}
+    if(container.dataset.saved==="true"){status.textContent="This practice attempt is already saved. Draw New Practice for another challenge.";return;}
     questions.forEach((q,i)=>{
       const chosen=container.querySelector('input[name="middle-check-'+ctx.key+'-'+i+'"]:checked'),selected=chosen?Number(chosen.value):null,ok=selected===q.answer,fb=container.querySelector('[data-feedback="'+i+'"]');
       if(selected!==null)answered++;if(ok)correct++;
@@ -65,7 +68,9 @@ function render(container,questions,ctx){
     if(answered<questions.length){status.textContent="Answer each checkpoint question before saving.";return}
     const score=Math.round(correct/questions.length*100),l=learner(),reflection=container.querySelector(".middle-check-reflection").value.trim();
     const record={schema:"khaemenes-middle-learning-ledger-record-v1",id:uid(),learnerId:l?.learnerId||null,preview:!l,grade:grade(),week:week(),subject:subject(),day:ctx.day,focus:ctx.focus,page:location.pathname,kind:ctx.kind||"lesson-formative-checkpoint",questionCount:questions.length,correct,score,responses,reflection:reflection.slice(0,1600),masteryAuthority:false,affectsGrade:false,unlocksCurriculum:false,changesPlacement:false,completedAt:new Date().toISOString()};
-    status.textContent=saveRecord(record)?("Saved formative evidence: "+correct+"/"+questions.length+" ("+score+"%). Practice does not change formal mastery."):"This browser could not save the checkpoint.";
+    const stored=saveRecord(record);
+    if(stored){container.dataset.saved="true";container.querySelector("[data-save-check]").disabled=true;}
+    status.textContent=stored?("Saved formative evidence: "+correct+"/"+questions.length+" ("+score+"%). Practice does not change formal mastery."):"This browser could not save the checkpoint.";
   };
 }
 function start(container,ctx,count){
