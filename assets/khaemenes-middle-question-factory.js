@@ -933,6 +933,17 @@ function makeGrade6Week9Subjects(opts){
  return shuffle(r,selected.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 9 Equations and Balanced Arguments",rationale}),r)));
 }
 
+
+/* Grade 6 Week 10: inequalities and real-world decision-rule reasoning. */
+function makeGrade6Week10Subjects(opts){
+ const r=rng(hash("g6w10-subjects|"+String((opts||{}).seed||1)));
+ const bank=[["language-arts","precise limits","What does 'at most 20 participants' mean?","20 or fewer.",["Fewer than 20 only.","20 or more.","Exactly 21."],"At most includes the stated upper boundary."],["language-arts","conditional language","Which wording clearly excludes the value 10?","Fewer than 10.",["10 or fewer.","At most 10.","No greater than 10."],"A strict less-than rule excludes its boundary."],["science","target range","A simulated design target is 18≤T≤22. Which reading meets it?","22 °C",["17 °C","23 °C","24 °C"],"Both limits are inclusive."],["science","threshold rule","For a simulated sensor, which condition flags readings outside 18–22 °C?","T<18 or T>22",["T=20 only","T≥18 and T≤22","T=22 only"],"Values below the lower threshold or above the upper threshold are outside."],["social-studies","policy constraints","A fictional grant permits budgets b≤100. Is b=100 eligible?","Yes, the limit includes 100.",["No, 100 is too high.","Only if b>100.","The inequality does not define a maximum."],"Less-than-or-equal includes equality."],["social-studies","source distinctions","Which source most directly establishes an actual law's wording?","The applicable official enacted text.",["A fictional class worksheet.","An unsourced anecdote.","A proposed policy draft alone."],"Legal requirements must be checked against official enacted sources."],["world-languages","permission","What does Spanish 'se permite' indicate?","Something is permitted.",["It is prohibited.","It happened yesterday.","It is north of here."],"Se permite expresses permission."],["world-languages","comparison","What does Spanish 'menos que' generally mean?","Less than.",["Greater than.","Equal to.","Farther north."],"Menos que is a comparison meaning less than."],["arts-music","creative limit","A poster permits s≤4 shapes. Which count meets the rule?","4",["5","6","7"],"The at-most limit includes four."],["arts-music","beat limit","A fictional rhythm rule allows b≤8 beats. Which rhythm violates it?","9 beats",["6 beats","7 beats","8 beats"],"Nine exceeds the maximum of eight."],["health-pe-sel","optional duration","Which duration is allowed by an optional t≤12-minute plan?","12 minutes",["13 minutes","14 minutes","15 minutes"],"The endpoint 12 is permitted."],["health-pe-sel","accessibility","What is a responsible activity decision rule?","Provide rest and accessible alternatives.",["Require disclosure of diagnoses.","Ignore discomfort.","Make participation compulsory."],"Respecting comfort, consent and access supports safe learning."],["technology-design","boundary cases","For x<10, which value passes?","9",["10","11","12"],"Strict inequality excludes 10 and all greater values."],["technology-design","validator design","What should an inequality checker do with nonnumeric input?","Show a readable validation message.",["Silently treat it as zero.","Report success without testing.","Hide the error using only color."],"Clear input validation avoids misleading outcomes."],["integrated-projects","two constraints","Which fictional room design meets s≤20 and b≤100?","18 seats and 95 budget units.",["22 seats and 90 units.","18 seats and 105 units.","21 seats and 101 units."],"Both independent caps must be satisfied."],["integrated-projects","boundary checking","Are s=20 seats and b=100 units allowed by s≤20 and b≤100?","Yes, both inclusive boundaries qualify.",["No, neither boundary is included.","Only if seats exceed 20.","Only if budget exceeds 100."],"Both less-than-or-equal conditions include equality."]];
+ const subjects=["language-arts","science","social-studies","world-languages","arts-music","health-pe-sel","technology-design","integrated-projects"];
+ const groups=subjects.map(subject=>shuffle(r,bank.filter(q=>q[0]===subject)));
+ const selected=groups.map(g=>g[0]).concat(shuffle(r,groups.map(g=>g[1])).slice(0,4));
+ return shuffle(r,selected.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 10 Inequalities and Decision Rules",rationale}),r)));
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -948,6 +959,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6Week7Subjects,
   makeGrade6Week8Subjects,
   makeGrade6Week9Subjects,
+  makeGrade6Week10Subjects,
   makeGrade6MathWeek,
   makeGrade6CoordinateWeek,
   makeGrade6ExpressionsWeek,
