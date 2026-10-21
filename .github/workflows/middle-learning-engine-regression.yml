@@ -22,6 +22,7 @@ on:
       - 'scripts/inject-middle-learning-engine.mjs'
       - 'tools/validate-middle-learning-engine.mjs'
       - 'tools/validate-grade6-week1-assessment.mjs'
+      - 'tools/validate-grade6-learner-persistence.mjs'
       - '.github/workflows/middle-learning-engine-regression.yml'
   pull_request:
     paths:
@@ -42,6 +43,7 @@ on:
       - 'scripts/inject-middle-learning-engine.mjs'
       - 'tools/validate-middle-learning-engine.mjs'
       - 'tools/validate-grade6-week1-assessment.mjs'
+      - 'tools/validate-grade6-learner-persistence.mjs'
       - '.github/workflows/middle-learning-engine-regression.yml'
   workflow_dispatch:
 
@@ -66,3 +68,5 @@ jobs:
         run: node tools/validate-middle-learning-engine.mjs
       - name: Certify Grade 6 Week 1 randomized subject questions
         run: node tools/validate-grade6-week1-assessment.mjs
+      - name: Test Grade 6 learner persistence and identity isolation
+        run: node tools/validate-grade6-learner-persistence.mjs
