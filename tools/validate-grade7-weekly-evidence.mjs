@@ -79,7 +79,7 @@ for(const token of [
   'Health / PE / SEL',
   'Technology / Design',
   'Integrated Portfolio',
-  'authorized adult/Academy record remains authoritative'
+  'the authorized adult/Academy record remains authoritative'
 ]) expect(evidence.includes(token),`Canonical Grade 7 weekly evidence contract missing: ${token}`);
 
 for(const forbidden of ["localStorage.setItem(","localStorage.removeItem(","writeState(","clearState(","setPlacement(","awardMastery(","state.weekly["]){
