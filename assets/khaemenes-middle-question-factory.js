@@ -922,6 +922,17 @@ function makeGrade6Week8Subjects(opts){
  return shuffle(r,selected.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 8 Expressions and Algebraic Thinking",rationale}),r)));
 }
 
+
+/* Grade 6 Week 9: balanced arguments, science models and one-step equations. */
+function makeGrade6Week9Subjects(opts){
+ const r=rng(hash("g6w9-subjects|"+String((opts||{}).seed||1)));
+ const bank=[["language-arts","arguments","What is a counterargument?","A reasoned challenge to a claim.",["A repeated unsupported claim.","An unrelated quotation.","A mathematical numeral."],"A counterargument fairly addresses another position."],["language-arts","evidence","Which claim accurately describes 18 supporters among 30 fictional respondents?","18 of 30 respondents support the proposal.",["All residents agree.","The poll proves the policy is best.","No one opposed the change."],"The result applies to the sample, not everyone."],["science","equations","Solve 3t=12 for t.","4",["3","9","36"],"Dividing both sides by three yields four."],["science","model comparison","A simulated d=3t model predicts what distance at t=2 seconds?","6 meters",["3 meters","5 meters","9 meters"],"Three times two equals six, given meters-per-second units."],["social-studies","survey","18 out of 30 fictional survey respondents support a proposal. What percentage is that?","60%",["18%","30%","80%"],"18 divided by 30 is 0.6."],["social-studies","sources","What belongs in a balanced civic policy brief?","Supporting evidence, a fair objection, and limitations.",["Only one viewpoint.","Invented official sources.","A conclusion without data."],"Fair civic reasoning weighs opposing concerns."],["world-languages","agreement","What does Spanish estoy de acuerdo mean?","I agree.",["I am lost.","I disagree.","I am late."],"The phrase communicates agreement."],["world-languages","reasons","Which Spanish word introduces a reason?","porque",["norte","ayer","mitad"],"Porque means because in this context."],["arts-music","equality","Solve x+2=6 for x beats.","4",["2","6","8"],"Subtract two from both sides."],["arts-music","balance","Can an asymmetrical artwork still be visually balanced?","Yes, through intentional distribution of visual emphasis.",["No, balance requires identical halves.","Only if every shape is equal.","Only if a chart is attached."],"Balance does not require symmetry."],["health-pe-sel","time","Solve x+5=15 for optional activity minutes.","10",["5","15","20"],"Subtract five from each side."],["health-pe-sel","access","What is respectful self-advocacy in an activity?","Requesting an accessible option without disclosing private medical details.",["Being forced to share a diagnosis.","Ignoring safe boundaries.","Insulting a different choice."],"Self-advocacy can preserve privacy and choice."],["technology-design","equation testing","What value solves x−5=8?","13",["3","8","40"],"Add five to both sides."],["technology-design","debugging","Which test confirms x=4 solves 3x=12?","Substitute and check 3×4=12.",["Assume all values work.","Change only one side.","Ignore the input."],"Substitution checks equality."],["integrated-projects","budget","Solve the fictional budget constraint x+20=50.","30",["20","50","70"],"Subtract fixed cost twenty from budget fifty."],["integrated-projects","responsible proposal","What strengthens a fictional civic project proposal?","A checked equation, fair counterargument, and evidence limitations.",["Only favorable opinions.","Unlabeled sample numbers.","Made-up official endorsements."],"Reliable project defense combines math and qualified evidence."]];
+ const subjects=["language-arts","science","social-studies","world-languages","arts-music","health-pe-sel","technology-design","integrated-projects"];
+ const groups=subjects.map(subject=>shuffle(r,bank.filter(q=>q[0]===subject)));
+ const selected=groups.map(g=>g[0]).concat(shuffle(r,groups.map(g=>g[1])).slice(0,4));
+ return shuffle(r,selected.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 9 Equations and Balanced Arguments",rationale}),r)));
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -936,6 +947,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6Week6Subjects,
   makeGrade6Week7Subjects,
   makeGrade6Week8Subjects,
+  makeGrade6Week9Subjects,
   makeGrade6MathWeek,
   makeGrade6CoordinateWeek,
   makeGrade6ExpressionsWeek,
