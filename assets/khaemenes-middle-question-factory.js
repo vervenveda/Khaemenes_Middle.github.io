@@ -911,6 +911,17 @@ function makeGrade6Week7Subjects(opts){
  return shuffle(r,selected.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 7 Coordinates and Geography",rationale}),r)));
 }
 
+
+/* Grade 6 Week 8: expressions, symbolic language, models, and algorithms. */
+function makeGrade6Week8Subjects(opts){
+ const r=rng(hash("g6w8-subjects|"+String((opts||{}).seed||1)));
+ const bank=[["language-arts","notation","Which expression means three more than twice n?","2n+3",["2(n+3)","3n+2","n+6"],"The phrase twice n plus three translates to 2n+3."],["language-arts","syntax","Why do parentheses matter in a mathematical explanation?","They determine what quantities are grouped.",["They never affect meaning.","They are only decorative.","They eliminate the need for units."],"Grouping changes order and meaning."],["science","variables","For a simulated model d=2t, what is d at t=4?","8 meters",["2 meters","4 meters","16 meters"],"Twice four is eight in a model measured in meters."],["science","evidence","What does a fictional d=2t model alone establish?","Predicted outputs under its stated assumptions.",["Proof every object moves at that rate.","The true cause of motion.","Recorded measurements from a real experiment."],"A model is not automatically a real observation."],["social-studies","expressions","Four fictional caravans carry b baskets each. What is the total?","4b",["b+4","b/4","4+b²"],"Four equal groups of b make 4b."],["social-studies","sources","An invented trading ledger should be identified as what?","A fictional classroom simulation.",["Verified ancient evidence.","A newly authenticated document.","A historical census."],"Invented teaching data must not be represented as history."],["world-languages","translation","In Spanish, what does número mean?","Number",["Library","North","River"],"Número is the Spanish word for number."],["world-languages","symbol meaning","What should a bilingual algebra guide preserve?","The grouping and meaning of the original expression.",["Only the appearance of the letters.","An invented result.","A different operation without explanation."],"Translation must preserve mathematical meaning."],["arts-music","pattern","A four-beat pattern repeats n times. How many beats total?","4n",["4+n","n/4","4−n"],"Each repeat contributes four beats."],["arts-music","equivalence","Which sum also represents four beats?","2+2",["2+1","1+1","3+2"],"Two groups of two fill four beats."],["health-pe-sel","planning","If w=6 minutes and r=4 minutes, what is w+r?","10 minutes",["2 minutes","24 minutes","6 minutes"],"The total is the sum of two planned durations."],["health-pe-sel","choice","What makes an algebra-based activity plan safe and inclusive?","Optional alternatives and permission to rest.",["Forced repetition despite discomfort.","Sharing private diagnoses.","Ranking learners by their bodies."],"The model supports planning, not compulsory performance."],["technology-design","precedence","When x=2, what is 3*(x+4)?","18",["10","9","14"],"Parentheses first: 2+4=6, then times three."],["technology-design","formulas","Which spreadsheet formula represents 2n+3 if n is in A2?","=2*A2+3",["=A2/2+3","=2*(A2+3)","=A2+2*3"],"The multiplication applies only to n."],["integrated-projects","models","For 4n+2 garden plants and n=3 rows, how many plants?","14",["12","18","9"],"Four times three plus two is fourteen."],["integrated-projects","equivalent expressions","Which expression is equivalent to 4n+2?","2(2n+1)",["2(2n+2)","4(n+2)","n+6"],"Expanding 2(2n+1) gives 4n+2."]];
+ const subjects=["language-arts","science","social-studies","world-languages","arts-music","health-pe-sel","technology-design","integrated-projects"];
+ const groups=subjects.map(subject=>shuffle(r,bank.filter(q=>q[0]===subject)));
+ const selected=groups.map(g=>g[0]).concat(shuffle(r,groups.map(g=>g[1])).slice(0,4));
+ return shuffle(r,selected.map(([subject,skill,prompt,correct,wrongs,rationale])=>finalize(makeQuestion(prompt,correct,wrongs,{subject,skill,grade:6,focus:"Grade 6 Week 8 Expressions and Algebraic Thinking",rationale}),r)));
+}
+
 global.KhaemenesMiddleQuestionFactory=Object.freeze({
   version:VERSION,
   subjects:SUBJECTS.slice(),
@@ -924,6 +935,7 @@ global.KhaemenesMiddleQuestionFactory=Object.freeze({
   makeGrade6Week5Subjects,
   makeGrade6Week6Subjects,
   makeGrade6Week7Subjects,
+  makeGrade6Week8Subjects,
   makeGrade6MathWeek,
   makeGrade6CoordinateWeek,
   makeGrade6ExpressionsWeek,
