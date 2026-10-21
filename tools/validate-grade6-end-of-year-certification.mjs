@@ -26,6 +26,8 @@ const cert=read(root+"/assets/certificate.js");
 for(const contract of ['done===36','avg>=80','Number(state.midterm||0)>=80','Number(state.final||0)>=80','!!state.portfolio','context.status==="ready"','grade-07'])assert(cert.includes(contract),"Certificate or transition safeguard absent: "+contract);
 const app=read(root+"/assets/app.js");
 assert(app.includes('completedWeeks()===DATA.weeks.length'),"Dashboard full-year completion contract absent");
+assert(!app.includes('state.portfolio=$("portfolio").checked'),"Learner dashboard must not self-approve portfolio");
+assert(app.includes('$("portfolio").disabled=true'),"Portfolio approval must be read-only in learner dashboard");
 const engine=read("assets/khaemenes-middle-assessment-engine.js");
 for(const contract of ['PASS=80','completed(s,18)','completed(s,36)','performanceEvidencePreserved:true','manualScoreEntry:false'])assert(engine.includes(contract),"Formal assessment contract missing: "+contract);
 for(let week=25;week<=36;week++)assert(engine.includes("makeGrade6Week"+week+"Subjects"),"Subject assessment bank routing missing: "+week);
