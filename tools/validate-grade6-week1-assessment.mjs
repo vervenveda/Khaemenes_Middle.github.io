@@ -296,4 +296,16 @@ for(let seed=1;seed<=120;seed++){
 assert(week23Fingerprints.size>=3,"Week 23 retake variation missing");
 assert(engine.includes('f.makeGrade6Week23Subjects?.({seed:seed+"|general"})'),"Week 23 assessment route missing");
 console.log("Grade 6 Week 23 assessment certified: 120 balanced draws.");
+// Learner-journey regression contracts: formative practice must not disclose unfinished answers,
+// duplicate-save must be blocked, and genuine grade records have explicit review routes.
+const learnerLedger=fs.readFileSync("assets/khaemenes-middle-learning-ledger.js","utf8");
+const learnerNav=fs.readFileSync("assets/khaemenes-middle-learning-navigator.js","utf8");
+assert(learnerLedger.includes('if(!selectedAll)'),"Unfinished formative questions must not disclose feedback");
+assert(learnerLedger.includes('container.dataset.saved==="true"'),"Formative saves must be idempotent");
+assert(learnerLedger.includes('container.dataset.saved="true"'),"Formative saved state must be recorded");
+assert(learnerNav.includes('Verified 80% Exam'),"Grade 6 navigation must open formal exams");
+assert(learnerNav.includes('Nine-Subject Printable Portfolio'),"Grade 6 navigation must open actual portfolio evidence");
+assert(engine.includes('mathScore<PASS'),"Mathematics strand threshold must remain enforced");
+assert(engine.includes('Review This Week'),"Assessment feedback must offer a lesson-revisit pathway");
+console.log("Grade 6 learner journey certified: practice integrity, formal exam links, portfolio access, dual mastery and review navigation.");
 console.log("Grade 6 Week 1 assessment certified: 120 valid draws, all eight subjects represented, 12 unique nonmath prompts per attempt, four answer positions, varied retakes.");
