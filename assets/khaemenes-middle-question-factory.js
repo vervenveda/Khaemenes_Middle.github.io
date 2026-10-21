@@ -16,6 +16,7 @@ function shuffle(r,arr){const out=arr.slice();for(let i=out.length-1;i>0;i--){co
 function uniq(arr){return [...new Set(arr.map(v=>String(v)))]}
 function normalizeSubject(v){
   const s=String(v||"").toLowerCase().replace(/[^a-z]+/g,"-").replace(/^-|-$/g,"");
+  if(s==="world-languages"||/world-language|language-culture|global-culture/.test(s))return"world-languages";
   if(/language|reading|writing|literacy|ela/.test(s))return"language-arts";
   if(/math/.test(s))return"mathematics";
   if(/science|engineering/.test(s))return"science";
