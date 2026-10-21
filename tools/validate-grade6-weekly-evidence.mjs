@@ -118,7 +118,7 @@ for(const token of [
 expect(assessmentIndex.includes("36 Weekly Mastery Checks"),"Grade 6 assessment directory must present the canonical 36-week mastery sequence.");
 expect(assessmentIndex.includes('../evidence/weekly-mastery-check.html?week=${w}'),"Grade 6 assessment directory must route to the canonical weekly mastery page.");
 expect(!assessmentIndex.includes('href="week-01-assessment.html"'),"Grade 6 assessment directory must not expose legacy weekly assessment links.");
-expect(assessmentIndex.includes("18/22 points = 81.8%"),"Grade 6 assessment directory must publish the current mastery math.");
+expect(assessmentIndex.includes("at least 80% overall and 80% in their aligned mathematics questions")&&assessmentIndex.includes("Adult-reviewed 22-point evidence rubrics are supplemental"),"Grade 6 assessment directory must distinguish verified weekly mastery from supplemental adult evidence.");
 
 let weeklyPlans=0;
 for(const week of course.weeks){
