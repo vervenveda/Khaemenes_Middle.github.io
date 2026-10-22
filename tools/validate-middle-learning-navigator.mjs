@@ -56,7 +56,7 @@ expect(navigator.includes("return blank();"),"Middle navigator must fail closed 
  const storage=new Map([["middle-legacy",{weekly:{"7":99}}]]);
  const localStorage={getItem:k=>storage.has(k)?JSON.stringify(storage.get(k)):null,setItem:(k,v)=>storage.set(k,JSON.parse(v)),removeItem:k=>storage.delete(k)};
  const window={KHAEMENES_GRADE_CONTEXT:{grade:"06",stage:"middle",courseId:"middle-grade-06",legacyKey:"middle-legacy"},localStorage,
- KhaemenesFamilyRegistry:{getLearner:()=>active},dispatchEvent:()=>{},document:{readyState:"loading",addEventListener:()=>{}}};
+ KhaemenesFamilyRegistry:{getLearner:()=>active},dispatchEvent:()=>{},document:{readyState:"loading",addEventListener:()=>{},querySelector:()=>({}),head:{appendChild:()=>{}}}};
  vm.runInNewContext(source,{window,CustomEvent:function(){}},{timeout:1000});
  const api=window.KhaemenesGradeContinuity;
  const blank={weekly:{}};
