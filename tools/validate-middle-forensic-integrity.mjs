@@ -71,6 +71,17 @@ for(const script of scripts){
   const r=spawnSync(process.execPath,["--check",script],{cwd:root,encoding:"utf8"});
   check(r.status===0,script+" JavaScript syntax: "+(r.stderr||"").slice(0,240));
 }
+// Week 7 curriculum accuracy and student-record isolation regression.
+for(const [g,subject,focus] of [["07","science","measuring Earth-system change with equations and inequalities"],["08","mathematics","rigid transformations and congruence proofs"]]){
+ const file=`grades/grade-${g}/subjects/${subject}/week-07.html`,source=read(file);
+ check((source.match(new RegExp("Focus:</strong> "+focus,"g"))||[]).length===5,file+" has inconsistent daily objectives");
+ for(let day=1;day<=5;day++)check(source.includes("Week 07 Subject Depth Lab · Day "+day),file+" missing depth lab "+day);
+}
+const navigator=read("assets/khaemenes-middle-learning-navigator.js");
+check(!navigator.includes("localStorage.getItem(ctx.legacyKey)"),"Middle learning navigator must not display unowned legacy student progress");
+const congruenceGuide=read("grades/grade-08/assessments/week-07-assessment.html");
+check(congruenceGuide.includes('aria-label="Week 07 congruence evidence guide"'),"Grade 8 missing weekly congruence evidence guide");
+check(congruenceGuide.includes("Passing: 18/22 = 81.8%"),"Grade 8 original assessment scoring changed");
 console.log(JSON.stringify({htmlPages:html.length,localReferences:refs,fragmentReferences:fragmentRefs,remoteReferences:remote,javascriptFiles:scripts.length,issues:errors.length},null,2));
 if(errors.length){console.error(errors.slice(0,80).join("\n"));process.exit(1)}
 console.log("PASS: Middle School forensic integrity and internal-link validation.");
