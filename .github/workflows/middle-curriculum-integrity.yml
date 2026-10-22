@@ -8,6 +8,8 @@ on:
       - 'grades/grade-08/**'
       - 'tests/test_middle_curriculum_integrity.py'
       - 'tests/test_grade8_week_plan_links.py'
+      - 'tests/test_middle_video_release.py'
+      - 'resources/video-study/**'
       - '.github/workflows/middle-curriculum-integrity.yml'
   workflow_dispatch:
 
@@ -24,3 +26,5 @@ jobs:
         run: python3 tests/test_middle_curriculum_integrity.py
       - name: Check restored Grade 8 week 13 and 14 navigation
         run: python3 tests/test_grade8_week_plan_links.py
+      - name: Reject unapproved instructional video embeds
+        run: python3 tests/test_middle_video_release.py
