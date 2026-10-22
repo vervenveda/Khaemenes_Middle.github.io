@@ -30,6 +30,11 @@ const menus=[
 ["Academy mathematics resources","https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/"],
 ["Middle School electives",BASE+"grades/electives/"],
 ["15-minute Breakaway",BASE+"breakaway/"]]],
+["Video Topics",[
+["Video study queue by grade",BASE+"resources/video-study/"+(grade?"#grade-"+grade:"")],
+["Grade 6 candidate videos",BASE+"resources/video-study/#grade-06"],
+["Grade 7 candidate videos",BASE+"resources/video-study/#grade-07"],
+["Grade 8 candidate videos",BASE+"resources/video-study/#grade-08"]]],
 ["Lesson Support",[
 ...(grade&&week?[["Current week's lessons",gradeRoot+"weekly-plans/week-"+week+".html"],["Practice and printable",gradeRoot+"printables/week-"+week+"-packet.html"],["Official weekly assessment",gradeRoot+"assessments/week-"+week+"-assessment.html"]]:[]),
 ["Breakaway and brain breaks",BASE+"breakaway/"],
