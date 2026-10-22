@@ -38,6 +38,19 @@ for grade in ("06", "07", "08"):
         expected = [(subject, ww) for subject in SUBJECTS]
         if hrefs != expected:
             report(STRUCTURAL, f"SUBJECT LINKS grade-{grade}/week-{ww}: found {hrefs!r}")
+        # Also reject a mislabeled link: a structurally valid href is not enough.
+        rows = re.findall(r"<tr><td>(.*?)</td><td>(.*?)</td><td>(.*?)</td><td><a href=['\"]\.\./subjects/([^/'\"]+)/week-\\d\\d\.html['\"]>Open</a></td></tr>", html, re.S)
+        expected_labels = ("Language Arts", "Mathematics", "Science", "Social Studies",
+                           "World Languages", "Arts", "Health", "Technology", "Integrated")
+        if len(rows) != 9:
+            report(STRUCTURAL, f"SUBJECT ROWS grade-{grade}/week-{ww}: found {len(rows)}")
+        else:
+            for row, expected_subject, label in zip(rows, SUBJECTS, expected_labels):
+                name, focus, objective, slug = row
+                if slug != expected_subject or label.lower() not in unescape(name).lower():
+                    report(STRUCTURAL, f"MISLABELED SUBJECT grade-{grade}/week-{ww}: {name} -> {slug}")
+                if not unescape(focus).strip() or not unescape(objective).strip():
+                    report(STRUCTURAL, f"EMPTY SUBJECT DESCRIPTION grade-{grade}/week-{ww}: {slug}")
         for subject in SUBJECTS:
             lesson = base / "subjects" / subject / f"week-{ww}.html"
             if not lesson.is_file():
