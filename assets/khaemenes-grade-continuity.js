@@ -93,14 +93,14 @@
       return f;
     }
     if(s.status==="placement-mismatch")return f;
-    return readJSON(LEGACY_KEY,f);
+    return f;
   }
 
   function writeState(state,source="middle-grade-runtime"){
     const s=status();
     const k=scopedKey();
     if(s.status==="placement-mismatch")return false;
-    if(s.status==="no-active-learner")return writeJSON(LEGACY_KEY,state);
+    if(s.status==="no-active-learner")return false;
     if(s.status!=="ready"||!k)return false;
     const ok=writeJSON(k,{format:"khaemenes-course-state-v1",learnerId:s.learner.learnerId,courseId:COURSE_ID,source,updatedAt:new Date().toISOString(),state});
     if(ok)global.dispatchEvent(new CustomEvent("khaemenes-middle-grade-continuity-synced",{detail:{learnerId:s.learner.learnerId,grade:EXPECTED_GRADE,courseKey:k}}));
@@ -111,9 +111,7 @@
     const s=status();
     const k=scopedKey();
     if(s.status==="placement-mismatch")return false;
-    if(s.status==="no-active-learner"){
-      try{if(LEGACY_KEY)global.localStorage.removeItem(LEGACY_KEY);return true}catch{return false}
-    }
+    if(s.status==="no-active-learner")return false;
     if(s.status==="ready"&&k){
       try{global.localStorage.removeItem(k);return true}catch{return false}
     }
@@ -138,12 +136,7 @@
     ensureBreakaway();
     ensureNAIBBridge();
     const s=status();
-    if(s.status==="ready"){
-      const legacy=readJSON(LEGACY_KEY,null),k=scopedKey();
-      if(k&&legacy!==null&&readJSON(k,null)===null){
-        writeJSON(k,{format:"khaemenes-course-state-v1",learnerId:s.learner.learnerId,courseId:COURSE_ID,source:"legacy-middle-grade-migration",updatedAt:new Date().toISOString(),state:legacy});
-      }
-    }
+    // Legacy records remain untouched until an explicit, identity-verified import.
     global.dispatchEvent(new CustomEvent("khaemenes-middle-grade-continuity-ready",{detail:{...s,mentorContext:mentorContext()}}));
     return s;
   }
