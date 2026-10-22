@@ -49,6 +49,33 @@ expect(navigator.includes('if(status?.status==="placement-mismatch")return blank
 expect(!navigator.includes("localStorage.getItem(ctx.legacyKey)"),"Middle navigator must not load unowned legacy scores.");
 expect(navigator.includes("return blank();"),"Middle navigator must fail closed when continuity is unavailable.");
 
+// Two fictional learners sharing one browser: no implicit legacy ownership or data loss.
+{
+ const source=read("assets/khaemenes-grade-continuity.js");
+ let active=null;
+ const storage=new Map([["middle-legacy",{weekly:{"7":99}}]]);
+ const localStorage={getItem:k=>storage.has(k)?JSON.stringify(storage.get(k)):null,setItem:(k,v)=>storage.set(k,JSON.parse(v)),removeItem:k=>storage.delete(k)};
+ const window={KHAEMENES_GRADE_CONTEXT:{grade:"06",stage:"middle",courseId:"middle-grade-06",legacyKey:"middle-legacy"},localStorage,
+ KhaemenesFamilyRegistry:{getLearner:()=>active},dispatchEvent:()=>{},document:{readyState:"loading",addEventListener:()=>{}}};
+ vm.runInNewContext(source,{window,CustomEvent:function(){}},{timeout:1000});
+ const api=window.KhaemenesGradeContinuity;
+ const blank={weekly:{}};
+ expect(api.readState(blank)===blank,"Anonymous learner must not see unowned legacy results.");
+ expect(api.writeState({weekly:{"7":88}})===false,"Anonymous learner must not write shared legacy records.");
+ active={learnerId:"test-learner-a",grade:"06",stage:"middle"};
+ api.activate();
+ expect(api.readState(blank)===blank,"Learner A must not silently inherit legacy results.");
+ expect(api.writeState({weekly:{"7":85}})===true,"Learner A scoped record write failed.");
+ active={learnerId:"test-learner-b",grade:"06",stage:"middle"};
+ expect(api.readState(blank)===blank,"Learner B must not see learner A results.");
+ expect(api.writeState({weekly:{"7":62}})===true,"Learner B scoped record write failed.");
+ expect(api.readState(blank).weekly["7"]===62,"Learner B score missing.");
+ active={learnerId:"test-learner-a",grade:"06",stage:"middle"};
+ expect(api.readState(blank).weekly["7"]===85,"Learner A score changed after switching.");
+ active={learnerId:"test-learner-b",grade:"07",stage:"middle"};
+ expect(api.readState(blank)===blank,"Wrong-grade learner must not read Grade 6 scores.");
+ expect(storage.get("middle-legacy").weekly["7"]===99,"Legacy browser record must remain intact for reviewed recovery.");
+}
 let totalSubjectWeekRoutes=0;
 let totalCoreWeekRoutes=0;
 for(const grade of [6,7,8]){
