@@ -100,6 +100,12 @@ for(const [g,s,focus] of [["07","mathematics","circle circumference, area and de
  check((h.match(new RegExp("Focus:</strong> "+focus,"g"))||[]).length===5,file+" missing aligned daily focus");
  for(let d=1;d<=5;d++)check(h.includes("Week 09 Crosswalk Lab · Day "+d),file+" missing day "+d+" work");
 }
+// Grades 7–8 Weeks 10–12 math content accuracy and five-day progression.
+for(const [g,w,focus] of [["07","10","surface area, volume and geometric modeling"],["07","11","experimental probability and fair-game reasoning"],["07","12","statistical centers, variability and inference"],["08","10","volumes of cylinders, cones and spheres"],["08","11","bivariate data, scatterplots and linear models"],["08","12","probability, statistics and risk decisions"]]){
+ const p=`grades/grade-${g}/subjects/mathematics/week-${w}.html`,s=read(p);
+ check((s.match(new RegExp("Focus:</strong> "+focus,"g"))||[]).length===5,p+" missing five topic-specific focuses");
+ for(let d=1;d<=5;d++)check(s.includes("Week "+w+" Mathematical Depth Lab · Day "+d),p+" missing worked lab day "+d);
+}
 console.log(JSON.stringify({htmlPages:html.length,localReferences:refs,fragmentReferences:fragmentRefs,remoteReferences:remote,javascriptFiles:scripts.length,issues:errors.length},null,2));
 if(errors.length){console.error(errors.slice(0,80).join("\n"));process.exit(1)}
 console.log("PASS: Middle School forensic integrity and internal-link validation.");
