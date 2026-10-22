@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
     paths:
+      - index.html
+      - grades/grade-08/assets/styles.css
       - tools/test-middle-translator-browser.mjs
       - tools/validate-middle-translator-a11y.mjs
       - .github/workflows/middle-translator-a11y.yml
