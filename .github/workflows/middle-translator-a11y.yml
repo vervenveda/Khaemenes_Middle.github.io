@@ -1,0 +1,31 @@
+name: Middle School Translator Accessibility Smoke
+on:
+  push:
+    branches: [main]
+    paths:
+      - tools/test-middle-translator-browser.mjs
+      - tools/validate-middle-translator-a11y.mjs
+      - .github/workflows/middle-translator-a11y.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify canonical translator coverage
+        run: node tools/validate-middle-translator-a11y.mjs
+      - name: Install browser runner
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Test Arabic RTL, small screens and language persistence
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/middle-translator-server.log 2>&1 &
+          sleep 2
+          node tools/test-middle-translator-browser.mjs
