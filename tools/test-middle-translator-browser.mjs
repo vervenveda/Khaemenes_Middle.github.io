@@ -1,12 +1,12 @@
 import { chromium } from "playwright";
-import path from "node:path";
+
 const failures=[];
 const browser=await chromium.launch({headless:true,args:["--no-sandbox"]});
 const samples=["index.html","grades/grade-06/index.html","grades/grade-07/subjects/mathematics/week-10.html","grades/grade-08/assessments/week-12-assessment.html","grades/grade-06/printables/week-10-packet.html"];
 for(const rel of samples){
  const page=await browser.newPage({viewport:{width:255,height:740}});
  try{
-  await page.goto("file://"+path.join(process.cwd(),rel),{waitUntil:"domcontentloaded",timeout:25000});
+  await page.goto("http://127.0.0.1:8765/"+rel,{waitUntil:"domcontentloaded",timeout:25000});
   await page.waitForFunction(()=>!!window.VNVLanguage,{timeout:25000});
   const first=await page.evaluate(()=>({select:document.querySelectorAll("#vnv-language-select").length,langs:window.VNVLanguage.availableLanguages().length,initial:window.VNVLanguage.getLanguage()}));
   if(first.select!==1||first.langs!==13)failures.push(rel+" selector/count "+JSON.stringify(first));
