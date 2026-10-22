@@ -1,0 +1,26 @@
+name: Middle curriculum integrity
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'grades/grade-06/**'
+      - 'grades/grade-07/**'
+      - 'grades/grade-08/**'
+      - 'tests/test_middle_curriculum_integrity.py'
+      - 'tests/test_grade8_week_plan_links.py'
+      - '.github/workflows/middle-curriculum-integrity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run full grade 6–8 structural curriculum audit
+        run: python3 tests/test_middle_curriculum_integrity.py
+      - name: Check restored Grade 8 week 13 and 14 navigation
+        run: python3 tests/test_grade8_week_plan_links.py
