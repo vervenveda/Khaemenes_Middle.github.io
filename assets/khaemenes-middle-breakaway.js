@@ -133,6 +133,15 @@
   function recommend(){return inferActivity();}
 
   global.KhaemenesMiddleBreakaway=Object.freeze({version:VERSION,hub:HUB,activities,recommend,createButton,ensureNAIBBridge,ensureGrade6Alignment,ensureGrade7Alignment,ensureGrade8MathDepth});
-  const boot=()=>{ensureLearnerToolbar();ensureNAIBBridge();ensureGrade6Alignment();ensureGrade7Alignment();ensureGrade67MathDepth();ensureGrade8MathDepth();rewriteGrade8EvidenceLinks();createButton();};
+  function ensureLearningResources(){
+    if(!global.document||global.document.getElementById("khaeMiddleResourceToolbar")||
+       global.document.querySelector('script[data-khae-middle-resources]'))return;
+    const script=global.document.createElement("script");
+    script.src="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-middle-resource-toolbar.js";
+    script.dataset.khaeMiddleResources="1";
+    global.document.head.appendChild(script);
+  }
+
+  const boot=()=>{ensureLearningResources();ensureLearnerToolbar();ensureNAIBBridge();ensureGrade6Alignment();ensureGrade7Alignment();ensureGrade67MathDepth();ensureGrade8MathDepth();rewriteGrade8EvidenceLinks();createButton();};
   if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",boot,{once:true});else boot();
 })(window);
