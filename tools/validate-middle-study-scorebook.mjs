@@ -47,6 +47,9 @@ expect(scorebook.includes("recordedRows.filter(r=>r.score>=MIN).length"),"Master
 expect(scorebook.includes("mastered===36&&recordedRows.length===36"),"Completion snapshot must still require all 36 weekly records.");
 expect(scorebook.includes("mid>=MIN&&fin>=MIN&&portfolio&&transition"),"Completion snapshot must mirror Midterm, Final, portfolio, and Grade 8 transition gates without becoming authority.");
 
+expect(!scorebook.includes("localStorage.getItem(ctx.legacyKey)"),"Study Scorebook must not display unowned shared-device legacy progress.");
+expect(scorebook.includes("return blank();"),"Scorebook must fail closed without learner continuity.");
+
 for(const grade of [6,7,8]){
   const g=pad(grade),base=`grades/grade-${g}`;
   const data=gradeData(grade);
