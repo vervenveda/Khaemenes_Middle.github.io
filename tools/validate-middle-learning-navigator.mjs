@@ -45,6 +45,10 @@ for(const forbidden of ["localStorage.setItem(","localStorage.removeItem(","writ
 }
 expect(navigator.includes('if(status?.status==="placement-mismatch")return blank()'),"Placement mismatch must fail closed for learner score display.");
 
+// When a learner has not been verified, navigator must not reveal shared legacy results.
+expect(!navigator.includes("localStorage.getItem(ctx.legacyKey)"),"Middle navigator must not load unowned legacy scores.");
+expect(navigator.includes("return blank();"),"Middle navigator must fail closed when continuity is unavailable.");
+
 let totalSubjectWeekRoutes=0;
 let totalCoreWeekRoutes=0;
 for(const grade of [6,7,8]){
