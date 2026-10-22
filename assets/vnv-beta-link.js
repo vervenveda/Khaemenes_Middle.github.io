@@ -1,4 +1,4 @@
-/* Verve N Veda · Beta Program + Khaemenes learner rail widget · v1.7.3 */
+/* Verve N Veda · Beta Program + Khaemenes learner rail widget · v1.7.8 */
 (() => {
   "use strict";
 
@@ -19,6 +19,7 @@
   const LINGUISTICS_CONTINUATION_URL="https://vervenveda.com/Khaemenes_Linguistics.github.io/assets/khaemenes-linguistics-continuation.js";
   const ELEMENTARY_CONTINUATION_URL="https://vervenveda.com/Khaemenes_Elementary.github.io/assets/khaemenes-elementary-continuation-publisher.js";
   const MIDDLE_CONTINUATION_URL="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-middle-continuation-publisher.js";
+  const KHAEMENES_WORKSPACE_URL="https://vervenveda.com/assets/khaemenes-student-workspace-v2.js";
 
   const clean=(value,max)=>String(value??"").replace(/[\u0000-\u001f\u007f]/g,"").slice(0,max);
 
@@ -391,6 +392,13 @@
     }catch{}
   }
 
+  function ensureEducationWorkspace(){
+    try{
+      if(!educationProfileConfig())return;
+      loadOnce(KHAEMENES_WORKSPACE_URL,"khaemenes-student-workspace-v2");
+    }catch{}
+  }
+
   function ensureEducationContinuationPublisher(){
     try{
       const path=String(location.pathname||"").toLowerCase();
@@ -503,11 +511,11 @@
     observer.observe(document.documentElement,{childList:true,subtree:true});
   }
 
-  function start(){mount();mountHighStudentProfile();ensureEducationContinuationPublisher();ensureLinguisticsContinuation();bindVisibleFrames();enhanceBazaarLanding()}
+  function start(){mount();mountHighStudentProfile();ensureEducationWorkspace();ensureEducationContinuationPublisher();ensureLinguisticsContinuation();bindVisibleFrames();enhanceBazaarLanding()}
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start,{once:true});
   else start();
 
-  window.VNVBetaProgram=Object.freeze({version:"1.7.3",mount,source:safeSource,surface:safeSurface,href:betaHref,studentProfile:mountHighStudentProfile,educationProfile:educationProfileConfig});
+  window.VNVBetaProgram=Object.freeze({version:"1.7.8",mount,source:safeSource,surface:safeSurface,href:betaHref,studentProfile:mountHighStudentProfile,educationProfile:educationProfileConfig});
 })();
 
 
