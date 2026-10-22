@@ -53,10 +53,11 @@ def verify(week):
     urls = [href for _, href in rows]
     expected = [f"../subjects/{subject}/week-{week:02d}.html" for subject in SUBJECTS]
     assert urls == expected, f"{path}: wrong/misordered subject destinations: {urls}"
-    for (cells, href), subject in zip(rows, SUBJECTS):
+    labels = ["Language Arts","Mathematics","Science","Social Studies","World Languages","Arts","Health","Technology","Integrated"]
+    for (cells, href), subject, label in zip(rows, SUBJECTS, labels):
         assert len(cells) == 4, f"{path}: malformed subject row {subject}"
         assert cells[0] and cells[1] and cells[2], f"{path}: blank subject text {subject}"
-        assert subject.replace("-", " ") not in cells[0].lower() or cells[0], "invalid subject label"
+        assert label.lower() in cells[0].lower(), f"{path}: mismatched label for {subject}: {cells[0]}"
         target = (path.parent / href).resolve()
         assert target.is_file(), f"{path}: missing lesson file {href}"
     print(f"PASS Grade 8 Week {week:02d}: nine correctly ordered live local lesson paths")
