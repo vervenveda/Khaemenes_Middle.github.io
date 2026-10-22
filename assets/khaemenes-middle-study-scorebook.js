@@ -20,8 +20,8 @@
       const status=CONT?.status?.();
       if(status?.status==="placement-mismatch")return blank();
       if(CONT?.readState)return CONT.readState(blank())||blank();
-      if(status?.status==="ready")return blank();
-      return JSON.parse(localStorage.getItem(ctx.legacyKey)||"null")||blank();
+      // No verified learner continuity means no access to shared legacy progress.
+      return blank();
     }catch{return blank()}
   }
   function hasScore(state,week){
