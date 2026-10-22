@@ -1,0 +1,128 @@
+{
+  "schema": "khaemenes-middle-video-intake-v1",
+  "release_policy": {
+    "must_match_grade_subject_week_and_objective": true,
+    "require_factual_review": true,
+    "require_caption_or_transcript": true,
+    "require_offline_text_alternative": true,
+    "require_licensed_embed": true,
+    "require_no_commercials_playback_test": true,
+    "student_release_approved_default": false,
+    "disallow_embeds_without_approval": true
+  },
+  "established_source_candidates": [
+    {
+      "name": "Khan Academy",
+      "status": "referenced in Academy mathematics video-review work; Middle School source and embed not independently certified",
+      "commercial_free_verified": false
+    },
+    {
+      "name": "The Organic Chemistry Tutor",
+      "status": "referenced in Academy mathematics video-review planning; Middle School source and embed not independently certified",
+      "commercial_free_verified": false
+    },
+    {
+      "name": "Academy-owned original videos",
+      "status": "preferred when confirmed present, rights-cleared, captioned, and play-tested",
+      "commercial_free_verified": false
+    }
+  ],
+  "priority_lessons": [
+    {
+      "grade": "06",
+      "subject": "mathematics",
+      "week": 3,
+      "topic": "unit rates",
+      "video_url": null,
+      "embed_url": null,
+      "transcript_url": null,
+      "source_rights": "unverified",
+      "playback_ad_test": "not_run",
+      "student_release_approved": false
+    },
+    {
+      "grade": "06",
+      "subject": "science",
+      "week": 15,
+      "topic": "heat transfer and phase changes",
+      "video_url": null,
+      "embed_url": null,
+      "transcript_url": null,
+      "source_rights": "unverified",
+      "playback_ad_test": "not_run",
+      "student_release_approved": false
+    },
+    {
+      "grade": "07",
+      "subject": "mathematics",
+      "week": 11,
+      "topic": "probability and fair games",
+      "video_url": null,
+      "embed_url": null,
+      "transcript_url": null,
+      "source_rights": "unverified",
+      "playback_ad_test": "not_run",
+      "student_release_approved": false
+    },
+    {
+      "grade": "07",
+      "subject": "science",
+      "week": 12,
+      "topic": "sampling bias and variation",
+      "video_url": null,
+      "embed_url": null,
+      "transcript_url": null,
+      "source_rights": "unverified",
+      "playback_ad_test": "not_run",
+      "student_release_approved": false
+    },
+    {
+      "grade": "08",
+      "subject": "mathematics",
+      "week": 5,
+      "topic": "systems of equations",
+      "video_url": null,
+      "embed_url": null,
+      "transcript_url": null,
+      "source_rights": "unverified",
+      "playback_ad_test": "not_run",
+      "student_release_approved": false
+    },
+    {
+      "grade": "08",
+      "subject": "science",
+      "week": 13,
+      "topic": "axial tilt and seasons",
+      "video_url": null,
+      "embed_url": null,
+      "transcript_url": null,
+      "source_rights": "unverified",
+      "playback_ad_test": "not_run",
+      "student_release_approved": false
+    },
+    {
+      "grade": "08",
+      "subject": "science",
+      "week": 14,
+      "topic": "fossil evidence and geologic time",
+      "video_url": null,
+      "embed_url": null,
+      "transcript_url": null,
+      "source_rights": "unverified",
+      "playback_ad_test": "not_run",
+      "student_release_approved": false
+    },
+    {
+      "grade": "08",
+      "subject": "technology-design",
+      "week": 13,
+      "topic": "spreadsheet formulas and chart integrity",
+      "video_url": null,
+      "embed_url": null,
+      "transcript_url": null,
+      "source_rights": "unverified",
+      "playback_ad_test": "not_run",
+      "student_release_approved": false
+    }
+  ]
+}
