@@ -119,6 +119,19 @@ for(const g of ["07","08"])for(const w of ["10","11","12"]){
  for(const subject of ["Mathematics","Language Arts","Science"])check(s.includes("<strong>"+subject+":</strong>"),p+" missing "+subject+" companion");
  check(s.includes("Passing: 18/22 = 81.8%"),p+" original scoring description changed");
 }
+// Independent arithmetic validation for Weeks 10–12 applied mathematics/science models.
+{
+ const near=(actual,expected)=>Math.abs(actual-expected)<1e-9;
+ check(2*(2*3+2*4+3*4)===52,"Grade 7 Week 10 prism surface-area solution inaccurate");
+ check(2*3*4===24,"Grade 7 Week 10 prism-volume solution inaccurate");
+ check(16/4===4,"Grade 7 Week 11 fair four-outcome probability base");
+ check((2+4+6+8)/4===5,"Grade 7 Week 12 mean");
+ check(near(Math.PI*3**2*5,45*Math.PI),"Grade 8 Week 10 cylinder volume");
+ check(near(Math.PI*3**2*5/3,15*Math.PI),"Grade 8 Week 10 cone volume");
+ check(near(4/3*Math.PI*3**3,36*Math.PI),"Grade 8 Week 10 sphere volume");
+ check(2*4===8,"Grade 8 Week 11 linear model prediction");
+ check(5/20===1/4&&40*(1/4)===10,"Grade 8 Week 12 experimental rate and expected count");
+}
 console.log(JSON.stringify({htmlPages:html.length,localReferences:refs,fragmentReferences:fragmentRefs,remoteReferences:remote,javascriptFiles:scripts.length,issues:errors.length},null,2));
 if(errors.length){console.error(errors.slice(0,80).join("\n"));process.exit(1)}
 console.log("PASS: Middle School forensic integrity and internal-link validation.");
