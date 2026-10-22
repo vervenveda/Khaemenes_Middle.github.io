@@ -67,6 +67,14 @@
       .middle-score-cumulative{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}
       .middle-score-card{border:1px solid var(--line,#d8dbe3);border-radius:14px;padding:17px;background:var(--card,#fff)}
       @media(max-width:800px){.middle-score-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.middle-score-cumulative{grid-template-columns:1fr}}
+      @media(max-width:320px){
+        .middle-score-kpis{grid-template-columns:1fr}
+        .middle-score-table-wrap{overflow:visible}
+        .middle-score-table{min-width:0;table-layout:fixed;font-size:9px}
+        .middle-score-table th,.middle-score-table td{padding:4px;overflow-wrap:anywhere;word-break:normal}
+        .middle-score-table th{font-size:8px;letter-spacing:0;text-transform:none}
+        .middle-score-pill{display:block;padding:2px;font-size:8px;white-space:normal}
+      }
       @media print{.middle-study-scorebook .no-print{display:none!important}.middle-score-table-wrap{overflow:visible}.middle-score-table{min-width:0;font-size:10pt}}
     `;
     document.head.appendChild(style);
