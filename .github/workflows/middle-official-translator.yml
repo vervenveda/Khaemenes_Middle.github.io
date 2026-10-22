@@ -1,0 +1,38 @@
+name: Middle School Official Translator Coverage
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/rollout-official-page-translator.mjs
+      - .github/workflows/middle-official-translator.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: middle-official-translator
+  cancel-in-progress: false
+jobs:
+  rollout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Add official site-wide language selector to HTML pages
+        run: node scripts/rollout-official-page-translator.mjs --apply
+      - name: Verify every HTML page includes translator
+        run: node scripts/rollout-official-page-translator.mjs
+      - name: Commit HTML-only additions to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -u
+          if git diff --cached --quiet; then
+            echo "Translator already present throughout Middle School."
+          else
+            git commit -m "Install canonical Verve N Veda translator on Middle School HTML pages"
+            git push origin HEAD:main
+          fi
