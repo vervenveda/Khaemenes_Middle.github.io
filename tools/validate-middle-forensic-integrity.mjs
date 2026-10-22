@@ -112,6 +112,13 @@ for(const g of ["07","08"])for(const w of ["10","11","12"])for(const subject of 
  check((source.match(/<article class=["']lesson["']/g)||[]).length===5,filename+" needs five daily lessons");
  for(let day=1;day<=5;day++)check(source.includes("Week "+w+" Evidence Crosswalk · Day "+day),filename+" missing evidence day "+day);
 }
+// Grades 7–8 Week 10–12 assessment-to-instruction evidence crosswalk.
+for(const g of ["07","08"])for(const w of ["10","11","12"]){
+ const p=`grades/grade-${g}/assessments/week-${w}-assessment.html`,s=read(p);
+ check(s.includes('aria-label="Week '+w+' instructional evidence companion"'),p+" missing week-specific assessment guidance");
+ for(const subject of ["Mathematics","Language Arts","Science"])check(s.includes("<strong>"+subject+":</strong>"),p+" missing "+subject+" companion");
+ check(s.includes("Passing: 18/22 = 81.8%"),p+" original scoring description changed");
+}
 console.log(JSON.stringify({htmlPages:html.length,localReferences:refs,fragmentReferences:fragmentRefs,remoteReferences:remote,javascriptFiles:scripts.length,issues:errors.length},null,2));
 if(errors.length){console.error(errors.slice(0,80).join("\n"));process.exit(1)}
 console.log("PASS: Middle School forensic integrity and internal-link validation.");
