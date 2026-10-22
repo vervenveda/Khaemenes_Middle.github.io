@@ -82,6 +82,12 @@ check(!navigator.includes("localStorage.getItem(ctx.legacyKey)"),"Middle learnin
 const congruenceGuide=read("grades/grade-08/assessments/week-07-assessment.html");
 check(congruenceGuide.includes('aria-label="Week 07 congruence evidence guide"'),"Grade 8 missing weekly congruence evidence guide");
 check(congruenceGuide.includes("Passing: 18/22 = 81.8%"),"Grade 8 original assessment scoring changed");
+// Regression: explicit Week 7 cross-subject teaching must match the weekly theme.
+for(const [grade,subject,focus] of [["07","mathematics","solving equations and interpreting inequalities"],["07","language-arts","explaining algebraic reasoning through precise informational writing"],["08","science","analyzing symmetry and transformations in scientific models"],["08","language-arts","precise geometric explanations and evidence-based arguments"]]){
+ const filename=`grades/grade-${grade}/subjects/${subject}/week-07.html`,source=read(filename);
+ check((source.match(new RegExp("Focus:</strong> "+focus,"g"))||[]).length===5,filename+" requires five aligned objectives");
+ for(let day=1;day<=5;day++)check(source.includes("Week 07 Crosswalk Lab · Day "+day),filename+" missing crosswalk lesson "+day);
+}
 console.log(JSON.stringify({htmlPages:html.length,localReferences:refs,fragmentReferences:fragmentRefs,remoteReferences:remote,javascriptFiles:scripts.length,issues:errors.length},null,2));
 if(errors.length){console.error(errors.slice(0,80).join("\n"));process.exit(1)}
 console.log("PASS: Middle School forensic integrity and internal-link validation.");
