@@ -88,6 +88,12 @@ for(const [grade,subject,focus] of [["07","mathematics","solving equations and i
  check((source.match(new RegExp("Focus:</strong> "+focus,"g"))||[]).length===5,filename+" requires five aligned objectives");
  for(let day=1;day<=5;day++)check(source.includes("Week 07 Crosswalk Lab · Day "+day),filename+" missing crosswalk lesson "+day);
 }
+// Grade 7–8 Week 8 curriculum-to-assessment thematic coverage.
+for(const [grade,subject,focus] of [["07","mathematics","scale drawings, proportional lengths and geometric design"],["07","language-arts","interpreting design specifications and writing precise scale instructions"],["07","science","scale models, measurements and engineering limitations"],["08","mathematics","dilations, similarity and scale-factor reasoning"],["08","language-arts","evidence-based explanations of similarity and scale"],["08","science","scale, scientific diagrams and limits of enlarged models"]]){
+ const p=`grades/grade-${grade}/subjects/${subject}/week-08.html`,h=read(p);
+ check((h.match(new RegExp("Focus:</strong> "+focus,"g"))||[]).length===5,p+" needs five subject-aligned focuses");
+ for(let d=1;d<=5;d++)check(h.includes("Week 08 Crosswalk Lab · Day "+d),p+" missing day "+d+" worked studio");
+}
 console.log(JSON.stringify({htmlPages:html.length,localReferences:refs,fragmentReferences:fragmentRefs,remoteReferences:remote,javascriptFiles:scripts.length,issues:errors.length},null,2));
 if(errors.length){console.error(errors.slice(0,80).join("\n"));process.exit(1)}
 console.log("PASS: Middle School forensic integrity and internal-link validation.");
