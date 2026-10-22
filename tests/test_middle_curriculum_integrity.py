@@ -39,7 +39,7 @@ for grade in ("06", "07", "08"):
         if hrefs != expected:
             report(STRUCTURAL, f"SUBJECT LINKS grade-{grade}/week-{ww}: found {hrefs!r}")
         # Also reject a mislabeled link: a structurally valid href is not enough.
-        rows = re.findall(r"<tr><td>(.*?)</td><td>(.*?)</td><td>(.*?)</td><td><a href=['\"]\.\./subjects/([^/'\"]+)/week-\\d\\d\.html['\"]>Open</a></td></tr>", html, re.S)
+        rows = re.findall(r"<tr><td>(.*?)</td><td>(.*?)</td><td>(.*?)</td><td><a href=['\"]\.\./subjects/([^/'\"]+)/week-\d\d\.html['\"]>Open</a></td></tr>", html, re.S)
         expected_labels = ("Language Arts", "Mathematics", "Science", "Social Studies",
                            "World Languages", "Arts", "Health", "Technology", "Integrated")
         if len(rows) != 9:
