@@ -8,6 +8,14 @@ assert(html.includes('font-size:12px!important'),"Toolbar controls need readable
 assert(!html.includes('font-size:7px!important'),"Seven-pixel toolbar text must not return");
 assert(html.includes('flex-wrap:wrap;justify-content:center'),"Toolbar must wrap on narrow screens");
 assert(html.includes('min-height:44px!important;height:auto!important'),"Toolbar buttons must have accessible height");
+// Accessibility audit: learners need explicit steps, source-availability guidance, and distinguishing feedback.
+assert(html.includes("Read the six term cards first."),"Independent practice instructions must describe the steps");
+assert(html.includes('id="independentHelp"'),"Independent-study help must be available");
+assert(html.includes("do not invent evidence"),"Unavailable source instructions must not encourage fabrication");
+assert(html.includes('aria-label","Application exercise for '),"Application tasks need clear accessible labels");
+assert(html.includes('aria-describedby","independentHelp"'),"Quiz questions must reference study support");
+assert(html.includes('first.focus()'),"Incomplete submissions must focus the missing answer");
+assert(html.includes('Your selection describes'),"Incorrect feedback must distinguish the learner's choice");
 const learningBridge=fs.readFileSync(path.join(root,"assets/khaemenes-middle-learning-context.js"),"utf8");
 assert(learningBridge.includes("installVocabularyEntrance"),"Shared lesson bridge must link to vocabulary practice");
 assert(learningBridge.includes("khaemenesVocabularyStudioEntrance"),"Lesson entrance must be idempotent");
