@@ -44,4 +44,6 @@ function newSet(){const bank=banks[grade.value],target=$("questions");quiz=shuff
 $("check").addEventListener("click",()=>{let score=0;for(let i=0;i<quiz.length;i++){let v=document.querySelector('input[name="q'+i+'"]:checked');if(!v){$("feedback").textContent="Please answer all six questions before checking.";return}if(v.value===quiz[i][0])score++}document.querySelectorAll('#questions input').forEach(i=>i.disabled=true);$("check").disabled=true;let pct=Math.round(score/quiz.length*100);$("feedback").textContent=score+" of 6 correct · "+pct+"%. "+(pct>=80?"Practice target reached.":"Review the cards, then try a new practice set.")+" No official grades were changed."});
 $("retry").addEventListener("click",newSet);grade.addEventListener("change",draw);draw();
 })();
-</script></body></html>
+</script>
+<script src="/assets/vnv-beta-link.js" defer></script>
+</body></html>
