@@ -35,7 +35,7 @@ assert(html.includes('misconceptionCoaching[grade.value+":"+Number(week.value)+"
 assert(html.includes('key=[correct,chosen].sort('),"Confused terms must match in either direction");
 assert(html.includes('Why they differ: '),"Dialog must explain the conceptual distinction");
 assert(html.includes('else body.append(intro,first,second,application)'),"Other pairs must retain informative generic feedback");
-for(const key of ["6:5:sequence|transition","6:22:condensation|evaporation","7:7:equation|inequality","7:18:structure|function","8:7:reflection|translation","8:23:genotype|phenotype","8:26:counterargument|grievance"]){
+for(const key of ["6:5:sequence|transition","6:22:condensation|evaporation","7:7:equation|inequality","7:18:function|structure","8:7:reflection|translation","8:23:genotype|phenotype","8:26:counterargument|grievance"]){
  assert(html.includes('"'+key+'"'),"Missing authored misconception coaching "+key);
 }
 const learningBridge=fs.readFileSync(path.join(root,"assets/khaemenes-middle-learning-context.js"),"utf8");
