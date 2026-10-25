@@ -33,9 +33,9 @@ assert(html.includes('answer-explanation'),"Explanations must appear after submi
 assert(html.includes('quiz[i][2]'),"Application prompts must be available in formative feedback");
 assert(!/localStorage\.setItem|sessionStorage\.setItem/.test(html));
 const enriched=JSON.parse(fs.readFileSync(path.join(root,base,"grade-06-weeks-05-36.json"),"utf8"));
-for(const week of [5,6,7,8])for(const term of enriched.weeks[week]){
+for(const week of [5,6,7,8,9,10,11,12])for(const term of enriched.weeks[week]){
  assert(!term[2].includes("In this week's Language Arts work"),"Generic application prompt in Grade 6 Week "+week);
  assert(term[2].length>=75,"Expected substantive lesson-specific application in Grade 6 Week "+week+" "+term[0]);
 }
-console.log("PASS Grade 6 Weeks 05–08: 24 lesson-grounded application prompts");
+console.log("PASS Grade 6 Weeks 05–12: 48 lesson-grounded application prompts");
 console.log("PASS middle school 3-grade vocabulary static regression: "+total+" additional placements; browser certification outstanding");
