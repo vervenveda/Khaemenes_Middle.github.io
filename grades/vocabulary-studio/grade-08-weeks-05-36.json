@@ -138,128 +138,128 @@
       [
         "Pythagorean theorem",
         "In a right triangle, the sum of the squares of the legs equals the square of the hypotenuse.",
-        "In Grade 8 Week 09 Language Arts, support an explanation of “Pythagorean theorem” using a source, model, or example."
+        "Use the Week 09 fictional right triangle with legs 6 m and 8 m to calculate the hypotenuse using 6²+8²=c². Explain why the resulting 10 m represents straight-line separation rather than distance along both legs."
       ],
       [
         "hypotenuse",
         "The side opposite the right angle in a right triangle.",
-        "In Grade 8 Week 09 Language Arts, support an explanation of “hypotenuse” using a source, model, or example."
+        "Label the hypotenuse in a Week 09 right triangle with sides 5, 12, and 13 units. Justify its location relative to the right angle, then verify its length using the square relationship."
       ],
       [
         "right triangle",
         "A triangle containing one ninety-degree angle.",
-        "In Grade 8 Week 09 Language Arts, support an explanation of “right triangle” using a source, model, or example."
+        "Sketch a Week 09 triangle with one 90-degree angle and legs 9 cm and 12 cm. Explain which features make it a right triangle and how the diagram supports the calculation of its missing side."
       ],
       [
         "distance",
         "The amount of separation between positions.",
-        "In Grade 8 Week 09 Language Arts, support an explanation of “distance” using a source, model, or example."
+        "On a fictional Week 09 coordinate map, compare walking 3 blocks east and 4 north with the direct distance between endpoints. Compute 5 blocks assuming perpendicular equal-size blocks and name the assumption."
       ],
       [
         "proof",
         "A reasoned demonstration that a mathematical statement follows from accepted facts.",
-        "In Grade 8 Week 09 Language Arts, support an explanation of “proof” using a source, model, or example."
+        "Give a Week 09 area-based explanation of why the square on a right triangle's hypotenuse matches the combined areas of squares on its legs. Use a 3–4–5 example while distinguishing illustration from general proof."
       ],
       [
         "counterexample",
         "An example showing that a general claim is false.",
-        "In Grade 8 Week 09 Language Arts, support an explanation of “counterexample” using a source, model, or example."
+        "Test the false Week 09 claim 'all triangles with sides 3, 4, and 6 are right triangles' by computing 3²+4² and 6². Explain why this counterexample disproves the proposed generalization."
       ]
     ],
     "10": [
       [
         "cylinder",
         "A solid with two parallel congruent circular bases joined by a curved surface.",
-        "In Grade 8 Week 10 Language Arts, support an explanation of “cylinder” using a source, model, or example."
+        "Draw a Week 10 cylinder with radius 3 cm and height 8 cm. Label its two circular bases and calculate volume as π×3²×8=72π cm³, explaining why the height is perpendicular to the bases."
       ],
       [
         "cone",
         "A solid tapering from a circular base to a point.",
-        "In Grade 8 Week 10 Language Arts, support an explanation of “cone” using a source, model, or example."
+        "Compare a Week 10 cone and cylinder with the same base radius 2 cm and height 9 cm. Calculate their volumes and explain why the cone has one-third the cylinder's volume under those assumptions."
       ],
       [
         "sphere",
         "The set of three-dimensional points equally distant from a center.",
-        "In Grade 8 Week 10 Language Arts, support an explanation of “sphere” using a source, model, or example."
+        "Use Week 10 radius 3 cm to evaluate the sphere formula V=4πr³/3. Give 36π cm³ and explain why diameter must be halved if the specification instead supplies diameter 6 cm."
       ],
       [
         "volume",
         "The space occupied by a three-dimensional object.",
-        "In Grade 8 Week 10 Language Arts, support an explanation of “volume” using a source, model, or example."
+        "Choose a Week 10 fictional package and express its modeled internal volume in cubic centimeters. Explain why this geometric result differs from a real container's usable space if walls and irregular features are ignored."
       ],
       [
         "capacity",
         "The amount a container can hold.",
-        "In Grade 8 Week 10 Language Arts, support an explanation of “capacity” using a source, model, or example."
+        "Compare Week 10 containers specified as holding 1 L with a mathematical volume given in cm³. State the conversion 1 L=1000 cm³ and describe why usable capacity may be below a container's outer volume."
       ],
       [
         "technical evidence",
         "Measurements or documented specifications supporting a technical claim.",
-        "In Grade 8 Week 10 Language Arts, support an explanation of “technical evidence” using a source, model, or example."
+        "Review a fictional Week 10 tank specification that reports radius 4 cm but omits height. Explain why that technical evidence is insufficient for cylinder volume, and list the missing measurements and units."
       ]
     ],
     "11": [
       [
         "bivariate data",
         "Paired observations of two variables.",
-        "In Grade 8 Week 11 Language Arts, support an explanation of “bivariate data” using a source, model, or example."
+        "Create a clearly fictional Week 11 set of four paired observations (study minutes, quiz score). Explain why each pair belongs to one learner and why separate unpaired lists cannot establish a bivariate relationship."
       ],
       [
         "scatter plot",
         "A graph showing paired numerical values as points.",
-        "In Grade 8 Week 11 Language Arts, support an explanation of “scatter plot” using a source, model, or example."
+        "Plot the fictional Week 11 pairs (1,2), (2,4), (3,6), and (4,8) on labeled axes. Describe their pattern, units, and limitations before inferring anything about real learners."
       ],
       [
         "linear model",
         "An equation or line used to represent a relationship between variables.",
-        "In Grade 8 Week 11 Language Arts, support an explanation of “linear model” using a source, model, or example."
+        "Use the Week 11 fictional pairs (1,2), (2,4), (3,6) to propose y=2x as a linear model. Check all points, explain slope and intercept, and avoid claiming that every dataset follows the same model."
       ],
       [
         "association",
         "A pattern indicating variables are related.",
-        "In Grade 8 Week 11 Language Arts, support an explanation of “association” using a source, model, or example."
+        "Describe whether the fictional Week 11 points (1,2), (2,4), (3,6), and (4,8) have positive association. Clarify that a strong pattern does not identify the underlying cause."
       ],
       [
         "outlier",
         "A data point notably different from the overall pattern.",
-        "In Grade 8 Week 11 Language Arts, support an explanation of “outlier” using a source, model, or example."
+        "Add the fictional Week 11 observation (4,1) to an otherwise increasing dataset. Identify it as a potential outlier, discuss possible recording error or genuine variation, and explain why automatic deletion is inappropriate."
       ],
       [
         "correlation",
         "A relationship between patterns without necessarily proving cause.",
-        "In Grade 8 Week 11 Language Arts, support an explanation of “correlation” using a source, model, or example."
+        "Evaluate the Week 11 fictional assertion that extra study minutes caused higher scores because a scatter plot slopes upward. Identify at least two confounding factors and a better test of causation."
       ]
     ],
     "12": [
       [
         "probability",
         "A measure of how likely an event is.",
-        "In Grade 8 Week 12 Language Arts, support an explanation of “probability” using a source, model, or example."
+        "Describe a fair six-sided die for Week 12 and calculate the theoretical probability of rolling an even number as 3/6. State the sample space and explain why ten trials need not give exactly five even results."
       ],
       [
         "risk",
         "The chance and possible consequences of an unwanted outcome.",
-        "In Grade 8 Week 12 Language Arts, support an explanation of “risk” using a source, model, or example."
+        "Evaluate a fictional Week 12 statement that a 10% chance of flooding is 'safe.' Distinguish probability from severity, exposure, and preparedness, and specify the time period and location required to interpret the figure."
       ],
       [
         "statistical inference",
         "A conclusion about a wider group drawn from sample data.",
-        "In Grade 8 Week 12 Language Arts, support an explanation of “statistical inference” using a source, model, or example."
+        "Review Week 12 fictional survey results from 20 volunteers claiming all eighth graders prefer one activity. Explain why convenience sampling limits inference and what a better sampling plan would require."
       ],
       [
         "sample",
         "A subset of a larger population selected for study.",
-        "In Grade 8 Week 12 Language Arts, support an explanation of “sample” using a source, model, or example."
+        "Identify the target population and sample in a hypothetical Week 12 cafeteria survey of 30 students. Discuss how recruitment and sample size affect whether results generalize beyond those respondents."
       ],
       [
         "uncertainty",
         "Limits on how confidently evidence supports a conclusion.",
-        "In Grade 8 Week 12 Language Arts, support an explanation of “uncertainty” using a source, model, or example."
+        "Rewrite the Week 12 statement 'the treatment definitely works' based only on a hypothetical small study. Name sampling, measurement, and possible confounding uncertainties without inventing medical outcomes."
       ],
       [
         "qualification",
         "A condition limiting or refining a claim.",
-        "In Grade 8 Week 12 Language Arts, support an explanation of “qualification” using a source, model, or example."
+        "Qualify a Week 12 conclusion based on 12 fictional coin flips. Specify the observed count, distinguish it from the theoretical 50% probability, and explain why more trials can improve an estimate without guaranteeing it."
       ]
     ],
     "13": [
