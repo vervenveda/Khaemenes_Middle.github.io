@@ -64,7 +64,11 @@ const grade7Contexts={
  29:["Renaissance","Reformation","humanism","central idea","comparison","historical context"],
  30:["Scientific Revolution","Enlightenment","empiricism","hypothesis","point of view","evidence"],
  31:["economics","labor","global system","claim","counterargument","data"],
- 32:["diplomacy","cultural context","translation","audience","credibility","interpretation"]
+ 32:["diplomacy","cultural context","translation","audience","credibility","interpretation"],
+ 33:["algorithm","data ethics","bias","transparency","research writing","attribution"],
+ 34:["capstone","inquiry","annotated source","proposal","argument","revision"],
+ 35:["oral defense","thesis","counterquestion","delivery","evidence","reflection"],
+ 36:["portfolio","readiness","source evaluation","argument","active listening","transfer"]
 };
 for(const [week,expected] of Object.entries(grade7Contexts)){
  const terms=grade7.weeks[week];
@@ -72,10 +76,10 @@ for(const [week,expected] of Object.entries(grade7Contexts)){
  for(const [i,term] of terms.entries()){
   assert(term[2].length>=120,"Week "+week+" term "+term[0]+" requires substantive context");
   assert(!/^In Grade 7 Week/.test(term[2]),"Generic prompt in Week "+week);
-  assert(/Week (13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32)/.test(term[2]),"Week-specific context absent: "+week);
+  assert(/Week (13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36)/.test(term[2]),"Week-specific context absent: "+week);
   assert(!/invent (an external|a source)|fabricat(e|ed) (a citation|citations)/i.test(term[2]),"Avoid instructing fabricated evidence");
  }
 }
 assert(grade7.practiceOnly===true,"Vocabulary remains formative only");
-console.log("PASS Grade 7 Weeks 13–32: 120 contextual practice prompts; mastery separate");
+console.log("PASS Grade 7 Weeks 13–36: 144 contextual practice prompts; mastery separate");
 console.log("PASS middle school 3-grade vocabulary static regression: "+total+" additional placements; browser certification outstanding");
