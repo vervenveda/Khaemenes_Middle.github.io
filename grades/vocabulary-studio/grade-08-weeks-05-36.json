@@ -10,128 +10,128 @@
       [
         "system of equations",
         "Two or more equations considered together to find common solutions.",
-        "In Grade 8 Week 05 Language Arts, support an explanation of “system of equations” using a source, model, or example."
+        "Model a Grade 8 Week 05 fictional ticket sale using x+y=12 and 2x+5y=42, where x and y represent quantities of two ticket types. Explain what a common solution means and verify it in both equations, with units."
       ],
       [
         "competing explanation",
         "An alternative account offered to explain the same evidence.",
-        "In Grade 8 Week 05 Language Arts, support an explanation of “competing explanation” using a source, model, or example."
+        "Compare two Week 05 fictional explanations for the ticket totals: one asserts 6 of each type, another solves the simultaneous conditions. Test both claims against x+y=12 and 2x+5y=42, identifying the failure rather than choosing the more confident speaker."
       ],
       [
         "source credibility",
         "The trustworthiness of a source for a specific question.",
-        "In Grade 8 Week 05 Language Arts, support an explanation of “source credibility” using a source, model, or example."
+        "Evaluate a Week 05 worked solution posted without stated ticket prices or original conditions. Explain why its source is insufficient for checking the claim and identify what source details a credible mathematical explanation must include."
       ],
       [
         "solution",
         "A value or response satisfying the stated conditions.",
-        "In Grade 8 Week 05 Language Arts, support an explanation of “solution” using a source, model, or example."
+        "Solve the Week 05 fictional equations x+y=12 and 2x+5y=42 and substitute the proposed ordered pair into each. State what the solution represents and distinguish algebraic validity from whether the scenario's assumptions are realistic."
       ],
       [
         "substitution",
         "Replacing a variable with an equivalent value or expression.",
-        "In Grade 8 Week 05 Language Arts, support an explanation of “substitution” using a source, model, or example."
+        "For the Week 05 system x+y=12 and 2x+5y=42, express x=12−y and substitute into the second equation. Show every algebraic step, then check the derived quantities against the original conditions."
       ],
       [
         "justification",
         "An explanation showing why evidence supports a conclusion.",
-        "In Grade 8 Week 05 Language Arts, support an explanation of “justification” using a source, model, or example."
+        "Write a Week 05 justification showing why a proposed pair solves both ticket equations. Explain one way an incorrect pair could satisfy only one equation and why that is not a solution to the system."
       ]
     ],
     "6": [
       [
         "exponent",
         "A number indicating how many times a base is used as a factor.",
-        "In Grade 8 Week 06 Language Arts, support an explanation of “exponent” using a source, model, or example."
+        "In the Week 06 scientific-notation lesson, expand 10⁴ and 10⁻³ into ordinary decimal values. Explain how exponent signs affect the quantity and correct the misconception that a negative exponent means a negative number."
       ],
       [
         "scientific notation",
         "A way to write very large or small numbers as a value times a power of ten.",
-        "In Grade 8 Week 06 Language Arts, support an explanation of “scientific notation” using a source, model, or example."
+        "Convert the fictional Week 06 measurements 4,500,000 m and 0.00032 m into scientific notation. Identify the coefficient and exponent and explain why the exponent alone is not a measurement unit."
       ],
       [
         "magnitude",
         "The size or extent of a quantity.",
-        "In Grade 8 Week 06 Language Arts, support an explanation of “magnitude” using a source, model, or example."
+        "Compare Week 06 quantities 3×10⁵ and 7×10³ in the same units. Explain the difference in magnitude using powers of ten and note why comparing just the coefficients gives the wrong order."
       ],
       [
         "research synthesis",
         "Integrating multiple credible sources into a reasoned account.",
-        "In Grade 8 Week 06 Language Arts, support an explanation of “research synthesis” using a source, model, or example."
+        "Prepare a Week 06 research synthesis comparing two provided explanations of a very large or small scientific measurement. State the shared claim, attribute each actual source, and note uncertainty without fabricating observations."
       ],
       [
         "precision",
         "Exactness in language or measurement.",
-        "In Grade 8 Week 06 Language Arts, support an explanation of “precision” using a source, model, or example."
+        "Revise a Week 06 report that states 'the object is very small' to give a value, unit, and appropriate significant digits from a clearly fictional measurement. Explain why extra unsupported decimal places imply false precision."
       ],
       [
         "paraphrase",
         "A restatement in one's own words that preserves meaning.",
-        "In Grade 8 Week 06 Language Arts, support an explanation of “paraphrase” using a source, model, or example."
+        "Paraphrase a Week 06 Academy explanation of scientific notation using new wording while preserving 3.2×10⁻⁴ as a mathematically equivalent quantity. Name the Academy source and explain the difference between paraphrase and copying."
       ]
     ],
     "7": [
       [
         "transformation",
         "A change in position, orientation, or size of a figure.",
-        "In Grade 8 Week 07 Language Arts, support an explanation of “transformation” using a source, model, or example."
+        "Draw a Week 07 triangle with fictional vertices (1,1), (3,1), and (1,3). Translate every point by the vector (2,−1), list new coordinates, and explain why this geometric transformation preserves length."
       ],
       [
         "translation",
         "Rendering meaning from one language into another.",
-        "In Grade 8 Week 07 Language Arts, support an explanation of “translation” using a source, model, or example."
+        "Distinguish the Week 07 geometric operation 'translation' from translating a sentence between languages. Use a precise mathematical example moving a point by (+3,+2) and explain why the two meanings must not be confused."
       ],
       [
         "reflection",
         "Thoughtful consideration of learning and improvement.",
-        "In Grade 8 Week 07 Language Arts, support an explanation of “reflection” using a source, model, or example."
+        "Reflect the Week 07 point (2,−3) across the x-axis and state the resulting coordinates. Then write a reflection on your reasoning, distinguishing geometric reflection from self-evaluation and checking the sign change."
       ],
       [
         "rotation",
         "A transformation turning a figure around a fixed point.",
-        "In Grade 8 Week 07 Language Arts, support an explanation of “rotation” using a source, model, or example."
+        "Rotate the Week 07 point (2,1) by 90 degrees counterclockwise about the origin. Provide the new coordinates and describe which distance stays unchanged, citing the transformation rule used."
       ],
       [
         "congruence",
         "A relationship between figures having the same shape and size.",
-        "In Grade 8 Week 07 Language Arts, support an explanation of “congruence” using a source, model, or example."
+        "Compare a Week 07 original triangle and its translated image using corresponding side lengths and angles. Explain why congruence requires matching shape and size, not just visually similar outlines."
       ],
       [
         "justification",
         "An explanation showing why evidence supports a conclusion.",
-        "In Grade 8 Week 07 Language Arts, support an explanation of “justification” using a source, model, or example."
+        "Write a Week 07 justification that a translation followed by a rotation preserves congruence. Refer to distance and angle preservation, identify corresponding vertices, and state what a sketch alone cannot prove."
       ]
     ],
     "8": [
       [
         "dilation",
         "A transformation scaling distances from a center.",
-        "In Grade 8 Week 08 Language Arts, support an explanation of “dilation” using a source, model, or example."
+        "Apply a Week 08 dilation centered at the origin with scale factor 2 to the fictional point (3,−1). List its image and explain why distances from the center double while angles are preserved."
       ],
       [
         "similarity",
         "A relationship between figures with equal corresponding angles and proportional sides.",
-        "In Grade 8 Week 08 Language Arts, support an explanation of “similarity” using a source, model, or example."
+        "Compare two Week 08 triangles with side lengths (3,4,5) and (6,8,10). Explain why matching ratios support similarity while unequal corresponding lengths rule out congruence."
       ],
       [
         "scale factor",
         "A ratio relating corresponding lengths in similar figures.",
-        "In Grade 8 Week 08 Language Arts, support an explanation of “scale factor” using a source, model, or example."
+        "From Week 08 corresponding side lengths 4 cm and 10 cm, calculate the scale factor from the first figure to the second. Explain why reversing the direction produces a different factor."
       ],
       [
         "corresponding sides",
         "Sides occupying matching positions in related figures.",
-        "In Grade 8 Week 08 Language Arts, support an explanation of “corresponding sides” using a source, model, or example."
+        "Label corresponding sides on fictional Week 08 similar triangles ABC and DEF. Show how to match vertices in order and justify why mismatched side pairings can create an incorrect similarity claim."
       ],
       [
         "proportional reasoning",
         "Reasoning using equivalent ratios or multiplicative relationships.",
-        "In Grade 8 Week 08 Language Arts, support an explanation of “proportional reasoning” using a source, model, or example."
+        "Use the Week 08 ratios 2/3 and 6/9 to establish proportional side relationships. Explain the multiplicative reasoning, and distinguish a constant scale factor from adding a fixed number to each side."
       ],
       [
         "evidence",
         "Information supporting a claim.",
-        "In Grade 8 Week 08 Language Arts, support an explanation of “evidence” using a source, model, or example."
+        "Evaluate a fictional Week 08 student's claim that a drawing proves two shapes are similar because they look alike. Specify angle or proportional-side evidence needed, and state the limits of an unmeasured diagram."
       ]
     ],
     "9": [
