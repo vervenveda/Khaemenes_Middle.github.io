@@ -1,0 +1,19 @@
+name: Middle School Vocabulary Studio Regression
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'grades/vocabulary-studio/**'
+      - 'tests/middle-vocabulary-studio-regression.cjs'
+      - '.github/workflows/middle-vocabulary-studio-regression.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/middle-vocabulary-studio-regression.cjs
