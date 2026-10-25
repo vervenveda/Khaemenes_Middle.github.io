@@ -56,7 +56,11 @@ const grade7Contexts={
  21:["ecosystem","interdependence","human impact","point of view","environmental claim","corroboration"],
  22:["atom","matter","chemical change","claim","evidence","argument"],
  23:["energy","force","motion","reliability","correlation","causation"],
- 24:["plate tectonics","hazard","geological evidence","research question","citation","source reliability"]
+ 24:["plate tectonics","hazard","geological evidence","research question","citation","source reliability"],
+ 25:["weather","climate","data interpretation","precision","trend","qualification"],
+ 26:["feudalism","medieval source","hierarchy","historical context","narrative","perspective"],
+ 27:["Islamic Golden Age","knowledge network","scholarship","translation","historical evidence","discussion"],
+ 28:["trade network","cultural exchange","migration","primary source","corroboration","synthesis"]
 };
 for(const [week,expected] of Object.entries(grade7Contexts)){
  const terms=grade7.weeks[week];
@@ -64,10 +68,10 @@ for(const [week,expected] of Object.entries(grade7Contexts)){
  for(const [i,term] of terms.entries()){
   assert(term[2].length>=120,"Week "+week+" term "+term[0]+" requires substantive context");
   assert(!/^In Grade 7 Week/.test(term[2]),"Generic prompt in Week "+week);
-  assert(/Week (13|14|15|16|17|18|19|20|21|22|23|24)/.test(term[2]),"Week-specific context absent: "+week);
+  assert(/Week (13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28)/.test(term[2]),"Week-specific context absent: "+week);
   assert(!/invent (an external|a source)|fabricat(e|ed) (a citation|citations)/i.test(term[2]),"Avoid instructing fabricated evidence");
  }
 }
 assert(grade7.practiceOnly===true,"Vocabulary remains formative only");
-console.log("PASS Grade 7 Weeks 13–24: 72 contextual practice prompts; mastery separate");
+console.log("PASS Grade 7 Weeks 13–28: 96 contextual practice prompts; mastery separate");
 console.log("PASS middle school 3-grade vocabulary static regression: "+total+" additional placements; browser certification outstanding");
