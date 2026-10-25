@@ -3,6 +3,19 @@
 const fs=require("node:fs"),path=require("node:path"),assert=require("node:assert/strict");
 const root=path.resolve(__dirname,".."),base="grades/vocabulary-studio/";
 const html=fs.readFileSync(path.join(root,base,"index.html"),"utf8");
+const learningBridge=fs.readFileSync(path.join(root,"assets/khaemenes-middle-learning-context.js"),"utf8");
+assert(learningBridge.includes("installVocabularyEntrance"),"Shared lesson bridge must link to vocabulary practice");
+assert(learningBridge.includes("khaemenesVocabularyStudioEntrance"),"Lesson entrance must be idempotent");
+assert(learningBridge.includes('grade-"+'),"Lesson entrance must derive the current grade");
+assert(learningBridge.includes('week="+week'),"Lesson entrance must preserve the selected week");
+assert(learningBridge.includes("../../../../grades/vocabulary-studio/index.html?grade="),"Lesson link must target the shared Studio with grade and week");
+for(const grade of [6,7,8])for(const week of [1,5,16,36]){
+ const file=path.join(root,"grades","grade-0"+grade,"subjects","language-arts","week-"+String(week).padStart(2,"0")+".html");
+ const lesson=fs.readFileSync(file,"utf8");
+ assert(lesson.includes("khaemenes-middle-learning-context.js"),"Grade "+grade+" Week "+week+" missing shared link bridge");
+}
+console.log("PASS Language Arts lesson-to-Studio shared navigation: 12 representative pages and grade/week routes");
+
 let total=0;
 for(const grade of [6,7,8]){
  const file="grade-"+String(grade).padStart(2,"0")+"-weeks-05-36.json";
