@@ -1,0 +1,1034 @@
+{
+  "schema": "khaemenes-middle-vocabulary-v1",
+  "grade": 6,
+  "subject": "language-arts",
+  "status": "editorial-draft",
+  "practiceOnly": true,
+  "source": "grades/grade-06/subjects/language-arts/week-NN.html",
+  "weeks": {
+    "5": [
+      [
+        "procedure",
+        "An ordered set of steps used to accomplish a task.",
+        "In this week's Language Arts work, explain or demonstrate “procedure” using a specific example."
+      ],
+      [
+        "sequence",
+        "The order in which events or instructions occur.",
+        "In this week's Language Arts work, explain or demonstrate “sequence” using a specific example."
+      ],
+      [
+        "transition",
+        "Language linking stages, sentences, or ideas.",
+        "In this week's Language Arts work, explain or demonstrate “transition” using a specific example."
+      ],
+      [
+        "precision",
+        "Using exact words, measurements, and details.",
+        "In this week's Language Arts work, explain or demonstrate “precision” using a specific example."
+      ],
+      [
+        "model",
+        "A simplified representation used to explain something.",
+        "In this week's Language Arts work, explain or demonstrate “model” using a specific example."
+      ],
+      [
+        "instruction",
+        "A direction that tells someone what action to take.",
+        "In this week's Language Arts work, explain or demonstrate “instruction” using a specific example."
+      ]
+    ],
+    "6": [
+      [
+        "rational number",
+        "A number expressible as a ratio of two integers with a nonzero denominator.",
+        "In this week's Language Arts work, explain or demonstrate “rational number” using a specific example."
+      ],
+      [
+        "historical source",
+        "A record or object used as evidence about the past.",
+        "In this week's Language Arts work, explain or demonstrate “historical source” using a specific example."
+      ],
+      [
+        "comparison",
+        "An examination of similarities and differences.",
+        "In this week's Language Arts work, explain or demonstrate “comparison” using a specific example."
+      ],
+      [
+        "signed number",
+        "A number marked positive or negative, including zero.",
+        "In this week's Language Arts work, explain or demonstrate “signed number” using a specific example."
+      ],
+      [
+        "chronology",
+        "The order in which events happened.",
+        "In this week's Language Arts work, explain or demonstrate “chronology” using a specific example."
+      ],
+      [
+        "interpretation",
+        "An explanation of meaning supported by evidence.",
+        "In this week's Language Arts work, explain or demonstrate “interpretation” using a specific example."
+      ]
+    ],
+    "7": [
+      [
+        "coordinate",
+        "A number locating a point along an axis.",
+        "In this week's Language Arts work, explain or demonstrate “coordinate” using a specific example."
+      ],
+      [
+        "axis",
+        "A reference line used to locate positions on a graph.",
+        "In this week's Language Arts work, explain or demonstrate “axis” using a specific example."
+      ],
+      [
+        "spatial description",
+        "Words explaining where something is in relation to something else.",
+        "In this week's Language Arts work, explain or demonstrate “spatial description” using a specific example."
+      ],
+      [
+        "map key",
+        "A guide explaining symbols used on a map.",
+        "In this week's Language Arts work, explain or demonstrate “map key” using a specific example."
+      ],
+      [
+        "direction",
+        "An instruction identifying where to move or look.",
+        "In this week's Language Arts work, explain or demonstrate “direction” using a specific example."
+      ],
+      [
+        "ambiguity",
+        "Language or evidence that allows more than one interpretation.",
+        "In this week's Language Arts work, explain or demonstrate “ambiguity” using a specific example."
+      ]
+    ],
+    "8": [
+      [
+        "expression",
+        "A combination of numbers, variables, and operations without an equals sign.",
+        "In this week's Language Arts work, explain or demonstrate “expression” using a specific example."
+      ],
+      [
+        "variable",
+        "A symbol representing a quantity that can change or be unknown.",
+        "In this week's Language Arts work, explain or demonstrate “variable” using a specific example."
+      ],
+      [
+        "symbol",
+        "A sign representing an idea, quantity, or action.",
+        "In this week's Language Arts work, explain or demonstrate “symbol” using a specific example."
+      ],
+      [
+        "explanation",
+        "An account showing how or why something works.",
+        "In this week's Language Arts work, explain or demonstrate “explanation” using a specific example."
+      ],
+      [
+        "interpretation",
+        "An explanation of meaning supported by evidence.",
+        "In this week's Language Arts work, explain or demonstrate “interpretation” using a specific example."
+      ],
+      [
+        "precision",
+        "Using exact words, measurements, and details.",
+        "In this week's Language Arts work, explain or demonstrate “precision” using a specific example."
+      ]
+    ],
+    "9": [
+      [
+        "claim",
+        "A statement that requires appropriate supporting evidence.",
+        "In this week's Language Arts work, explain or demonstrate “claim” using a specific example."
+      ],
+      [
+        "counterexample",
+        "An example showing that a general claim is false.",
+        "In this week's Language Arts work, explain or demonstrate “counterexample” using a specific example."
+      ],
+      [
+        "reasoning",
+        "Logical steps connecting evidence to a conclusion.",
+        "In this week's Language Arts work, explain or demonstrate “reasoning” using a specific example."
+      ],
+      [
+        "balance",
+        "A fair consideration of relevant evidence and competing positions.",
+        "In this week's Language Arts work, explain or demonstrate “balance” using a specific example."
+      ],
+      [
+        "conclusion",
+        "A judgment reached through evidence or reasoning.",
+        "In this week's Language Arts work, explain or demonstrate “conclusion” using a specific example."
+      ],
+      [
+        "evidence",
+        "Information offered to support a claim.",
+        "In this week's Language Arts work, explain or demonstrate “evidence” using a specific example."
+      ]
+    ],
+    "10": [
+      [
+        "inequality",
+        "A mathematical statement that two quantities are not necessarily equal.",
+        "In this week's Language Arts work, explain or demonstrate “inequality” using a specific example."
+      ],
+      [
+        "condition",
+        "A requirement that must be met for a rule to apply.",
+        "In this week's Language Arts work, explain or demonstrate “condition” using a specific example."
+      ],
+      [
+        "strict inequality",
+        "A comparison using less than or greater than, excluding equality.",
+        "In this week's Language Arts work, explain or demonstrate “strict inequality” using a specific example."
+      ],
+      [
+        "inclusive inequality",
+        "A comparison allowing equality as well as more or less.",
+        "In this week's Language Arts work, explain or demonstrate “inclusive inequality” using a specific example."
+      ],
+      [
+        "qualification",
+        "A condition or limit added to make a statement more accurate.",
+        "In this week's Language Arts work, explain or demonstrate “qualification” using a specific example."
+      ],
+      [
+        "ambiguity",
+        "Language or evidence that allows more than one interpretation.",
+        "In this week's Language Arts work, explain or demonstrate “ambiguity” using a specific example."
+      ]
+    ],
+    "11": [
+      [
+        "statistical question",
+        "A question anticipating variability in the data collected.",
+        "In this week's Language Arts work, explain or demonstrate “statistical question” using a specific example."
+      ],
+      [
+        "distribution",
+        "The pattern showing how values are spread across data.",
+        "In this week's Language Arts work, explain or demonstrate “distribution” using a specific example."
+      ],
+      [
+        "data",
+        "Recorded information used for investigation.",
+        "In this week's Language Arts work, explain or demonstrate “data” using a specific example."
+      ],
+      [
+        "sample",
+        "A subset of a larger population selected for study.",
+        "In this week's Language Arts work, explain or demonstrate “sample” using a specific example."
+      ],
+      [
+        "summary",
+        "A concise account of the essential information.",
+        "In this week's Language Arts work, explain or demonstrate “summary” using a specific example."
+      ],
+      [
+        "qualification",
+        "A condition or limit added to make a statement more accurate.",
+        "In this week's Language Arts work, explain or demonstrate “qualification” using a specific example."
+      ]
+    ],
+    "12": [
+      [
+        "area",
+        "The amount of flat surface within a boundary.",
+        "In this week's Language Arts work, explain or demonstrate “area” using a specific example."
+      ],
+      [
+        "surface area",
+        "The combined areas of the outer faces of a three-dimensional solid.",
+        "In this week's Language Arts work, explain or demonstrate “surface area” using a specific example."
+      ],
+      [
+        "composite figure",
+        "A shape formed by joining simpler shapes.",
+        "In this week's Language Arts work, explain or demonstrate “composite figure” using a specific example."
+      ],
+      [
+        "net",
+        "A flat pattern that can fold into a three-dimensional solid.",
+        "In this week's Language Arts work, explain or demonstrate “net” using a specific example."
+      ],
+      [
+        "measurement",
+        "A numerical description of a quantity using units.",
+        "In this week's Language Arts work, explain or demonstrate “measurement” using a specific example."
+      ],
+      [
+        "justification",
+        "Reasons and evidence explaining why an answer is valid.",
+        "In this week's Language Arts work, explain or demonstrate “justification” using a specific example."
+      ]
+    ],
+    "13": [
+      [
+        "volume",
+        "The space occupied by a three-dimensional object.",
+        "In this week's Language Arts work, explain or demonstrate “volume” using a specific example."
+      ],
+      [
+        "capacity",
+        "The amount a container can hold.",
+        "In this week's Language Arts work, explain or demonstrate “capacity” using a specific example."
+      ],
+      [
+        "dimension",
+        "A measurable extent such as length, width, or height.",
+        "In this week's Language Arts work, explain or demonstrate “dimension” using a specific example."
+      ],
+      [
+        "solid model",
+        "A representation of an object with three dimensions.",
+        "In this week's Language Arts work, explain or demonstrate “solid model” using a specific example."
+      ],
+      [
+        "caption",
+        "Brief text explaining an image, chart, or diagram.",
+        "In this week's Language Arts work, explain or demonstrate “caption” using a specific example."
+      ],
+      [
+        "sequence",
+        "The order in which events or instructions occur.",
+        "In this week's Language Arts work, explain or demonstrate “sequence” using a specific example."
+      ]
+    ],
+    "14": [
+      [
+        "matter",
+        "Anything that has mass and occupies space.",
+        "In this week's Language Arts work, explain or demonstrate “matter” using a specific example."
+      ],
+      [
+        "particle model",
+        "A representation describing matter as tiny particles.",
+        "In this week's Language Arts work, explain or demonstrate “particle model” using a specific example."
+      ],
+      [
+        "property",
+        "An observable or measurable characteristic.",
+        "In this week's Language Arts work, explain or demonstrate “property” using a specific example."
+      ],
+      [
+        "observation",
+        "Information gathered through careful noticing or measurement.",
+        "In this week's Language Arts work, explain or demonstrate “observation” using a specific example."
+      ],
+      [
+        "cause",
+        "Something that contributes to making an event happen.",
+        "In this week's Language Arts work, explain or demonstrate “cause” using a specific example."
+      ],
+      [
+        "revision",
+        "A change made to improve the accuracy or quality of work.",
+        "In this week's Language Arts work, explain or demonstrate “revision” using a specific example."
+      ]
+    ],
+    "15": [
+      [
+        "thermal energy",
+        "Energy associated with the motions and interactions of particles.",
+        "In this week's Language Arts work, explain or demonstrate “thermal energy” using a specific example."
+      ],
+      [
+        "phase change",
+        "A transition between states of matter.",
+        "In this week's Language Arts work, explain or demonstrate “phase change” using a specific example."
+      ],
+      [
+        "temperature",
+        "A measurement related to the average kinetic energy of particles.",
+        "In this week's Language Arts work, explain or demonstrate “temperature” using a specific example."
+      ],
+      [
+        "graph",
+        "A visual representation of numerical relationships.",
+        "In this week's Language Arts work, explain or demonstrate “graph” using a specific example."
+      ],
+      [
+        "causation",
+        "A relationship in which one factor contributes to producing another.",
+        "In this week's Language Arts work, explain or demonstrate “causation” using a specific example."
+      ],
+      [
+        "claim-evidence-reasoning",
+        "An explanation linking a claim to evidence through scientific reasoning.",
+        "In this week's Language Arts work, explain or demonstrate “claim-evidence-reasoning” using a specific example."
+      ]
+    ],
+    "16": [
+      [
+        "force",
+        "A push or pull that can change motion.",
+        "In this week's Language Arts work, explain or demonstrate “force” using a specific example."
+      ],
+      [
+        "motion",
+        "A change in position over time.",
+        "In this week's Language Arts work, explain or demonstrate “motion” using a specific example."
+      ],
+      [
+        "variable",
+        "A symbol representing a quantity that can change or be unknown.",
+        "In this week's Language Arts work, explain or demonstrate “variable” using a specific example."
+      ],
+      [
+        "correlation",
+        "A relationship in which two measurements change together, without proving cause.",
+        "In this week's Language Arts work, explain or demonstrate “correlation” using a specific example."
+      ],
+      [
+        "causation",
+        "A relationship in which one factor contributes to producing another.",
+        "In this week's Language Arts work, explain or demonstrate “causation” using a specific example."
+      ],
+      [
+        "graph",
+        "A visual representation of numerical relationships.",
+        "In this week's Language Arts work, explain or demonstrate “graph” using a specific example."
+      ]
+    ],
+    "17": [
+      [
+        "portfolio",
+        "A purposeful collection of work documenting progress.",
+        "In this week's Language Arts work, explain or demonstrate “portfolio” using a specific example."
+      ],
+      [
+        "draft",
+        "An early version of writing that can be improved.",
+        "In this week's Language Arts work, explain or demonstrate “draft” using a specific example."
+      ],
+      [
+        "revision",
+        "A change made to improve the accuracy or quality of work.",
+        "In this week's Language Arts work, explain or demonstrate “revision” using a specific example."
+      ],
+      [
+        "synthesis",
+        "Combining ideas from sources into a larger understanding.",
+        "In this week's Language Arts work, explain or demonstrate “synthesis” using a specific example."
+      ],
+      [
+        "curation",
+        "Thoughtful selection and arrangement of materials.",
+        "In this week's Language Arts work, explain or demonstrate “curation” using a specific example."
+      ],
+      [
+        "reflection",
+        "Careful thought about learning, choices, and improvement.",
+        "In this week's Language Arts work, explain or demonstrate “reflection” using a specific example."
+      ]
+    ],
+    "18": [
+      [
+        "sound",
+        "Vibrations traveling through a medium and perceived by hearing.",
+        "In this week's Language Arts work, explain or demonstrate “sound” using a specific example."
+      ],
+      [
+        "wave",
+        "A disturbance that transfers energy.",
+        "In this week's Language Arts work, explain or demonstrate “wave” using a specific example."
+      ],
+      [
+        "communication",
+        "The exchange of information or meaning.",
+        "In this week's Language Arts work, explain or demonstrate “communication” using a specific example."
+      ],
+      [
+        "message",
+        "Information conveyed to an audience.",
+        "In this week's Language Arts work, explain or demonstrate “message” using a specific example."
+      ],
+      [
+        "misunderstanding",
+        "A failure to interpret a message as intended.",
+        "In this week's Language Arts work, explain or demonstrate “misunderstanding” using a specific example."
+      ],
+      [
+        "medium",
+        "The material or channel through which something travels or is communicated.",
+        "In this week's Language Arts work, explain or demonstrate “medium” using a specific example."
+      ]
+    ],
+    "19": [
+      [
+        "light",
+        "Electromagnetic radiation visible to human eyes.",
+        "In this week's Language Arts work, explain or demonstrate “light” using a specific example."
+      ],
+      [
+        "ray diagram",
+        "A drawing showing paths followed by light.",
+        "In this week's Language Arts work, explain or demonstrate “ray diagram” using a specific example."
+      ],
+      [
+        "point of view",
+        "The perspective from which information is presented.",
+        "In this week's Language Arts work, explain or demonstrate “point of view” using a specific example."
+      ],
+      [
+        "visual evidence",
+        "Information conveyed by images or visual displays.",
+        "In this week's Language Arts work, explain or demonstrate “visual evidence” using a specific example."
+      ],
+      [
+        "persuasion",
+        "Communication intended to influence beliefs or choices.",
+        "In this week's Language Arts work, explain or demonstrate “persuasion” using a specific example."
+      ],
+      [
+        "critique",
+        "An evidence-based evaluation of strengths and limitations.",
+        "In this week's Language Arts work, explain or demonstrate “critique” using a specific example."
+      ]
+    ],
+    "20": [
+      [
+        "cell",
+        "The basic structural and functional unit of living organisms.",
+        "In this week's Language Arts work, explain or demonstrate “cell” using a specific example."
+      ],
+      [
+        "system",
+        "Parts that interact to form a functioning whole.",
+        "In this week's Language Arts work, explain or demonstrate “system” using a specific example."
+      ],
+      [
+        "analogy",
+        "A comparison explaining one idea through another.",
+        "In this week's Language Arts work, explain or demonstrate “analogy” using a specific example."
+      ],
+      [
+        "diagram",
+        "A drawing that explains parts or relationships.",
+        "In this week's Language Arts work, explain or demonstrate “diagram” using a specific example."
+      ],
+      [
+        "structure",
+        "The arrangement of parts within something.",
+        "In this week's Language Arts work, explain or demonstrate “structure” using a specific example."
+      ],
+      [
+        "function",
+        "The purpose or action served by a part.",
+        "In this week's Language Arts work, explain or demonstrate “function” using a specific example."
+      ]
+    ],
+    "21": [
+      [
+        "ecosystem",
+        "Organisms and their physical surroundings interacting as a system.",
+        "In this week's Language Arts work, explain or demonstrate “ecosystem” using a specific example."
+      ],
+      [
+        "food web",
+        "A model of interconnected feeding relationships.",
+        "In this week's Language Arts work, explain or demonstrate “food web” using a specific example."
+      ],
+      [
+        "energy flow",
+        "The movement of energy through organisms and environments.",
+        "In this week's Language Arts work, explain or demonstrate “energy flow” using a specific example."
+      ],
+      [
+        "matter",
+        "Anything that has mass and occupies space.",
+        "In this week's Language Arts work, explain or demonstrate “matter” using a specific example."
+      ],
+      [
+        "environmental claim",
+        "A statement about environmental conditions requiring evidence.",
+        "In this week's Language Arts work, explain or demonstrate “environmental claim” using a specific example."
+      ],
+      [
+        "argument",
+        "A position supported through reasons and evidence.",
+        "In this week's Language Arts work, explain or demonstrate “argument” using a specific example."
+      ]
+    ],
+    "22": [
+      [
+        "water cycle",
+        "The movement of water among Earth's surface, atmosphere, and living things.",
+        "In this week's Language Arts work, explain or demonstrate “water cycle” using a specific example."
+      ],
+      [
+        "evaporation",
+        "The change of liquid water into water vapor.",
+        "In this week's Language Arts work, explain or demonstrate “evaporation” using a specific example."
+      ],
+      [
+        "condensation",
+        "The change of water vapor into liquid.",
+        "In this week's Language Arts work, explain or demonstrate “condensation” using a specific example."
+      ],
+      [
+        "precipitation",
+        "Water falling from clouds as rain, snow, or other forms.",
+        "In this week's Language Arts work, explain or demonstrate “precipitation” using a specific example."
+      ],
+      [
+        "cause and effect",
+        "A relationship linking events and their contributing factors.",
+        "In this week's Language Arts work, explain or demonstrate “cause and effect” using a specific example."
+      ],
+      [
+        "system",
+        "Parts that interact to form a functioning whole.",
+        "In this week's Language Arts work, explain or demonstrate “system” using a specific example."
+      ]
+    ],
+    "23": [
+      [
+        "weather",
+        "Atmospheric conditions at a particular time and place.",
+        "In this week's Language Arts work, explain or demonstrate “weather” using a specific example."
+      ],
+      [
+        "climate",
+        "Long-term patterns of weather in a region.",
+        "In this week's Language Arts work, explain or demonstrate “climate” using a specific example."
+      ],
+      [
+        "data commentary",
+        "A written interpretation of what data shows and cannot show.",
+        "In this week's Language Arts work, explain or demonstrate “data commentary” using a specific example."
+      ],
+      [
+        "comparison",
+        "An examination of similarities and differences.",
+        "In this week's Language Arts work, explain or demonstrate “comparison” using a specific example."
+      ],
+      [
+        "trend",
+        "A general direction or pattern of change.",
+        "In this week's Language Arts work, explain or demonstrate “trend” using a specific example."
+      ],
+      [
+        "overclaim",
+        "A conclusion stronger than the available evidence supports.",
+        "In this week's Language Arts work, explain or demonstrate “overclaim” using a specific example."
+      ]
+    ],
+    "24": [
+      [
+        "primary source",
+        "Evidence produced during the period or event being studied.",
+        "In this week's Language Arts work, explain or demonstrate “primary source” using a specific example."
+      ],
+      [
+        "river civilization",
+        "A society whose development was closely connected to a river system.",
+        "In this week's Language Arts work, explain or demonstrate “river civilization” using a specific example."
+      ],
+      [
+        "geography",
+        "The study of places, environments, and spatial relationships.",
+        "In this week's Language Arts work, explain or demonstrate “geography” using a specific example."
+      ],
+      [
+        "context",
+        "Conditions surrounding an event, text, or decision.",
+        "In this week's Language Arts work, explain or demonstrate “context” using a specific example."
+      ],
+      [
+        "comparison",
+        "An examination of similarities and differences.",
+        "In this week's Language Arts work, explain or demonstrate “comparison” using a specific example."
+      ],
+      [
+        "source limitation",
+        "A restriction on what a source can reliably establish.",
+        "In this week's Language Arts work, explain or demonstrate “source limitation” using a specific example."
+      ]
+    ],
+    "25": [
+      [
+        "belief system",
+        "A connected set of ideas about meaning, values, or the world.",
+        "In this week's Language Arts work, explain or demonstrate “belief system” using a specific example."
+      ],
+      [
+        "law",
+        "An enforceable rule recognized by a governing authority.",
+        "In this week's Language Arts work, explain or demonstrate “law” using a specific example."
+      ],
+      [
+        "perspective",
+        "A standpoint shaping how events or ideas are understood.",
+        "In this week's Language Arts work, explain or demonstrate “perspective” using a specific example."
+      ],
+      [
+        "fairness",
+        "Reasonable and consistent treatment, considering relevant differences.",
+        "In this week's Language Arts work, explain or demonstrate “fairness” using a specific example."
+      ],
+      [
+        "context",
+        "Conditions surrounding an event, text, or decision.",
+        "In this week's Language Arts work, explain or demonstrate “context” using a specific example."
+      ],
+      [
+        "evidence",
+        "Information offered to support a claim.",
+        "In this week's Language Arts work, explain or demonstrate “evidence” using a specific example."
+      ]
+    ],
+    "26": [
+      [
+        "civic idea",
+        "A concept about participation, rights, or duties in public life.",
+        "In this week's Language Arts work, explain or demonstrate “civic idea” using a specific example."
+      ],
+      [
+        "public speech",
+        "An address delivered to an audience about a topic.",
+        "In this week's Language Arts work, explain or demonstrate “public speech” using a specific example."
+      ],
+      [
+        "claim",
+        "A statement that requires appropriate supporting evidence.",
+        "In this week's Language Arts work, explain or demonstrate “claim” using a specific example."
+      ],
+      [
+        "evidence",
+        "Information offered to support a claim.",
+        "In this week's Language Arts work, explain or demonstrate “evidence” using a specific example."
+      ],
+      [
+        "counterargument",
+        "A reasoned challenge to an existing position.",
+        "In this week's Language Arts work, explain or demonstrate “counterargument” using a specific example."
+      ],
+      [
+        "revision",
+        "A change made to improve the accuracy or quality of work.",
+        "In this week's Language Arts work, explain or demonstrate “revision” using a specific example."
+      ]
+    ],
+    "27": [
+      [
+        "trade route",
+        "A path used for exchanging goods and ideas.",
+        "In this week's Language Arts work, explain or demonstrate “trade route” using a specific example."
+      ],
+      [
+        "migration",
+        "Movement of people between places.",
+        "In this week's Language Arts work, explain or demonstrate “migration” using a specific example."
+      ],
+      [
+        "source reliability",
+        "The degree to which evidence can be trusted for a specific question.",
+        "In this week's Language Arts work, explain or demonstrate “source reliability” using a specific example."
+      ],
+      [
+        "interview",
+        "A structured conversation used to gather information.",
+        "In this week's Language Arts work, explain or demonstrate “interview” using a specific example."
+      ],
+      [
+        "synthesis",
+        "Combining ideas from sources into a larger understanding.",
+        "In this week's Language Arts work, explain or demonstrate “synthesis” using a specific example."
+      ],
+      [
+        "exchange",
+        "The giving and receiving of goods, ideas, or practices.",
+        "In this week's Language Arts work, explain or demonstrate “exchange” using a specific example."
+      ]
+    ],
+    "28": [
+      [
+        "translation",
+        "Conveying meaning from one language into another.",
+        "In this week's Language Arts work, explain or demonstrate “translation” using a specific example."
+      ],
+      [
+        "interpretation",
+        "An explanation of meaning supported by evidence.",
+        "In this week's Language Arts work, explain or demonstrate “interpretation” using a specific example."
+      ],
+      [
+        "cognate",
+        "A word related by historical origin to a word in another language.",
+        "In this week's Language Arts work, explain or demonstrate “cognate” using a specific example."
+      ],
+      [
+        "audience",
+        "The people for whom a message is created.",
+        "In this week's Language Arts work, explain or demonstrate “audience” using a specific example."
+      ],
+      [
+        "multilingual narrative",
+        "A story involving or expressed through more than one language.",
+        "In this week's Language Arts work, explain or demonstrate “multilingual narrative” using a specific example."
+      ],
+      [
+        "revision",
+        "A change made to improve the accuracy or quality of work.",
+        "In this week's Language Arts work, explain or demonstrate “revision” using a specific example."
+      ]
+    ],
+    "29": [
+      [
+        "research question",
+        "A focused question that can guide evidence-based investigation.",
+        "In this week's Language Arts work, explain or demonstrate “research question” using a specific example."
+      ],
+      [
+        "primary source",
+        "Evidence produced during the period or event being studied.",
+        "In this week's Language Arts work, explain or demonstrate “primary source” using a specific example."
+      ],
+      [
+        "secondary source",
+        "An account analyzing or interpreting other evidence.",
+        "In this week's Language Arts work, explain or demonstrate “secondary source” using a specific example."
+      ],
+      [
+        "note-taking",
+        "Recording key information and source details for later use.",
+        "In this week's Language Arts work, explain or demonstrate “note-taking” using a specific example."
+      ],
+      [
+        "thesis",
+        "A central argument guiding a piece of writing.",
+        "In this week's Language Arts work, explain or demonstrate “thesis” using a specific example."
+      ],
+      [
+        "citation",
+        "A reference identifying a source.",
+        "In this week's Language Arts work, explain or demonstrate “citation” using a specific example."
+      ]
+    ],
+    "30": [
+      [
+        "argument",
+        "A position supported through reasons and evidence.",
+        "In this week's Language Arts work, explain or demonstrate “argument” using a specific example."
+      ],
+      [
+        "debate",
+        "A structured discussion of differing positions.",
+        "In this week's Language Arts work, explain or demonstrate “debate” using a specific example."
+      ],
+      [
+        "counterclaim",
+        "A position opposing an initial claim.",
+        "In this week's Language Arts work, explain or demonstrate “counterclaim” using a specific example."
+      ],
+      [
+        "rebuttal",
+        "A reasoned response to an opposing argument.",
+        "In this week's Language Arts work, explain or demonstrate “rebuttal” using a specific example."
+      ],
+      [
+        "civility",
+        "Respectful behavior during disagreement.",
+        "In this week's Language Arts work, explain or demonstrate “civility” using a specific example."
+      ],
+      [
+        "delivery",
+        "The vocal and physical presentation of a message.",
+        "In this week's Language Arts work, explain or demonstrate “delivery” using a specific example."
+      ]
+    ],
+    "31": [
+      [
+        "point of view",
+        "The perspective from which information is presented.",
+        "In this week's Language Arts work, explain or demonstrate “point of view” using a specific example."
+      ],
+      [
+        "rhetoric",
+        "The purposeful use of language to affect an audience.",
+        "In this week's Language Arts work, explain or demonstrate “rhetoric” using a specific example."
+      ],
+      [
+        "caption",
+        "Brief text explaining an image, chart, or diagram.",
+        "In this week's Language Arts work, explain or demonstrate “caption” using a specific example."
+      ],
+      [
+        "verification",
+        "Checking a claim against evidence.",
+        "In this week's Language Arts work, explain or demonstrate “verification” using a specific example."
+      ],
+      [
+        "media critique",
+        "An evidence-based assessment of messages in media.",
+        "In this week's Language Arts work, explain or demonstrate “media critique” using a specific example."
+      ],
+      [
+        "review",
+        "An evaluation supported by specific details.",
+        "In this week's Language Arts work, explain or demonstrate “review” using a specific example."
+      ]
+    ],
+    "32": [
+      [
+        "wellness claim",
+        "A statement about health or well-being that needs evidence.",
+        "In this week's Language Arts work, explain or demonstrate “wellness claim” using a specific example."
+      ],
+      [
+        "persuasion",
+        "Communication intended to influence beliefs or choices.",
+        "In this week's Language Arts work, explain or demonstrate “persuasion” using a specific example."
+      ],
+      [
+        "evidence",
+        "Information offered to support a claim.",
+        "In this week's Language Arts work, explain or demonstrate “evidence” using a specific example."
+      ],
+      [
+        "inclusive language",
+        "Wording that respectfully includes diverse people.",
+        "In this week's Language Arts work, explain or demonstrate “inclusive language” using a specific example."
+      ],
+      [
+        "audience",
+        "The people for whom a message is created.",
+        "In this week's Language Arts work, explain or demonstrate “audience” using a specific example."
+      ],
+      [
+        "informational text",
+        "Writing primarily intended to explain a subject.",
+        "In this week's Language Arts work, explain or demonstrate “informational text” using a specific example."
+      ]
+    ],
+    "33": [
+      [
+        "algorithm",
+        "A defined sequence of instructions for completing a task.",
+        "In this week's Language Arts work, explain or demonstrate “algorithm” using a specific example."
+      ],
+      [
+        "data narrative",
+        "A story or explanation built around data.",
+        "In this week's Language Arts work, explain or demonstrate “data narrative” using a specific example."
+      ],
+      [
+        "transparency",
+        "Openness about methods, sources, and limitations.",
+        "In this week's Language Arts work, explain or demonstrate “transparency” using a specific example."
+      ],
+      [
+        "accessibility",
+        "Design enabling people with varied abilities to use content.",
+        "In this week's Language Arts work, explain or demonstrate “accessibility” using a specific example."
+      ],
+      [
+        "ethics",
+        "Principles guiding judgments about right action.",
+        "In this week's Language Arts work, explain or demonstrate “ethics” using a specific example."
+      ],
+      [
+        "explanation",
+        "An account showing how or why something works.",
+        "In this week's Language Arts work, explain or demonstrate “explanation” using a specific example."
+      ]
+    ],
+    "34": [
+      [
+        "capstone",
+        "A culminating project integrating learning and skills.",
+        "In this week's Language Arts work, explain or demonstrate “capstone” using a specific example."
+      ],
+      [
+        "research question",
+        "A focused question that can guide evidence-based investigation.",
+        "In this week's Language Arts work, explain or demonstrate “research question” using a specific example."
+      ],
+      [
+        "annotated source log",
+        "A list of sources with notes about their content and usefulness.",
+        "In this week's Language Arts work, explain or demonstrate “annotated source log” using a specific example."
+      ],
+      [
+        "proposal",
+        "A plan presented for consideration.",
+        "In this week's Language Arts work, explain or demonstrate “proposal” using a specific example."
+      ],
+      [
+        "argument",
+        "A position supported through reasons and evidence.",
+        "In this week's Language Arts work, explain or demonstrate “argument” using a specific example."
+      ],
+      [
+        "revision",
+        "A change made to improve the accuracy or quality of work.",
+        "In this week's Language Arts work, explain or demonstrate “revision” using a specific example."
+      ]
+    ],
+    "35": [
+      [
+        "thesis",
+        "A central argument guiding a piece of writing.",
+        "In this week's Language Arts work, explain or demonstrate “thesis” using a specific example."
+      ],
+      [
+        "oral defense",
+        "A spoken justification of work using evidence.",
+        "In this week's Language Arts work, explain or demonstrate “oral defense” using a specific example."
+      ],
+      [
+        "counterquestion",
+        "A question challenging or probing a presented position.",
+        "In this week's Language Arts work, explain or demonstrate “counterquestion” using a specific example."
+      ],
+      [
+        "organization",
+        "The purposeful arrangement of ideas.",
+        "In this week's Language Arts work, explain or demonstrate “organization” using a specific example."
+      ],
+      [
+        "delivery",
+        "The vocal and physical presentation of a message.",
+        "In this week's Language Arts work, explain or demonstrate “delivery” using a specific example."
+      ],
+      [
+        "reflection",
+        "Careful thought about learning, choices, and improvement.",
+        "In this week's Language Arts work, explain or demonstrate “reflection” using a specific example."
+      ]
+    ],
+    "36": [
+      [
+        "literacy portfolio",
+        "A collection showing progress in reading, writing, and communication.",
+        "In this week's Language Arts work, explain or demonstrate “literacy portfolio” using a specific example."
+      ],
+      [
+        "source evaluation",
+        "Judgment of a source's relevance, accuracy, and reliability.",
+        "In this week's Language Arts work, explain or demonstrate “source evaluation” using a specific example."
+      ],
+      [
+        "argument writing",
+        "Writing that supports a position with reasons and evidence.",
+        "In this week's Language Arts work, explain or demonstrate “argument writing” using a specific example."
+      ],
+      [
+        "active listening",
+        "Attentive listening that seeks to understand and respond appropriately.",
+        "In this week's Language Arts work, explain or demonstrate “active listening” using a specific example."
+      ],
+      [
+        "readiness",
+        "Preparation for the next learning challenge.",
+        "In this week's Language Arts work, explain or demonstrate “readiness” using a specific example."
+      ],
+      [
+        "reflection",
+        "Careful thought about learning, choices, and improvement.",
+        "In this week's Language Arts work, explain or demonstrate “reflection” using a specific example."
+      ]
+    ]
+  }
+}
