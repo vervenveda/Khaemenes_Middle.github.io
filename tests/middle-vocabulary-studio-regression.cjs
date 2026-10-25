@@ -24,5 +24,8 @@ assert.equal((html.match(/<option value="\d+">Week/g)||[]).length,36);
 assert(html.includes('week.addEventListener("change",draw)'));
 assert(html.includes('document.querySelectorAll(\'#questions input\').forEach(i=>i.disabled=true)'));
 assert(html.includes('$("retry").addEventListener("click",newSet)'));
+assert(html.includes('if(grade.value==="6"&&Number(week.value)>=5)draw()'),"Grade 6 loading must not reset another grade's attempt");
+assert(html.includes('quiz=bank.length===6?shuffle(bank):[]'),"Incomplete banks cannot produce practice questions");
+assert(html.includes('if(quiz.length!==6)return;'),"Scoring requires six valid questions");
 assert(!/localStorage\.setItem|sessionStorage\.setItem/.test(html));
 console.log("PASS middle school 3-grade vocabulary static regression: "+total+" additional placements; browser certification outstanding");
