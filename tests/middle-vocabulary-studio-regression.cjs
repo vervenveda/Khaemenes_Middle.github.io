@@ -42,8 +42,15 @@ assert.equal((html.match(/<option value="\d+">Week/g)||[]).length,36);
 assert(html.includes('week.addEventListener("change",draw)'));
 assert(html.includes('document.querySelectorAll(\'#questions input\').forEach(i=>i.disabled=true)'));
 assert(html.includes('$("retry").addEventListener("click",newSet)'));
-assert(html.includes('if(grade.value==="6"&&Number(week.value)>=5)draw()'),"Grade 6 loading must not reset another grade's attempt");
-for(const grade of [7,8])assert(html.includes('if(grade.value==="'+grade+'"&&Number(week.value)>=5)draw()'),"Late Grade "+grade+" data must not reset Weeks 01–04");
+for(const grade of [6,7,8]){
+ assert(html.includes('ready('+grade+')'),"Grade "+grade+" must use guarded async completion");
+ assert(html.includes('unavailable('+grade+')'),"Grade "+grade+" must handle unavailable banks");
+}
+assert(html.includes('&&!attempted)draw()'),"Late requests must not reset attempts already started");
+assert(html.includes('input.addEventListener("change",()=>{attempted=true})'),"Selecting an answer must protect current attempt");
+assert(html.includes('const validBank='),"All incoming grade banks must be validated");
+assert(html.includes('Loading the vocabulary bank'),"Students need a loading state");
+assert(html.includes('if(quiz.length!==6)return;'),"Partial data must not be graded");
 assert(html.includes('Please answer all six questions before checking.'),"Incomplete attempts must not be scored");
 assert(html.includes('if(v.value===quiz[i][0])score++'),"Score must use selected term, not answer position");
 assert(html.includes('$(\"check\").disabled=true'),"Submitting must lock scoring");
@@ -60,6 +67,7 @@ for(let week=5;week<=36;week++)for(const term of enriched.weeks[week]){
  assert(!term[2].includes("In this week's Language Arts work"),"Generic application prompt in Grade 6 Week "+week);
  assert(term[2].length>=75,"Expected substantive lesson-specific application in Grade 6 Week "+week+" "+term[0]);
 }
+assert(enriched.weeks[36][0][2].includes("genuine, dated Grade 6"),"Grade 6 portfolio evidence must be authentic");
 console.log("PASS Grade 6 Weeks 05–36: 192 lesson-grounded application prompts");
 const grade7=JSON.parse(fs.readFileSync(path.join(root,base,"grade-07-weeks-05-36.json"),"utf8"));
 for(let week=5;week<=12;week++)for(const term of grade7.weeks[week]){
