@@ -51,6 +51,15 @@ assert(grade6Pairs.filter(([,w])=>Number(w)>=5&&Number(w)<=12).length>=16,"Grade
 for(let week=13;week<=20;week++)assert(grade6Pairs.filter(([,w])=>Number(w)===week).length>=2,"Grade 6 Week "+week+" needs two lesson-specific misconception comparisons");
 for(let week=21;week<=28;week++)assert(grade6Pairs.filter(([,w])=>Number(w)===week).length>=2,"Grade 6 Week "+week+" needs two lesson-specific misconception comparisons");
 for(let week=29;week<=36;week++)assert(grade6Pairs.filter(([,w])=>Number(w)===week).length>=2,"Grade 6 Week "+week+" needs two lesson-specific misconception comparisons");
+// Grade 7 first enrichment block: two authentic term-pair comparisons per week.
+const grade7Pairs=[...html.matchAll(/"7:(\d+):([^"]+)":/g)];
+const grade7ForPairs=JSON.parse(fs.readFileSync(path.join(root,base,"grade-07-weeks-05-36.json"),"utf8"));
+for(const [,week,pair] of grade7Pairs){
+ const terms=pair.split("|"),names=grade7ForPairs.weeks[week]?.map(t=>t[0])||[];
+ assert(terms.length===2&&terms.every(term=>names.includes(term)),"Grade 7 misconception pair must belong to its own week: "+week+" "+pair);
+ assert.equal(pair,[...terms].sort((a,b)=>a.localeCompare(b)).join("|"),"Grade 7 misconception key must be normalized: "+pair);
+}
+for(let week=5;week<=12;week++)assert(grade7Pairs.filter(([,w])=>Number(w)===week).length>=2,"Grade 7 Week "+week+" requires two concept-specific explanations");
 const learningBridge=fs.readFileSync(path.join(root,"assets/khaemenes-middle-learning-context.js"),"utf8");
 assert(learningBridge.includes("installVocabularyEntrance"),"Shared lesson bridge must link to vocabulary practice");
 assert(learningBridge.includes("khaemenesVocabularyStudioEntrance"),"Lesson entrance must be idempotent");
