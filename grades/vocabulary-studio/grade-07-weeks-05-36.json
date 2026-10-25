@@ -1,0 +1,1034 @@
+{
+  "schema": "khaemenes-middle-vocabulary-v1",
+  "grade": 7,
+  "subject": "language-arts",
+  "status": "editorial-draft",
+  "practiceOnly": true,
+  "source": "grades/grade-07/subjects/language-arts/week-NN.html",
+  "weeks": {
+    "5": [
+      [
+        "rational number",
+        "A number expressible as a quotient of integers with a nonzero denominator.",
+        "In Grade 7 Week 05 Language Arts, apply “rational number” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "source credibility",
+        "How trustworthy a source is for a specific claim.",
+        "In Grade 7 Week 05 Language Arts, apply “source credibility” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "numerical evidence",
+        "Measurements or quantities used to support a conclusion.",
+        "In Grade 7 Week 05 Language Arts, apply “numerical evidence” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "accuracy",
+        "The degree to which information is correct.",
+        "In Grade 7 Week 05 Language Arts, apply “accuracy” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "context",
+        "Circumstances surrounding an idea, text, or event.",
+        "In Grade 7 Week 05 Language Arts, apply “context” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "corroboration",
+        "Independent evidence supporting another account.",
+        "In Grade 7 Week 05 Language Arts, apply “corroboration” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "6": [
+      [
+        "algebraic expression",
+        "A combination of numbers, variables, and operations without an equality sign.",
+        "In Grade 7 Week 06 Language Arts, apply “algebraic expression” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "property",
+        "A characteristic or rule describing something.",
+        "In Grade 7 Week 06 Language Arts, apply “property” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "research question",
+        "A focused question answerable through investigation.",
+        "In Grade 7 Week 06 Language Arts, apply “research question” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "precision",
+        "Exactness in language or measurement.",
+        "In Grade 7 Week 06 Language Arts, apply “precision” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "paraphrase",
+        "A restatement in one's own words that preserves meaning.",
+        "In Grade 7 Week 06 Language Arts, apply “paraphrase” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "citation",
+        "A reference identifying the source of information.",
+        "In Grade 7 Week 06 Language Arts, apply “citation” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "7": [
+      [
+        "equation",
+        "A mathematical statement asserting two expressions are equal.",
+        "In Grade 7 Week 07 Language Arts, apply “equation” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "inequality",
+        "A comparison using greater-than or less-than relationships.",
+        "In Grade 7 Week 07 Language Arts, apply “inequality” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "variable",
+        "A symbol representing a quantity that may change or be unknown.",
+        "In Grade 7 Week 07 Language Arts, apply “variable” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "reasoning",
+        "Connected logical steps supporting an explanation.",
+        "In Grade 7 Week 07 Language Arts, apply “reasoning” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "solution",
+        "A value or response satisfying the stated conditions.",
+        "In Grade 7 Week 07 Language Arts, apply “solution” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "explanation",
+        "An account describing why or how something works.",
+        "In Grade 7 Week 07 Language Arts, apply “explanation” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "8": [
+      [
+        "scale factor",
+        "A ratio relating corresponding lengths in similar figures.",
+        "In Grade 7 Week 08 Language Arts, apply “scale factor” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "scale drawing",
+        "A representation in which measurements share a consistent scale.",
+        "In Grade 7 Week 08 Language Arts, apply “scale drawing” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "specification",
+        "An explicit requirement defining a design or task.",
+        "In Grade 7 Week 08 Language Arts, apply “specification” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "proportion",
+        "An equality between two ratios.",
+        "In Grade 7 Week 08 Language Arts, apply “proportion” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "instruction",
+        "A direction explaining what action to take.",
+        "In Grade 7 Week 08 Language Arts, apply “instruction” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "revision",
+        "A change made to improve a piece of work.",
+        "In Grade 7 Week 08 Language Arts, apply “revision” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "9": [
+      [
+        "radius",
+        "The distance from a circle's center to its edge.",
+        "In Grade 7 Week 09 Language Arts, apply “radius” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "diameter",
+        "A straight segment through a circle's center joining two points on the circle.",
+        "In Grade 7 Week 09 Language Arts, apply “diameter” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "circumference",
+        "The distance around a circle.",
+        "In Grade 7 Week 09 Language Arts, apply “circumference” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "design claim",
+        "A statement about a design that needs supporting evidence.",
+        "In Grade 7 Week 09 Language Arts, apply “design claim” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "technical explanation",
+        "A precise account of how a system or procedure works.",
+        "In Grade 7 Week 09 Language Arts, apply “technical explanation” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "justification",
+        "Reasons and evidence supporting a choice or conclusion.",
+        "In Grade 7 Week 09 Language Arts, apply “justification” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "10": [
+      [
+        "surface area",
+        "The total area of a solid's exposed faces.",
+        "In Grade 7 Week 10 Language Arts, apply “surface area” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "volume",
+        "The space occupied by a three-dimensional object.",
+        "In Grade 7 Week 10 Language Arts, apply “volume” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "dimension",
+        "A measured extent such as length, width, or height.",
+        "In Grade 7 Week 10 Language Arts, apply “dimension” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "model",
+        "A simplified representation explaining a system or idea.",
+        "In Grade 7 Week 10 Language Arts, apply “model” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "specification",
+        "An explicit requirement defining a design or task.",
+        "In Grade 7 Week 10 Language Arts, apply “specification” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "citation",
+        "A reference identifying the source of information.",
+        "In Grade 7 Week 10 Language Arts, apply “citation” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "11": [
+      [
+        "probability",
+        "A measure of how likely an event is.",
+        "In Grade 7 Week 11 Language Arts, apply “probability” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "fairness",
+        "Equitable treatment or equal chances according to the relevant rules.",
+        "In Grade 7 Week 11 Language Arts, apply “fairness” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "random event",
+        "An outcome governed by chance within a defined process.",
+        "In Grade 7 Week 11 Language Arts, apply “random event” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "sample space",
+        "The set of all possible outcomes of a probability experiment.",
+        "In Grade 7 Week 11 Language Arts, apply “sample space” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "prediction",
+        "A statement about an expected outcome.",
+        "In Grade 7 Week 11 Language Arts, apply “prediction” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "evidence",
+        "Information supporting a claim.",
+        "In Grade 7 Week 11 Language Arts, apply “evidence” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "12": [
+      [
+        "statistics",
+        "The study of collecting and interpreting data.",
+        "In Grade 7 Week 12 Language Arts, apply “statistics” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "inference",
+        "A conclusion reached from evidence and reasoning.",
+        "In Grade 7 Week 12 Language Arts, apply “inference” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "distribution",
+        "The arrangement and frequency of data values.",
+        "In Grade 7 Week 12 Language Arts, apply “distribution” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "sample",
+        "A subset selected from a larger group.",
+        "In Grade 7 Week 12 Language Arts, apply “sample” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "variability",
+        "Differences among data values.",
+        "In Grade 7 Week 12 Language Arts, apply “variability” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "qualification",
+        "A limitation added to make a claim accurate.",
+        "In Grade 7 Week 12 Language Arts, apply “qualification” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "13": [
+      [
+        "theme",
+        "An important idea developed throughout a literary work.",
+        "In Grade 7 Week 13 Language Arts, apply “theme” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "point of view",
+        "A position or perspective from which a text is presented.",
+        "In Grade 7 Week 13 Language Arts, apply “point of view” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "identity",
+        "How a person or group understands and expresses who they are.",
+        "In Grade 7 Week 13 Language Arts, apply “identity” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "characterization",
+        "How an author reveals a character's qualities.",
+        "In Grade 7 Week 13 Language Arts, apply “characterization” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "argument",
+        "A claim supported by reasons and evidence.",
+        "In Grade 7 Week 13 Language Arts, apply “argument” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "textual evidence",
+        "Specific words or details from a text used as support.",
+        "In Grade 7 Week 13 Language Arts, apply “textual evidence” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "14": [
+      [
+        "central idea",
+        "The chief point developed by an informational text.",
+        "In Grade 7 Week 14 Language Arts, apply “central idea” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "claim",
+        "A position that can be supported or challenged.",
+        "In Grade 7 Week 14 Language Arts, apply “claim” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "counterclaim",
+        "A position disputing an initial claim.",
+        "In Grade 7 Week 14 Language Arts, apply “counterclaim” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "warrant",
+        "Reasoning connecting evidence to a claim.",
+        "In Grade 7 Week 14 Language Arts, apply “warrant” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "rhetoric",
+        "The purposeful use of communication to influence audiences.",
+        "In Grade 7 Week 14 Language Arts, apply “rhetoric” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "rebuttal",
+        "A reasoned answer challenging an opposing argument.",
+        "In Grade 7 Week 14 Language Arts, apply “rebuttal” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "15": [
+      [
+        "research question",
+        "A focused question answerable through investigation.",
+        "In Grade 7 Week 15 Language Arts, apply “research question” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "primary source",
+        "Evidence created during the event or period being studied.",
+        "In Grade 7 Week 15 Language Arts, apply “primary source” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "secondary source",
+        "A later interpretation or analysis of evidence.",
+        "In Grade 7 Week 15 Language Arts, apply “secondary source” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "credibility",
+        "How worthy of trust a source or speaker is.",
+        "In Grade 7 Week 15 Language Arts, apply “credibility” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "annotation",
+        "A note identifying observations, questions, or interpretations.",
+        "In Grade 7 Week 15 Language Arts, apply “annotation” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "bibliography",
+        "A list of sources consulted for a project.",
+        "In Grade 7 Week 15 Language Arts, apply “bibliography” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "16": [
+      [
+        "narrative voice",
+        "The distinctive way a story is told.",
+        "In Grade 7 Week 16 Language Arts, apply “narrative voice” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "stanza",
+        "A group of lines in a poem.",
+        "In Grade 7 Week 16 Language Arts, apply “stanza” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "imagery",
+        "Language evoking sensory experience.",
+        "In Grade 7 Week 16 Language Arts, apply “imagery” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "tone",
+        "The attitude expressed by a speaker or writer.",
+        "In Grade 7 Week 16 Language Arts, apply “tone” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "convention",
+        "An established rule or customary practice.",
+        "In Grade 7 Week 16 Language Arts, apply “convention” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "revision",
+        "A change made to improve a piece of work.",
+        "In Grade 7 Week 16 Language Arts, apply “revision” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "17": [
+      [
+        "portfolio",
+        "A purposeful collection documenting learning and achievement.",
+        "In Grade 7 Week 17 Language Arts, apply “portfolio” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "reflection",
+        "Thoughtful consideration of experience and improvement.",
+        "In Grade 7 Week 17 Language Arts, apply “reflection” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "synthesis",
+        "Combining evidence or ideas to develop a larger understanding.",
+        "In Grade 7 Week 17 Language Arts, apply “synthesis” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "draft",
+        "A preliminary version intended for revision.",
+        "In Grade 7 Week 17 Language Arts, apply “draft” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "curation",
+        "The deliberate selection and organization of materials.",
+        "In Grade 7 Week 17 Language Arts, apply “curation” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "self-assessment",
+        "An evaluation of one's own progress using stated criteria.",
+        "In Grade 7 Week 17 Language Arts, apply “self-assessment” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "18": [
+      [
+        "cell",
+        "The basic structural and functional unit of living things.",
+        "In Grade 7 Week 18 Language Arts, apply “cell” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "structure",
+        "The organization of parts within a whole.",
+        "In Grade 7 Week 18 Language Arts, apply “structure” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "function",
+        "The role or action of a part within a system.",
+        "In Grade 7 Week 18 Language Arts, apply “function” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "scientific communication",
+        "Clear presentation of scientific methods, evidence, and findings.",
+        "In Grade 7 Week 18 Language Arts, apply “scientific communication” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "diagram",
+        "A drawing that explains components or relationships.",
+        "In Grade 7 Week 18 Language Arts, apply “diagram” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "oral explanation",
+        "A spoken account that makes an idea understandable.",
+        "In Grade 7 Week 18 Language Arts, apply “oral explanation” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "19": [
+      [
+        "homeostasis",
+        "The maintenance of relatively stable internal conditions.",
+        "In Grade 7 Week 19 Language Arts, apply “homeostasis” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "body system",
+        "A group of organs working together to perform functions.",
+        "In Grade 7 Week 19 Language Arts, apply “body system” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "evidence",
+        "Information supporting a claim.",
+        "In Grade 7 Week 19 Language Arts, apply “evidence” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "source",
+        "An origin of information or evidence.",
+        "In Grade 7 Week 19 Language Arts, apply “source” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "reasoning",
+        "Connected logical steps supporting an explanation.",
+        "In Grade 7 Week 19 Language Arts, apply “reasoning” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "summary",
+        "A concise account of essential ideas.",
+        "In Grade 7 Week 19 Language Arts, apply “summary” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "20": [
+      [
+        "inheritance",
+        "The passing of genetic information from parents to offspring.",
+        "In Grade 7 Week 20 Language Arts, apply “inheritance” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "variation",
+        "Differences in traits among individuals.",
+        "In Grade 7 Week 20 Language Arts, apply “variation” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "trait",
+        "A characteristic of an organism.",
+        "In Grade 7 Week 20 Language Arts, apply “trait” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "central idea",
+        "The chief point developed by an informational text.",
+        "In Grade 7 Week 20 Language Arts, apply “central idea” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "comparison",
+        "Analysis of similarities and differences.",
+        "In Grade 7 Week 20 Language Arts, apply “comparison” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "evidence",
+        "Information supporting a claim.",
+        "In Grade 7 Week 20 Language Arts, apply “evidence” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "21": [
+      [
+        "ecosystem",
+        "Living things and their surroundings interacting as a system.",
+        "In Grade 7 Week 21 Language Arts, apply “ecosystem” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "interdependence",
+        "A relationship in which parts depend on one another.",
+        "In Grade 7 Week 21 Language Arts, apply “interdependence” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "human impact",
+        "Effects of human actions on systems or environments.",
+        "In Grade 7 Week 21 Language Arts, apply “human impact” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "point of view",
+        "A position or perspective from which a text is presented.",
+        "In Grade 7 Week 21 Language Arts, apply “point of view” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "environmental claim",
+        "A testable statement about environmental conditions.",
+        "In Grade 7 Week 21 Language Arts, apply “environmental claim” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "corroboration",
+        "Independent evidence supporting another account.",
+        "In Grade 7 Week 21 Language Arts, apply “corroboration” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "22": [
+      [
+        "atom",
+        "The smallest unit of an element that retains its chemical identity.",
+        "In Grade 7 Week 22 Language Arts, apply “atom” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "matter",
+        "Anything that has mass and occupies space.",
+        "In Grade 7 Week 22 Language Arts, apply “matter” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "chemical change",
+        "A process in which substances form different substances.",
+        "In Grade 7 Week 22 Language Arts, apply “chemical change” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "claim",
+        "A position that can be supported or challenged.",
+        "In Grade 7 Week 22 Language Arts, apply “claim” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "evidence",
+        "Information supporting a claim.",
+        "In Grade 7 Week 22 Language Arts, apply “evidence” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "argument",
+        "A claim supported by reasons and evidence.",
+        "In Grade 7 Week 22 Language Arts, apply “argument” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "23": [
+      [
+        "energy",
+        "A quantity describing the ability to produce change or do work.",
+        "In Grade 7 Week 23 Language Arts, apply “energy” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "force",
+        "A push or pull that may change an object's motion.",
+        "In Grade 7 Week 23 Language Arts, apply “force” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "motion",
+        "Change in position over time.",
+        "In Grade 7 Week 23 Language Arts, apply “motion” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "reliability",
+        "The consistency and dependability of information or measurement.",
+        "In Grade 7 Week 23 Language Arts, apply “reliability” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "correlation",
+        "A relationship between patterns without necessarily proving cause.",
+        "In Grade 7 Week 23 Language Arts, apply “correlation” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "causation",
+        "A relationship in which one factor produces or influences another.",
+        "In Grade 7 Week 23 Language Arts, apply “causation” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "24": [
+      [
+        "plate tectonics",
+        "The theory that Earth's outer shell is divided into moving plates.",
+        "In Grade 7 Week 24 Language Arts, apply “plate tectonics” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "hazard",
+        "A condition or event with potential to cause harm.",
+        "In Grade 7 Week 24 Language Arts, apply “hazard” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "geological evidence",
+        "Observations from rocks and Earth's features supporting explanations.",
+        "In Grade 7 Week 24 Language Arts, apply “geological evidence” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "research question",
+        "A focused question answerable through investigation.",
+        "In Grade 7 Week 24 Language Arts, apply “research question” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "citation",
+        "A reference identifying the source of information.",
+        "In Grade 7 Week 24 Language Arts, apply “citation” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "source reliability",
+        "How consistently a source supports accurate conclusions.",
+        "In Grade 7 Week 24 Language Arts, apply “source reliability” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "25": [
+      [
+        "weather",
+        "Atmospheric conditions at a specific time and place.",
+        "In Grade 7 Week 25 Language Arts, apply “weather” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "climate",
+        "Long-term patterns of weather in a region.",
+        "In Grade 7 Week 25 Language Arts, apply “climate” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "data interpretation",
+        "Explanation of what observations or measurements mean.",
+        "In Grade 7 Week 25 Language Arts, apply “data interpretation” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "precision",
+        "Exactness in language or measurement.",
+        "In Grade 7 Week 25 Language Arts, apply “precision” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "trend",
+        "A general pattern of change.",
+        "In Grade 7 Week 25 Language Arts, apply “trend” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "qualification",
+        "A limitation added to make a claim accurate.",
+        "In Grade 7 Week 25 Language Arts, apply “qualification” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "26": [
+      [
+        "feudalism",
+        "A historically varied system of landholding and obligations in medieval societies.",
+        "In Grade 7 Week 26 Language Arts, apply “feudalism” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "medieval source",
+        "Evidence originating from or describing the Middle Ages.",
+        "In Grade 7 Week 26 Language Arts, apply “medieval source” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "hierarchy",
+        "An arrangement of people or elements by rank.",
+        "In Grade 7 Week 26 Language Arts, apply “hierarchy” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "historical context",
+        "Conditions of the past that help explain events or texts.",
+        "In Grade 7 Week 26 Language Arts, apply “historical context” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "narrative",
+        "An account of connected events.",
+        "In Grade 7 Week 26 Language Arts, apply “narrative” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "perspective",
+        "A standpoint shaping interpretation.",
+        "In Grade 7 Week 26 Language Arts, apply “perspective” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "27": [
+      [
+        "Islamic Golden Age",
+        "A term for periods of major scholarship and cultural development in historical Islamic societies.",
+        "In Grade 7 Week 27 Language Arts, apply “Islamic Golden Age” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "knowledge network",
+        "Connections through which information and scholarship spread.",
+        "In Grade 7 Week 27 Language Arts, apply “knowledge network” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "scholarship",
+        "Systematic learning, research, and academic work.",
+        "In Grade 7 Week 27 Language Arts, apply “scholarship” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "translation",
+        "Expressing meaning from one language in another.",
+        "In Grade 7 Week 27 Language Arts, apply “translation” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "historical evidence",
+        "Sources and artifacts supporting claims about the past.",
+        "In Grade 7 Week 27 Language Arts, apply “historical evidence” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "discussion",
+        "A reasoned exchange of views.",
+        "In Grade 7 Week 27 Language Arts, apply “discussion” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "28": [
+      [
+        "trade network",
+        "Connected routes and participants exchanging goods and ideas.",
+        "In Grade 7 Week 28 Language Arts, apply “trade network” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "cultural exchange",
+        "Sharing practices, knowledge, or customs between groups.",
+        "In Grade 7 Week 28 Language Arts, apply “cultural exchange” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "migration",
+        "Movement of people from one location to another.",
+        "In Grade 7 Week 28 Language Arts, apply “migration” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "primary source",
+        "Evidence created during the event or period being studied.",
+        "In Grade 7 Week 28 Language Arts, apply “primary source” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "corroboration",
+        "Independent evidence supporting another account.",
+        "In Grade 7 Week 28 Language Arts, apply “corroboration” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "synthesis",
+        "Combining evidence or ideas to develop a larger understanding.",
+        "In Grade 7 Week 28 Language Arts, apply “synthesis” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "29": [
+      [
+        "Renaissance",
+        "A period of renewed engagement with classical learning and artistic innovation.",
+        "In Grade 7 Week 29 Language Arts, apply “Renaissance” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "Reformation",
+        "Movements that challenged and reshaped Western Christianity.",
+        "In Grade 7 Week 29 Language Arts, apply “Reformation” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "humanism",
+        "An approach emphasizing human experience, learning, and agency.",
+        "In Grade 7 Week 29 Language Arts, apply “humanism” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "central idea",
+        "The chief point developed by an informational text.",
+        "In Grade 7 Week 29 Language Arts, apply “central idea” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "comparison",
+        "Analysis of similarities and differences.",
+        "In Grade 7 Week 29 Language Arts, apply “comparison” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "historical context",
+        "Conditions of the past that help explain events or texts.",
+        "In Grade 7 Week 29 Language Arts, apply “historical context” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "30": [
+      [
+        "Scientific Revolution",
+        "Transformations in scientific methods and explanations during early modern history.",
+        "In Grade 7 Week 30 Language Arts, apply “Scientific Revolution” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "Enlightenment",
+        "Movements emphasizing reason, criticism, and debates about society and government.",
+        "In Grade 7 Week 30 Language Arts, apply “Enlightenment” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "empiricism",
+        "An approach emphasizing knowledge gained through observation.",
+        "In Grade 7 Week 30 Language Arts, apply “empiricism” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "hypothesis",
+        "A proposed explanation that can be tested.",
+        "In Grade 7 Week 30 Language Arts, apply “hypothesis” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "point of view",
+        "A position or perspective from which a text is presented.",
+        "In Grade 7 Week 30 Language Arts, apply “point of view” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "evidence",
+        "Information supporting a claim.",
+        "In Grade 7 Week 30 Language Arts, apply “evidence” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "31": [
+      [
+        "economics",
+        "The study of how people allocate limited resources.",
+        "In Grade 7 Week 31 Language Arts, apply “economics” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "labor",
+        "Work performed to produce goods or services.",
+        "In Grade 7 Week 31 Language Arts, apply “labor” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "global system",
+        "Interacting processes linking regions across the world.",
+        "In Grade 7 Week 31 Language Arts, apply “global system” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "claim",
+        "A position that can be supported or challenged.",
+        "In Grade 7 Week 31 Language Arts, apply “claim” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "counterargument",
+        "A reasoned objection to a claim.",
+        "In Grade 7 Week 31 Language Arts, apply “counterargument” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "data",
+        "Recorded information for investigation.",
+        "In Grade 7 Week 31 Language Arts, apply “data” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "32": [
+      [
+        "diplomacy",
+        "Communication and negotiation between political or cultural representatives.",
+        "In Grade 7 Week 32 Language Arts, apply “diplomacy” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "cultural context",
+        "Shared conditions and traditions affecting meaning.",
+        "In Grade 7 Week 32 Language Arts, apply “cultural context” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "translation",
+        "Expressing meaning from one language in another.",
+        "In Grade 7 Week 32 Language Arts, apply “translation” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "audience",
+        "The people for whom communication is intended.",
+        "In Grade 7 Week 32 Language Arts, apply “audience” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "credibility",
+        "How worthy of trust a source or speaker is.",
+        "In Grade 7 Week 32 Language Arts, apply “credibility” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "interpretation",
+        "An evidence-based account of meaning.",
+        "In Grade 7 Week 32 Language Arts, apply “interpretation” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "33": [
+      [
+        "algorithm",
+        "A defined sequence of steps for solving a problem.",
+        "In Grade 7 Week 33 Language Arts, apply “algorithm” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "data ethics",
+        "Principles governing responsible collection and use of data.",
+        "In Grade 7 Week 33 Language Arts, apply “data ethics” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "bias",
+        "A systematic influence that can distort decisions or evidence.",
+        "In Grade 7 Week 33 Language Arts, apply “bias” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "transparency",
+        "Openness about methods, sources, and limitations.",
+        "In Grade 7 Week 33 Language Arts, apply “transparency” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "research writing",
+        "Writing that investigates a question and supports conclusions with sources.",
+        "In Grade 7 Week 33 Language Arts, apply “research writing” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "attribution",
+        "Acknowledging the creator of words, ideas, or evidence.",
+        "In Grade 7 Week 33 Language Arts, apply “attribution” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "34": [
+      [
+        "capstone",
+        "A culminating project integrating multiple learned skills.",
+        "In Grade 7 Week 34 Language Arts, apply “capstone” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "inquiry",
+        "Systematic investigation guided by questions.",
+        "In Grade 7 Week 34 Language Arts, apply “inquiry” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "annotated source",
+        "A cited source accompanied by notes evaluating its relevance.",
+        "In Grade 7 Week 34 Language Arts, apply “annotated source” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "proposal",
+        "A plan offered for consideration.",
+        "In Grade 7 Week 34 Language Arts, apply “proposal” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "argument",
+        "A claim supported by reasons and evidence.",
+        "In Grade 7 Week 34 Language Arts, apply “argument” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "revision",
+        "A change made to improve a piece of work.",
+        "In Grade 7 Week 34 Language Arts, apply “revision” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "35": [
+      [
+        "oral defense",
+        "A spoken justification of ideas supported by evidence.",
+        "In Grade 7 Week 35 Language Arts, apply “oral defense” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "thesis",
+        "A central, defensible argument.",
+        "In Grade 7 Week 35 Language Arts, apply “thesis” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "counterquestion",
+        "A question probing a speaker's explanation or evidence.",
+        "In Grade 7 Week 35 Language Arts, apply “counterquestion” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "delivery",
+        "How a speech is presented through voice and manner.",
+        "In Grade 7 Week 35 Language Arts, apply “delivery” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "evidence",
+        "Information supporting a claim.",
+        "In Grade 7 Week 35 Language Arts, apply “evidence” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "reflection",
+        "Thoughtful consideration of experience and improvement.",
+        "In Grade 7 Week 35 Language Arts, apply “reflection” to a specific passage, source, diagram, or written argument."
+      ]
+    ],
+    "36": [
+      [
+        "portfolio",
+        "A purposeful collection documenting learning and achievement.",
+        "In Grade 7 Week 36 Language Arts, apply “portfolio” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "readiness",
+        "Preparation for a new level of work.",
+        "In Grade 7 Week 36 Language Arts, apply “readiness” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "source evaluation",
+        "Judging a source's accuracy, relevance, and usefulness.",
+        "In Grade 7 Week 36 Language Arts, apply “source evaluation” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "argument",
+        "A claim supported by reasons and evidence.",
+        "In Grade 7 Week 36 Language Arts, apply “argument” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "active listening",
+        "Attentive engagement with another person's meaning.",
+        "In Grade 7 Week 36 Language Arts, apply “active listening” to a specific passage, source, diagram, or written argument."
+      ],
+      [
+        "transfer",
+        "Applying learned knowledge in a new context.",
+        "In Grade 7 Week 36 Language Arts, apply “transfer” to a specific passage, source, diagram, or written argument."
+      ]
+    ]
+  }
+}
