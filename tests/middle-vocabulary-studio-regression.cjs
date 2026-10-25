@@ -38,6 +38,16 @@ assert(html.includes('else body.append(intro,first,second,application)'),"Other 
 for(const key of ["6:5:sequence|transition","6:22:condensation|evaporation","7:7:equation|inequality","7:18:function|structure","8:7:reflection|translation","8:23:genotype|phenotype","8:26:counterargument|grievance"]){
  assert(html.includes('"'+key+'"'),"Missing authored misconception coaching "+key);
 }
+// Verify every authored Grade 6 Week 05–12 misconception pair is in its real bank.
+const grade6Pairs=[...html.matchAll(/"6:(\d+):([^"]+)":/g)];
+const grade6ForPairs=JSON.parse(fs.readFileSync(path.join(root,base,"grade-06-weeks-05-36.json"),"utf8"));
+for(const [,week,pair] of grade6Pairs){
+ const names=grade6ForPairs.weeks[week]?.map(t=>t[0])||[];
+ const terms=pair.split("|");
+ assert(terms.length===2&&terms.every(term=>names.includes(term)),"Grade 6 coaching pair missing term in Week "+week+": "+pair);
+ assert.equal(pair,[...terms].sort((a,b)=>a.localeCompare(b)).join("|"),"Misconception pair must use sorted lookup: "+pair);
+}
+assert(grade6Pairs.filter(([,w])=>Number(w)>=5&&Number(w)<=12).length>=16,"Grade 6 Weeks 05–12 should have at least two targeted explanations per week");
 const learningBridge=fs.readFileSync(path.join(root,"assets/khaemenes-middle-learning-context.js"),"utf8");
 assert(learningBridge.includes("installVocabularyEntrance"),"Shared lesson bridge must link to vocabulary practice");
 assert(learningBridge.includes("khaemenesVocabularyStudioEntrance"),"Lesson entrance must be idempotent");
