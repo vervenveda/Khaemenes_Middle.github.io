@@ -9,6 +9,11 @@ assert(!html.includes('font-size:7px!important'),"Seven-pixel toolbar text must 
 assert(html.includes('flex-wrap:wrap;justify-content:center'),"Toolbar must wrap on narrow screens");
 assert(html.includes('min-height:44px!important;height:auto!important'),"Toolbar buttons must have accessible height");
 // Accessibility audit: learners need explicit steps, source-availability guidance, and distinguishing feedback.
+assert(html.includes('let formats=[]'),"Practice must track both retrieval directions");
+assert(html.includes('i%2===0?"definition":"term"'),"Three questions each must use reciprocal prompts");
+assert(html.includes("Which term matches this meaning?"),"Reverse-retrieval questions must be present");
+assert(html.includes('formats[i]==="definition"?choice[1]:choice[0]'),"Choices must match the prompt type");
+assert(html.includes('if(v.value===quiz[i][0])score++'),"Both directions must score against original term identities");
 assert(html.includes("Read the six term cards first."),"Independent practice instructions must describe the steps");
 assert(html.includes('id="independentHelp"'),"Independent-study help must be available");
 assert(html.includes("do not invent evidence"),"Unavailable source instructions must not encourage fabrication");
