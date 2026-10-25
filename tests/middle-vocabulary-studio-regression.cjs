@@ -48,6 +48,7 @@ for(const [,week,pair] of grade6Pairs){
  assert.equal(pair,[...terms].sort((a,b)=>a.localeCompare(b)).join("|"),"Misconception pair must use sorted lookup: "+pair);
 }
 assert(grade6Pairs.filter(([,w])=>Number(w)>=5&&Number(w)<=12).length>=16,"Grade 6 Weeks 05–12 should have at least two targeted explanations per week");
+for(let week=13;week<=20;week++)assert(grade6Pairs.filter(([,w])=>Number(w)===week).length>=2,"Grade 6 Week "+week+" needs two lesson-specific misconception comparisons");
 const learningBridge=fs.readFileSync(path.join(root,"assets/khaemenes-middle-learning-context.js"),"utf8");
 assert(learningBridge.includes("installVocabularyEntrance"),"Shared lesson bridge must link to vocabulary practice");
 assert(learningBridge.includes("khaemenesVocabularyStudioEntrance"),"Lesson entrance must be idempotent");
