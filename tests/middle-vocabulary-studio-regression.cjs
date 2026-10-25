@@ -100,7 +100,11 @@ const grade8Context={
  13:["theme","perspective","characterization","modern connection","close reading","textual evidence"],
  14:["media literacy","rhetoric","claim","counterclaim","misinformation","verification"],
  15:["research question","literature review","primary source","secondary source","synthesis","citation"],
- 16:["narrative voice","poetic form","imagery","rhetorical choice","tone","revision"]
+ 16:["narrative voice","poetic form","imagery","rhetorical choice","tone","revision"],
+ 17:["portfolio","self-assessment","draft","revision","synthesis","reflection"],
+ 18:["atom","chemical reaction","reactant","product","scientific model","oral explanation"],
+ 19:["force","motion","engineering constraint","design tradeoff","textual evidence","causation"],
+ 20:["energy","wave","information transfer","central idea","analogy","explanation"]
 };
 for(const [week,expected] of Object.entries(grade8Context)){
  const terms=grade8.weeks[week];
@@ -112,5 +116,5 @@ for(const [week,expected] of Object.entries(grade8Context)){
  }
 }
 assert.equal(grade8.practiceOnly,true,"Grade 8 enrichment cannot alter mastery");
-console.log("PASS Grade 8 Weeks 05–16: 72 lesson-specific formative applications");
+console.log("PASS Grade 8 Weeks 05–20: 96 lesson-specific formative applications");
 console.log("PASS middle school 3-grade vocabulary static regression: "+total+" additional placements; browser certification outstanding");
