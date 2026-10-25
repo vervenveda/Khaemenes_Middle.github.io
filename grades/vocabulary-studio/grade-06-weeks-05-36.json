@@ -266,128 +266,128 @@
       [
         "volume",
         "The space occupied by a three-dimensional object.",
-        "In this week's Language Arts work, explain or demonstrate “volume” using a specific example."
+        "Calculate the volume of a rectangular prism measuring 5 cm by 2 cm by 3 cm; explain why the result is 30 cm³ rather than 30 cm²."
       ],
       [
         "capacity",
         "The amount a container can hold.",
-        "In this week's Language Arts work, explain or demonstrate “capacity” using a specific example."
+        "Compare a fictional box's external volume with its usable interior capacity; name the missing information needed to equate them."
       ],
       [
         "dimension",
         "A measurable extent such as length, width, or height.",
-        "In this week's Language Arts work, explain or demonstrate “dimension” using a specific example."
+        "Label the length, width, and height on a 5×2×3 cm box diagram and identify which measurement each number describes."
       ],
       [
         "solid model",
         "A representation of an object with three dimensions.",
-        "In this week's Language Arts work, explain or demonstrate “solid model” using a specific example."
+        "Draw a rectangular prism and identify its faces and edges; explain one way your diagram simplifies a real container."
       ],
       [
         "caption",
         "Brief text explaining an image, chart, or diagram.",
-        "In this week's Language Arts work, explain or demonstrate “caption” using a specific example."
+        "Write a two-sentence caption for the 5×2×3 cm box that states its measurements, multiplication, and 30 cm³ result."
       ],
       [
         "sequence",
         "The order in which events or instructions occur.",
-        "In this week's Language Arts work, explain or demonstrate “sequence” using a specific example."
+        "Give numbered instructions for determining the volume of a rectangular prism, including a check that all three lengths use centimeters."
       ]
     ],
     "14": [
       [
         "matter",
         "Anything that has mass and occupies space.",
-        "In this week's Language Arts work, explain or demonstrate “matter” using a specific example."
+        "Write a definition of matter and distinguish its mass from the space it occupies, as requested in the Week 14 glossary."
       ],
       [
         "particle model",
         "A representation describing matter as tiny particles.",
-        "In this week's Language Arts work, explain or demonstrate “particle model” using a specific example."
+        "Caption two fictional particle diagrams and explain what each particle model represents and what it leaves out."
       ],
       [
         "property",
         "An observable or measurable characteristic.",
-        "In this week's Language Arts work, explain or demonstrate “property” using a specific example."
+        "Choose an observable or measurable property of a fictional material and distinguish it from an inferred particle-level explanation."
       ],
       [
         "observation",
         "Information gathered through careful noticing or measurement.",
-        "In this week's Language Arts work, explain or demonstrate “observation” using a specific example."
+        "Annotate a fictional science paragraph by labeling one direct observation and one interpretation not yet tested."
       ],
       [
         "cause",
         "Something that contributes to making an event happen.",
-        "In this week's Language Arts work, explain or demonstrate “cause” using a specific example."
+        "Revise the claim that a fictional model proves why a measured property occurs; explain what evidence of cause is still needed."
       ],
       [
         "revision",
         "A change made to improve the accuracy or quality of work.",
-        "In this week's Language Arts work, explain or demonstrate “revision” using a specific example."
+        "Correct an overconfident statement in a 150-word matter-model explanation; describe precisely which evidence remains uncertain."
       ]
     ],
     "15": [
       [
         "thermal energy",
         "Energy associated with the motions and interactions of particles.",
-        "In this week's Language Arts work, explain or demonstrate “thermal energy” using a specific example."
+        "Explain how energy can continue entering an ice-water mixture during a temperature plateau; avoid saying that heating stopped."
       ],
       [
         "phase change",
         "A transition between states of matter.",
-        "In this week's Language Arts work, explain or demonstrate “phase change” using a specific example."
+        "Describe the change from solid ice to liquid water and identify what a plateau on a simulated warming graph may indicate."
       ],
       [
         "temperature",
         "A measurement related to the average kinetic energy of particles.",
-        "In this week's Language Arts work, explain or demonstrate “temperature” using a specific example."
+        "Read a fictional heating curve and distinguish measured temperature from the total energy transferred during a phase change."
       ],
       [
         "graph",
         "A visual representation of numerical relationships.",
-        "In this week's Language Arts work, explain or demonstrate “graph” using a specific example."
+        "Label the axes and flat segment on a simulated temperature-versus-time graph; state what observations could verify the plateau."
       ],
       [
         "causation",
         "A relationship in which one factor contributes to producing another.",
-        "In this week's Language Arts work, explain or demonstrate “causation” using a specific example."
+        "Revise the false claim 'A flat temperature graph proves no energy is transferred'; explain why that cause-and-effect inference fails."
       ],
       [
         "claim-evidence-reasoning",
         "An explanation linking a claim to evidence through scientific reasoning.",
-        "In this week's Language Arts work, explain or demonstrate “claim-evidence-reasoning” using a specific example."
+        "Write a claim-evidence-reasoning paragraph about a clearly simulated flat heating-curve segment, naming the evidence and its limits."
       ]
     ],
     "16": [
       [
         "force",
         "A push or pull that can change motion.",
-        "In this week's Language Arts work, explain or demonstrate “force” using a specific example."
+        "Evaluate a fictional report claiming that greater recorded speed alone proves greater applied force; identify additional evidence needed."
       ],
       [
         "motion",
         "A change in position over time.",
-        "In this week's Language Arts work, explain or demonstrate “motion” using a specific example."
+        "Interpret the simulated motion relation d=3t for t=1, 2, and 3 seconds, giving each distance in meters."
       ],
       [
         "variable",
         "A symbol representing a quantity that can change or be unknown.",
-        "In this week's Language Arts work, explain or demonstrate “variable” using a specific example."
+        "Explain which quantity t represents in d=3t and state the units necessary to interpret the motion model."
       ],
       [
         "correlation",
         "A relationship in which two measurements change together, without proving cause.",
-        "In this week's Language Arts work, explain or demonstrate “correlation” using a specific example."
+        "Contrast a pattern between time and distance with a causal claim about force; explain why the graph alone cannot show the cause."
       ],
       [
         "causation",
         "A relationship in which one factor contributes to producing another.",
-        "In this week's Language Arts work, explain or demonstrate “causation” using a specific example."
+        "Revise the statement 'the object moved faster, so a stronger force caused it' to separate correlation from demonstrated causation."
       ],
       [
         "graph",
         "A visual representation of numerical relationships.",
-        "In this week's Language Arts work, explain or demonstrate “graph” using a specific example."
+        "Plot the simulated points (0,0), (2,6), and (4,12) with seconds on the horizontal axis and meters on the vertical axis; caption the trend."
       ]
     ],
     "17": [
