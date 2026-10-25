@@ -48,7 +48,11 @@ const grade7Contexts={
  13:["theme","point of view","identity","characterization","argument","textual evidence"],
  14:["central idea","claim","counterclaim","warrant","rhetoric","rebuttal"],
  15:["research question","primary source","secondary source","credibility","annotation","bibliography"],
- 16:["narrative voice","stanza","imagery","tone","convention","revision"]
+ 16:["narrative voice","stanza","imagery","tone","convention","revision"],
+ 17:["portfolio","reflection","synthesis","draft","curation","self-assessment"],
+ 18:["cell","structure","function","scientific communication","diagram","oral explanation"],
+ 19:["homeostasis","body system","evidence","source","reasoning","summary"],
+ 20:["inheritance","variation","trait","central idea","comparison","evidence"]
 };
 for(const [week,expected] of Object.entries(grade7Contexts)){
  const terms=grade7.weeks[week];
@@ -56,10 +60,10 @@ for(const [week,expected] of Object.entries(grade7Contexts)){
  for(const [i,term] of terms.entries()){
   assert(term[2].length>=120,"Week "+week+" term "+term[0]+" requires substantive context");
   assert(!/^In Grade 7 Week/.test(term[2]),"Generic prompt in Week "+week);
-  assert(/Week (13|14|15|16)/.test(term[2]),"Week-specific context absent: "+week);
+  assert(/Week (13|14|15|16|17|18|19|20)/.test(term[2]),"Week-specific context absent: "+week);
   assert(!/invent (an external|a source)|fabricat(e|ed) (a citation|citations)/i.test(term[2]),"Avoid instructing fabricated evidence");
  }
 }
 assert(grade7.practiceOnly===true,"Vocabulary remains formative only");
-console.log("PASS Grade 7 Weeks 13–16: 24 contextual practice prompts; mastery separate");
+console.log("PASS Grade 7 Weeks 13–20: 48 contextual practice prompts; mastery separate");
 console.log("PASS middle school 3-grade vocabulary static regression: "+total+" additional placements; browser certification outstanding");
