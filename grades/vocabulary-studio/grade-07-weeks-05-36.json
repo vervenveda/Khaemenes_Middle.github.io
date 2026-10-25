@@ -138,128 +138,128 @@
       [
         "radius",
         "The distance from a circle's center to its edge.",
-        "In Grade 7 Week 09 Language Arts, apply “radius” to a specific passage, source, diagram, or written argument."
+        "On a fictional circular-garden plan, label the radius and explain how a missing center mark could undermine the design claim."
       ],
       [
         "diameter",
         "A straight segment through a circle's center joining two points on the circle.",
-        "In Grade 7 Week 09 Language Arts, apply “diameter” to a specific passage, source, diagram, or written argument."
+        "Show that a garden circle with radius 4 m has diameter 8 m, then flag a fictional specification claiming the diameter is 4 m."
       ],
       [
         "circumference",
         "The distance around a circle.",
-        "In Grade 7 Week 09 Language Arts, apply “circumference” to a specific passage, source, diagram, or written argument."
+        "Estimate the distance around a circular garden of diameter 8 m as 8π m; distinguish perimeter from enclosed area."
       ],
       [
         "design claim",
         "A statement about a design that needs supporting evidence.",
-        "In Grade 7 Week 09 Language Arts, apply “design claim” to a specific passage, source, diagram, or written argument."
+        "Annotate a fictional circular-garden proposal: identify its claim, provided dimensions, and one missing measurement needed to verify it."
       ],
       [
         "technical explanation",
         "A precise account of how a system or procedure works.",
-        "In Grade 7 Week 09 Language Arts, apply “technical explanation” to a specific passage, source, diagram, or written argument."
+        "Write a technical explanation distinguishing circumference πd from area πr²; include an 8 m diameter example and units."
       ],
       [
         "justification",
         "Reasons and evidence supporting a choice or conclusion.",
-        "In Grade 7 Week 09 Language Arts, apply “justification” to a specific passage, source, diagram, or written argument."
+        "Defend or revise a fictional garden-design decision using a labeled diagram, calculation, source note, and one acknowledged assumption."
       ]
     ],
     "10": [
       [
         "surface area",
         "The total area of a solid's exposed faces.",
-        "In Grade 7 Week 10 Language Arts, apply “surface area” to a specific passage, source, diagram, or written argument."
+        "For a closed rectangular container measuring 4×3×2 cm, calculate 2(12+8+6)=52 cm² of surface area and label every face pair."
       ],
       [
         "volume",
         "The space occupied by a three-dimensional object.",
-        "In Grade 7 Week 10 Language Arts, apply “volume” to a specific passage, source, diagram, or written argument."
+        "Calculate the volume of a 4×3×2 cm rectangular container as 24 cm³; explain why square centimeters are inappropriate."
       ],
       [
         "dimension",
         "A measured extent such as length, width, or height.",
-        "In Grade 7 Week 10 Language Arts, apply “dimension” to a specific passage, source, diagram, or written argument."
+        "Identify the length, width, and height in a fictional 4×3×2 cm box specification and check consistent units before calculating."
       ],
       [
         "model",
         "A simplified representation explaining a system or idea.",
-        "In Grade 7 Week 10 Language Arts, apply “model” to a specific passage, source, diagram, or written argument."
+        "Sketch the container as a simplified three-dimensional model and describe one feature it omits about a real storage box."
       ],
       [
         "specification",
         "An explicit requirement defining a design or task.",
-        "In Grade 7 Week 10 Language Arts, apply “specification” to a specific passage, source, diagram, or written argument."
+        "Annotate a fictional storage-box specification, identifying which dimensions support volume and what additional data capacity needs."
       ],
       [
         "citation",
         "A reference identifying the source of information.",
-        "In Grade 7 Week 10 Language Arts, apply “citation” to a specific passage, source, diagram, or written argument."
+        "Write a citation note pointing to the provided Academy Week 10 design specification; do not invent an external study or measurement."
       ]
     ],
     "11": [
       [
         "probability",
         "A measure of how likely an event is.",
-        "In Grade 7 Week 11 Language Arts, apply “probability” to a specific passage, source, diagram, or written argument."
+        "In the original fictional game-club notice, explain why 8 blue outcomes in 10 spins estimate observed frequency but do not establish true probability."
       ],
       [
         "fairness",
         "Equitable treatment or equal chances according to the relevant rules.",
-        "In Grade 7 Week 11 Language Arts, apply “fairness” to a specific passage, source, diagram, or written argument."
+        "Evaluate the spinner club's claim of perfect fairness; contrast equal-sized spinner regions with only 10 observed outcomes."
       ],
       [
         "random event",
         "An outcome governed by chance within a defined process.",
-        "In Grade 7 Week 11 Language Arts, apply “random event” to a specific passage, source, diagram, or written argument."
+        "Describe one blue outcome as a random event, then explain why a run of blue spins alone does not prove the spinner is biased."
       ],
       [
         "sample space",
         "The set of all possible outcomes of a probability experiment.",
-        "In Grade 7 Week 11 Language Arts, apply “sample space” to a specific passage, source, diagram, or written argument."
+        "List all possible spinner outcomes only if the Week 11 passage or a labeled spinner diagram supplies them; identify missing information otherwise."
       ],
       [
         "prediction",
         "A statement about an expected outcome.",
-        "In Grade 7 Week 11 Language Arts, apply “prediction” to a specific passage, source, diagram, or written argument."
+        "Rewrite 'blue is clearly the winning choice' as a cautious prediction limited by 10 spins and specify a stronger test."
       ],
       [
         "evidence",
         "Information supporting a claim.",
-        "In Grade 7 Week 11 Language Arts, apply “evidence” to a specific passage, source, diagram, or written argument."
+        "Underline the claim and 8-of-10 result in the fictional game-club notice; distinguish observed evidence from the unsupported inference of fairness."
       ]
     ],
     "12": [
       [
         "statistics",
         "The study of collecting and interpreting data.",
-        "In Grade 7 Week 12 Language Arts, apply “statistics” to a specific passage, source, diagram, or written argument."
+        "Create a fictional table of survey responses with a clear unit and source note; identify what statistical question the data can address."
       ],
       [
         "inference",
         "A conclusion reached from evidence and reasoning.",
-        "In Grade 7 Week 12 Language Arts, apply “inference” to a specific passage, source, diagram, or written argument."
+        "Write an inference about a fictional classroom survey, then state why its conclusions may not apply to every seventh grader."
       ],
       [
         "distribution",
         "The arrangement and frequency of data values.",
-        "In Grade 7 Week 12 Language Arts, apply “distribution” to a specific passage, source, diagram, or written argument."
+        "Describe a fictional six-response data distribution with counts or a dot plot, labeling its mode and any unusual values."
       ],
       [
         "sample",
         "A subset selected from a larger group.",
-        "In Grade 7 Week 12 Language Arts, apply “sample” to a specific passage, source, diagram, or written argument."
+        "Identify who was included in a fictional convenience sample and explain which population the sample cannot reliably represent."
       ],
       [
         "variability",
         "Differences among data values.",
-        "In Grade 7 Week 12 Language Arts, apply “variability” to a specific passage, source, diagram, or written argument."
+        "Compare two sets of fictional responses and explain how their variability affects any attempt to generalize."
       ],
       [
         "qualification",
         "A limitation added to make a claim accurate.",
-        "In Grade 7 Week 12 Language Arts, apply “qualification” to a specific passage, source, diagram, or written argument."
+        "Revise 'all students agree' to specify the fictional survey's sample size, timeframe, and uncertainty; identify evidence still needed."
       ]
     ],
     "13": [
