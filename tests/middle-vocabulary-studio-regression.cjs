@@ -6,7 +6,7 @@ const html=fs.readFileSync(path.join(root,base,"index.html"),"utf8");
 const learningBridge=fs.readFileSync(path.join(root,"assets/khaemenes-middle-learning-context.js"),"utf8");
 assert(learningBridge.includes("installVocabularyEntrance"),"Shared lesson bridge must link to vocabulary practice");
 assert(learningBridge.includes("khaemenesVocabularyStudioEntrance"),"Lesson entrance must be idempotent");
-assert(learningBridge.includes('grade-"+'),"Lesson entrance must derive the current grade");
+assert(learningBridge.includes('?grade="+grade+"&week="+week'),"Lesson entrance must derive current grade and week");
 assert(learningBridge.includes('week="+week'),"Lesson entrance must preserve the selected week");
 assert(learningBridge.includes("../../../../grades/vocabulary-studio/index.html?grade="),"Lesson link must target the shared Studio with grade and week");
 for(const grade of [6,7,8])for(const week of [1,5,16,36]){
