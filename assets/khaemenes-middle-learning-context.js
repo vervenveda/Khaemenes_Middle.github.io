@@ -136,6 +136,25 @@ function publish(){
   global.dispatchEvent(new CustomEvent("khaemenes-middle-context-updated",{detail:{learnerId:context.learnerId,grade:context.grade,updatedAt:context.updatedAt}}));
   return context;
 }
+/* Contextual, formative-only Vocabulary Studio entrance on Language Arts lesson pages. */
+function installVocabularyEntrance(){
+  const pathname=String(global.location?.pathname||"");
+  const match=pathname.match(/\/grades\/grade-(0[6-8])\/subjects\/language-arts\/week-(\d{1,2})\.html$/i);
+  if(!match||global.document?.getElementById("khaemenesVocabularyStudioEntrance"))return;
+  const heading=global.document.querySelector("main .heading");
+  if(!heading)return;
+  const grade=String(Number(match[1])),week=String(Math.max(1,Math.min(36,Number(match[2]))));
+  const wrap=global.document.createElement("p");
+  wrap.id="khaemenesVocabularyStudioEntrance";
+  const link=global.document.createElement("a");
+  link.className="button";
+  link.href="../../../../grades/vocabulary-studio/index.html?grade="+grade+"&week="+week;
+  link.textContent="Practice this week's six vocabulary terms";
+  link.setAttribute("aria-label","Open formative vocabulary practice for Grade "+grade+", Week "+week);
+  wrap.append(link);
+  heading.append(wrap);
+}
+if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",installVocabularyEntrance,{once:true});else installVocabularyEntrance();
 let timer=0;function schedule(){clearTimeout(timer);timer=global.setTimeout(publish,70)}
 if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",schedule,{once:true});else schedule();
 ["pageshow","khaemenes-family-changed","khaemenes-middle-ledger-recorded","khaemenes-middle-assessment-recorded","khaemenes-middle-grade-continuity-synced"].forEach(e=>global.addEventListener(e,schedule));
