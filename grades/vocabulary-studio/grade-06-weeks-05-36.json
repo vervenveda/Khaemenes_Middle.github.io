@@ -56,7 +56,7 @@
       ],
       [
         "signed number",
-        "A number marked positive or negative, including zero.",
+        "A number written with a positive or negative sign; zero is neither positive nor negative.",
         "Place -3 and 3 on a modern number line; explain their relationship and avoid attributing this exact diagram to ancient writers."
       ],
       [
@@ -169,7 +169,7 @@
     "10": [
       [
         "inequality",
-        "A mathematical statement that two quantities are not necessarily equal.",
+        "A comparison using <, >, ≤, or ≥ to show how two quantities relate.",
         "Translate 'the room holds no more than 20 people' into x≤20; test whether 20 and 21 satisfy the rule."
       ],
       [
