@@ -38,4 +38,10 @@ for(let week=5;week<=36;week++)for(const term of enriched.weeks[week]){
  assert(term[2].length>=75,"Expected substantive lesson-specific application in Grade 6 Week "+week+" "+term[0]);
 }
 console.log("PASS Grade 6 Weeks 05–36: 192 lesson-grounded application prompts");
+const grade7=JSON.parse(fs.readFileSync(path.join(root,base,"grade-07-weeks-05-36.json"),"utf8"));
+for(let week=5;week<=8;week++)for(const term of grade7.weeks[week]){
+ assert(!term[2].startsWith("In Grade 7 Week"),"Generic Grade 7 prompt in Week "+week);
+ assert(term[2].length>=75,"Grade 7 Week "+week+" application requires specific evidence");
+}
+console.log("PASS Grade 7 Weeks 05–08: 24 lesson-grounded application prompts");
 console.log("PASS middle school 3-grade vocabulary static regression: "+total+" additional placements; browser certification outstanding");
