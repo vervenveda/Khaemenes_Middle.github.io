@@ -158,5 +158,15 @@ for(const [week,expected] of Object.entries(grade8Context)){
  }
 }
 assert.equal(grade8.practiceOnly,true,"Grade 8 enrichment cannot alter mastery");
+// Five forensic instructional safeguards: precision, sign, geometry, and task alignment.
+const g6=JSON.parse(fs.readFileSync(path.join(root,base,"grade-06-weeks-05-36.json"),"utf8"));
+assert(g6.weeks[10][0][1].includes("≤")&&g6.weeks[10][0][1].includes("≥"),"Inequality definition must distinguish comparison operators");
+assert(g6.weeks[6][3][1].includes("zero is neither positive nor negative"),"Zero must not be described as positive or negative");
+assert(grade8.weeks[10][2][1].includes("on or within"),"Sphere solid definition must fit volume task");
+assert(grade8.weeks[7][1][1].includes("geometric transformation"),"Translation definition must match geometric assignment");
+assert(grade8.weeks[7][2][1].includes("In geometry"),"Reflection definition must match geometric assignment");
+assert(grade8.weeks[36][2][2].includes("claim–evidence–reasoning"),"Transfer prompt must apply previous skills to a new context");
+assert(grade8.weeks[36][3][2].includes("author's expertise"),"Source evaluation prompt must evaluate a source");
+console.log("PASS five forensic curriculum corrections and six-term placement integrity");
 console.log("PASS Grade 8 Weeks 05–36: 192 lesson-specific formative applications");
 console.log("PASS middle school 3-grade vocabulary static regression: "+total+" additional placements; browser certification outstanding");
