@@ -87,4 +87,22 @@ for(const [week,expected] of Object.entries(grade7Contexts)){
 }
 assert(grade7.practiceOnly===true,"Vocabulary remains formative only");
 console.log("PASS Grade 7 Weeks 13–36: 144 contextual practice prompts; mastery separate");
+const grade8=JSON.parse(fs.readFileSync(path.join(root,base,"grade-08-weeks-05-36.json"),"utf8"));
+const grade8Context={
+ 5:["system of equations","competing explanation","source credibility","solution","substitution","justification"],
+ 6:["exponent","scientific notation","magnitude","research synthesis","precision","paraphrase"],
+ 7:["transformation","translation","reflection","rotation","congruence","justification"],
+ 8:["dilation","similarity","scale factor","corresponding sides","proportional reasoning","evidence"]
+};
+for(const [week,expected] of Object.entries(grade8Context)){
+ const terms=grade8.weeks[week];
+ assert.deepEqual(terms.map(t=>t[0]),expected,"Grade 8 Week "+week+" bank changed");
+ for(const term of terms){
+  assert(term[2].length>=120,"Grade 8 term "+term[0]+" needs a substantive task");
+  assert(!/^In Grade 8 Week/.test(term[2]),"Generic Grade 8 Week "+week+" exercise");
+  assert(term[2].includes("Week 0"+week),"Grade 8 task missing week-specific context");
+ }
+}
+assert.equal(grade8.practiceOnly,true,"Grade 8 enrichment cannot alter mastery");
+console.log("PASS Grade 8 Weeks 05–08: 24 lesson-specific formative applications");
 console.log("PASS middle school 3-grade vocabulary static regression: "+total+" additional placements; browser certification outstanding");
