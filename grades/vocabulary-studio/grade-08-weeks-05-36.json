@@ -1,0 +1,1034 @@
+{
+  "schema": "khaemenes-middle-vocabulary-v1",
+  "grade": 8,
+  "subject": "language-arts",
+  "status": "editorial-draft",
+  "practiceOnly": true,
+  "source": "grades/grade-08/subjects/language-arts/week-NN.html",
+  "weeks": {
+    "5": [
+      [
+        "system of equations",
+        "Two or more equations considered together to find common solutions.",
+        "In Grade 8 Week 05 Language Arts, support an explanation of “system of equations” using a source, model, or example."
+      ],
+      [
+        "competing explanation",
+        "An alternative account offered to explain the same evidence.",
+        "In Grade 8 Week 05 Language Arts, support an explanation of “competing explanation” using a source, model, or example."
+      ],
+      [
+        "source credibility",
+        "The trustworthiness of a source for a specific question.",
+        "In Grade 8 Week 05 Language Arts, support an explanation of “source credibility” using a source, model, or example."
+      ],
+      [
+        "solution",
+        "A value or response satisfying the stated conditions.",
+        "In Grade 8 Week 05 Language Arts, support an explanation of “solution” using a source, model, or example."
+      ],
+      [
+        "substitution",
+        "Replacing a variable with an equivalent value or expression.",
+        "In Grade 8 Week 05 Language Arts, support an explanation of “substitution” using a source, model, or example."
+      ],
+      [
+        "justification",
+        "An explanation showing why evidence supports a conclusion.",
+        "In Grade 8 Week 05 Language Arts, support an explanation of “justification” using a source, model, or example."
+      ]
+    ],
+    "6": [
+      [
+        "exponent",
+        "A number indicating how many times a base is used as a factor.",
+        "In Grade 8 Week 06 Language Arts, support an explanation of “exponent” using a source, model, or example."
+      ],
+      [
+        "scientific notation",
+        "A way to write very large or small numbers as a value times a power of ten.",
+        "In Grade 8 Week 06 Language Arts, support an explanation of “scientific notation” using a source, model, or example."
+      ],
+      [
+        "magnitude",
+        "The size or extent of a quantity.",
+        "In Grade 8 Week 06 Language Arts, support an explanation of “magnitude” using a source, model, or example."
+      ],
+      [
+        "research synthesis",
+        "Integrating multiple credible sources into a reasoned account.",
+        "In Grade 8 Week 06 Language Arts, support an explanation of “research synthesis” using a source, model, or example."
+      ],
+      [
+        "precision",
+        "Exactness in language or measurement.",
+        "In Grade 8 Week 06 Language Arts, support an explanation of “precision” using a source, model, or example."
+      ],
+      [
+        "paraphrase",
+        "A restatement in one's own words that preserves meaning.",
+        "In Grade 8 Week 06 Language Arts, support an explanation of “paraphrase” using a source, model, or example."
+      ]
+    ],
+    "7": [
+      [
+        "transformation",
+        "A change in position, orientation, or size of a figure.",
+        "In Grade 8 Week 07 Language Arts, support an explanation of “transformation” using a source, model, or example."
+      ],
+      [
+        "translation",
+        "Rendering meaning from one language into another.",
+        "In Grade 8 Week 07 Language Arts, support an explanation of “translation” using a source, model, or example."
+      ],
+      [
+        "reflection",
+        "Thoughtful consideration of learning and improvement.",
+        "In Grade 8 Week 07 Language Arts, support an explanation of “reflection” using a source, model, or example."
+      ],
+      [
+        "rotation",
+        "A transformation turning a figure around a fixed point.",
+        "In Grade 8 Week 07 Language Arts, support an explanation of “rotation” using a source, model, or example."
+      ],
+      [
+        "congruence",
+        "A relationship between figures having the same shape and size.",
+        "In Grade 8 Week 07 Language Arts, support an explanation of “congruence” using a source, model, or example."
+      ],
+      [
+        "justification",
+        "An explanation showing why evidence supports a conclusion.",
+        "In Grade 8 Week 07 Language Arts, support an explanation of “justification” using a source, model, or example."
+      ]
+    ],
+    "8": [
+      [
+        "dilation",
+        "A transformation scaling distances from a center.",
+        "In Grade 8 Week 08 Language Arts, support an explanation of “dilation” using a source, model, or example."
+      ],
+      [
+        "similarity",
+        "A relationship between figures with equal corresponding angles and proportional sides.",
+        "In Grade 8 Week 08 Language Arts, support an explanation of “similarity” using a source, model, or example."
+      ],
+      [
+        "scale factor",
+        "A ratio relating corresponding lengths in similar figures.",
+        "In Grade 8 Week 08 Language Arts, support an explanation of “scale factor” using a source, model, or example."
+      ],
+      [
+        "corresponding sides",
+        "Sides occupying matching positions in related figures.",
+        "In Grade 8 Week 08 Language Arts, support an explanation of “corresponding sides” using a source, model, or example."
+      ],
+      [
+        "proportional reasoning",
+        "Reasoning using equivalent ratios or multiplicative relationships.",
+        "In Grade 8 Week 08 Language Arts, support an explanation of “proportional reasoning” using a source, model, or example."
+      ],
+      [
+        "evidence",
+        "Information supporting a claim.",
+        "In Grade 8 Week 08 Language Arts, support an explanation of “evidence” using a source, model, or example."
+      ]
+    ],
+    "9": [
+      [
+        "Pythagorean theorem",
+        "In a right triangle, the sum of the squares of the legs equals the square of the hypotenuse.",
+        "In Grade 8 Week 09 Language Arts, support an explanation of “Pythagorean theorem” using a source, model, or example."
+      ],
+      [
+        "hypotenuse",
+        "The side opposite the right angle in a right triangle.",
+        "In Grade 8 Week 09 Language Arts, support an explanation of “hypotenuse” using a source, model, or example."
+      ],
+      [
+        "right triangle",
+        "A triangle containing one ninety-degree angle.",
+        "In Grade 8 Week 09 Language Arts, support an explanation of “right triangle” using a source, model, or example."
+      ],
+      [
+        "distance",
+        "The amount of separation between positions.",
+        "In Grade 8 Week 09 Language Arts, support an explanation of “distance” using a source, model, or example."
+      ],
+      [
+        "proof",
+        "A reasoned demonstration that a mathematical statement follows from accepted facts.",
+        "In Grade 8 Week 09 Language Arts, support an explanation of “proof” using a source, model, or example."
+      ],
+      [
+        "counterexample",
+        "An example showing that a general claim is false.",
+        "In Grade 8 Week 09 Language Arts, support an explanation of “counterexample” using a source, model, or example."
+      ]
+    ],
+    "10": [
+      [
+        "cylinder",
+        "A solid with two parallel congruent circular bases joined by a curved surface.",
+        "In Grade 8 Week 10 Language Arts, support an explanation of “cylinder” using a source, model, or example."
+      ],
+      [
+        "cone",
+        "A solid tapering from a circular base to a point.",
+        "In Grade 8 Week 10 Language Arts, support an explanation of “cone” using a source, model, or example."
+      ],
+      [
+        "sphere",
+        "The set of three-dimensional points equally distant from a center.",
+        "In Grade 8 Week 10 Language Arts, support an explanation of “sphere” using a source, model, or example."
+      ],
+      [
+        "volume",
+        "The space occupied by a three-dimensional object.",
+        "In Grade 8 Week 10 Language Arts, support an explanation of “volume” using a source, model, or example."
+      ],
+      [
+        "capacity",
+        "The amount a container can hold.",
+        "In Grade 8 Week 10 Language Arts, support an explanation of “capacity” using a source, model, or example."
+      ],
+      [
+        "technical evidence",
+        "Measurements or documented specifications supporting a technical claim.",
+        "In Grade 8 Week 10 Language Arts, support an explanation of “technical evidence” using a source, model, or example."
+      ]
+    ],
+    "11": [
+      [
+        "bivariate data",
+        "Paired observations of two variables.",
+        "In Grade 8 Week 11 Language Arts, support an explanation of “bivariate data” using a source, model, or example."
+      ],
+      [
+        "scatter plot",
+        "A graph showing paired numerical values as points.",
+        "In Grade 8 Week 11 Language Arts, support an explanation of “scatter plot” using a source, model, or example."
+      ],
+      [
+        "linear model",
+        "An equation or line used to represent a relationship between variables.",
+        "In Grade 8 Week 11 Language Arts, support an explanation of “linear model” using a source, model, or example."
+      ],
+      [
+        "association",
+        "A pattern indicating variables are related.",
+        "In Grade 8 Week 11 Language Arts, support an explanation of “association” using a source, model, or example."
+      ],
+      [
+        "outlier",
+        "A data point notably different from the overall pattern.",
+        "In Grade 8 Week 11 Language Arts, support an explanation of “outlier” using a source, model, or example."
+      ],
+      [
+        "correlation",
+        "A relationship between patterns without necessarily proving cause.",
+        "In Grade 8 Week 11 Language Arts, support an explanation of “correlation” using a source, model, or example."
+      ]
+    ],
+    "12": [
+      [
+        "probability",
+        "A measure of how likely an event is.",
+        "In Grade 8 Week 12 Language Arts, support an explanation of “probability” using a source, model, or example."
+      ],
+      [
+        "risk",
+        "The chance and possible consequences of an unwanted outcome.",
+        "In Grade 8 Week 12 Language Arts, support an explanation of “risk” using a source, model, or example."
+      ],
+      [
+        "statistical inference",
+        "A conclusion about a wider group drawn from sample data.",
+        "In Grade 8 Week 12 Language Arts, support an explanation of “statistical inference” using a source, model, or example."
+      ],
+      [
+        "sample",
+        "A subset of a larger population selected for study.",
+        "In Grade 8 Week 12 Language Arts, support an explanation of “sample” using a source, model, or example."
+      ],
+      [
+        "uncertainty",
+        "Limits on how confidently evidence supports a conclusion.",
+        "In Grade 8 Week 12 Language Arts, support an explanation of “uncertainty” using a source, model, or example."
+      ],
+      [
+        "qualification",
+        "A condition limiting or refining a claim.",
+        "In Grade 8 Week 12 Language Arts, support an explanation of “qualification” using a source, model, or example."
+      ]
+    ],
+    "13": [
+      [
+        "theme",
+        "An important idea developed through a literary work.",
+        "In Grade 8 Week 13 Language Arts, support an explanation of “theme” using a source, model, or example."
+      ],
+      [
+        "perspective",
+        "A viewpoint influencing how information is interpreted.",
+        "In Grade 8 Week 13 Language Arts, support an explanation of “perspective” using a source, model, or example."
+      ],
+      [
+        "characterization",
+        "The methods used to reveal a character's qualities.",
+        "In Grade 8 Week 13 Language Arts, support an explanation of “characterization” using a source, model, or example."
+      ],
+      [
+        "modern connection",
+        "A supported relationship between an earlier work and present-day concerns.",
+        "In Grade 8 Week 13 Language Arts, support an explanation of “modern connection” using a source, model, or example."
+      ],
+      [
+        "close reading",
+        "Detailed examination of a text's language and meaning.",
+        "In Grade 8 Week 13 Language Arts, support an explanation of “close reading” using a source, model, or example."
+      ],
+      [
+        "textual evidence",
+        "Specific details from a text supporting an interpretation.",
+        "In Grade 8 Week 13 Language Arts, support an explanation of “textual evidence” using a source, model, or example."
+      ]
+    ],
+    "14": [
+      [
+        "media literacy",
+        "The ability to critically interpret and evaluate media messages.",
+        "In Grade 8 Week 14 Language Arts, support an explanation of “media literacy” using a source, model, or example."
+      ],
+      [
+        "rhetoric",
+        "The deliberate use of language to affect an audience.",
+        "In Grade 8 Week 14 Language Arts, support an explanation of “rhetoric” using a source, model, or example."
+      ],
+      [
+        "claim",
+        "A statement needing evidence or reasoning.",
+        "In Grade 8 Week 14 Language Arts, support an explanation of “claim” using a source, model, or example."
+      ],
+      [
+        "counterclaim",
+        "A position challenging an initial claim.",
+        "In Grade 8 Week 14 Language Arts, support an explanation of “counterclaim” using a source, model, or example."
+      ],
+      [
+        "misinformation",
+        "False or misleading information, regardless of intent.",
+        "In Grade 8 Week 14 Language Arts, support an explanation of “misinformation” using a source, model, or example."
+      ],
+      [
+        "verification",
+        "Checking whether claims agree with reliable evidence.",
+        "In Grade 8 Week 14 Language Arts, support an explanation of “verification” using a source, model, or example."
+      ]
+    ],
+    "15": [
+      [
+        "research question",
+        "A focused question investigated through evidence.",
+        "In Grade 8 Week 15 Language Arts, support an explanation of “research question” using a source, model, or example."
+      ],
+      [
+        "literature review",
+        "A critical synthesis of existing writing on a research topic.",
+        "In Grade 8 Week 15 Language Arts, support an explanation of “literature review” using a source, model, or example."
+      ],
+      [
+        "primary source",
+        "Evidence created during the period or event under study.",
+        "In Grade 8 Week 15 Language Arts, support an explanation of “primary source” using a source, model, or example."
+      ],
+      [
+        "secondary source",
+        "An account interpreting or analyzing other sources.",
+        "In Grade 8 Week 15 Language Arts, support an explanation of “secondary source” using a source, model, or example."
+      ],
+      [
+        "synthesis",
+        "Combining evidence from sources into a broader understanding.",
+        "In Grade 8 Week 15 Language Arts, support an explanation of “synthesis” using a source, model, or example."
+      ],
+      [
+        "citation",
+        "A reference identifying the origin of information.",
+        "In Grade 8 Week 15 Language Arts, support an explanation of “citation” using a source, model, or example."
+      ]
+    ],
+    "16": [
+      [
+        "narrative voice",
+        "The distinctive way a story is told.",
+        "In Grade 8 Week 16 Language Arts, support an explanation of “narrative voice” using a source, model, or example."
+      ],
+      [
+        "poetic form",
+        "The structural pattern of a poem, including lineation and rhythm.",
+        "In Grade 8 Week 16 Language Arts, support an explanation of “poetic form” using a source, model, or example."
+      ],
+      [
+        "imagery",
+        "Words evoking sensory experiences.",
+        "In Grade 8 Week 16 Language Arts, support an explanation of “imagery” using a source, model, or example."
+      ],
+      [
+        "rhetorical choice",
+        "A deliberate language or structure decision affecting an audience.",
+        "In Grade 8 Week 16 Language Arts, support an explanation of “rhetorical choice” using a source, model, or example."
+      ],
+      [
+        "tone",
+        "The writer's or speaker's expressed attitude.",
+        "In Grade 8 Week 16 Language Arts, support an explanation of “tone” using a source, model, or example."
+      ],
+      [
+        "revision",
+        "Changes made to improve clarity or accuracy.",
+        "In Grade 8 Week 16 Language Arts, support an explanation of “revision” using a source, model, or example."
+      ]
+    ],
+    "17": [
+      [
+        "portfolio",
+        "A selected collection documenting learning.",
+        "In Grade 8 Week 17 Language Arts, support an explanation of “portfolio” using a source, model, or example."
+      ],
+      [
+        "self-assessment",
+        "Evaluation of one's work against explicit learning criteria.",
+        "In Grade 8 Week 17 Language Arts, support an explanation of “self-assessment” using a source, model, or example."
+      ],
+      [
+        "draft",
+        "An early version of writing.",
+        "In Grade 8 Week 17 Language Arts, support an explanation of “draft” using a source, model, or example."
+      ],
+      [
+        "revision",
+        "Changes made to improve clarity or accuracy.",
+        "In Grade 8 Week 17 Language Arts, support an explanation of “revision” using a source, model, or example."
+      ],
+      [
+        "synthesis",
+        "Combining evidence from sources into a broader understanding.",
+        "In Grade 8 Week 17 Language Arts, support an explanation of “synthesis” using a source, model, or example."
+      ],
+      [
+        "reflection",
+        "Thoughtful consideration of learning and improvement.",
+        "In Grade 8 Week 17 Language Arts, support an explanation of “reflection” using a source, model, or example."
+      ]
+    ],
+    "18": [
+      [
+        "atom",
+        "The smallest unit of an element retaining its chemical identity.",
+        "In Grade 8 Week 18 Language Arts, support an explanation of “atom” using a source, model, or example."
+      ],
+      [
+        "chemical reaction",
+        "A process in which substances are transformed into other substances.",
+        "In Grade 8 Week 18 Language Arts, support an explanation of “chemical reaction” using a source, model, or example."
+      ],
+      [
+        "reactant",
+        "A substance used up or changed during a chemical reaction.",
+        "In Grade 8 Week 18 Language Arts, support an explanation of “reactant” using a source, model, or example."
+      ],
+      [
+        "product",
+        "A substance formed in a chemical reaction.",
+        "In Grade 8 Week 18 Language Arts, support an explanation of “product” using a source, model, or example."
+      ],
+      [
+        "scientific model",
+        "A representation used to explain or predict a scientific system.",
+        "In Grade 8 Week 18 Language Arts, support an explanation of “scientific model” using a source, model, or example."
+      ],
+      [
+        "oral explanation",
+        "A spoken account making an idea understandable.",
+        "In Grade 8 Week 18 Language Arts, support an explanation of “oral explanation” using a source, model, or example."
+      ]
+    ],
+    "19": [
+      [
+        "force",
+        "A push or pull capable of changing motion.",
+        "In Grade 8 Week 19 Language Arts, support an explanation of “force” using a source, model, or example."
+      ],
+      [
+        "motion",
+        "Change in position over time.",
+        "In Grade 8 Week 19 Language Arts, support an explanation of “motion” using a source, model, or example."
+      ],
+      [
+        "engineering constraint",
+        "A limit or requirement that a design must satisfy.",
+        "In Grade 8 Week 19 Language Arts, support an explanation of “engineering constraint” using a source, model, or example."
+      ],
+      [
+        "design tradeoff",
+        "A compromise between desirable design goals.",
+        "In Grade 8 Week 19 Language Arts, support an explanation of “design tradeoff” using a source, model, or example."
+      ],
+      [
+        "textual evidence",
+        "Specific details from a text supporting an interpretation.",
+        "In Grade 8 Week 19 Language Arts, support an explanation of “textual evidence” using a source, model, or example."
+      ],
+      [
+        "causation",
+        "A relationship in which one event or factor influences another.",
+        "In Grade 8 Week 19 Language Arts, support an explanation of “causation” using a source, model, or example."
+      ]
+    ],
+    "20": [
+      [
+        "energy",
+        "A quantity describing the ability to produce change.",
+        "In Grade 8 Week 20 Language Arts, support an explanation of “energy” using a source, model, or example."
+      ],
+      [
+        "wave",
+        "A disturbance transferring energy.",
+        "In Grade 8 Week 20 Language Arts, support an explanation of “wave” using a source, model, or example."
+      ],
+      [
+        "information transfer",
+        "The movement of information from a source to a receiver.",
+        "In Grade 8 Week 20 Language Arts, support an explanation of “information transfer” using a source, model, or example."
+      ],
+      [
+        "central idea",
+        "The primary idea developed in informational writing.",
+        "In Grade 8 Week 20 Language Arts, support an explanation of “central idea” using a source, model, or example."
+      ],
+      [
+        "analogy",
+        "A comparison used to explain an idea.",
+        "In Grade 8 Week 20 Language Arts, support an explanation of “analogy” using a source, model, or example."
+      ],
+      [
+        "explanation",
+        "An account showing how or why something happens.",
+        "In Grade 8 Week 20 Language Arts, support an explanation of “explanation” using a source, model, or example."
+      ]
+    ],
+    "21": [
+      [
+        "cosmic scale",
+        "The immense distances and times used to describe the universe.",
+        "In Grade 8 Week 21 Language Arts, support an explanation of “cosmic scale” using a source, model, or example."
+      ],
+      [
+        "orbit",
+        "The curved path of an object moving around another under gravity.",
+        "In Grade 8 Week 21 Language Arts, support an explanation of “orbit” using a source, model, or example."
+      ],
+      [
+        "astronomical evidence",
+        "Observations supporting explanations about objects beyond Earth.",
+        "In Grade 8 Week 21 Language Arts, support an explanation of “astronomical evidence” using a source, model, or example."
+      ],
+      [
+        "perspective",
+        "A viewpoint influencing how information is interpreted.",
+        "In Grade 8 Week 21 Language Arts, support an explanation of “perspective” using a source, model, or example."
+      ],
+      [
+        "model",
+        "A simplified representation for study or explanation.",
+        "In Grade 8 Week 21 Language Arts, support an explanation of “model” using a source, model, or example."
+      ],
+      [
+        "inference",
+        "A conclusion drawn from evidence and reasoning.",
+        "In Grade 8 Week 21 Language Arts, support an explanation of “inference” using a source, model, or example."
+      ]
+    ],
+    "22": [
+      [
+        "geologic time",
+        "The immense span of Earth's history represented in rocks and fossils.",
+        "In Grade 8 Week 22 Language Arts, support an explanation of “geologic time” using a source, model, or example."
+      ],
+      [
+        "fossil",
+        "Preserved remains, traces, or impressions of ancient life.",
+        "In Grade 8 Week 22 Language Arts, support an explanation of “fossil” using a source, model, or example."
+      ],
+      [
+        "evolution",
+        "Change in heritable characteristics of populations across generations.",
+        "In Grade 8 Week 22 Language Arts, support an explanation of “evolution” using a source, model, or example."
+      ],
+      [
+        "corroboration",
+        "Independent evidence supporting a claim.",
+        "In Grade 8 Week 22 Language Arts, support an explanation of “corroboration” using a source, model, or example."
+      ],
+      [
+        "scientific argument",
+        "A claim supported with scientific evidence and reasoning.",
+        "In Grade 8 Week 22 Language Arts, support an explanation of “scientific argument” using a source, model, or example."
+      ],
+      [
+        "limitation",
+        "A restriction on what an investigation or claim can establish.",
+        "In Grade 8 Week 22 Language Arts, support an explanation of “limitation” using a source, model, or example."
+      ]
+    ],
+    "23": [
+      [
+        "inheritance",
+        "The passing of genetic material from parents to offspring.",
+        "In Grade 8 Week 23 Language Arts, support an explanation of “inheritance” using a source, model, or example."
+      ],
+      [
+        "genotype",
+        "An organism's genetic makeup for specified traits.",
+        "In Grade 8 Week 23 Language Arts, support an explanation of “genotype” using a source, model, or example."
+      ],
+      [
+        "phenotype",
+        "Observable characteristics influenced by genes and environment.",
+        "In Grade 8 Week 23 Language Arts, support an explanation of “phenotype” using a source, model, or example."
+      ],
+      [
+        "bioethics",
+        "Ethical questions arising in biology and medicine.",
+        "In Grade 8 Week 23 Language Arts, support an explanation of “bioethics” using a source, model, or example."
+      ],
+      [
+        "credibility",
+        "The degree to which a speaker or source can be trusted.",
+        "In Grade 8 Week 23 Language Arts, support an explanation of “credibility” using a source, model, or example."
+      ],
+      [
+        "consent",
+        "An informed, voluntary agreement to an action.",
+        "In Grade 8 Week 23 Language Arts, support an explanation of “consent” using a source, model, or example."
+      ]
+    ],
+    "24": [
+      [
+        "sustainability",
+        "Meeting current needs while safeguarding conditions for future generations.",
+        "In Grade 8 Week 24 Language Arts, support an explanation of “sustainability” using a source, model, or example."
+      ],
+      [
+        "ecosystem",
+        "Organisms and their physical environment interacting.",
+        "In Grade 8 Week 24 Language Arts, support an explanation of “ecosystem” using a source, model, or example."
+      ],
+      [
+        "human impact",
+        "Effects of human activity on people or environments.",
+        "In Grade 8 Week 24 Language Arts, support an explanation of “human impact” using a source, model, or example."
+      ],
+      [
+        "tradeoff",
+        "A choice in which improving one outcome may worsen another.",
+        "In Grade 8 Week 24 Language Arts, support an explanation of “tradeoff” using a source, model, or example."
+      ],
+      [
+        "research synthesis",
+        "Integrating multiple credible sources into a reasoned account.",
+        "In Grade 8 Week 24 Language Arts, support an explanation of “research synthesis” using a source, model, or example."
+      ],
+      [
+        "environmental claim",
+        "A statement about an environment supported by observations.",
+        "In Grade 8 Week 24 Language Arts, support an explanation of “environmental claim” using a source, model, or example."
+      ]
+    ],
+    "25": [
+      [
+        "constitutional principle",
+        "A guiding idea about the structure or limits of government.",
+        "In Grade 8 Week 25 Language Arts, support an explanation of “constitutional principle” using a source, model, or example."
+      ],
+      [
+        "consent of the governed",
+        "The principle that government authority rests on people's agreement.",
+        "In Grade 8 Week 25 Language Arts, support an explanation of “consent of the governed” using a source, model, or example."
+      ],
+      [
+        "natural rights",
+        "Rights regarded as belonging to people by virtue of being human.",
+        "In Grade 8 Week 25 Language Arts, support an explanation of “natural rights” using a source, model, or example."
+      ],
+      [
+        "primary source",
+        "Evidence created during the period or event under study.",
+        "In Grade 8 Week 25 Language Arts, support an explanation of “primary source” using a source, model, or example."
+      ],
+      [
+        "historical context",
+        "Past circumstances illuminating a text or event.",
+        "In Grade 8 Week 25 Language Arts, support an explanation of “historical context” using a source, model, or example."
+      ],
+      [
+        "civic claim",
+        "A claim about public life that requires supporting evidence.",
+        "In Grade 8 Week 25 Language Arts, support an explanation of “civic claim” using a source, model, or example."
+      ]
+    ],
+    "26": [
+      [
+        "revolution",
+        "A major change in political power or social organization.",
+        "In Grade 8 Week 26 Language Arts, support an explanation of “revolution” using a source, model, or example."
+      ],
+      [
+        "independence",
+        "Freedom from external political control or direction.",
+        "In Grade 8 Week 26 Language Arts, support an explanation of “independence” using a source, model, or example."
+      ],
+      [
+        "rhetoric",
+        "The deliberate use of language to affect an audience.",
+        "In Grade 8 Week 26 Language Arts, support an explanation of “rhetoric” using a source, model, or example."
+      ],
+      [
+        "grievance",
+        "A complaint about a perceived injustice.",
+        "In Grade 8 Week 26 Language Arts, support an explanation of “grievance” using a source, model, or example."
+      ],
+      [
+        "counterargument",
+        "A reasoned objection to an argument.",
+        "In Grade 8 Week 26 Language Arts, support an explanation of “counterargument” using a source, model, or example."
+      ],
+      [
+        "historical perspective",
+        "A viewpoint shaped by the conditions and experiences of an earlier period.",
+        "In Grade 8 Week 26 Language Arts, support an explanation of “historical perspective” using a source, model, or example."
+      ]
+    ],
+    "27": [
+      [
+        "constitution",
+        "A foundational set of principles defining a government.",
+        "In Grade 8 Week 27 Language Arts, support an explanation of “constitution” using a source, model, or example."
+      ],
+      [
+        "Bill of Rights",
+        "The first ten amendments to the United States Constitution.",
+        "In Grade 8 Week 27 Language Arts, support an explanation of “Bill of Rights” using a source, model, or example."
+      ],
+      [
+        "amendment",
+        "A formal addition or change to a legal text.",
+        "In Grade 8 Week 27 Language Arts, support an explanation of “amendment” using a source, model, or example."
+      ],
+      [
+        "federalism",
+        "Division of governing authority between national and regional governments.",
+        "In Grade 8 Week 27 Language Arts, support an explanation of “federalism” using a source, model, or example."
+      ],
+      [
+        "civic design",
+        "Planning institutions or practices for public participation.",
+        "In Grade 8 Week 27 Language Arts, support an explanation of “civic design” using a source, model, or example."
+      ],
+      [
+        "deliberation",
+        "Careful discussion of reasons before making a decision.",
+        "In Grade 8 Week 27 Language Arts, support an explanation of “deliberation” using a source, model, or example."
+      ]
+    ],
+    "28": [
+      [
+        "expansion",
+        "Growth into additional territory, activity, or influence.",
+        "In Grade 8 Week 28 Language Arts, support an explanation of “expansion” using a source, model, or example."
+      ],
+      [
+        "reform",
+        "A change intended to improve an existing institution or practice.",
+        "In Grade 8 Week 28 Language Arts, support an explanation of “reform” using a source, model, or example."
+      ],
+      [
+        "conflict",
+        "A serious disagreement or struggle.",
+        "In Grade 8 Week 28 Language Arts, support an explanation of “conflict” using a source, model, or example."
+      ],
+      [
+        "multiple perspectives",
+        "Different standpoints through which the same event may be understood.",
+        "In Grade 8 Week 28 Language Arts, support an explanation of “multiple perspectives” using a source, model, or example."
+      ],
+      [
+        "textual evidence",
+        "Specific details from a text supporting an interpretation.",
+        "In Grade 8 Week 28 Language Arts, support an explanation of “textual evidence” using a source, model, or example."
+      ],
+      [
+        "corroboration",
+        "Independent evidence supporting a claim.",
+        "In Grade 8 Week 28 Language Arts, support an explanation of “corroboration” using a source, model, or example."
+      ]
+    ],
+    "29": [
+      [
+        "Civil War",
+        "An armed conflict between organized groups within one country; in U.S. history, the 1861–1865 war.",
+        "In Grade 8 Week 29 Language Arts, support an explanation of “Civil War” using a source, model, or example."
+      ],
+      [
+        "Reconstruction",
+        "The U.S. period after the Civil War addressing reunification, rights, and political change.",
+        "In Grade 8 Week 29 Language Arts, support an explanation of “Reconstruction” using a source, model, or example."
+      ],
+      [
+        "emancipation",
+        "The process of freeing people from legal enslavement.",
+        "In Grade 8 Week 29 Language Arts, support an explanation of “emancipation” using a source, model, or example."
+      ],
+      [
+        "central idea",
+        "The primary idea developed in informational writing.",
+        "In Grade 8 Week 29 Language Arts, support an explanation of “central idea” using a source, model, or example."
+      ],
+      [
+        "continuity",
+        "A pattern or feature remaining across time.",
+        "In Grade 8 Week 29 Language Arts, support an explanation of “continuity” using a source, model, or example."
+      ],
+      [
+        "historical argument",
+        "A claim about the past supported by sources and reasoning.",
+        "In Grade 8 Week 29 Language Arts, support an explanation of “historical argument” using a source, model, or example."
+      ]
+    ],
+    "30": [
+      [
+        "economic system",
+        "A society's arrangements for producing and distributing goods and services.",
+        "In Grade 8 Week 30 Language Arts, support an explanation of “economic system” using a source, model, or example."
+      ],
+      [
+        "labor",
+        "Work performed to produce goods or services.",
+        "In Grade 8 Week 30 Language Arts, support an explanation of “labor” using a source, model, or example."
+      ],
+      [
+        "civic life",
+        "Participation in the shared affairs of a community.",
+        "In Grade 8 Week 30 Language Arts, support an explanation of “civic life” using a source, model, or example."
+      ],
+      [
+        "point of view",
+        "The perspective from which a text is told.",
+        "In Grade 8 Week 30 Language Arts, support an explanation of “point of view” using a source, model, or example."
+      ],
+      [
+        "data interpretation",
+        "Explanation of patterns and limitations in observed data.",
+        "In Grade 8 Week 30 Language Arts, support an explanation of “data interpretation” using a source, model, or example."
+      ],
+      [
+        "inequality",
+        "A difference or unequal distribution; in mathematics, a comparison of values.",
+        "In Grade 8 Week 30 Language Arts, support an explanation of “inequality” using a source, model, or example."
+      ]
+    ],
+    "31": [
+      [
+        "diplomacy",
+        "Communication and negotiation between governments or communities.",
+        "In Grade 8 Week 31 Language Arts, support an explanation of “diplomacy” using a source, model, or example."
+      ],
+      [
+        "cultural protocol",
+        "Established expectations governing respectful interaction in a community.",
+        "In Grade 8 Week 31 Language Arts, support an explanation of “cultural protocol” using a source, model, or example."
+      ],
+      [
+        "translation",
+        "Rendering meaning from one language into another.",
+        "In Grade 8 Week 31 Language Arts, support an explanation of “translation” using a source, model, or example."
+      ],
+      [
+        "audience",
+        "The people intended to receive a message.",
+        "In Grade 8 Week 31 Language Arts, support an explanation of “audience” using a source, model, or example."
+      ],
+      [
+        "argument evaluation",
+        "Assessing how strongly evidence and reasoning support an argument.",
+        "In Grade 8 Week 31 Language Arts, support an explanation of “argument evaluation” using a source, model, or example."
+      ],
+      [
+        "intercultural communication",
+        "The exchange of meaning across cultural contexts.",
+        "In Grade 8 Week 31 Language Arts, support an explanation of “intercultural communication” using a source, model, or example."
+      ]
+    ],
+    "32": [
+      [
+        "algorithm",
+        "A precise sequence of instructions for a task.",
+        "In Grade 8 Week 32 Language Arts, support an explanation of “algorithm” using a source, model, or example."
+      ],
+      [
+        "artificial intelligence",
+        "Computer systems performing tasks associated with learning, inference, or decision-making.",
+        "In Grade 8 Week 32 Language Arts, support an explanation of “artificial intelligence” using a source, model, or example."
+      ],
+      [
+        "data ethics",
+        "Principles guiding responsible collection and use of information.",
+        "In Grade 8 Week 32 Language Arts, support an explanation of “data ethics” using a source, model, or example."
+      ],
+      [
+        "algorithmic bias",
+        "Systematic unfairness or distortion in algorithmic outputs.",
+        "In Grade 8 Week 32 Language Arts, support an explanation of “algorithmic bias” using a source, model, or example."
+      ],
+      [
+        "transparency",
+        "Openness about methods, purposes, and limitations.",
+        "In Grade 8 Week 32 Language Arts, support an explanation of “transparency” using a source, model, or example."
+      ],
+      [
+        "source evaluation",
+        "Judging sources for relevance, accuracy, and reliability.",
+        "In Grade 8 Week 32 Language Arts, support an explanation of “source evaluation” using a source, model, or example."
+      ]
+    ],
+    "33": [
+      [
+        "transition plan",
+        "A sequence of steps preparing for a new learning environment.",
+        "In Grade 8 Week 33 Language Arts, support an explanation of “transition plan” using a source, model, or example."
+      ],
+      [
+        "wellness",
+        "Overall physical, emotional, and social well-being.",
+        "In Grade 8 Week 33 Language Arts, support an explanation of “wellness” using a source, model, or example."
+      ],
+      [
+        "academic goal",
+        "A specific target for learning progress.",
+        "In Grade 8 Week 33 Language Arts, support an explanation of “academic goal” using a source, model, or example."
+      ],
+      [
+        "time management",
+        "Planning how available time is used.",
+        "In Grade 8 Week 33 Language Arts, support an explanation of “time management” using a source, model, or example."
+      ],
+      [
+        "research synthesis",
+        "Integrating multiple credible sources into a reasoned account.",
+        "In Grade 8 Week 33 Language Arts, support an explanation of “research synthesis” using a source, model, or example."
+      ],
+      [
+        "readiness",
+        "Preparation for the next educational challenge.",
+        "In Grade 8 Week 33 Language Arts, support an explanation of “readiness” using a source, model, or example."
+      ]
+    ],
+    "34": [
+      [
+        "capstone",
+        "A culminating project integrating multiple skills.",
+        "In Grade 8 Week 34 Language Arts, support an explanation of “capstone” using a source, model, or example."
+      ],
+      [
+        "research question",
+        "A focused question investigated through evidence.",
+        "In Grade 8 Week 34 Language Arts, support an explanation of “research question” using a source, model, or example."
+      ],
+      [
+        "methodology",
+        "The approach and procedures guiding an investigation.",
+        "In Grade 8 Week 34 Language Arts, support an explanation of “methodology” using a source, model, or example."
+      ],
+      [
+        "annotated bibliography",
+        "A source list that includes evaluative or explanatory notes.",
+        "In Grade 8 Week 34 Language Arts, support an explanation of “annotated bibliography” using a source, model, or example."
+      ],
+      [
+        "thesis",
+        "A central argument supported through evidence.",
+        "In Grade 8 Week 34 Language Arts, support an explanation of “thesis” using a source, model, or example."
+      ],
+      [
+        "revision",
+        "Changes made to improve clarity or accuracy.",
+        "In Grade 8 Week 34 Language Arts, support an explanation of “revision” using a source, model, or example."
+      ]
+    ],
+    "35": [
+      [
+        "oral defense",
+        "A spoken explanation and justification of academic work.",
+        "In Grade 8 Week 35 Language Arts, support an explanation of “oral defense” using a source, model, or example."
+      ],
+      [
+        "counterquestion",
+        "A question probing a presented argument.",
+        "In Grade 8 Week 35 Language Arts, support an explanation of “counterquestion” using a source, model, or example."
+      ],
+      [
+        "rhetorical voice",
+        "The distinctive tone and stance of a speaker addressing an audience.",
+        "In Grade 8 Week 35 Language Arts, support an explanation of “rhetorical voice” using a source, model, or example."
+      ],
+      [
+        "delivery",
+        "How an oral message is conveyed through voice and manner.",
+        "In Grade 8 Week 35 Language Arts, support an explanation of “delivery” using a source, model, or example."
+      ],
+      [
+        "evidence",
+        "Information supporting a claim.",
+        "In Grade 8 Week 35 Language Arts, support an explanation of “evidence” using a source, model, or example."
+      ],
+      [
+        "reflection",
+        "Thoughtful consideration of learning and improvement.",
+        "In Grade 8 Week 35 Language Arts, support an explanation of “reflection” using a source, model, or example."
+      ]
+    ],
+    "36": [
+      [
+        "high school transition",
+        "The move from middle-school learning to higher-level study.",
+        "In Grade 8 Week 36 Language Arts, support an explanation of “high school transition” using a source, model, or example."
+      ],
+      [
+        "portfolio",
+        "A selected collection documenting learning.",
+        "In Grade 8 Week 36 Language Arts, support an explanation of “portfolio” using a source, model, or example."
+      ],
+      [
+        "transfer",
+        "Applying learned knowledge in a new situation.",
+        "In Grade 8 Week 36 Language Arts, support an explanation of “transfer” using a source, model, or example."
+      ],
+      [
+        "source evaluation",
+        "Judging sources for relevance, accuracy, and reliability.",
+        "In Grade 8 Week 36 Language Arts, support an explanation of “source evaluation” using a source, model, or example."
+      ],
+      [
+        "active listening",
+        "Attending carefully to understand and respond to a speaker.",
+        "In Grade 8 Week 36 Language Arts, support an explanation of “active listening” using a source, model, or example."
+      ],
+      [
+        "readiness",
+        "Preparation for the next educational challenge.",
+        "In Grade 8 Week 36 Language Arts, support an explanation of “readiness” using a source, model, or example."
+      ]
+    ]
+  }
+}
