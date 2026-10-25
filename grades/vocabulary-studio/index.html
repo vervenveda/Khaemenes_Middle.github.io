@@ -17,6 +17,30 @@
 .quiz .actions button:focus-visible,.quiz .answer:focus-within{outline:3px solid #bde6ea;outline-offset:2px}
 .quiz .actions button:disabled{background:#d3dddc;color:#384d55;opacity:.8}
 @media print{.quiz{background:white;color:#233038;box-shadow:none}.quiz h2,.quiz .note,.quiz .meta,.quiz .status,.quiz .question legend{color:#233038}.quiz .question,.quiz .answer{background:white;color:#233038;border-color:#9ca9ab}}
+
+/* Vocabulary Studio: alternating question contrast and balanced learner rail */
+.quiz{background:#fcfaf5;border:2px solid #a7b9b9;color:#24323b;box-shadow:0 8px 24px rgba(24,42,50,.09)}
+.quiz h2,.quiz .note,.quiz .meta,.quiz .status{color:#253640}
+.quiz .question{border:2px solid #829ba5;box-shadow:0 2px 0 rgba(26,50,62,.06)}
+.quiz .question:nth-child(odd){background:#edf3f2;color:#1e3039;border-color:#9db8b7}
+.quiz .question:nth-child(even){background:#263c49;color:#f7fafb;border-color:#476a7a}
+.quiz .question:nth-child(odd) legend{color:#203440;border-bottom:1px solid #b6c8c8}
+.quiz .question:nth-child(even) legend{color:#fff;border-bottom:1px solid #6a8893}
+.quiz .question:nth-child(odd) .answer{background:#fff;border:1px solid #9fb6ba;color:#22333c}
+.quiz .question:nth-child(even) .answer{background:#344e5d;border:1px solid #7c9ba8;color:#f6f9fa}
+.quiz .question:nth-child(odd) .answer:hover,.quiz .question:nth-child(odd) .answer:focus-within{background:#dceae8;border-color:#346774}
+.quiz .question:nth-child(even) .answer:hover,.quiz .question:nth-child(even) .answer:focus-within{background:#426473;border-color:#bad7df}
+.quiz .question .answer{border-width:1px;min-height:45px}
+.quiz .question .answer:has(input:checked){outline:2px solid #78b4ba;outline-offset:1px}
+.quiz .question:nth-child(odd) .answer input{accent-color:#285d68}
+.quiz .question:nth-child(even) .answer input{accent-color:#d2edef}
+.quiz .actions button{background:#254752;color:#fff;border:1px solid #2e5965}
+.quiz .actions button:hover:not(:disabled){background:#346270}
+.quiz .actions button:disabled{background:#d4dfdf;color:#334952;border-color:#9fb3b7}
+body #khaemenesLearnerUtilityToolbar{max-width:min(100vw - 24px,400px);width:max-content;gap:5px;padding:5px;align-items:stretch;flex-wrap:wrap;justify-content:center}
+body #khaemenesLearnerUtilityToolbar>button,body #khaemenesLearnerUtilityToolbar>a{width:116px!important;min-width:0!important;max-width:116px!important;height:auto!important;min-height:46px!important;max-height:none!important;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:anywhere!important;word-break:normal!important;line-height:1.25!important;text-align:center!important;padding:7px 6px!important;font-size:11px!important;letter-spacing:0!important;gap:4px!important}
+@media(max-width:420px){body #khaemenesLearnerUtilityToolbar{max-width:calc(100vw - 16px);gap:4px;padding:4px}body #khaemenesLearnerUtilityToolbar>button,body #khaemenesLearnerUtilityToolbar>a{width:95px!important;max-width:95px!important;font-size:10px!important;min-height:46px!important}}
+@media print{.quiz,.quiz .question,.quiz .question:nth-child(odd),.quiz .question:nth-child(even),.quiz .question .answer{background:#fff;color:#233038;border-color:#9ca9ab;box-shadow:none}body #khaemenesLearnerUtilityToolbar{display:none!important}}
 </style></head><body>
 <header><p class="eyebrow">KHAEMENES ACADEMY · MIDDLE SCHOOL</p><h1>Vocabulary Studio</h1><p>Six carefully selected academic terms · read, apply, and practice</p><nav class="navigation" aria-label="Grade navigation"><a href="../grade-06/index.html">Grade 6</a><a href="../grade-07/index.html">Grade 7</a><a href="../grade-08/index.html">Grade 8</a></nav></header>
 <main><section class="panel"><div class="controls"><div><label for="grade">Grade</label><select id="grade"><option value="6">Grade 6</option><option value="7">Grade 7</option><option value="8">Grade 8</option></select></div><div><label for="week">Week</label><select id="week"><option value="1">Week 01 · Scholar Launch</option><option value="2">Week 02</option><option value="3">Week 03</option><option value="4">Week 04</option></select></div></div><p class="meta">Weeks 01–04 are editorial draft study banks aligned to Language Arts lesson themes. Remaining weeks will be added following curriculum review. This study activity does not change course mastery or grades.</p><p id="status" class="status" role="status" aria-live="polite"></p></section>
