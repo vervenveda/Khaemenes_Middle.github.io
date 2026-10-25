@@ -3,6 +3,11 @@
 const fs=require("node:fs"),path=require("node:path"),assert=require("node:assert/strict");
 const root=path.resolve(__dirname,".."),base="grades/vocabulary-studio/";
 const html=fs.readFileSync(path.join(root,base,"index.html"),"utf8");
+assert(html.includes('Student Profile</a>'),"Vocabulary Studio must expose student-profile navigation");
+assert(html.includes('font-size:12px!important'),"Toolbar controls need readable text");
+assert(!html.includes('font-size:7px!important'),"Seven-pixel toolbar text must not return");
+assert(html.includes('flex-wrap:wrap;justify-content:center'),"Toolbar must wrap on narrow screens");
+assert(html.includes('min-height:44px!important;height:auto!important'),"Toolbar buttons must have accessible height");
 const learningBridge=fs.readFileSync(path.join(root,"assets/khaemenes-middle-learning-context.js"),"utf8");
 assert(learningBridge.includes("installVocabularyEntrance"),"Shared lesson bridge must link to vocabulary practice");
 assert(learningBridge.includes("khaemenesVocabularyStudioEntrance"),"Lesson entrance must be idempotent");
