@@ -79,6 +79,26 @@ const $=id=>document.getElementById(id),grade=$("grade"),week=$("week");const p=
 const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 function draw(){attempted=false;for(const option of week.options){const allowed=true;option.disabled=!allowed;option.hidden=!allowed};const loading=Number(week.value)>=5&&!loaded[grade.value]&&!failed[grade.value];const bank=loading?[]:selectedBank();history.replaceState(null,"","?grade="+grade.value+"&week="+week.value);$("lessonLink").href="../grade-0"+grade.value+"/subjects/language-arts/week-"+week.value.padStart(2,"0")+".html";$("heading").textContent="Grade "+grade.value+" · Week "+week.value.padStart(2,"0")+" vocabulary";$("status").textContent=bank.length===6?"Six terms available. Week "+week.value.padStart(2,"0")+" · editorial draft based on Language Arts lessons.":loading?"Loading the vocabulary bank for this grade and week…":failed[grade.value]?"Vocabulary bank unavailable. Retry after reconnecting or refreshing.":"Vocabulary bank missing or invalid for this grade and week.";const cards=$("cards");cards.replaceChildren();bank.forEach(t=>{const a=document.createElement("article");a.className="card";const h=document.createElement("h3");h.textContent=t[0];const def=document.createElement("p");def.textContent=t[1];const task=document.createElement("p");task.className="meta";task.textContent="Apply: "+t[2];task.setAttribute("aria-label","Application exercise for "+t[0]+": "+t[2]);a.append(h,def,task);cards.append(a)});newSet()}
 function newSet(){attempted=false;const bank=Number(week.value)>=5&&!loaded[grade.value]?[]:selectedBank(),target=$("questions");quiz=bank.length===6?shuffle(bank):[];formats=quiz.map((_,i)=>i%2===0?"definition":"term");target.replaceChildren();$("check").disabled=bank.length!==6;$("retry").disabled=bank.length!==6;$("feedback").textContent="";quiz.forEach((t,i)=>{const container=document.createElement("div");container.className="question";const fs=document.createElement("fieldset"),legend=document.createElement("legend");fs.setAttribute("aria-describedby","independentHelp");legend.textContent=formats[i]==="definition"?(i+1)+". Which definition best describes “"+t[0]+"”?":(i+1)+". Which term matches this meaning? “"+t[1]+"”";fs.append(legend);shuffle(bank).forEach(choice=>{const lab=document.createElement("label");lab.className="answer";const input=document.createElement("input");input.type="radio";input.name="q"+i;input.value=choice[0];input.addEventListener("change",()=>{attempted=true});lab.append(input,document.createTextNode(formats[i]==="definition"?choice[1]:choice[0]));fs.append(lab)});container.append(fs);target.append(container)})}
+// Authored misconception coaching keyed to the current grade, week, and two confused terms.
+// Both directions share one explanation; all other pairs retain the generic comparison.
+const misconceptionCoaching={
+ "6:5:sequence|transition":"Sequence is the order of steps; transitions are the words that signal that order. A fraction-strip guide can use 'first' and 'finally' correctly but still list its cutting and labeling steps in the wrong order.",
+ "6:10:inclusive inequality|strict inequality":"Test the boundary value. 'At most 12' permits exactly 12 (≤); 'fewer than 12' excludes it (<). Try the boundary before deciding which symbol fits.",
+ "6:22:condensation|evaporation":"Evaporation changes liquid water into vapor; condensation changes vapor into liquid. A cloud-forming model usually shows condensation, not evaporation, at that stage.",
+ "7:5:accuracy|source credibility":"Accuracy asks whether a specific calculation is correct; source credibility asks whether a source is trustworthy for the claim. Check an arithmetic result independently before judging the source.",
+ "7:7:equation|inequality":"An equation states equality (=); an inequality compares values using signs such as < or ≥. Solving x+5=13 gives one value, while x+5<13 describes a set of values.",
+ "7:18:structure|function":"Structure describes how parts are arranged; function explains what a part does. A labeled cell diagram shows structures, but a sentence about what a membrane controls describes function.",
+ "8:7:reflection|translation":"A geometric translation slides each point by the same vector. A reflection flips a figure across a line. Check whether the figure kept its orientation or became a mirror image.",
+ "8:11:association|correlation":"Association describes a relationship between variables broadly; correlation often describes the direction and strength of a numerical relationship. Neither alone proves causation.",
+ "8:14:claim|counterclaim":"A claim states a position; a counterclaim challenges that position. Both require evidence, and a counterclaim is not automatically false because it disagrees.",
+ "8:23:genotype|phenotype":"Genotype refers to specified genetic information; phenotype refers to observable characteristics influenced by genes and environment. Similar genotypes do not guarantee identical traits under different conditions.",
+ "8:26:grievance|counterargument":"A grievance names a perceived injustice; a counterargument challenges the reasoning or evidence of a position. A list of complaints is not itself a response to the opposing argument.",
+ "8:36:source evaluation|transfer":"Source evaluation checks the reliability of evidence. Transfer uses a learned skill in a new subject or situation, such as applying source evaluation to a high-school research task."
+};
+function misconceptionText(correct,chosen){
+ const key=[correct,chosen].sort((a,b)=>a.localeCompare(b)).join("|");
+ return misconceptionCoaching[grade.value+":"+Number(week.value)+":"+key]||null;
+}
 const differenceDialog=$("differenceDialog");
 let differenceReturn=null;
 function explainDifference(correct,chosen,trigger){
@@ -89,7 +109,9 @@ function explainDifference(correct,chosen,trigger){
  const first=document.createElement("p");first.textContent=correct[0]+": "+correct[1];
  const second=document.createElement("p");second.textContent=chosen+": "+(chosenTerm?chosenTerm[1]:"Review its meaning in the term cards.");
  const application=document.createElement("p");application.textContent="Try applying the correct term: "+correct[2];
- body.append(intro,first,second,application);
+ const specific=misconceptionText(correct[0],chosen);
+ if(specific){const insight=document.createElement("p");insight.textContent="Why they differ: "+specific;body.append(intro,first,second,insight,application)}
+ else body.append(intro,first,second,application);
  if(typeof differenceDialog.showModal==="function")differenceDialog.showModal();
  else{differenceDialog.setAttribute("open","");$("differenceClose").focus()}
 }
