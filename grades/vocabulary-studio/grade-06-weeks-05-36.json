@@ -138,128 +138,128 @@
       [
         "claim",
         "A statement that requires appropriate supporting evidence.",
-        "In this week's Language Arts work, explain or demonstrate “claim” using a specific example."
+        "Identify the precise claim in the fictional school-library proposal and distinguish it from the 18-of-30 survey result offered as evidence."
       ],
       [
         "counterexample",
         "An example showing that a general claim is false.",
-        "In this week's Language Arts work, explain or demonstrate “counterexample” using a specific example."
+        "Disprove 'Every equation with x has x=2' using x+3=6; show the correct solution and explain why one counterexample is enough."
       ],
       [
         "reasoning",
         "Logical steps connecting evidence to a conclusion.",
-        "In this week's Language Arts work, explain or demonstrate “reasoning” using a specific example."
+        "Connect a proposal for longer library hours to two relevant reasons; explain why staffing requirements matter to the reasoning."
       ],
       [
         "balance",
         "A fair consideration of relevant evidence and competing positions.",
-        "In this week's Language Arts work, explain or demonstrate “balance” using a specific example."
+        "Make a two-column claim-and-counterclaim chart about extended library hours, giving two fair reasons for each position."
       ],
       [
         "conclusion",
         "A judgment reached through evidence or reasoning.",
-        "In this week's Language Arts work, explain or demonstrate “conclusion” using a specific example."
+        "Write a limited conclusion about the library-hour proposal that acknowledges what a 30-person fictional survey cannot establish."
       ],
       [
         "evidence",
         "Information offered to support a claim.",
-        "In this week's Language Arts work, explain or demonstrate “evidence” using a specific example."
+        "Contrast checking x+4=9 algebraically with interpreting 18 of 30 survey responses; explain which kind of conclusion each supports."
       ]
     ],
     "10": [
       [
         "inequality",
         "A mathematical statement that two quantities are not necessarily equal.",
-        "In this week's Language Arts work, explain or demonstrate “inequality” using a specific example."
+        "Translate 'the room holds no more than 20 people' into x≤20; test whether 20 and 21 satisfy the rule."
       ],
       [
         "condition",
         "A requirement that must be met for a rule to apply.",
-        "In this week's Language Arts work, explain or demonstrate “condition” using a specific example."
+        "Write a school-club rule using 'if' or 'unless', then identify precisely when its requirement applies."
       ],
       [
         "strict inequality",
         "A comparison using less than or greater than, excluding equality.",
-        "In this week's Language Arts work, explain or demonstrate “strict inequality” using a specific example."
+        "Compare 'fewer than 12' with 'at most 12' by testing the boundary value 12 and explaining which excludes it."
       ],
       [
         "inclusive inequality",
         "A comparison allowing equality as well as more or less.",
-        "In this week's Language Arts work, explain or demonstrate “inclusive inequality” using a specific example."
+        "Explain why b≤15 for a fictional paper budget permits b=15, and contrast this with b<15."
       ],
       [
         "qualification",
         "A condition or limit added to make a statement more accurate.",
-        "In this week's Language Arts work, explain or demonstrate “qualification” using a specific example."
+        "Revise a fictional library-capacity policy to specify a clear limit and describe an exception or accommodation without inventing a law."
       ],
       [
         "ambiguity",
         "Language or evidence that allows more than one interpretation.",
-        "In this week's Language Arts work, explain or demonstrate “ambiguity” using a specific example."
+        "Rewrite 'participants should arrive early' with a measurable time threshold; show how your edit removes ambiguity."
       ]
     ],
     "11": [
       [
         "statistical question",
         "A question anticipating variability in the data collected.",
-        "In this week's Language Arts work, explain or demonstrate “statistical question” using a specific example."
+        "Explain why 'How many pages do students read each week?' is statistical but 'How many pages are in this book?' is not."
       ],
       [
         "distribution",
         "The pattern showing how values are spread across data.",
-        "In this week's Language Arts work, explain or demonstrate “distribution” using a specific example."
+        "Analyze the fictional book counts 1,2,2,3,7: identify the repeated value, overall spread, and how 7 affects interpretation."
       ],
       [
         "data",
         "Recorded information used for investigation.",
-        "In this week's Language Arts work, explain or demonstrate “data” using a specific example."
+        "Record the five fictional book counts 1,2,2,3,7 with a clear unit and explain why invented observations must be labeled fictional."
       ],
       [
         "sample",
         "A subset of a larger population selected for study.",
-        "In this week's Language Arts work, explain or demonstrate “sample” using a specific example."
+        "Explain why answers from five volunteers cannot establish reading habits of an entire school; identify the sample and population."
       ],
       [
         "summary",
         "A concise account of the essential information.",
-        "In this week's Language Arts work, explain or demonstrate “summary” using a specific example."
+        "Write an accurate summary of 1,2,2,3,7 that reports a median of 2 and a range of 6 without overstating the pattern."
       ],
       [
         "qualification",
         "A condition or limit added to make a statement more accurate.",
-        "In this week's Language Arts work, explain or demonstrate “qualification” using a specific example."
+        "Revise 'all students prefer reading' to name the five-person sample and acknowledge uncertainty about other students."
       ]
     ],
     "12": [
       [
         "area",
         "The amount of flat surface within a boundary.",
-        "In this week's Language Arts work, explain or demonstrate “area” using a specific example."
+        "Calculate the area of a fictional 4 m by 3 m reading mat, stating the 12 m² result and why the units are squared."
       ],
       [
         "surface area",
         "The combined areas of the outer faces of a three-dimensional solid.",
-        "In this week's Language Arts work, explain or demonstrate “surface area” using a specific example."
+        "Use a cube with side length 2 cm to explain how six faces of 4 cm² produce 24 cm² of surface area."
       ],
       [
         "composite figure",
         "A shape formed by joining simpler shapes.",
-        "In this week's Language Arts work, explain or demonstrate “composite figure” using a specific example."
+        "Draw a floor layout using a rectangle and triangle; split it into simpler figures and label each area before totaling."
       ],
       [
         "net",
         "A flat pattern that can fold into a three-dimensional solid.",
-        "In this week's Language Arts work, explain or demonstrate “net” using a specific example."
+        "Sketch a cube net with six square faces of side 2 cm and verify its 24 cm² surface area without confusing it with volume."
       ],
       [
         "measurement",
         "A numerical description of a quantity using units.",
-        "In this week's Language Arts work, explain or demonstrate “measurement” using a specific example."
+        "Contrast a length measured in cm with a surface measured in cm²; explain which unit belongs in a reading-mat design."
       ],
       [
         "justification",
         "Reasons and evidence explaining why an answer is valid.",
-        "In this week's Language Arts work, explain or demonstrate “justification” using a specific example."
+        "Justify why a triangle of base 6 cm and perpendicular height 4 cm has area 12 cm², showing the one-half factor."
       ]
     ],
     "13": [
