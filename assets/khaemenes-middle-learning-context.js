@@ -115,6 +115,12 @@ function build(){
     mentorExpression:"Academy Mentor",
     developmentalMode:developmentalMode(l.grade),
     currentFocus:{week:routeWeek(),subject:routeSubject(),text:focusText(l)},
+    // The exact released Mathematics lesson identity; no protected bank or key.
+    currentLessonContext:l.grade==='07'&&routeWeek()===5&&routeSubject()==='mathematics'?
+      {subject:'mathematics',courseId:'middle-grade-07-mathematics',
+       lessonId:'week-05',week:5,title:'Operations with Rational Numbers',
+       objective:'How do rational numbers extend what we can model and explain?',
+       focus:'integer and rational-number operations'}:null,
     curriculum,
     recentLessonEvidence:lessonEvidence,
     recentAssessmentAttempts:assessmentEvidence,
