@@ -34,7 +34,7 @@ assert(html.includes("const misconceptionCoaching={"),"Author-written misconcept
 assert(html.includes('misconceptionCoaching[grade.value+":"+Number(week.value)+":"+key]'),"Misconception lookup must use the active grade and week");
 assert(html.includes('key=[correct,chosen].sort('),"Confused terms must match in either direction");
 assert(html.includes('Why they differ: '),"Dialog must explain the conceptual distinction");
-assert(html.includes('else body.append(intro,first,second,application)'),"Other pairs must retain informative generic feedback");
+assert(html.includes('There is not yet a lesson-specific comparison for this pair.'),"Other pairs must retain informative generic feedback");
 for(const key of ["6:5:sequence|transition","6:22:condensation|evaporation","7:7:equation|inequality","7:18:function|structure","8:7:reflection|translation","8:23:genotype|phenotype","8:26:counterargument|grievance"]){
  assert(html.includes('"'+key+'"'),"Missing authored misconception coaching "+key);
 }
@@ -75,6 +75,13 @@ for(let week=5;week<=12;week++)assert(grade8Pairs.filter(([,w])=>Number(w)===wee
 for(let week=13;week<=20;week++)assert(grade8Pairs.filter(([,w])=>Number(w)===week).length>=2,"Grade 8 Week "+week+" requires two misconception explanations");
 for(let week=21;week<=28;week++)assert(grade8Pairs.filter(([,w])=>Number(w)===week).length>=2,"Grade 8 Week "+week+" requires two misconception explanations");
 for(let week=29;week<=36;week++)assert(grade8Pairs.filter(([,w])=>Number(w)===week).length>=2,"Grade 8 Week "+week+" requires two misconception explanations");
+// Five cross-grade student experience repairs.
+assert(html.includes('id="answerProgress"'),"Learners must see answered-question progress");
+assert(html.includes('function answerProgress()'),"Progress must be recalculated from current selections");
+assert(html.includes('answerProgress()});'),"Progress must update when the selected answer changes");
+assert(html.includes('.find(node=>!node.querySelector("input:checked"))'),"Incomplete submission must identify first unanswered question without :has");
+assert(html.includes('There is not yet a lesson-specific comparison'),"Missing custom misconception text must be communicated accurately");
+assert(html.includes('if(differenceDialog.open&&typeof differenceDialog.close==="function")differenceDialog.close()'),"Changing practice must close stale concept dialogs");
 const learningBridge=fs.readFileSync(path.join(root,"assets/khaemenes-middle-learning-context.js"),"utf8");
 assert(learningBridge.includes("installVocabularyEntrance"),"Shared lesson bridge must link to vocabulary practice");
 assert(learningBridge.includes("khaemenesVocabularyStudioEntrance"),"Lesson entrance must be idempotent");
@@ -114,7 +121,7 @@ for(const grade of [6,7,8]){
  assert(html.includes('unavailable('+grade+')'),"Grade "+grade+" must handle unavailable banks");
 }
 assert(html.includes('&&!attempted)draw()'),"Late requests must not reset attempts already started");
-assert(html.includes('input.addEventListener("change",()=>{attempted=true})'),"Selecting an answer must protect current attempt");
+assert(html.includes('input.addEventListener("change",()=>{attempted=true;answerProgress()})'),"Selecting an answer must protect current attempt");
 assert(html.includes('const validBank='),"All incoming grade banks must be validated");
 assert(html.includes('Loading the vocabulary bank'),"Students need a loading state");
 assert(html.includes('if(quiz.length!==6)return;'),"Partial data must not be graded");
