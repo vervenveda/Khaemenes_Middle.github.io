@@ -72,6 +72,7 @@ for(const [,week,pair] of grade8Pairs){
  assert.equal(pair,[...terms].sort((a,b)=>a.localeCompare(b)).join("|"),"Grade 8 pair lookup order mismatch: "+pair);
 }
 for(let week=5;week<=12;week++)assert(grade8Pairs.filter(([,w])=>Number(w)===week).length>=2,"Grade 8 Week "+week+" requires two misconception explanations");
+for(let week=13;week<=20;week++)assert(grade8Pairs.filter(([,w])=>Number(w)===week).length>=2,"Grade 8 Week "+week+" requires two misconception explanations");
 const learningBridge=fs.readFileSync(path.join(root,"assets/khaemenes-middle-learning-context.js"),"utf8");
 assert(learningBridge.includes("installVocabularyEntrance"),"Shared lesson bridge must link to vocabulary practice");
 assert(learningBridge.includes("khaemenesVocabularyStudioEntrance"),"Lesson entrance must be idempotent");
