@@ -63,6 +63,15 @@ for(let week=5;week<=12;week++)assert(grade7Pairs.filter(([,w])=>Number(w)===wee
 for(let week=13;week<=20;week++)assert(grade7Pairs.filter(([,w])=>Number(w)===week).length>=2,"Grade 7 Week "+week+" requires two concept-specific explanations");
 for(let week=21;week<=28;week++)assert(grade7Pairs.filter(([,w])=>Number(w)===week).length>=2,"Grade 7 Week "+week+" requires two concept-specific explanations");
 for(let week=29;week<=36;week++)assert(grade7Pairs.filter(([,w])=>Number(w)===week).length>=2,"Grade 7 Week "+week+" requires two concept-specific explanations");
+// Grade 8 misconception coaching: every authored pair must exist in its weekly bank.
+const grade8Pairs=[...html.matchAll(/"8:(\d+):([^"]+)":/g)];
+const grade8Bank=JSON.parse(fs.readFileSync(path.join(root,base,"grade-08-weeks-05-36.json"),"utf8"));
+for(const [,week,pair] of grade8Pairs){
+ const terms=pair.split("|"),names=grade8Bank.weeks[week]?.map(t=>t[0])||[];
+ assert(terms.length===2&&terms.every(term=>names.includes(term)),"Grade 8 pair references missing term: "+week+" "+pair);
+ assert.equal(pair,[...terms].sort((a,b)=>a.localeCompare(b)).join("|"),"Grade 8 pair lookup order mismatch: "+pair);
+}
+for(let week=5;week<=12;week++)assert(grade8Pairs.filter(([,w])=>Number(w)===week).length>=2,"Grade 8 Week "+week+" requires two misconception explanations");
 const learningBridge=fs.readFileSync(path.join(root,"assets/khaemenes-middle-learning-context.js"),"utf8");
 assert(learningBridge.includes("installVocabularyEntrance"),"Shared lesson bridge must link to vocabulary practice");
 assert(learningBridge.includes("khaemenesVocabularyStudioEntrance"),"Lesson entrance must be idempotent");
