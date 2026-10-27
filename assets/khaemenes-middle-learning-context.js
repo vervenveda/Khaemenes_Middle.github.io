@@ -116,11 +116,25 @@ function build(){
     developmentalMode:developmentalMode(l.grade),
     currentFocus:{week:routeWeek(),subject:routeSubject(),text:focusText(l)},
     // The exact released Mathematics lesson identity; no protected bank or key.
-    currentLessonContext:l.grade==='07'&&routeWeek()===5&&routeSubject()==='mathematics'?
-      {subject:'mathematics',courseId:'middle-grade-07-mathematics',
-       lessonId:'week-05',week:5,title:'Operations with Rational Numbers',
-       objective:'How do rational numbers extend what we can model and explain?',
-       focus:'integer and rational-number operations'}:null,
+    currentLessonContext:(()=>{
+      if(routeSubject()!=='mathematics')return null;
+      const week=routeWeek();
+      const mapping={
+        '06':{week:1,title:'Ratios and Unit Rates: Scholar Launch',
+          objective:'write and simplify ratios and calculate unit rates with units',
+          focus:'ratios, equivalent ratios and unit rates'},
+        '07':{week:5,title:'Operations with Rational Numbers',
+          objective:'How do rational numbers extend what we can model and explain?',
+          focus:'integer and rational-number operations'},
+        '08':{week:1,title:'Eighth Grade Scholar Launch',
+          objective:'linear relationships and rate of change',focus:'linear relationships'}
+      };
+      const lesson=mapping[l.grade];
+      return lesson&&week===lesson.week?{subject:'mathematics',
+        courseId:'middle-grade-'+l.grade+'-mathematics',
+        lessonId:'week-'+String(week).padStart(2,'0'),
+        week,title:lesson.title,objective:lesson.objective,focus:lesson.focus}:null;
+    })(),
     curriculum,
     recentLessonEvidence:lessonEvidence,
     recentAssessmentAttempts:assessmentEvidence,
