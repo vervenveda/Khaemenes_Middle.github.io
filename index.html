@@ -252,6 +252,8 @@ footer{padding:36px 20px;color:rgba(255,255,255,.64);background:#030a11;border-t
   .footer-inner{justify-content:center;text-align:center;flex-direction:column}.footer-links{justify-content:center}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+.middle-enrolled-tools{margin:18px auto 0;max-width:720px;padding:16px 18px;display:grid;gap:8px;border:1px solid rgba(79,127,122,.25);border-radius:14px;background:#fbfaf4;text-align:left}.middle-enrolled-tools[hidden]{display:none!important}.middle-enrolled-tools>div{display:flex;flex-wrap:wrap;gap:8px}.middle-enrolled-tools button{min-height:44px;padding:8px 12px;border:1px solid rgba(45,63,61,.18);border-radius:9px;background:#fff;color:#243634;font:inherit}.middle-enrolled-tools button:first-child{background:#ead9a6}.middle-enrolled-tools button:disabled{opacity:.65}.middle-enrolled-tools small{color:#66736f}
 </style>
 <link rel="stylesheet" href="assets/khaemenes-sacred-layout.css" data-khaemenes-sacred-layout>
 <link rel="stylesheet" href="assets/vnv-campus-balance.css" data-vnv-campus-balance>
@@ -364,9 +366,15 @@ body:has([data-khae-header]) .site-header .brand .brand-mark,body:has([data-khae
         </div>
         <p class="hero-lead">A calm Grades 6–8 home base for complete curricula, daily routines, trusted learning tools, creativity, family support, growing independence, and a clear path toward High School.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#grades">Choose Your Grade</a>
-          <a class="button button-secondary" href="#start">Student &amp; Family Start</a>
+          <a class="button button-primary" id="middleContinue" href="#grades">🎓 My Grade / Continue Learning</a>
+          <a class="button button-secondary" href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">😊 My Profile</a>
           <a class="button button-high" href="#transition">High School Readiness</a>
+        </div>
+        <div class="middle-enrolled-tools" id="middleEnrolledTools" hidden>
+          <strong id="middleLearnerTitle">Middle School learner</strong>
+          <span>Return directly to your grade, pin Middle School to your Academy profile, or save this front page for quick access.</span>
+          <div><button type="button" id="middlePinSchool">📌 Pin Middle School to My Profile</button><button type="button" id="middleSaveSchool">⬇️ Save Middle School to This Device</button></div>
+          <small id="middleToolStatus" role="status" aria-live="polite"></small>
         </div>
         <div class="hero-stat-grid">
           <div class="hero-stat"><strong>36 Weeks</strong><span>Each grade portal contains a full A++ curriculum, subject halls, assessments, and records.</span></div>
@@ -766,7 +774,18 @@ body:has([data-khae-header]) .site-header .brand .brand-mark,body:has([data-khae
 })();
 </script>
 
-<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script><script>
+(()=>{"use strict";
+const KEY="khaemenes_course_pins_v1",read=(k,f)=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):f}catch{return f}},write=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch{return false}};
+function learner(){try{const x=window.KhaemenesFamilyRegistry?.getLearner?.();const g=Number(x?.grade);return x&&x.learnerId&&g>=6&&g<=8?{...x,grade:g}:null}catch{return null}}
+function pinned(id){const d=read(KEY,null),a=d?.learners?.[id];return Array.isArray(a)&&a.some(x=>x?.id==="khaemenes-middle"||x?.courseId==="khaemenes-middle")}
+function render(){const l=learner(),box=document.getElementById("middleEnrolledTools"),go=document.getElementById("middleContinue");if(!box||!go)return;box.hidden=!l;if(!l){go.href="#grades";go.textContent="🎓 My Grade / Continue Learning";return}go.href="grades/grade-0"+l.grade+"/";go.textContent="🎓 Continue Grade "+l.grade;document.getElementById("middleLearnerTitle").textContent=(l.nickname||"Learner")+" · Grade "+l.grade;const b=document.getElementById("middlePinSchool"),is=pinned(l.learnerId);b.disabled=is;b.textContent=is?"✓ Middle School Pinned":"📌 Pin Middle School to My Profile";document.getElementById("middleToolStatus").textContent=is?"Middle School is already pinned for this learner.":""}
+function pin(){const l=learner(),status=document.getElementById("middleToolStatus");if(!l){status.textContent="Select your enrolled Grade 6–8 learner first.";return}const d=read(KEY,{version:1,learners:{},updatedAt:null});if(d?.version!==1||!d.learners||typeof d.learners!=="object"||Array.isArray(d.learners)){status.textContent="Existing Academy pins need review. Nothing changed.";return}const before=d.learners[l.learnerId];if(before!==undefined&&!Array.isArray(before)){status.textContent="This learner’s pins need review. Nothing changed.";return}const a=Array.isArray(before)?before:[];d.learners[l.learnerId]=[...a.filter(x=>x?.id!=="khaemenes-middle"&&x?.courseId!=="khaemenes-middle"),{id:"khaemenes-middle",courseId:"khaemenes-middle",title:"Khaemenes Middle School",subtitle:"Grades 6–8 learning home",href:"https://vervenveda.com/Khaemenes_Middle.github.io/",source:"middle-front-page",pinnedAt:new Date().toISOString()}];d.updatedAt=new Date().toISOString();status.textContent=write(KEY,d)?"Middle School is pinned to your Academy profile.":"Could not save the pin on this browser.";render()}
+function save(){const status=document.getElementById("middleToolStatus");if(!learner()){status.textContent="Select your enrolled Middle School learner first.";return}const ua=navigator.userAgent||"";status.textContent=/iPad|iPhone|iPod/.test(ua)?"On iPhone or iPad: tap Share, then Add to Home Screen.":/Android/i.test(ua)?"On Android: open the browser menu and choose Add to Home screen.":/Macintosh|Mac OS X/.test(ua)?"On Mac: use Add to Dock if available, or bookmark this page.":"Use your browser’s Add to Home Screen or bookmark command for one-tap return."}
+document.getElementById("middlePinSchool")?.addEventListener("click",pin);document.getElementById("middleSaveSchool")?.addEventListener("click",save);window.addEventListener("khaemenes-family-changed",render);window.addEventListener("storage",e=>{if(["khaemenes_active_learner_v1","khaemenes_family_registry_v1",KEY].includes(e.key))render()});render();
+})();
+</script>
+
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-school-bridge.js" data-khaemenes-stage="middle"></script>
 <script src="/assets/vnv-beta-link.js" defer></script>
 <script src="https://vervenveda.com/assets/vnv-support.js" defer></script>
