@@ -291,32 +291,6 @@ body:has([data-khae-header]) .site-header .brand .brand-mark,body:has([data-khae
 </header>
 <a class="skip-link" href="#main">Skip to main content</a>
 
-<div class="network-ticker" id="ticker">
-  <div class="network-ticker-viewport">
-    <div class="network-ticker-track">
-      <div class="network-ticker-set">
-        <span class="network-ticker-label">Khaemenes Network</span>
-        <a class="network-ticker-app" href="https://vervenveda.com/">Verve N Veda</a>
-        <a class="network-ticker-app" href="https://vervenveda.com/Khaemenes_Academy.github.io/">Academy</a>
-        <a class="network-ticker-app" href="grades/grade-06/">Grade 6</a>
-        <a class="network-ticker-app" href="grades/grade-07/">Grade 7</a>
-        <a class="network-ticker-app" href="grades/grade-08/">Grade 8</a>
-        <a class="network-ticker-app" href="https://vervenveda.com/Khaemenes_High.github.io/">High School</a>
-      </div>
-      <div class="network-ticker-set" aria-hidden="true">
-        <span class="network-ticker-label">Khaemenes Network</span>
-        <a tabindex="-1" class="network-ticker-app" href="https://vervenveda.com/">Verve N Veda</a>
-        <a tabindex="-1" class="network-ticker-app" href="https://vervenveda.com/Khaemenes_Academy.github.io/">Academy</a>
-        <a tabindex="-1" class="network-ticker-app" href="grades/grade-06/">Grade 6</a>
-        <a tabindex="-1" class="network-ticker-app" href="grades/grade-07/">Grade 7</a>
-        <a tabindex="-1" class="network-ticker-app" href="grades/grade-08/">Grade 8</a>
-        <a tabindex="-1" class="network-ticker-app" href="https://vervenveda.com/Khaemenes_High.github.io/">High School</a>
-      </div>
-    </div>
-  </div>
-  <button class="ticker-control" id="tickerControl" aria-label="Pause network ticker">Ⅱ</button>
-</div>
-
 <header class="site-header">
   <div class="shell header-inner">
     <a class="brand" href="#top" aria-label="Khaemenes Academy Middle School home">
@@ -764,14 +738,7 @@ body:has([data-khae-header]) .site-header .brand .brand-mark,body:has([data-khae
     refresh:loadFederation
   }),enumerable:false,configurable:false,writable:false});
 
-  $("tickerControl").addEventListener("click",()=>{
-    const paused=$("ticker").dataset.paused==="true";
-    $("ticker").dataset.paused=paused?"false":"true";
-    $("tickerControl").textContent=paused?"Ⅱ":"▶";
-    $("tickerControl").setAttribute("aria-label",paused?"Pause network ticker":"Resume network ticker");
-  });
-
-  $("year").textContent=new Date().getFullYear();
+$("year").textContent=new Date().getFullYear();
   renderCategoryOptions();
   renderResources();
   renderNetwork();
