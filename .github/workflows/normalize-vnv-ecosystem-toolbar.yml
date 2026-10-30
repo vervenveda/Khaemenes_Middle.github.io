@@ -1,0 +1,85 @@
+name: Normalize Official Ecosystem Toolbar
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/normalize-vnv-ecosystem-toolbar.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Normalize eligible public HTML
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re, json
+
+          TOOLBAR='https://vervenveda.com/assets/vnv-ecosystem-toolbar.js'
+          TAG=f'<script src="{TOOLBAR}"></script>'
+          SKIP={'.git','.github','node_modules','vendor','admin','internal','private','archive','archives','backup','backups','deprecated'}
+          PROTECTED=re.compile(r'(^|/)(quiz|quizzes|exam|exams|assessment|assessments)(/|$)',re.I)
+          CLOSED=re.compile(r'data-closed-book',re.I)
+          DOC=re.compile(r'<!doctype\s+html|<html\b|<body\b',re.I)
+          TB=re.compile(r'<script\b[^>]*\bsrc=["\'][^"\']*vnv-ecosystem-toolbar\.js[^"\']*["\'][^>]*>(?:\s*</script>)?',re.I)
+          LEG=re.compile(r'<script\b[^>]*\bsrc=["\'][^"\']*vnv-beta-link\.js[^"\']*["\'][^>]*>(?:\s*</script>)?',re.I)
+          NODE=re.compile(r'<(?P<t>a|button)[^>]*\bid=["\'](?:vnvBetaProgramLink|vnvBetaProgramFallback)["\'][^>]*>[\s\S]*?</(?P=t)>',re.I)
+
+          counts={'html':0,'eligible':0,'already':0,'changed':0,'protected':0,'internal':0,'fragments':0,'legacyRemoved':0,'duplicatesCollapsed':0}
+          changed=[]
+          files=sorted(set(Path('.').rglob('*.html'))|set(Path('.').rglob('*.htm')))
+          for p in files:
+              rel=p.as_posix().lstrip('./')
+              counts['html']+=1
+              low={x.lower() for x in p.parts}
+              if low & SKIP:
+                  counts['internal']+=1; continue
+              try: s=p.read_text(encoding='utf-8')
+              except UnicodeDecodeError: continue
+              if not DOC.search(s):
+                  counts['fragments']+=1; continue
+              if PROTECTED.search('/'+rel) or CLOSED.search(s):
+                  counts['protected']+=1; continue
+              counts['eligible']+=1
+              before=s
+              legacy=len(LEG.findall(s))
+              s=LEG.sub('',s)
+              s=NODE.sub('',s)
+              if legacy: counts['legacyRemoved']+=legacy
+              matches=list(TB.finditer(s))
+              if matches:
+                  first=True
+                  def repl(m):
+                      nonlocal_first[0]+=1
+                      return TAG if nonlocal_first[0]==1 else ''
+                  nonlocal_first=[0]
+                  if len(matches)>1: counts['duplicatesCollapsed']+=len(matches)-1
+                  s=TB.sub(repl,s)
+              else:
+                  if re.search(r'</body\s*>',s,re.I):
+                      s=re.sub(r'</body\s*>',TAG+'\n</body>',s,count=1,flags=re.I)
+                  else:
+                      s+='\n'+TAG+'\n'
+              if s!=before:
+                  p.write_text(s,encoding='utf-8')
+                  counts['changed']+=1; changed.append(rel)
+              else:
+                  counts['already']+=1
+
+          Path('.vnv-toolbar-normalization.json').write_text(json.dumps({'schema':'vnv-toolbar-normalization-v1','counts':counts,'changed':changed},indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(counts,indent=2))
+          PY
+      - name: Commit normalized toolbar
+        run: |
+          git config user.name "Verve N Veda Ecosystem Guardian"
+          git config user.email "ecosystem@vervenveda.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No toolbar changes required."
+          else
+            git commit -m "Normalize official Verve N Veda ecosystem toolbar"
+            git push
+          fi
