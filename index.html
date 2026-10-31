@@ -67,24 +67,6 @@ button{cursor:pointer}
 .skip-link{position:fixed;top:9px;left:9px;z-index:4000;transform:translateY(-170%);padding:9px 14px;border-radius:var(--radius);color:#fff;background:var(--ink)}
 .skip-link:focus{transform:none}
 
-/* VNV shared ticker */
-.network-ticker{
-  position:sticky;top:0;z-index:1500;height:var(--ticker-height);display:grid;
-  grid-template-columns:minmax(0,1fr) 40px;overflow:hidden;color:#f4ead1;
-  background:linear-gradient(90deg,#07101d,#10243b 48%,#07101d);
-  border-bottom:1px solid rgba(255,255,255,.13);box-shadow:0 4px 14px rgba(6,15,27,.15)
-}
-.network-ticker-viewport{min-width:0;overflow:hidden;mask-image:linear-gradient(90deg,transparent 0,#000 27px,#000 calc(100% - 27px),transparent 100%)}
-.network-ticker-track{width:max-content;height:100%;display:flex;align-items:center;white-space:nowrap;animation:ticker 28s linear infinite}
-.network-ticker:hover .network-ticker-track,.network-ticker:focus-within .network-ticker-track,.network-ticker[data-paused="true"] .network-ticker-track{animation-play-state:paused}
-.network-ticker-set{height:100%;display:flex;align-items:center;gap:22px;padding-inline:11px}
-.network-ticker-label{color:var(--gold-pale);font-family:var(--ceremonial);font-size:10px;letter-spacing:.25em;text-transform:uppercase}
-.network-ticker-app{min-height:28px;display:inline-flex;align-items:center;gap:7px;padding:0;border:0;background:transparent;color:#eef3f7;font-size:11px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
-.network-ticker-app::before{content:"";width:3px;height:3px;border-radius:50%;background:var(--gold)}
-.network-ticker-app:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
-.ticker-control{width:40px;height:var(--ticker-height);display:grid;place-items:center;border:0;border-left:1px solid rgba(255,255,255,.13);color:#f4ead1;background:rgba(0,0,0,.14)}
-@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
 /* VNV header standard */
 .site-header{
   position:sticky;top:var(--ticker-height);z-index:1400;height:var(--header-height);
@@ -266,9 +248,6 @@ footer{padding:36px 20px;color:rgba(255,255,255,.64);background:#030a11;border-t
 <link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-global-header.css">
 <link rel="stylesheet" href="https://vervenveda.com/assets/vnv-ecosystem-menu.css">
 
-<style id="khae-single-master-header-v1">/* Retain local course navigation, remove duplicate masthead branding only. */
-body:has([data-khae-header]) .site-header .brand .brand-mark,body:has([data-khae-header]) .site-header .brand .brand-name,body:has([data-khae-header]) .site-header .brand .brand-sub{display:none!important}
-</style>
 <link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-standard.css">
 <link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-toolbar.css">
 </head>
@@ -279,41 +258,23 @@ body:has([data-khae-header]) .site-header .brand .brand-mark,body:has([data-khae
       <span data-khae-brand-mark>6–8</span>
       <span><strong data-khae-brand-name>Khaemenes Academy</strong><small data-khae-brand-sub>Middle School · Grades 6–8</small></span>
     </a>
-    <nav data-khae-nav aria-label="Academy global navigation">
-      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/">Academy Home</a>
-      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Student</a>
-      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Family</a>
-      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/teacher-admin/">Teacher</a>
+    <nav data-khae-nav aria-label="Middle School navigation">
+      <a href="#start" data-ticker>Start</a>
+      <a href="#grades" data-ticker>Grades 6–8</a>
+      <a href="#basecamp" data-ticker>Basecamp</a>
+      <a href="#resources" data-ticker>Resources</a>
+      <a href="#family" data-ticker>Family</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/" data-ticker>Student Profile</a>
+      <a href="https://vervenveda.com/Khaemenes_High.github.io/" data-ticker>High School</a>
     </nav>
-    <div data-khae-actions><a data-khae-secondary href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Student Profile</a><a href="https://vervenveda.com/Khaemenes_High.github.io/">High School</a></div>
+    <div data-khae-actions>
+      <a data-khae-secondary href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Student Profile</a>
+      <button class="menu-button" id="menuButton" type="button" aria-label="Open Middle School directory" aria-expanded="false" aria-controls="drawerBg"><span class="menu-lines" aria-hidden="true"></span></button>
+    </div>
     <div data-vnv-ecosystem-slot aria-label="Ecosystem menu"></div>
   </div>
 </header>
 <a class="skip-link" href="#main">Skip to main content</a>
-
-<header class="site-header">
-  <div class="shell header-inner">
-    <a class="brand" href="#top" aria-label="Khaemenes Academy Middle School home">
-      <span class="brand-mark">K</span>
-      <span class="brand-copy">
-        <span class="brand-name">Khaemenes Academy</span>
-        <span class="brand-sub">Middle School · Grades 6–8</span>
-      </span>
-    </a>
-    <nav class="header-links" aria-label="Primary navigation">
-      <a href="#start">Start</a>
-      <a href="#grades">Grades 6–8</a>
-      <a href="#basecamp">Basecamp</a>
-      <a href="#resources">Resources</a>
-      <a href="#family">Family</a>
-      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Student Profile</a>
-      <a class="high-link" href="https://vervenveda.com/Khaemenes_High.github.io/">High School</a>
-    </nav>
-    <button class="menu-button" id="menuButton" type="button" aria-label="Open Middle School directory" aria-expanded="false" aria-controls="drawerBg">
-      <span class="menu-lines" aria-hidden="true"></span>
-    </button>
-  </div>
-</header>
 
 <div class="breadcrumb-bar">
   <nav class="shell breadcrumbs" aria-label="Breadcrumb">
@@ -767,6 +728,8 @@ document.getElementById("middlePinSchool")?.addEventListener("click",pin);docume
 <script src="https://vervenveda.com/assets/vnv-ecosystem-menu.js" defer></script>
 <script src="assets/khaemenes-middle-resource-toolbar.js" defer></script>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-toolbar.js" defer></script>
+<script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
+<script>VNV_TICKER.autoPopulate({label:"Middle School Quick Links",max:12});</script>
 <script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
 </body>
 </html>
