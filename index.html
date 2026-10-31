@@ -647,13 +647,13 @@ footer{padding:36px 20px;color:rgba(255,255,255,.64);background:#030a11;border-t
     $$(".menu-link",$("drawerContent")).forEach(link=>link.addEventListener("click",closeDrawer));
   }
   function openDrawer(){
-    $("drawerBg").classList.add("open");$("drawerBg").setAttribute("aria-hidden","false");$("menuButton").setAttribute("aria-expanded","true");document.body.classList.add("menu-open");
+    $("drawerBg").classList.add("open");$("drawerBg").setAttribute("aria-hidden","false");$("menuButton")?.setAttribute("aria-expanded","true");document.body.classList.add("menu-open");
     renderDirectory($("drawerSearch").value.trim());setTimeout(()=>$("drawerSearch").focus(),40);
   }
   function closeDrawer(){
-    $("drawerBg").classList.remove("open");$("drawerBg").setAttribute("aria-hidden","true");$("menuButton").setAttribute("aria-expanded","false");document.body.classList.remove("menu-open");
+    $("drawerBg").classList.remove("open");$("drawerBg").setAttribute("aria-hidden","true");$("menuButton")?.setAttribute("aria-expanded","false");document.body.classList.remove("menu-open");
   }
-  $("menuButton").addEventListener("click",openDrawer);
+  $("menuButton")?.addEventListener("click",openDrawer);
   $("closeButton").addEventListener("click",closeDrawer);
   $("drawerBg").addEventListener("click",e=>{if(e.target===$("drawerBg"))closeDrawer()});
   $("drawerSearch").addEventListener("input",e=>renderDirectory(e.target.value.trim()));
