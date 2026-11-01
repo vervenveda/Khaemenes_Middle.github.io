@@ -293,6 +293,32 @@ body .hero .hero-actions .button{border-radius:7px!important;box-shadow:0 6px 16
 #transition .transition-actions a.button:hover{filter:brightness(1.09)!important;transform:translateY(-1px)}
 #transition .transition-actions a.button:focus-visible{outline:3px solid #c8a25a!important;outline-offset:3px!important}
 </style>
+<style id="middle-collapsible-resource-categories-20261031">
+/* Federated directory remains dynamically filtered, favorited, and link-preserving. */
+#resources{background:linear-gradient(145deg,#292146 0%,#392859 55%,#241d3f 100%)!important;color:#fffdf8!important}
+#resources .heading h2,#resources .heading p{color:#fffdf8!important}
+#resources .heading .kicker{color:#f0d18d!important}
+#resources .catalog{background:rgba(255,255,255,.06)!important;border:1px solid rgba(226,208,250,.28)!important;border-radius:7px!important;padding:clamp(15px,3vw,28px)!important}
+#resources #status{color:#eee4ff!important}
+#resources #toolGrid.tool-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:start!important;gap:17px!important}
+#resources .resource-category{min-width:0;border:2px solid rgba(226,208,250,.5);background:#f8f3ff;border-radius:7px;overflow:hidden;box-shadow:0 10px 24px rgba(0,0,0,.15)}
+#resources .resource-category>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:17px 18px;background:#e7ddf7;color:#292146;font-size:18px;font-weight:500;text-align:left;min-height:62px}
+#resources .resource-category>summary::-webkit-details-marker{display:none}
+#resources .resource-category>summary:focus-visible{outline:3px solid #eacb80;outline-offset:-4px}
+#resources .resource-category-name{flex:1;min-width:0}
+#resources .resource-category-count{font-size:13px;color:#41325f;white-space:nowrap}
+#resources .resource-category-chevron{font-size:24px;color:#41325f;transition:transform .16s}
+#resources .resource-category[open] .resource-category-chevron{transform:rotate(180deg)}
+#resources .resource-category-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:14px;background:#fffaf5}
+#resources .resource-category .tool-card{min-width:0;min-height:240px!important;border:1px solid #d7cbe6!important;border-radius:7px!important;background:#ffffff!important;color:#24313b!important}
+#resources .resource-category .tool-card h3{color:#26354a!important}
+#resources .resource-category .tool-card p{color:#4a5562!important}
+#resources .resource-category .tool-link{background:#463073!important;color:#fff!important;border-color:#463073!important}
+#resources .resource-category .tool-link:focus-visible{outline:3px solid #e9bd60!important;outline-offset:3px}
+#resources #middleMoreResources{display:block;margin:18px auto 0;background:#e7cc89!important;color:#251c3c!important;border:1px solid #e7cc89!important}
+@media(max-width:850px){#resources #toolGrid.tool-grid{grid-template-columns:1fr!important}}
+@media(max-width:550px){#resources .resource-category-items{grid-template-columns:1fr}#resources .resource-category>summary{font-size:16px;flex-wrap:wrap}}
+</style>
 </head>
 <body id="top">
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -650,7 +676,11 @@ body .hero .hero-actions .button{border-radius:7px!important;box-shadow:0 6px 16
   function renderResources(){
     const list=filtered(),favorites=getFavorites(),displayed=list.slice(0,state.shown);
     more.hidden=displayed.length>=list.length;
-    $("toolGrid").innerHTML=displayed.map(r=>`<article class="tool-card"><div class="tool-top"><span class="tool-icon" style="--accent:${r.category==="creative"?"#b8715d":r.category==="stem"?"#6e97ad":r.category==="games"?"#776b94":r.category==="tools"?"#4f7f7a":"#203a4b"}">${escapeHTML(r.icon||"R")}</span><button class="favorite" type="button" data-favorite="${escapeHTML(r.id)}" aria-pressed="${favorites.includes(r.id)}" aria-label="${favorites.includes(r.id)?"Remove":"Add"} ${escapeHTML(r.title)} ${favorites.includes(r.id)?"from":"to"} My Shelf">${favorites.includes(r.id)?"★":"☆"}</button></div><span class="badge">${escapeHTML(r.kind||"Resource")}</span><h3>${escapeHTML(r.title)}</h3><p>${escapeHTML(r.description||"Connected learning resource.")}</p><span class="destination">${escapeHTML(CATEGORIES[r.category]||r.category)}</span><a class="tool-link" href="${escapeHTML(r.url)}">Open Resource</a></article>`).join("");
+    const previousOpen=new Set(Array.from($("toolGrid").querySelectorAll("details[data-resource-category][open]"),node=>node.dataset.resourceCategory));
+    const groups=new Map();
+    for(const r of displayed){if(!groups.has(r.category))groups.set(r.category,[]);groups.get(r.category).push(r)}
+    const card=r=>`<article class="tool-card"><div class="tool-top"><span class="tool-icon" style="--accent:${r.category==="creative"?"#b8715d":r.category==="stem"?"#6e97ad":r.category==="games"?"#776b94":r.category==="tools"?"#4f7f7a":"#203a4b"}">${escapeHTML(r.icon||"R")}</span><button class="favorite" type="button" data-favorite="${escapeHTML(r.id)}" aria-pressed="${favorites.includes(r.id)}" aria-label="${favorites.includes(r.id)?"Remove":"Add"} ${escapeHTML(r.title)} ${favorites.includes(r.id)?"from":"to"} My Shelf">${favorites.includes(r.id)?"★":"☆"}</button></div><span class="badge">${escapeHTML(r.kind||"Resource")}</span><h3>${escapeHTML(r.title)}</h3><p>${escapeHTML(r.description||"Connected learning resource.")}</p><span class="destination">${escapeHTML(CATEGORIES[r.category]||r.category)}</span><a class="tool-link" href="${escapeHTML(r.url)}">Open Resource</a></article>`;
+    $("toolGrid").innerHTML=Array.from(groups,([category,items],index)=>`<details class="resource-category" data-resource-category="${escapeHTML(category)}" ${previousOpen.has(category)||state.query||state.favorites||state.category!=="all"?"open":""}><summary><span class="resource-category-name">${escapeHTML(CATEGORIES[category]||category)}</span><span class="resource-category-count">${items.length} resources</span><span class="resource-category-chevron" aria-hidden="true">⌄</span></summary><div class="resource-category-items">${items.map(card).join("")}</div></details>`).join("");
     const source=federationMeta.generatedAt?` · federation ${new Date(federationMeta.generatedAt).toLocaleString()}`:federationMeta.error?" · safe core fallback":"";
     $("status").textContent=`Showing ${displayed.length} of ${list.length} matching Middle School resources (${resources.length} available)${source}.`;
     $("empty").classList.toggle("show",list.length===0);
