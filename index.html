@@ -378,6 +378,35 @@ body .breadcrumb-bar .breadcrumbs a:focus-visible{outline:3px solid #f5d991!impo
 #basecamp .routine strong{font-size:13px!important}
 #basecamp .routine span{font-size:11px!important;line-height:1.35!important}
 @media(max-width:700px){#basecamp.section{padding:18px 12px!important}#basecamp .basecamp{padding:15px!important}}
+</style><style id="middle-final-alignment-polish-20261031">
+/* Eighth tile stays inside the existing federated directory, sharing its violet palette. */
+#resources .resource-shelf-shortcut{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:18px!important;min-height:180px;background:#493070!important;border:2px solid #8d74b1!important;text-align:center;color:#fff!important}
+#resources .resource-shelf-heading{width:100%;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;font-size:18px;color:#fff}
+#resources .resource-shelf-shortcut .resource-category-count,#resources .resource-shelf-shortcut p{color:#fff!important;font-size:13px;margin:0}
+#resources .resource-shelf-action{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #f0cf84;border-radius:7px;background:#f0cf84;color:#26183b;cursor:pointer}
+#resources .resource-shelf-action:focus-visible{outline:3px solid white;outline-offset:3px}
+/* A compact and centered closing statement; larger button targets, no stray spacing. */
+body .section.final{padding:36px 16px 48px!important;text-align:center!important}
+body .section.final .section-inner{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:10px!important;max-width:900px!important;margin:0 auto!important;text-align:center!important}
+body .section.final .kicker{margin:0!important;font-size:12px!important}
+body .section.final h2{margin:3px auto!important;font-size:clamp(30px,4vw,46px)!important;line-height:1.14!important;max-width:760px!important}
+body .section.final p:not(.kicker){max-width:680px!important;font-size:clamp(14px,1.4vw,16px)!important;line-height:1.55!important;margin:3px auto 8px!important}
+body .section.final .actions{display:flex!important;align-items:center!important;justify-content:center!important;flex-wrap:wrap!important;gap:12px!important;margin:8px auto 0!important;width:auto!important}
+body .section.final .actions>a{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-width:175px!important;min-height:46px!important;padding:11px 17px!important;border-radius:7px!important;text-align:center!important}
+body .section.final .actions>a:nth-child(1){background:#e7cc89!important;border-color:#e7cc89!important;color:#172b38!important}
+body .section.final .actions>a:nth-child(2){background:#7660af!important;border-color:#7660af!important;color:#fff!important}
+/* Shared support component: shorter top clearance, more room below. No component wiring changed. */
+body #vnv-global-support{margin:20px auto 36px!important;padding:23px 24px!important;text-align:center!important}
+body #vnv-global-support h2{margin:0 auto 10px!important;font-size:clamp(21px,2.3vw,27px)!important;line-height:1.25!important}
+body #vnv-global-support .vnv-support-button{display:inline-flex!important;align-items:center!important;justify-content:center!important;margin:12px auto 0!important}
+body #vnv-global-support p,body #vnv-global-support small{margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+/* Strict center alignment for all three footer layers. */
+body footer{padding:26px 20px 35px!important;text-align:center!important}
+body footer .footer-inner{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:11px!important;text-align:center!important}
+body footer .footer-inner>span{display:block!important;width:100%!important;text-align:center!important}
+body footer .footer-links{display:flex!important;align-items:center!important;justify-content:center!important;flex-wrap:wrap!important;gap:9px 16px!important;text-align:center!important;width:100%!important}
+body footer>a{display:inline-flex!important;justify-content:center!important;align-items:center!important;text-align:center!important;margin:14px auto 0!important}
+@media(max-width:640px){body .section.final{padding:28px 12px 40px!important}body .section.final .actions>a{width:100%!important}body #vnv-global-support{padding:19px 14px!important;margin:15px auto 30px!important}}
 </style></head>
 <body id="top">
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -742,6 +771,15 @@ body .breadcrumb-bar .breadcrumbs a:focus-visible{outline:3px solid #f5d991!impo
     for(const r of displayed){if(!groups.has(r.category))groups.set(r.category,[]);groups.get(r.category).push(r)}
     const card=r=>`<article class="tool-card"><div class="tool-top"><span class="tool-icon" style="--accent:${r.category==="creative"?"#b8715d":r.category==="stem"?"#6e97ad":r.category==="games"?"#776b94":r.category==="tools"?"#4f7f7a":"#203a4b"}">${escapeHTML(r.icon||"R")}</span><button class="favorite" type="button" data-favorite="${escapeHTML(r.id)}" aria-pressed="${favorites.includes(r.id)}" aria-label="${favorites.includes(r.id)?"Remove":"Add"} ${escapeHTML(r.title)} ${favorites.includes(r.id)?"from":"to"} My Shelf">${favorites.includes(r.id)?"★":"☆"}</button></div><span class="badge">${escapeHTML(r.kind||"Resource")}</span><h3>${escapeHTML(r.title)}</h3><p>${escapeHTML(r.description||"Connected learning resource.")}</p><span class="destination">${escapeHTML(CATEGORIES[r.category]||r.category)}</span><a class="tool-link" href="${escapeHTML(r.url)}">Open Resource</a></article>`;
     $("toolGrid").innerHTML=Array.from(groups,([category,items],index)=>`<details class="resource-category" data-resource-category="${escapeHTML(category)}" ${previousOpen.has(category)||state.query||state.favorites||state.category!=="all"?"open":""}><summary><span class="resource-category-name">${escapeHTML(CATEGORIES[category]||category)}</span><span class="resource-category-count">${items.length} resources</span><span class="resource-category-chevron" aria-hidden="true">⌄</span></summary><div class="resource-category-items">${items.map(card).join("")}</div></details>`).join("");
+    /* Eighth directory tile: existing My Shelf filter, not another copy of resources. */
+    if(!state.query && !state.favorites && state.category==="all"){
+      const shelf=document.createElement("div");
+      shelf.className="resource-category resource-shelf-shortcut";
+      shelf.innerHTML='<div class="resource-shelf-heading"><span>★ My Saved Shelf</span><span class="resource-category-count"></span></div><p>Return to the resources you have starred.</p><button type="button" class="resource-shelf-action">View My Shelf</button>';
+      shelf.querySelector(".resource-category-count").textContent=favorites.length+" saved";
+      shelf.querySelector("button").addEventListener("click",()=>{state.favorites=true;state.shown=100;$("favorites").setAttribute("aria-pressed","true");renderResources();$("status").scrollIntoView({block:"nearest",behavior:"smooth"})});
+      $("toolGrid").appendChild(shelf);
+    }
     const source=federationMeta.generatedAt?` · federation ${new Date(federationMeta.generatedAt).toLocaleString()}`:federationMeta.error?" · safe core fallback":"";
     $("status").textContent=`Showing ${displayed.length} of ${list.length} matching Middle School resources (${resources.length} available)${source}.`;
     $("empty").classList.toggle("show",list.length===0);
