@@ -407,6 +407,19 @@ body footer .footer-inner>span{display:block!important;width:100%!important;text
 body footer .footer-links{display:flex!important;align-items:center!important;justify-content:center!important;flex-wrap:wrap!important;gap:9px 16px!important;text-align:center!important;width:100%!important}
 body footer>a{display:inline-flex!important;justify-content:center!important;align-items:center!important;text-align:center!important;margin:14px auto 0!important}
 @media(max-width:640px){body .section.final{padding:28px 12px 40px!important}body .section.final .actions>a{width:100%!important}body #vnv-global-support{padding:19px 14px!important;margin:15px auto 30px!important}}
+</style><style id="middle-resource-eight-equal-tiles-20261031">
+#resources #toolGrid.tool-grid{align-items:start!important;grid-auto-flow:row!important}
+#resources #toolGrid>.resource-category{width:100%!important;min-width:0!important;margin:0!important;align-self:start!important}
+#resources #toolGrid>.resource-category>summary{box-sizing:border-box!important;min-height:56px!important;height:56px!important;padding:10px 13px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:8px!important}
+#resources #toolGrid>.resource-category .resource-category-name{font-size:clamp(13px,1.2vw,16px)!important;line-height:1.2!important;text-align:left!important}
+#resources #toolGrid>.resource-category .resource-category-count{font-size:12px!important}
+#resources .resource-shelf-shortcut{min-height:0!important;padding:0!important;display:block!important;text-align:left!important;background:#30204d!important}
+#resources .resource-shelf-shortcut>summary{background:#493070!important;color:#fff!important;cursor:pointer!important}
+#resources .resource-shelf-shortcut[open]>summary{background:#5c3b88!important}
+#resources .resource-shelf-content{padding:16px!important;text-align:center!important;background:#30204d!important}
+#resources .resource-shelf-content p{margin:0 auto 12px!important;color:#fff!important}
+#resources .resource-shelf-action{margin:0 auto!important}
+@media(max-width:550px){#resources #toolGrid>.resource-category>summary{height:auto!important;min-height:56px!important}}
 </style></head>
 <body id="top">
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -773,9 +786,9 @@ body footer>a{display:inline-flex!important;justify-content:center!important;ali
     $("toolGrid").innerHTML=Array.from(groups,([category,items],index)=>`<details class="resource-category" data-resource-category="${escapeHTML(category)}" ${previousOpen.has(category)||state.query||state.favorites||state.category!=="all"?"open":""}><summary><span class="resource-category-name">${escapeHTML(CATEGORIES[category]||category)}</span><span class="resource-category-count">${items.length} resources</span><span class="resource-category-chevron" aria-hidden="true">⌄</span></summary><div class="resource-category-items">${items.map(card).join("")}</div></details>`).join("");
     /* Eighth directory tile: existing My Shelf filter, not another copy of resources. */
     if(!state.query && !state.favorites && state.category==="all"){
-      const shelf=document.createElement("div");
+      const shelf=document.createElement("details");
       shelf.className="resource-category resource-shelf-shortcut";
-      shelf.innerHTML='<div class="resource-shelf-heading"><span>★ My Saved Shelf</span><span class="resource-category-count"></span></div><p>Return to the resources you have starred.</p><button type="button" class="resource-shelf-action">View My Shelf</button>';
+      shelf.innerHTML='<summary><span class="resource-category-name">★ My Saved Shelf</span><span class="resource-category-count"></span><span class="resource-category-chevron" aria-hidden="true">⌄</span></summary><div class="resource-shelf-content"><p>Return to the resources you have starred.</p><button type="button" class="resource-shelf-action">View My Shelf</button></div>';
       shelf.querySelector(".resource-category-count").textContent=favorites.length+" saved";
       shelf.querySelector("button").addEventListener("click",()=>{state.favorites=true;state.shown=100;$("favorites").setAttribute("aria-pressed","true");renderResources();$("status").scrollIntoView({block:"nearest",behavior:"smooth"})});
       $("toolGrid").appendChild(shelf);
