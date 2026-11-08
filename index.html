@@ -497,7 +497,18 @@ body main .section .resource-category>summary{height:auto!important;min-height:5
 body main .section .resource-category>summary .resource-category-name{line-height:1.35!important}
 body main .section .resource-category>summary .resource-category-count{line-height:1.35!important}
 @media(max-width:640px){body main .section .start-links a,body main .section .grade-actions a{width:100%;text-align:center}}
-</style></head>
+</style><style id="middle-refinement-parity-20261108">
+/* Preserve Middle School's violet resource directory, family palette, and curriculum cards. */
+body main #network{background:linear-gradient(180deg,#f4f0e7,#e9e6dd)!important;border-block:2px solid #a69b86}
+body main #network .network-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:15px}
+body main #network .network-grid>.network-card{flex:0 1 calc((100% - 45px)/4);min-width:220px;max-width:320px;height:auto}
+body main #network .network-card h3{color:#20382f}
+body main #network .network-card p{color:#344944;font-size:16px}
+body main #start .start-card p,body main #start .start-links>a,body main #basecamp .basecamp p,body main #basecamp .routine span{font-size:16px!important;line-height:1.5!important}
+@media(max-width:980px){body main #network .network-grid>.network-card{flex-basis:calc((100% - 15px)/2)}}
+@media(max-width:560px){body main #network .network-grid>.network-card{flex-basis:100%;max-width:100%}}
+</style>
+</head>
 <body id="top">
 <a class="skip-link" href="#main">Skip to main content</a>
 
@@ -967,11 +978,10 @@ document.getElementById("middlePinSchool")?.addEventListener("click",pin);docume
 <script src="assets/khaemenes-middle-resource-toolbar.js" defer></script>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-toolbar.js" defer></script>
 <script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
-<script>VNV_HEADER.mount({"title":"Khaemenes Academy","subtitle":"Middle School · Grades 6–8","icon":"6–8","home":"https://vervenveda.com/Khaemenes_Academy.github.io/","actions":[{"label":"Start","href":"#start"},{"label":"Grades 6–8","href":"#grades"},{"label":"Basecamp","href":"#basecamp"},{"label":"Resources","href":"#resources"},{"label":"Student Profile","href":"https://vervenveda.com/Khaemenes_Academy.github.io/student/"}]});</script>
 <script src="https://vervenveda.com/assets/vnv-333-ticker.js"></script>
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
 <script>VNV_TICKER.autoPopulate({label:"Middle School Quick Links",max:12});</script>
-<script>VNV_HEADER.mount({"title":"Khaemenes Academy","subtitle":"Middle School · Grades 6–8","icon":"6–8","home":"https://vervenveda.com/Khaemenes_Academy.github.io/","actions":[{"label":"Start","href":"#start"},{"label":"Grades 6–8","href":"#grades"},{"label":"Basecamp","href":"#basecamp"},{"label":"Resources","href":"#resources"},{"label":"Student Profile","href":"https://vervenveda.com/Khaemenes_Academy.github.io/student/"}]});</script>
+<script>VNV_HEADER.mount({"title":"Khaemenes Academy","subtitle":"Middle School · Grades 6–8","icon":"K","home":"https://vervenveda.com/KhaemenesAcademy_Home.github.io/","actions":[{"label":"Start","href":"#start"},{"label":"Grades 6–8","href":"#grades"},{"label":"Basecamp","href":"#basecamp"},{"label":"Resources","href":"#resources"},{"label":"Student Profile","href":"https://vervenveda.com/Khaemenes_Academy.github.io/student/"}]});</script>
 <script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
 </body>
 </html>
