@@ -983,5 +983,15 @@ document.getElementById("middlePinSchool")?.addEventListener("click",pin);docume
 <script>VNV_TICKER.autoPopulate({label:"Middle School Quick Links",max:12});</script>
 <script>VNV_HEADER.mount({"title":"Khaemenes Academy","subtitle":"Middle School · Grades 6–8","icon":"K","home":"https://vervenveda.com/KhaemenesAcademy_Home.github.io/","actions":[{"label":"Start","href":"#start"},{"label":"Grades 6–8","href":"#grades"},{"label":"Basecamp","href":"#basecamp"},{"label":"Resources","href":"#resources"},{"label":"Student Profile","href":"https://vervenveda.com/Khaemenes_Academy.github.io/student/"}]});</script>
 <script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
+<!-- Shared Academy Picture & Colors Studio; no second photo editor and no real account authority. -->
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-universal-profile-look-editor.js?v=20261109-photo-safety-v1"></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-stage-photo-entry.js?v=20261109-middle-higher-v1"></script>
+<script>
+(function(){ "use strict";
+ const mount=()=>window.KhaemenesStagePhotoEntry?.create?.("middle","middleEnrolledTools");
+ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",mount,{once:true});
+ else mount();
+})();
+</script>
 </body>
 </html>
