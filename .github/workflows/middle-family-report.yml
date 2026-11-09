@@ -1,0 +1,20 @@
+name: Middle School Family Reporting
+on:
+  workflow_dispatch:
+  push:
+    branches: [audit/middle-family-report-2026-11-09]
+    paths:
+      - assets/khaemenes-middle-continuation-publisher.js
+      - tests/middle-family-report.test.cjs
+      - .github/workflows/middle-family-report.yml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/middle-family-report.test.cjs
