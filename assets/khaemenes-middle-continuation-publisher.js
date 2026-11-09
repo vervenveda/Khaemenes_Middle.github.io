@@ -1,6 +1,6 @@
 (function attachKhaemenesMiddleContinuationPublisher(global){
 "use strict";
-const VERSION="1.1.0",PASS=80;
+const VERSION="1.1.1",PASS=80;
 const CONT_URL="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-learning-continuation.js";
 const REGISTRY_KEY="khaemenes_family_registry_v1",ACTIVE_KEY="khaemenes_active_learner_v1";
 const CFG={
@@ -67,7 +67,7 @@ async function publish(){
    status="complete";nextLabel="Open Certificate";nextTitle=`${conf.title} Complete`;nextHref=new URL("records/certificate.html",conf.base).href;summary="All recorded completion gates are satisfied.";best=100;
  }
  try{
-   C.publish({learnerId:ctx.learner.learnerId,courseId:conf.courseId,school:"Khaemenes Middle School",stage:"middle",grade:conf.title,subject:"Integrated Middle School Program",courseTitle:`Khaemenes ${conf.title}`,status,nextLabel,nextTitle,nextHref,summary,progress:{completed,total:36,percent:Math.round(completed/36*100)},mastery:{best,threshold:PASS,mastered:status==="complete"},family,source:`middle-${conf.courseId}-continuity`});
+   C.publish({learnerId:ctx.learner.learnerId,courseId:conf.courseId,school:"Khaemenes Middle School",stage:"middle",grade:conf.grade,subject:"Integrated Middle School Program",courseTitle:`Khaemenes ${conf.title}`,status,nextLabel,nextTitle,nextHref,summary,progress:{completed,total:36,percent:Math.round(completed/36*100)},mastery:{best,threshold:PASS,mastered:status==="complete"},family,source:`middle-${conf.courseId}-continuity`});
    return true;
  }catch{return false}
 }
