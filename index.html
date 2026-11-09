@@ -994,5 +994,15 @@ document.getElementById("middlePinSchool")?.addEventListener("click",pin);docume
  else mount();
 })();
 </script>
+
+<!-- Learner-owned profile creative rail: uses existing local photo and hero stores, never creates a second profile. -->
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-profile-creative-rail.js?v=20261109-universal-v1"></script>
+<script>
+(function(){
+ const show=()=>window.KhaemenesProfileCreativeRail?.mount?.("middle","middleEnrolledTools");
+ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",show,{once:true});else show();
+ window.addEventListener("pageshow",show);
+})();
+</script>
 </body>
 </html>
