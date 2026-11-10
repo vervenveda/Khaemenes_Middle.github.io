@@ -139,9 +139,19 @@ function questions(seed){
 }
 function attemptsKey(){return ATTEMPT_PREFIX+":"+(learner()?.learnerId||"preview")+":grade-"+grade()}
 function attempts(){const v=read(attemptsKey(),[]);return Array.isArray(v)?v:[]}
-function append(snapshot){const list=attempts();list.push(snapshot);return write(attemptsKey(),list.slice(-220))}
+function append(snapshot){
+  const l=learner();
+  if(!snapshot||!snapshot.id||snapshot.grade!==grade()||
+     (l?(!snapshot.learnerId||snapshot.learnerId!==l.learnerId||snapshot.preview):
+        (!snapshot.preview||snapshot.learnerId!==null)))return false;
+  const key=attemptsKey(),list=attempts();
+  if(list.some(a=>a?.id===snapshot.id))return true;
+  if((learner()?.learnerId||null)!==(l?.learnerId||null))return false;
+  const saved=write(key,[...list,snapshot].slice(-220));
+  return saved&&attempts().some(a=>a?.id===snapshot.id&&a.learnerId===snapshot.learnerId);
+}
 function writeScore(snapshot){
-  const l=learner();if(!l)return false;
+  const l=learner();if(!l||!snapshot||snapshot.preview||snapshot.learnerId!==l.learnerId||snapshot.grade!==grade()||snapshot.kind!==kind()||snapshot.week!==week())return false;
   const s=state(),k=kind(),w=week();s.assessmentMeta||={};
   if(k==="weekly"){
     s.weekly||={};s.assessmentMeta.weekly||={};
@@ -155,6 +165,17 @@ function writeScore(snapshot){
   if(ok)global.dispatchEvent(new CustomEvent("khaemenes-middle-assessment-recorded",{detail:{learnerId:l.learnerId,grade:grade(),kind:k,week:w,score:snapshot.score,attemptId:snapshot.id}}));
   return ok;
 }
+// Read-only integrity check: detect separate attempt-history and course-score writes.
+ // Never promote, repair or certify a score without authenticated authority.
+ function latestRetention(){
+   const l=learner(),list=attempts().filter(a=>a&&a.learnerId===l?.learnerId&&a.grade===grade()&&a.kind===kind()&&a.week===week()&&!a.preview);
+   if(!l)return Object.freeze({status:"preview",attemptId:null,historySaved:false,scoreLinked:false});
+   const latest=list[list.length-1];
+   if(!latest)return Object.freeze({status:"no-attempt",attemptId:null,historySaved:false,scoreLinked:false});
+   const st=state(),meta=kind()==="weekly"?st.assessmentMeta?.weekly?.[week()]:st.assessmentMeta?.[kind()];
+   const linked=meta?.lastAttemptId===latest.id;
+   return Object.freeze({status:linked?"linked":"review-needed",attemptId:latest.id,historySaved:true,scoreLinked:linked});
+ }
 function nextHref(){
   const w=week();
   if(kind()==="weekly"&&w<36)return"../weekly-plans/week-"+String(w+1).padStart(2,"0")+".html";
@@ -235,5 +256,5 @@ function begin(body){
   };
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",mount,{once:true});else mount();
-global.KhaemenesMiddleAssessmentEngine=Object.freeze({version:VERSION,masteryThreshold:PASS,grade,kind,week,learner,gate,attempts,bestScore,state,authority:Object.freeze({formalScoreWriter:true,attemptSnapshotsImmutable:true,manualScoreEntry:false,performanceEvidencePreserved:true})});
+global.KhaemenesMiddleAssessmentEngine=Object.freeze({version:VERSION,masteryThreshold:PASS,grade,kind,week,learner,gate,attempts,bestScore,state,latestRetention,authority:Object.freeze({formalScoreWriter:true,attemptSnapshotsImmutable:true,manualScoreEntry:false,performanceEvidencePreserved:true})});
 })(window);
