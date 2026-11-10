@@ -36,9 +36,20 @@
   function renderSubjects(){$("subjectGrid").innerHTML=DATA.subjects.map(s=>`<article class="card" style="border-top:5px solid ${s.color}"><div class="emblem">${esc(s.icon)}</div><h3>${esc(s.title)}</h3><p>${esc(s.description)}</p><a class="button" href="subjects/${s.id}/index.html">Open Subject Hall</a></article>`).join("")}
   function bind(){
     $("saveProfile").onclick=()=>{const c=CONT?.status?.();if(c?.status==="placement-mismatch")return;state.student=c?.status==="ready"?c.learner.nickname:($("studentName").value.trim()||"Seventh Grade Scholar");state.portfolio=$("portfolio").checked;if(!persist())return;renderDashboard();renderWeeks()};
-    $("clearRecords").onclick=()=>{const c=CONT?.status?.();if(c?.status==="placement-mismatch")return;if(!confirm("Clear local seventh-grade records for the active learner on this device?"))return;if(CONT?.clearState)CONT.clearState();else localStorage.removeItem(KEY);state=readState();loadedScope=recordScope();renderDashboard();renderWeeks()};
+    $("clearRecords").onclick=()=>{const c=CONT?.status?.();if(c?.status!=="ready"||recordScope()!==loadedScope)return;if(!confirm("Clear local seventh-grade records for the active learner on this device?"))return;let cleared=false;try{cleared=CONT?.clearState?.()===true}catch{cleared=false}if(!cleared){alert("No records were cleared. The active learner or local storage could not be verified.");return;}refreshFromRecord()};
   }
   function exportRecords(){const c=CONT?.status?.(),payload={format:"khaemenes-middle-grade-export-v2",course:DATA.course.title,courseCode:DATA.course.code,grade:"07",exported:new Date().toISOString(),learner:c?.status==="ready"?{learnerId:c.learner.learnerId,studentId:c.learner.studentId||null,nickname:c.learner.nickname,grade:c.learner.grade,stage:c.learner.stage}:null,recordAuthority:c?.status||"legacy-local",masteryRule:{weeklyThreshold:DATA.course.passingScore,allWeeksRequired:true,midtermThreshold:DATA.course.passingScore,finalThreshold:DATA.course.passingScore,portfolioRequired:true},state},blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="khaemenes-seventh-grade-records.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
-  window.addEventListener("pageshow",()=>{if(recordScope()!==loadedScope){loadedScope=recordScope();state=readState();renderDashboard();renderWeeks()}});
+  function refreshFromRecord(){loadedScope=recordScope();state=readState();renderDashboard();renderWeeks()}
+  window.addEventListener("pageshow",refreshFromRecord);
+  window.addEventListener("focus",refreshFromRecord);
+  window.addEventListener("khaemenes-family-changed",refreshFromRecord);
+  window.addEventListener("khaemenes-middle-grade-continuity-synced",refreshFromRecord);
+  window.addEventListener("khaemenes-middle-assessment-recorded",refreshFromRecord);
+  window.addEventListener("storage",event=>{
+    const scope=recordScope();
+    if(scope!==loadedScope||event.key===KEY||event.key==="khaemenes_active_learner_v1"||
+       event.key==="khaemenes_family_registry_v1"||
+       event.key===("khaemenes.course:"+scope.replace(/^learner:/,"")+":middle-grade-07"))refreshFromRecord();
+  });
   document.addEventListener("DOMContentLoaded",()=>{$("year").textContent=new Date().getFullYear();bind();renderDashboard();renderSubjects();renderWeeks()});
 })();
