@@ -11,7 +11,7 @@ const ACTIVE_KEY="khaemenes_active_learner_v1";
 const MAX_RECORDS=900;
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const read=(k,f=null)=>{try{const raw=localStorage.getItem(k);return raw?JSON.parse(raw):f}catch{return f}};
-const write=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch{return false}};
+const write=(k,v)=>{try{const encoded=JSON.stringify(v);localStorage.setItem(k,encoded);return localStorage.getItem(k)===encoded}catch{return false}};
 const uid=()=>("msl-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,9));
 
 function grade(){const m=location.pathname.match(/\/grades\/grade-(0[6-8])\//i);return m?m[1]:null}
@@ -30,9 +30,15 @@ function ownerId(){return learner()?.learnerId||"preview"}
 function all(){const v=read(LEDGER_KEY,{});return v&&typeof v==="object"&&!Array.isArray(v)?v:{}}
 function records(){const a=all(),id=ownerId();return Array.isArray(a[id])?a[id]:[]}
 function saveRecord(record){
-  const a=all(),id=ownerId(),list=Array.isArray(a[id])?a[id]:[];
-  list.push(record);a[id]=list.slice(-MAX_RECORDS);
-  const ok=write(LEDGER_KEY,a);
+  const l=learner(),id=l?.learnerId;
+  // Preview practice and stale sibling forms must never be promoted to saved learner evidence.
+  if(!id||!record||record.preview||record.learnerId!==id||record.grade!==grade())return false;
+  const a=all(),list=Array.isArray(a[id])?a[id]:[];
+  if(list.some(x=>x?.id===record.id))return true; // Idempotent retry, no duplicate.
+  if(learner()?.learnerId!==id)return false;
+  a[id]=[...list,record].slice(-MAX_RECORDS);
+  if(learner()?.learnerId!==id)return false;
+  const ok=write(LEDGER_KEY,a)&&records().some(x=>x?.id===record.id&&x.learnerId===id);
   if(ok)global.dispatchEvent(new CustomEvent("khaemenes-middle-ledger-recorded",{detail:{learnerId:id,record}}));
   return ok;
 }
@@ -68,12 +74,13 @@ function render(container,questions,ctx){
     if(answered<questions.length){status.textContent="Answer each checkpoint question before saving.";return}
     const score=Math.round(correct/questions.length*100),l=learner(),reflection=container.querySelector(".middle-check-reflection").value.trim();
     const record={schema:"khaemenes-middle-learning-ledger-record-v1",id:uid(),learnerId:l?.learnerId||null,preview:!l,grade:grade(),week:week(),subject:subject(),day:ctx.day,focus:ctx.focus,page:location.pathname,kind:ctx.kind||"lesson-formative-checkpoint",questionCount:questions.length,correct,score,responses,reflection:reflection.slice(0,1600),masteryAuthority:false,affectsGrade:false,unlocksCurriculum:false,changesPlacement:false,completedAt:new Date().toISOString()};
-    const stored=saveRecord(record);
+    const stored=ctx.startedLearnerId===(l?.learnerId||null)&&!!l&&saveRecord(record);
     if(stored){container.dataset.saved="true";container.querySelector("[data-save-check]").disabled=true;}
-    status.textContent=stored?("Saved formative evidence: "+correct+"/"+questions.length+" ("+score+"%). Practice does not change formal mastery."):"This browser could not save the checkpoint.";
+    status.textContent=stored?("Saved formative evidence: "+correct+"/"+questions.length+" ("+score+"%). Practice does not change formal mastery."):(!l?"Preview practice completed, but not saved. Select your registered learner to retain lesson evidence.":ctx.startedLearnerId!==l.learnerId?"Learner changed during practice. This attempt was not saved. Start a new check for the selected learner.":"This browser could not confirm a saved checkpoint. Your work was not marked complete.");
   };
 }
 function start(container,ctx,count){
+  ctx={...ctx,startedLearnerId:learner()?.learnerId||null};
   const f=global.KhaemenesMiddleQuestionFactory;
   if(!f){container.innerHTML="<p>Practice questions are still loading.</p>";return}
   const opts={grade:Number(grade()),focus:ctx.focus,seed:Date.now()+"|"+location.pathname+"|"+ctx.key,count};
