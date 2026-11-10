@@ -21,8 +21,10 @@ function subject(){
   return m?(global.KhaemenesMiddleQuestionFactory?.normalizeSubject?.(decodeURIComponent(m[1]))||m[1]):"integrated-projects";
 }
 function learner(){
-  const id=read(ACTIVE_KEY,null),registry=read(REGISTRY_KEY,null),l=id&&registry?.learners?.[id]?registry.learners[id]:null;
-  if(!l)return null;
+  const id=read(ACTIVE_KEY,null),registry=read(REGISTRY_KEY,null),l=typeof id==="string"?registry?.learners?.[id]:null;
+  const activeFamily=read("khaemenes_active_family_v1",null),family=l&&registry?.families?.[l.familyId];
+  if(!l||l.learnerId!==id||typeof activeFamily!=="string"||l.familyId!==activeFamily||
+     family?.familyId!==activeFamily||!Array.isArray(family.learnerIds)||!family.learnerIds.includes(id))return null;
   const g=String(l.grade||"").replace(/[^0-9]/g,"").padStart(2,"0");
   return String(l.stage||"").trim().toLowerCase()==="middle"&&g===grade()?Object.assign({},l,{grade:g}):null;
 }
