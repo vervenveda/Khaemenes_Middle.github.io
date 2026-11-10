@@ -38,3 +38,13 @@ test("no grade automatically adopts legacy grade-wide records when family identi
  assert.ok(bridge.includes('if(s.status==="no-active-learner")return false'));
  for(const grade of ["06","07","08"])assert.ok(source(grade).includes("CONT?.readState"));
 });
+
+for(const grade of ["06","07","08"]){
+ test("Grade "+grade+" continue link requires matching grade and safe Academy destination",()=>{
+  const page=fs.readFileSync(path.join(root,"grades","grade-"+grade,"index.html"),"utf8");
+  assert.ok(page.includes('window.KhaemenesGradeContinuity?.status?.()'));
+  assert.ok(page.includes('c?.status==="ready"&&c.learner?.learnerId'));
+  assert.ok(page.includes('if(s?.nextHref&&safeDestination(s.nextHref))'));
+  assert.ok(page.includes('u.protocol==="https:"&&u.hostname==="vervenveda.com"'));
+ });
+}
