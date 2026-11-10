@@ -17,8 +17,10 @@ function grade(){const m=location.pathname.match(/\/grades\/grade-(0[6-8])\//i);
 function kind(){if(/\/midterm\.html$/i.test(location.pathname))return"midterm";if(/\/final-exam\.html$/i.test(location.pathname))return"final";if(/\/week-\d+-assessment\.html$/i.test(location.pathname))return"weekly";return null}
 function week(){const m=location.pathname.match(/\/week-(\d+)-assessment\.html$/i);return m?Math.max(1,Math.min(36,Number(m[1])||1)):null}
 function learner(){
-  const id=read(ACTIVE_KEY,null),registry=read(REGISTRY_KEY,null),l=id&&registry?.learners?.[id]?registry.learners[id]:null;
-  if(!l)return null;
+  const id=read(ACTIVE_KEY,null),registry=read(REGISTRY_KEY,null),l=typeof id==="string"?registry?.learners?.[id]:null;
+  const activeFamily=read("khaemenes_active_family_v1",null),family=l&&registry?.families?.[l.familyId];
+  if(!l||l.learnerId!==id||typeof activeFamily!=="string"||l.familyId!==activeFamily||
+     family?.familyId!==activeFamily||!Array.isArray(family.learnerIds)||!family.learnerIds.includes(id))return null;
   const g=String(l.grade||"").replace(/[^0-9]/g,"").padStart(2,"0"),stage=String(l.stage||"").trim().toLowerCase();
   return stage==="middle"&&g===grade()?Object.assign({},l,{grade:g}):null;
 }
