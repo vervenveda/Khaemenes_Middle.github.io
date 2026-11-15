@@ -42,10 +42,10 @@ for(const file of files){
     }else correct++;
   }
 }
-const guards=walk(path.join(ROOT,"assets")).filter(f=>/global|chrome|standard/i.test(f)&&/\.js$/i.test(f));
+const guards=walk(ROOT).filter(f=>f.startsWith("assets/")&&/global|chrome|standard/i.test(f)&&/\.js$/i.test(f));
 let authorityPresent=false;
 for(const rel of guards){
-  const p=path.join(ROOT,"assets",rel);
+  const p=path.join(ROOT,rel);
   if(fs.readFileSync(p,"utf8").includes('khaemenesHierarchy="title-description-v1"'))authorityPresent=true;
 }
 console.log(JSON.stringify({
