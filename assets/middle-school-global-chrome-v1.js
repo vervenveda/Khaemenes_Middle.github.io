@@ -102,3 +102,71 @@ async function start(){
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start,{once:true});
 else start();
 })();
+/* Khaemenes semantic hierarchy authority v1
+   Eyebrow = category/brand. Title = heading. Description = paragraph.
+   Conservative inversion repair: only clear sentence-like heading reversals are changed. */
+(()=>{"use strict";
+if(window.__KHAEMENES_SEMANTIC_HIERARCHY_V1__)return;
+window.__KHAEMENES_SEMANTIC_HIERARCHY_V1__=true;
+
+const BRAND="Khaemenes Academy";
+const LABELS=".eyebrow,.kicker,[data-eyebrow],[data-kicker]";
+const clean=s=>String(s||"").replace(/\s+/g," ").trim();
+const words=s=>clean(s).split(/\s+/).filter(Boolean);
+const brandLike=s=>/^(?:verve\s*n\s*veda|khaemenes academy)(?:\b|\s*[·|—-])/i.test(clean(s));
+const titleLike=s=>{
+  const t=clean(s),w=words(t);
+  return !!t&&t.length<=100&&w.length>=1&&w.length<=10&&!/[.!?…]$/.test(t);
+};
+const sentenceLike=s=>{
+  const t=clean(s),w=words(t);
+  return /[.!?…]$/.test(t)||w.length>=9||(w.length>=6&&/[,;:]/.test(t));
+};
+function normalizeLabel(label){
+  if(!label||label.dataset.khaemenesHierarchyChecked==="true")return;
+  label.dataset.khaemenesHierarchyChecked="true";
+  if(label.closest("nav,footer,[data-khaemenes-no-semantic-normalize]"))return;
+  const heading=label.nextElementSibling;
+  if(!heading||!/^H[1-6]$/.test(heading.tagName))return;
+  if(label.children.length||heading.children.length)return;
+
+  const eyebrowText=clean(label.textContent);
+  const headingText=clean(heading.textContent);
+  if(!sentenceLike(headingText)||!titleLike(eyebrowText))return;
+
+  if(brandLike(eyebrowText)){
+    heading.dataset.khaemenesHierarchyReview="brand-eyebrow-sentence-heading";
+    return;
+  }
+
+  const desc=document.createElement("p");
+  desc.className="khaemenes-section-description";
+  desc.textContent=headingText;
+  desc.dataset.khaemenesDemotedFromHeading="true";
+
+  heading.dataset.khaemenesOriginalHeading=headingText;
+  heading.dataset.khaemenesPromotedFromEyebrow=eyebrowText;
+  heading.textContent=eyebrowText;
+
+  label.dataset.khaemenesOriginalEyebrow=eyebrowText;
+  label.textContent=BRAND;
+
+  heading.insertAdjacentElement("afterend",desc);
+  heading.closest("section,article,header,main,div")?.setAttribute("data-khaemenes-hierarchy-normalized","true");
+}
+function normalizeHierarchy(root=document){
+  root.querySelectorAll?.(LABELS).forEach(normalizeLabel);
+  document.documentElement.dataset.khaemenesHierarchy="title-description-v1";
+}
+let pending=false;
+function scheduleHierarchy(){
+  if(pending)return;
+  pending=true;
+  requestAnimationFrame(()=>{pending=false;normalizeHierarchy(document)});
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",()=>normalizeHierarchy(document),{once:true});
+else normalizeHierarchy(document);
+if(typeof MutationObserver==="function"){
+  new MutationObserver(scheduleHierarchy).observe(document.documentElement,{childList:true,subtree:true});
+}
+})();
