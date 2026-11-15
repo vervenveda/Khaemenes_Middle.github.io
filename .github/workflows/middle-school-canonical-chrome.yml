@@ -1,4 +1,4 @@
-name: Middle School Canonical Chrome
+      - 'tools/semantic-hierarchy-audit.mjs'\nname: Middle School Canonical Chrome
 
 on:
   push:
