@@ -1,4 +1,4 @@
-      - 'tools/semantic-hierarchy-audit.mjs'\nname: Middle School Canonical Chrome
+name: Middle School Canonical Chrome
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
     paths:
       - 'assets/middle-school-global-chrome-v1.js'
       - 'tools/middle-school-chrome-audit.mjs'
+      - 'tools/semantic-hierarchy-audit.mjs'
       - '.github/workflows/middle-school-canonical-chrome.yml'
   workflow_dispatch:
 
@@ -26,6 +27,8 @@ jobs:
         run: node tools/middle-school-chrome-audit.mjs --write
       - name: Verify canonical Middle School chrome coverage
         run: node tools/middle-school-chrome-audit.mjs --check
+      - name: Verify semantic title eyebrow hierarchy
+        run: node tools/semantic-hierarchy-audit.mjs
       - name: Validate patch
         run: git diff --check
       - name: Commit normalization
