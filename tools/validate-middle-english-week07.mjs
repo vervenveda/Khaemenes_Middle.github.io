@@ -100,7 +100,7 @@ for(const pair of [[0,1],[0,2],[1,2]]){
   assert.equal(dsq(original[a],original[b]),dsq(reflected[a],reflected[b]),"Reflection preserves distance");
   assert.equal(dsq(dilated[a],dilated[b]),4*dsq(original[a],original[b]),"Scale factor two multiplies squared lengths by four");
 }
-for(const token of ["A′(2,-1)","B′(4,-1)","C′(2,0)","B″(-2,0)","similar but is not congruent"]){
+for(const token of ["A′(2,-1)","B′(4,-1)","C′(2,0)","B″(-2,0)","similar to the original but is not congruent"]){
   assert.ok(g8.includes(token),"Grade 8 transformation claim: "+token);
 }
 console.log("PASS Week 07 cross-grade numerical/source truth: coordinates, equation boundaries, translation/reflection/dilation");
