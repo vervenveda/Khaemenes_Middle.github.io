@@ -14,6 +14,7 @@ on:
       - 'tools/validate-middle-english-week03.mjs'
       - 'tools/validate-middle-english-week04.mjs'
       - 'tools/validate-middle-english-week05.mjs'
+      - 'tools/validate-middle-english-week06.mjs'
       - 'assets/khaemenes-middle-ela-week01.css'
       - 'resources/video-study/**'
       - '.github/workflows/middle-curriculum-integrity.yml'
@@ -44,3 +45,5 @@ jobs:
         run: node tools/validate-middle-english-week04.mjs
       - name: Verify English 6–8 Week 05 procedural writing, source credibility and competing explanations
         run: node tools/validate-middle-english-week05.mjs
+      - name: Verify English 6–8 Week 06 original texts, attribution and research synthesis
+        run: node tools/validate-middle-english-week06.mjs
