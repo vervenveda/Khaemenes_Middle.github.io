@@ -86,5 +86,5 @@ for(const term of ["3.2 × 10^6","4.5 × 10^-4","3,200,000","0.00045","hypotheti
   assert.ok(grade8.includes(term),"Grade 8 notation and scope term "+term);
 }
 assert.equal(3.2*10**6,3200000);
-assert.equal(4.5*10**-4,0.00045);
+assert.ok(Math.abs(4.5*10**-4-0.00045)<1e-12,"Floating-point notation comparison remains within tolerance");
 console.log("PASS Week 06 source constraints: Grade 6 contextualized notation, Grade 7 grouped quantities, Grade 8 precise hypothetical scale");
