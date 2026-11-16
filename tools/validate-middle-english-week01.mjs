@@ -37,7 +37,7 @@ for(const grade of [6,7,8]){
  assert.doesNotMatch(page,/Name the subject:/,"Generic template must not return");
  for(const day of named)assert.match(page,new RegExp(day+"[^<]*"),"English "+grade+" missing "+day);
  for(const term of genres[grade])assert.ok(page.toLowerCase().includes(term.toLowerCase()),"English "+grade+" missing "+term);
- assert.match(page,/not (?:the )?(?:verified digital mastery|official mastery|verified 80%|an automatic grade)/i);
+ assert.match(page,/never replace the verified 80% Academy assessment engine/i);
  console.log("PASS English "+grade+": 5 original lessons · 20 specific tasks · 5 evidence records · learning engine preserved");
 }
 for(const grade of [7,8]){
