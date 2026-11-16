@@ -8,7 +8,22 @@
   let state=readState();
   const recordScope=()=>{const c=CONT?.status?.();return c?.status==="ready"?"learner:"+c.learner.learnerId:c?.status||"legacy-local"};
   let loadedScope=recordScope();
-  function save(){if(recordScope()!==loadedScope)return false;try{if(CONT?.writeState)return CONT.writeState(state);if(window.KhaemenesFamilyRegistry?.getLearner?.())return false;localStorage.setItem(KEY,JSON.stringify(state));return true}catch{return false}}
+  function save(){if(recordScope()!==loadedScope)return false;try{
+    // The student-facing Save Record action cannot overwrite authoritative results or approvals.
+    // Reload the latest course record before persisting permitted student profile edits.
+    const latest=readState();
+    if(latest&&typeof latest==="object"){
+      state.weekly={...(latest.weekly||{})};
+      state.midterm=Number(latest.midterm||0);
+      state.final=Number(latest.final||0);
+      state.assessmentMeta=latest.assessmentMeta||{};
+      state.portfolio=!!latest.portfolio;
+      
+    }
+    if(CONT?.writeState)return CONT.writeState(state);
+    if(window.KhaemenesFamilyRegistry?.getLearner?.())return false;
+    localStorage.setItem(KEY,JSON.stringify(state));return true
+  }catch{return false}}
   function persist(){if(save())return true;alert("Changes were not saved. Check browser storage and active learner selection, then reload.");return false}
   function validatedScore(input){const raw=input.value.trim();if(raw==="")return null;const n=Number(raw);if(!Number.isFinite(n)||n<0||n>100){input.setCustomValidity("Enter a number between 0 and 100.");input.reportValidity();return undefined}input.setCustomValidity("");return n}
   const hasWeekScore=w=>Object.prototype.hasOwnProperty.call(state.weekly||{},String(w))||Object.prototype.hasOwnProperty.call(state.weekly||{},w);
@@ -22,7 +37,7 @@
     const exact=c?.status==="ready", mismatch=c?.status==="placement-mismatch";
     $("studentName").value=exact?c.learner.nickname:(state.student||"");
     $("studentName").readOnly=exact||mismatch;
-    $("midtermScore").value=state.midterm||"";$("midtermScore").readOnly=true;$("midtermScore").title="Verified randomized assessment score";$("finalScore").value=state.final||"";$("finalScore").readOnly=true;$("finalScore").title="Verified randomized assessment score";$("portfolio").checked=!!state.portfolio;
+    $("midtermScore").value=state.midterm||"";$("midtermScore").readOnly=true;$("midtermScore").title="Verified randomized assessment score";$("finalScore").value=state.final||"";$("finalScore").readOnly=true;$("finalScore").title="Verified randomized assessment score";$("portfolio").checked=!!state.portfolio;$("portfolio").disabled=true;$("portfolio").title="Adult-reviewed portfolio status; student Save Record cannot approve it";
     [$("midtermScore"),$("finalScore"),$("portfolio"),$("saveProfile")].forEach(el=>{if(el)el.disabled=!!mismatch});
     const idLine=exact?`<p><strong>Academy learner:</strong> ${esc(c.learner.nickname)}${c.learner.studentId?` · Student ID ${esc(c.learner.studentId)}`:""}</p>`:mismatch?`<p><strong>Preview mode:</strong> the active learner is registered outside Grade 07. Grade 07 records are read-only and this course does not alter placement.</p>`:`<p><strong>Local compatibility mode:</strong> no active Academy learner is bound in this browser. Records remain local until enrollment/learner identity is established.</p>`;
     $("summary").innerHTML=`<div class="grid cols-4"><article class="card stat"><strong>${done}/36</strong><span>Weeks at 80%+</span></article><article class="card stat"><strong>${avg}%</strong><span>Average of ${recorded} recorded week${recorded===1?"":"s"}</span></article><article class="card stat"><strong>${state.midterm||0}%</strong><span>Midterm</span></article><article class="card stat"><strong>${state.final||0}%</strong><span>Final</span></article></div><div class="profile-box" style="margin-top:16px"><h3>${ok?"Certificate Ready":"Certificate Locked"}</h3><p>${ok?"All completion gates are met. The certificate page may be printed.":"Certificate requires all 36 verified weekly mastery scores at 80%+, weekly average 80%+, midterm 80%+, final 80%+, and adult portfolio approval."}</p>${idLine}<p class="small">Archaemenes may mentor and interpret progress, but does not award mastery. Verified randomized mastery scores plus authentic course evidence and authorized teacher/Academy review control completion.</p><div class="progress"><span style="width:${Math.min(100,Math.round(done/36*100))}%"></span></div><div class="actions"><a class="button ${ok?"gold":""}" href="records/certificate.html">Open Certificate</a><button type="button" class="button" id="exportBtn">Export Records</button></div>${academyLinks}</div>`;
@@ -35,7 +50,7 @@
   }
   function renderSubjects(){$("subjectGrid").innerHTML=DATA.subjects.map(s=>`<article class="card" style="border-top:5px solid ${s.color}"><div class="emblem">${esc(s.icon)}</div><h3>${esc(s.title)}</h3><p>${esc(s.description)}</p><a class="button" href="subjects/${s.id}/index.html">Open Subject Hall</a></article>`).join("")}
   function bind(){
-    $("saveProfile").onclick=()=>{const c=CONT?.status?.();if(c?.status==="placement-mismatch")return;state.student=c?.status==="ready"?c.learner.nickname:($("studentName").value.trim()||"Seventh Grade Scholar");state.portfolio=$("portfolio").checked;if(!persist())return;renderDashboard();renderWeeks()};
+    $("saveProfile").onclick=()=>{const c=CONT?.status?.();if(c?.status==="placement-mismatch")return;state.student=c?.status==="ready"?c.learner.nickname:($("studentName").value.trim()||"Seventh Grade Scholar");/* Approval and transition flags are adult-verified and never updated from student controls. */if(!persist())return;renderDashboard();renderWeeks()};
     $("clearRecords").onclick=()=>{const c=CONT?.status?.();if(c?.status==="placement-mismatch")return;if(!confirm("Clear local seventh-grade records for the active learner on this device?"))return;if(CONT?.clearState)CONT.clearState();else localStorage.removeItem(KEY);state=readState();loadedScope=recordScope();renderDashboard();renderWeeks()};
   }
   function exportRecords(){const c=CONT?.status?.(),payload={format:"khaemenes-middle-grade-export-v2",course:DATA.course.title,courseCode:DATA.course.code,grade:"07",exported:new Date().toISOString(),learner:c?.status==="ready"?{learnerId:c.learner.learnerId,studentId:c.learner.studentId||null,nickname:c.learner.nickname,grade:c.learner.grade,stage:c.learner.stage}:null,recordAuthority:c?.status||"legacy-local",masteryRule:{weeklyThreshold:DATA.course.passingScore,allWeeksRequired:true,midtermThreshold:DATA.course.passingScore,finalThreshold:DATA.course.passingScore,portfolioRequired:true},state},blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="khaemenes-seventh-grade-records.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
