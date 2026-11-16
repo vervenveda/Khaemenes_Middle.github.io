@@ -9,6 +9,8 @@ on:
       - 'tests/test_middle_curriculum_integrity.py'
       - 'tests/test_grade8_week_plan_links.py'
       - 'tests/test_middle_video_release.py'
+      - 'tools/validate-middle-english-week01.mjs'
+      - 'assets/khaemenes-middle-ela-week01.css'
       - 'resources/video-study/**'
       - '.github/workflows/middle-curriculum-integrity.yml'
   workflow_dispatch:
@@ -28,3 +30,5 @@ jobs:
         run: python3 tests/test_grade8_week_plan_links.py
       - name: Reject unapproved instructional video embeds
         run: python3 tests/test_middle_video_release.py
+      - name: Verify English 6–8 Week 01 lessons and adult-only completion flags
+        run: node tools/validate-middle-english-week01.mjs
