@@ -57,7 +57,7 @@ for(const [raw,expected] of Object.entries(expectations)){
   for(const reading of expected.reading)assert.ok(lesson.includes(reading),"Missing original reading: "+reading);
   for(const domain of expected.domains)assert.ok(lesson.toLowerCase().includes(domain.toLowerCase()),"Missing core skill "+domain);
   assert.ok(lesson.includes(expected.writing),"Missing grade-appropriate writing challenge");
-  assert.match(lesson,/not an automatic grade|not an official score|not an official mastery|not verified course mastery|not a verified course mastery/i);
+  assert.match(lesson,/never an automatic grade|no automatic mastery|not an automatic grade|not an official score|not an official mastery|not verified course mastery|not a verified course mastery/i);
   for(const href of ["../../weekly-plans/week-02.html","../../printables/week-02-packet.html"]){
     assert.ok(lesson.includes('href="'+href+'"'),"Missing original navigation "+href);
     assert.ok(fs.existsSync(path.resolve(root,prefix,"subjects/language-arts",href)),"Broken referenced file "+href);
