@@ -78,7 +78,7 @@ const g6=read("grades/grade-06/subjects/language-arts/week-04.html");
 const g7=read("grades/grade-07/subjects/language-arts/week-04.html");
 const g8=read("grades/grade-08/subjects/language-arts/week-04.html");
 assert.ok(g6.includes("30 out of 50")&&g6.includes("60%"),"Grade 6 library survey percentages");
-assert.ok(g6.includes("10 out of forty")&&g6.includes("25%"),"Grade 6 separate survey interpretation");
+assert.ok(/10 out of forty/i.test(g6)&&g6.includes("25%"),"Grade 6 separate survey interpretation");
 assert.equal((30/50)*100,60);
 assert.equal((10/40)*100,25);
 assert.ok(g7.includes("40 out of 80")||g7.includes("40 selected"),"Grade 7 first survey");
