@@ -1,6 +1,6 @@
-/* Khaemenes Academy Middle School · canonical global chrome guard v1.0.0
+/* Khaemenes Academy Middle School · canonical global chrome guard v1.1.0
    Grades 6–8. Idempotent shared authority:
-   333 ticker -> AutoPopulate ticker -> official header/menu -> lower-right ecosystem toolbar.
+   333 ticker -> AutoPopulate ticker -> official header/menu -> lower-right ecosystem toolbar + guarded lower-left learner toolbar.
 */
 (()=>{"use strict";
 if(window.__KHAEMENES_MIDDLE_GLOBAL_CHROME_V1__)return;
@@ -12,7 +12,9 @@ const SCRIPTS={
   ticker333:VNV+"vnv-333-ticker.js",
   tickerAuto:VNV+"vnv-ticker-autopopulate.js",
   header:VNV+"vnv-header-autopopulate.js",
-  toolbar:VNV+"vnv-ecosystem-toolbar.js"
+  toolbar:VNV+"vnv-ecosystem-toolbar.js",
+  classPresets:VNV+"vnv-class-tools-presets.js",
+  classToolbar:VNV+"vnv-class-tools-toolbar.js"
 };
 
 function hasScript(pathname){
@@ -67,6 +69,34 @@ function mountHeader(){
     });
   }catch{}
 }
+
+function middleLearnerSurface(){
+  const path=location.pathname;
+  const excluded=/(?:\/|^)(?:assessments?|records?|teacher-tools?|teacher|teachers|admin|printables?)(?:\/|$)/i;
+  if(excluded.test(path))return false;
+  if(/\/Khaemenes_Middle\.github\.io\/(?:index\.html)?$/i.test(path))return true;
+  if(/\/Khaemenes_Middle\.github\.io\/grades\/grade-(06|07|08)\/(?:index\.html)?$/i.test(path))return true;
+  return /\/Khaemenes_Middle\.github\.io\/grades\/grade-(06|07|08)\/(?:subjects|weekly-plans|learning)(?:\/|$)/i.test(path)
+    || /\/Khaemenes_Middle\.github\.io\/grades\/(?:electives|vocabulary-studio)(?:\/|$)/i.test(path)
+    || /\/Khaemenes_Middle\.github\.io\/(?:breakaway|resources\/video-study)(?:\/|$)/i.test(path);
+}
+function mountClassTools(){
+  const legacy=document.getElementById("khaeMiddleResourceToolbar");
+  if(legacy)legacy.remove();
+  if(!middleLearnerSurface()){
+    document.getElementById("vnvClassToolsToolbar")?.remove();
+    document.documentElement.dataset.khaemenesMiddleClassTools="excluded";
+    return;
+  }
+  try{window.VNVSelectClassToolsPreset?.("middle")}catch{}
+  try{window.VNVClassToolsToolbar?.mount?.()}catch{}
+  const dock=document.getElementById("vnvClassToolsToolbar");
+  if(dock){
+    dock.dataset.khaemenesMiddleLearnerToolbar="true";
+    document.documentElement.dataset.khaemenesMiddleClassTools="mounted";
+  }
+}
+
 function mountToolbar(){
   try{window.VNVEcosystemToolbar?.mount?.()}catch{}
   const dock=document.getElementById("vnvEcosystemUtilityDock");
@@ -91,11 +121,20 @@ async function start(){
   await load(SCRIPTS.toolbar,"khaemenesMiddleToolbar");
   mountToolbar();
 
-  document.documentElement.dataset.khaemenesMiddleChrome="333-auto-header-menu-toolbar";
+  if(middleLearnerSurface()){
+    await load(SCRIPTS.classPresets,"khaemenesMiddleClassPresets");
+    try{window.VNVSelectClassToolsPreset?.("middle")}catch{}
+    await load(SCRIPTS.classToolbar,"khaemenesMiddleClassToolbar");
+    mountClassTools();
+  }else{
+    document.documentElement.dataset.khaemenesMiddleClassTools="excluded";
+  }
+
+  document.documentElement.dataset.khaemenesMiddleChrome="333-auto-header-menu-toolbar-class-tools";
 
   if(typeof MutationObserver==="function"){
     new MutationObserver(()=>{
-      mount333();mountAuto();mountHeader();mountToolbar();
+      mount333();mountAuto();mountHeader();mountToolbar();mountClassTools();
     }).observe(document.documentElement,{childList:true,subtree:true});
   }
 }
