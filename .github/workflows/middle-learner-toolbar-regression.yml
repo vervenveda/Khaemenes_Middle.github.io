@@ -1,0 +1,36 @@
+name: Middle Learner Toolbar Regression
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/middle-school-global-chrome-v1.js'
+      - 'assets/khaemenes-middle-resource-toolbar.js'
+      - 'grades/**'
+      - 'breakaway/**'
+      - 'resources/video-study/**'
+      - 'tools/validate-middle-class-tools.mjs'
+      - '.github/workflows/middle-learner-toolbar-regression.yml'
+  pull_request:
+    paths:
+      - 'assets/middle-school-global-chrome-v1.js'
+      - 'assets/khaemenes-middle-resource-toolbar.js'
+      - 'grades/**'
+      - 'breakaway/**'
+      - 'resources/video-study/**'
+      - 'tools/validate-middle-class-tools.mjs'
+      - '.github/workflows/middle-learner-toolbar-regression.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - run: node tools/validate-middle-class-tools.mjs
