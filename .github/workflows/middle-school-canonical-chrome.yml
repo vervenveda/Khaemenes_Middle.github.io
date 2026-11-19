@@ -1,12 +1,9 @@
-name: Middle School Canonical Chrome
+name: Middle School Page Regulator Purge
 
 on:
   push:
     branches: [main]
     paths:
-      - 'assets/middle-school-global-chrome-v1.js'
-      - 'tools/middle-school-chrome-audit.mjs'
-      - 'tools/semantic-hierarchy-audit.mjs'
       - '.github/workflows/middle-school-canonical-chrome.yml'
   workflow_dispatch:
 
@@ -14,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  normalize:
+  purge:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -23,23 +20,86 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Install canonical Middle School chrome loader on every HTML page
-        run: node tools/middle-school-chrome-audit.mjs --write
-      - name: Verify canonical Middle School chrome coverage
-        run: node tools/middle-school-chrome-audit.mjs --check
-      - name: Verify semantic title eyebrow hierarchy
-        run: node tools/semantic-hierarchy-audit.mjs
-      - name: Validate patch
-        run: git diff --check
-      - name: Commit normalization
+      - name: Remove page regulator loaders and reinjection authority
         shell: bash
         run: |
-          if git diff --quiet; then
-            echo "No Middle School HTML pages required chrome repair."
-            exit 0
-          fi
+          node <<'NODE'
+          const fs=require('fs'),path=require('path');
+          const loaders=["middle-school-global-chrome-v1.js","middle-school-global-typography-v1.js"];
+          const deletePaths=["assets/middle-school-global-chrome-v1.js","assets/middle-school-global-typography-v1.js","tools/middle-school-chrome-audit.mjs","tools/middle-school-typography-audit.mjs",".github/workflows/middle-school-canonical-chrome.yml",".github/workflows/middle-school-typography.yml"];
+          const skip=new Set(['.git','node_modules']);
+          function walk(dir,out=[]){
+            for(const e of fs.readdirSync(dir,{withFileTypes:true})){
+              if(skip.has(e.name))continue;
+              const p=path.join(dir,e.name);
+              if(e.isDirectory())walk(p,out); else out.push(p);
+            }
+            return out;
+          }
+          const html=walk('.').filter(p=>/\.html?$/i.test(p));
+          let changed=0,removedTags=0;
+          const scriptTag=/<script\b[^>]*\bsrc=["']([^"']+)["'][^>]*>\s*<\/script>\s*/gi;
+          for(const file of html){
+            const src=fs.readFileSync(file,'utf8');
+            const next=src.replace(scriptTag,(m,u)=>{
+              if(loaders.some(loader=>u.includes(loader))){removedTags++;return '';}
+              return m;
+            });
+            if(next!==src){fs.writeFileSync(file,next);changed++;}
+          }
+          for(const p of deletePaths){try{fs.rmSync(p,{force:true,recursive:true});}catch{}}
+          fs.mkdirSync('tools',{recursive:true});
+          const bannedFiles=deletePaths.filter(p=>!p.startsWith('.github/workflows/'));
+          const guard=[
+            '#!/usr/bin/env node',
+            'import fs from "node:fs";',
+            'import path from "node:path";',
+            'const bannedFiles='+JSON.stringify(bannedFiles)+';',
+            'const loaders='+JSON.stringify(loaders)+';',
+            'const problems=[];',
+            'for(const p of bannedFiles)if(fs.existsSync(p))problems.push("forbidden regulator file exists: "+p);',
+            'function walk(dir,out=[]){for(const e of fs.readdirSync(dir,{withFileTypes:true})){if([".git","node_modules"].includes(e.name))continue;const p=path.join(dir,e.name);if(e.isDirectory())walk(p,out);else out.push(p)}return out}',
+            'for(const file of walk(".").filter(p=>/\\.html?$/i.test(p))){const src=fs.readFileSync(file,"utf8");for(const loader of loaders)if(src.includes(loader))problems.push(file+" still loads "+loader)}',
+            'if(problems.length){console.error(JSON.stringify({status:"FAIL",problems},null,2));process.exit(1)}',
+            'console.log(JSON.stringify({status:"PASS",policy:"page regulators purged; page-owned styling and explicit components only"},null,2));'
+          ].join('\n')+'\n';
+          fs.writeFileSync('tools/validate-no-page-regulator.mjs',guard);
+          fs.mkdirSync('.github/workflows',{recursive:true});
+          const guardWorkflow=[
+            'name: No Page Regulator Regression',
+            'on:',
+            '  push:',
+            '    branches: [main]',
+            '  pull_request:',
+            '  workflow_dispatch:',
+            'permissions:',
+            '  contents: read',
+            'jobs:',
+            '  verify:',
+            '    runs-on: ubuntu-latest',
+            '    steps:',
+            '      - uses: actions/checkout@v4',
+            '      - uses: actions/setup-node@v4',
+            '        with:',
+            '          node-version: "22"',
+            '      - run: node tools/validate-no-page-regulator.mjs'
+          ].join('\n')+'\n';
+          fs.writeFileSync('.github/workflows/no-page-regulator.yml',guardWorkflow);
+          console.log(JSON.stringify({htmlFiles:html.length,htmlFilesChanged:changed,loaderTagsRemoved:removedTags,deletedAuthorities:deletePaths},null,2));
+          NODE
+      - name: Verify purge
+        run: node tools/validate-no-page-regulator.mjs
+      - name: Validate patch
+        run: git diff --check
+      - name: Commit purge
+        shell: bash
+        run: |
           git config user.name "Khaemenes Academy Automation"
           git config user.email "khaemenesacademy@users.noreply.github.com"
-          git add -A -- ':!node_modules' ':!.git'
-          git commit -m "Standardize Middle School canonical chrome"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No regulator artifacts remained."
+            exit 0
+          fi
+          git commit -m "Purge Middle School page regulator and block reinjection"
           git push
