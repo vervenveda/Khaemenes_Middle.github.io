@@ -161,12 +161,15 @@ button{cursor:pointer}
 .btn,.button{
   box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;min-height:44px;
   padding:9px 12px;border:1px solid var(--g8-charcoal);border-radius:var(--g8-radius);
-  background:var(--g8-charcoal);color:var(--g8-cream);
+  background:var(--g8-charcoal);color:var(--g8-cream);-webkit-text-fill-color:var(--g8-cream);
   font:400 16px/1.3 var(--g8-body);text-align:center;white-space:normal;
 }
 .btn:hover,.button:hover,.btn:focus-visible,.button:focus-visible{border-color:var(--g8-gold)}
 .btn.light,.button.light,.btn.gold,.button.gold{
-  background:var(--g8-cream);color:var(--g8-charcoal);border-color:var(--g8-line);
+  background:var(--g8-cream);color:var(--g8-charcoal);-webkit-text-fill-color:var(--g8-charcoal);border-color:var(--g8-line);
+}
+.btn :is(span,strong,small,b),.button :is(span,strong,small,b){
+  color:inherit!important;-webkit-text-fill-color:currentColor!important;
 }
 
 /* Data and generated learning cards */
