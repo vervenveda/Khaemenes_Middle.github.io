@@ -1,0 +1,215 @@
+/* Khaemenes Academy · Middle School · 8th Grade Benchmark v1.0.0
+   Single presentation authority for grades/grade-08/index.html.
+   Curriculum, assessment, learner-record, continuity, certification, and storage logic remain separately owned. */
+
+:root{
+  --g8-charcoal:#243038;
+  --g8-charcoal-deep:#17242e;
+  --g8-parchment:#f4f0e7;
+  --g8-paper:#fffdf8;
+  --g8-cream:#fff8e9;
+  --g8-ink:#243038;
+  --g8-muted:#5d625e;
+  --g8-gold:#b48b45;
+  --g8-line:#c9bea8;
+  --g8-green:#31594b;
+  --g8-blue:#315f86;
+  --g8-teal:#4f7f7a;
+  --g8-terra:#96594e;
+  --g8-plum:#725f82;
+  --g8-sage:#6d8374;
+  --g8-radius:7px;
+  --g8-max:1100px;
+  --g8-display:Cinzel,Georgia,serif;
+  --g8-body:"Brandon Grotesque",Nunito,"Avenir Next",Avenir,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{
+  margin:0;min-width:300px;background:var(--g8-parchment);color:var(--g8-ink);
+  font:400 16px/1.65 var(--g8-body);text-align:center;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:400 16px/1.45 var(--g8-body)}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--g8-gold);outline-offset:3px}
+.shell{width:min(calc(100% - 33px),var(--g8-max));margin-inline:auto}
+.skip{
+  position:fixed;z-index:2147483000;left:11px;top:11px;transform:translateY(-180%);
+  padding:9px 14px;border-radius:var(--g8-radius);background:var(--g8-charcoal);color:var(--g8-cream);
+  font-size:16px;
+}
+.skip:focus{transform:none}
+
+/* Canonical VNV header parity. */
+#vnvHeaderAutoPopulate .vnv-header-logo,
+#vnvHeaderAutoPopulate .vnv-header-menu-button{
+  width:40px!important;height:40px!important;min-width:40px!important;min-height:40px!important;
+  flex:0 0 40px!important;border-radius:var(--g8-radius)!important;
+}
+#vnvHeaderAutoPopulate .vnv-header-logo{
+  font-size:16px!important;font-family:var(--g8-display)!important;font-weight:400!important;
+}
+#vnvHeaderAutoPopulate .vnv-header-title{
+  font-family:var(--g8-display)!important;font-size:16px!important;font-weight:400!important;
+}
+#vnvHeaderAutoPopulate .vnv-header-subtitle{
+  font-family:var(--g8-body)!important;font-size:16px!important;font-weight:400!important;
+}
+
+/* One symmetrical Grade 8 navigation row. */
+.grade08-local-links{
+  width:100%;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;
+  padding:11px max(16px,calc((100vw - 900px)/2));margin:0;
+  background:var(--g8-parchment);border:0;border-bottom:1px solid var(--g8-line);
+}
+.grade08-local-links a{
+  display:flex;align-items:center;justify-content:center;width:100%;min-width:0;min-height:44px;
+  padding:9px 12px;border:1px solid var(--g8-line);border-radius:var(--g8-radius);
+  background:var(--g8-cream);color:var(--g8-charcoal);
+  font:400 16px/1.25 var(--g8-body);text-align:center;white-space:nowrap;
+}
+.grade08-local-links a:hover,.grade08-local-links a:focus-visible{
+  background:var(--g8-paper);border-color:var(--g8-gold);
+}
+
+/* Hero */
+.hero{
+  position:relative;overflow:hidden;background:var(--g8-charcoal);color:var(--g8-cream);
+}
+.hero:before{
+  content:"KA";position:absolute;right:3vw;bottom:-55px;color:rgba(255,255,255,.055);
+  font:400 55px/1 var(--g8-display);transform:scale(5);transform-origin:bottom right;pointer-events:none;
+}
+.hero .shell{position:relative;z-index:1;padding:55px 0}
+.kicker{
+  margin:0;font:400 16px/1.3 var(--g8-display);letter-spacing:.09em;text-transform:uppercase;
+}
+.hero .kicker{color:#ead9b8}
+.hero h1{
+  margin:14px 0 0;color:var(--g8-cream);font:400 55px/1.16 var(--g8-display);letter-spacing:.01em;
+}
+.grade-title{
+  margin:16px 0 0;color:var(--g8-cream);font:400 33px/1.24 var(--g8-display);
+}
+.lead,#learnerContext{
+  max-width:820px;margin:22px auto 0;color:var(--g8-cream);font:400 16px/1.82 var(--g8-body);
+}
+#learnerContext{margin-top:14px}
+
+/* Sections */
+.section{padding:55px 0;background:var(--g8-parchment);color:var(--g8-charcoal)}
+.section.alt{background:var(--g8-charcoal);color:var(--g8-cream);border-block:1px solid #536069}
+.heading{max-width:880px;margin:0 auto 33px}
+.heading h2{
+  margin:11px 0 0;font:400 33px/1.2 var(--g8-display);color:var(--g8-charcoal);
+}
+.heading p{max-width:780px;margin:14px auto 0;font-size:16px;line-height:1.6;color:var(--g8-muted)}
+.section.alt .heading :is(h2,p,.kicker){color:var(--g8-cream)}
+
+/* Front Desk */
+.front-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
+.front-card{
+  display:flex;flex-direction:column;align-items:center;height:100%;padding:24px;
+  border:1px solid var(--g8-line);border-top:4px solid var(--accent,var(--g8-green));
+  border-radius:var(--g8-radius);background:var(--g8-paper);color:var(--g8-charcoal);
+}
+.front-mark{
+  width:55px;height:55px;display:grid;place-items:center;border-radius:var(--g8-radius);
+  background:var(--accent,var(--g8-green));color:var(--g8-cream);font:400 16px/1 var(--g8-display);
+}
+.front-card h3{margin:14px 0 9px;font:400 24px/1.25 var(--g8-display)}
+.front-card p{margin:0 0 22px;color:var(--g8-muted);font-size:16px;line-height:1.6}
+.front-card .btn{margin-top:auto;width:100%}
+.accent-blue{--accent:var(--g8-blue)}
+.accent-teal{--accent:var(--g8-teal)}
+.accent-terra{--accent:var(--g8-terra)}
+.accent-plum{--accent:var(--g8-plum)}
+.accent-sage{--accent:var(--g8-sage)}
+.accent-gold{--accent:var(--g8-gold)}
+
+/* Buttons */
+.actions{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:22px}
+.btn,.button{
+  box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+  padding:9px 12px;border:1px solid var(--g8-charcoal);border-radius:var(--g8-radius);
+  background:var(--g8-charcoal);color:var(--g8-cream);
+  font:400 16px/1.3 var(--g8-body);text-align:center;white-space:normal;
+}
+.btn:hover,.button:hover,.btn:focus-visible,.button:focus-visible{border-color:var(--g8-gold)}
+.btn.light,.button.light,.btn.gold,.button.gold{
+  background:var(--g8-cream);color:var(--g8-charcoal);border-color:var(--g8-line);
+}
+
+/* Data and generated learning cards */
+.grid{display:grid;gap:14px}
+.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card,.profile-box{
+  display:flex;flex-direction:column;align-items:center;min-width:0;
+  padding:24px;border:1px solid var(--g8-line);border-radius:var(--g8-radius);
+  background:var(--g8-paper);color:var(--g8-charcoal);
+}
+.card h3,.profile-box h3{margin:14px 0 9px;font:400 24px/1.25 var(--g8-display)}
+.card p,.profile-box p{color:var(--g8-muted);font-size:16px;line-height:1.6}
+.stat{min-height:0;justify-content:center}
+.stat strong{display:block;color:var(--g8-gold);font:400 33px/1.1 var(--g8-display)}
+.stat span{font-size:16px}
+.emblem{
+  width:55px;height:55px;display:grid;place-items:center;border-radius:var(--g8-radius);
+  background:var(--g8-parchment);color:var(--g8-charcoal);font:400 16px/1 var(--g8-display);
+}
+.badges{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin:10px 0}
+.badge{
+  display:inline-flex;padding:5px 9px;border:1px solid var(--g8-line);border-radius:var(--g8-radius);
+  background:var(--g8-parchment);color:var(--g8-charcoal);font-size:16px;
+}
+.week-card{text-align:left;align-items:stretch}
+.week-card h3{text-align:left}
+.week-card .actions{justify-content:flex-start;margin-top:auto}
+.portal{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.profile-box{align-items:stretch;text-align:left}
+.profile-box h3{text-align:center}
+.profile-box label{display:block;margin-top:11px;font-size:16px}
+input,select{
+  width:100%;min-height:44px;padding:9px 11px;border:1px solid var(--g8-line);
+  border-radius:var(--g8-radius);background:#fff;color:var(--g8-charcoal);font-size:16px;
+}
+.progress{height:14px;border-radius:var(--g8-radius);background:#e8dcc7;overflow:hidden;border:1px solid var(--g8-line)}
+.progress span{height:100%;display:block;background:var(--g8-green)}
+#summary{min-width:0}
+#summary>.profile-box{margin-top:16px}
+
+/* Vocabulary pilot */
+.grade08-vocabulary-pilot{padding:24px 0}
+.grade08-vocabulary-pilot p{font-size:16px}
+
+/* Footer */
+.footer{
+  padding:33px 16px;background:var(--g8-charcoal);color:var(--g8-cream);
+  border-top:1px solid var(--g8-gold);text-align:center;font:400 16px/1.5 var(--g8-body);
+}
+
+/* Responsive layout only; benchmark typography sizes remain stable. */
+@media(max-width:900px){
+  .cols-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .front-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .portal{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .grade08-local-links{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cols-4,.cols-3,.cols-2,.front-grid{grid-template-columns:1fr}
+}
+@media(max-width:430px){
+  .grade08-local-links{grid-template-columns:1fr}
+}
+@media print{
+  .grade08-local-links,#vnvClassToolsToolbar,#vnvEcosystemUtilityDock,.no-print{display:none!important}
+  body{background:#fff;color:#000}
+  .hero,.section,.section.alt{background:#fff!important;color:#000!important}
+  .hero:before{display:none}
+  .hero :is(h1,.grade-title,.kicker,.lead,#learnerContext),.heading :is(h2,p,.kicker){color:#000!important}
+  .card,.profile-box{break-inside:avoid;box-shadow:none}
+}
