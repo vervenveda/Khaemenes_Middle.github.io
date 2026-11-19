@@ -177,6 +177,12 @@ input,select{
   width:100%;min-height:44px;padding:9px 11px;border:1px solid var(--g8-line);
   border-radius:var(--g8-radius);background:#fff;color:var(--g8-charcoal);font-size:16px;
 }
+.grade08-check-row{
+  display:flex!important;align-items:center;justify-content:center;gap:10px;margin-top:14px!important;
+}
+.grade08-check{
+  width:auto!important;min-height:0!important;padding:0!important;
+}
 .progress{height:14px;border-radius:var(--g8-radius);background:#e8dcc7;overflow:hidden;border:1px solid var(--g8-line)}
 .progress span{height:100%;display:block;background:var(--g8-green)}
 #summary{min-width:0}
