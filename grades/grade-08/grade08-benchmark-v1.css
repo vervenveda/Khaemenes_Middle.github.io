@@ -108,6 +108,33 @@ button{cursor:pointer}
 .heading p{max-width:780px;margin:14px auto 0;font-size:16px;line-height:1.6;color:var(--g8-muted)}
 .section.alt .heading :is(h2,p,.kicker){color:var(--g8-cream)}
 
+
+/* Collapsed curriculum shelves */
+.grade08-shelves{
+  width:min(calc(100% - 33px),var(--g8-max));margin:0 auto 55px;display:grid;gap:14px;
+}
+.grade08-shelf{
+  width:100%;margin:0;border:1px solid var(--g8-line);border-radius:var(--g8-radius);
+  background:var(--g8-paper);overflow:hidden;
+}
+.grade08-shelf>summary{
+  box-sizing:border-box;display:list-item;list-style-position:inside;cursor:pointer;
+  width:100%;min-height:55px;padding:14px 18px;
+  background:var(--g8-charcoal);color:var(--g8-cream);
+  font:400 24px/1.3 var(--g8-display);text-align:center;
+}
+.grade08-shelf>summary::marker{color:#ead9b8}
+.grade08-shelf>summary:hover{background:#314047}
+.grade08-shelf>summary:focus-visible{outline:3px solid var(--g8-gold);outline-offset:-4px}
+.grade08-shelf[open]>summary{border-bottom:1px solid var(--g8-gold)}
+.grade08-shelf-body{
+  padding:33px 0;background:var(--g8-parchment);color:var(--g8-charcoal);
+}
+.grade08-shelf-body.alt{background:var(--g8-paper)}
+.grade08-shelf-body .heading{margin-bottom:24px}
+.grade08-shelf-body .heading h2{font-size:33px}
+.grade08-shelf-body>.shell>.actions:first-child{margin-top:0}
+
 /* Front Desk */
 .front-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
 .front-card{
