@@ -34,8 +34,8 @@ for(let week=1;week<=22;week++){
      for(const [i,unit] of units.entries()){
        const day=["Monday","Tuesday","Wednesday","Thursday","Friday"][i];
        // Check the actual daily heading, not an incidental mention later in the article.
-       const heading=unit.match(/<h4(?:\\s[^>]*)?>([^<]*)<\\/h4>/i)?.[1]||"";
-       assert(new RegExp("^"+day+"\\\\s*(?::|·|—|–)\\\\s*\\\\S").test(heading),"Misordered day "+w+" "+s.id);
+       const heading=unit.match(/<h4(?:\s[^>]*)?>([^<]*)<\/h4>/i)?.[1]||"";
+       assert(new RegExp("^"+day+"\\s*(?::|·|—|–)\\s*\\S").test(heading),"Misordered day "+w+" "+s.id);
        if(s.id==="language-arts"&&unit.includes('class="ela-workshop"')){
          // Rebuilt original-reading workshops deliberately use a richer evidence vocabulary.
          assert(unit.includes('class="ela-target"')&&unit.includes("Learning target:"),"Missing English learning target "+w+" "+s.id);
