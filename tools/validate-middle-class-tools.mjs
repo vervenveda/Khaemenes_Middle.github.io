@@ -20,7 +20,7 @@ for(const p of gradePages){
   const src=fs.readFileSync(path.join(root,p),"utf8");
   if(!src.includes("vnv-ecosystem-toolbar.js"))throw Error("Official VNV ecosystem toolbar missing: "+p);
   if(!src.includes("vnv-333-ticker.js"))throw Error("Official 333 ticker missing: "+p);
-  if((src.match(/<header\\b/g)||[]).length!==1)throw Error("Expected one canonical grade header: "+p);
+  if((src.match(/<header\b/g)||[]).length!==1)throw Error("Expected one canonical grade header: "+p);
   if(!src.includes('aria-label="Grade quick links"'))throw Error("Grade shortcuts missing: "+p);
   if(!src.includes("vnv-ticker-autopopulate.js"))throw Error("Automatic ticker missing: "+p);
   if(!src.includes("vnv-language.js"))throw Error("Official translator missing: "+p);
