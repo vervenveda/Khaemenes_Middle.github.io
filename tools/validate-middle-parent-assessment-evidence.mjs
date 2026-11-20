@@ -33,6 +33,15 @@ for(const grade of ["06","07","08"]){
  assert.equal(published.length,1);
  const p=published[0];
  assert.equal(p.learnerId,"student-a");
+ assert.equal(p.evidence.portfolioRecorded,false);
+ assert.equal(p.evidence.transitionRecorded,grade==="08"?false:null);
+ state.portfolio=true;
+ if(grade==="08")state.transition=true;
+ assert.equal(await window.KhaemenesMiddleContinuationPublisher.publish(),true);
+ assert.equal(published.at(-1).evidence.portfolioRecorded,true);
+ assert.equal(published.at(-1).evidence.transitionRecorded,grade==="08"?true:null);
+ state.portfolio=false;state.transition=false;
+
  assert.equal(p.assessments.length,3);
  assert.deepEqual(JSON.parse(JSON.stringify(p.assessments.map(x=>[x.id,x.kind,x.earned,x.possible]))),[
   ["week-01","quiz",18,20],["midterm","test",30,36],["final","test",38,45]
