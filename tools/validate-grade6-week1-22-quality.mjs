@@ -32,9 +32,20 @@ for(let week=1;week<=22;week++){
    if(s.id!=="mathematics"){
      assert.equal(units.length,5,"Expected five daily lessons "+w+" "+s.id);
      for(const [i,unit] of units.entries()){
-       assert(unit.includes(["Monday:","Tuesday:","Wednesday:","Thursday:","Friday:"][i]),"Misordered day "+w+" "+s.id);
-       assert(unit.includes("Learn:")||unit.includes("Read and learn:"),"Missing instruction "+w+" "+s.id);
-       assert(unit.includes("Practice and evidence:"),"Missing evidence task "+w+" "+s.id);
+       const day=["Monday","Tuesday","Wednesday","Thursday","Friday"][i];
+       // Check the actual daily heading, not an incidental mention later in the article.
+       const heading=unit.match(/<h4(?:\\s[^>]*)?>([^<]*)<\\/h4>/i)?.[1]||"";
+       assert(new RegExp("^"+day+"\\\\s*(?::|·|—|–)\\\\s*\\\\S").test(heading),"Misordered day "+w+" "+s.id);
+       if(s.id==="language-arts"&&unit.includes('class="ela-workshop"')){
+         // Rebuilt original-reading workshops deliberately use a richer evidence vocabulary.
+         assert(unit.includes('class="ela-target"')&&unit.includes("Learning target:"),"Missing English learning target "+w+" "+s.id);
+         assert(/Student practice/i.test(unit),"Missing English student practice "+w+" "+s.id);
+         assert(/portfolio evidence/i.test(unit),"Missing English portfolio evidence "+w+" "+s.id);
+         assert(unit.length>=650,"English workshop is unexpectedly thin "+w+" "+s.id);
+       }else{
+         assert(unit.includes("Learn:")||unit.includes("Read and learn:"),"Missing instruction "+w+" "+s.id);
+         assert(unit.includes("Practice and evidence:"),"Missing evidence task "+w+" "+s.id);
+       }
      }
    }
    lessons+=units.length;subjects++;
