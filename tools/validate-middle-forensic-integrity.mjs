@@ -19,13 +19,17 @@ const files=walk();
 const html=files.filter(f=>f.endsWith(".html"));
 let refs=0,remote=0,fragmentRefs=0;
 for(const filename of html){
-  const source=read(filename);
+  const original=read(filename);
+  // Ignore JS string literals that merely contain href= or src= text.
+  // Preserve each script opening tag so real external src dependencies are checked.
+  const source=original.replace(/(<script\\b[^>]*>)[\\s\\S]*?<\\/script>/gi,"$1</script>");
+  const dynamicNavigator=original.includes("khaemenes-middle-learning-navigator.js");
   const ids=new Set([...source.matchAll(/\bid\s*=\s*["']([^"'<>]+)["']/g)].map(m=>m[1]));
   for(const match of source.matchAll(/\b(?:href|src)\s*=\s*["']([^"']+)["']/g)){
     const ref=match[1].trim();
     if(!ref||ref==="#"||ref.includes("${")||/^(mailto:|tel:|data:|javascript:)/i.test(ref))continue;
     if(/^https?:\/\//i.test(ref)||ref.startsWith("//")){remote++;continue}
-    if(ref.startsWith("#")){fragmentRefs++;check(ids.has(decodeURIComponent(ref.slice(1))),filename+" missing anchor "+ref);continue}
+    if(ref.startsWith("#")){fragmentRefs++;check(ids.has(decodeURIComponent(ref.slice(1)))||(ref==="#learning-navigator"&&dynamicNavigator),filename+" missing anchor "+ref);continue}
     const target=ref.split(/[?#]/)[0];
     if(!target)continue;
     if(target.startsWith("/")){
