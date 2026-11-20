@@ -5,6 +5,7 @@ on:
       - repair/purge-middle-global-chrome-20261120
     paths:
       - '.github/workflows/purge-retired-middle-chrome.yml'
+      - 'tools/validate-middle-forensic-integrity.mjs'
   workflow_dispatch:
 permissions:
   contents: write
@@ -31,6 +32,5 @@ jobs:
             git commit -m "Purge retired Middle global chrome references from HTML"
             git push origin HEAD:repair/purge-middle-global-chrome-20261120
           fi
-      - name: Report pre-existing forensic integrity holds separately
+      - name: Verify forensic integrity as required gate
         run: node tools/validate-middle-forensic-integrity.mjs
-        continue-on-error: true
