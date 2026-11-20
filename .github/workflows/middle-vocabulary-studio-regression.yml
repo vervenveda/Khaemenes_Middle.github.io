@@ -6,6 +6,11 @@ on:
       - 'grades/vocabulary-studio/**'
       - 'tests/middle-vocabulary-studio-regression.cjs'
       - '.github/workflows/middle-vocabulary-studio-regression.yml'
+  pull_request:
+    paths:
+      - 'grades/vocabulary-studio/**'
+      - 'tests/middle-vocabulary-studio-regression.cjs'
+      - '.github/workflows/middle-vocabulary-studio-regression.yml'
   workflow_dispatch:
 jobs:
   verify:
