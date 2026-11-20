@@ -31,7 +31,10 @@ for(const filename of html){
     if(target.startsWith("/")){
       // Root-relative shared-site resources are hosted by the central Academy.
       if(target==="/assets/vnv-beta-link.js")continue;
-      const local=target.slice(1);
+      const repoPrefix="/Khaemenes_Middle.github.io/";
+      // GitHub Pages deployment prefix maps to this repository root.
+      if(!target.startsWith(repoPrefix)){remote++;continue;}
+      const local=target.slice(repoPrefix.length);
       check(exists(local)||exists(local+"/index.html"),filename+" missing rooted reference "+ref);
       continue;
     }
