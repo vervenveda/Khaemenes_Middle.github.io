@@ -21,6 +21,14 @@ function gradeData(grade){
 }
 
 const navigator=read("assets/khaemenes-middle-learning-navigator.js");
+const publisher=read("assets/khaemenes-middle-continuation-publisher.js");
+// The continuation card must send learners to verified assessment engines,
+// not non-grading evidence-review worksheets.
+expect(!publisher.includes('midterm:"evidence/midterm.html"'),"Continuation midterm incorrectly targets review evidence.");
+expect(!publisher.includes('final:"evidence/final-exam.html"'),"Continuation final incorrectly targets review evidence.");
+expect(!publisher.includes('`evidence/weekly-mastery-check.html?week=${pad(first)}`'),"Weekly retry incorrectly targets formative evidence.");
+expect(publisher.includes('`assessments/week-${pad(first)}-assessment.html`'),"Weekly retry must target its verified assessment.");
+
 for(const token of [
   "KHAEMENES_GRADE_CONTEXT",
   "KhaemenesGradeContinuity",
@@ -96,6 +104,13 @@ for(const grade of [6,7,8]){
   expect(index.includes('../../assets/khaemenes-middle-learning-navigator.js'),`Grade ${g} portal must load the shared learning navigator after its grade app.`);
   expect(index.indexOf('assets/app.js')<index.indexOf('khaemenes-middle-learning-navigator.js'),`Grade ${g} navigator must load after the authoritative grade app.`);
 
+  expect(publisher.includes('"${g}":{') || publisher.includes('"'+g+'":{'),`Grade ${g} must be configured in continuation publisher.`);
+  const configLine=publisher.split("\\n").find(line=>line.includes('"'+g+'":{'))||"";
+  expect(configLine.includes('midterm:"assessments/midterm.html"')&&configLine.includes('final:"assessments/final-exam.html"'),`Grade ${g} continuation must route to verified cumulative assessments.`);
+  for(const kind of ["midterm","final-exam"]){
+    const assessment=read(`${base}/assessments/${kind}.html`);
+    expect(assessment.includes("khaemenes-middle-assessment-engine.js"),`Grade ${g} ${kind} must load formal assessment engine.`);
+  }
   expect(exists(`${base}/assessments/midterm.html`),`Grade ${g} official Midterm must exist.`);
   expect(exists(`${base}/assessments/final-exam.html`),`Grade ${g} official Final must exist.`);
 
