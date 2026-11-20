@@ -4,10 +4,11 @@ const fs=require("node:fs"),path=require("node:path"),assert=require("node:asser
 const root=path.resolve(__dirname,".."),base="grades/vocabulary-studio/";
 const html=fs.readFileSync(path.join(root,base,"index.html"),"utf8");
 assert(html.includes('Student Profile</a>'),"Vocabulary Studio must expose student-profile navigation");
-assert(html.includes('font-size:12px!important'),"Toolbar controls need readable text");
+assert(/body\s*\{[^}]*font:\s*400\s+16px\//.test(html),"Vocabulary Studio must retain readable 16px base text");
+assert(html.includes("select,button{font:inherit"),"Vocabulary controls must inherit readable text sizing");
 assert(!html.includes('font-size:7px!important'),"Seven-pixel toolbar text must not return");
 assert(html.includes('flex-wrap:wrap;justify-content:center'),"Toolbar must wrap on narrow screens");
-assert(html.includes('min-height:44px!important;height:auto!important'),"Toolbar buttons must have accessible height");
+assert(/select,button\s*\{[^}]*min-height:\s*44px/.test(html),"Vocabulary controls must have at least a 44px touch target");
 // Accessibility audit: learners need explicit steps, source-availability guidance, and distinguishing feedback.
 assert(html.includes('let formats=[]'),"Practice must track both retrieval directions");
 assert(html.includes('i%2===0?"definition":"term"'),"Three questions each must use reciprocal prompts");
