@@ -32,6 +32,46 @@ function score(state,n){
  const v=Number(state.weekly[n]);return Number.isFinite(v)?Math.max(0,Math.min(100,v)):0;
 }
 function masteredThrough(state,n){for(let i=1;i<=n;i++){const s=score(state,i);if(s===null||s<PASS)return false}return true}
+
+// Publish only recorded, learner-matched local assessment attempts.
+// Do not fabricate quiz marks from weekly mastery percentages or legacy records.
+function verifiedAssessments(conf,ctx){
+ const learnerId=String(ctx?.learner?.learnerId||"");
+ if(!learnerId)return [];
+ const key=`khaemenes.middle.assessment.attempts:${learnerId}:grade-${conf.grade}`;
+ const attempts=readJSON(key,[]);
+ if(!Array.isArray(attempts))return [];
+ const byId=new Map();
+ for(const attempt of attempts){
+   if(!attempt||attempt.schema!=="khaemenes-middle-assessment-attempt-v1"||
+      attempt.preview===true||String(attempt.learnerId)!==learnerId||
+      String(attempt.grade)!==conf.grade||typeof attempt.id!=="string")continue;
+   byId.set(attempt.id,attempt);
+ }
+ const state=ctx.state||{},meta=state.assessmentMeta||{},rows=[];
+ function append(kind,week,record,id,title){
+   if(record?.verifiedBy!=="middle-assessment-engine-v1"||
+      typeof record.lastAttemptId!=="string"||!record.lastAttemptId)return;
+   const attempt=byId.get(record.lastAttemptId);
+   if(!attempt||attempt.kind!==kind||
+      (kind==="weekly"?Number(attempt.week)!==week:attempt.week!==null))return;
+   const correct=attempt.correct,total=attempt.questionCount;
+   if(!Number.isInteger(correct)||!Number.isInteger(total)||total<1||
+      correct<0||correct>total||
+      !Number.isFinite(attempt.score)||attempt.score<0||attempt.score>100||
+      Number(record.latestScore)!==attempt.score)return;
+   // Earned/possible uses real question counts, never a percentage transformed into points.
+   rows.push({id,kind:kind==="weekly"?"quiz":"test",earned:correct,possible:total,
+     title,gradedAt:typeof attempt.completedAt==="string"?attempt.completedAt:""});
+ }
+ for(let week=1;week<=36;week++){
+   append("weekly",week,meta.weekly?.[week],`week-${pad(week)}`,`Week ${pad(week)} verified knowledge assessment`);
+ }
+ append("midterm",null,meta.midterm,"midterm","Verified Midterm");
+ append("final",null,meta.final,"final","Verified Final");
+ return rows;
+}
+
 async function ensureContract(){
  if(global.KhaemenesLearningContinuation)return global.KhaemenesLearningContinuation;
  const existing=[...document.scripts].find(s=>s.src===CONT_URL);
@@ -67,7 +107,7 @@ async function publish(){
    status="complete";nextLabel="Open Certificate";nextTitle=`${conf.title} Complete`;nextHref=new URL("records/certificate.html",conf.base).href;summary="All recorded completion gates are satisfied.";best=100;
  }
  try{
-   C.publish({learnerId:ctx.learner.learnerId,courseId:conf.courseId,school:"Khaemenes Middle School",stage:"middle",grade:conf.title,subject:"Integrated Middle School Program",courseTitle:`Khaemenes ${conf.title}`,status,nextLabel,nextTitle,nextHref,summary,progress:{completed,total:36,percent:Math.round(completed/36*100)},mastery:{best,threshold:PASS,mastered:status==="complete"},family,source:`middle-${conf.courseId}-continuity`});
+   C.publish({learnerId:ctx.learner.learnerId,courseId:conf.courseId,school:"Khaemenes Middle School",stage:"middle",grade:conf.title,subject:"Integrated Middle School Program",courseTitle:`Khaemenes ${conf.title}`,status,nextLabel,nextTitle,nextHref,summary,progress:{completed,total:36,percent:Math.round(completed/36*100)},assessments:verifiedAssessments(conf,ctx),mastery:{best,threshold:PASS,mastered:status==="complete"},family,source:`middle-${conf.courseId}-continuity`});
    return true;
  }catch{return false}
 }
