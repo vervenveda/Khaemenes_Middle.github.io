@@ -5,8 +5,8 @@ const CONT_URL="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaeme
 const REGISTRY_KEY="khaemenes_family_registry_v1",ACTIVE_KEY="khaemenes_active_learner_v1";
 const CFG={
  "06":{title:"Sixth Grade",courseId:"middle-grade-06",midterm:"assessments/midterm.html",final:"assessments/final-exam.html",transition:false},
- "07":{title:"Seventh Grade",courseId:"middle-grade-07",midterm:"evidence/midterm.html",final:"evidence/final-exam.html",transition:false},
- "08":{title:"Eighth Grade",courseId:"middle-grade-08",midterm:"evidence/midterm.html",final:"evidence/final-exam.html",transition:true}
+ "07":{title:"Seventh Grade",courseId:"middle-grade-07",midterm:"assessments/midterm.html",final:"assessments/final-exam.html",transition:false},
+ "08":{title:"Eighth Grade",courseId:"middle-grade-08",midterm:"assessments/midterm.html",final:"assessments/final-exam.html",transition:true}
 };
 const pad=n=>String(n).padStart(2,"0");
 const readJSON=(key,fallback=null)=>{try{const raw=localStorage.getItem(key);return raw?JSON.parse(raw):fallback}catch{return fallback}};
@@ -52,7 +52,7 @@ async function publish(){
  }else if(first){
    best=score(state,first);
    if(best===null){status="continue";nextLabel="Continue Learning";nextTitle=`Week ${pad(first)}`;nextHref=new URL(`weekly-plans/week-${pad(first)}.html`,conf.base).href;summary=`Week ${pad(first)} is the next integrated learning studio.`;}
-   else{status="corrections";nextLabel="Review & Retry";nextTitle=`Week ${pad(first)} Mastery`;nextHref=new URL(`evidence/weekly-mastery-check.html?week=${pad(first)}`,conf.base).href;summary=`Week ${pad(first)} is at ${Math.round(best)}%. Review the evidence packet and retry to reach ${PASS}%.`;}
+   else{status="corrections";nextLabel="Review & Retry";nextTitle=`Week ${pad(first)} Mastery`;nextHref=new URL(`assessments/week-${pad(first)}-assessment.html`,conf.base).href;summary=`Week ${pad(first)} is at ${Math.round(best)}%. Review the evidence packet and retry to reach ${PASS}%.`;}
  }else if(Number(state.midterm||0)<PASS){
    best=Math.max(0,Math.min(100,Number(state.midterm||0)));status=best>0?"corrections":"assessment";nextLabel=best>0?"Review Midterm":"Open Midterm";nextTitle="Midyear Assessment";nextHref=new URL(conf.midterm,conf.base).href;summary="Complete the Midyear Assessment at 80% or higher.";
  }else if(Number(state.final||0)<PASS){
