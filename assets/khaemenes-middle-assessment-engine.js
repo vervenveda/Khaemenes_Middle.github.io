@@ -42,7 +42,7 @@ function gate(){
   if(!l)return{open:true,preview:true,reason:"Preview attempt. Select the matching Middle School learner to save verified mastery."};
   if(k==="weekly"){
     if(w===1)return{open:true,preview:false,reason:"Week 01 is open."};
-    if(grade()==="06"&&w>=19&&Number(s.midterm||0)<PASS)return{open:false,preview:false,reason:"The verified Grade 6 midterm must reach 80% before Week 19 and later examinations open."};
+    if(w>=19&&Number(s.midterm||0)<PASS)return{open:false,preview:false,reason:"The verified Grade "+Number(grade())+" midterm must reach 80% before Week 19 and later examinations open."};
     const prior=weekScore(s,w-1);
     return prior>=PASS?{open:true,preview:false,reason:"Week "+String(w-1).padStart(2,"0")+" is mastered at "+prior+"%."}:{open:false,preview:false,reason:"Week "+String(w-1).padStart(2,"0")+" must reach 80% before this assessment opens."};
   }
