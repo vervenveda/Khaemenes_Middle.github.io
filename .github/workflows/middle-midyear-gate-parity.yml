@@ -1,0 +1,24 @@
+name: Middle School Midyear Gate Parity
+on:
+  pull_request:
+    paths:
+      - 'assets/khaemenes-middle-assessment-engine.js'
+      - 'tools/validate-middle-midyear-gates.mjs'
+      - '.github/workflows/middle-midyear-gate-parity.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'assets/khaemenes-middle-assessment-engine.js'
+      - 'tools/validate-middle-midyear-gates.mjs'
+      - '.github/workflows/middle-midyear-gate-parity.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - run: node tools/validate-middle-midyear-gates.mjs
