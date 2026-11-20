@@ -22,7 +22,7 @@ for(const filename of html){
   const original=read(filename);
   // Ignore JS string literals that merely contain href= or src= text.
   // Preserve each script opening tag so real external src dependencies are checked.
-  const source=original.replace(/(<script\\b[^>]*>)[\\s\\S]*?<\\/script>/gi,"$1</script>");
+  const source=original.replace(/(<script\b[^>]*>)[\s\S]*?<\/script>/gi,"$1</script>");
   const dynamicNavigator=original.includes("khaemenes-middle-learning-navigator.js");
   const ids=new Set([...source.matchAll(/\bid\s*=\s*["']([^"'<>]+)["']/g)].map(m=>m[1]));
   for(const match of source.matchAll(/\b(?:href|src)\s*=\s*["']([^"']+)["']/g)){
