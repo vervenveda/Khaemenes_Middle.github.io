@@ -1,5 +1,6 @@
-/* Middle School page typography regulator RETIRED 2026-11-19.
-   Intentionally inert. Typography belongs to each page's stylesheet.
-   Do not restore DOM-wide font forcing, resize reapplication, or MutationObserver regulation here.
+/* Middle School typography regulator RETIRED 2026-11-19.
+   Intentionally inert. Page-owned styles and explicitly loaded components are authoritative.
+   Do not restore runtime DOM rewriting, global font forcing, chrome remounting,
+   navigation stripping, or continuous document-wide reapplication here.
 */
 (()=>{"use strict";document.documentElement.dataset.khaemenesPageTypographyRegulator="retired";})();
