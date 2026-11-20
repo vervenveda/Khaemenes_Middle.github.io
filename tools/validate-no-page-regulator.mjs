@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import fs from "node:fs";
 const regulators=[
- "assets/middle-school-global-chrome-v1.js",
  "assets/middle-school-global-typography-v1.js"
 ];
 const banned=[
+ "assets/middle-school-global-chrome-v1.js",
  "tools/middle-school-chrome-audit.mjs",
  "tools/middle-school-typography-audit.mjs",
  ".github/workflows/middle-school-canonical-chrome.yml",
@@ -21,4 +21,4 @@ for(const regulator of regulators){
  }
 }
 if(problems.length){console.error(JSON.stringify({status:"FAIL",problems},null,2));process.exit(1)}
-console.log(JSON.stringify({status:"PASS",school:"Middle School",policy:"chrome and typography regulators retired; reinjection authority absent"},null,2));
+console.log(JSON.stringify({status:"PASS",school:"Middle School",policy:"chrome authority purged; typography regulator retired; reinjection authority absent"},null,2));
