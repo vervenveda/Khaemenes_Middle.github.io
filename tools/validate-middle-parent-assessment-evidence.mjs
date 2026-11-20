@@ -34,7 +34,7 @@ for(const grade of ["06","07","08"]){
  const p=published[0];
  assert.equal(p.learnerId,"student-a");
  assert.equal(p.assessments.length,3);
- assert.deepEqual(p.assessments.map(x=>[x.id,x.kind,x.earned,x.possible]),[
+ assert.deepEqual(JSON.parse(JSON.stringify(p.assessments.map(x=>[x.id,x.kind,x.earned,x.possible]))),[
   ["week-01","quiz",18,20],["midterm","test",30,36],["final","test",38,45]
  ]);
  // Wrong-learner attempt must never be reported, even if it matches a verified ID.
