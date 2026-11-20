@@ -104,8 +104,7 @@ for(const grade of [6,7,8]){
   expect(index.includes('../../assets/khaemenes-middle-learning-navigator.js'),`Grade ${g} portal must load the shared learning navigator after its grade app.`);
   expect(index.indexOf('assets/app.js')<index.indexOf('khaemenes-middle-learning-navigator.js'),`Grade ${g} navigator must load after the authoritative grade app.`);
 
-  expect(publisher.includes('"${g}":{') || publisher.includes('"'+g+'":{'),`Grade ${g} must be configured in continuation publisher.`);
-  const configLine=publisher.split("\\n").find(line=>line.includes('"'+g+'":{'))||"";
+  const configLine=publisher.split("\n").find(line=>line.includes('"'+g+'":{'))||"";
   expect(configLine.includes('midterm:"assessments/midterm.html"')&&configLine.includes('final:"assessments/final-exam.html"'),`Grade ${g} continuation must route to verified cumulative assessments.`);
   for(const kind of ["midterm","final-exam"]){
     const assessment=read(`${base}/assessments/${kind}.html`);
