@@ -1,0 +1,24 @@
+name: Middle Parent Assessment Evidence Validation
+on:
+  pull_request:
+    paths:
+      - 'assets/khaemenes-middle-continuation-publisher.js'
+      - 'tools/validate-middle-parent-assessment-evidence.mjs'
+      - '.github/workflows/middle-parent-assessment-evidence.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'assets/khaemenes-middle-continuation-publisher.js'
+      - 'tools/validate-middle-parent-assessment-evidence.mjs'
+      - '.github/workflows/middle-parent-assessment-evidence.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - run: node tools/validate-middle-parent-assessment-evidence.mjs
