@@ -107,7 +107,7 @@ async function publish(){
    status="complete";nextLabel="Open Certificate";nextTitle=`${conf.title} Complete`;nextHref=new URL("records/certificate.html",conf.base).href;summary="All recorded completion gates are satisfied.";best=100;
  }
  try{
-   C.publish({learnerId:ctx.learner.learnerId,courseId:conf.courseId,school:"Khaemenes Middle School",stage:"middle",grade:conf.title,subject:"Integrated Middle School Program",courseTitle:`Khaemenes ${conf.title}`,status,nextLabel,nextTitle,nextHref,summary,progress:{completed,total:36,percent:Math.round(completed/36*100)},assessments:verifiedAssessments(conf,ctx),mastery:{best,threshold:PASS,mastered:status==="complete"},family,source:`middle-${conf.courseId}-continuity`});
+   C.publish({learnerId:ctx.learner.learnerId,courseId:conf.courseId,school:"Khaemenes Middle School",stage:"middle",grade:conf.title,subject:"Integrated Middle School Program",courseTitle:`Khaemenes ${conf.title}`,status,nextLabel,nextTitle,nextHref,summary,progress:{completed,total:36,percent:Math.round(completed/36*100)},assessments:verifiedAssessments(conf,ctx),evidence:{portfolioRecorded:state.portfolio===true,transitionRecorded:conf.transition?state.transition===true:null},mastery:{best,threshold:PASS,mastered:status==="complete"},family,source:`middle-${conf.courseId}-continuity`});
    return true;
  }catch{return false}
 }
