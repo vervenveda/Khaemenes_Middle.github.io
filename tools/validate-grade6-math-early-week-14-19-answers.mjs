@@ -4,7 +4,7 @@ import assert from "node:assert/strict";
 
 const sb={};vm.runInNewContext(fs.readFileSync("assets/khaemenes-middle-question-factory.js","utf8"),sb,{timeout:4000});
 const f=sb.KhaemenesMiddleQuestionFactory;
-const choose=(p,re)=>{const m=p.match(re);assert.ok(m,"Cannot parse displayed question: "+p);return m.slice(1).map(Number)};
+const choose=(p,re)=>{const m=p.match(re);assert.ok(m,"Cannot parse displayed question: "+p);return m.slice(1).map(x=>Number(String(x).replace("−","-")))};
 const gcd=(a,b)=>b?gcd(b,a%b):a;
 const signed=s=>Number(s.replace("−","-"));
 const fmt=x=>String(x);
