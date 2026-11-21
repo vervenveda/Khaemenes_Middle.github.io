@@ -54,3 +54,11 @@ Correction commit: `735825e2d85e2e16a5ddd4e3babc028a0fb57a4f` in `assets/grade-0
 Verified by reopening the shared JavaScript and Weeks 01/18/36, checking the shared script wiring and successful JavaScript syntax compilation. The standalone `lesson-01.html` SHA was unchanged.
 
 **Visual/live verification HOLD:** No live browser/iPad render pass was performed. Weekly pages remain multi-day course views; their five-day curricula are not interchangeable with the six instructional tasks in the individually authored Lesson 01. Exact content parity requires subsequent day-by-day lesson authoring and should not be represented as completed.
+
+## Follow-up correction: translator and overlapping Breakaway launcher
+
+- Source traced: `assets/vnv-language.js` mounts `#vnv-language-switch` outside the lesson, and `assets/khaemenes-middle-breakaway.js` mounts a fixed-position `#khaemenesBreakawayButton` at bottom left.
+- Added `assets/grade-07-math-translator-tools-v1.js`, which relocates the **existing** translator controls into the canonical `#vnvClassToolsPanel`, adds an accessible Language toggle, preserves its original event listeners, and hides the emptied translation rail. The entire operation is scoped to Grade 7 mathematics Week 01–36 and Lesson 01 paths.
+- Shared week script loads the scoped placement helper once; standalone Lesson 01 loads it directly. No new translation engine was created.
+- Breakaway script skips its independent floating 15-minute launcher on the same scoped mathematics routes, while retaining all its curriculum-alignment and resource hooks and preserving Breakaway availability elsewhere.
+- Verified committed source and JavaScript syntax for three modified scripts and the original Lesson 01; no live browser or iPad verification claimed.
