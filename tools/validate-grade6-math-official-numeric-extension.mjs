@@ -52,7 +52,7 @@ function answer(week,q){
  }
  if(week===30){
   if(s==="whole by unit fraction")return String(n[0]*n[2]);
-  if(s==="unit fractions")return String((n[3]/n[4])/(n[0]/n[1]));
+  if(s==="unit fractions")return String((n[2]/n[3])/(n[0]/n[1]));
   if(s==="fraction quotient")return String((n[0]/n[1])/(n[2]/n[3]));
   if(s==="fraction by fraction")return String((n[0]/n[1])/(n[2]/n[3]));
   if(s==="units and quotient")return String(n[0]/n[1]);
