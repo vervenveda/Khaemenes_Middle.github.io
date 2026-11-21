@@ -12,6 +12,7 @@ on:
       - "grades/grade-07/subjects/mathematics/**"
       - "grades/grade-08/subjects/mathematics/**"
       - "tools/validate-middle-math-full-course.mjs"
+      - "tools/validate-grade6-math-lesson01-depth.mjs"
       - ".github/workflows/middle-math-full-course.yml"
   pull_request:
     paths:
@@ -24,6 +25,7 @@ on:
       - "grades/grade-07/subjects/mathematics/**"
       - "grades/grade-08/subjects/mathematics/**"
       - "tools/validate-middle-math-full-course.mjs"
+      - "tools/validate-grade6-math-lesson01-depth.mjs"
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -34,3 +36,4 @@ jobs:
           node-version: "22"
       - run: node tools/validate-middle-math-full-course.mjs
       - run: node tools/validate-middle-math-shared-engine.mjs
+      - run: node tools/validate-grade6-math-lesson01-depth.mjs
