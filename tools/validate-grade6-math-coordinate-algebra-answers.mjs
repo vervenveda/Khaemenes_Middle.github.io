@@ -20,7 +20,8 @@ function independentlySolve(week,q){
  const p=q.prompt,skill=q.skill,n=num(p);
  if(week===23||week===32){
   if(skill==="quadrant signs"||skill==="quadrants")return "II";
-  if(skill==="horizontal distance"||skill==="vertical distance")return String(n[0]+n[2]);
+  if(skill==="horizontal distance")return String(n[0]+n[2]);
+  if(skill==="vertical distance")return String(n[1]+n[3]);
   if(skill==="y-axis reflection"||skill==="x-axis reflection")return "(−"+n[0]+", −"+n[1]+")";
   if(skill==="spatial evidence"||skill==="limits of coordinate models")return null;
  }
@@ -36,7 +37,7 @@ function independentlySolve(week,q){
  }
  if(week===25){
   if(skill==="one-variable equations")return String((n[2]-n[1])/n[0]);
-  if(skill==="inverse operations")return String((n[2]+n[1])/n[0]);
+  if(skill==="inverse operations"){const rhs=Number(p.match(/=\s*([−-]?\d+)/)?.[1]?.replace("−","-"));assert.ok(Number.isFinite(rhs));return String((rhs+n[1])/n[0]);}
   if(skill==="positive inequality")return "n ≤ "+String((n[2]-n[1])/n[0]);
   if(skill==="negative multiplier")return "z ≤ −"+String(n[1]/n[0]);
   if(skill==="constraints")return "g ≤ "+String(n[0]-n[1]);
