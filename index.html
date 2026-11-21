@@ -261,6 +261,20 @@ body .hero::after{content:"";position:absolute;inset:25px;pointer-events:none;
  border:1px solid rgba(231,215,182,.14);border-radius:7px}
 body .hero .hero-inner{position:relative;z-index:1}
 body .hero .eyebrow{color:#f0ce8f!important}
+body .hero .middle-academy-eyebrow{font:400 33px/1.3 var(--ceremonial)!important;letter-spacing:.045em!important;text-transform:none!important;color:#f0ce8f!important}
+body .hero h1.middle-school-title{font:400 clamp(44px,7vw,66px)/1.15 var(--display)!important;max-width:1000px;margin:14px auto 0;color:#fffaf2!important}
+@media(max-width:560px){body .hero .middle-academy-eyebrow{font-size:clamp(24px,7vw,33px)!important}}
+/* The shared Academy bridge still owns learner identity and placement data.
+   Only its overlapping floating card is suppressed on this Middle landing.
+   The existing lower-left Class Tools menu renders its content on demand. */
+body > #khaemenesFamilyBridge{display:none!important}
+#vnvClassToolsToolbar[data-vnv-class-tools-config="middle-school-home"] .vct-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+#vnvClassToolsToolbar[data-vnv-class-tools-config="middle-school-home"] .vct-grid>[data-vct-action="student-id"]{grid-column:1/-1!important;min-height:44px!important;background:#243038!important;color:#fff8e9!important;border:1px solid #b48b45!important;border-radius:7px!important}
+#vnvClassToolsToolbar[data-vnv-class-tools-config="middle-school-home"] .vct-grid>[data-vct-action="student-id"] strong{color:#fff8e9!important;font:400 16px/1.3 var(--sans)!important}
+#vnvClassToolsToolbar #middleStudentIdDetails{font:400 16px/1.5 var(--sans);text-align:left;overflow-wrap:anywhere}
+#vnvClassToolsToolbar #middleStudentIdDetails a{color:#22573e;text-decoration:underline;text-underline-offset:2px}
+#vnvClassToolsToolbar #middleStudentIdDetails [data-middle-student-id-heading]{font:400 20px/1.3 var(--ceremonial);margin:0 0 7px}
+
 body .hero h1{color:#fffaf2!important;text-shadow:0 3px 20px rgba(0,0,0,.16)}
 body .hero h1::after{content:"";display:block;width:min(240px,60%);height:7px;margin:17px auto 0;
  border-radius:99px;background:linear-gradient(90deg,#64c7b3,#78acd4,#b49bdd,#e9c77c)}
@@ -538,8 +552,8 @@ body main #start .start-card p,body main #start .start-links>a,body main #baseca
     <div class="shell hero-inner">
       <div class="hero-stage">
         <div>
-          <p class="eyebrow">Verve N Veda Educational Network</p>
-          <h1>Khaemenes Middle School</h1>
+          <p class="eyebrow middle-academy-eyebrow">Khaemenes Academy</p>
+          <h1 class="middle-school-title">Middle School</h1>
         </div>
         <p class="hero-lead">A calm Grades 6–8 home base for complete curricula, daily routines, trusted learning tools, creativity, family support, growing independence, and a clear path toward High School.</p>
         <div class="hero-actions">
