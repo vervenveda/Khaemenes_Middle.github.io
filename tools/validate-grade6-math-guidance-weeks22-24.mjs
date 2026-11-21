@@ -33,5 +33,5 @@ for(const week of [22,23,24]){
  }
 }
 assert.equal(count,15);
-assert.equal(problems,62);
+assert.equal(problems,63);
 console.log("PASS Grade 6 mathematics Weeks 22–24: "+count+" original lessons include reasoning scaffold, misconception and independent self-check, with "+problems+" original problems and unchanged key, response and grading boundaries.");
