@@ -13,7 +13,7 @@ for(const grade of grades){
   const html=fs.readFileSync(path,"utf8");
   const originalArticles=[...html.matchAll(/<article class="lesson">[\s\S]*?<\/article>/g)].map(x=>x[0]);
   assert.equal(originalArticles.length,5,path+" must preserve five original lesson articles");
-  assert.equal((html.match(/<script[^>]*src=/g)||[]).length,grade==="07"?11:8,path+" script count changed");
+  assert.equal((html.match(/<script[^>]*src=/g)||[]).length,grade==="07"?12:8,path+" script count changed");
   assert.match(html,/khaemenes-middle-learning-context\.js/,path+" missing shared loader");
   if(grade==="07")assert.match(html,/grade-07-mathematics-studio-v1\.js/,path+" missing Grade 7 studio");
   if(grade==="08")assert.match(html,/khaemenes-middle-learning-context\.js/,path+" missing Grade 8 shared studio loader");
