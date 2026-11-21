@@ -116,9 +116,9 @@ var title=$('h1',heading);if(title)title.setAttribute('data-math-week-title',Str
 var kicker=$('.kicker',heading);if(kicker)kicker.textContent='Khaemenes Academy';
 var desc=node('p','', 'Grade 7 · Week '+String(week).padStart(2,'0')+' · Mathematics · Five Daily Lessons');desc.style.fontSize='24px';heading.append(desc);
 var crumbs=node('nav','kg7-crumbs');crumbs.setAttribute('aria-label','Breadcrumb');crumbs.append(link('Grade 7','../../index.html'),node('span','', '/'),link('Mathematics','index.html'),node('span','', '/'),node('span','', 'Week '+String(week).padStart(2,'0')));
-heading.parentNode.insertBefore(crumbs,heading);
+heading.after(crumbs);
 var nav=node('nav','kg7-strip');nav.setAttribute('aria-label','Week mathematics navigation');nav.append(link('Subject Hall','index.html'),link('Weekly Plan','../../weekly-plans/week-'+String(week).padStart(2,'0')+'.html'),link('Official Assessments','../../assessments/weekly-assessments.html'));
-var exportButton=node('button','', 'Export practice');exportButton.type='button';nav.append(exportButton);heading.after(nav);
+var exportButton=node('button','', 'Export practice');exportButton.type='button';nav.append(exportButton);crumbs.after(nav);
 var note=node('p','kg7-note','This is interactive lesson practice. Existing learner-scoped formative checkpoints remain in each daily lesson. Scores, grades, mastery and certificates continue to be controlled by the official Academy assessment system.');nav.after(note);
 var week01=week===1;
 var section=node('section');section.id='kg7DailyLessons';section.setAttribute('aria-label','Interactive five-day mathematics lessons');note.after(section);
