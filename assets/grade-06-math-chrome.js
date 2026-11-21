@@ -39,6 +39,7 @@
   style.id="grade06MathChromeStyle";
   style.textContent=`
     #vnvClassToolsToolbar[data-vnv-class-tools-config="middle-math"]{width:min(320px,calc(100vw - 24px))}
+    #vnvClassToolsToolbar[data-vnv-class-tools-config="middle-math"] #vnvClassToolsPanel{max-height:min(66dvh,560px);overflow-y:auto;overscroll-behavior:contain}
     #vnvClassToolsToolbar[data-vnv-class-tools-config="middle-math"] .vct-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
     #vnvClassToolsToolbar[data-vnv-class-tools-config="middle-math"] .vct-tool{min-height:48px;white-space:normal!important;overflow:visible!important;background:#243038;color:#fff8e9;border-radius:7px}
     #vnvClassToolsToolbar[data-vnv-class-tools-config="middle-math"] .vct-tool strong{white-space:normal;color:#fff8e9}
