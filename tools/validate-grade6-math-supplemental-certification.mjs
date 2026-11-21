@@ -29,7 +29,7 @@ for(let week=4;week<=36;week++){
     const textarea=panel.match(/<textarea id="([^"]+)"/),label=panel.match(/<label for="([^"]+)"/);
     assert.ok(textarea&&label&&textarea[1]===label[1],`Week ${n} ${name}: unassociated response label`);
     assert.ok(/not automatically sav|do not save automatically|not autosav/i.test(panel),`Week ${n} ${name}: persistence warning absent`);
-    assert.ok(/80%\\s+(?:mastery|progression)/i.test(panel),`Week ${n} ${name}: official mastery boundary unclear`);
+    assert.ok(/80%[ ]+(?:mastery|progression)/i.test(panel),`Week ${n} ${name}: official mastery boundary unclear`);
     panels++;problems+=li.length;fields++;keys++;
   }
   assert.ok(html.includes(`week-${n}-assessment.html`),`Week ${n}: weekly assessment link missing`);
