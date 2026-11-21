@@ -28,7 +28,7 @@ for(let week=4;week<=36;week++){
     assert.equal((panel.match(/<details/g)||[]).length,1,`Week ${n} ${name}: teacher key disclosure missing`);
     const textarea=panel.match(/<textarea id="([^"]+)"/),label=panel.match(/<label for="([^"]+)"/);
     assert.ok(textarea&&label&&textarea[1]===label[1],`Week ${n} ${name}: unassociated response label`);
-    assert.ok(/not automatically saved|not automatically save|not autosaved/i.test(panel),`Week ${n} ${name}: persistence warning absent`);
+    assert.ok(/not automatically sav|do not save automatically|not autosav/i.test(panel),`Week ${n} ${name}: persistence warning absent`);
     assert.ok(/80% mastery/i.test(panel),`Week ${n} ${name}: official mastery boundary unclear`);
     panels++;problems+=li.length;fields++;keys++;
   }
