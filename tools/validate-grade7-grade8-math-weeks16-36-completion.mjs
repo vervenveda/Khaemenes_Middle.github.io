@@ -22,8 +22,8 @@ function oracle(type,p){
  case "mul":return a*b;
  case "div":return a/b;
  case "quarter":return a/4;
- case "increase10":return a*1.1;
- case "decrease20":return a*0.8;
+ case "increase10":return a*11/10;
+ case "decrease20":return a*4/5;
  case "signedadd":case "sum":return a+b;
  case "signedsub":case "difference":return a-b;
  case "expr":return a*c+b;
