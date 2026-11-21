@@ -6,6 +6,8 @@ on:
       - "assets/khaemenes-middle-math-lesson-engine-v1.js"
       - "grades/grade-06/subjects/mathematics/lesson-01.html"
       - "grades/grade-07/subjects/mathematics/lesson-01.html"
+      - "grades/grade-08/subjects/mathematics/lesson-01.html"
+      - "grades/grade-08/subjects/mathematics/index.html"
       - "tools/validate-middle-math-shared-engine.mjs"
       - ".github/workflows/middle-math-shared-engine.yml"
   pull_request:
@@ -13,6 +15,8 @@ on:
       - "assets/khaemenes-middle-math-lesson-engine-v1.js"
       - "grades/grade-06/subjects/mathematics/lesson-01.html"
       - "grades/grade-07/subjects/mathematics/lesson-01.html"
+      - "grades/grade-08/subjects/mathematics/lesson-01.html"
+      - "grades/grade-08/subjects/mathematics/index.html"
       - "tools/validate-middle-math-shared-engine.mjs"
       - ".github/workflows/middle-math-shared-engine.yml"
 jobs:
