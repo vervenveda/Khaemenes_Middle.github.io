@@ -78,5 +78,10 @@ Preserve important founder decisions as **dated, curated, non-verbatim conversat
 ## Approved mathematics HTML reference — exact source archive
 
 - **Proofed layout (authoritative):** [`Grade 7 Mathematics Studio — Lesson 01`](../../../grades/grade-07/subjects/mathematics/lesson-01.html) (live path: `grades/grade-07/subjects/mathematics/lesson-01.html`).
-- **Exact HTML snapshot preserved with this digest:** [`grade-07-mathematics-studio-approved-lesson-01.html`](grade-07-mathematics-studio-approved-lesson-01.html).
+- **Exact HTML snapshot preserved with this digest:** [`grade-07-approved-lesson-01.html`](../../../engines/mathematics/grade-07-approved-lesson-01.html).
 - **Preservation rule:** the archived HTML is an unchanged copy of the proofed Lesson 01 at the time of this entry, not a replacement for the live page. Replicate its layout for Grades 6–8 while authoring grade-specific content. Keep formal assessment and learner records separate. The archived file's site-root and relative asset links may require the original live route to function correctly; this is a source reference, not a second deployed learning route.
+
+
+## Workflow engine directory organization
+
+The approved Mathematics Studio HTML reference now lives in [`workflow/engines/mathematics/`](../../../engines/mathematics/README.md), with distinct future subject-engine folders for [Science](../../../engines/science/README.md), [Social Studies](../../../engines/social-studies/README.md), and [Language Arts](../../../engines/language-arts/README.md). The original live lesson remains untouched. Reserved engines are not implemented yet.
