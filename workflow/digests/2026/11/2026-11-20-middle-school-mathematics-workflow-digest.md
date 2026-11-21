@@ -85,3 +85,11 @@ Preserve important founder decisions as **dated, curated, non-verbatim conversat
 ## Workflow engine directory organization
 
 The approved Mathematics Studio HTML reference now lives in [`workflow/engines/mathematics/`](../../../engines/mathematics/README.md), with distinct future subject-engine folders for [Science](../../../engines/science/README.md), [Social Studies](../../../engines/social-studies/README.md), and [Language Arts](../../../engines/language-arts/README.md). The original live lesson remains untouched. Reserved engines are not implemented yet.
+
+
+## Mathematics Studio three-grade portal wiring
+
+- Grade 06/07/08 subject portals: 36 Studio links each, 108 source-wired week destinations total.
+- Grade 07 Studio link uses the existing enhanced week page; the exact proofed standalone `lesson-01.html` is preserved unchanged.
+- Grade 06 and 08 Studio links open isolated study views (`studio.html?week=NN`) that fetch the existing weekly HTML on the same origin and apply a shared presentation engine. Original weekly routes remain accessible.
+- **Hold:** Week-level interfaces do not yet reproduce every section of the exact proofed six-stage daily Lesson 01. Curriculum hardening, source exercise audits, live rendering, tablet verification and assessment end-to-end tests are still pending. Formal grading and learner records untouched.

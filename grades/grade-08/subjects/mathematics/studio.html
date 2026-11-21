@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Grade 8 Mathematics Studio | Khaemenes Academy</title>
+<meta name="description" content="Grade 8 mathematics weekly interactive study studio, presentation only.">
+<link rel="stylesheet" href="../../assets/styles.css">
+</head><body>
+<header class="header no-print"><div class="shell nav"><a class="brand" href="../../index.html">Khaemenes Academy · Grade 8</a><nav class="navlinks"><a href="index.html">Mathematics</a><a href="../../assessments/weekly-assessments.html">Assessments</a></nav></div></header>
+<main class="section"><div class="shell"><div class="heading"><p class="kicker">Khaemenes Academy</p><h1>Mathematics Studio</h1><p id="studioStatus" role="status">Loading the existing mathematics week…</p></div><div id="studioSource"></div><div class="actions"><a class="button" id="originalWeek" href="week-01.html">Original subject week</a><a class="button" href="index.html">All 36 weeks</a><a class="button" href="../../assessments/weekly-assessments.html">Official assessments</a></div></div></main>
+<footer class="footer no-print"><div class="shell">© Jennifer Kay Pearl · Khaemenes Academy · Practice is not verified mastery.</div></footer>
+<script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js"></script>
+<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
+<script>window.KhaemenesClassToolsConfigV1={id:'middle-grade-08-math-studio',match:function(){return /\/grades\/grade-08\/subjects\/mathematics\/studio\.html$/i.test(location.pathname)},toggleLabel:'Tools',ariaLabel:'Mathematics Class Tools',tools:[{type:'link',label:'Calculator',sub:'Computation support',href:'https://vervenveda.github.io/proresource_hub.github.io/Protools/Khaemenes_Scientific_Calculator/'},{type:'link',label:'Daily Lessons',sub:'Study tasks',href:'#kg7DailyLessons'},{type:'link',label:'Assessments',sub:'Verified assessment',href:'../../assessments/weekly-assessments.html'},{type:'help',label:'Instructions',sub:'Mathematics Studio'}],help:{title:'Mathematics Studio',paragraphs:['Open a daily section and work through the existing curriculum.','Export your written or drawn practice. Official assessments control mastery.']}};</script>
+<script src="https://vervenveda.com/assets/vnv-class-tools-toolbar.js?v=1.6.1"></script>
+<script src="https://vervenveda.com/assets/vnv-language.js" defer></script>
+<script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
+<script>
+(function(){'use strict';
+var n=Number(new URLSearchParams(location.search).get('week')),status=document.getElementById('studioStatus');
+if(!Number.isInteger(n)||n<1||n>36){status.textContent='Choose a valid week from the mathematics course portal.';return}
+var file='week-'+String(n).padStart(2,'0')+'.html';
+document.getElementById('originalWeek').href=file;
+fetch(file,{credentials:'same-origin'}).then(function(r){if(!r.ok)throw Error('Week is unavailable');return r.text()}).then(function(html){
+var doc=new DOMParser().parseFromString(html,'text/html');
+var heading=doc.querySelector('main .heading'),articles=Array.from(doc.querySelectorAll('main article.lesson'));
+if(!heading||articles.length<5)throw Error('Source lesson contract is incomplete');
+var title=heading.querySelector('h1'),s=document.querySelector('main .heading');
+s.querySelector('h1').textContent=title?title.textContent:'Mathematics Studio';
+status.textContent='Week '+String(n).padStart(2,'0')+' · Original daily instruction preserved · Practice only';
+var mount=document.getElementById('studioSource');
+articles.slice(-5).forEach(function(a){mount.appendChild(document.importNode(a,true))});
+var script=document.createElement('script');script.src='../../../../assets/khaemenes-middle-math-portal-studio-v1.js';document.body.appendChild(script);
+}).catch(function(err){status.textContent='The interactive view is unavailable. Open the original week to continue learning.';console.warn(err)});
+})();
+</script>
+</body></html>
