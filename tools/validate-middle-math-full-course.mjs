@@ -56,6 +56,11 @@ for(const grade of ["06","07","08"]){
     "Grade "+grade+" must link all 36 mathematics weeks");
   if(grade!=="07"){
     assert.ok(fs.existsSync(dir+"studio.html"),"Grade "+grade+" missing weekly studio route");
+    const studioHtml=load(dir+"studio.html");
+    assert.ok(studioHtml.includes("days.map(function(day)")&&studioHtml.includes("articles.forEach(function(a)"),
+      "Grade "+grade+" alternate studio must select Monday through Friday explicitly");
+    assert.ok(!studioHtml.includes("articles.slice(-5)"),
+      "Grade "+grade+" alternate studio must not include stray answer key in daily lessons");
     assert.equal((index.match(/href="studio\.html\?week=\d\d"/g)||[]).length,36,
       "Grade "+grade+" must preserve 36 existing alternate studio entries");
   }
