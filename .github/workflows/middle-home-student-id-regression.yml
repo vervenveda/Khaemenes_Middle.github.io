@@ -1,0 +1,29 @@
+name: Middle Home Hero and Student ID Class Tools
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'assets/khaemenes-middle-resource-toolbar.js'
+      - 'tests/middle-home-student-id-regression.cjs'
+      - '.github/workflows/middle-home-student-id-regression.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'assets/khaemenes-middle-resource-toolbar.js'
+      - 'tests/middle-home-student-id-regression.cjs'
+      - '.github/workflows/middle-home-student-id-regression.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  homepage-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --check assets/khaemenes-middle-resource-toolbar.js
+      - run: node tests/middle-home-student-id-regression.cjs
