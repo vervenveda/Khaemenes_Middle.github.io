@@ -16,7 +16,13 @@ function walk(dir="."){
   });
 }
 const files=walk();
-const html=files.filter(f=>f.endsWith(".html"));
+// The approved Grade 7 engine snapshot is stored below workflow/engines for
+// provenance, not deployed at its source location. Its relative links belong
+// to the original grade page, so do not resolve them from the archive path.
+// Preserve and require the snapshot; validate live Grade 7 URLs separately.
+const approvedMathSnapshot="workflow/engines/mathematics/grade-07-approved-lesson-01.html";
+check(files.includes(approvedMathSnapshot),"Approved Grade 7 mathematics lesson snapshot is missing");
+const html=files.filter(f=>f.endsWith(".html")&&f!==approvedMathSnapshot);
 let refs=0,remote=0,fragmentRefs=0;
 for(const filename of html){
   const original=read(filename);
