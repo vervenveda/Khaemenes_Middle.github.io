@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import vm from "node:vm";
 
-const normalize=s=>String(s).replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&amp;/g,"&").replace(/[−–]/g,"-").trim().toLowerCase().replace(/\s+/g," ");
+const normalize=s=>String(s).replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&amp;/g,"&").replace(/[−–]/g,"-").trim().replace(/^\+(?=\d)/,"").toLowerCase().replace(/\s+/g," ");
 const gcd=(a,b)=>b===0?Math.abs(a):gcd(b,a%b);
 const isqrt=n=>{const x=Math.sqrt(n);assert.ok(Number.isInteger(x),"Not a square: "+n);return x;};
 function oracle(type,p){
