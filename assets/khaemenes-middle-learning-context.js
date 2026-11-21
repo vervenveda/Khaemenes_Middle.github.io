@@ -187,6 +187,7 @@ if(/\/grades\/grade-(06|07|08)\/subjects\/mathematics\/week-(0[1-9]|[12]\d|3[0-6
   const grade=gradeMatch?.[1];
   const scripts=grade==="07"
     ?["khaemenes-middle-math-week-practice-v1.js"]
+    :grade==="06"?["khaemenes-middle-math-portal-studio-v1.js","khaemenes-grade6-math-depth-a3-v1.js","khaemenes-middle-math-week-practice-v1.js"]
     :["khaemenes-middle-math-portal-studio-v1.js","khaemenes-middle-math-week-practice-v1.js"];
   scripts.forEach(name=>{
     if(global.document.querySelector('script[data-middle-math-course="'+name+'"]'))return;
