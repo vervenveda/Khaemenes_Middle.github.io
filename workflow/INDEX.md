@@ -2,6 +2,7 @@
 
 | Date | Type | Entry | State |
 | --- | --- | --- | --- |
+| 2026-11-21 | curriculum / upgrade | [Grades 7–8 Mathematics · Weeks 10–12](logs/2026/11/2026-11-21-grade07-grade08-mathematics-weeks10-12.md) | 30 daily labs, 120 problems; CI and live review pending |
 | 2026-11-21 | curriculum / upgrade | [Grade 7 & 8 Mathematics · Weeks 07–09 Mathematics Laboratories](logs/2026/11/2026-11-21-grade07-grade08-mathematics-weeks07-09.md) | 30 daily labs and 120 keyed tasks authored; awaiting CI and live testing |
 | 2026-11-21 | curriculum / upgrade | [Grade 7 & 8 Mathematics · Weeks 04–06 Deep Lessons](logs/2026/11/2026-11-21-grade07-grade08-mathematics-weeks04-06.md) | 30 daily laboratories and 120 keyed problems committed; CI and browser review pending |
 | 2026-11-21 | upgrade / curriculum | [Grade 7 & 8 Mathematics · First Three-Week Engine Build](logs/2026/11/2026-11-21-grade07-grade08-mathematics-engines-foundation.md) | 30 lessons and 120 practice tasks committed; CI/browser acceptance pending |
