@@ -21,6 +21,7 @@ on:
       - "tools/validate-grade6-math-official-numeric-extension.mjs"
       - "tools/validate-grade6-math-coordinate-algebra-answers.mjs"
       - "tools/validate-grade6-math-early-week-07-13-answers.mjs"
+      - "tools/validate-grade6-math-early-week-01-06-answers.mjs"
       - ".github/workflows/middle-math-full-course.yml"
   pull_request:
     paths:
@@ -42,6 +43,7 @@ on:
       - "tools/validate-grade6-math-official-numeric-extension.mjs"
       - "tools/validate-grade6-math-coordinate-algebra-answers.mjs"
       - "tools/validate-grade6-math-early-week-07-13-answers.mjs"
+      - "tools/validate-grade6-math-early-week-01-06-answers.mjs"
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -60,3 +62,4 @@ jobs:
       - run: node tools/validate-grade6-math-official-numeric-extension.mjs
       - run: node tools/validate-grade6-math-coordinate-algebra-answers.mjs
       - run: node tools/validate-grade6-math-early-week-07-13-answers.mjs
+      - run: node tools/validate-grade6-math-early-week-01-06-answers.mjs
