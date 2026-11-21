@@ -118,7 +118,7 @@ for(const week of [25,26,27]){
   const questions=[...panel.matchAll(/<li>([\s\S]*?)<\/li>/g)].map(x=>x[1]);
   const teacher=panel.match(/<summary>Teacher solution key[^<]*<\/summary><p>([\s\S]*?)<\/p>/)?.[1];
   assert.ok(teacher,context+" teacher key missing");
-  const answers=teacher.split(";").map(x=>x.trim());
+  const answers=teacher.split(/;\s+/).map(x=>x.trim());
   const expected=checks[week][d];
   assert.equal(questions.length,expected.length,context+" question count changed");
   assert.equal(answers.length,questions.length,context+" answer segment count changed");
