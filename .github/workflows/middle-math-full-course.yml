@@ -15,6 +15,7 @@ on:
       - "tools/validate-middle-math-full-course.mjs"
       - "tools/validate-grade7-grade8-math-foundation-weeks01-03.mjs"
       - "tools/validate-grade7-grade8-math-foundation-weeks04-06.mjs"
+      - "tools/validate-grade7-grade8-math-foundation-weeks07-09.mjs"
       - "tools/validate-grade6-math-lesson01-depth.mjs"
       - "tools/validate-grade6-math-a3-curriculum.mjs"
       - "tools/validate-grade6-math-supplemental-certification.mjs"
@@ -45,6 +46,7 @@ on:
       - "tools/validate-middle-math-full-course.mjs"
       - "tools/validate-grade7-grade8-math-foundation-weeks01-03.mjs"
       - "tools/validate-grade7-grade8-math-foundation-weeks04-06.mjs"
+      - "tools/validate-grade7-grade8-math-foundation-weeks07-09.mjs"
       - "tools/validate-grade6-math-lesson01-depth.mjs"
       - "tools/validate-grade6-math-a3-curriculum.mjs"
       - "tools/validate-grade6-math-supplemental-certification.mjs"
@@ -71,6 +73,7 @@ jobs:
       - run: node tools/validate-middle-math-full-course.mjs
       - run: node tools/validate-grade7-grade8-math-foundation-weeks01-03.mjs
       - run: node tools/validate-grade7-grade8-math-foundation-weeks04-06.mjs
+      - run: node tools/validate-grade7-grade8-math-foundation-weeks07-09.mjs
       - run: node tools/validate-middle-math-shared-engine.mjs
       - run: node tools/validate-grade6-math-lesson01-depth.mjs
       - run: node tools/validate-grade6-math-a3-curriculum.mjs
