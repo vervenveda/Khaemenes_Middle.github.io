@@ -18,7 +18,7 @@ function load(src,key){
  try{window.VNVSelectClassToolsPreset?.("middle")}catch{}
  // Home page only: extend the existing VNV lower-left Class Tools preset.
  // The Academy family-school bridge remains the sole owner of learner identity.
- const isMiddleHome=/\/Khaemenes_Middle\\.github\\.io\/(?:index\\.html)?$/i.test(location.pathname);
+ const isMiddleHome=/\/Khaemenes_Middle\.github\.io\/(?:index\.html)?$/i.test(location.pathname);
  if(isMiddleHome){
    const preset=window.KhaemenesClassToolsConfigV1;
    if(preset){
@@ -61,7 +61,7 @@ function load(src,key){
      window.KhaemenesClassToolsConfigV1={
        ...preset,
        id:"middle-school-home",
-       match:()=>/\/Khaemenes_Middle\\.github\\.io\/(?:index\\.html)?$/i.test(location.pathname),
+       match:()=>/\/Khaemenes_Middle\.github\.io\/(?:index\.html)?$/i.test(location.pathname),
        tools:[
          {type:"action",action:"student-id",label:"Student ID",sub:"Academy learner context"},
          ...(preset.tools||[])
