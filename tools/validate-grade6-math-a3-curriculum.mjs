@@ -59,4 +59,45 @@ assert.match(src,/Check the solution only after your independent attempt/);
 assert.match(src,/in seven days revisit/,"Delayed retrieval guidance must remain");
 assert.match(src,/article\.append\(card\)/,"Original teaching must be retained and supplemented");
 assert.match(src,/return true/);
+
+class FakeNode{
+ constructor(tag){this.tagName=tag;this.children=[];this.dataset={};this.style={};this.attributes={};this.textContent="";this.className="";}
+ append(...nodes){this.children.push(...nodes)}
+ setAttribute(key,value){this.attributes[key]=String(value)}
+ querySelector(selector){if(selector==="h2,h3,h4")return this.heading||null;if(selector===".g6-depth-card")return this.children.find(n=>n.className==="g6-depth-card")||null;return null}
+}
+for(let week=1;week<=36;week++){
+ const weekdays=["Monday","Tuesday","Wednesday","Thursday","Friday"];
+ const articles=weekdays.map(day=>{const node=new FakeNode("article");node.heading={textContent:day+" — lesson"};return node});
+ const host={querySelectorAll:selector=>selector==="article.lesson"?articles:[]};
+ const document={
+  readyState:"complete",
+  head:new FakeNode("head"),
+  querySelector:selector=>selector==="main"?host:null,
+  createElement:tag=>new FakeNode(tag)
+ };
+ const window={};
+ const location={pathname:"/Khaemenes_Middle.github.io/grades/grade-06/subjects/mathematics/week-"+String(week).padStart(2,"0")+".html"};
+ vm.runInNewContext(src,{document,window,location},{timeout:2000,filename:"grade6-math-runtime.js"});
+ assert.equal(window.KhaemenesGrade6MathDepthA3?.week,week,"Week "+week+" runtime not initialized");
+ for(let d=0;d<5;d++){
+  const card=articles[d].querySelector(".g6-depth-card");
+  assert.ok(card,"Week "+week+" "+weekdays[d]+" did not receive content");
+  assert.equal(card.dataset.day,weekdays[d]);
+  assert.equal(card.dataset.week,String(week));
+  const reveal=card.children.find(node=>node.tagName==="details");
+  assert.ok(reveal,"Week "+week+" "+weekdays[d]+" missing delayed answer reveal");
+  assert.ok(card.children.some(node=>node.tagName==="label"),"Week "+week+" "+weekdays[d]+" missing typed reasoning input");
+ }
+ if((week-1)%6===0){
+  const monday=articles[0].children[0];
+  assert.ok(monday.children.some(node=>node.tagName==="section"),"Week "+week+" glossary did not render");
+ }
+ if(week%6===0){
+  const friday=articles[4].children[0];
+  assert.ok(friday.children.filter(node=>node.tagName==="details").length>=2,
+   "Week "+week+" missing end-of-unit performance task");
+ }
+}
+
 console.log("PASS Grade 6 mathematics deep curriculum: "+bank.length+" weeks, "+problems+" unique daily mathematical challenges, worked models, vocabulary, misconceptions, retrieval guidance and safe loader");
