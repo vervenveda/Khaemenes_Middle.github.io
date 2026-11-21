@@ -22,7 +22,7 @@ for(let week=4;week<=36;week++){
     assert.ok(inside,`Week ${n} ${name}: panel absent from original daily article`);
     assert.equal((content.match(new RegExp(`class="${marker}"`,"g"))||[]).length,1,`Week ${n} ${name}: duplicate panel`);
     const panel=inside[0];
-    const li=[...panel.matchAll(/<li>([\\s\\S]*?)<\\/li>/g)];
+    const li=[...panel.matchAll(/<li>.*?<\/li>/g)];
     assert.ok(li.length>=4&&li.length<=5,`Week ${n} ${name}: expected 4–5 independent problems`);
     assert.equal((panel.match(/<textarea /g)||[]).length,1,`Week ${n} ${name}: response area missing`);
     assert.equal((panel.match(/<details/g)||[]).length,1,`Week ${n} ${name}: teacher key disclosure missing`);
