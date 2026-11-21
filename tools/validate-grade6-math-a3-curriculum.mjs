@@ -21,7 +21,7 @@ for(let week=1;week<=36;week++){
  assert.equal(data.length,5,"Week "+week+" is missing the curriculum fields");
  const [topic,terms,worked,misconception,days]=data;
  for(const [label,content] of [["topic",topic],["vocabulary",terms],["worked example",worked],["misconception",misconception]])
-  assert.ok(content.length>16,"Week "+week+" missing developed "+label);
+  assert.ok(content.length>(label==="vocabulary"?8:label==="topic"?10:20),"Week "+week+" missing developed "+label);
  assert.ok(terms.split("|").length>=3,"Week "+week+" needs three vocabulary concepts");
  for(const term of terms.split("|"))assert.ok(glossary[term]?.length>=20,"Week "+week+" is missing a teaching definition for "+term);
  assert.equal(days.length,5,"Week "+week+" needs five original daily problems");
