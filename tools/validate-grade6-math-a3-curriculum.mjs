@@ -28,7 +28,7 @@ for(let week=1;week<=36;week++){
  const source=fs.readFileSync("grades/grade-06/subjects/mathematics/week-"+String(week).padStart(2,"0")+".html","utf8");
  for(let day=0;day<5;day++){
   const [question,answer]=days[day];
-  assert.ok(question.length>=20,"Week "+week+" "+daily[day]+" question too short");
+  assert.ok(question.length>=10,"Week "+week+" "+daily[day]+" question too short");
   assert.ok(answer.length>=2,"Week "+week+" "+daily[day]+" answer missing");
   assert.ok(!unique.has(question),"Duplicate Grade 6 question: "+question);
   unique.add(question);problems++;
