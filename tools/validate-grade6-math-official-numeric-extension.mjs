@@ -21,7 +21,7 @@ function answer(week,q){
  const p=q.prompt,s=q.skill,n=digits(p);
  if(week===20){
   if(s==="fraction to percent")return (100*n[0]/n[1])+"%";
-  if(s==="percent of whole")return String(n[0]/100*n[1]);
+  if(s==="percent of whole")return String(n[0]*n[1]/100);
   if(s==="proportional fraction")return (100*n[0]/n[1])+"%";
   if(s==="compare samples")return (n[0]/n[1]===n[2]/n[3]?"They are equal at "+(100*n[0]/n[1])+"%":"UNEXPECTED");
   if(s==="percent grid"){const rate=Number(p.match(/If (\d+)% are marked/)?.[1]);assert.ok(Number.isFinite(rate));return String(rate);}
@@ -45,7 +45,7 @@ function answer(week,q){
  }
  if(week===29){
   if(s==="fraction to percentage")return (n[0]/n[1]*100)+"%";
-  if(s==="percent of whole")return String(n[0]/100*n[1]);
+  if(s==="percent of whole")return String(n[0]*n[1]/100);
   if(s==="compare denominators")return "A: 80%";
   if(s==="percent increase"||s==="relative change")return ((n[1]-n[0])/n[0]*100)+"%";
   if(s==="limits of sample evidence")return null;
