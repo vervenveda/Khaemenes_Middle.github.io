@@ -9,6 +9,9 @@ new vm.Script(loader,{filename:"khaemenes-middle-learning-context.js"});
 const found=src.match(/const bank=(\[[\s\S]*?\]);\nconst row=/);
 assert.ok(found,"Grade 6 A+++ curriculum bank missing");
 const bank=JSON.parse(found[1]);
+const vocabulary=src.match(/const glossary=(\{[^\n]+\});\nconst weekdays=/);
+assert.ok(vocabulary,"The 36-week mathematics glossary is missing");
+const glossary=JSON.parse(vocabulary[1]);
 assert.equal(bank.length,36,"Need one curriculum entry for each week");
 let problems=0;
 const unique=new Set();
@@ -20,6 +23,7 @@ for(let week=1;week<=36;week++){
  for(const [label,content] of [["topic",topic],["vocabulary",terms],["worked example",worked],["misconception",misconception]])
   assert.ok(content.length>16,"Week "+week+" missing developed "+label);
  assert.ok(terms.split("|").length>=3,"Week "+week+" needs three vocabulary concepts");
+ for(const term of terms.split("|"))assert.ok(glossary[term]?.length>=20,"Week "+week+" is missing a teaching definition for "+term);
  assert.equal(days.length,5,"Week "+week+" needs five original daily problems");
  const source=fs.readFileSync("grades/grade-06/subjects/mathematics/week-"+String(week).padStart(2,"0")+".html","utf8");
  for(let day=0;day<5;day++){
