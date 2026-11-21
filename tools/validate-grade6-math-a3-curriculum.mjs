@@ -4,6 +4,7 @@ import vm from "node:vm";
 
 const src=fs.readFileSync("assets/khaemenes-grade6-math-depth-a3-v1.js","utf8");
 const loader=fs.readFileSync("assets/khaemenes-middle-learning-context.js","utf8");
+const studio=fs.readFileSync("assets/khaemenes-middle-math-portal-studio-v1.js","utf8");
 new vm.Script(src,{filename:"grade6-math-depth-a3-v1.js"});
 new vm.Script(loader,{filename:"khaemenes-middle-learning-context.js"});
 const found=src.match(/const bank=(\[[\s\S]*?\]);\nconst row=/);
@@ -39,6 +40,7 @@ for(let week=1;week<=36;week++){
 assert.equal(problems,180);
 assert.match(loader,/khaemenes-grade6-math-depth-a3-v1\.js/);
 assert.match(loader,/grade==="06"/);
+assert.match(studio,/curriculumReasoning:grade==="06"/,"Grade 6 weekly export must preserve deeper written mathematical evidence");
 assert.ok(!/localStorage|sessionStorage|writeScore|saveState|mastered\s*=/.test(src),
  "Curriculum practice must never write official academic records");
 assert.match(src,/aria-label/,"Written reasoning controls need accessible labels");
