@@ -2,6 +2,8 @@
 
 | Date | Type | Entry | State |
 | --- | --- | --- | --- |
+| 2026-11-21 | upgrade / curriculum | [Grade 7 & 8 Mathematics · First Three-Week Engine Build](logs/2026/11/2026-11-21-grade07-grade08-mathematics-engines-foundation.md) | 30 lessons and 120 practice tasks committed; CI/browser acceptance pending |
+| 2026-11-21 | handoff / test | [Grade 6 Math · Certification Progress & Grade 7–8 Engine Blueprint](logs/2026/11/2026-11-21-grade06-certification-handoff-grade07-08-math-engine.md) | Grade 6 numerical tests merged; final certification HOLD |
 | 2026-11-20 | digest | [Middle School Mathematics · Daily Workflow Digest](digests/2026/11/2026-11-20-middle-school-mathematics-workflow-digest.md) | Published; desktop/iPad runtime HOLD |
 | 2026-11-20 | codex / decision | [Mathematics Studio · Decisions & Implementation Blueprint](codexes/2026/11/2026-11-20-middle-school-mathematics-studio-codex.md) | Approved design recorded; content-depth rollout ongoing |
 | 2026-11-20 | upgrade / test | [Grade 07 Mathematics Studio · 36-Week Wiring](logs/2026/11/2026-11-20-grade-07-mathematics-studio-wiring.md) | Code/source checks PASS; live tablet HOLD |
