@@ -150,6 +150,8 @@ var oldActions=$('.actions',shell);if(oldActions){oldActions.classList.add('no-p
 addShelf(shell);
 exportButton.addEventListener('click',function(){var payload={format:'khaemenes-grade07-math-practice-v1',grade:'07',week:week,authoritative:false,exportedAt:new Date().toISOString(),days:states.map(function(s){return{day:s.day,notes:s.textarea.value,ink:s.read?s.read.read():[]}}),reflection:reflection.value};download('grade-07-math-week-'+String(week).padStart(2,'0')+'-practice.json',new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}))});
 }
-window.KhaemenesGrade7MathStudio=Object.freeze({version:'1.0.0'});
+// Presentation-only helper: place the canonical VNV translator inside the existing Class Tools panel.
+if(!document.querySelector('script[data-kg7-translator-placement]')){var tr=document.createElement('script');tr.src='https://vervenveda.com/Khaemenes_Middle.github.io/assets/grade-07-math-translator-tools-v1.js';tr.dataset.kg7TranslatorPlacement='1';document.head.append(tr)}
+window.KhaemenesGrade7MathStudio=Object.freeze({version:'1.0.1'});
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 })();
