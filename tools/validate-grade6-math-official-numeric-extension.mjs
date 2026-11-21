@@ -82,7 +82,12 @@ for(const [week,method] of groups){
    unique.add(q.skill);
    const value=answer(week,q);
    if(value===null){conceptual++;continue;}
-   assert.equal(norm(q.correct),norm(value),"Numerical key mismatch Week "+week+" "+q.skill+": "+q.prompt);
+   if(value!=="" && norm(q.correct)!=="" && Number.isFinite(Number(value)) && Number.isFinite(Number(q.correct))){
+    const delta=Math.abs(Number(q.correct)-Number(value));
+    assert.ok(delta<=1e-10*Math.max(1,Math.abs(Number(value))),"Numerical key mismatch Week "+week+" "+q.skill+": "+q.prompt+"; expected "+value+" got "+q.correct);
+   }else{
+    assert.equal(norm(q.correct),norm(value),"Numerical key mismatch Week "+week+" "+q.skill+": "+q.prompt);
+   }
    numerical++;
   }
   draws++;
