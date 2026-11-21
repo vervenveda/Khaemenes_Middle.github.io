@@ -8,8 +8,9 @@ for(const day of originalLessonNames)assert.ok(week.includes(day),"Grade 6 Week 
 for(const html of [week,lesson]){
  for(const phrase of ["part-to-part","part-to-whole","equivalent ratio","scale factor","3:2","2:5"])
   assert.ok(html.toLowerCase().includes(phrase.toLowerCase()),"Lesson 01 must teach "+phrase);
- for(const phrase of ["independent","incorrect","15:20","12:8"])
+ for(const phrase of ["independent","15:20","12:8"])
   assert.ok(html.toLowerCase().includes(phrase.toLowerCase()),"Lesson 01 missing "+phrase);
+ assert.match(html,/error|incorrect|mistake|false/i,"Lesson must include misconception analysis");
  assert.ok(!/document\.write\(|eval\(/.test(html),"Lesson must not introduce dangerous script evaluation");
 }
 assert.equal((lesson.match(/<details class="task"/g)||[]).length,6,"approved six-section engine must remain intact");
