@@ -115,7 +115,7 @@ var grid=node('div','kg7-resource-grid');entries.forEach(function(item){var a=li
 }
 function start(){
 if(document.body.dataset.grade7MathStudio==='1')return;
-var allArticles=$('main article.lesson'),heading=$('main .heading'),shell=$('main .shell');
+var allArticles=$('main article.lesson'),heading=$('main .heading'),shell=$('main .shell.section')||$('main .shell');
 var days=['Monday','Tuesday','Wednesday','Thursday','Friday'];
 var articles=days.map(function(day){return allArticles.find(function(article){var h=$('h2,h3,h4',article);return h&&new RegExp('^'+day+'(?:\\b|\\s*[-—:])','i').test(h.textContent.trim())})});
 if(!articles.every(Boolean)||!shell){console.warn('Middle mathematics studio: missing five-day article contract; preserving original page.');return}
