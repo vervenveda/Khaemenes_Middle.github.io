@@ -179,5 +179,24 @@ let timer=0;function schedule(){clearTimeout(timer);timer=global.setTimeout(publ
 if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",schedule,{once:true});else schedule();
 ["pageshow","khaemenes-family-changed","khaemenes-middle-ledger-recorded","khaemenes-middle-assessment-recorded","khaemenes-middle-grade-continuity-synced"].forEach(e=>global.addEventListener(e,schedule));
 global.addEventListener("storage",e=>{const k=String(e.key||"");if(k.startsWith("khaemenes"))schedule()});
+// Middle School mathematics full-course interaction layer. Only the 108
+// dedicated mathematics week pages receive these practice-only enhancements.
+// The official learner ledger and assessment engine remain independent.
+if(/\/grades\/grade-(06|07|08)\/subjects\/mathematics\/week-(0[1-9]|[12]\d|3[0-6])\.html$/i.test(global.location?.pathname||"")){
+  const gradeMatch=String(global.location.pathname).match(/\/grade-(0[678])\//);
+  const grade=gradeMatch?.[1];
+  const scripts=grade==="07"
+    ?["khaemenes-middle-math-week-practice-v1.js"]
+    :["khaemenes-middle-math-portal-studio-v1.js","khaemenes-middle-math-week-practice-v1.js"];
+  scripts.forEach(name=>{
+    if(global.document.querySelector('script[data-middle-math-course="'+name+'"]'))return;
+    const el=global.document.createElement("script");
+    el.dataset.middleMathCourse=name;
+    el.async=false;
+    el.src=new URL(name,global.document.currentScript?.src||global.location.href).href;
+    el.onerror=()=>console.warn("Middle mathematics enhancement unavailable; original week content preserved:",name);
+    (global.document.head||global.document.documentElement).append(el);
+  });
+}
 global.KhaemenesMiddleLearningContext=Object.freeze({version:VERSION,key:CONTEXT_KEY,learner,courseState,curriculumSummary,recentLessons,recentAssessments,build,publish});
 })(window);
