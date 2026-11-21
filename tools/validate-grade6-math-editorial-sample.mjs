@@ -11,7 +11,7 @@ const samples=[
  [7,"Plot (4,−2)",()=> "Quadrant "+(4>0&&-2<0?"IV":"incorrect")],
  [8,"Translate eight fewer",()=> "5n−8"],
  [9,"Solve m+12=31",()=> "m="+(31-12)],
- [10,"Does x=−1 satisfy x",()=> "-1"],
+ [10,"Does x=−1 satisfy x",()=> "Yes"],
  [11,"Classify 'How many pets",()=> "Statistical"],
  [12,"triangle's area with base 14",()=> String(14*5/2)+" m²"],
  [13,"Find volume of 7×2×3",()=> String(7*2*3)+" cm³"],
