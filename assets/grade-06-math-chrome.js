@@ -58,20 +58,23 @@
     const panel=document.getElementById("vnvClassToolsPanel");
     const language=document.getElementById("vnv-language-switch");
     if(!panel||!language)return false;
-    if(panel.querySelector("[data-vct-translator-panel]"))return true;
-    const holder=document.createElement("section");
-    holder.className="vct-pop";
-    holder.hidden=true;
-    holder.setAttribute("data-vct-translator-panel","");
-    holder.innerHTML='<h2>Translator</h2><div data-vnv-language-mount></div>';
-    panel.append(holder);
-    holder.querySelector("[data-vnv-language-mount]").append(language);
+    let holder=panel.querySelector("[data-vct-translator-panel]");
+    if(!holder){
+      holder=document.createElement("section");
+      holder.className="vct-pop";
+      holder.hidden=true;
+      holder.setAttribute("data-vct-translator-panel","");
+      holder.innerHTML='<h2>Translator</h2><div data-vnv-language-mount></div>';
+      panel.append(holder);
+    }
+    const mount=holder.querySelector("[data-vnv-language-mount]");
+    if(language.parentElement!==mount)mount.append(language);
     document.getElementById("vnv-language-rail")?.remove();
     return true;
   }
   function watch(){
-    if(placeTranslator())return;
-    const observer=new MutationObserver(()=>{if(placeTranslator())observer.disconnect()});
+    placeTranslator();
+    const observer=new MutationObserver(placeTranslator);
     observer.observe(document.body,{childList:true,subtree:true});
   }
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",watch,{once:true});
