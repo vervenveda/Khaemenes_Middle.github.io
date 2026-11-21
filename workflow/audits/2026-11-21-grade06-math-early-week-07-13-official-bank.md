@@ -15,8 +15,12 @@ Decision: Certification HOLD.
 - New validator is registered in `.github/workflows/middle-math-full-course.yml`.
 - This is non-mutating: no changes to student records, verified grades, the question factory, learner identity, assessment gating or cloud accounts.
 
+## Additional early-course verification
+- Added `tools/validate-grade6-math-early-week-01-06-answers.mjs`: independently recomputes correct answers for the official shared Grade 6 mathematics generator across Weeks 01–06, 500 seeds each (3,000 six-item bank draws; 18,000 official item instances), including ratio identities, part/whole ratios, rates, percentages, fraction division, number ordering and absolute value.
+- Added the second test to the Mathematics Full-Course workflow. Both new test scripts must pass after the latest commit before either is accepted.
+
 ## Validation and limitations
 - Require new PR GitHub Actions to pass; investigate exact CI failures before merging.
-- Remaining independent property verification: official Weeks 01–06 and 14–19.
+- Remaining independent property verification after CI: official Weeks 14–19.
 - Remaining editorial verification: 661 supplementary teacher problems not independently checked beyond one-per-week samples, conceptual interpretations and holistic assessment quality.
 - Live browser/tablet journeys, final graduation simulation, export/cloud restore and measured retention still block full certification.
