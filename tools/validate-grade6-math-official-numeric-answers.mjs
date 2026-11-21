@@ -57,7 +57,7 @@ function expected(week,q){
  if(week===34){
    if(skill==="solve equation"){a=nums(p);return String((a[2]-a[1])/a[0]);}
    if(skill==="resource inequality"){a=nums(p);return "n ≤ "+String((a[2]-a[0])/a[1]);}
-   if(skill==="strict inequality"){a=nums(p);return "t > "+String((a[2]+a[1])/a[0]);}
+   if(skill==="strict inequality"){a=nums(p);const rhs=Number(p.match(/> (-?\d+)/)?.[1]);assert.ok(Number.isFinite(rhs));return "t > "+String((rhs+a[1])/a[0]);}
    if(skill==="reverse inequality"){a=nums(p);return "y ≤ −"+String(a[1]/a[0]);}
    if(skill==="feasible integer domain"){a=nums(p);return String(Math.floor((a[0]-a[1])/a[2]));}
    if(skill==="model limitations")return null;
