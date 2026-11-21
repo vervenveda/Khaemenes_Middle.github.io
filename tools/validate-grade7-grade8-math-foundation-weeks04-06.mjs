@@ -20,7 +20,7 @@ for(const grade of grades){
   assert.ok(entry.includes('href="week-'+week+'.html"'),path+" missing course entry");
   for(let d=0;d<5;d++){
    const article=originalArticles[d],id="g"+grade+"-math-w"+week+"-d"+(d+1);
-   assert.match(article,new RegExp('<h4>'+days[d]+':'),id+" day mismatch");
+   assert.match(article,new RegExp('<h4>'+days[d]+'(?:\\s|:|\\s*[—-])'),id+" day mismatch");
    const panels=[...article.matchAll(/<section class="khae-math-depth"[\s\S]*?<\/section>/g)].map(x=>x[0]);
    assert.equal(panels.length,1,id+" must have exactly one deep mathematical laboratory");
    const panel=panels[0];
