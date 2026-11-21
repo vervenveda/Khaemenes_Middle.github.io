@@ -27,6 +27,7 @@ on:
       - "tools/validate-grade6-math-supplemental-weeks31-33-editorial.mjs"
       - "tools/validate-grade6-math-supplemental-weeks28-30-editorial.mjs"
       - "tools/validate-grade6-math-supplemental-weeks25-27-editorial.mjs"
+      - "tools/validate-grade6-math-guidance-weeks22-24.mjs"
       - ".github/workflows/middle-math-full-course.yml"
   pull_request:
     paths:
@@ -54,6 +55,7 @@ on:
       - "tools/validate-grade6-math-supplemental-weeks31-33-editorial.mjs"
       - "tools/validate-grade6-math-supplemental-weeks28-30-editorial.mjs"
       - "tools/validate-grade6-math-supplemental-weeks25-27-editorial.mjs"
+      - "tools/validate-grade6-math-guidance-weeks22-24.mjs"
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -78,3 +80,4 @@ jobs:
       - run: node tools/validate-grade6-math-supplemental-weeks31-33-editorial.mjs
       - run: node tools/validate-grade6-math-supplemental-weeks28-30-editorial.mjs
       - run: node tools/validate-grade6-math-supplemental-weeks25-27-editorial.mjs
+      - run: node tools/validate-grade6-math-guidance-weeks22-24.mjs
