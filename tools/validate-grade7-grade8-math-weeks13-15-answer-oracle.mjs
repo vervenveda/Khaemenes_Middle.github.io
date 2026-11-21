@@ -17,7 +17,7 @@ for(const grade of ["07","08"]){
   const articles=[...html.matchAll(/<article class="lesson">[\s\S]*?<\/article>/g)].map(m=>m[0]);assert.equal(articles.length,5);
   for(let day=0;day<5;day++){
    const labId="g"+grade+"-math-w"+week+"-d"+(day+1);
-   const panel=articles[day].match(new RegExp('<section class="khae-math-depth" data-math-depth="'+labId+'"[\s\S]*?<\/section>'))?.[0];
+   const panel=articles[day].match(new RegExp('<section class="khae-math-depth" data-math-depth="'+labId+'"[\\s\\S]*?<\\/section>'))?.[0];
    assert.ok(panel,"missing "+labId);
    const problems=panel.match(/<strong>Independent reasoning challenges:<\/strong><\/p><ol>([\s\S]*?)<\/ol>/)?.[1];
    const key=panel.match(/<summary>Teacher solution key \(open after attempting\)<\/summary><ol>([\s\S]*?)<\/ol>/)?.[1];
