@@ -74,3 +74,9 @@ The founder identified two rollout regressions: the weekly presentation did not 
 Preserve important founder decisions as **dated, curated, non-verbatim conversation codexes** under `workflow/codexes/YYYY/MM/`. Codexes must include: decision, rationale and origin, approved reference, files affected, tests and holds, prohibited regressions, next action, and related digest/log links. They must distinguish user-approved instructions from assistant proposals and source-verified facts. Never store sensitive learner records, identifiers, tokens, private conversations, passwords or unredacted account exports.
 
 **Attribution:** Khaemenes Academy · Verve N Veda · Jennifer Kay Pearl
+
+## Approved mathematics HTML reference — exact source archive
+
+- **Proofed layout (authoritative):** [`Grade 7 Mathematics Studio — Lesson 01`](../../../grades/grade-07/subjects/mathematics/lesson-01.html) (live path: `grades/grade-07/subjects/mathematics/lesson-01.html`).
+- **Exact HTML snapshot preserved with this digest:** [`grade-07-mathematics-studio-approved-lesson-01.html`](grade-07-mathematics-studio-approved-lesson-01.html).
+- **Preservation rule:** the archived HTML is an unchanged copy of the proofed Lesson 01 at the time of this entry, not a replacement for the live page. Replicate its layout for Grades 6–8 while authoring grade-specific content. Keep formal assessment and learner records separate. The archived file's site-root and relative asset links may require the original live route to function correctly; this is a source reference, not a second deployed learning route.
