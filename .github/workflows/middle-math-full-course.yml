@@ -18,6 +18,7 @@ on:
       - "tools/validate-grade6-math-supplemental-certification.mjs"
       - "tools/validate-grade6-math-editorial-sample.mjs"
       - "tools/validate-grade6-math-official-numeric-answers.mjs"
+      - "tools/validate-grade6-math-official-numeric-extension.mjs"
       - ".github/workflows/middle-math-full-course.yml"
   pull_request:
     paths:
@@ -36,6 +37,7 @@ on:
       - "tools/validate-grade6-math-supplemental-certification.mjs"
       - "tools/validate-grade6-math-editorial-sample.mjs"
       - "tools/validate-grade6-math-official-numeric-answers.mjs"
+      - "tools/validate-grade6-math-official-numeric-extension.mjs"
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -51,3 +53,4 @@ jobs:
       - run: node tools/validate-grade6-math-supplemental-certification.mjs
       - run: node tools/validate-grade6-math-editorial-sample.mjs
       - run: node tools/validate-grade6-math-official-numeric-answers.mjs
+      - run: node tools/validate-grade6-math-official-numeric-extension.mjs
