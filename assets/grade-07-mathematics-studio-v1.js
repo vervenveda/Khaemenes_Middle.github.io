@@ -14,18 +14,24 @@ var $=function(s,r){return(r||document).querySelector(s)};
 var $$=function(s,r){return Array.from((r||document).querySelectorAll(s))};
 var css=[
 'body.kg7-math{background:#fff9ed;color:#24292d;font:400 17px/1.55 "Brandon Grotesque",Nunito,"Avenir Next",system-ui,sans-serif}',
-'body.kg7-math main.section{padding:0 0 32px;background:#fff9ed}',
+'body.kg7-math main.section{padding:0 0 32px;background:#fff9ed;overflow-x:clip}',
 'body.kg7-math main .shell{width:min(1100px,calc(100% - 30px));margin-inline:auto}',
 'body.kg7-math main .heading.kg7-hero{padding:42px 17px 36px;background:linear-gradient(120deg,#214e61,#32675d 30%,#764559 66%,#b1833c);color:#fffdf7!important;text-align:center;margin:0 calc(50% - 50vw) 24px;width:100vw;max-width:100vw}',
 'body.kg7-math .kg7-hero h1{font:400 clamp(38px,7vw,77px)/1.09 Cinzel,Georgia,serif!important;color:#fffdf7!important;margin:12px auto!important;max-width:970px}',
 'body.kg7-math .kg7-hero .kicker{font:400 clamp(22px,4vw,33px)/1.2 Cinzel,Georgia,serif!important;color:#fffdf7!important;letter-spacing:normal!important}',
 'body.kg7-math .kg7-hero p{color:#fffdf7!important;margin:9px auto;max-width:870px}',
-'body.kg7-math .kg7-hero p:last-child{font-size:clamp(17px,2.5vw,24px)!important}',
+'body.kg7-math .kg7-hero p:last-child{font-size:clamp(18px,3vw,24px)!important}',
 '.kg7-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:0 0 18px}',
 '.kg7-strip a,.kg7-strip button{font:400 16px/1.3 Nunito,Arial,sans-serif;min-height:44px;display:flex;justify-content:center;align-items:center;border:1px solid #bdb09c;background:#fffdf7;color:#24292d;padding:7px 12px;text-align:center;border-radius:7px;text-decoration:none;cursor:pointer}',
 '.kg7-note{padding:11px 15px;margin:0 0 19px;border-left:4px solid #b38b36;border-radius:7px;background:#fff0c9;font-size:16px}',
+'.kg7-mission{text-align:center;padding:15px 10px 22px;color:#24292d}',
+'.kg7-mission h2{font:400 28px/1.2 Cinzel,Georgia,serif;margin:0 0 10px}',
+'.kg7-mission p{max-width:790px;margin:0 auto}',
+'.kg7-progress{height:8px;margin:16px auto 8px;width:min(100%,650px);background:#fffdf7;border:1px solid #c5b7a4;border-radius:7px;overflow:hidden}',
+'.kg7-progress>span{height:100%;display:block;background:#246766;width:16.67%;transition:width .2s}',
+'.kg7-progress-label{font-size:15px;color:#5a5a52}',
 '.kg7-crumbs{display:flex;justify-content:center;align-items:center;gap:7px;flex-wrap:wrap;text-align:center;margin:17px auto;color:#24292d;font-size:16px}',
-'.kg7-lesson{border:1px solid #797469;border-radius:7px;overflow:hidden;margin:12px 0;background:#fffdf7}',
+'.kg7-lesson{border:1px solid #797469;border-radius:7px;overflow:hidden;margin:11px 0;background:#fffdf7}',
 '.kg7-lesson>summary{display:flex;align-items:center;gap:13px;padding:10px 16px;border-left:7px solid var(--kg7-accent);min-height:53px;list-style:none;cursor:pointer;font-size:18px;color:#24292d}',
 '.kg7-lesson>summary::-webkit-details-marker{display:none}',
 '.kg7-lesson>summary:after{content:"+";margin-left:auto;font-size:23px;font-weight:400}',
@@ -56,6 +62,8 @@ var css=[
 '.kg7-resource-grid small{display:block;font-size:15px;line-height:1.36;margin-top:5px}',
 'body.kg7-math footer.footer{background:#24292d!important;color:#fffdf7!important;text-align:center!important;padding:27px 14px 95px!important}',
 'body.kg7-math footer.footer .shell{text-align:center!important}',
+'body.kg7-math .kg7-hero .kg7-subject-title{font-size:clamp(39px,7vw,77px)!important}',
+'body.kg7-math .kg7-hero .kg7-course-focus{font-size:17px!important}',
 'body.kg7-math :is(button,input,textarea,summary,a):focus-visible{outline:3px solid #297ca3;outline-offset:2px}',
 '@media(max-width:850px){.kg7-resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.kg7-work-grid{grid-template-columns:1fr}}',
 '@media(max-width:570px){.kg7-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.kg7-lesson>summary{padding:9px 11px;font-size:16px}.kg7-content{padding:13px}.kg7-resource-grid a{padding:9px}.kg7-resource-grid{gap:8px}.kg7-hero{padding:33px 13px!important}}',
@@ -112,17 +120,21 @@ if(articles.length!==5||!heading||!shell){console.warn('Grade 7 mathematics stud
 document.body.dataset.grade7MathStudio='1';document.body.classList.add('kg7-math');
 var style=node('style');style.id=rootId;style.textContent=css;document.head.append(style);
 heading.classList.add('kg7-hero');
-var title=$('h1',heading);if(title)title.setAttribute('data-math-week-title',String(week));
+var title=$('h1',heading),topic=title?title.textContent.trim():'Mathematics';if(title){title.textContent='Mathematics Studio';title.classList.add('kg7-subject-title');title.setAttribute('data-math-week-title',String(week));}
 var kicker=$('.kicker',heading);if(kicker)kicker.textContent='Khaemenes Academy';
-var desc=node('p','', 'Grade 7 · Week '+String(week).padStart(2,'0')+' · Mathematics · Five Daily Lessons');desc.style.fontSize='24px';heading.append(desc);
+var oldDescription=$('p',heading);oldDescription.forEach(function(p){if(p!==kicker)p.remove()});
+var desc=node('p','', 'Grade 7 · Week '+String(week).padStart(2,'0')+' · Five Daily Lessons');desc.style.fontSize='24px';heading.append(desc);
+var focus=node('p','kg7-course-focus',topic+' · Explore, calculate, explain');heading.append(focus);
 var crumbs=node('nav','kg7-crumbs');crumbs.setAttribute('aria-label','Breadcrumb');crumbs.append(link('Grade 7','../../index.html'),node('span','', '/'),link('Mathematics','index.html'),node('span','', '/'),node('span','', 'Week '+String(week).padStart(2,'0')));
 heading.after(crumbs);
+var mission=node('section','kg7-mission');mission.append(node('h2','',"Today's mathematical mission"),node('p','', 'Work through the original five daily lessons. Practice with written reasoning, a handwriting workspace, and optional mathematical games.'));var progressTrack=node('div','kg7-progress'),progressFill=node('span');progressFill.setAttribute('aria-hidden','true');progressTrack.append(progressFill);mission.append(progressTrack);var progressLabel=node('p','kg7-progress-label','1 of 6 sections explored · Practice only');mission.append(progressLabel);crumbs.after(mission);
 var nav=node('nav','kg7-strip');nav.setAttribute('aria-label','Week mathematics navigation');nav.append(link('Subject Hall','index.html'),link('Weekly Plan','../../weekly-plans/week-'+String(week).padStart(2,'0')+'.html'),link('Official Assessments','../../assessments/weekly-assessments.html'));
-var exportButton=node('button','', 'Export practice');exportButton.type='button';nav.append(exportButton);crumbs.after(nav);
+var exportButton=node('button','', 'Export practice');exportButton.type='button';nav.append(exportButton);mission.after(nav);
 var note=node('p','kg7-note','This is interactive lesson practice. Existing learner-scoped formative checkpoints remain in each daily lesson. Scores, grades, mastery and certificates continue to be controlled by the official Academy assessment system.');nav.after(note);
 var week01=week===1;
 var section=node('section');section.id='kg7DailyLessons';section.setAttribute('aria-label','Interactive five-day mathematics lessons');note.after(section);
-var states=[];
+var states=[],visited=new Set([0]);
+function updateProgress(){var count=visited.size;progressFill.style.width=(count/6*100)+'%';progressLabel.textContent=count+' of 6 sections explored · Practice only'}
 articles.forEach(function(article,i){
 var day=['Monday','Tuesday','Wednesday','Thursday','Friday'][i],h=$('h4',article),titleText=h?h.textContent.trim():day+' Learning';
 var details=node('details','kg7-lesson');details.style.setProperty('--kg7-accent',['#246766','#254562','#b38b36','#794452','#246766'][i]);if(i===0)details.open=true;
@@ -131,11 +143,12 @@ var content=node('div','kg7-content');article.parentNode.removeChild(article);co
 if(week01&&i===0){var p=node('p');p.append(link('Open the approved interactive Lesson 01','lesson-01.html'));p.style.padding='11px';p.style.background='#edf5f0';p.style.borderRadius='7px';article.insertBefore(p,article.firstChild)}
 var workArea=work(day.toLowerCase(),article);
 states.push({day:day,textarea:workArea.txt,read:workArea.draw?drawings.get(day.toLowerCase()):null});details.append(content);section.append(details);
-details.addEventListener('toggle',function(){if(details.open){$$('details.kg7-lesson',section).forEach(function(other){if(other!==details)other.open=false});var d=drawings.get(day.toLowerCase());if(d)requestAnimationFrame(d.resize)}})
+details.addEventListener('toggle',function(){if(details.open){visited.add(i);updateProgress();$('details.kg7-lesson',section).forEach(function(other){if(other!==details)other.open=false});var d=drawings.get(day.toLowerCase());if(d)requestAnimationFrame(d.resize)}})
 });
+var review=node('details','kg7-lesson');review.style.setProperty('--kg7-accent','#254562');var rs=node('summary');rs.append(node('span','kg7-step','06'),node('strong','','Reflect · Weekly Evidence & Next Step'));review.append(rs);var rb=node('div','kg7-content');rb.append(node('p','', 'Explain one mathematical idea you understand, one error you corrected, and one question to revisit before the official weekly assessment.'));var reflection=node('textarea');reflection.className='kg7-reflection';reflection.setAttribute('aria-label','Weekly mathematics reflection');reflection.placeholder='I can explain... I need more practice with...';reflection.style.cssText='display:block;width:100%;min-height:120px;border:1px solid #3d4b4a;border-radius:7px;padding:11px;background:white;color:#24292d;font:400 17px/1.5 Nunito,Arial,sans-serif';rb.append(reflection);review.append(rb);section.append(review);review.addEventListener('toggle',function(){if(review.open){visited.add(5);updateProgress();$('details.kg7-lesson',section).forEach(function(other){if(other!==review)other.open=false})}});
 var oldActions=$('.actions',shell);if(oldActions){oldActions.classList.add('no-print')}
 addShelf(shell);
-exportButton.addEventListener('click',function(){var payload={format:'khaemenes-grade07-math-practice-v1',grade:'07',week:week,authoritative:false,exportedAt:new Date().toISOString(),days:states.map(function(s){return{day:s.day,notes:s.textarea.value,ink:s.read?s.read.read():[]}})};download('grade-07-math-week-'+String(week).padStart(2,'0')+'-practice.json',new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}))});
+exportButton.addEventListener('click',function(){var payload={format:'khaemenes-grade07-math-practice-v1',grade:'07',week:week,authoritative:false,exportedAt:new Date().toISOString(),days:states.map(function(s){return{day:s.day,notes:s.textarea.value,ink:s.read?s.read.read():[]}}),reflection:reflection.value};download('grade-07-math-week-'+String(week).padStart(2,'0')+'-practice.json',new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}))});
 }
 window.KhaemenesGrade7MathStudio=Object.freeze({version:'1.0.0'});
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
