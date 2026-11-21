@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - "assets/khaemenes-middle-learning-context.js"
+      - "assets/khaemenes-grade6-math-depth-a3-v1.js"
       - "assets/khaemenes-middle-math-portal-studio-v1.js"
       - "assets/khaemenes-middle-math-week-practice-v1.js"
       - "assets/grade-07-mathematics-studio-v1.js"
@@ -13,10 +14,12 @@ on:
       - "grades/grade-08/subjects/mathematics/**"
       - "tools/validate-middle-math-full-course.mjs"
       - "tools/validate-grade6-math-lesson01-depth.mjs"
+      - "tools/validate-grade6-math-a3-curriculum.mjs"
       - ".github/workflows/middle-math-full-course.yml"
   pull_request:
     paths:
       - "assets/khaemenes-middle-learning-context.js"
+      - "assets/khaemenes-grade6-math-depth-a3-v1.js"
       - "assets/khaemenes-middle-math-portal-studio-v1.js"
       - "assets/khaemenes-middle-math-week-practice-v1.js"
       - "assets/grade-07-mathematics-studio-v1.js"
@@ -26,6 +29,7 @@ on:
       - "grades/grade-08/subjects/mathematics/**"
       - "tools/validate-middle-math-full-course.mjs"
       - "tools/validate-grade6-math-lesson01-depth.mjs"
+      - "tools/validate-grade6-math-a3-curriculum.mjs"
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -37,3 +41,4 @@ jobs:
       - run: node tools/validate-middle-math-full-course.mjs
       - run: node tools/validate-middle-math-shared-engine.mjs
       - run: node tools/validate-grade6-math-lesson01-depth.mjs
+      - run: node tools/validate-grade6-math-a3-curriculum.mjs
