@@ -7,8 +7,8 @@
 'use strict';
 if(window.KhaemenesMiddleMathPortalV1)return;
 var path=String(location.pathname||'');
-var gradeMatch=path.match(/\/grades\/grade-(06|08)\/subjects\/mathematics\/studio\.html$/i);if(!gradeMatch)return;var grade=gradeMatch[1];
-var week=Number(new URLSearchParams(location.search).get('week'));if(!Number.isInteger(week)||week<1||week>36)return;
+var gradeMatch=path.match(/\/grades\/grade-(06|08)\/subjects\/mathematics\/(studio|week-(\d{2}))\.html$/i);if(!gradeMatch)return;var grade=gradeMatch[1];
+var week=gradeMatch[3]?Number(gradeMatch[3]):Number(new URLSearchParams(location.search).get('week'));if(!Number.isInteger(week)||week<1||week>36)return;
 var rootId='khaeGrade7MathStudioStyle',opened=0,drawings=new Map();
 var $=function(s,r){return(r||document).querySelector(s)};
 var $$=function(s,r){return Array.from((r||document).querySelectorAll(s))};
@@ -115,8 +115,11 @@ var grid=node('div','kg7-resource-grid');entries.forEach(function(item){var a=li
 }
 function start(){
 if(document.body.dataset.grade7MathStudio==='1')return;
-var articles=$$('main article.lesson'),heading=$('main .heading'),shell=$('main .shell');
-if(articles.length!==5||!heading||!shell){console.warn('Grade 7 mathematics studio: missing five-day article contract; preserving original page.');return}
+var allArticles=$('main article.lesson'),heading=$('main .heading'),shell=$('main .shell');
+var days=['Monday','Tuesday','Wednesday','Thursday','Friday'];
+var articles=days.map(function(day){return allArticles.find(function(article){var h=$('h2,h3,h4',article);return h&&new RegExp('^'+day+'(?:\\b|\\s*[-—:])','i').test(h.textContent.trim())})});
+if(!articles.every(Boolean)||!shell){console.warn('Middle mathematics studio: missing five-day article contract; preserving original page.');return}
+if(!heading){heading=node('div','heading');heading.append(node('p','kicker','Khaemenes Academy'),node('h1','', 'Mathematics Week '+String(week).padStart(2,'0')));shell.prepend(heading)}
 document.body.dataset.grade7MathStudio='1';document.body.classList.add('kg7-math');
 var style=node('style');style.id=rootId;style.textContent=css;document.head.append(style);
 heading.classList.add('kg7-hero');
@@ -136,7 +139,7 @@ var section=node('section');section.id='kg7DailyLessons';section.setAttribute('a
 var states=[],visited=new Set([0]);
 function updateProgress(){var count=visited.size;progressFill.style.width=(count/6*100)+'%';progressLabel.textContent=count+' of 6 sections explored · Practice only'}
 articles.forEach(function(article,i){
-var day=['Monday','Tuesday','Wednesday','Thursday','Friday'][i],h=$('h4',article),titleText=h?h.textContent.trim():day+' Learning';
+var day=['Monday','Tuesday','Wednesday','Thursday','Friday'][i],h=$('h2,h3,h4',article),titleText=h?h.textContent.trim():day+' Learning';
 var details=node('details','kg7-lesson');details.style.setProperty('--kg7-accent',['#246766','#254562','#b38b36','#794452','#246766'][i]);if(i===0)details.open=true;
 var summary=node('summary');summary.append(node('span','kg7-step',String(i+1).padStart(2,'0')),node('strong','',titleText));details.append(summary);
 var content=node('div','kg7-content');article.parentNode.removeChild(article);content.append(article);
@@ -152,6 +155,6 @@ exportButton.addEventListener('click',function(){var payload={format:'khaemenes-
 }
 // Presentation-only helper: place the canonical VNV translator inside the existing Class Tools panel.
 if(false&&!document.querySelector('script[data-kg7-translator-placement]')){var tr=document.createElement('script');tr.src='https://vervenveda.com/Khaemenes_Middle.github.io/assets/grade-07-math-translator-tools-v1.js';tr.dataset.kg7TranslatorPlacement='1';document.head.append(tr)}
-window.KhaemenesMiddleMathPortalV1=Object.freeze({version:'1.0.0',grades:['06','08'],scope:'practice-only'});
+window.KhaemenesMiddleMathPortalV1=Object.freeze({version:'1.1.0',grades:['06','08'],scope:'practice-only'});
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 })();
