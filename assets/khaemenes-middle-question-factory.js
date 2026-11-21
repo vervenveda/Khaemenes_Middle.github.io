@@ -545,7 +545,8 @@ function makeGrade6VisualRatioWeek(opts){
   for(let i=1;alts.length<3;i++){const x=Number.isFinite(Number(correct))?String(Number(correct)+11*i):"Different comparison "+i;if(x!==good&&!alts.includes(x))alts.push(x)}
   out.push(finalize(makeQuestion(prompt,good,alts.slice(0,3),{subject:"mathematics",grade:6,focus:"week 19 media ratios",skill,rationale:reason}),r));
  }
- add("An image has "+(a*scale)+" light and "+(b*scale)+" dark pixels. Which ratio gives light to dark in simplest terms?",a+":"+b,[a+":"+(a+b),b+":"+a,(a*scale)+":"+b],"part-to-part ratios","Compare light to dark and divide both terms by the same scale factor.");
+ const shared=(function gcd(x,y){return y?gcd(y,x%y):x;})(a,b);
+ add("An image has "+(a*scale)+" light and "+(b*scale)+" dark pixels. Which ratio gives light to dark in simplest terms?",(a/shared)+":"+(b/shared),[a+":"+(a+b),b+":"+a,(a*scale)+":"+b],"part-to-part ratios","Reduce both displayed counts by their greatest common factor; the scale multiplier may not be their only shared factor.");
  add("A model is "+a+" cm wide and enlarged by scale factor "+scale+". How wide is the image in cm?",a*scale,[a+scale,a*scale+scale,a],"scale factor","Multiply the original width by the scale factor.");
  add("A display presents "+(fps*seconds)+" frames in "+seconds+" seconds. How many frames per second on average?",fps,[fps*seconds,seconds,fps+seconds],"unit rate","Divide total frames by time.");
  add("At "+fps+" frames per second for "+(seconds+2)+" seconds, how many frames are expected?",fps*(seconds+2),[fps+seconds+2,fps*seconds,seconds+2],"rate model","Multiply unit rate and elapsed time.");
