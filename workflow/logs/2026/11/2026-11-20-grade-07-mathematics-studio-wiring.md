@@ -44,3 +44,13 @@ The shared studio script passed JavaScript syntax compilation with `new Function
 ## Next verification
 
 Test representative Weeks 01, 18, and 36 on desktop and iPad; confirm the canonical chrome, single-open accordion behavior, drawing fidelity after rotation, export files, formative ledger insertion, and verified assessment navigation. Then perform a separate content-depth audit before declaring all 180 lesson blocks instructionally upgraded.
+
+## Follow-up correction: approved design parity
+
+The user reported that the 36-week presentation looked different from the approved standalone Lesson 01. This was accurate: the week-page enhancer used the legacy week title as its hero, omitted the centered mission/progress region, and displayed five day accordions without the six-section visual rhythm.
+
+Correction commit: `735825e2d85e2e16a5ddd4e3babc028a0fb57a4f` in `assets/grade-07-mathematics-studio-v1.js`. Updated the shared weekly presentation to use the approved “Mathematics Studio” hero typography, week/topic descriptor, centered breadcrumbs beneath the hero, centered mission and exploration progress, compact five-day accordions plus a sixth reflection/evidence accordion, with the original eight-card cream resource shelf retained. All thirty-six week files use this shared implementation without further page-file edits.
+
+Verified by reopening the shared JavaScript and Weeks 01/18/36, checking the shared script wiring and successful JavaScript syntax compilation. The standalone `lesson-01.html` SHA was unchanged.
+
+**Visual/live verification HOLD:** No live browser/iPad render pass was performed. Weekly pages remain multi-day course views; their five-day curricula are not interchangeable with the six instructional tasks in the individually authored Lesson 01. Exact content parity requires subsequent day-by-day lesson authoring and should not be represented as completed.
