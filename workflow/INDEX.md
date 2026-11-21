@@ -2,6 +2,7 @@
 
 | Date | Type | Entry | State |
 | --- | --- | --- | --- |
+| 2026-11-21 | curriculum / verification | [Grades 7–8 Mathematics · Weeks 13–15 Labs & Mathematical Key Checks](logs/2026/11/2026-11-21-grade07-grade08-mathematics-weeks13-15.md) | 30 labs, 120 keys, 30-key independent sample; CI required |
 | 2026-11-21 | audit / repair | [Grade 7–8 Mathematics · Catalog Alignment & Answer-Key Sample](logs/2026/11/2026-11-21-grade07-grade08-math-focus-and-answer-oracle.md) | 24 focus labels aligned; 30-key mathematical sample pending CI |
 | 2026-11-21 | curriculum / upgrade | [Grades 7–8 Mathematics · Weeks 10–12](logs/2026/11/2026-11-21-grade07-grade08-mathematics-weeks10-12.md) | 30 daily labs, 120 problems; CI and live review pending |
 | 2026-11-21 | curriculum / upgrade | [Grade 7 & 8 Mathematics · Weeks 07–09 Mathematics Laboratories](logs/2026/11/2026-11-21-grade07-grade08-mathematics-weeks07-09.md) | 30 daily labs and 120 keyed tasks authored; awaiting CI and live testing |
