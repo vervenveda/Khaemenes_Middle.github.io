@@ -112,6 +112,8 @@
   }
 
   function createButton(){
+    // Grade 7 mathematics uses the canonical Class Tools dock; no overlapping floating break timer.
+    if(/\/grades\/grade-07\/subjects\/mathematics\/(?:lesson-01|week-\d{2})\.html$/i.test(String(global.location?.pathname||"")))return;
     ensureNAIBBridge();
     if(!global.document||global.document.getElementById("khaemenesBreakawayButton"))return;
     const a=inferActivity();
