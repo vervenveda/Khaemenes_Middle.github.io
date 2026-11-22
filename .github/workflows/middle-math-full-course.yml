@@ -24,6 +24,7 @@ on:
       - "tools/validate-grade7-grade8-math-answer-qa-weeks04-06.mjs"
       - "tools/validate-grade7-grade8-math-answer-qa-weeks07-09.mjs"
       - "tools/validate-grade7-grade8-math-answer-qa-weeks10-12.mjs"
+      - "tools/validate-grade7-grade8-math-answer-qa-weeks13-15.mjs"
       - "tools/validate-grade7-grade8-math-catalog-and-answer-sample.mjs"
       - "tools/validate-grade6-math-lesson01-depth.mjs"
       - "tools/validate-grade6-math-a3-curriculum.mjs"
@@ -64,6 +65,7 @@ on:
       - "tools/validate-grade7-grade8-math-answer-qa-weeks04-06.mjs"
       - "tools/validate-grade7-grade8-math-answer-qa-weeks07-09.mjs"
       - "tools/validate-grade7-grade8-math-answer-qa-weeks10-12.mjs"
+      - "tools/validate-grade7-grade8-math-answer-qa-weeks13-15.mjs"
       - "tools/validate-grade7-grade8-math-catalog-and-answer-sample.mjs"
       - "tools/validate-grade6-math-lesson01-depth.mjs"
       - "tools/validate-grade6-math-a3-curriculum.mjs"
@@ -100,6 +102,7 @@ jobs:
       - run: node tools/validate-grade7-grade8-math-answer-qa-weeks04-06.mjs
       - run: node tools/validate-grade7-grade8-math-answer-qa-weeks07-09.mjs
       - run: node tools/validate-grade7-grade8-math-answer-qa-weeks10-12.mjs
+      - run: node tools/validate-grade7-grade8-math-answer-qa-weeks13-15.mjs
       - run: node tools/validate-grade7-grade8-math-catalog-and-answer-sample.mjs
       - run: node tools/validate-middle-math-shared-engine.mjs
       - run: node tools/validate-grade6-math-lesson01-depth.mjs
