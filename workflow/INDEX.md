@@ -2,6 +2,7 @@
 
 | Date | Type | Entry | State |
 | --- | --- | --- | --- |
+| 2026-11-21 | academic / hardening | [Grades 7–8 Mathematics · Weeks 13–15 Final Early-Year Answer QA](logs/2026/11/2026-11-21-grade07-grade08-math-answer-qa-weeks13-15.md) | 120 mathematical keys, eleven self-contained question clarifications, CI required |
 | 2026-11-21 | academic / hardening | [Grade 7–8 Mathematics · Weeks 10–12 Answer QA](logs/2026/11/2026-11-21-grade07-grade08-math-answer-qa-weeks10-12.md) | 120 answers and seven contextual clarifications; CI pending |
 | 2026-11-21 | academic / hardening | [Grade 7–8 Math · Weeks 07–09 Answer QA](logs/2026/11/2026-11-21-grade07-grade08-math-answer-qa-weeks07-09.md) | 120 indexed solutions, six transformation prompt clarifications; CI pending |
 | 2026-11-21 | academic / hardening | [Grade 7–8 Mathematics · Weeks 04–06 Answer QA](logs/2026/11/2026-11-21-grade07-grade08-math-answer-qa-weeks04-06.md) | 120 answer expectations and 5 context repairs; CI pending |
