@@ -2,6 +2,7 @@
 
 | Date | Type | Entry | State |
 | --- | --- | --- | --- |
+| 2026-11-21 | academic / hardening | [Grade 7–8 Mathematics · Weeks 04–06 Answer QA](logs/2026/11/2026-11-21-grade07-grade08-math-answer-qa-weeks04-06.md) | 120 answer expectations and 5 context repairs; CI pending |
 | 2026-11-21 | academic / hardening | [Grade 7 & 8 Mathematics · Weeks 01–03 Answer QA](logs/2026/11/2026-11-21-grade07-grade08-math-answer-qa-weeks01-03.md) | 120 item-indexed solutions; three unit-rate question clarifications; CI required |
 | 2026-11-21 | curriculum / full-year build | [Grade 7–8 Mathematics · Weeks 16–36 Complete Source Enrichment](logs/2026/11/2026-11-21-grade07-grade08-mathematics-weeks16-36-completion.md) | 42 weeks/210 labs/840 math keys; CI, independent editorial and live certification gates |
 | 2026-11-21 | curriculum / verification | [Grades 7–8 Mathematics · Weeks 13–15 Labs & Mathematical Key Checks](logs/2026/11/2026-11-21-grade07-grade08-mathematics-weeks13-15.md) | 30 labs, 120 keys, 30-key independent sample; CI required |
