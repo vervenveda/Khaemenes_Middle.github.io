@@ -2,6 +2,7 @@
 
 | Date | Type | Entry | State |
 | --- | --- | --- | --- |
+| 2026-11-21 | academic / hardening | [Grade 7–8 Mathematics · Weeks 10–12 Answer QA](logs/2026/11/2026-11-21-grade07-grade08-math-answer-qa-weeks10-12.md) | 120 answers and seven contextual clarifications; CI pending |
 | 2026-11-21 | academic / hardening | [Grade 7–8 Math · Weeks 07–09 Answer QA](logs/2026/11/2026-11-21-grade07-grade08-math-answer-qa-weeks07-09.md) | 120 indexed solutions, six transformation prompt clarifications; CI pending |
 | 2026-11-21 | academic / hardening | [Grade 7–8 Mathematics · Weeks 04–06 Answer QA](logs/2026/11/2026-11-21-grade07-grade08-math-answer-qa-weeks04-06.md) | 120 answer expectations and 5 context repairs; CI pending |
 | 2026-11-21 | academic / hardening | [Grade 7 & 8 Mathematics · Weeks 01–03 Answer QA](logs/2026/11/2026-11-21-grade07-grade08-math-answer-qa-weeks01-03.md) | 120 item-indexed solutions; three unit-rate question clarifications; CI required |
