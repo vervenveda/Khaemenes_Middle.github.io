@@ -1,0 +1,50 @@
+{
+  "schema": "khaemenes-middle-language-arts-engine-contract-v1",
+  "version": "1.0.0",
+  "sourceArchitecture": {
+    "program": "Khaemenes High School English",
+    "adaptedResponsibilities": [
+      "daily-lesson-workflow",
+      "reading-evidence-custody",
+      "learner-scoped-drafts",
+      "revision-cycle",
+      "formative-practice-boundary",
+      "portfolio-export"
+    ]
+  },
+  "middleSchoolAuthority": {
+    "curriculum": "existing grade-06/07/08 language-arts week pages",
+    "grades": [
+      "06",
+      "07",
+      "08"
+    ],
+    "weeksPerGrade": 36,
+    "totalWeekSurfaces": 108
+  },
+  "routine": [
+    "Read",
+    "Annotate",
+    "Analyze",
+    "Draft",
+    "Revise",
+    "Defend"
+  ],
+  "dailyStages": [
+    "Read & Prepare",
+    "Annotate & Analyze",
+    "Draft & Apply",
+    "Revise & Defend",
+    "Publish & Reflect"
+  ],
+  "boundaries": {
+    "masteryAuthority": false,
+    "affectsGrade": false,
+    "unlocksCurriculum": false,
+    "changesPlacement": false,
+    "assessmentAuthority": false,
+    "protectedAssessmentContent": false,
+    "learnerScopedDrafts": true,
+    "exportableEvidence": true
+  }
+}
