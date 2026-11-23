@@ -11,4 +11,5 @@
 document.querySelectorAll("[data-check]").forEach(btn=>btn.addEventListener("click",()=>{const card=btn.closest(".problem"),input=card.querySelector("input"),feedback=card.querySelector(".feedback");const actual=roman(normalize(input.value)),expected=roman(normalize(input.dataset.answer));if(!actual){feedback.textContent="Enter an answer first, then write an explanation in your notebook.";return;}
 const n1=Number(actual),n2=Number(expected);const numeric=actual!==""&&expected!==""&&Number.isFinite(n1)&&Number.isFinite(n2);const match=actual===expected||(numeric&&Math.abs(n1-n2)<1e-8);feedback.textContent=match?"Reference answer matched. Explain why and check the result.":"Not matched yet. Recheck signs, order, or inverse operations. Try another approach before revealing the reasoning."; }));
 })();
-</script><script defer src="https://vervenveda.com/assets/vnv-language.js"></script><script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script></body></html>
+</script><script defer src="https://vervenveda.com/assets/vnv-language.js"></script><script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script><script src="https://vervenveda.com/Khaemenes_Middle.github.io/assets/khaemenes-middle-breakaway.js" defer></script>
+</body></html>
