@@ -203,6 +203,13 @@ if(/\/grades\/grade-(06|07|08)\/subjects\/science\/week-(0[1-9]|[12]\d|3[0-6])\.
 // routes the correct subject engine; pedagogy remains owned by Language Arts.
 if(/\/grades\/grade-(06|07|08)\/subjects\/language-arts\/week-(0[1-9]|[12]\d|3[0-6])\.html$/i.test(global.location?.pathname||"")){
   const base=global.document.currentScript?.src||global.location.href;
+  if(/\/grade-06\//i.test(global.location.pathname||"")&&!global.document.querySelector('script[data-grade6-language-arts-spine]')){
+    const spine=global.document.createElement("script");
+    spine.dataset.grade6LanguageArtsSpine="v1";
+    spine.async=false;
+    spine.src=new URL("khaemenes-grade6-language-arts-spine-v1.js",base).href;
+    (global.document.head||global.document.documentElement).append(spine);
+  }
   if(!global.document.querySelector('link[data-middle-language-arts-engine]')){
     const style=global.document.createElement("link");
     style.rel="stylesheet";
