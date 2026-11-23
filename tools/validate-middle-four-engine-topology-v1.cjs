@@ -54,7 +54,9 @@ for(const g of ["06","07","08"]){
    assert(exists(p),"Missing core subject surface: "+p);
    const html=read(p);
    assert(html.includes("khaemenes-middle-learning-context.js"),p+" missing subject router");
-   const lessonCount=(html.match(/<article class="lesson">/g)||[]).length;\n   assert(lessonCount>=5,p+" must retain at least five curriculum lesson blocks");\n   if(subject!=="mathematics")assert.equal(lessonCount,5,p+" must retain exactly five curriculum days");
+    const lessonCount=(html.match(/<article class="lesson">/g)||[]).length;
+    assert(lessonCount>=5,p+" must retain at least five curriculum lesson blocks");
+    if(subject!=="mathematics")assert.equal(lessonCount,5,p+" must retain exactly five curriculum days");
    surfaces++;
   }
  }
