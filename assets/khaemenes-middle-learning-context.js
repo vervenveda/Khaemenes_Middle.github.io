@@ -217,6 +217,20 @@ if(/\/grades\/grade-(06|07|08)\/subjects\/language-arts\/week-(0[1-9]|[12]\d|3[0
     lab.src=new URL("khaemenes-grade6-language-arts-reading-lab-v1.js",base).href;
     (global.document.head||global.document.documentElement).append(lab);
   }
+  if(/\/grade-07\//i.test(global.location.pathname||"")&&!global.document.querySelector('script[data-grade7-language-arts-spine]')){
+    const spine7=global.document.createElement("script");
+    spine7.dataset.grade7LanguageArtsSpine="v1";
+    spine7.async=false;
+    spine7.src=new URL("khaemenes-grade7-language-arts-spine-v1.js",base).href;
+    (global.document.head||global.document.documentElement).append(spine7);
+  }
+  if(/\/grade-07\//i.test(global.location.pathname||"")&&!global.document.querySelector('script[data-grade7-language-arts-reading-lab]')){
+    const lab7=global.document.createElement("script");
+    lab7.dataset.grade7LanguageArtsReadingLab="v1";
+    lab7.async=false;
+    lab7.src=new URL("khaemenes-grade7-language-arts-reading-lab-v1.js",base).href;
+    (global.document.head||global.document.documentElement).append(lab7);
+  }
   if(!global.document.querySelector('link[data-middle-language-arts-engine]')){
     const style=global.document.createElement("link");
     style.rel="stylesheet";
