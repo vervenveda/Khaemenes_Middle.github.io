@@ -75,8 +75,7 @@ function mount(){
  document.body.dataset.middleElaEngine="middle-ela-v1";
  document.body.dataset.middleElaEngineMounted="true";
  const info=headingInfo();
- const spineWeek=GRADE==="06"?global.KhaemenesGrade6LanguageArtsSpine?.weeks?.[String(WEEK).padStart(2,"0")]||null:null;
- const readingLab=GRADE==="06"?global.KhaemenesGrade6LanguageArtsReadingLab?.weeks?.[String(WEEK).padStart(2,"0")]||null:null;
+ const gradeNumber=Number(GRADE);\n const gradeSpine=global["KhaemenesGrade"+gradeNumber+"LanguageArtsSpine"]||null;\n const gradeReadingLab=global["KhaemenesGrade"+gradeNumber+"LanguageArtsReadingLab"]||null;\n const spineWeek=gradeSpine?.weeks?.[String(WEEK).padStart(2,"0")]||null;\n const readingLab=gradeReadingLab?.weeks?.[String(WEEK).padStart(2,"0")]||null;
 
  const studio=document.createElement("section");
  studio.className="middle-ela-engine-studio";
