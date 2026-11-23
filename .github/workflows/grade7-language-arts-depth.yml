@@ -1,0 +1,31 @@
+name: Grade 7 Language Arts Depth
+on:
+  pull_request:
+    paths:
+      - 'grades/grade-07/subjects/language-arts/**'
+      - 'assets/khaemenes-middle-language-arts-engine-v1.js'
+      - 'assets/khaemenes-grade7-language-arts-spine-v1.js'
+      - 'assets/khaemenes-grade7-language-arts-reading-lab-v1.js'
+      - 'assets/khaemenes-middle-learning-context.js'
+      - 'tools/validate-grade7-language-arts-depth-v1.cjs'
+      - '.github/workflows/grade7-language-arts-depth.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'grades/grade-07/subjects/language-arts/**'
+      - 'assets/khaemenes-middle-language-arts-engine-v1.js'
+      - 'assets/khaemenes-grade7-language-arts-spine-v1.js'
+      - 'assets/khaemenes-grade7-language-arts-reading-lab-v1.js'
+      - 'assets/khaemenes-middle-learning-context.js'
+      - 'tools/validate-grade7-language-arts-depth-v1.cjs'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tools/validate-grade7-language-arts-depth-v1.cjs
+      - run: node tools/validate-middle-language-arts-engine-v1.cjs
+      - run: node tools/validate-middle-learning-engine.mjs
