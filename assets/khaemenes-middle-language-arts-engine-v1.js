@@ -75,12 +75,16 @@ function mount(){
  document.body.dataset.middleElaEngine="middle-ela-v1";
  document.body.dataset.middleElaEngineMounted="true";
  const info=headingInfo();
- const gradeNumber=Number(GRADE);\n const gradeSpine=global["KhaemenesGrade"+gradeNumber+"LanguageArtsSpine"]||null;\n const gradeReadingLab=global["KhaemenesGrade"+gradeNumber+"LanguageArtsReadingLab"]||null;\n const spineWeek=gradeSpine?.weeks?.[String(WEEK).padStart(2,"0")]||null;\n const readingLab=gradeReadingLab?.weeks?.[String(WEEK).padStart(2,"0")]||null;
+ const gradeNumber=Number(GRADE);
+ const gradeSpine=global["KhaemenesGrade"+gradeNumber+"LanguageArtsSpine"]||null;
+ const gradeReadingLab=global["KhaemenesGrade"+gradeNumber+"LanguageArtsReadingLab"]||null;
+ const spineWeek=gradeSpine?.weeks?.[String(WEEK).padStart(2,"0")]||null;
+ const readingLab=gradeReadingLab?.weeks?.[String(WEEK).padStart(2,"0")]||null;
 
  const studio=document.createElement("section");
  studio.className="middle-ela-engine-studio";
  studio.setAttribute("aria-label","Language Arts learning routine");
- studio.innerHTML='<p class="middle-ela-engine-eyebrow">Language Arts Engine</p><h2>Read → Annotate → Analyze → Draft → Revise → Defend</h2><p>This weekly studio organizes the existing Grade '+Number(GRADE)+' curriculum. It does not replace the lesson text, weekly mastery assessment, or official learner record.</p><div class="middle-ela-engine-routine">'+ROUTINE.map((x,i)=>'<span><b>'+(i+1)+'</b>'+x+'</span>').join("")+'</div>'+(spineWeek?'<section class="middle-ela-skill-spine" aria-label="Grade 6 weekly literacy skill spine"><h3>Weekly Literacy Skill Spine</h3><div><article><h4>Mechanics</h4><p>'+spineWeek.mechanics+'</p></article><article><h4>Morphology & Vocabulary</h4><p>'+spineWeek.morphology.join(" · ")+'</p></article><article><h4>Reading Evidence</h4><p>'+spineWeek.readingEvidence+'</p></article><article><h4>Writing & Revision</h4><p>'+spineWeek.writingRevision+'</p></article></div></section>':'')+'<div class="middle-ela-engine-actions"><button type="button" id="middleElaExport">Export Weekly Evidence</button><a href="../../../../grades/vocabulary-studio/index.html?grade='+Number(GRADE)+'&week='+WEEK+'">Vocabulary Studio</a></div><p id="middleElaEngineStatus" role="status" aria-live="polite"></p>';
+ studio.innerHTML='<p class="middle-ela-engine-eyebrow">Language Arts Engine</p><h2>Read → Annotate → Analyze → Draft → Revise → Defend</h2><p>This weekly studio organizes the existing Grade '+Number(GRADE)+' curriculum. It does not replace the lesson text, weekly mastery assessment, or official learner record.</p><div class="middle-ela-engine-routine">'+ROUTINE.map((x,i)=>'<span><b>'+(i+1)+'</b>'+x+'</span>').join("")+'</div>'+(spineWeek?'<section class="middle-ela-skill-spine" aria-label="Grade '+gradeNumber+' weekly literacy skill spine"><h3>Weekly Literacy Skill Spine</h3><div><article><h4>Mechanics</h4><p>'+spineWeek.mechanics+'</p></article><article><h4>Morphology & Vocabulary</h4><p>'+spineWeek.morphology.join(" · ")+'</p></article><article><h4>Reading Evidence</h4><p>'+spineWeek.readingEvidence+'</p></article><article><h4>Writing & Revision</h4><p>'+spineWeek.writingRevision+'</p></article></div></section>':'')+'<div class="middle-ela-engine-actions"><button type="button" id="middleElaExport">Export Weekly Evidence</button><a href="../../../../grades/vocabulary-studio/index.html?grade='+Number(GRADE)+'&week='+WEEK+'">Vocabulary Studio</a></div><p id="middleElaEngineStatus" role="status" aria-live="polite"></p>';
  const heading=document.querySelector("main .heading");heading?.insertAdjacentElement("afterend",studio);
  if(readingLab){
    const lab=document.createElement("section");
