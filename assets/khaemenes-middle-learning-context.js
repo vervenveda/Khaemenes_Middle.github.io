@@ -179,6 +179,26 @@ let timer=0;function schedule(){clearTimeout(timer);timer=global.setTimeout(publ
 if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",schedule,{once:true});else schedule();
 ["pageshow","khaemenes-family-changed","khaemenes-middle-ledger-recorded","khaemenes-middle-assessment-recorded","khaemenes-middle-grade-continuity-synced"].forEach(e=>global.addEventListener(e,schedule));
 global.addEventListener("storage",e=>{const k=String(e.key||"");if(k.startsWith("khaemenes"))schedule()});
+// Middle School Science subject engine. The shared context bridge only
+// routes the dedicated Science instruction runtime; science pedagogy stays subject-owned.
+if(/\/grades\/grade-(06|07|08)\/subjects\/science\/week-(0[1-9]|[12]\d|3[0-6])\.html$/i.test(global.location?.pathname||"")){
+  const base=global.document.currentScript?.src||global.location.href;
+  if(!global.document.querySelector('link[data-middle-science-engine]')){
+    const style=global.document.createElement("link");
+    style.rel="stylesheet";
+    style.dataset.middleScienceEngine="v1";
+    style.href=new URL("khaemenes-middle-science-instruction-engine-v1.css",base).href;
+    (global.document.head||global.document.documentElement).append(style);
+  }
+  if(!global.document.querySelector('script[data-middle-science-engine]')){
+    const el=global.document.createElement("script");
+    el.dataset.middleScienceEngine="v1";
+    el.async=false;
+    el.src=new URL("khaemenes-middle-science-instruction-engine-v1.js",base).href;
+    el.onerror=()=>console.warn("Middle Science instruction engine unavailable; original science curriculum content preserved.");
+    (global.document.head||global.document.documentElement).append(el);
+  }
+}
 // Middle School Language Arts subject engine. The shared context bridge only
 // routes the correct subject engine; pedagogy remains owned by Language Arts.
 if(/\/grades\/grade-(06|07|08)\/subjects\/language-arts\/week-(0[1-9]|[12]\d|3[0-6])\.html$/i.test(global.location?.pathname||"")){
