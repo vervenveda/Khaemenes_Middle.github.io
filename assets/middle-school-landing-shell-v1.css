@@ -1,0 +1,36 @@
+:root{--middle-charcoal:#243038;--middle-cream:#fff8e9;--middle-paper:#f4f0e7;--middle-khaki:#d8c7a3;--middle-gold:#b48b45}
+body[data-middle-landing-shell="v1"]{font-size:16px!important;background:var(--middle-paper)!important;color:var(--middle-charcoal)!important}
+body[data-middle-landing-shell="v1"] :is(p,a,button,input,select,textarea,label,span,strong,li){font-size:16px}
+body[data-middle-landing-shell="v1"] :where(button,a,.card,.middle-canonical-about,.middle-canonical-feature,.middle-canonical-dialog){border-radius:7px!important}
+.middle-canonical-breadcrumbs{min-height:44px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;padding:10px 16px;background:var(--middle-paper);color:var(--middle-charcoal);font:400 16px/1.3 Cinzel,Georgia,serif;text-align:center;border-bottom:1px solid rgba(36,48,56,.14)}
+.middle-canonical-breadcrumbs a{text-decoration:underline;text-underline-offset:4px}
+.middle-canonical-hero{padding:55px 20px;background:var(--middle-charcoal);color:var(--middle-cream);border-block:1px solid var(--middle-gold);text-align:center}
+.middle-canonical-hero-inner{width:min(100%,940px);margin:auto}
+.middle-canonical-academy{margin:0!important;color:var(--middle-cream)!important;font:400 33px/1.15 Cinzel,Georgia,serif!important}
+.middle-canonical-hero h1{margin:11px auto 0!important;color:var(--middle-cream)!important;font:400 66px/1.05 Cinzel,Georgia,serif!important}
+.middle-canonical-descriptor{margin:13px auto 0!important;color:var(--middle-khaki)!important;font:400 24px/1.35 "Brandon Grotesque",Nunito,Arial,sans-serif!important}
+.middle-canonical-lead{max-width:780px;margin:14px auto 0!important;color:var(--middle-cream)!important;font-size:16px!important;line-height:1.65!important}
+.middle-canonical-access{width:min(100%,720px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:22px auto 0}
+.middle-canonical-button{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:9px 16px;border:1px solid var(--middle-charcoal);background:var(--middle-cream);color:var(--middle-charcoal);text-decoration:none;font:400 16px/1.25 "Brandon Grotesque",Nunito,Arial,sans-serif}
+.middle-canonical-button.charcoal{background:var(--middle-charcoal);color:var(--middle-cream);border-color:var(--middle-khaki)}
+.middle-canonical-overview{padding:44px 20px;background:var(--middle-paper);text-align:center}
+.middle-canonical-shell{width:min(100%,1040px);margin:auto}
+.middle-canonical-about{max-width:820px;margin:auto;padding:24px;border:1px solid var(--middle-khaki);background:var(--middle-cream)}
+.middle-canonical-about h2,.middle-canonical-features>h2,.middle-canonical-dialog h2{margin:0;color:var(--middle-charcoal);font:400 33px/1.2 Cinzel,Georgia,serif}
+.middle-canonical-about p,.middle-canonical-features>p,.middle-canonical-dialog p{max-width:760px;margin:14px auto 0;color:#415049}
+.middle-canonical-features{margin-top:33px}
+.middle-canonical-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+.middle-canonical-feature{min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:22px;border:1px solid var(--middle-khaki);background:var(--middle-cream);color:var(--middle-charcoal);text-align:center}
+.middle-canonical-feature h3{margin:0;font:400 24px/1.25 Cinzel,Georgia,serif}
+.middle-canonical-feature p{margin:0;max-width:360px}
+.middle-canonical-feature span{display:inline-flex;min-height:44px;align-items:center;justify-content:center;padding:8px 14px;border:1px solid var(--middle-charcoal);border-radius:7px;background:var(--middle-charcoal);color:var(--middle-cream)}
+.middle-canonical-dialog{width:min(560px,calc(100% - 28px));padding:0;border:1px solid var(--middle-gold);background:var(--middle-cream);color:var(--middle-charcoal)}
+.middle-canonical-dialog::backdrop{background:rgba(20,28,32,.68)}
+.middle-canonical-dialog>div{padding:24px;text-align:center}
+.middle-canonical-dialog-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px}
+body[data-middle-landing-shell="v1"] footer.middle-canonical-footer{padding:24px 16px!important;background:var(--middle-charcoal)!important;color:var(--middle-cream)!important;text-align:center!important}
+body[data-middle-landing-shell="v1"] footer.middle-canonical-footer :is(div,span,p,a,small,strong){color:var(--middle-cream)!important;font-size:14px!important}
+#vnvClassToolsToggle{box-sizing:border-box!important;width:72px!important;min-width:72px!important;height:44px!important;min-height:44px!important;border-radius:7px!important;font-size:16px!important}
+#vnvEcosystemUtilityDock>a,#vnvEcosystemUtilityDock>button{min-height:44px!important;border-radius:7px!important;font-size:16px!important}
+@media(max-width:720px){.middle-canonical-access,.middle-canonical-feature-grid{grid-template-columns:1fr}.middle-canonical-hero h1{font-size:clamp(44px,13vw,66px)!important}.middle-canonical-academy{font-size:clamp(26px,8vw,33px)!important}.middle-canonical-descriptor{font-size:clamp(20px,6vw,24px)!important}}
+@media print{#vnv333NetworkTicker,#vnvTickerAutoPopulate,#vnvHeaderAutoPopulate,#vnvClassToolsToolbar,#vnvEcosystemUtilityDock,.middle-canonical-breadcrumbs,.middle-canonical-access,.middle-canonical-overview{display:none!important}}
