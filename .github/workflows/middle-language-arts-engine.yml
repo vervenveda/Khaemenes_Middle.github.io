@@ -1,0 +1,28 @@
+name: Middle Language Arts Subject Engine
+on:
+  pull_request:
+    paths:
+      - 'assets/khaemenes-middle-language-arts-engine-v1.js'
+      - 'assets/khaemenes-middle-language-arts-engine-v1.css'
+      - 'assets/khaemenes-middle-learning-context.js'
+      - 'workflow/engines/language-arts/**'
+      - 'tools/validate-middle-language-arts-engine-v1.cjs'
+      - '.github/workflows/middle-language-arts-engine.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'assets/khaemenes-middle-language-arts-engine-v1.js'
+      - 'assets/khaemenes-middle-language-arts-engine-v1.css'
+      - 'assets/khaemenes-middle-learning-context.js'
+      - 'workflow/engines/language-arts/**'
+      - 'tools/validate-middle-language-arts-engine-v1.cjs'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tools/validate-middle-language-arts-engine-v1.cjs
+      - run: node tools/validate-middle-learning-engine.mjs
