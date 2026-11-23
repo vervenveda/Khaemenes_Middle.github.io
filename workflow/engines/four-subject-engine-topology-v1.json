@@ -1,0 +1,78 @@
+{
+  "schema": "khaemenes-middle-four-subject-engine-topology-v1",
+  "version": "1.0.0",
+  "sharedLayer": {
+    "file": "assets/khaemenes-middle-learning-context.js",
+    "role": [
+      "subject-router",
+      "sanitized-mentor-context",
+      "learner-context"
+    ],
+    "ownsPedagogy": false,
+    "ownsMastery": false,
+    "ownsAssessment": false
+  },
+  "engines": {
+    "mathematics": {
+      "status": "active",
+      "routes": "/grades/grade-(06|07|08)/subjects/mathematics/week-XX.html",
+      "runtime": [
+        "assets/khaemenes-middle-math-week-practice-v1.js",
+        "assets/khaemenes-middle-math-portal-studio-v1.js",
+        "assets/khaemenes-grade6-math-depth-a3-v1.js"
+      ],
+      "pedagogyOwner": true,
+      "notes": "Grade-specific math depth/studio composition remains authoritative."
+    },
+    "science": {
+      "status": "active",
+      "routes": "/grades/grade-(06|07|08)/subjects/science/week-XX.html",
+      "runtime": [
+        "assets/khaemenes-middle-science-instruction-engine-v1.js"
+      ],
+      "pedagogyOwner": true,
+      "notes": "Existing Grade 6–8 Science curriculum remains content authority."
+    },
+    "language-arts": {
+      "status": "active",
+      "routes": "/grades/grade-(06|07|08)/subjects/language-arts/week-XX.html",
+      "runtime": [
+        "assets/khaemenes-middle-language-arts-engine-v1.js"
+      ],
+      "pedagogyOwner": true,
+      "routine": [
+        "Read",
+        "Annotate",
+        "Analyze",
+        "Draft",
+        "Revise",
+        "Defend"
+      ]
+    },
+    "social-studies": {
+      "status": "active",
+      "routes": "/grades/grade-(06|07|08)/subjects/social-studies/week-XX.html",
+      "runtime": [
+        "assets/khaemenes-middle-social-studies-engine-v1.js"
+      ],
+      "pedagogyOwner": true,
+      "routine": [
+        "Question",
+        "Source",
+        "Context",
+        "Corroborate",
+        "Map/Data",
+        "Claim",
+        "Counterclaim",
+        "Qualify"
+      ]
+    }
+  },
+  "authorityBoundaries": {
+    "officialMastery": "assets/khaemenes-middle-assessment-engine.js",
+    "learnerLedger": "assets/khaemenes-middle-learning-ledger.js",
+    "subjectEnginesMayWriteMastery": false,
+    "subjectEnginesMayChangePlacement": false,
+    "subjectEnginesMayOwnChrome": false
+  }
+}
