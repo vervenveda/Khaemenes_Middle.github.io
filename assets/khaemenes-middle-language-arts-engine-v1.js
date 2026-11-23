@@ -76,12 +76,20 @@ function mount(){
  document.body.dataset.middleElaEngineMounted="true";
  const info=headingInfo();
  const spineWeek=GRADE==="06"?global.KhaemenesGrade6LanguageArtsSpine?.weeks?.[String(WEEK).padStart(2,"0")]||null:null;
+ const readingLab=GRADE==="06"?global.KhaemenesGrade6LanguageArtsReadingLab?.weeks?.[String(WEEK).padStart(2,"0")]||null:null;
 
  const studio=document.createElement("section");
  studio.className="middle-ela-engine-studio";
  studio.setAttribute("aria-label","Language Arts learning routine");
  studio.innerHTML='<p class="middle-ela-engine-eyebrow">Language Arts Engine</p><h2>Read → Annotate → Analyze → Draft → Revise → Defend</h2><p>This weekly studio organizes the existing Grade '+Number(GRADE)+' curriculum. It does not replace the lesson text, weekly mastery assessment, or official learner record.</p><div class="middle-ela-engine-routine">'+ROUTINE.map((x,i)=>'<span><b>'+(i+1)+'</b>'+x+'</span>').join("")+'</div>'+(spineWeek?'<section class="middle-ela-skill-spine" aria-label="Grade 6 weekly literacy skill spine"><h3>Weekly Literacy Skill Spine</h3><div><article><h4>Mechanics</h4><p>'+spineWeek.mechanics+'</p></article><article><h4>Morphology & Vocabulary</h4><p>'+spineWeek.morphology.join(" · ")+'</p></article><article><h4>Reading Evidence</h4><p>'+spineWeek.readingEvidence+'</p></article><article><h4>Writing & Revision</h4><p>'+spineWeek.writingRevision+'</p></article></div></section>':'')+'<div class="middle-ela-engine-actions"><button type="button" id="middleElaExport">Export Weekly Evidence</button><a href="../../../../grades/vocabulary-studio/index.html?grade='+Number(GRADE)+'&week='+WEEK+'">Vocabulary Studio</a></div><p id="middleElaEngineStatus" role="status" aria-live="polite"></p>';
  const heading=document.querySelector("main .heading");heading?.insertAdjacentElement("afterend",studio);
+ if(readingLab){
+   const lab=document.createElement("section");
+   lab.className="middle-ela-reading-lab";
+   lab.setAttribute("aria-label","Weekly sustained reading evidence lab");
+   lab.innerHTML='<p class="middle-ela-engine-eyebrow">Weekly Reading Evidence Lab</p><h3>'+readingLab.title+'</h3><p class="middle-ela-reading-source">'+readingLab.source+'</p><div class="middle-ela-reading-text">'+readingLab.paragraphs.map(p=>"<p>"+p+"</p>").join("")+"<ol>"+readingLab.questions.map(q=>"<li>"+q+"</li>").join("")+"</ol></div>";
+   studio.insertAdjacentElement("afterend",lab);
+ }
 
  articles.forEach((article,i)=>{
    const stage=DAY_STAGES[i],focus=line(article,"Focus"),objective=line(article,"Objective"),activity=line(article,"Activity"),evidence=line(article,"Evidence");
@@ -99,7 +107,7 @@ function mount(){
  });
  document.getElementById("middleElaExport")?.addEventListener("click",()=>{
    const l=learnerReady(),days=articles.map((article,i)=>({day:i+1,stage:DAY_STAGES[i].key,label:DAY_STAGES[i].label,lessonTitle:text(article.querySelector("h4")),focus:line(article,"Focus"),evidenceNote:article.querySelector("textarea")?.value||""}));
-   download("grade-"+GRADE+"-language-arts-week-"+String(WEEK).padStart(2,"0")+"-evidence.json",{schema:"khaemenes-middle-language-arts-evidence-v1",engineVersion:VERSION,learnerId:l?.learnerId||null,grade:GRADE,week:WEEK,title:info.title,essentialQuestion:info.essentialQuestion,routine:ROUTINE,skillSpine:spineWeek,days,authoritative:false,affectsGrade:false,unlocksCurriculum:false,changesPlacement:false,exportedAt:new Date().toISOString()});
+   download("grade-"+GRADE+"-language-arts-week-"+String(WEEK).padStart(2,"0")+"-evidence.json",{schema:"khaemenes-middle-language-arts-evidence-v1",engineVersion:VERSION,learnerId:l?.learnerId||null,grade:GRADE,week:WEEK,title:info.title,essentialQuestion:info.essentialQuestion,routine:ROUTINE,skillSpine:spineWeek,readingLab:readingLab?{title:readingLab.title,source:readingLab.source,questions:readingLab.questions}:null,days,authoritative:false,affectsGrade:false,unlocksCurriculum:false,changesPlacement:false,exportedAt:new Date().toISOString()});
    const s=document.getElementById("middleElaEngineStatus");if(s)s.textContent="Evidence export requested. This backup is practice/portfolio evidence, not an official mastery record.";
  });
  document.dispatchEvent(new CustomEvent("khaemenes:middle-language-arts-engine-mounted",{detail:{version:VERSION,grade:GRADE,week:WEEK,days:articles.length,mastery:false,persistence:"learner-scoped-drafts",assessmentAuthority:false}}));
