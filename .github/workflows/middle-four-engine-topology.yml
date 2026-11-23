@@ -1,0 +1,32 @@
+name: Middle Four-Engine Topology
+on:
+  pull_request:
+    paths:
+      - 'assets/khaemenes-middle-learning-context.js'
+      - 'assets/khaemenes-middle-math-*.js'
+      - 'assets/khaemenes-middle-science-*'
+      - 'assets/khaemenes-middle-language-arts-*'
+      - 'assets/khaemenes-middle-social-studies-*'
+      - 'workflow/engines/**'
+      - 'tools/validate-middle-four-engine-topology-v1.cjs'
+      - '.github/workflows/middle-four-engine-topology.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'assets/khaemenes-middle-learning-context.js'
+      - 'assets/khaemenes-middle-math-*.js'
+      - 'assets/khaemenes-middle-science-*'
+      - 'assets/khaemenes-middle-language-arts-*'
+      - 'assets/khaemenes-middle-social-studies-*'
+      - 'workflow/engines/**'
+      - 'tools/validate-middle-four-engine-topology-v1.cjs'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tools/validate-middle-four-engine-topology-v1.cjs
+      - run: node tools/validate-middle-learning-engine.mjs
