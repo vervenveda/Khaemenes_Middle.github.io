@@ -45,8 +45,28 @@ function headingInfo(){
  return {title:text(h?.querySelector("h1")),essentialQuestion:text([...h?.querySelectorAll("p")||[]].find(p=>!p.classList.contains("kicker")))};
 }
 function line(article,label){
- const p=[...article.querySelectorAll("p")].find(x=>text(x.querySelector("strong")).replace(/:$/,"").toLowerCase()===label.toLowerCase());
- return p?text(p).replace(new RegExp("^"+label+":?\\s*","i"),""):"";
+ const aliases={
+  "Focus":["Focus","Learning target"],
+  "Objective":["Objective","Learning target"],
+  "Activity":["Activity","Student practice"],
+  "Evidence":["Evidence","Practice and evidence","Today’s portfolio evidence","Today's portfolio evidence"],
+  "Worked example":["Worked example","Think-aloud example","Worked reading","Reading model","Model paraphrase","Worked note","Revision model","Worked correction","Worked caption","Claim audit","Self-check model"]
+ };
+ const wanted=(aliases[label]||[label]).map(x=>x.toLowerCase());
+ const p=[...article.querySelectorAll("p")].find(x=>wanted.includes(text(x.querySelector("strong")).replace(/:$/,"").toLowerCase()));
+ if(p){
+   const strong=text(p.querySelector("strong")).replace(/:$/,"");
+   return text(p).slice(strong.length).replace(/^:\s*/,"").trim();
+ }
+ if(label==="Activity"){
+   const ol=article.querySelector(".ela-workshop ol, ol");
+   return ol?text(ol):"";
+ }
+ if(label==="Worked example"){
+   const worked=article.querySelector(".ela-worked");
+   return worked?text(worked).replace(/^[^:]+:\s*/,""):"";
+ }
+ return "";
 }
 function mount(){
  if(document.body?.dataset.middleElaEngineMounted==="true")return true;
