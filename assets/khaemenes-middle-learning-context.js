@@ -199,6 +199,26 @@ if(/\/grades\/grade-(06|07|08)\/subjects\/language-arts\/week-(0[1-9]|[12]\d|3[0
     (global.document.head||global.document.documentElement).append(el);
   }
 }
+// Middle School Social Studies subject engine. The shared context bridge only
+// routes the correct subject engine; historical/civic pedagogy stays subject-owned.
+if(/\/grades\/grade-(06|07|08)\/subjects\/social-studies\/week-(0[1-9]|[12]\d|3[0-6])\.html$/i.test(global.location?.pathname||"")){
+  const base=global.document.currentScript?.src||global.location.href;
+  if(!global.document.querySelector('link[data-middle-social-studies-engine]')){
+    const style=global.document.createElement("link");
+    style.rel="stylesheet";
+    style.dataset.middleSocialStudiesEngine="v1";
+    style.href=new URL("khaemenes-middle-social-studies-engine-v1.css",base).href;
+    (global.document.head||global.document.documentElement).append(style);
+  }
+  if(!global.document.querySelector('script[data-middle-social-studies-engine]')){
+    const el=global.document.createElement("script");
+    el.dataset.middleSocialStudiesEngine="v1";
+    el.async=false;
+    el.src=new URL("khaemenes-middle-social-studies-engine-v1.js",base).href;
+    el.onerror=()=>console.warn("Middle Social Studies engine unavailable; original curriculum content preserved.");
+    (global.document.head||global.document.documentElement).append(el);
+  }
+}
 // Middle School mathematics full-course interaction layer. Only the 108
 // dedicated mathematics week pages receive these practice-only enhancements.
 // The official learner ledger and assessment engine remain independent.
