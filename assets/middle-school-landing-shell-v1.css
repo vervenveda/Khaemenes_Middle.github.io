@@ -1,6 +1,6 @@
 :root{--middle-charcoal:#243038;--middle-cream:#fff8e9;--middle-paper:#f4f0e7;--middle-khaki:#d8c7a3;--middle-gold:#b48b45}
 body[data-middle-landing-shell="v1"]{font-size:16px!important;background:var(--middle-paper)!important;color:var(--middle-charcoal)!important}
-body[data-middle-landing-shell="v1"] :is(p,a,button,input,select,textarea,label,span,strong,li){font-size:16px}
+body[data-middle-landing-shell="v1"] :is(p,a,button,input,select,textarea,label,span,strong,li,small,.kicker,.eyebrow,.badge,.destination){font-size:16px!important}
 body[data-middle-landing-shell="v1"] :where(button,a,.card,.middle-canonical-about,.middle-canonical-feature,.middle-canonical-dialog){border-radius:7px!important}
 .middle-canonical-breadcrumbs{min-height:44px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;padding:10px 16px;background:var(--middle-paper);color:var(--middle-charcoal);font:400 16px/1.3 Cinzel,Georgia,serif;text-align:center;border-bottom:1px solid rgba(36,48,56,.14)}
 .middle-canonical-breadcrumbs a{text-decoration:underline;text-underline-offset:4px}
@@ -32,5 +32,8 @@ body[data-middle-landing-shell="v1"] footer.middle-canonical-footer{padding:24px
 body[data-middle-landing-shell="v1"] footer.middle-canonical-footer :is(div,span,p,a,small,strong){color:var(--middle-cream)!important;font-size:14px!important}
 #vnvClassToolsToggle{box-sizing:border-box!important;width:72px!important;min-width:72px!important;height:44px!important;min-height:44px!important;border-radius:7px!important;font-size:16px!important}
 #vnvEcosystemUtilityDock>a,#vnvEcosystemUtilityDock>button{min-height:44px!important;border-radius:7px!important;font-size:16px!important}
+body[data-middle-landing-shell="v1"] .grid.cols-3{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+@media(max-width:900px){body[data-middle-landing-shell="v1"] .grid.cols-3{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:720px){.middle-canonical-access,.middle-canonical-feature-grid{grid-template-columns:1fr}.middle-canonical-hero h1{font-size:clamp(44px,13vw,66px)!important}.middle-canonical-academy{font-size:clamp(26px,8vw,33px)!important}.middle-canonical-descriptor{font-size:clamp(20px,6vw,24px)!important}}
+@media(max-width:560px){body[data-middle-landing-shell="v1"] .grid.cols-3{grid-template-columns:1fr!important}}
 @media print{#vnv333NetworkTicker,#vnvTickerAutoPopulate,#vnvHeaderAutoPopulate,#vnvClassToolsToolbar,#vnvEcosystemUtilityDock,.middle-canonical-breadcrumbs,.middle-canonical-access,.middle-canonical-overview{display:none!important}}
