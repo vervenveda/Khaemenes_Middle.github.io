@@ -1,0 +1,61 @@
+{
+  "schema": "khaemenes-middle-social-studies-engine-contract-v1",
+  "version": "1.0.0",
+  "sourceArchitecture": {
+    "program": "Khaemenes High School Social Studies",
+    "adaptedResponsibilities": [
+      "question-driven-inquiry",
+      "source-analysis",
+      "contextualization",
+      "corroboration",
+      "geography-data-reasoning",
+      "systems-analysis",
+      "claim-counterclaim",
+      "qualified-conclusion"
+    ]
+  },
+  "middleSchoolAuthority": {
+    "curriculum": "existing grade-06/07/08 social-studies week pages",
+    "grades": [
+      "06",
+      "07",
+      "08"
+    ],
+    "weeksPerGrade": 36,
+    "totalWeekSurfaces": 108
+  },
+  "routine": [
+    "Question",
+    "Source",
+    "Context",
+    "Corroborate",
+    "Map/Data",
+    "Claim",
+    "Counterclaim",
+    "Qualify"
+  ],
+  "dailyStages": [
+    "Question & Source",
+    "Context & Corroborate",
+    "Map, Data & Systems",
+    "Claim & Counterclaim",
+    "Defend, Qualify & Reflect"
+  ],
+  "guardrails": [
+    "Source usefulness depends on the question.",
+    "Simulation or model output is not historical proof by itself.",
+    "Correlation does not establish causation.",
+    "Claims must be proportional to evidence.",
+    "Uncertainty and missing voices must be named."
+  ],
+  "boundaries": {
+    "masteryAuthority": false,
+    "affectsGrade": false,
+    "unlocksCurriculum": false,
+    "changesPlacement": false,
+    "assessmentAuthority": false,
+    "protectedAssessmentContent": false,
+    "learnerScopedInquiryNotes": true,
+    "exportableEvidence": true
+  }
+}
