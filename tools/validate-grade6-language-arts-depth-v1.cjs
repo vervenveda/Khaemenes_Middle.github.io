@@ -51,7 +51,7 @@ assert.equal(pages,36);
 
 for(const token of [
  "Learning target","Today’s portfolio evidence","Today's portfolio evidence",
- "KhaemenesGrade6LanguageArtsSpine","KhaemenesGrade6LanguageArtsReadingLab",
+ "gradeSpine","gradeReadingLab",
  "middle-ela-skill-spine","middle-ela-reading-lab","readingLab:readingLab?"
 ])assert(engine.includes(token),"Language Arts engine missing Grade 6 depth integration token: "+token);
 
