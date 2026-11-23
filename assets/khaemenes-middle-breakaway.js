@@ -144,6 +144,7 @@
     global.document.head.appendChild(script);
   }
 
-  function isLandingPage(){const p=String(global.location?.pathname||"");return /\/grades\/grade-(?:06|07|08)\/(?:index\.html)?$/i.test(p)||/\/grades\/grade-(?:06|07|08)\/subjects\/[^/]+\/(?:index\.html)?$/i.test(p)}\n  const boot=()=>{if(!isLandingPage()){ensureLearningResources();ensureLearnerToolbar();createButton()}ensureNAIBBridge();ensureGrade6Alignment();ensureGrade7Alignment();ensureGrade67MathDepth();ensureGrade8MathDepth();rewriteGrade8EvidenceLinks();};
+  function isLandingPage(){const p=String(global.location?.pathname||"");return /\/grades\/grade-(?:06|07|08)\/(?:index\.html)?$/i.test(p)||/\/grades\/grade-(?:06|07|08)\/subjects\/[^/]+\/(?:index\.html)?$/i.test(p)}
+  const boot=()=>{if(!isLandingPage()){ensureLearningResources();ensureLearnerToolbar();createButton()}ensureNAIBBridge();ensureGrade6Alignment();ensureGrade7Alignment();ensureGrade67MathDepth();ensureGrade8MathDepth();rewriteGrade8EvidenceLinks();};
   if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",boot,{once:true});else boot();
 })(window);
