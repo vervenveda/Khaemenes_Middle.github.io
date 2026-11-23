@@ -21,3 +21,16 @@ body[data-middle-ela-engine="middle-ela-v1"] .middle-ela-engine-studio{margin:22
 @media(max-width:820px){.middle-ela-engine-routine{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:520px){.middle-ela-engine-routine{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media print{.middle-ela-engine-actions,.middle-ela-engine-save{display:none!important}}
+
+.middle-ela-skill-spine{margin:22px 0 0;padding:18px;border-top:1px solid #d8c7a3}
+.middle-ela-skill-spine h3,.middle-ela-reading-lab h3{margin:0;text-align:center;font:400 24px/1.2 Cinzel,Georgia,serif;color:#243038}
+.middle-ela-skill-spine>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-top:14px}
+.middle-ela-skill-spine article{padding:14px;border:1px solid #d8c7a3;border-radius:7px;background:#f4f0e7}
+.middle-ela-skill-spine article h4{margin:0 0 6px;font:400 18px/1.25 Cinzel,Georgia,serif}
+.middle-ela-skill-spine article p{margin:0;font-size:16px}
+.middle-ela-reading-lab{margin:0 auto 28px;padding:24px;border:1px solid #cbbd9e;border-radius:7px;background:#fffdf7;color:#243038}
+.middle-ela-reading-source{text-align:center;font-size:16px;color:#6e542f}
+.middle-ela-reading-text{max-width:860px;margin:18px auto 0}
+.middle-ela-reading-text p,.middle-ela-reading-text li{font-size:16px;line-height:1.65}
+.middle-ela-reading-text ol{margin-top:18px;padding-left:24px}
+@media(max-width:680px){.middle-ela-skill-spine>div{grid-template-columns:1fr}}
